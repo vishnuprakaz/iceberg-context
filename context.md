@@ -52,7 +52,7 @@ Open items, most important first:
 4. Mailing-list threads are keyed by the first Message-ID in `References`, so a few long threads are split in two. Fix by
    resolving threads through hashed parent ids; this changes thread ids, so re-run thread extraction afterwards.
 5. `people/aliases.yaml` is mostly unverified. Review `data/state/unresolved-people.json` and confirm logins.
-6. Run the `open-source-launch` readiness gate before inviting others.
+6. Run the `open-source-launch` readiness gate before inviting others, and the trigger tests in `docs/skill-testing.md`.
 7. Then: pick a contribution from `opportunities.md`.
 
 ## Work log
@@ -62,6 +62,7 @@ Open items, most important first:
 | 2026-11-13 | — | Decided: keep repo public; for now it serves our own contribution work | decided |
 | 2026-11-13 | — | Build plan approved; Phase 0 foundation built | done |
 | 2026-11-13 | — | Phases 1–5 built: collectors, kb commands, summaries, initiative pages, weekly task | done, see open items |
+| 2026-11-13 | — | Independent verification: 388 claims checked, 16 failed, all 16 fixed; skills aligned with Anthropic's skill guide | done |
 | 2026-11-13 | — | Researched all sources (dev@, sync notes docs + calendar, YouTube, GitHub/git/ASF); wrote KB plan | proposal |
 
 ## Open questions / ideas
