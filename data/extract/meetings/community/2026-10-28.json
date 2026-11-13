@@ -1,0 +1,276 @@
+{
+ "id": "meeting/community/2026-10-28",
+ "_input_hash": "sha256:9752027b29c00b0045d5",
+ "sources": [
+  "meet:community:2026-10-28",
+  "yt:fPTtFTNf_Tc"
+ ],
+ "summary": "The community sync opened with a V4 status round: column updates and vector type still need consensus, stats-only fields is being voted on, and encryption, row timestamps, default value expressions, collations and possibly derived columns are in progress. Kevin went through highlights across Java, Python, Rust, Go and C++, including CI runner queues, merge queues and iceberg-go preparing a v1 release. Russell presented a community health dashboard showing falling contributor retention, a large share of stale pull requests and many unanswered dev list threads. Szehon introduced the derived (generated) column proposal, limited to stored columns for V4. On CDC through Kafka Connect, the view expressed was that nothing new should write equality deletes. Kevin floated deprecating Avro and ORC data files in V4 and will start a dev list thread.",
+ "topics": [
+  {
+   "title": "V4 progress report",
+   "summary": "Russell listed where V4 spec items stand so people could speak up for anything missing. Column updates (#16425) needs review before a vote, vector type is in limbo, and the V4 encryption change is needed because key metadata must move now that there is no snapshot list at the top of the metadata. The notes list stats-only fields as in progress, while in the meeting it was said to be in a vote. Steven has the row timestamp spec pull request and plans to start the vote this week; the default value expressions spec is thought to be ready but depends on expression spec primitives landing first, and Amogh will check with Dan. Collations was said to be definable outside V4, and derived columns may or may not make V4. Kevin suggested running V4 like a release with a release manager; no decision was taken.",
+   "initiatives": [
+    "v4-general",
+    "v4-column-updates",
+    "vector-type",
+    "v4-content-stats",
+    "v4-encryption",
+    "v4-row-lineage-timestamps",
+    "v4-default-expressions",
+    "collations"
+   ],
+   "refs": [
+    "gh:apache/iceberg#16425"
+   ],
+   "decisions": [],
+   "open_questions": [
+    "Is the default value expressions spec pull request ready for a vote, or does it wait on the expression spec changes?",
+    "Should V4 work be coordinated by a release manager?",
+    "Does collation support need to be part of V4?"
+   ],
+   "quotes": [
+    {
+     "text": "Stats only fields is currently in vote. So, if you haven't voted, check that out.",
+     "at": "0:01:14"
+    }
+   ]
+  },
+  {
+   "title": "Highlights across the implementations",
+   "summary": "Java: V4 work merged includes the file planner (#17541), write-direction wrappers (#16936), File Type in the V4 spec (#17918), a mutable bitmap implementation (#18544), dropping equality_ids from the V4 TrackedFile (#18427) and the adaptive metadata tree entry structures (#16025); the Kafka Connect runtime LICENSE and NOTICE were fixed (#18019), which may let the artifact ship with the next release, and CI moved to ubuntu-24.04 runners as a short-term way around congested shared ASF runner queues (#18611). Python: range reads for deletion vectors, more view support, encryption key management, merge queue and RustFS replacing MinIO. Rust: freshness-aware table loading, an Avro upgrade that makes manifest reading several times faster, and a limit of three open non-draft pull requests for users without write access. Go: encryption, geo logical types, performance work, and API cleanup toward a v1 release planned around the next community sync. C++: scan plan endpoint, encryption and a bitmap validation fix. Kevin also raised a merge queue for the Java repository if there is interest.",
+   "initiatives": [
+    "v4-metadata-tree",
+    "file-type",
+    "v4-equality-deletes",
+    "kafka-connect",
+    "pyiceberg",
+    "iceberg-rust",
+    "iceberg-go",
+    "iceberg-cpp",
+    "v4-encryption",
+    "community-process"
+   ],
+   "refs": [
+    "gh:apache/iceberg#17541",
+    "gh:apache/iceberg#16936",
+    "gh:apache/iceberg#17918",
+    "gh:apache/iceberg#18544",
+    "gh:apache/iceberg#18427",
+    "gh:apache/iceberg#16025",
+    "gh:apache/iceberg#18019",
+    "gh:apache/iceberg#18611",
+    "gh:apache/iceberg-python#3478",
+    "gh:apache/iceberg-python#4081",
+    "gh:apache/iceberg-python#4088",
+    "gh:apache/iceberg-python#4152",
+    "gh:apache/iceberg-python#3968",
+    "gh:apache/iceberg-python#3969",
+    "gh:apache/iceberg-python#4148",
+    "gh:apache/iceberg-python#4149",
+    "gh:apache/iceberg-python#4113",
+    "gh:apache/iceberg-python#4017",
+    "gh:apache/iceberg-rust#3377",
+    "gh:apache/iceberg-rust#3493",
+    "gh:apache/iceberg-rust#3354",
+    "gh:apache/iceberg-rust#3468",
+    "gh:apache/iceberg-rust#3265",
+    "gh:apache/iceberg-rust#3465",
+    "gh:apache/iceberg-go#1620",
+    "gh:apache/iceberg-go#2296",
+    "gh:apache/iceberg-go#2125",
+    "gh:apache/iceberg-go#2144",
+    "gh:apache/iceberg-go#2062",
+    "gh:apache/iceberg-cpp#1030",
+    "gh:apache/iceberg-cpp#1005"
+   ],
+   "decisions": [],
+   "open_questions": [
+    "Is there enough interest to set up a merge queue for the Java repository?"
+   ]
+  },
+  {
+   "title": "Community health dashboard",
+   "summary": "Russell showed a dashboard, modelled on one from the Cassandra community, built from GitHub and dev list data and split by repository and module. It shows contributor concentration per module (Kafka Connect is maintained by very few people), first-to-second contribution retention trending down, 68% of pull requests labelled stale against a median time to merge of 34 hours, and 45% of last month's dev list threads unanswered while half of the answered ones get a reply within 4.4 hours. He described the result as bimodal: pull requests are either merged quickly or never looked at. He offered no prescriptions and plans to update it monthly and revisit it at this sync. Talat suggested using it in the quarterly ASF board report, and another participant asked for a metric on stale pull requests that had contributor reviews but no committer review, which Russell agreed to add.",
+   "initiatives": [
+    "community-process"
+   ],
+   "refs": [],
+   "decisions": [],
+   "open_questions": [
+    "Should the community act on the stale pull request backlog and unanswered threads, and how?"
+   ],
+   "quotes": [
+    {
+     "text": "So, we have like a huge percentage of PRs that are getting merged pretty quickly and a huge percentage which are just never looked at at all by anyone.",
+     "at": "0:18:39",
+     "speaker": "RussellSpitzer"
+    }
+   ]
+  },
+  {
+   "title": "Derived (generated) columns proposal",
+   "summary": "Szehon presented the RFC, written with a co-author from the Presto community, for columns whose value is always a deterministic expression over other columns of the same table, building on the expressions spec. Unlike default value expressions, the value is guaranteed and may reference other columns, which enables filter inference, avoiding recomputation and stats-based pruning. Each schema field would get an optional generated object holding the expression and a stored flag; for V4 the proposal is to allow only stored columns so readers need no changes, leaving virtual columns for later, and an optional list of valid generated column ids in the snapshot was described as a guard against writers that do not maintain the values. Determinism of UDFs can rely on the flag in the UDF spec. It was also mentioned that the feature could land in the index spec first, for example for Hilbert curve values. The request was for comments on the document.",
+   "initiatives": [
+    "v4-general",
+    "expressions-spec",
+    "secondary-indexes"
+   ],
+   "refs": [
+    "doc:1u93kyIrTc8bt9VSTB4O0GM9S7zuXekqixJR6Id2FZC4"
+   ],
+   "decisions": [],
+   "open_questions": [
+    "Will derived columns make V4, or land first in the index spec and in the table spec later?",
+    "Is the valid generated column ids list in the snapshot needed?",
+    "Can collations be expressed with derived columns, and what else would they need?"
+   ],
+   "quotes": [
+    {
+     "text": "Iceberg should support both, I think, but I think for V4, I'm tending towards just limiting the spec to have only the stored one.",
+     "at": "0:39:25",
+     "speaker": "szehon-ho"
+    }
+   ]
+  },
+  {
+   "title": "Collations pull request: call for review",
+   "summary": "Andrei asked for reviews of the collations pull request (#16972). It is currently built on stats-only fields, which simplified it, and generated columns could be another way to store the min and max statistics. In the V4 round it was noted that, as defined, collations could be added outside a format version, and that Ryan's latest comment should be discussed with him directly.",
+   "initiatives": [
+    "collations",
+    "v4-content-stats"
+   ],
+   "refs": [
+    "gh:apache/iceberg#16972"
+   ],
+   "decisions": [],
+   "open_questions": []
+  },
+  {
+   "title": "CDC workloads through Kafka Connect once equality deletes are deprecated in V4",
+   "summary": "Andrei asked whether Kafka Connect should keep a CDC path that applies deletes and updates, given that it relies on equality deletes, or stay append-only with a later merge job. Amogh's position was not to add anything that produces new equality deletes, because such tables often go unmaintained and become unreadable, and instead to explore upserts through a primary key index that yields positions for deletion vectors. Participants disagreed on whether the mainline Kafka Connect sink can already opt in to equality deletes; this is to be checked. A work-in-progress pull request that writes temporary equality deletes and converts them to deletion vectors in a background thread was questioned for the same reason and for depending on table APIs that may change with V4. Kevin noted that defaults in Flink, Spark and Kafka Connect need a follow-up pass for V4 deprecations.",
+   "initiatives": [
+    "kafka-connect",
+    "v4-equality-deletes",
+    "secondary-indexes",
+    "flink-integration"
+   ],
+   "refs": [
+    "list:9ykl9n70mhzkvz21dwrmoollkz7k0p7h"
+   ],
+   "decisions": [],
+   "open_questions": [
+    "Does the mainline Kafka Connect sink currently support opting in to equality deletes?",
+    "Can Kafka Connect support upserts with primary key indexes and deletion vectors instead of equality deletes?"
+   ],
+   "quotes": [
+    {
+     "text": "But basically my position is like I would not add anything that produces new equality deletes as well.",
+     "at": "0:42:36"
+    },
+    {
+     "text": "I think the quorum here is like we should not add anything that write equality deletes.",
+     "at": "0:47:49",
+     "speaker": "laskoviymishka"
+    }
+   ]
+  },
+  {
+   "title": "Deprecating Avro and ORC as data file formats in V4",
+   "summary": "Kevin asked for a first reaction to deprecating Avro and ORC data files in V4, arguing that both have growing gaps for V3 and V4 features that their ecosystems are unlikely to close, and that the project needs criteria for what supporting a file format means. One participant objected that Iceberg risks overfitting to Parquet, said usage data shows Avro is used far more than ORC, and suggested moving the formats to externally maintained plugins instead of deprecating them. Steven supported removing ORC in V4 and keeping Avro for now, revisiting it for V5. Nothing was decided; Kevin will write up a dev list thread.",
+   "initiatives": [
+    "file-format-api",
+    "v4-general"
+   ],
+   "refs": [],
+   "decisions": [],
+   "open_questions": [
+    "Should ORC, Avro or both be deprecated as data file formats in V4?",
+    "Should deprecated formats move to an external plugin model, and what does it mean for the project to support a file format?"
+   ],
+   "quotes": [
+    {
+     "text": "I want to get a little bit of a pulse check on deprecating the idea of deprecating Avro and ORC for V4.",
+     "at": "0:49:03",
+     "speaker": "kevinjqliu"
+    },
+    {
+     "text": "The idea is that maybe rather than deprecating them, we can make them the external plugin.",
+     "at": "0:51:59"
+    }
+   ]
+  },
+  {
+   "title": "Review request: load only the latest snapshot for refs mode in the REST client",
+   "summary": "Talat asked committers to review #18073. As described, REST clients keep loading the full reference history even when only the latest state is requested in refs mode; the fix loads only the latest snapshot on the write path and reduces load on REST catalog servers.",
+   "initiatives": [
+    "rest-spec"
+   ],
+   "refs": [
+    "gh:apache/iceberg#18073"
+   ],
+   "decisions": [],
+   "open_questions": []
+  }
+ ],
+ "action_items": [
+  {
+   "who": "stevenzwu",
+   "what": "Start the vote on the row timestamp spec pull request this week."
+  },
+  {
+   "who": "amogh-jahagirdar",
+   "what": "Check with Dan whether the default value expressions spec pull request is ready for review and a vote."
+  },
+  {
+   "who": "RussellSpitzer",
+   "what": "Add a dashboard metric for stale pull requests that had contributor reviews but no committer review, and report on the dashboard monthly."
+  },
+  {
+   "who": "laskoviymishka",
+   "what": "Double-check whether the mainline Kafka Connect sink supports opting in to equality deletes."
+  },
+  {
+   "who": "kevinjqliu",
+   "what": "Start a dev list thread on deprecating Avro and ORC data files in V4."
+  },
+  {
+   "who": "kevinjqliu",
+   "what": "Get reviews on the follow-up pull request covering the Hive distribution licensing for Kafka Connect."
+  }
+ ],
+ "participants": [
+  {
+   "who": "RussellSpitzer",
+   "basis": "notes"
+  },
+  {
+   "who": "szehon-ho",
+   "basis": "notes"
+  },
+  {
+   "who": "laskoviymishka",
+   "basis": "notes"
+  },
+  {
+   "who": "kevinjqliu",
+   "basis": "notes"
+  },
+  {
+   "who": "talatuyarer",
+   "basis": "notes"
+  },
+  {
+   "who": "stevenzwu",
+   "basis": "transcript"
+  },
+  {
+   "who": "amogh-jahagirdar",
+   "basis": "transcript"
+  },
+  {
+   "who": "Karthik",
+   "basis": "transcript"
+  }
+ ]
+}
