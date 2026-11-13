@@ -5,10 +5,11 @@ title: Vote on finer grained read restrictions in the Iceberg REST Catalog spec
 date: '2026-08-31'
 url: https://lists.apache.org/thread/0zloqhp8wkgyn04yg69j71cwcg5n7g74
 kind: vote
-status: open
+status: passed
 messages: 17
 sources:
 - devlist:0zloqhp8wkgyn04yg69j71cwcg5n7g74
+- devlist:nwnmyjs2phrpmxtb04p6vlwml6kywm83
 refs:
 - gh:apache/iceberg#13879
 - gh:apache/iceberg#16082
@@ -32,7 +33,7 @@ updated: '2026-11-13'
 # Vote on finer grained read restrictions in the Iceberg REST Catalog spec
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Finer grained read restrictions in the Iceberg REST Catalog spec](https://lists.apache.org/thread/0zloqhp8wkgyn04yg69j71cwcg5n7g74) · **Started:** 2026-08-31 by [[person/singhpk234|Prashant Singh]] · **Messages:** 17 (last 2026-09-01) · **Outcome:** open
+**Thread:** [[VOTE] Finer grained read restrictions in the Iceberg REST Catalog spec](https://lists.apache.org/thread/0zloqhp8wkgyn04yg69j71cwcg5n7g74) · **Started:** 2026-08-31 by [[person/singhpk234|Prashant Singh]] · **Messages:** 17 (last 2026-09-01) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -45,6 +46,8 @@ Prashant Singh called a vote to add finer grained read restrictions to the REST 
 ## Outcome
 
 No result message is in the thread. Votes cast: 4 binding +1 and 12 non-binding +1, with no 0 or -1 votes.
+
+**Result posted in a separate thread on 2026-09-03:** [[RESULT][VOTE] Finer grained read restrictions in the Iceberg REST Catalog spec](https://lists.apache.org/thread/nwnmyjs2phrpmxtb04p6vlwml6kywm83) (`devlist:nwnmyjs2phrpmxtb04p6vlwml6kywm83`). Outcome read from that message: passed.
 
 ## Positions
 

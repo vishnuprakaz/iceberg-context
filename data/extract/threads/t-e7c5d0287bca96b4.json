@@ -1,0 +1,34 @@
+{
+  "id": "thread/t-e7c5d0287bca96b4",
+  "_input_hash": "sha256:307f6009a03464127720",
+  "sources": [
+    "devlist:lfr1kb253m99dg0mbdzpm6g1k3nbd6fc",
+    "devlist:k7047jl1z4kcf4fp19rsotg7ycjf0zwn",
+    "devlist:xxfcz8f5bq2wcs0h0sns4ollm59p97o4"
+  ],
+  "title": "Release Apache Iceberg Terraform Provider v0.1.0 RC0",
+  "summary": "zeroshade proposed release candidate RC0 of the Apache Iceberg Terraform provider v0.1.0, based on commit 2fe813329790eacf0b698bd430a57459fbf00e89, with the source release hosted on the ASF dist server and convenience binaries for the Terraform and OpenTofu registries attached to a GitHub prerelease. The vote was to stay open for at least 72 hours. Four non-binding +1 votes followed. Rich Bowen verified signatures, hashes, LICENSE and NOTICE. rambleraptor ran the verification script and noted failures during its cleanup step that do not affect its function, opening a PR for them as a nice-to-have. nssalian verified the checksum, signature, that the source tarball matches the signed tag tree, built and tested from source, and ran the provider with both the terraform and opentofu CLIs. The messages in this thread do not include a result announcement.",
+  "positions": [
+    {
+      "who": "rambleraptor",
+      "stance": "Verification passed; the verify script has cleanup failures that do not affect its function, addressed in a follow-up PR as a nice-to-have.",
+      "source": "devlist:k7047jl1z4kcf4fp19rsotg7ycjf0zwn"
+    },
+    {
+      "who": "nssalian",
+      "stance": "Verified checksums, signature, tag-to-tarball match, build and tests, and ran the provider with both terraform and opentofu.",
+      "source": "devlist:xxfcz8f5bq2wcs0h0sns4ollm59p97o4"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "Four non-binding +1 votes and no binding votes or objections in the collected messages; no result message is in the thread."
+  },
+  "initiatives": [
+    "iceberg-go"
+  ],
+  "refs": [
+    "gh:apache/terraform-provider-iceberg#72"
+  ],
+  "why_it_matters": "This is the release candidate for the first (v0.1.0) release of the Apache Iceberg Terraform provider."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "thread/t-e6327b02ad166780",
+  "_input_hash": "sha256:1454d5a9cf251fc62bb4",
+  "sources": [
+    "devlist:n8qy5nsdw35vjog5lb4kp15989b800cv",
+    "devlist:16vh4b9mp4qxfjkjld1t2sylfw84l3sf",
+    "devlist:6s17zrsmfhdsg25nkfy4clqtyq97vsyb",
+    "devlist:wgvv4olykqoctbxh4frok6f4q0d7ltb2",
+    "devlist:qos5oxfb2f98nsxy0mq8gwk2x5s7mwkx",
+    "devlist:sjrg9ldh4520f9946ng3djllf5zlld5d",
+    "devlist:0krbwt7plpoc0yg33ljmwlb9l181431w",
+    "devlist:r369zpsmx163xntlzpzfdh3w0fgr8wly",
+    "devlist:ptf4xoj8qsm1pcy59sno7rymrh7jkgy9",
+    "devlist:2ppvhglts8qr5vdwm7wbdb56b9w0ddg4",
+    "devlist:svxf04pyx05hx3om2rzhzkgy6m1w2n9k",
+    "devlist:lzc0ls4zbtj8bhv5r1s8n3qk0v7qhfsr",
+    "devlist:lw13hgc1gryonwk5pjd01sw0b5mbwk8o",
+    "devlist:l34c0h8r5dx499fv7yzvrxfp1282yw9c"
+  ],
+  "title": "Deprecating Spark 3.4",
+  "summary": "Kevin Liu proposed marking Spark 3.4, which had reached end of life upstream, as deprecated in Iceberg 1.11 and removing it in 1.12. The proposal drew many +1s. Anton Okolnychyi and Eduard Tudenhöfner questioned the deprecate-then-remove-a-release-later rule and favoured removing it sooner, because old Spark modules slow down format work; Parth Chandra and Huaxin Gao asked to keep 3.4 longer because Comet still supports it. The docs status was changed to Deprecated in October 2025 (PR #14099). In January 2026 Kevin proposed releasing 1.11 with Spark 3.4, with no obligation to backport everything, and removing the module right after. In May 2026 he reported that the removal PR (#14122) was merged and that 1.11.0 is the last Iceberg version supporting Spark 3.4. Manu Zhang noted fixes may still ship on the 1.11.x branch.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "Mark Spark 3.4 deprecated in 1.11 and remove it in 1.12, as it is end-of-life upstream.",
+      "source": "devlist:n8qy5nsdw35vjog5lb4kp15989b800cv"
+    },
+    {
+      "who": "aokolnychyi",
+      "stance": "Questions keeping the deprecate-then-remove model, since older Spark modules lag in features and have become a liability that slows format work such as row IDs.",
+      "source": "devlist:6s17zrsmfhdsg25nkfy4clqtyq97vsyb"
+    },
+    {
+      "who": "Eduard Tudenhöfner",
+      "stance": "Remove Spark 3.4 in the next release; users who need it can stay on Iceberg 1.10.",
+      "source": "devlist:wgvv4olykqoctbxh4frok6f4q0d7ltb2"
+    },
+    {
+      "who": "steveloughran",
+      "stance": "Making Hadoop 3.4.1 the base version already makes Iceberg partly incompatible with Spark 3.4, as shown by classpath failures in a PR using BulkDelete.",
+      "source": "devlist:sjrg9ldh4520f9946ng3djllf5zlld5d"
+    },
+    {
+      "who": "Parth Chandra",
+      "stance": "Asked for one more Iceberg release with Spark 3.4 so Comet users on 3.4 do not have to build their own.",
+      "source": "devlist:r369zpsmx163xntlzpzfdh3w0fgr8wly"
+    },
+    {
+      "who": "huaxingao",
+      "stance": "Keep Spark 3.4 for a couple more versions instead of removing it in 1.11.",
+      "source": "devlist:ptf4xoj8qsm1pcy59sno7rymrh7jkgy9"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Release 1.11 with Spark 3.4 without requiring full backports, then remove spark/v3.4 immediately afterwards and mark it end-of-life.",
+      "source": "devlist:2ppvhglts8qr5vdwm7wbdb56b9w0ddg4"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Formalize the same deprecate, release, remove sequence in the multi-engine support doc for Spark and Flink versions.",
+      "source": "devlist:svxf04pyx05hx3om2rzhzkgy6m1w2n9k"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Spark 3.4 is not fully end-of-life yet because it stays on the 1.11.x branch, which may see more releases.",
+      "source": "devlist:lw13hgc1gryonwk5pjd01sw0b5mbwk8o"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:lzc0ls4zbtj8bhv5r1s8n3qk0v7qhfsr",
+    "note": "Spark 3.4 was marked Deprecated in the docs (PR #14099) and the removal PR (#14122) was merged in May 2026; 1.11.0 is the last Iceberg version with Spark 3.4 support."
+  },
+  "initiatives": [
+    "spark-integration",
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#14098",
+    "gh:apache/iceberg#14099",
+    "gh:apache/iceberg#14122"
+  ],
+  "why_it_matters": "Changes on main no longer need a Spark 3.4 backport, and users on Spark 3.4 must stay on the Iceberg 1.11 line."
+}

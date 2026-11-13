@@ -5,10 +5,11 @@ title: 'Vote: release Apache Iceberg Go v0.6.0 RC2'
 date: '2026-05-21'
 url: https://lists.apache.org/thread/sgtobp6b3w9b3t4xdzo2xfgrsz960yxv
 kind: release-vote
-status: open
+status: passed
 messages: 8
 sources:
 - devlist:sgtobp6b3w9b3t4xdzo2xfgrsz960yxv
+- devlist:vmm8ybdnwsr2f8w2jf3frnq4gv7fl8h4
 refs: []
 links:
 - rel: started_by
@@ -20,7 +21,7 @@ updated: '2026-11-13'
 # Vote: release Apache Iceberg Go v0.6.0 RC2
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE][Go] Release Apache Iceberg Go v0.6.0 RC2](https://lists.apache.org/thread/sgtobp6b3w9b3t4xdzo2xfgrsz960yxv) · **Started:** 2026-05-21 by [[person/zeroshade|Matthew Topol]] · **Messages:** 8 (last 2026-05-26) · **Outcome:** open
+**Thread:** [[VOTE][Go] Release Apache Iceberg Go v0.6.0 RC2](https://lists.apache.org/thread/sgtobp6b3w9b3t4xdzo2xfgrsz960yxv) · **Started:** 2026-05-21 by [[person/zeroshade|Matthew Topol]] · **Messages:** 8 (last 2026-05-26) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -31,6 +32,8 @@ zeroshade proposed release candidate RC2 of Apache Iceberg Go v0.6.0, based on c
 ## Outcome
 
 No result message is in the thread. The votes shown are all +1: 2 marked binding, 4 marked non-binding and 1 unmarked.
+
+**Result posted in a separate thread on 2026-05-28:** [[RESULT][VOTE][Go] Release Apache Iceberg Go v0.6.0 RC2](https://lists.apache.org/thread/vmm8ybdnwsr2f8w2jf3frnq4gv7fl8h4) (`devlist:vmm8ybdnwsr2f8w2jf3frnq4gv7fl8h4`). Outcome read from that message: passed.
 
 ## Positions
 

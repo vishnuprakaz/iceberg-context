@@ -1,0 +1,75 @@
+{
+  "id": "thread/t-a1627a890918338f",
+  "_input_hash": "sha256:e20c61414db248c8dd56",
+  "sources": [
+    "devlist:qtjkm2xhby3x8hp0yvfj22bsvhyz6ro9",
+    "devlist:zdbkr040329f34sqlgd8l2c8xkqso3s5",
+    "devlist:vk4lhxw3nxdsd1wy5nl40hzhk641f6dj",
+    "devlist:hz4qc8hp38xqb66by37kfdvjx1mp6jyx",
+    "devlist:bxbz94dzrrh5zkptp3lzssz759k70tqt",
+    "devlist:l9m8mzbfttqk0l413yfrwp2m5gzryyj6"
+  ],
+  "title": "Adding X-Iceberg-Client-Capabilities header to REST spec",
+  "summary": "The thread debated whether read restrictions in the REST catalog need a client capabilities header or a v2 loadTable endpoint so that catalogs know a client will honor restrictions. RussellSpitzer, Christian Thiel, flyrain and singhpk234 argued that neither a header nor an endpoint version can bind an untrusted caller, that the catalog must decide out of band which principals receive restrictions, and that read restrictions should ship in v1 with v2 pursued separately. rdblue and danielcweeks argued that requiring clients to fail on unenforced restrictions is a forward-incompatible contract change that belongs in a v2 endpoint, and opposed capability headers that alter endpoint behavior. rdblue proposed a compromise: allow read restrictions on v1 with administrators responsible for verifying enforcement, and make support mandatory on v2. After the June 9 read restrictions sync, the capabilities header was dropped in favor of that V1/V2 path and spec PR 13879 was updated.",
+  "positions": [
+    {
+      "who": "RussellSpitzer",
+      "stance": "A header is advisory at best and a v2 endpoint is redundant for this feature because neither binds an untrusted caller; ship read restrictions in v1 without the capability flag and do v2 in parallel.",
+      "source": "devlist:zdbkr040329f34sqlgd8l2c8xkqso3s5"
+    },
+    {
+      "who": "Christian Thiel",
+      "stance": "Coupling read restrictions to v2 forces every client that wants the v2 cleanups to handle restrictions and would slow v2 adoption; introduce them in v1.",
+      "source": "devlist:gl7gkvh5nlbsh51bxdwfrqfltg626ttw"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Clients only need to know about the field and fail when it is present, not implement it; behavior changes should be explicit per endpoint rather than introduced as side effects.",
+      "source": "devlist:nosnwt9yo7j8lcv5vkwzxgb79vm7hpky"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Putting read restrictions in v2 guarantees clients parse the field and fail on unenforced restrictions, preventing accidental violations by trusted but older clients.",
+      "source": "devlist:vk4lhxw3nxdsd1wy5nl40hzhk641f6dj"
+    },
+    {
+      "who": "flyrain",
+      "stance": "Admins must verify client support either way, so v2 does not meaningfully reduce their diligence; catalogs should return restrictions only when explicitly enabled per principal or engine.",
+      "source": "devlist:zb3gjd16lpfwo29syvvjhn8kl6dph3dr"
+    },
+    {
+      "who": "singhpk234",
+      "stance": "The header was only an informational fail-fast hint and can be dropped; read restrictions should be decoupled from v2 requirements.",
+      "source": "devlist:flgj7d5ym9m2ds9joclb9hxbh5o8bd49"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Compromise: allow read restrictions on v1 with SHOULD-fail language and admin responsibility, and make support required on the v2 path.",
+      "source": "devlist:hz4qc8hp38xqb66by37kfdvjx1mp6jyx"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Either the feature is forward compatible and needs no capabilities, or it is not and needs v2; using capabilities to augment endpoint behavior adds complexity without security.",
+      "source": "devlist:bxbz94dzrrh5zkptp3lzssz759k70tqt"
+    },
+    {
+      "who": "Kurtiscwright",
+      "stance": "A global capabilities header should be discussed separately or dropped; agrees with MUST enforcement language for v2 as long as read restrictions proceed without waiting for v2.",
+      "source": "devlist:5odxbj8rvrqw3y618yydcy3240447gxt"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:l9m8mzbfttqk0l413yfrwp2m5gzryyj6",
+    "note": "After the 2026-06-09 read restrictions sync the capabilities header was dropped and the V1/V2 path was adopted; spec PR 13879 was updated with the agreed wording."
+  },
+  "initiatives": [
+    "read-restrictions",
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#13879",
+    "list:wfgqlsnpyvt1t42fg6o4q48w8nc14oof"
+  ],
+  "why_it_matters": "Read restrictions proceed on the v1 loadTable endpoint without a client capabilities header, with mandatory support reserved for a future v2 endpoint."
+}

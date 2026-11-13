@@ -1,0 +1,43 @@
+{
+  "id": "thread/t-9b4ac94de3e00827",
+  "_input_hash": "sha256:01279faf6f0ed6ac93b1",
+  "sources": [
+    "devlist:f8l27lr55nlrdg4qwno29r796d4v2p8l",
+    "devlist:j2g224gstxk77npgjldtn8g1ff4m30j6",
+    "devlist:5yptv4w53nonlxrondovjl9dj8nmnytc",
+    "devlist:812zf11xfoh78cp60xlrrzsnp25dno7w",
+    "devlist:bmq9bk11lko9rtqx5x139080llmjhglq"
+  ],
+  "title": "Iceberg Variant: tracking document and sync proposal",
+  "summary": "Neelesh Salian shared a community tracking document for Variant work across Iceberg, Spark, Parquet and Flink, with an overview, a tracker of open issues and PRs, and a benchmarks tab. He summarized three independent benchmarks as showing variant reads 1.1 to 1.7 times faster than JSON strings but 15 to 17 times slower than typed columns, and proposed a monthly Variant sync. Steve Loughran welcomed the tracker and asked about cross-implementation interoperability testing, handling of invalid data, duplicate keys and sorted fields. The sync was set up for the first Thursday of each month starting May 7, 2026, and notes and recordings were posted to the thread for the May through September meetings. In November Neelesh updated the document with next milestones and cancelled the December call, with the sync resuming in January 2027.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "Variant work spans several projects and needs a single tracking document and its own monthly sync.",
+      "source": "devlist:f8l27lr55nlrdg4qwno29r796d4v2p8l"
+    },
+    {
+      "who": "steveloughran",
+      "stance": "Supports the cross-project tracker and asks whether variant implementations have been cross-tested, including consistent handling of invalid data.",
+      "source": "devlist:j2g224gstxk77npgjldtn8g1ff4m30j6"
+    },
+    {
+      "who": "steveloughran",
+      "stance": "Wants status from the Rust, Go and C++ implementations and raises sorted fields, duplicate keys and malformed shredded files as cases to test.",
+      "source": "devlist:5yptv4w53nonlxrondovjl9dj8nmnytc"
+    }
+  ],
+  "outcome": {
+    "status": "informational",
+    "source": "devlist:812zf11xfoh78cp60xlrrzsnp25dno7w",
+    "note": "A monthly Variant sync was set up on the first Thursday of each month from May 7, 2026, with notes kept in the tracking document; the December 2026 call was cancelled."
+  },
+  "initiatives": [
+    "variant"
+  ],
+  "refs": [
+    "gh:apache/iceberg#10392",
+    "doc:1IuhLRxw1rcPD_f4jgHuGe3SwFgy7Y5wgEGvLzf6311s"
+  ],
+  "why_it_matters": "The tracking document and monthly sync are the places to follow and coordinate Variant work across Iceberg, Parquet and Spark."
+}

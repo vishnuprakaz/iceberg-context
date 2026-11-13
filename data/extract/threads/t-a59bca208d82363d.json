@@ -1,0 +1,101 @@
+{
+  "id": "thread/t-a59bca208d82363d",
+  "_input_hash": "sha256:401472b5da4437293c7c",
+  "sources": [
+    "devlist:w5qnj9gnl4rjhjnzyxlsbdzjx3kw9j8q",
+    "devlist:cvn448s85v2g835dfwxpz2z1j2hczok9",
+    "devlist:vyq9l2twq9ypoy73mrkbvq97owqsw55m",
+    "devlist:821bjvx2jym709yvt56xl6vm733z742t",
+    "devlist:nt4q47vc26sj4y6rjl1dlf72d88p35d4",
+    "devlist:5501y3oxjkksn9cmt00tg1bpoh1phyvd",
+    "devlist:2hyohpx2yldq19b193pwssv4kfqllgh7",
+    "devlist:kdxjm9kbn33m2084y6wo1psprn63j4rr",
+    "devlist:csn3q4tbj1vbykfh3xtg4m0nz12y180o",
+    "devlist:qwpz785zxbsmqogq1hs40pk3h0zgn903",
+    "devlist:v7wo6tkwwotxhdv9d8p3xrhqgt9fr7gr",
+    "devlist:w6dnrbxpf0hgvnsvbfqh87kvy7d64fgk",
+    "devlist:hdf5zd96sm38sjsmp0jjvfp274wfwmk2",
+    "devlist:28lz6onkwb3d2rvpxd8gqfoy3bvy58cp"
+  ],
+  "title": "Apache Iceberg 1.12.0 release planning",
+  "summary": "Release manager nssalian opened planning for 1.12.0 with a target of late August or early September 2026, about three months after 1.11.0, to return to a 3-4 month cadence, and tracked work on the 1.12.0 milestone. Contributors asked for specific PRs to be included. Spark 4.2 support was removed from the milestone after aokolnychyi advised against shipping it; the module was to be merged but excluded from release artifacts. Switching the Spark default table version to 3 was judged out of scope for 1.12. Blockers included the shaded-jar LICENSE/NOTICE cleanup, Kafka Connect data-loss fixes and a manifest list encryption key fix. Flink 2.2 and 2.3 upgrades were added to the milestone. RC0 was cut on September 18; after a fix for issue 18191 and a decision to keep the geo type toString change, RC1 and then RC2 were put up for vote, with RC2 voting open until September 29.",
+  "positions": [
+    {
+      "who": "stevenzwu",
+      "stance": "With regular releases every 2-3 months there is normally no need to hold a release for features, only for critical security and correctness issues.",
+      "source": "devlist:91zr07ykcd39vqz6zcohpfjvngb24vld"
+    },
+    {
+      "who": "pan3793",
+      "stance": "Asked whether the default table version created by Spark could move from 2 to 3 in the next release to drive adoption of features such as Variant.",
+      "source": "devlist:vz5sm923k7fk0d29f8zvo6nrh1skfq5v"
+    },
+    {
+      "who": "nssalian",
+      "stance": "The default should move forward eventually, but gaps remain on Variant and Geo types, so it will not happen in the 1.12 timeline.",
+      "source": "devlist:rnpyhvtjqbopwmj0yh6x1t1ym3w64bpm"
+    },
+    {
+      "who": "Felix Perez Diener",
+      "stance": "Asked that Flink 2.3 support be included in 1.12.0.",
+      "source": "devlist:p7dlfh3hbbj5s32270rko9jhqcf7l8l2"
+    },
+    {
+      "who": "aokolnychyi",
+      "stance": "Advised against shipping Spark 4.2 support in 1.12: merge the module to main to unblock development but leave it out of the release until the integration matures.",
+      "source": "devlist:821bjvx2jym709yvt56xl6vm733z742t"
+    },
+    {
+      "who": "adutra",
+      "stance": "Asked to include PR 17709, which implements the remote signing REST spec changes, so the spec change does not ship unimplemented.",
+      "source": "devlist:1gtb67pdpw0cnf0l12yxpw6yywlfbsgh"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Following Szehon's suggestion, the Spark 4.2 source can be merged while excluded from both binary and source release tarballs.",
+      "source": "devlist:5501y3oxjkksn9cmt00tg1bpoh1phyvd"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Flagged that PR 16765 changes geometry and geography toString to always print resolved defaults; reads stay compatible, and he is fine with 1.12 shipping the changed behavior.",
+      "source": "devlist:v7wo6tkwwotxhdv9d8p3xrhqgt9fr7gr"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Asked whether the missing cleanup of unused encryption keys in table metadata (PR 16353) should be addressed in this release.",
+      "source": "devlist:5ty5qp0jbqyd3v9c7df4jvqhdgtl3st7"
+    },
+    {
+      "who": "nssalian",
+      "stance": "The encryption key cleanup interface change needs more debate and does not need to be rushed into 1.12.",
+      "source": "devlist:c5yxp85dp0ottpq10nlbvrsfd51yjfd3"
+    }
+  ],
+  "outcome": {
+    "status": "informational",
+    "source": "devlist:28lz6onkwb3d2rvpxd8gqfoy3bvy58cp",
+    "note": "Planning thread. RC0 and RC1 were superseded; the last message announces RC2 for 1.12.0 is out for vote in a separate thread, with voting open until 2026-09-29. Spark 4.2 support and PR 13979 were deferred past 1.12."
+  },
+  "initiatives": [
+    "java-releases",
+    "spark-integration"
+  ],
+  "refs": [
+    "gh:apache/iceberg#14984",
+    "gh:apache/iceberg#16543",
+    "gh:apache/iceberg#17552",
+    "gh:apache/iceberg#17709",
+    "gh:apache/iceberg#17627",
+    "gh:apache/iceberg#16765",
+    "gh:apache/iceberg#18169",
+    "gh:apache/iceberg#17984",
+    "gh:apache/iceberg#17849",
+    "gh:apache/iceberg#17845",
+    "gh:apache/iceberg#15989",
+    "gh:apache/iceberg#16507",
+    "gh:apache/iceberg#16827",
+    "gh:apache/iceberg#13979",
+    "gh:apache/iceberg#17706"
+  ],
+  "why_it_matters": "Shows what made or missed 1.12.0 and that Spark 4.2 support is in main but not in the 1.12 release artifacts."
+}

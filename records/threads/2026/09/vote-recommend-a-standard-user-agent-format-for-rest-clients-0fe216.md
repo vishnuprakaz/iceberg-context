@@ -5,10 +5,11 @@ title: 'Vote: recommend a standard User-Agent format for REST clients'
 date: '2026-09-23'
 url: https://lists.apache.org/thread/79b5p9pfjso9d8tbs1w10619qz61rt85
 kind: vote
-status: open
+status: result-posted
 messages: 5
 sources:
 - devlist:79b5p9pfjso9d8tbs1w10619qz61rt85
+- devlist:pllz983cvffryzcwskglsr0cyo7p0gxx
 refs:
 - gh:apache/iceberg#17727
 - list:d6hkx66o8qc1lolh11l1lmswxlq0bpj9
@@ -19,7 +20,7 @@ updated: '2026-11-13'
 # Vote: recommend a standard User-Agent format for REST clients
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Recommend a standard User-Agent format for REST clients](https://lists.apache.org/thread/79b5p9pfjso9d8tbs1w10619qz61rt85) · **Started:** 2026-09-23 by rahul mahadev · **Messages:** 5 (last 2026-09-24) · **Outcome:** open
+**Thread:** [[VOTE] Recommend a standard User-Agent format for REST clients](https://lists.apache.org/thread/79b5p9pfjso9d8tbs1w10619qz61rt85) · **Started:** 2026-09-23 by rahul mahadev · **Messages:** 5 (last 2026-09-24) · **Outcome:** result-posted
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -32,6 +33,8 @@ rahul mahadev called a vote on standardizing the client User-Agent format in the
 ## Outcome
 
 No result is stated. The thread has 3 non-binding +1 votes and a request to address further PR comments before proceeding.
+
+**Result posted in a separate thread on 2026-10-09:** [[RESULT][VOTE] Recommend a standard User-Agent format for REST clients](https://lists.apache.org/thread/pllz983cvffryzcwskglsr0cyo7p0gxx) (`devlist:pllz983cvffryzcwskglsr0cyo7p0gxx`). Outcome read from that message: result-posted.
 
 ## Positions
 

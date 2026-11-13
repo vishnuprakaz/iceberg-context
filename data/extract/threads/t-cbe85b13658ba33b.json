@@ -1,0 +1,40 @@
+{
+  "id": "thread/t-cbe85b13658ba33b",
+  "_input_hash": "sha256:ceeff65489262924e26d",
+  "sources": [
+    "devlist:3vdtx3m4xbcw5htj246yhjt6wrc5rjo8",
+    "devlist:fpk1o87p6ysbtc720x7v3mmnn0844m8m",
+    "devlist:22t5j4wgfghqzgm6ds5xk5fwmt2rogph"
+  ],
+  "title": "Release Apache Iceberg C++ 0.3.0",
+  "summary": "zhjwpku proposed releasing Apache Iceberg C++ 0.3.0 without waiting for every item on the roadmap issue, since 114 commits had landed since 0.2.0 in January 2026. Completed work includes REST catalog authentication (no-op, basic, initial OAuth2), snapshot management and expire-snapshots cleanup, incremental append and changelog scans, data and delete file writers with merge-on-read reading, S3 and streaming FileIO, nanosecond timestamp types, Puffin basics, and writer metrics. Guotao Yu asked for a one to two week delay so that merging update support, including overwrite, could land; wgtmac agreed overwrite should be included and zhjwpku agreed to extend the window. On June 3 zhjwpku reported the feature was merged, volunteered as release manager, planned to send the vote by the end of that week, and asked committers for help with parts of the process since he lacks commit rights.",
+  "positions": [
+    {
+      "who": "zhjwpku",
+      "stance": "Release 0.3.0 now with the substantial completed work rather than waiting for every roadmap item, and carry the remainder to the next release.",
+      "source": "devlist:3vdtx3m4xbcw5htj246yhjt6wrc5rjo8"
+    },
+    {
+      "who": "Guotao Yu",
+      "stance": "Delay the release by one to two weeks so overwrite support can land and round out the write story.",
+      "source": "devlist:fpk1o87p6ysbtc720x7v3mmnn0844m8m"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "At least overwrite support should be included in 0.3.0.",
+      "source": "devlist:7h8fkw2kl20995vg3osv6l18ollnntkq"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:22t5j4wgfghqzgm6ds5xk5fwmt2rogph",
+    "note": "The release waited for overwrite support, which merged; zhjwpku volunteered as release manager and planned to start the 0.3.0 vote by the end of the week of June 3."
+  },
+  "initiatives": [
+    "iceberg-cpp"
+  ],
+  "refs": [
+    "gh:apache/iceberg-cpp#523"
+  ],
+  "why_it_matters": "Defines the scope of iceberg-cpp 0.3.0, including overwrite support added before the release was cut."
+}

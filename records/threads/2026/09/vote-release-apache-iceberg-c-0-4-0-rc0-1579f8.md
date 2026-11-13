@@ -5,10 +5,11 @@ title: Vote on releasing Apache Iceberg C++ 0.4.0 RC0
 date: '2026-09-22'
 url: https://lists.apache.org/thread/qqrg1l5qntf2m8h11gvopyvojrffgbw3
 kind: release-vote
-status: open
+status: passed
 messages: 9
 sources:
 - devlist:qqrg1l5qntf2m8h11gvopyvojrffgbw3
+- devlist:99vvhs027n70r95qqfbnqobjs8fktb1s
 refs:
 - gh:apache/iceberg-cpp#965
 links:
@@ -21,7 +22,7 @@ updated: '2026-11-13'
 # Vote on releasing Apache Iceberg C++ 0.4.0 RC0
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Release Apache Iceberg C++ 0.4.0 RC0](https://lists.apache.org/thread/qqrg1l5qntf2m8h11gvopyvojrffgbw3) · **Started:** 2026-09-22 by [[person/manuzhang|Manu Zhang]] · **Messages:** 9 (last 2026-09-25) · **Outcome:** open
+**Thread:** [[VOTE] Release Apache Iceberg C++ 0.4.0 RC0](https://lists.apache.org/thread/qqrg1l5qntf2m8h11gvopyvojrffgbw3) · **Started:** 2026-09-22 by [[person/manuzhang|Manu Zhang]] · **Messages:** 9 (last 2026-09-25) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,6 +35,8 @@ Manu (manuzhang) proposed release candidate RC0 of Apache Iceberg C++ 0.4.0, bas
 ## Outcome
 
 No result is stated in the thread. The replies are +1 votes: three marked binding (wgtmac, liurenjie1024, kevinjqliu) and five marked non-binding, with no 0 or -1 votes.
+
+**Result posted in a separate thread on 2026-09-26:** [[RESULT][VOTE] Release Apache Iceberg C++ 0.4.0 RC0](https://lists.apache.org/thread/99vvhs027n70r95qqfbnqobjs8fktb1s) (`devlist:99vvhs027n70r95qqfbnqobjs8fktb1s`). Outcome read from that message: passed.
 
 ## Positions
 

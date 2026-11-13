@@ -1,0 +1,44 @@
+{
+  "id": "thread/t-03ef420b5ad9206f",
+  "_input_hash": "sha256:ddf2c8633470a270fd6c",
+  "sources": [
+    "devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6",
+    "devlist:bl8l4m9vby6f7zlpg22rmx5ycgn8bcr5",
+    "devlist:jyrox48dr8lzb2jbl0rmycs8ylcs27t1",
+    "devlist:l83t4h47v3qgokz3h55wbwjr2fzmb77l"
+  ],
+  "title": "Iceberg community health stats",
+  "summary": "RussellSpitzer shared a community health dashboard for Iceberg, modeled on Patrick McFadin's Cassandra dashboard, statically generated from data pulled into a GitHub repository. He said he is concerned about the project's ability to keep up with contributions and about a decline in contributors going from a first to a second contribution, across the ecosystem and especially in the Java repo, and offered no prescriptions yet. Hongyue Zhang suggested it could inform release timing and quarterly reports and asked to put it on the community sync agenda; RussellSpitzer offered a walkthrough and monthly updates. Jared Yu attributed the first-to-second drop to AI-assisted contributions flooding a small group of maintainers, so PRs stall. Several people noted the original email landed in spam or never arrived. Patrick McFadin pointed to the CHAOSS project, discussions about offering such dashboards as an ASF infrastructure service, and a PR review tool he built for Cassandra.",
+  "positions": [
+    {
+      "who": "RussellSpitzer",
+      "stance": "Built a dashboard to track community health and is worried about keeping up with contributions and the decline in first-to-second contributors, especially in the Java repo.",
+      "source": "devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6"
+    },
+    {
+      "who": "Hongyue Zhang",
+      "stance": "The dashboard could help decide release timing and prepare quarterly reports, and should lead to concrete follow-ups on reviews; proposed discussing it at the community sync.",
+      "source": "devlist:bl8l4m9vby6f7zlpg22rmx5ycgn8bcr5"
+    },
+    {
+      "who": "Jared Yu",
+      "stance": "The first-to-second drop likely stems from AI-generated contributions overwhelming limited maintainer bandwidth, so PRs and issues stall.",
+      "source": "devlist:jyrox48dr8lzb2jbl0rmycs8ylcs27t1"
+    },
+    {
+      "who": "Patrick McFadin",
+      "stance": "The approach builds on CHAOSS; there are discussions about offering it as an ASF-wide service, and a PR review tool could reduce review toil.",
+      "source": "devlist:l83t4h47v3qgokz3h55wbwjr2fzmb77l"
+    }
+  ],
+  "outcome": {
+    "status": "informational",
+    "note": "A dashboard was shared and discussed; no decisions or action items beyond a proposed walkthrough at the community sync and monthly updates."
+  },
+  "initiatives": [
+    "community-process",
+    "ai-contributions"
+  ],
+  "refs": [],
+  "why_it_matters": "Gives the project data on review capacity and contributor retention, including a reported decline in contributors making a second contribution."
+}

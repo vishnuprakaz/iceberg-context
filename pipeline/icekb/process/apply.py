@@ -118,6 +118,30 @@ def apply_meeting(data: Data, ex: dict, validator, today: str) -> list[str]:
     return []
 
 
+def _subject_key(subject: str) -> str:
+    """A vote and its separately posted result share a subject once tags and 'Re:' are removed."""
+    s = re.sub(r"\[[^\]]*\]|^(re|fwd?):", " ", subject.lower())
+    return " ".join(re.sub(r"[^a-z0-9. ]+", " ", s).split())
+
+
+def separate_result(data: Data, mails: list[dict]) -> tuple[str, dict] | None:
+    """Find a [RESULT] message posted outside this vote thread, and read its stated outcome."""
+    if not hasattr(data, "_results"):
+        data._results = {}
+        for mail in data.by_type["email"]:
+            if mail["meta"]["kind"] == "result" and not mail["title"].lower().startswith("re:"):
+                data._results.setdefault(_subject_key(mail["meta"]["subject"]), mail)
+    result = data._results.get(_subject_key(mails[0]["meta"]["subject"]))
+    if not result or result["meta"]["thread"] == mails[0]["meta"]["thread"] or result["date"] < mails[0]["date"]:
+        return None
+    text = result["body"].lower()
+    if re.search(r"vote (has )?(passes|passed)|vote is successful|vote succeeded|proposal (passes|is accepted)|has passed", text):
+        return "passed", result
+    if re.search(r"vote (has )?(fails|failed)|did not pass|not enough", text):
+        return "failed", result
+    return "result-posted", result
+
+
 def apply_thread(data: Data, ex: dict, validator, today: str) -> list[str]:
     errors = [f"{'/'.join(map(str, e.path))}: {e.message[:140]}" for e in validator.iter_errors({k: v for k, v in ex.items() if k != "_input_hash"})]
     if errors:
@@ -131,10 +155,15 @@ def apply_thread(data: Data, ex: dict, validator, today: str) -> list[str]:
         return [f"cites message(s) that are not in this thread: {bad[:5]}" if mails else "unknown thread"]
     first, last = mails[0], mails[-1]
     subject = first["meta"]["subject"]
+    status, later = ex["outcome"]["status"], None
+    if status in ("open", "no-conclusion") and first["meta"]["kind"] in ("vote", "release-vote"):
+        later = separate_result(data, mails)
+        if later:
+            status = later[0]
     starter = first["people"][0]
     lines = [f"**Thread:** [{subject}]({first['url']}) · **Started:** {first['date'][:10]} by "
              f"{person_label(data, starter) if not starter.startswith('name:') else starter[5:]} · **Messages:** {len(mails)} "
-             f"(last {last['date'][:10]}) · **Outcome:** {ex['outcome']['status']}", "",
+             f"(last {last['date'][:10]}) · **Outcome:** {status}", "",
              "> Summary written by an AI model from the messages. Check the thread before relying on a detail.", "",
              "## Summary", "", ex["summary"], ""]
     if ex.get("why_it_matters"):
@@ -142,6 +171,10 @@ def apply_thread(data: Data, ex: dict, validator, today: str) -> list[str]:
     if ex["outcome"].get("note"):
         src = ex["outcome"].get("source")
         lines += ["## Outcome", "", ex["outcome"]["note"] + (f" ([message]({data.by_id[src]['url']}), `{src}`)" if src else ""), ""]
+    if later:
+        r = later[1]
+        lines += [f"**Result posted in a separate thread on {r['date'][:10]}:** [{r['title']}]({r['url']}) (`{r['id']}`). "
+                  f"Outcome read from that message: {later[0]}.", ""]
     if ex.get("positions"):
         lines += ["## Positions", ""]
         for p in ex["positions"]:
@@ -155,8 +188,8 @@ def apply_thread(data: Data, ex: dict, validator, today: str) -> list[str]:
         links.append({"rel": "started_by", "to": f"person/{starter}", "confidence": "observed"})
     slug = re.sub(r"[^a-z0-9]+", "-", subject.lower()).strip("-")[:70] or tid
     meta = {"id": ex["id"], "type": "thread", "title": ex["title"], "date": first["date"][:10], "url": first["url"],
-            "kind": first["meta"]["kind"], "status": ex["outcome"]["status"], "messages": len(mails),
-            "sources": [first["id"]], "refs": ex.get("refs", []), "links": links}
+            "kind": first["meta"]["kind"], "status": status, "messages": len(mails),
+            "sources": [first["id"]] + ([later[1]["id"]] if later else []), "refs": ex.get("refs", []), "links": links}
     write_page(data.root, f"records/threads/{first['date'][:4]}/{first['date'][5:7]}/{slug}-{tid[2:8]}.md", meta, ex["title"], "\n".join(lines), today)
     return []
 

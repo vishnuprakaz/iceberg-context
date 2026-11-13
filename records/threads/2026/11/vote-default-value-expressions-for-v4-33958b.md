@@ -5,10 +5,11 @@ title: 'Vote: default value expressions for V4'
 date: '2026-11-02'
 url: https://lists.apache.org/thread/th30oq0rcvn5gmn2qdx790k8vf4fz1ob
 kind: vote
-status: open
+status: passed
 messages: 20
 sources:
 - devlist:th30oq0rcvn5gmn2qdx790k8vf4fz1ob
+- devlist:h5jnk7l2op325x545hfnrpbo3qmh2ovo
 refs:
 - gh:apache/iceberg#16777
 - doc:1NDMozxdvB3u66L-dTchnyZtQO5JCz3H9lUg14crpy8M
@@ -24,7 +25,7 @@ updated: '2026-11-13'
 # Vote: default value expressions for V4
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Default Value Expressions for v4](https://lists.apache.org/thread/th30oq0rcvn5gmn2qdx790k8vf4fz1ob) · **Started:** 2026-11-02 by [[person/danielcweeks|Daniel C. Weeks]] · **Messages:** 20 (last 2026-11-09) · **Outcome:** open
+**Thread:** [[VOTE] Default Value Expressions for v4](https://lists.apache.org/thread/th30oq0rcvn5gmn2qdx790k8vf4fz1ob) · **Started:** 2026-11-02 by [[person/danielcweeks|Daniel C. Weeks]] · **Messages:** 20 (last 2026-11-09) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -37,6 +38,8 @@ danielcweeks started a vote on adding default value expressions, as proposed in 
 ## Outcome
 
 No result is stated in this thread; the caller said he would close it with a separate result thread. The thread shows only +1 votes: 8 marked binding, 8 marked non-binding and 2 unmarked, plus the caller's own announced +1.
+
+**Result posted in a separate thread on 2026-11-06:** [[RESULT][VOTE] Default Value Expressions for v4](https://lists.apache.org/thread/h5jnk7l2op325x545hfnrpbo3qmh2ovo) (`devlist:h5jnk7l2op325x545hfnrpbo3qmh2ovo`). Outcome read from that message: passed.
 
 ## Positions
 

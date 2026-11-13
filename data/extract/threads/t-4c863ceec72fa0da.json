@@ -1,0 +1,30 @@
+{
+  "id": "thread/t-4c863ceec72fa0da",
+  "_input_hash": "sha256:79f4352d62ebcb547b32",
+  "sources": [
+    "devlist:hc2764vozz7ygx5fjj64104hotrof0lk",
+    "devlist:c5ldjw25fplxjfplfx8fnvbkv598yy3p"
+  ],
+  "title": "REST spec: add none to X-Iceberg-Access-Delegation header values",
+  "summary": "youngrae81 called a vote on adding the value none to the allowed values of the X-Iceberg-Access-Delegation header in the REST catalog spec, through PR 18480. The value signals that the client is able to operate without any access delegation mechanism. The proposal follows an earlier discussion thread on the expected server behavior when the requested access delegation cannot be satisfied, where, according to the vote email, Dan and Dmitri agreed that only this addition is needed; the PR had approvals from Dan, Dmitri and Alexandre. The vote was open for at least 72 hours and received only +1 votes. youngrae81 announced that it passed and said he would follow up on the PR for the merge.",
+  "positions": [
+    {
+      "who": "youngrae81",
+      "stance": "Add none to the X-Iceberg-Access-Delegation values so a client can signal it can operate without any access delegation mechanism.",
+      "source": "devlist:hc2764vozz7ygx5fjj64104hotrof0lk"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:c5ldjw25fplxjfplfx8fnvbkv598yy3p",
+    "note": "Passed with 7 +1 votes (3 binding, 4 non-binding) and no 0 or -1 votes. The change is in PR 18480, pending merge."
+  },
+  "initiatives": [
+    "rest-auth",
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#18480"
+  ],
+  "why_it_matters": "Clients can explicitly tell a REST catalog that they need no vended credentials or remote signing."
+}

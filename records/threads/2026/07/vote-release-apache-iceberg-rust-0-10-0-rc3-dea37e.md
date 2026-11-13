@@ -5,10 +5,11 @@ title: Vote on releasing Apache Iceberg Rust 0.10.0 RC3
 date: '2026-07-08'
 url: https://lists.apache.org/thread/h8ohxh44g1zc32clg3sgxr80xjc4nnr9
 kind: release-vote
-status: no-conclusion
+status: passed
 messages: 11
 sources:
 - devlist:h8ohxh44g1zc32clg3sgxr80xjc4nnr9
+- devlist:fymfyn86yr1zzhlc3l1fb3j27o5v5t75
 refs:
 - gh:apache/iceberg-rust#2823
 links: []
@@ -18,7 +19,7 @@ updated: '2026-11-13'
 # Vote on releasing Apache Iceberg Rust 0.10.0 RC3
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Release Apache Iceberg Rust 0.10.0 RC3](https://lists.apache.org/thread/h8ohxh44g1zc32clg3sgxr80xjc4nnr9) · **Started:** 2026-07-08 by Danny Jones · **Messages:** 11 (last 2026-07-14) · **Outcome:** no-conclusion
+**Thread:** [[VOTE] Release Apache Iceberg Rust 0.10.0 RC3](https://lists.apache.org/thread/h8ohxh44g1zc32clg3sgxr80xjc4nnr9) · **Started:** 2026-07-08 by Danny Jones · **Messages:** 11 (last 2026-07-14) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -31,6 +32,8 @@ Danny Jones called a vote to release Apache Iceberg Rust 0.10.0 from tag v0.10.0
 ## Outcome
 
 No result is stated in the thread. Before the -1 there were +1 votes marked binding from liurenjie1024, kevinjqliu and amogh-jahagirdar and seven marked non-binding; kevinjqliu then changed his vote to -1 and asked for a new RC. ([message](https://lists.apache.org/thread/rtn30pj4fjl70m6f0rzzmt8gml82lohw), `devlist:rtn30pj4fjl70m6f0rzzmt8gml82lohw`)
+
+**Result posted in a separate thread on 2026-07-14:** [[RESULT][VOTE] Release Apache Iceberg Rust 0.10.0 RC3](https://lists.apache.org/thread/fymfyn86yr1zzhlc3l1fb3j27o5v5t75) (`devlist:fymfyn86yr1zzhlc3l1fb3j27o5v5t75`). Outcome read from that message: passed.
 
 ## Positions
 

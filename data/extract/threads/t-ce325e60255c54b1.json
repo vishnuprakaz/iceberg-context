@@ -1,0 +1,47 @@
+{
+  "id": "thread/t-ce325e60255c54b1",
+  "_input_hash": "sha256:affe5a125bf1479b394d",
+  "sources": [
+    "devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz",
+    "devlist:qj3gp8rfymn96x3fkjyfjyg4296rkplv",
+    "devlist:fd01c188mxpl31kql7t3bdo3yd63dm1q",
+    "devlist:ktd6jqhhfxrj2o6y99dkv7qwkdlnp58t"
+  ],
+  "title": "Flink: equality delete to DV conversion",
+  "summary": "These messages continue a proposal by mxm to convert equality deletes into deletion vectors in Flink. Márton Balassi supported it as a step toward removing the need for equality deletes. mxm opened PR 15996: the converter monitors a staging branch where the writer commits equality deletes, builds a sharded primary-key index in Flink state backed by RocksDB, resolves the deletes against it and commits data files plus DVs to the main branch. stevenzwu agreed it moves closer to removing equality deletes and can test whether the index scales for streaming CDC and upsert writes; mxm confirmed the solution currently requires V3 tables. In July mxm reported that the work, split into six commits, was merged and feature complete: ConvertEqualityDeletes is a table maintenance task, runs standalone or integrated with IcebergSink, and supports a staging branch or same-branch conversion, the IcebergSink default. Incremental re-indexing after external commits was deferred.",
+  "positions": [
+    {
+      "who": "Márton Balassi",
+      "stance": "Supports the proposal; removing reliance on equality deletes in the Flink write path improves read efficiency and makes Flink upserts viable.",
+      "source": "devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz"
+    },
+    {
+      "who": "mxm",
+      "stance": "The converter runs in line with the writer, resolving staged equality deletes into DVs via a RocksDB-backed primary-key index; row lineage and staging branch lifecycle remain gaps.",
+      "source": "devlist:qj3gp8rfymn96x3fkjyfjyg4296rkplv"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "The proposal gets closer to removing equality deletes and can verify whether an index scales for streaming CDC and upsert writes; asked if it is limited to V3 tables.",
+      "source": "devlist:4dmot2lfkr46l45yvfbjd57hjxsovqkn"
+    },
+    {
+      "who": "mxm",
+      "stance": "The current solution requires V3 tables; V2 support would be possible with storage and lookup efficiency tradeoffs.",
+      "source": "devlist:fd01c188mxpl31kql7t3bdo3yd63dm1q"
+    }
+  ],
+  "outcome": {
+    "status": "informational",
+    "source": "devlist:ktd6jqhhfxrj2o6y99dkv7qwkdlnp58t",
+    "note": "mxm reported that all six commits split from PR 15996 were merged and the ConvertEqualityDeletes maintenance task is feature complete and integrated with IcebergSink; incremental re-indexing after external commits is a deferred follow-up."
+  },
+  "initiatives": [
+    "flink-integration",
+    "v4-equality-deletes"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15996"
+  ],
+  "why_it_matters": "Flink can now convert equality deletes into deletion vectors, which is the main evidence used for forbidding equality deletes in V4."
+}

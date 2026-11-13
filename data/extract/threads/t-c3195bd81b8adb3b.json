@@ -1,0 +1,55 @@
+{
+  "id": "thread/t-c3195bd81b8adb3b",
+  "_input_hash": "sha256:5e76d9808a838584de67",
+  "sources": [
+    "devlist:38rkthkr1fg0s86493fjq755cnl3y90s",
+    "devlist:090brbvtrrn1kofkfrxcr1wqn9877zho",
+    "devlist:d7fg5bgpv883mvcg1klp4nmzvm9krc3p",
+    "devlist:kc6mdyn3m01cogyzpfzg050j1lj7nymc",
+    "devlist:3t20q7hm3hqgdk6y1hcpgt5lh3dhlvox",
+    "devlist:g1sxh4c85tm5kmpszfo2ooch461pr4gq",
+    "devlist:jmt0yz78vw2j9c7q311n8w4cmq9vvhsr",
+    "devlist:7fp9gcgp7948omd3kk407390o9dnkbxf"
+  ],
+  "title": "Reusable encryption keys",
+  "summary": "Gábor Kaszab questioned the assumption behind the table metadata encryption-keys list, namely that one data encryption key (DEK) can be reused for several files. He argued that reuse is hard to do safely because the DEK and nonce pair must never repeat, and that one DEK per file is common practice. V3 manifest lists already use a key-id that points into the list and cannot change, but for new file types such as V4 root manifests and statistics files he proposed storing the encrypted key metadata directly with the file reference, while key encryption keys stay in the shared list. Gidon Gershinsky agreed. Xander Bailey first preferred keeping the existing key-id pattern so implementations share one lookup and lifecycle path, then found the cleanup and list-growth arguments compelling. The thread ends with Gábor asking for feedback on the spec PR (#17533); no decision is recorded.",
+  "positions": [
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Against reusing DEKs across files; for V4 root manifests and statistics files, store the encrypted key directly instead of a key-id into encryption-keys.",
+      "source": "devlist:38rkthkr1fg0s86493fjq755cnl3y90s"
+    },
+    {
+      "who": "Gidon Gershinsky",
+      "stance": "In V4, DEK metadata is best moved into per-file structures while KEKs stay in the shared list; a random DEK per file is the simple and practical solution.",
+      "source": "devlist:090brbvtrrn1kofkfrxcr1wqn9877zho"
+    },
+    {
+      "who": "Xander Bailey",
+      "stance": "The existing key-id pattern already supports one DEK per file and would keep statistics and manifest lists on one representation and one lifecycle path.",
+      "source": "devlist:3t20q7hm3hqgdk6y1hcpgt5lh3dhlvox"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Keeping the list means every new encrypted file type needs its own key cleanup and the list grows; without key reuse the list has lost its purpose.",
+      "source": "devlist:g1sxh4c85tm5kmpszfo2ooch461pr4gq"
+    },
+    {
+      "who": "Xander Bailey",
+      "stance": "Finds those arguments compelling and asks for a draft Java implementation.",
+      "source": "devlist:jmt0yz78vw2j9c7q311n8w4cmq9vvhsr"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "The three participants ended up agreeing on a fresh DEK per file stored inline for new file types, but the thread closes with a request for wider feedback on spec PR #17533 and no recorded decision."
+  },
+  "initiatives": [
+    "v4-encryption"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17533",
+    "gh:apache/iceberg#16353"
+  ],
+  "why_it_matters": "It determines where encryption keys for statistics files and V4 root manifests live in table metadata and how they are cleaned up."
+}

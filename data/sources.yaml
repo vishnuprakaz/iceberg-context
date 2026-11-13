@@ -51,7 +51,7 @@ groups:
   - {slug: column-updates, name: Efficient Column Updates Sync, cadence: every 2 weeks (Tue), doc: 1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs,
      tab: Meeting Notes, playlist: Efficient column updates sync, title_match: [column updates]}
   - {slug: variant, name: Variant Community Sync, cadence: monthly (1st Thu), doc: 1IuhLRxw1rcPD_f4jgHuGe3SwFgy7Y5wgEGvLzf6311s,
-     tab: Meeting Notes, title_match: [variant]}
+     tab: Meeting Notes, title_match: [variant], bare_refs: false}  # its notes list PRs from many projects by bare number
   - {slug: spark, name: Spark Community Sync, cadence: monthly (3rd Tue), doc: 19nno1RoPznbbxKOZZddZNHHafa7XULjbN6RPExdr2n4,
      playlist: Iceberg - Spark Community Sync, title_match: [spark community sync]}
   - {slug: python, name: PyIceberg Sync, cadence: monthly (last Tue), doc: 1oMKodaZJrOJjPfc8PDVAoTdl02eGQKHlhwuggiw7s9U,

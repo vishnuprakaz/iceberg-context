@@ -5,10 +5,11 @@ title: Release Apache Iceberg Rust 0.10.1 RC1
 date: '2026-07-28'
 url: https://lists.apache.org/thread/mgtkn0oprblt1tg7m0h3k1jo3lln6mc2
 kind: release-vote
-status: open
+status: passed
 messages: 9
 sources:
 - devlist:mgtkn0oprblt1tg7m0h3k1jo3lln6mc2
+- devlist:bg80qn7v5v13s7tqxps9w6kwg4mdt91v
 refs: []
 links:
 - rel: started_by
@@ -20,7 +21,7 @@ updated: '2026-11-13'
 # Release Apache Iceberg Rust 0.10.1 RC1
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Release Apache Iceberg Rust 0.10.1 RC1](https://lists.apache.org/thread/mgtkn0oprblt1tg7m0h3k1jo3lln6mc2) · **Started:** 2026-07-28 by [[person/CTTY|Shawn Chang]] · **Messages:** 9 (last 2026-07-30) · **Outcome:** open
+**Thread:** [[VOTE] Release Apache Iceberg Rust 0.10.1 RC1](https://lists.apache.org/thread/mgtkn0oprblt1tg7m0h3k1jo3lln6mc2) · **Started:** 2026-07-28 by [[person/CTTY|Shawn Chang]] · **Messages:** 9 (last 2026-07-30) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -31,6 +32,8 @@ CTTY called a vote to release Apache Iceberg Rust 0.10.1 from tag v0.10.1-rc.1, 
 ## Outcome
 
 No result message is in the thread. The messages show +1 votes only: two marked binding (kevinjqliu, liurenjie1024) and six marked non-binding; no -1 votes.
+
+**Result posted in a separate thread on 2026-08-01:** [[RESULT][VOTE] Release Apache Iceberg Rust 0.10.1 RC1](https://lists.apache.org/thread/bg80qn7v5v13s7tqxps9w6kwg4mdt91v) (`devlist:bg80qn7v5v13s7tqxps9w6kwg4mdt91v`). Outcome read from that message: passed.
 
 ## Positions
 

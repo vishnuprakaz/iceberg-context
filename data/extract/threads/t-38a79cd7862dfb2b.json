@@ -1,0 +1,42 @@
+{
+  "id": "thread/t-38a79cd7862dfb2b",
+  "_input_hash": "sha256:548b529f200151f05b0a",
+  "sources": [
+    "devlist:oxdht2fxkg4l7mh60lfts09g12hx4lh8",
+    "devlist:d5c6jq39mstk0wtz0z7mljpnrnbjmkrf",
+    "devlist:9rxlv9ol6g10nod93js142knltfn677x",
+    "devlist:bowjj9wwgdm9dw3myoxd29rtvqfloogl"
+  ],
+  "title": "Release Apache Iceberg 1.11.0 RC1",
+  "summary": "This is a short exchange on the 1.11.0 RC1 vote thread; the first message from aihuaxu has no body in the collected data. kevinjqliu pointed out on a final check that a backport, PR 16303, had been opened that day. huaxingao noted that the original change, PR 16295, had been merged to main only. aihuaxu replied that although a new release candidate had been created the night before, it does not include the backport in PR 16303, which also seems to be needed for the previous Spark release. He said he would wait for the backport to merge and create a new release candidate later that day. No votes or result are recorded in these messages.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "Flagged a late backport, PR 16303, on his final check of the release candidate.",
+      "source": "devlist:d5c6jq39mstk0wtz0z7mljpnrnbjmkrf"
+    },
+    {
+      "who": "huaxingao",
+      "stance": "The original PR 16295 was merged to main only.",
+      "source": "devlist:9rxlv9ol6g10nod93js142knltfn677x"
+    },
+    {
+      "who": "aihuaxu",
+      "stance": "The new release candidate lacks the backport, which is also needed for the previous Spark version, so a further candidate will be created once it merges.",
+      "source": "devlist:bowjj9wwgdm9dw3myoxd29rtvqfloogl"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "source": "devlist:bowjj9wwgdm9dw3myoxd29rtvqfloogl",
+    "note": "The release manager said he would wait for backport PR 16303 to merge and create a new release candidate; no vote result is recorded."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16303",
+    "gh:apache/iceberg#16295"
+  ],
+  "why_it_matters": "The 1.11.0 release needed another candidate to pick up a late backport."
+}

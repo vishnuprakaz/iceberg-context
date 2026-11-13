@@ -1,0 +1,72 @@
+{
+  "id": "thread/t-f30173754f0d73b2",
+  "_input_hash": "sha256:570bc7a56372f59caa06",
+  "sources": [
+    "devlist:hrcyh8nqf1svrwnm279n466c75r3wwxn",
+    "devlist:87jfjo26vhgjdmppms4h8c72rmj8btoc",
+    "devlist:zf3cyb7osw7prcf3zyybc3j02d316jsk",
+    "devlist:7w6nsro9whvvjfq05cl2bh9qp23kpw1b",
+    "devlist:5cnrhd3kfwzxywkj07kdls8o1twoomoq",
+    "devlist:w9w107k5sblgn67z6bdtx7p4nw8o98kv"
+  ],
+  "title": "Catalog-provided metadata tables",
+  "summary": "After labels landed in the REST spec, laskoviymishka asked whether metadata tables may expose catalog-provided data, starting with a .labels table, even though existing metadata tables are deterministic projections of table metadata. rdblue questioned whether a SQL surface is needed at all, since engines consume labels programmatically, and rejected the join example as two unrelated queries. pvary said queryable, joinable labels contradict the agreed design where catalogs need not persist or version labels. manuzhang noted labels exist only for REST catalogs while metadata tables should work for all. laskoviymishka agreed the metadata table is not needed for now, with Spark DESCRIBE covering SQL consumers, and the Java PR was closed. He later proposed letting non-Java clients expose labels through their inspect APIs, beginning with iceberg-go; manuzhang objected that the API cannot distinguish a table without labels from a catalog that does not support them. The thread ends there.",
+  "positions": [
+    {
+      "who": "laskoviymishka",
+      "stance": "Labels are a reasonable first case for a catalog-provided, read-only metadata table that is empty when the catalog returns nothing.",
+      "source": "devlist:hrcyh8nqf1svrwnm279n466c75r3wwxn"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Fine with a metadata table if there is a use for it, but labels are for engines and a SQL surface should not be assumed; not adding one is simpler.",
+      "source": "devlist:87jfjo26vhgjdmppms4h8c72rmj8btoc"
+    },
+    {
+      "who": "pvary",
+      "stance": "Queryable and joinable labels contradict the read-path agreement that catalogs need not persist or version labels; if wanted, reconsider storing them in table metadata or properties.",
+      "source": "devlist:s89pj1zdv5b7lwjzblbcx4ht3t4zmvyl"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Labels exist only in the REST spec, whereas metadata tables should work for all catalogs.",
+      "source": "devlist:jzhd57njpvmmbfp20n3y353r3pmm39rz"
+    },
+    {
+      "who": "rdblue",
+      "stance": "The composition example is a cartesian join of two unrelated queries, leaving only direct user exposure as a use case, which is a nice-to-have nobody would miss.",
+      "source": "devlist:zf3cyb7osw7prcf3zyybc3j02d316jsk"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "SQL-only consumers can be served by DESCRIBE in PR 18049, so the metadata table is not needed for now and can be revisited later.",
+      "source": "devlist:7w6nsro9whvvjfq05cl2bh9qp23kpw1b"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Keep the Java/Spark decision but let PyIceberg, iceberg-rust and iceberg-go expose catalog-provided labels through their inspect library APIs, documented as catalog-provided and possibly empty.",
+      "source": "devlist:5cnrhd3kfwzxywkj07kdls8o1twoomoq"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "The proposed inspect API cannot distinguish a table lacking labels from a catalog that does not support labels.",
+      "source": "devlist:w9w107k5sblgn67z6bdtx7p4nw8o98kv"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "The Java labels metadata table (PR 18048) was dropped and closed in favor of DESCRIBE. The follow-up question about exposing labels through client inspect APIs ended with an unanswered objection."
+  },
+  "initiatives": [
+    "catalog-labels"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15750",
+    "gh:apache/iceberg#18046",
+    "gh:apache/iceberg#18048",
+    "gh:apache/iceberg#18049",
+    "gh:apache/iceberg-go#2101",
+    "doc:1aj-6JlfBiMYEEVtNuh5WLMOrRQiMCcyYUGbouPM4hXI"
+  ],
+  "why_it_matters": "Java/Spark metadata tables stay limited to projections of table metadata; labels are surfaced through SupportsLabels and DESCRIBE instead."
+}

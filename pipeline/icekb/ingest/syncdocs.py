@@ -67,7 +67,7 @@ def split_meetings(text: str) -> list[tuple[dt.date, str, str]]:
     return [(d, rest, "\n".join(body)) for d, rest, body in sections]
 
 
-def refs_by_language(body: str) -> list[str]:
+def refs_by_language(body: str, bare: bool = True) -> list[str]:
     """Bare '#12345' refers to the repository of the Java / Python / Rust / Go / C++ subsection it sits under.
 
     A subsection is a short label line; it covers the more-indented lines below it and ends at the next line
@@ -86,7 +86,7 @@ def refs_by_language(body: str) -> list[str]:
             repo, label_indent = target, indent
         elif label_indent is not None and indent <= label_indent:
             repo, label_indent = default, None
-        refs += extract_refs(line, repo)
+        refs += extract_refs(line, repo if bare else None)
     return list(dict.fromkeys(refs))
 
 
@@ -103,7 +103,7 @@ def ingest(root: Path, group: str, file: Path, modified: str | None = None) -> d
         heading = clean_text(rest)
         status = "cancelled" if re.search(r"cancel|no meeting|skipped", heading + cleaned[:200], re.I) else \
                  "upcoming" if date > today else "link-only" if len(re.sub(r"<[^>]+>|\(http[^)]*\)", "", cleaned)) < 150 else "held"
-        refs = refs_by_language(heading + "\n" + body)
+        refs = refs_by_language(heading + "\n" + body, bare=info.get("bare_refs", True))
         names = {n.strip() for n in _AGENDA_NAME.findall(body)}
         for thanked in re.findall(r"\(Thanks,? ([^()!]{2,90}?)!?\)", body):
             names |= {n.strip() for n in re.split(r",| and | & ", thanked) if n.strip()}

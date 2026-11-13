@@ -1,0 +1,69 @@
+{
+  "id": "thread/t-4fdcd748e0704aa5",
+  "_input_hash": "sha256:5a2dd9e7ec5ca0ecd250",
+  "sources": [
+    "devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl",
+    "devlist:2y5vj6vsyd49p4vsnqxj75tgy0jxxfwq",
+    "devlist:9wdwjhog9qlv6jccshbmstjy109s2wol",
+    "devlist:boy9nh4029y4f3yvcy4xy865xq2w4pdn",
+    "devlist:3gh3nfy6jl26cfh0cylx8ydqr0k62r48",
+    "devlist:trf8d4rcnbr8fhhqwbh26twwqrr36hp1",
+    "devlist:fxftrwg17dc4b2szhjf4y79x11z7kylp",
+    "devlist:1sv1fw7zz5rrglxx0vhwnhdj4cmmnnx8",
+    "devlist:zrn1jb7g9wm7jgn4fx3klmtxs03k65zg"
+  ],
+  "title": "Initial REST catalog spec changes needed for Iceberg V4",
+  "summary": "Dhruv Arya listed the first REST spec changes V4 needs: a root-manifest in Snapshot as an alternative to manifest-list, a table-location in load, commit and unregister responses to allow relative paths, and an optional metadata-location in CommitTableResponse. Because manifest-list and metadata-location are required today, he offered two approaches: duplicating models and endpoints as v2 (PR #17543), or relaxing the required fields in place (PR #17642), which he preferred. Daniel Weeks and Amogh Jahagirdar favoured the smaller model change combined with a new v2 loadTable endpoint that all V4 tables must be loaded through, since clients cannot be relied on to check format-version before failing on a missing field. Yufei Gu agreed that v1 loadTable must not return V4 metadata and suggested an error response instead. In November Daniel Weeks created a rest-v4-changes branch to collect the OpenAPI changes. No vote was held in the thread.",
+  "positions": [
+    {
+      "who": "dhruvarya-db",
+      "stance": "Leans toward making manifest-list and metadata-location optional in place rather than duplicating models and endpoints as v2.",
+      "source": "devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Prefers the second approach, but with a v2 loadTable endpoint required for all V4 tables; only load table needs a version bump.",
+      "source": "devlist:2y5vj6vsyd49p4vsnqxj75tgy0jxxfwq"
+    },
+    {
+      "who": "amogh-jahagirdar",
+      "stance": "Agrees with a v2 load endpoint serving v1-v4 tables, and thinks the V4 table spec should be voted before the v2 REST spec.",
+      "source": "devlist:9wdwjhog9qlv6jccshbmstjy109s2wol"
+    },
+    {
+      "who": "flyrain",
+      "stance": "Since format-version is required in TableMetadata, a client should be able to identify the version before interpreting the rest of the metadata.",
+      "source": "devlist:3gh3nfy6jl26cfh0cylx8ydqr0k62r48"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Field processing order cannot be guaranteed, so an older client may fail on a missing required location before it can check the version.",
+      "source": "devlist:trf8d4rcnbr8fhhqwbh26twwqrr36hp1"
+    },
+    {
+      "who": "flyrain",
+      "stance": "The v1 loadTable endpoint must not return V4 metadata and should return a documented error; suggested collecting other v2 requirements such as partial metadata loading.",
+      "source": "devlist:fxftrwg17dc4b2szhjf4y79x11z7kylp"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "An error response for V4 tables on v1 loadTable is right, but is hesitant to take on partial metadata loading as part of the v2 endpoint.",
+      "source": "devlist:1sv1fw7zz5rrglxx0vhwnhdj4cmmnnx8"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "source": "devlist:zrn1jb7g9wm7jgn4fx3klmtxs03k65zg",
+    "note": "Participants converged on in-place model changes plus a v2 loadTable endpoint for V4 tables. A rest-v4-changes branch was created to collect the spec changes, with PR #17642 open for feedback."
+  },
+  "initiatives": [
+    "rest-spec",
+    "v4-general",
+    "v4-relative-paths"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17543",
+    "gh:apache/iceberg#17642"
+  ],
+  "why_it_matters": "It introduces the first versioned (v2) REST endpoint, and catalogs and clients will need it to load V4 tables."
+}

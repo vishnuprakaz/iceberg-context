@@ -5,10 +5,11 @@ title: Release Apache Iceberg 1.12.0 RC2
 date: '2026-09-25'
 url: https://lists.apache.org/thread/l8gjs6z1ocfd70hv6dj923s7p9qm0w77
 kind: release-vote
-status: open
+status: passed
 messages: 18
 sources:
 - devlist:l8gjs6z1ocfd70hv6dj923s7p9qm0w77
+- devlist:ychjvqbmt7ksmczhct3mnw8j3yowwbcr
 refs:
 - gh:apache/iceberg#14984
 - gh:apache/iceberg#18024
@@ -22,7 +23,7 @@ updated: '2026-11-13'
 # Release Apache Iceberg 1.12.0 RC2
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Release Apache Iceberg 1.12.0 RC2](https://lists.apache.org/thread/l8gjs6z1ocfd70hv6dj923s7p9qm0w77) · **Started:** 2026-09-25 by [[person/nssalian|Neelesh Salian]] · **Messages:** 18 (last 2026-09-29) · **Outcome:** open
+**Thread:** [[VOTE] Release Apache Iceberg 1.12.0 RC2](https://lists.apache.org/thread/l8gjs6z1ocfd70hv6dj923s7p9qm0w77) · **Started:** 2026-09-25 by [[person/nssalian|Neelesh Salian]] · **Messages:** 18 (last 2026-09-29) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -35,6 +36,8 @@ nssalian proposed release candidate 2 (commit 212aa894, tag apache-iceberg-1.12.
 ## Outcome
 
 No result message is in the thread. The messages show +1 votes only: one marked binding (RussellSpitzer) and nine marked non-binding; no -1 votes.
+
+**Result posted in a separate thread on 2026-09-29:** [[RESULT][VOTE] Release Apache Iceberg 1.12.0 RC2](https://lists.apache.org/thread/ychjvqbmt7ksmczhct3mnw8j3yowwbcr) (`devlist:ychjvqbmt7ksmczhct3mnw8j3yowwbcr`). Outcome read from that message: passed.
 
 ## Positions
 

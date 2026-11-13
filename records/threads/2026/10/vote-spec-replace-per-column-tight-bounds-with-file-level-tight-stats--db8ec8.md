@@ -5,10 +5,11 @@ title: 'Spec: replace per-column tight_bounds with file-level tight_stats in v4'
 date: '2026-10-22'
 url: https://lists.apache.org/thread/txorrcfb5ft95q8kq2gypdcj1gd7zzxl
 kind: vote
-status: open
+status: passed
 messages: 14
 sources:
 - devlist:txorrcfb5ft95q8kq2gypdcj1gd7zzxl
+- devlist:g7qvlhkt3kchgf7sgjdcr0z9sksbqgq6
 refs:
 - gh:apache/iceberg#18585
 - doc:13DbwnwKQXjvY3vRcFJo-qVAQWk-GB4zLzzYmFdPntZg
@@ -22,7 +23,7 @@ updated: '2026-11-13'
 # Spec: replace per-column tight_bounds with file-level tight_stats in v4
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Spec: Replace per-column tight_bounds with file-level tight_stats in v4](https://lists.apache.org/thread/txorrcfb5ft95q8kq2gypdcj1gd7zzxl) · **Started:** 2026-10-22 by [[person/anoopj|Anoop Johnson]] · **Messages:** 14 (last 2026-10-25) · **Outcome:** open
+**Thread:** [[VOTE] Spec: Replace per-column tight_bounds with file-level tight_stats in v4](https://lists.apache.org/thread/txorrcfb5ft95q8kq2gypdcj1gd7zzxl) · **Started:** 2026-10-22 by [[person/anoopj|Anoop Johnson]] · **Messages:** 14 (last 2026-10-25) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -35,6 +36,8 @@ anoopj called a vote on the V4 spec change in PR #18585 that replaces the per-co
 ## Outcome
 
 No result message is in the thread. The messages show 13 +1 votes, nine marked binding and four non-binding; no -1 votes.
+
+**Result posted in a separate thread on 2026-10-27:** [[RESULT][VOTE] Spec: Replace per-column tight_bounds with file-level tight_stats in v4](https://lists.apache.org/thread/g7qvlhkt3kchgf7sgjdcr0z9sksbqgq6) (`devlist:g7qvlhkt3kchgf7sgjdcr0z9sksbqgq6`). Outcome read from that message: passed.
 
 ## Positions
 

@@ -1,0 +1,36 @@
+{
+  "id": "thread/t-85a04b03334ef096",
+  "_input_hash": "sha256:a1cf60af13cc72e523c1",
+  "sources": [
+    "devlist:ytb9x7x8ff3b7031kcrc05nzjtmh091s",
+    "devlist:f21t4f8t8mx6pjjb9ojnszsbln0z5hr6"
+  ],
+  "title": "Move iceberg-datafusion to Apache DataFusion",
+  "summary": "kevinjqliu started the Iceberg-side vote to move the iceberg-datafusion integration from apache/iceberg-rust to apache/datafusion-iceberg under the Apache DataFusion project, following an earlier discussion thread. He argued the move makes it easier for contributors familiar with DataFusion to maintain and improve the integration while keeping it under Apache governance. A PR porting the code and its history had been prepared, and a corresponding vote was running on the DataFusion dev list; the migration would proceed if both communities approved. Xuanwo added that the move gives DataFusion contributors a natural place to maintain the integration. No objections were raised and the vote passed.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "Moving the integration to Apache DataFusion makes it easier for DataFusion contributors to maintain and improve it while keeping it under Apache governance.",
+      "source": "devlist:ytb9x7x8ff3b7031kcrc05nzjtmh091s"
+    },
+    {
+      "who": "Xuanwo",
+      "stance": "Supports the move because it gives DataFusion contributors a natural place to maintain the integration.",
+      "source": "devlist:8r9xk97c7ychy5tfms0gcqsvm8tfmr4t"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:f21t4f8t8mx6pjjb9ojnszsbln0z5hr6",
+    "note": "Passed with 17 +1 votes (5 binding, 12 non-binding) and no +0 or -1 votes. The migration goes ahead if the DataFusion community's parallel vote also approves."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [
+    "gh:apache/datafusion-iceberg#1",
+    "list:pk4yqd4llr85lmq3gskbfl9v31sfqpp9",
+    "list:6k5lws31c61y1lx2s34pxo4lmc7334lr"
+  ],
+  "why_it_matters": "The DataFusion integration for Iceberg leaves the iceberg-rust repository, so contributions to it will go to apache/datafusion-iceberg."
+}

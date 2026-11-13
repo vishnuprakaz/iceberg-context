@@ -1,0 +1,68 @@
+{
+  "id": "thread/t-5c70639b9c0f57ff",
+  "_input_hash": "sha256:c9816c8d196196af3c81",
+  "sources": [
+    "devlist:fym02576n5sqy298fjxl0xmsv9z5rb7y",
+    "devlist:7t93x05mhd33bksfm2mqfpnzxrnkc4oo",
+    "devlist:8zfx7owzxhvbdh7snzrns5oz5q81bfjb",
+    "devlist:xgzk6mh2yom9g4oxgjc5rro7hww23mwc",
+    "devlist:dwwd62mf3v11yn4376y5ptvskphg0rm3",
+    "devlist:l703q6mcyzbgkfczs91mj5bffk1k5pj4",
+    "devlist:9ozxhlz5odl6bgcqd7oj773vm0q3c2ys",
+    "devlist:zqkh0111czrzz39pgrlt7pz7nl0lj9wh",
+    "devlist:llgozzmnvyopcjdm3jjl4thxh5q346pt"
+  ],
+  "title": "Should V4 manifests be Parquet-only?",
+  "summary": "After a column update sync, Steven Wu asked whether V4 manifests should be Parquet-only rather than keeping Avro as an option. Avro manifests cannot support projection reads such as reading only column stats, and offering both formats forces every integration to choose. Anoop Johnson, Russell Spitzer and Manu Zhang supported Parquet-only; Anoop noted that the root manifest format is not tracked and that upgraded tables would still carry V3 Avro leaf manifests. Péter Váry preferred keeping the infrastructure open to several formats but said he would not oppose removing Avro for metadata. In October Kevin Liu reported that the merged AMT spec has V4 manifests written in Parquet, and proposed also dropping ORC and Avro as data file formats in V4. Others asked for a separate thread for that, and several said data file formats should stay open.",
+  "positions": [
+    {
+      "who": "stevenzwu",
+      "stance": "Require Parquet for V4 manifests to reduce the decision burden on integrations and to get projection reads for scan planning.",
+      "source": "devlist:fym02576n5sqy298fjxl0xmsv9z5rb7y"
+    },
+    {
+      "who": "anoopj",
+      "stance": "Parquet-only simplifies the spec and implementations; supporting Avro root manifests would require tracking the root manifest format.",
+      "source": "devlist:7t93x05mhd33bksfm2mqfpnzxrnkc4oo"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Neutral with a slight bias to Parquet-only, since converging on a single file format is preferable.",
+      "source": "devlist:8zfx7owzxhvbdh7snzrns5oz5q81bfjb"
+    },
+    {
+      "who": "pvary",
+      "stance": "Slightly prefers supporting multiple metadata formats and keeping InternalData, but would not oppose removing Avro for metadata; is more concerned about data file formats.",
+      "source": "devlist:dwwd62mf3v11yn4376y5ptvskphg0rm3"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "With V4 manifests now Parquet-only, proposes dropping ORC and Avro as data file formats in V4.",
+      "source": "devlist:l703q6mcyzbgkfczs91mj5bffk1k5pj4"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "A data file format change needs its own thread; prefers one format in the Java reference implementation while leaving options open in the spec.",
+      "source": "devlist:zqkh0111czrzz39pgrlt7pz7nl0lj9wh"
+    },
+    {
+      "who": "zhjwpku",
+      "stance": "Keeping data files in open formats is worth the effort given options like Vortex, Lance and Nimble.",
+      "source": "devlist:llgozzmnvyopcjdm3jjl4thxh5q346pt"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:l703q6mcyzbgkfczs91mj5bffk1k5pj4",
+    "note": "The merged AMT spec (PR #16025) has V4 manifests written in Parquet; upgraded tables can keep existing Avro manifests, but new or rewritten manifests must be Parquet. The follow-on proposal to drop ORC and Avro data files was deferred to a new thread."
+  },
+  "initiatives": [
+    "v4-metadata-tree",
+    "file-format-api"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16025",
+    "yt:dDZKzz3PKIk"
+  ],
+  "why_it_matters": "Implementations of V4 must write manifests in Parquet while still reading Avro manifests from upgraded tables."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "thread/t-61befdbae30765dd",
+  "_input_hash": "sha256:47a910beecc0e4a88d4c",
+  "sources": [
+    "devlist:qd7jb3fdx65mcjvcjomrxg7rgxf3yn0m",
+    "devlist:63xpzdp10nd3wgv43z2phz5o9zwwx818",
+    "devlist:ttmmgzqhsdqt35stgtvzjmfgl42hgvw2",
+    "devlist:ns3sm9g8w6pp22cztxmwfhd29v0sh9xo"
+  ],
+  "title": "REST spec: add list and load function endpoints",
+  "summary": "huaxingao called a vote on adding two read-only REST catalog endpoints following the Iceberg UDF spec: GET /v1/{prefix}/namespaces/{namespace}/functions to list functions in a namespace and GET .../functions/{function} to load one. The load result returns inline UDF metadata and an optional metadata-location, following the load table and load view pattern; create, update and delete endpoints are to follow in a separate proposal. The original vote in March listed FunctionIdentifier objects in the list response. On June 1 huaxingao restarted the vote after the FunctionIdentifier versus CatalogObjectIdentifier question was resolved: PR 16144 merged CatalogObjectIdentifier and spec PR 15180 now uses it. szehon-ho voted +1 and suggested that tracking a specific-name in addition to definition-id would let engines refer to each overload, as a general addition to the function spec. The vote passed and huaxingao said she would merge the spec change.",
+  "positions": [
+    {
+      "who": "huaxingao",
+      "stance": "Add read-only list and load function endpoints to the REST spec, modeled on the table and view endpoints, with CRUD endpoints proposed separately.",
+      "source": "devlist:qd7jb3fdx65mcjvcjomrxg7rgxf3yn0m"
+    },
+    {
+      "who": "szehon-ho",
+      "stance": "Supports the endpoints; suggests the function spec track a specific-name besides definition-id so engines can reference each overloaded version.",
+      "source": "devlist:ttmmgzqhsdqt35stgtvzjmfgl42hgvw2"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:ns3sm9g8w6pp22cztxmwfhd29v0sh9xo",
+    "note": "Passed with 10 +1 votes (5 binding), no -1 and no +0. The spec change in PR 15180 is to be merged."
+  },
+  "initiatives": [
+    "udf",
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15180",
+    "gh:apache/iceberg#16144"
+  ],
+  "why_it_matters": "REST catalogs gain standard endpoints for listing and loading UDFs, the first function support in the REST spec."
+}

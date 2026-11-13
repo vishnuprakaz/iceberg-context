@@ -5,10 +5,11 @@ title: Vote on releasing Apache Iceberg Go v0.7.0 RC0
 date: '2026-09-28'
 url: https://lists.apache.org/thread/18mcytdbd953cdwz5wsvzx6sbqzsvofh
 kind: release-vote
-status: open
+status: passed
 messages: 5
 sources:
 - devlist:18mcytdbd953cdwz5wsvzx6sbqzsvofh
+- devlist:k8lo7j1xfq2kq1f0tblvz8kklc49g6tj
 refs:
 - gh:apache/iceberg-go#2069
 links:
@@ -21,7 +22,7 @@ updated: '2026-11-13'
 # Vote on releasing Apache Iceberg Go v0.7.0 RC0
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE][Go] Release Apache Iceberg Go v0.7.0 RC0](https://lists.apache.org/thread/18mcytdbd953cdwz5wsvzx6sbqzsvofh) · **Started:** 2026-09-28 by [[person/zeroshade|Matthew Topol]] · **Messages:** 5 (last 2026-09-30) · **Outcome:** open
+**Thread:** [[VOTE][Go] Release Apache Iceberg Go v0.7.0 RC0](https://lists.apache.org/thread/18mcytdbd953cdwz5wsvzx6sbqzsvofh) · **Started:** 2026-09-28 by [[person/zeroshade|Matthew Topol]] · **Messages:** 5 (last 2026-09-30) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,6 +35,8 @@ zeroshade proposed release candidate RC0 of Apache Iceberg Go v0.7.0, based on c
 ## Outcome
 
 No result is stated in the thread. The replies are +1 votes: one marked binding (RussellSpitzer) and three marked non-binding, with no 0 or -1 votes.
+
+**Result posted in a separate thread on 2026-10-01:** [[RESULT][VOTE][Go] Release Apache Iceberg Go v0.7.0 RC0](https://lists.apache.org/thread/k8lo7j1xfq2kq1f0tblvz8kklc49g6tj) (`devlist:k8lo7j1xfq2kq1f0tblvz8kklc49g6tj`). Outcome read from that message: passed.
 
 ## Positions
 

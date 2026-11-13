@@ -1,0 +1,45 @@
+{
+  "id": "thread/t-64d9cbfda2cf0c40",
+  "_input_hash": "sha256:c727b8af0c77c2b3d09f",
+  "sources": [
+    "devlist:d6hkx66o8qc1lolh11l1lmswxlq0bpj9",
+    "devlist:27536q0s5vtnhc5m29qlfs2s6cs4ldbn",
+    "devlist:674xgm61q4v03d6gb0jcdpjfrh420dl9"
+  ],
+  "title": "Recommend a standard User-Agent format for REST clients",
+  "summary": "rahul mahadev proposed a recommended User-Agent format for REST catalog clients. Today iceberg-java sends no User-Agent by default, PyIceberg, iceberg-rust and iceberg-go each use different names, X-Client-Version carries the library version in Java and Python but the REST spec version in Rust and Go, and none of it is in the spec. The proposal uses the standard header with whitespace-separated product/version tokens ordered from engine to integration to Iceberg library to runtime, plus an optional comment; the Iceberg library token is always present. The header is optional and informational: servers must not reject on it or use it for auth, trust or capability negotiation. A draft spec PR was opened, with client library changes to follow. Open questions covered reconciling X-Client-Version, library naming, and an environment token. Alex Dutra and flyrain cited a Polaris attempt to parse client headers as evidence standardization is needed; rdblue, danielcweeks, singhpk234, Eduard Tudenhöfner and liurenjie1024 supported the proposal.",
+  "positions": [
+    {
+      "who": "rahul mahadev",
+      "stance": "REST clients should send a consistent, parseable User-Agent of product/version tokens that always includes the Iceberg library token and is informational only.",
+      "source": "devlist:d6hkx66o8qc1lolh11l1lmswxlq0bpj9"
+    },
+    {
+      "who": "Alex Dutra",
+      "stance": "Identifying clients in Polaris from User-Agent and X-Client-Version proved complicated and unreliable; this standardization would make it doable.",
+      "source": "devlist:27536q0s5vtnhc5m29qlfs2s6cs4ldbn"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Has minor comments on the spec text but the proposal looks great overall.",
+      "source": "devlist:305302fy0vqg7z5xvg30v1bco7fkgmzl"
+    },
+    {
+      "who": "flyrain",
+      "stance": "Downstream projects struggle to build parsers without standardization, as the Polaris PR shows; supports the proposal.",
+      "source": "devlist:674xgm61q4v03d6gb0jcdpjfrh420dl9"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Every reply supported the proposal; the thread records no vote and the open questions on X-Client-Version, naming and an environment token were not answered here."
+  },
+  "initiatives": [
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17727",
+    "gh:apache/polaris#4236"
+  ],
+  "why_it_matters": "If adopted, client libraries in Java, Python, Rust and Go would need to emit a common User-Agent format so catalog operators can identify callers."
+}

@@ -5,10 +5,11 @@ title: Vote on adding the File type to the Iceberg v4 spec
 date: '2026-10-12'
 url: https://lists.apache.org/thread/7ctclwomk8yqcclzj82z0htlqk2xjf49
 kind: vote
-status: open
+status: passed
 messages: 22
 sources:
 - devlist:7ctclwomk8yqcclzj82z0htlqk2xjf49
+- devlist:6b63cbcsf0l69z9hs6v9nc1gp4y96tlp
 refs:
 - gh:apache/iceberg#17918
 links:
@@ -21,7 +22,7 @@ updated: '2026-11-13'
 # Vote on adding the File type to the Iceberg v4 spec
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Add the File type to the Iceberg v4 spec](https://lists.apache.org/thread/7ctclwomk8yqcclzj82z0htlqk2xjf49) · **Started:** 2026-10-12 by [[person/talatuyarer|Talat UYARER]] · **Messages:** 22 (last 2026-10-19) · **Outcome:** open
+**Thread:** [[VOTE] Add the File type to the Iceberg v4 spec](https://lists.apache.org/thread/7ctclwomk8yqcclzj82z0htlqk2xjf49) · **Started:** 2026-10-12 by [[person/talatuyarer|Talat UYARER]] · **Messages:** 22 (last 2026-10-19) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,6 +35,8 @@ Talat Uyarer, on behalf of the FILE type working group, started a vote on adding
 ## Outcome
 
 No result is announced in these messages. Votes cast here were all +1: four marked binding, sixteen marked non-binding and one unmarked.
+
+**Result posted in a separate thread on 2026-10-19:** [[RESULT][VOTE] Add the File type to the Iceberg v4 spec](https://lists.apache.org/thread/6b63cbcsf0l69z9hs6v9nc1gp4y96tlp) (`devlist:6b63cbcsf0l69z9hs6v9nc1gp4y96tlp`). Outcome read from that message: passed.
 
 ## Positions
 

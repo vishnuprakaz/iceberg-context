@@ -1,0 +1,37 @@
+{
+  "id": "thread/t-94521177da7f4309",
+  "_input_hash": "sha256:5bd5dc4d1a9e6e2c908e",
+  "sources": [
+    "devlist:y2fvgh4ojfcss7o76drkgdvdrpb17ccm",
+    "devlist:nh9tgco6ydkqogt7ghrwhhr629720c89",
+    "devlist:4fp65bnrh7k6x98yl2wgl931301jg25o"
+  ],
+  "title": "Require monotonically increasing snapshot timestamps in v4",
+  "summary": "stevenzwu called a vote on requiring each new snapshot in a v4 table to have a timestamp-ms strictly greater than its parent snapshot's timestamp on the same branch. Root snapshots are unconstrained and v1 to v3 behavior is unchanged. He said this aligns snapshot timestamps with snapshot order, resolves time travel issues caused by out-of-order timestamps, and can enable a row timestamp metadata column inherited from the snapshot timestamp as a separate follow-up v4 spec change. The vote referenced spec PR 16294 and reference implementation PR 16293. All votes were +1. Xuanwo restated support while noting pre-upgrade snapshots are also left unchanged. Maninder Parmar voted +1 and asked the community to consider extending timestamp-ms to nanosecond precision to allow greater transaction throughput. stevenzwu announced that the vote passed and that he would merge the spec PR.",
+  "positions": [
+    {
+      "who": "stevenzwu",
+      "stance": "V4 snapshots should have a timestamp strictly greater than their parent on the same branch, fixing time travel with out-of-order timestamps and enabling an inherited row timestamp column.",
+      "source": "devlist:y2fvgh4ojfcss7o76drkgdvdrpb17ccm"
+    },
+    {
+      "who": "Maninder Parmar",
+      "stance": "Supports the requirement and asks to consider nanosecond-precision snapshot timestamps to allow greater transaction throughput.",
+      "source": "devlist:nh9tgco6ydkqogt7ghrwhhr629720c89"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:4fp65bnrh7k6x98yl2wgl931301jg25o",
+    "note": "Passed with 9 binding +1 and 11 non-binding +1 votes, and no 0 or -1 votes. The spec PR 16294 is to be merged."
+  },
+  "initiatives": [
+    "v4-row-lineage-timestamps"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16294",
+    "gh:apache/iceberg#16293",
+    "list:cln7xtjy9kw2096gzqlg5c4gg8b9td10"
+  ],
+  "why_it_matters": "V4 writers must assign each new snapshot a timestamp strictly greater than its parent's on the same branch."
+}

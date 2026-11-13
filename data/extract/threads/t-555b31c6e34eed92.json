@@ -1,0 +1,79 @@
+{
+  "id": "thread/t-555b31c6e34eed92",
+  "_input_hash": "sha256:428685781487c69b2390",
+  "sources": [
+    "devlist:sx4tndlb4vkcpj2yq9cob7fhddzd701x",
+    "devlist:qvs1d4qsy8z0pgdht9cw3khy6jv41osw",
+    "devlist:hmw7f956j2ppj2z5rk9c2rs6qm258qb2",
+    "devlist:540hg5pmsxxmnxvysl7bv60o6o39hhr5",
+    "devlist:k84jd995o2kw2sl1djotr1lm53lbdd8j",
+    "devlist:2coxz3444dqo4xxy70oh7jjg7snrt1j5",
+    "devlist:rxnr8wy4ov3sjrftr47nzxw75fdlvh2v"
+  ],
+  "title": "_pos column in efficient column updates",
+  "summary": "mkroll-db questioned why column update files in the efficient column updates design persist a _pos column, given that the dense, null-filled representation requires rows to be aligned with the base file and row counts can verify completeness. Leonid Lygin and laskoviymishka said the column is redundant, confusing, and creates two legal ways to implement reads. Gábor Kaszab noted it costs almost no storage with delta encoding and might help debugging, but agreed it adds unnecessary complexity. RussellSpitzer and anoopj favored removing the persisted value while keeping the _pos metadata column readable. anuragmantri said adding it was a conscious earlier choice but supported removal. rdblue preferred keeping it to detect writers that omit deleted rows, though not strongly. mkroll-db suggested making it optional, then agreed with RussellSpitzer that writers should verify alignment at write time. The Efficient Column Updates sync concluded that _pos will not be required and writing it will not be allowed.",
+  "positions": [
+    {
+      "who": "mkroll-db",
+      "stance": "The dense null-filled representation implicitly encodes position and row counts verify completeness, so _pos is unnecessary; the doc should state row order must match the base file.",
+      "source": "devlist:sx4tndlb4vkcpj2yq9cob7fhddzd701x"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "_pos is not needed with the dense representation except for troubleshooting, and experiments showed essentially no storage cost with delta encoding.",
+      "source": "devlist:qvs1d4qsy8z0pgdht9cw3khy6jv41osw"
+    },
+    {
+      "who": "Leonid Lygin",
+      "stance": "_pos is redundant, makes readers question the alignment rule, and creates two different legal ways to implement reads.",
+      "source": "devlist:hmw7f956j2ppj2z5rk9c2rs6qm258qb2"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "The column looks like a debugging leftover that confuses the read side; removing it simplifies implementation.",
+      "source": "devlist:x3ck9x7tj17stw0939nzt7zwl5qgjh9o"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "A persisted field makes no sense when perfect alignment is expected; reading the file with the metadata _pos column should still work.",
+      "source": "devlist:dx2j72qggpg38d8429skrsoq0z2b1jvb"
+    },
+    {
+      "who": "anoopj",
+      "stance": "The persisted _pos column is no longer necessary and should be removed; the _pos metadata column keeps working, which inherited row IDs need anyway.",
+      "source": "devlist:o8y0t1bvbolt9s2l4n3m6dy7ph0ff9bn"
+    },
+    {
+      "who": "anuragmantri",
+      "stance": "Adding _pos was a conscious choice in an earlier sync, not a remnant, but he favors removing it if that eases implementation.",
+      "source": "devlist:0gw6wg83m6zwb166twwn9fdq59z51xdj"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Prefers keeping it, because without the original row position a writer that omits deleted rows causes an undetectable and unrecoverable problem; not a strongly held view.",
+      "source": "devlist:540hg5pmsxxmnxvysl7bv60o6o39hhr5"
+    },
+    {
+      "who": "mkroll-db",
+      "stance": "Found no precedent for storing data purely for debugging; if not removed, make _pos optional and treat disagreement with the row ordinal as corruption.",
+      "source": "devlist:k84jd995o2kw2sl1djotr1lm53lbdd8j"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Writers can detect position mismatches at write time and fail, so nothing needs to be persisted.",
+      "source": "devlist:2coxz3444dqo4xxy70oh7jjg7snrt1j5"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:rxnr8wy4ov3sjrftr47nzxw75fdlvh2v",
+    "note": "The Efficient Column Updates sync concluded that the _pos field will not be required and the spec will not suggest writers may materialize it; writing _pos in column files will not be allowed."
+  },
+  "initiatives": [
+    "v4-column-updates"
+  ],
+  "refs": [
+    "doc:1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs"
+  ],
+  "why_it_matters": "Column update files rely solely on positional alignment with the base file, so implementations have a single read path and must not write _pos."
+}
