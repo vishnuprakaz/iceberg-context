@@ -73,7 +73,7 @@ A format version 4 feature that updates or adds columns by writing separate colu
 - Equality deletes are not supported with column files; they must be converted to deletion vectors before a column update ([column updates sync 2026-09-08](../records/meetings/column-updates/2026/2026-09-08.md)).
 - Nested types: nested fields inside a struct can be updated; partial updates of a list or map are not allowed, replacing a whole list or map is ([V4 metadata sync 2026-11-02](../records/meetings/v4-metadata/2026/2026-11-02.md)).
 - Spec: the column-update spec follow-up [apache/iceberg#16425](https://github.com/apache/iceberg/pull/16425) needs review before a vote ([community sync 2026-10-28](../records/meetings/community/2026/2026-10-28.md)).
-- Java: the pull request with basic fields and schemas for column files, [apache/iceberg#16285](https://github.com/apache/iceberg/pull/16285), was being updated to the simplified spec ([column updates sync 2026-10-06](../records/meetings/column-updates/2026/2026-10-06.md)). The read path is built above the FormatModelRegistry with a stitching layer, exposed through DataFile ([column updates sync 2026-09-08](../records/meetings/column-updates/2026/2026-09-08.md)), and the first commit API is a simple update-and-append interface for column-only changes ([column updates sync 2026-10-06](../records/meetings/column-updates/2026/2026-10-06.md)).
+- Java: the pull request with basic fields and schemas for column files, [apache/iceberg#16285](https://github.com/apache/iceberg/pull/16285), was being updated to the simplified spec in October ([column updates sync 2026-10-06](../records/meetings/column-updates/2026/2026-10-06.md)) and was merged on 2026-11-05 ([#16285](https://github.com/apache/iceberg/pull/16285)). The read path is built above the FormatModelRegistry with a stitching layer, exposed through DataFile ([column updates sync 2026-09-08](../records/meetings/column-updates/2026/2026-09-08.md)), and the first commit API is a simple update-and-append interface for column-only changes ([column updates sync 2026-10-06](../records/meetings/column-updates/2026/2026-10-06.md)).
 
 ## Timeline
 
@@ -93,11 +93,11 @@ A format version 4 feature that updates or adds columns by writing separate colu
 - 2026-10-20: Column updates on nested types (structs first) and the spec follow-up #16425 are on the sync agenda ([column updates sync 2026-10-20](../records/meetings/column-updates/2026/2026-10-20.md)).
 - 2026-10-28: V4 progress report: column updates (#16425) needs review before a vote ([community sync 2026-10-28](../records/meetings/community/2026/2026-10-28.md)).
 - 2026-11-02: V4 metadata sync states the update granularity rule for nested types ([V4 metadata sync 2026-11-02](../records/meetings/v4-metadata/2026/2026-11-02.md)).
+- 2026-11-05: The pull request with basic fields and schemas for column files is merged ([#16285](https://github.com/apache/iceberg/pull/16285)).
 
 ## Where help is needed
 
 - Review of the column-update spec pull request [apache/iceberg#16425](https://github.com/apache/iceberg/pull/16425), which needs review before a vote ([community sync 2026-10-28](../records/meetings/community/2026/2026-10-28.md)).
-- Review of [apache/iceberg#16285](https://github.com/apache/iceberg/pull/16285) (basic fields and schemas for column files) was requested at the community sync ([community sync 2026-08-26](../records/meetings/community/2026/2026-08-26.md)).
 - Ports to Go, C++, Python and Rust are anticipated: the read pull request is being structured to give them a clearer reference ([column updates sync 2026-10-06](../records/meetings/column-updates/2026/2026-10-06.md)). No record names an owner for those ports.
 <!-- kb:generated:end -->
 
