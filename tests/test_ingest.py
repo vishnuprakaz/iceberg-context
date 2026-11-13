@@ -17,7 +17,7 @@ groups:
 
 def setup(kb_root):
     (kb_root / "data" / "sources.yaml").write_text(GROUPS)
-    (kb_root / "people" / "aliases.yaml").write_text("people:\n  ada:\n    names: [Ada Example]\n")
+    (kb_root / "data" / "aliases.yaml").write_text("people:\n  ada:\n    names: [Ada Example]\n")
     for name in ("extract-meeting.json", "extract-thread.json"):
         (kb_root / "schema" / name).write_text((apply.Path(__file__).parents[1] / "schema" / name).read_text())
 
@@ -133,7 +133,7 @@ def test_apply_accepts_good_and_rejects_bad_quotes(kb_root):
     path.write_text(json.dumps(ex))
     result = apply.apply_all(kb_root)
     assert result["meetings"] == 1 and not result["rejected"]
-    page = (kb_root / "records/meetings/index/2026/2026-11-09.md").read_text()
+    page = (kb_root / "kb/records/meetings/index/2026/2026-11-09.md").read_text()
     assert "Nest index routes under the table" in page and "t=5s" in page and "written by an AI model" in page
     ex["topics"][0]["quotes"] = [{"text": "We decided to drop the feature entirely and start over.", "at": "0:00:05"}]
     path.write_text(json.dumps(ex))
@@ -162,7 +162,7 @@ def test_thread_queue_and_apply_checks_citations(kb_root):
     path.parent.mkdir(parents=True)
     path.write_text(json.dumps(ex))
     assert apply.apply_all(kb_root)["threads"] == 1
-    assert "Passed with 3 binding votes" in next((kb_root / "records/threads/2026/11").glob("*.md")).read_text()
+    assert "Passed with 3 binding votes" in next((kb_root / "kb/records/threads/2026/11").glob("*.md")).read_text()
     ex["outcome"]["source"] = "devlist:not-in-thread"
     path.write_text(json.dumps(ex))
     assert "not in this thread" in str(apply.apply_all(kb_root)["rejected"])
@@ -188,7 +188,7 @@ def test_vote_result_posted_in_separate_thread_is_linked(kb_root):
     path.parent.mkdir(parents=True)
     path.write_text(json.dumps(ex))
     assert apply.apply_all(kb_root)["threads"] == 1
-    page = next((kb_root / "records/threads/2026/11").glob("*.md")).read_text()
+    page = next((kb_root / "kb/records/threads/2026/11").glob("*.md")).read_text()
     assert "status: passed" in page and "Result posted in a separate thread on 2026-11-06" in page and "devlist:6" in page
 
 

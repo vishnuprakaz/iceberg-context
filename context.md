@@ -51,9 +51,9 @@ Open items, most important first:
 3. GitHub backfill: issues, comments and apache/iceberg-python are still filling in over the next scheduled runs.
 4. Mailing-list threads are keyed by the first Message-ID in `References`, so a few long threads are split in two. Fix by
    resolving threads through hashed parent ids; this changes thread ids, so re-run thread extraction afterwards.
-5. `people/aliases.yaml` is mostly unverified. Review `data/state/unresolved-people.json` and confirm logins.
+5. `data/aliases.yaml` is mostly unverified. Review `data/state/unresolved-people.json` and confirm logins.
 6. Run the `open-source-launch` readiness gate before inviting others, and the trigger tests in `docs/skill-testing.md`.
-7. Then: pick a contribution from `opportunities.md`.
+7. Then: pick a contribution from `kb/opportunities.md`.
 
 ## Work log
 | Date | Repo | What | Status / Link |

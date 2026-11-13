@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 from icekb import frontmatter
-from icekb.paths import page_files
+from icekb.paths import KB, page_files
 
 
 def build(root: Path) -> tuple[list[dict], list[dict]]:
@@ -35,7 +35,7 @@ def _render(rows: list[dict]) -> str:
 def write(root: Path, check_only: bool = False) -> bool:
     """Write the index. With check_only, return False if the files on disk are stale."""
     nodes, edges = build(root)
-    out = root / "index"
+    out = root / KB / "index"
     wanted = {"nodes.jsonl": _render(nodes), "edges.jsonl": _render(edges)}
     fresh = all((out / n).exists() and (out / n).read_text(encoding="utf-8") == t for n, t in wanted.items())
     if check_only or fresh:

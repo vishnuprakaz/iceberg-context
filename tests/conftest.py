@@ -11,14 +11,14 @@ def kb_root(tmp_path, monkeypatch):
     """A tiny, self-contained knowledge base."""
     (tmp_path / "schema").mkdir()
     shutil.copy(REPO / "schema" / "page.json", tmp_path / "schema" / "page.json")
-    (tmp_path / "people").mkdir()
-    (tmp_path / "initiatives").mkdir()
-    (tmp_path / "people" / "ada.md").write_text(
+    (tmp_path / "kb" / "people").mkdir(parents=True)
+    (tmp_path / "kb" / "initiatives").mkdir()
+    (tmp_path / "kb" / "people" / "ada.md").write_text(
         "---\nid: person/ada\ntype: person\ntitle: Ada Example\nlogin: ada\n"
         "links:\n- {rel: champions, to: initiative/widgets, confidence: observed}\n---\n"
         "# Ada Example\n\n<!-- kb:generated:start -->\nold\n<!-- kb:generated:end -->\n\n## Notes\nkeep me\n"
     )
-    (tmp_path / "initiatives" / "widgets.md").write_text(
+    (tmp_path / "kb" / "initiatives" / "widgets.md").write_text(
         "---\nid: initiative/widgets\ntype: initiative\ntitle: Widgets\nstatus: design\n---\n# Widgets\n\nSnapshot timestamps.\n"
     )
     raw = tmp_path / "data" / "raw" / "devlist" / "2026"
@@ -29,7 +29,7 @@ def kb_root(tmp_path, monkeypatch):
         '"body": "I propose we adopt monotonic widgets. Please vote.", "refs": [], "hash": "x", '
         '"meta": {"thread": "t-00000000000000aa", "kind": "vote", "reply": false, "subject": "[VOTE] Widgets for v4"}}\n'
     )
-    (tmp_path / "people" / "aliases.yaml").write_text("people: {}\n")
+    (tmp_path / "data" / "aliases.yaml").write_text("people: {}\n")
     monkeypatch.setenv("ICEBERG_CONTEXT_ROOT", str(tmp_path))
     monkeypatch.setenv("XDG_CACHE_HOME", str(tmp_path / ".cache"))
     return tmp_path

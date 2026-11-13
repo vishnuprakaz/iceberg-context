@@ -55,7 +55,7 @@ uv run python -m icekb integrate
 ```
 
 This regenerates the people, group, module, repository and release pages from data. Then start one `kb-integrator` agent to
-update `initiatives/`, `state-of-iceberg.md` and `opportunities.md` from the new records.
+update `kb/initiatives/`, `kb/state-of-iceberg.md` and `kb/opportunities.md` from the new records.
 
 ## 4. Verify (agent: `kb-verifier`)
 
@@ -64,7 +64,7 @@ this run (`git status --short`). Apply the fixes it reports, or remove the claim
 
 ## 5. Brief (agent: `kb-briefer`)
 
-Start one `kb-briefer` agent to write `briefings/weekly/YYYY-Www.md` (ISO year and week, for example `2026-W46.md`).
+Start one `kb-briefer` agent to write `kb/briefings/weekly/YYYY-Www.md` (ISO year and week, for example `2026-W46.md`).
 
 ## 6. Check, commit, push
 

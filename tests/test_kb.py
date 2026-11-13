@@ -44,7 +44,7 @@ def test_source(kb_root):
 def test_index_rebuilds_when_files_change(kb_root):
     index.write(kb_root)
     assert "no results" in kb("search", "gizmo").stdout
-    (kb_root / "initiatives" / "widgets.md").write_text(
+    (kb_root / "kb" / "initiatives" / "widgets.md").write_text(
         "---\nid: initiative/widgets\ntype: initiative\ntitle: Widgets\nstatus: design\n---\n# Widgets\n\nNow with gizmo.\n"
     )
     assert "initiative/widgets" in kb("search", "gizmo").stdout

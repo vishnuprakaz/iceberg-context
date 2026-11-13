@@ -28,7 +28,7 @@ def test_valid_pages_pass(kb_root):
 
 
 def test_broken_link_and_schema_are_reported(kb_root):
-    (kb_root / "people" / "bob.md").write_text(
+    (kb_root / "kb" / "people" / "bob.md").write_text(
         "---\nid: person/bob\ntype: person\ntitle: Bob\n"
         "links:\n- {rel: reviews, to: module/nope, confidence: extracted}\n---\nbody\n"
     )
@@ -39,7 +39,7 @@ def test_broken_link_and_schema_are_reported(kb_root):
 
 
 def test_person_page_rejects_personal_fields(kb_root):
-    (kb_root / "people" / "eve.md").write_text(
+    (kb_root / "kb" / "people" / "eve.md").write_text(
         "---\nid: person/eve\ntype: person\ntitle: Eve\nlogin: eve\nlocation: somewhere\n---\nbody\n"
     )
     assert any("eve.md" in p for p in pages.check(kb_root))
@@ -54,8 +54,8 @@ def test_privacy_lint():
 def test_index_build_and_check(kb_root):
     assert index.write(kb_root, check_only=True) is False
     index.write(kb_root)
-    nodes = [json.loads(line) for line in (kb_root / "index" / "nodes.jsonl").read_text().splitlines()]
-    edges = [json.loads(line) for line in (kb_root / "index" / "edges.jsonl").read_text().splitlines()]
+    nodes = [json.loads(line) for line in (kb_root / "kb" / "index" / "nodes.jsonl").read_text().splitlines()]
+    edges = [json.loads(line) for line in (kb_root / "kb" / "index" / "edges.jsonl").read_text().splitlines()]
     assert {n["id"] for n in nodes} == {"person/ada", "initiative/widgets"}
     assert edges == [{"src": "person/ada", "rel": "champions", "to": "initiative/widgets", "confidence": "observed"}]
     assert index.write(kb_root, check_only=True) is True

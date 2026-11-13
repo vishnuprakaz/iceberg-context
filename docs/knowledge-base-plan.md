@@ -1,6 +1,8 @@
 # Iceberg community knowledge base: design and pipeline plan
 
-Status: **proposal, 2026-11-13 (v3: skill-first delivery, single repo; v2 added the code map).** It builds on the source research in [`research/2026-11-13/`](../research/2026-11-13/).
+> **Layout note (2026-11-13):** this document predates a tidy-up. Knowledge-base pages now live under `kb/`, the name map is `data/aliases.yaml`, and research is under `docs/research/`. See [pipeline.md](pipeline.md) and the repository README for the current layout.
+
+Status: **proposal, 2026-11-13 (v3: skill-first delivery, single repo; v2 added the code map).** It builds on the source research in [`research/2026-11-13/`](research/2026-11-13/).
 
 ## 1. Goal
 

@@ -4,10 +4,11 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
+KB = "kb"  # everything people and agents read lives under this folder
 PAGE_DIRS = ("people", "groups", "initiatives", "modules", "repos", "releases", "records")
 # Free text that is indexed for search but has no frontmatter contract.
-DOC_DIRS = ("docs", "research", "notes", "briefings", "maps")
-DOC_FILES = ("state-of-iceberg.md", "opportunities.md", "README.md")
+DOC_DIRS = ("docs", "notes", "kb/briefings", "kb/maps")
+DOC_FILES = ("kb/state-of-iceberg.md", "kb/opportunities.md", "README.md")
 
 
 def repo_root() -> Path:
@@ -24,7 +25,7 @@ def repo_root() -> Path:
 def page_files(root: Path) -> list[Path]:
     out: list[Path] = []
     for d in PAGE_DIRS:
-        base = root / d
+        base = root / KB / d
         if base.is_dir():
             out += [p for p in sorted(base.rglob("*.md")) if p.name != "README.md"]
     return out

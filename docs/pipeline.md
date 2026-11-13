@@ -18,9 +18,9 @@ All run from the repository root with `uv run python -m icekb <command>`.
 | `ingest syncdocs <file> --group <slug> [--modified <time>]` | Splits a notes document export into one record per meeting | weekly session |
 | `ingest calendar <file>` | Turns calendar events into records | weekly session |
 | `queue meetings\|threads [--since DATE]` | Lists items whose AI summary is missing or out of date, and writes an input bundle for each under `.work/queue/` | weekly session |
-| `apply` | Validates AI extractions against their sources and renders `records/` pages | weekly session |
-| `integrate` | Regenerates people, group, module, repository and release pages and `maps/` from data | weekly session |
-| `index [--check]` | Rebuilds `index/nodes.jsonl` and `index/edges.jsonl` from page frontmatter | both |
+| `apply` | Validates AI extractions against their sources and renders `kb/records/` pages | weekly session |
+| `integrate` | Regenerates people, group, module, repository and release pages and `kb/maps/` from data | weekly session |
+| `index [--check]` | Rebuilds `kb/index/nodes.jsonl` and `kb/index/edges.jsonl` from page frontmatter | both |
 | `validate` | Schema, link, generated-block and privacy checks | both, and CI |
 
 ## Sources
@@ -43,7 +43,7 @@ Sync state is in `data/state/<source>.json`; `kb status` reads it.
 One JSON object per line; schema in [`schema/raw-record.json`](../schema/raw-record.json). Fields: `id`, `source`, `type`,
 `date`, `url`, `people`, `title`, `body`, `refs`, `hash`, `meta`, `ai_generated`.
 
-- `people` holds GitHub logins where the name could be resolved through `people/aliases.yaml`, otherwise `name:<display name>`.
+- `people` holds GitHub logins where the name could be resolved through `data/aliases.yaml`, otherwise `name:<display name>`.
   Unresolved names are counted in `data/state/unresolved-people.json`; add them to the alias file to resolve them.
 - `refs` are links to other things: `gh:apache/iceberg#123`, `doc:<Google Doc id>`, `yt:<video id>`, `list:<thread id>`.
   They are what connects a commit to its pull request and a pull request to the threads and meetings that discussed it.

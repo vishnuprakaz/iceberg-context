@@ -17,12 +17,13 @@ import subprocess
 import sys
 from pathlib import Path
 
-PAGE_DIRS = ("people", "groups", "initiatives", "modules", "repos", "releases", "records")
-DOC_DIRS = ("docs", "research", "notes", "briefings", "maps")
-DOC_FILES = ("state-of-iceberg.md", "opportunities.md")
+KB = "kb"
+PAGE_DIRS = tuple(f"{KB}/{d}" for d in ("people", "groups", "initiatives", "modules", "repos", "releases", "records"))
+DOC_DIRS = ("docs", "notes", f"{KB}/briefings", f"{KB}/maps")
+DOC_FILES = (f"{KB}/state-of-iceberg.md", f"{KB}/opportunities.md")
 SOURCES = ("devlist", "github", "git", "spec", "asf", "syncdocs", "calendar", "youtube")
 FRONTMATTER = re.compile(r"\A---\n.*?\n---\n?", re.S)
-SCHEMA_VERSION = "3"
+SCHEMA_VERSION = "4"
 
 
 def repo_root() -> Path:
@@ -54,7 +55,7 @@ def indexed_files(root: Path) -> list[Path]:
         if (root / d).is_dir():
             files += (root / d).rglob("*.md")
     files += [root / f for f in DOC_FILES if (root / f).exists()]
-    for d in ("index", "data/raw", "data/links"):
+    for d in (f"{KB}/index", "data/raw", "data/links"):
         if (root / d).is_dir():
             files += (root / d).rglob("*.jsonl")
     return sorted(files)
@@ -106,11 +107,11 @@ def open_db(root: Path) -> sqlite3.Connection:
                                             tokenize='porter unicode61');
         """
     )
-    for n in read_jsonl(root / "index" / "nodes.jsonl"):
+    for n in read_jsonl(root / KB / "index" / "nodes.jsonl"):
         con.execute("insert or replace into nodes values(?,?,?,?,?,?,?)",
                     (n["id"], n.get("type"), n.get("title"), n.get("status"), str(n.get("updated") or ""),
                      n.get("path"), json.dumps(n, ensure_ascii=False)))
-    for e in read_jsonl(root / "index" / "edges.jsonl"):
+    for e in read_jsonl(root / KB / "index" / "edges.jsonl"):
         con.execute("insert into edges values(?,?,?,?,?,?,?)",
                     (e["src"], e["rel"], e["to"], e.get("confidence"), e.get("source"), e.get("since"),
                      json.dumps(e, ensure_ascii=False)))
@@ -255,7 +256,7 @@ def cmd_status(root: Path, args) -> int:
     print(f"  links:   {con.execute('select count(*) from edges').fetchone()[0]}")
     rows = con.execute("select type, count(*) c, max(date) d from raw group by type order by type").fetchall()
     print("  records: " + (", ".join(f"{r['type']}={r['c']} (to {str(r['d'])[:10]})" for r in rows) or "none yet"))
-    briefs = sorted((root / "briefings" / "weekly").glob("*.md"))
+    briefs = sorted((root / KB / "briefings" / "weekly").glob("*.md"))
     print(f"  latest briefing: {briefs[-1].relative_to(root) if briefs else 'none yet'}")
     return 0
 
@@ -554,7 +555,7 @@ def cmd_whats_new(root: Path, args) -> int:
             lambda r: f"{r['date'][:10]}  [{json.loads(r['meta'])['repo'].split('/')[1]}] {r['title'][:110]}")
     n = con.execute("select count(*) from raw where type = 'commit' and date >= ?", (since,)).fetchone()[0]
     print(f"Commits merged upstream in the period: {n}")
-    briefs = sorted((root / "briefings" / "weekly").glob("*.md"))
+    briefs = sorted((root / KB / "briefings" / "weekly").glob("*.md"))
     if briefs:
         print(f"Latest written briefing: {briefs[-1].relative_to(root)}")
     return 0
@@ -583,9 +584,9 @@ def cmd_upcoming(root: Path, args) -> int:
 
 
 def cmd_opportunities(root: Path, args) -> int:
-    path = root / "opportunities.md"
+    path = root / KB / "opportunities.md"
     if not path.exists():
-        print("opportunities.md has not been written yet")
+        print("kb/opportunities.md has not been written yet")
         return 1
     text = FRONTMATTER.sub("", path.read_text(encoding="utf-8"))
     blocks = re.split(r"\n(?=### )", text)

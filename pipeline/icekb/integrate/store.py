@@ -8,6 +8,7 @@ from pathlib import Path
 import yaml
 
 from icekb import frontmatter
+from icekb.paths import KB
 from icekb.util import iter_raw
 
 
@@ -17,7 +18,7 @@ class Data:
     def __init__(self, root: Path):
         self.root = root
         self.cfg = yaml.safe_load((root / "data" / "sources.yaml").read_text())
-        self.aliases = (yaml.safe_load((root / "people" / "aliases.yaml").read_text()) or {}).get("people") or {}
+        self.aliases = (yaml.safe_load((root / "data" / "aliases.yaml").read_text()) or {}).get("people") or {}
         self.by_type: dict[str, list[dict]] = defaultdict(list)
         self.by_id: dict[str, dict] = {}
         for rec in iter_raw(root, ""):
@@ -45,7 +46,7 @@ def link(target: str, label: str | None = None) -> str:
 
 def write_page(root: Path, rel_path: str, meta: dict, heading: str, generated: str, today: str) -> bool:
     """Create or update a page. Only the frontmatter and the generated block change; `updated` moves only on real changes."""
-    path = root / rel_path
+    path = root / KB / rel_path
     if path.exists():
         page = frontmatter.load(path)
         body = frontmatter.set_generated(page.body, generated)

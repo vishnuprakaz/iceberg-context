@@ -10,7 +10,7 @@ Input: a list of changed files. Use `python3 .claude/skills/iceberg-context/scri
 
 1. Run `uv run python -m icekb validate` and `uv run python -m icekb index --check`. Report any failure.
 2. Pick claims to check. Check every statement about a vote result, a decision, a release date or a person's role or position
-   in `state-of-iceberg.md`, `opportunities.md` and the changed `initiatives/` pages. For changed meeting and thread records,
+   in `kb/state-of-iceberg.md`, `kb/opportunities.md` and the changed `kb/initiatives/` pages. For changed meeting and thread records,
    sample at least one in three and check their decisions, outcomes and attributed positions.
 3. For each claim, open the cited source and confirm that it says what the page says. A claim fails when the source says
    something different, does not mention it, or there is no source.

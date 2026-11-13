@@ -24,8 +24,8 @@ For each input bundle (a Markdown file under `.work/queue/meetings/`):
        transcript. Add `speaker` only if the notes agenda or the speaker's own words make it clear who is talking.
    - `action_items`: `who` (a GitHub login when the bundle shows one, else the name as written) and `what`.
    - `participants`: people named as presenting or speaking. `basis` is `notes` when the notes name them, `transcript` when you
-     infer it from the recording. Use GitHub logins when you can match the name with `people/aliases.yaml`
-     (`grep -i "<name>" -B3 people/aliases.yaml`); otherwise the name as written. Do not guess a login.
+     infer it from the recording. Use GitHub logins when you can match the name with `data/aliases.yaml`
+     (`grep -i "<name>" -B3 data/aliases.yaml`); otherwise the name as written. Do not guess a login.
 3. Rules:
    - The notes are the record of what was agreed. Use the transcript for the reasoning and for things the notes leave out.
      When they disagree, follow the notes and mention the difference in the topic summary.

@@ -12,6 +12,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 from icekb.integrate.store import Data, link, write_page
+from icekb.paths import KB
 
 
 def _words(text: str) -> set[str]:
@@ -40,7 +41,7 @@ def check_quote(quote: dict, transcript: str) -> str | None:
 
 
 def person_label(data: Data, who: str) -> str:
-    return link(f"person/{who}", data.name(who)) if (data.root / "people" / f"{who}.md").exists() else who
+    return link(f"person/{who}", data.name(who)) if (data.root / KB / "people" / f"{who}.md").exists() else who
 
 
 def ref_label(ref: str) -> str:
@@ -58,7 +59,7 @@ def ref_label(ref: str) -> str:
 
 def initiative_links(data: Data, slugs: list[str], source: str) -> list[dict]:
     return [{"rel": "discussed", "to": f"initiative/{s}", "confidence": "extracted", "source": source}
-            for s in dict.fromkeys(slugs) if (data.root / "initiatives" / f"{s}.md").exists()]
+            for s in dict.fromkeys(slugs) if (data.root / KB / "initiatives" / f"{s}.md").exists()]
 
 
 def apply_meeting(data: Data, ex: dict, validator, today: str) -> list[str]:
@@ -108,7 +109,7 @@ def apply_meeting(data: Data, ex: dict, validator, today: str) -> list[str]:
         lines += ["## People named", "", ", ".join(named), ""]
     links = [{"rel": "of", "to": f"group/{group}", "confidence": "observed"}] + initiative_links(data, slugs, ex["sources"][0])
     for p in ex.get("participants", []):
-        if (data.root / "people" / f"{p['who']}.md").exists():
+        if (data.root / KB / "people" / f"{p['who']}.md").exists():
             links.append({"rel": "named", "to": f"person/{p['who']}", "source": ex["sources"][0],
                           "confidence": "extracted" if p["basis"] == "notes" else "inferred"})
     refs = list(dict.fromkeys(r for t in ex["topics"] for r in t.get("refs", [])))
@@ -185,7 +186,7 @@ def apply_thread(data: Data, ex: dict, validator, today: str) -> list[str]:
     if ex.get("refs"):
         lines += ["References: " + ", ".join(ref_label(r) for r in ex["refs"][:25]), ""]
     links = initiative_links(data, ex.get("initiatives", []), first["id"])
-    if not starter.startswith("name:") and (data.root / "people" / f"{starter}.md").exists():
+    if not starter.startswith("name:") and (data.root / KB / "people" / f"{starter}.md").exists():
         links.append({"rel": "started_by", "to": f"person/{starter}", "confidence": "observed"})
     slug = re.sub(r"[^a-z0-9]+", "-", subject.lower()).strip("-")[:70] or tid
     meta = {"id": ex["id"], "type": "thread", "title": ex["title"], "date": first["date"][:10], "url": first["url"],

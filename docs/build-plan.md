@@ -1,5 +1,7 @@
 # Iceberg Context: end-to-end build plan
 
+> **Layout note (2026-11-13):** this document predates a tidy-up. Knowledge-base pages now live under `kb/`, the name map is `data/aliases.yaml`, and research is under `docs/research/`. See [pipeline.md](pipeline.md) and the repository README for the current layout.
+
 ## 1. Context
 
 **The problem.** What you need to know to contribute to Apache Iceberg is scattered across seven places: the dev@ mailing list, GitHub PRs and reviews, git history, about 12 working-group notes docs, a public calendar, 383 YouTube recordings and the ASF roster. None of them links to the others. A coding agent sees only the code. It doesn't see why the code is that way, who decides, or what is being worked on.

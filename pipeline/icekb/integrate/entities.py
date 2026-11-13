@@ -5,6 +5,7 @@ import re
 from collections import Counter, defaultdict
 
 from icekb.integrate.store import Data, link, write_page
+from icekb.paths import KB
 
 WINDOW_DAYS = 365
 JAVA_MODULES = {"api", "core", "data", "parquet", "orc", "arrow", "spark", "flink", "kafka-connect", "aws", "gcp", "azure",
@@ -265,7 +266,7 @@ def build(data: Data) -> dict:
             for d in rows:
                 n = next((x for x in notes if x["date"][:10] == d), None)
                 v = next((x for x in videos if x["date"][:10] == d), None)
-                page = root / "records" / "meetings" / slug / d[:4] / f"{d}.md"
+                page = root / KB / "records" / "meetings" / slug / d[:4] / f"{d}.md"
                 lines.append(f"| {d} | " + (f"`{n['id']}` ({n['meta']['status']})" if n else "") + " | "
                              + (f"[video]({v['url']}) `{v['id']}`" if v else "") + " | "
                              + (link(f"meeting/{slug}/{d}", "summary") if page.exists() else "") + " |")
@@ -279,7 +280,7 @@ def build(data: Data) -> dict:
         counts["groups"] += write_page(root, f"groups/{slug}.md", meta, g["name"], "\n".join(lines), today)
 
     # ---------------------------------------------------------------- maps
-    maps = root / "maps"
+    maps = root / KB / "maps"
     maps.mkdir(exist_ok=True)
     out = ["# Module ownership", "", f"Generated {today} from git history. Counts are merged commits touching the module.", "",
            "| Module | Commits (12m / all) | Long-term authors | Most active authors, last 12 months | Most active reviewers, last 6 months |", "|---|---|---|---|---|"]

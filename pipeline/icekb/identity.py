@@ -29,7 +29,7 @@ def normalize_display(name: str) -> str:
 class Identity:
     def __init__(self, root: Path):
         self.root = root
-        data = yaml.safe_load((root / "people" / "aliases.yaml").read_text(encoding="utf-8")) or {}
+        data = yaml.safe_load((root / "data" / "aliases.yaml").read_text(encoding="utf-8")) or {}
         self.people: dict[str, dict] = data.get("people") or {}
         self.by_name: dict[str, str] = {}
         self.by_login = {login.lower(): login for login in self.people}

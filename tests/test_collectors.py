@@ -22,7 +22,7 @@ def test_normalize_display_names():
 
 
 def test_identity_resolves_and_records_unknown(kb_root):
-    (kb_root / "people" / "aliases.yaml").write_text(
+    (kb_root / "data" / "aliases.yaml").write_text(
         "people:\n  ada:\n    names: [Ada Example, Ada Exämple]\n    asf_id: adae\n")
     ident = Identity(kb_root)
     assert ident.person("Example, Ada via dev") == "ada"
@@ -47,7 +47,7 @@ def test_devlist_own_text_drops_quotes_and_signature():
 
 
 def test_git_parse_log(kb_root):
-    (kb_root / "people" / "aliases.yaml").write_text("people:\n  ada:\n    names: [Ada Example]\n")
+    (kb_root / "data" / "aliases.yaml").write_text("people:\n  ada:\n    names: [Ada Example]\n")
     log = ("\x1eabc123def4567890\x1f2026-11-12T22:53:41-08:00\x1fAda Example\x1fCore: Fix thing (#18899)\n\n"
            "core/src/main/java/A.java\ncore/src/test/java/TestA.java\n")
     (rec,) = git.parse_log(log, "apache/iceberg", Identity(kb_root))

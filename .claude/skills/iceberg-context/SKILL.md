@@ -119,9 +119,9 @@ Cause: Python older than 3.10. Fix: run the script with a newer `python3`.
 
 ## What is in the repository
 
-- `state-of-iceberg.md`: current overview. `opportunities.md`: where to contribute. `briefings/weekly/`: what changed each week.
-- `people/`, `groups/`, `initiatives/`, `modules/`, `releases/`: one page per entity, linked to each other.
-- `records/`: one page per meeting and per mailing-list thread.
+- `kb/state-of-iceberg.md`: current overview. `kb/opportunities.md`: where to contribute. `kb/briefings/weekly/`: what changed each week.
+- `kb/people/`, `kb/groups/`, `kb/initiatives/`, `kb/modules/`, `kb/releases/`: one page per entity, linked to each other.
+- `kb/records/`: one page per meeting and per mailing-list thread.
 - `data/raw/`: cleaned source text, one JSON line per email, pull request, meeting section or transcript.
 - `research/`: how each source was studied. `references/process.md` in this skill: how Iceberg makes decisions.
 
