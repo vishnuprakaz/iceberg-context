@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "api_calls": 333,
+    "backfill": "in progress",
+    "last_comments": 0,
+    "last_issues": 0,
+    "last_prs": 9285
+  },
+  "cursor": {
+    "apache/iceberg": {
+      "issues_updated": "2025-11-11T00:18:02Z",
+      "prs_caught_up": true,
+      "prs_updated": "2026-11-13T12:44:05Z"
+    }
+  },
+  "last_run": "2026-11-13T12:59:22Z",
+  "last_success": "2026-11-13T12:59:22Z",
+  "source": "github",
+  "status": "ok"
+}
