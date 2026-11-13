@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Lint
+        run: uv run ruff check .
+      - name: Tests
+        run: uv run pytest -q
+      - name: Validate pages, links and privacy rules
+        run: uv run python -m icekb validate
+      - name: Index is up to date
+        run: uv run python -m icekb index --check
+      - name: Skill script runs without the pipeline installed
+        run: python3 -I .claude/skills/iceberg-context/scripts/kb status

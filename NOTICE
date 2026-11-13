@@ -1,0 +1,16 @@
+Iceberg Context
+Copyright 2026 The Iceberg Context contributors
+
+This is an unofficial, community-maintained project. It is not affiliated with, endorsed by, or sponsored by
+the Apache Software Foundation or the Apache Iceberg project.
+
+Apache Iceberg, Iceberg, Apache, and the Apache Iceberg logo are trademarks of the Apache Software Foundation.
+
+This repository summarizes and links to public material from:
+  - the Apache Iceberg dev mailing list archive (lists.apache.org)
+  - the apache/iceberg and apache/iceberg-python GitHub repositories and their git history
+  - public Apache Iceberg community meeting notes and recordings
+  - public Apache Software Foundation project rosters
+
+Each record keeps a link to its original source. Authors of the original material retain their rights.
+To request a correction or removal, see PRIVACY.md.

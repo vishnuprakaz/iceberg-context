@@ -1,0 +1,1575 @@
+_about: 'Maps a GitHub login to every name the same person appears under (dev list, git, meeting notes) and their ASF id. verified: true means the login was confirmed against reviewed pull requests; false
+  means derived and not yet checked. The pipeline never guesses: names missing here go to data/state/unresolved-people.json.'
+people:
+  010Soham:
+    names:
+    - Soham
+    verified: false
+  0xMALVEE:
+    names:
+    - M Alvee
+    verified: false
+  1fanwang:
+    names:
+    - Stefan Wang
+    verified: false
+  2dmurali:
+    names:
+    - Muralikrishna Dudaka
+    verified: false
+  97harsh:
+    names:
+    - Harsh Sharma
+    verified: false
+  aayusbhat26:
+    names:
+    - Aayush Kumar bhat
+    verified: false
+  abnobdoss:
+    names: []
+    verified: false
+  achasnovskiy:
+    names: []
+    verified: false
+  adityaksolves:
+    names:
+    - Aditya Kumar
+    verified: false
+  adutra:
+    names:
+    - Alexandre Dutra
+    verified: false
+  afeldman1:
+    names:
+    - Adam
+    verified: false
+  agnes-xinyi-lu:
+    names:
+    - Xinyi Lu
+    verified: false
+  aiborodin:
+    names: []
+    verified: false
+  aihuaxu:
+    names:
+    - Aihua Xu
+    verified: false
+  ajantha-bhat:
+    names:
+    - Ajantha Bhat
+    verified: false
+  ajayky-os:
+    names:
+    - Ajay Yadav
+    verified: false
+  ajreid21:
+    names: []
+    verified: false
+  Akanksha-kedia:
+    names:
+    - Akanksha kedia
+    verified: false
+  akashchamp:
+    names: []
+    verified: false
+  akashmalbari:
+    names:
+    - Akash Malbari
+    verified: false
+  akashrn5:
+    names:
+    - Akash R Nilugal
+    verified: false
+  AlejandroMorgante:
+    names:
+    - Alejandro Morgante
+    verified: false
+  alessandro-nori:
+    names:
+    - Alessandro Nori
+    verified: false
+  alexandrefimov:
+    names:
+    - Aleksandr Efimov
+    verified: false
+  alpbeysir:
+    names: []
+    verified: false
+  amogh-jahagirdar:
+    names:
+    - Amogh Jahagirdar
+    asf_id: amoghj
+    verified: true
+  andygrove:
+    names:
+    - Andy Grove
+    verified: false
+  anishmehta24:
+    names:
+    - Anish Mehta
+    verified: false
+  Ankitraj-builds:
+    names:
+    - Ankit Raj
+    verified: false
+  anoopj:
+    names:
+    - Anoop Johnson
+    verified: false
+  anshulbaliga7:
+    names:
+    - Anshul Baliga
+    verified: false
+  answndud:
+    names:
+    - MJY
+    verified: false
+  AntonioYuen:
+    names:
+    - Antonio
+    verified: false
+  antonlin1:
+    names: []
+    verified: false
+  Anurag-S1ngh:
+    names: []
+    verified: false
+  anuragmantri:
+    names:
+    - Anurag Mantripragada
+    verified: false
+  anxkhn:
+    names:
+    - Anas Khan
+    verified: false
+  aokolnychyi:
+    names:
+    - Anton Okolnychyi
+    asf_id: aokolnychyi
+    verified: false
+  AP24110011695:
+    names:
+    - ayush
+    verified: false
+  arifazmidd:
+    names:
+    - Arif Azmi
+    verified: false
+  ArulJerald:
+    names:
+    - Arul Jerald
+    verified: false
+  ASRodrigo1:
+    names: []
+    verified: false
+  atsuyam:
+    names:
+    - Atsuo Yamaguchi
+    verified: false
+  autoCAT6:
+    names:
+    - autoCAT
+    verified: false
+  avison9:
+    names:
+    - David
+    verified: false
+  ayushtkn:
+    names:
+    - Ayush Saxena
+    verified: false
+  barking-code:
+    names: []
+    verified: false
+  barry3406:
+    names:
+    - Barry
+    verified: false
+  Bartekszost:
+    names:
+    - Bartosz Szostakiewicz
+    verified: false
+  Baunsgaard:
+    names:
+    - Sebastian Baunsgaard
+    verified: false
+  Below0:
+    names:
+    - Hayoung Lee
+    verified: false
+  Beutlin:
+    names: []
+    verified: false
+  bezdomniy:
+    names: []
+    verified: false
+  BharatDeva:
+    names: []
+    verified: false
+  Bhargavkonidena:
+    names:
+    - Bhargav Kumar Konidena
+    verified: false
+  bharos:
+    names:
+    - Bharath Krishna
+    verified: false
+  binarybrain-009:
+    names:
+    - Daksh Dave
+    verified: false
+  bmorck:
+    names:
+    - Bobby Morck
+    verified: false
+  breken-ai:
+    names:
+    - breken
+    verified: false
+  brightwon:
+    names:
+    - ChanKyeong Won
+    verified: false
+  bryanck:
+    names:
+    - Bryan Keller
+    asf_id: bryanck
+    verified: true
+  c-thiel:
+    names:
+    - Christian
+    verified: false
+  c2zwdjnlcg:
+    names: []
+    verified: false
+  CalebWeisgerber:
+    names: []
+    verified: false
+  cbb330:
+    names:
+    - Christian Bush
+    verified: false
+  cenotee:
+    names: []
+    verified: false
+  charliec05:
+    names:
+    - Charlie Chen
+    verified: false
+  chenjian2664:
+    names: []
+    verified: false
+  chrislusf:
+    names:
+    - Chris Lu
+    verified: false
+  chrisqiqiu:
+    names:
+    - Chris Qiu
+    verified: false
+  ConeyLiu:
+    names:
+    - Xianyang Liu
+    verified: false
+  CTTY:
+    names:
+    - Shawn Chang
+    asf_id: schang
+    verified: true
+  cwsteinbach:
+    names:
+    - Carl Steinbach
+    asf_id: cws
+    verified: false
+  dalaro:
+    names:
+    - Dan LaRocque
+    verified: false
+  damansingh1313:
+    names:
+    - Damanpreet Singh
+    verified: false
+  danicafine:
+    names:
+    - Danica Fine
+    verified: false
+  danielcweeks:
+    names:
+    - Daniel C. Weeks
+    - Daniel Weeks
+    asf_id: dweeks
+    verified: true
+  dannycjones:
+    names:
+    - Daniel Carl Jones
+    verified: false
+  David-Banquet:
+    names:
+    - David Banquet
+    verified: false
+  davidbzhao:
+    names:
+    - David Zhao
+    verified: false
+  daviddallakyan2005:
+    names:
+    - David Dallakyan
+    verified: false
+  dbjnbnrj:
+    names:
+    - Debjani Banerjee
+    verified: false
+  dbtsai:
+    names:
+    - DB Tsai
+    verified: false
+  dedyoc:
+    names:
+    - Huy-Cuong Nguyen
+    verified: false
+  deepdave98:
+    names:
+    - Deep Dave
+    verified: false
+  deniskuzZ:
+    names:
+    - Denys Kuzmenko
+    verified: false
+  developer-rpai:
+    names:
+    - Rakesh Pai
+    verified: false
+  dhruvarya-db:
+    names:
+    - Dhruv Arya
+    verified: false
+  dingo4dev:
+    names:
+    - Stanley Law
+    verified: false
+  dirtysalt:
+    names:
+    - yan zhang
+    verified: false
+  dossett:
+    names:
+    - Aaron Niskode-Dossett
+    verified: false
+  dragonknightk:
+    names:
+    - 龙骑士k
+    verified: false
+  drexler-sky:
+    names: []
+    verified: false
+  dylanpulver:
+    names:
+    - Dylan Pulver
+    verified: false
+  Dzeri96:
+    names: []
+    verified: false
+  edgao:
+    names:
+    - Edward Gao
+    verified: false
+  edgarRd:
+    names:
+    - Edgar Rodriguez
+    verified: false
+  ehsantn:
+    names:
+    - Ehsan Totoni
+    verified: false
+  el10savio:
+    names:
+    - Elton SV
+    verified: false
+  enesyesil:
+    names:
+    - Enes Yesil
+    verified: false
+  evanrosa:
+    names:
+    - evro
+    verified: false
+  evindj:
+    names:
+    - Innocent Djiofack
+    verified: false
+  eye-gu:
+    names: []
+    verified: false
+  fallintoplace:
+    names:
+    - Minh Vu
+    verified: false
+  federicsp:
+    names:
+    - Federico
+    verified: false
+  feefs:
+    names: []
+    verified: false
+  felixschneider99:
+    names:
+    - Felix Schneider
+    verified: false
+  Fezinvirtual:
+    names: []
+    verified: false
+  findepi:
+    names:
+    - Piotr Findeisen
+    asf_id: findepi
+    verified: true
+  findinpath:
+    names:
+    - Marius Grama
+    verified: false
+  fivetran-jacklowery:
+    names:
+    - Jack Lowery
+    verified: false
+  flyrain:
+    names:
+    - Yufei Gu
+    asf_id: yufei
+    verified: true
+  fmorillo7694:
+    names: []
+    verified: false
+  Fokko:
+    names:
+    - Fokko Driesprong
+    asf_id: fokko
+    verified: true
+  ForeverAngry:
+    names:
+    - Brad Cannon
+    verified: false
+  gabeiglio:
+    names:
+    - Gabriel Igliozzi
+    verified: false
+  gaborkaszab:
+    names: []
+    verified: false
+  GabrielBBaldez:
+    names:
+    - Gabriel Baldez
+    verified: false
+  GayathriSrividya:
+    names: []
+    verified: false
+  genxiong7:
+    names: []
+    verified: false
+  gerashegalov:
+    names:
+    - Gera Shegalov
+    verified: false
+  Gerrrr:
+    names:
+    - Alex Sorokoumov
+    verified: false
+  geruh:
+    names:
+    - Drew Gallardo
+    asf_id: dru
+    verified: true
+  ggershinsky:
+    names: []
+    verified: false
+  GGraziadei:
+    names:
+    - Gianluca Graziadei
+    verified: false
+  gorewilliams:
+    names:
+    - Gore Williams
+    verified: false
+  Govindarajan-D:
+    names:
+    - Govindarajan
+    verified: false
+  grantatspothero:
+    names:
+    - Grant Nicholas
+    verified: false
+  Guosmilesmile:
+    names:
+    - GuoYu
+    verified: false
+  haizhou-zhao:
+    names:
+    - Haizhou Zhao
+    verified: false
+  hantangwangd:
+    names:
+    - Dong Wang
+    verified: false
+  harperjiang:
+    names:
+    - Hao Jiang
+    verified: false
+  harshavardhana:
+    names:
+    - Harshavardhana
+    verified: false
+  hcrosse:
+    names:
+    - Harrison Crosse
+    verified: false
+  HeartLinked:
+    names:
+    - Feiyang Li
+    verified: false
+  heathkh-recursion:
+    names:
+    - Kyle Heath
+    verified: false
+  hedger9487:
+    names: []
+    verified: false
+  hemanthboyina:
+    names: []
+    verified: false
+  HennesyChihiro:
+    names:
+    - Chihiro
+    verified: false
+  HenryCaiHaiying:
+    names:
+    - Henry Haiying Cai
+    verified: false
+  HITzengyz:
+    names:
+    - zengyz
+    verified: false
+  hiwuya:
+    names:
+    - wuya
+    verified: false
+  HonahX:
+    names:
+    - Honah J.
+    asf_id: honahx
+    verified: false
+  HotSushi:
+    names:
+    - Sushant Raikar
+    verified: false
+  hreddygayam:
+    names: []
+    verified: false
+  hsiang-c:
+    names: []
+    verified: false
+  HuaHuaY:
+    names:
+    - Zehua Zou
+    verified: false
+  huan233usc:
+    names:
+    - Xin Huang
+    verified: false
+  huaxingao:
+    names:
+    - Huaxin Gao
+    asf_id: huaxingao
+    verified: true
+  iamluan:
+    names:
+    - committobetter
+    verified: false
+  illes:
+    names:
+    - Nick Ouellet
+    verified: false
+  j1wonpark:
+    names:
+    - Jiwon Park
+    verified: false
+  jackye1995:
+    names:
+    - Jack Ye
+    asf_id: jackye
+    verified: false
+  jackylee-ch:
+    names:
+    - jackylee
+    verified: false
+  jamesbornholt:
+    names:
+    - James Bornholt
+    verified: false
+  jamesdilworth:
+    names:
+    - James Dilworth
+    verified: false
+  jatorre:
+    names:
+    - Javier de la Torre
+    verified: false
+  jayceslesar:
+    names:
+    - Jayce Slesar
+    verified: false
+  jb185048:
+    names:
+    - Jennifer Baldwin
+    verified: false
+  jbewing:
+    names: []
+    verified: false
+  jbonofre:
+    names:
+    - JB Onofré
+    verified: false
+  JeonDaehong:
+    names: []
+    verified: false
+  JeroenSchmidt:
+    names:
+    - J Schmidt
+    verified: false
+  jhamman:
+    names:
+    - Joe Hamman
+    verified: false
+  Jimvin:
+    names:
+    - Jim Halfpenny
+    verified: false
+  JingsongLi:
+    names:
+    - Jingsong Lee
+    asf_id: lzljs3620320
+    verified: false
+  jiwen624:
+    names: []
+    verified: false
+  jordepic:
+    names:
+    - Jordan Epstein
+    verified: false
+  joyhaldar:
+    names:
+    - Joy Haldar
+    verified: false
+  jsssun:
+    names:
+    - Sunwoo Jung
+    verified: false
+  julienledem:
+    names:
+    - Julien Le Dem
+    asf_id: julien
+    verified: false
+  jx2lee:
+    names:
+    - jj.lee
+    verified: false
+  jzhuge:
+    names:
+    - John Zhuge
+    verified: false
+  KaiqiJinWow:
+    names:
+    - Kaiqi Jin
+    verified: false
+  karubian:
+    names:
+    - Burak
+    verified: false
+  karuppayya:
+    names:
+    - Karuppayya
+    verified: false
+  kaveti:
+    names:
+    - rkaveti
+    verified: false
+  kdn36:
+    names:
+    - Koen Denecker
+    verified: false
+  KevinJiao:
+    names:
+    - Kevin Jiao
+    verified: false
+  kevinjqliu:
+    names:
+    - Kevin Liu
+    - Ted Gooch
+    asf_id: kevinjqliu
+    verified: true
+  kinolaev:
+    names:
+    - Sergei Nikolaev
+    verified: false
+  Kontinuation:
+    names:
+    - Kristin Cowalcijk
+    verified: false
+  kozmirchuk:
+    names:
+    - Anton Kozmirchuk
+    verified: false
+  kris-gaudel:
+    names:
+    - Kristofer Gaudel
+    verified: false
+  krishnakaanchan-png:
+    names:
+    - Kaanchan Krishna
+    verified: false
+  kuldeeepy:
+    names:
+    - Kuldeep Yadav
+    verified: false
+  kumarpritam863:
+    names: []
+    verified: false
+  Kurtiscwright:
+    names:
+    - Kurtis Wright
+    verified: false
+  laichunpongben:
+    names:
+    - Ben Lai
+    verified: false
+  laserninja:
+    names:
+    - Akshay Thorat
+    verified: false
+  laskoviymishka:
+    names:
+    - Andrei Tserakhau
+    verified: false
+  lavkushry:
+    names:
+    - Lavkush Kumar
+    verified: false
+  lawofcycles:
+    names:
+    - Sotaro Hikita
+    verified: false
+  ldudas-marx:
+    names:
+    - Laszlo Dudas-Marx
+    verified: false
+  lilei1128:
+    names:
+    - sanshi
+    verified: false
+  linzch3:
+    names: []
+    verified: false
+  lirui-apache:
+    names:
+    - Rui Li
+    verified: false
+  lisancao:
+    names:
+    - lnc
+    verified: false
+  liuliquan-marshal:
+    names: []
+    verified: false
+  liurenjie1024:
+    names:
+    - Renjie Liu
+    asf_id: liurenjie1024
+    verified: true
+  logesh45:
+    names:
+    - Logesh R
+    verified: false
+  lonless9:
+    names:
+    - XL Liang
+    verified: false
+  lrsb:
+    names: []
+    verified: false
+  lucasgameiroborges:
+    names:
+    - Lucas Gameiro
+    verified: false
+  LuciferYang:
+    names:
+    - YangJie
+    verified: false
+  lukeFalsina:
+    names:
+    - Luca Falsina
+    verified: false
+  m0g3r:
+    names: []
+    verified: false
+  majian1998:
+    names:
+    - majian
+    verified: false
+  manisin:
+    names:
+    - Maninder
+    verified: false
+  manuzhang:
+    names:
+    - Manu Zhang
+    verified: false
+  martelli:
+    names:
+    - Leandro Martelli
+    verified: false
+  masfworld:
+    names:
+    - Miguel A. Sotomayor
+    verified: false
+  mateusaubin:
+    names:
+    - Mateus Aubin
+    verified: false
+  MatheusFreitas25:
+    names:
+    - Matheus de Freitas Andrade
+    verified: false
+  MaxNevermind:
+    names:
+    - Maksim Konstantinov
+    verified: false
+  mbutrovich:
+    names:
+    - Matt Butrovich
+    verified: false
+  med9110:
+    names:
+    - Mohamed Laghdaf Dadda
+    verified: false
+  MehulBatra:
+    names: []
+    verified: false
+  MenelikV:
+    names:
+    - Ménélik Vero
+    verified: false
+  mengna-lin:
+    names: []
+    verified: false
+  mervyn-lobo:
+    names:
+    - Mervyn Lobo
+    verified: false
+  milastdbx:
+    names:
+    - Milan Stefanovic
+    verified: false
+  milleniax:
+    names: []
+    verified: false
+  mithun-sudo:
+    names:
+    - Mithun M
+    verified: false
+  mittalpk:
+    names:
+    - Praveen Kumar Mittal
+    verified: false
+  mj006648:
+    names:
+    - ChangHyeon Im
+    verified: false
+  mkroll-db:
+    names:
+    - Marco Kroll
+    verified: false
+  moggaa:
+    names:
+    - Jaeyeon Park
+    verified: false
+  MonkeyCanCode:
+    names:
+    - Yong Zheng
+    verified: false
+  moomindani:
+    names:
+    - Noritaka Sekiyama
+    verified: false
+  MosheBlumbergX:
+    names:
+    - Moshe Blumberg
+    verified: false
+  mrutunjay-kinagi:
+    names:
+    - Mrutunjay Kinagi
+    verified: false
+  ms32035:
+    names:
+    - Marcin Szymański
+    verified: false
+  mukund-thakur:
+    names:
+    - Mukund Thakur
+    verified: false
+  MukundaKatta:
+    names:
+    - Mukunda Rao Katta
+    verified: false
+  munendrasn:
+    names:
+    - S N Munendra
+    verified: false
+  mxm:
+    names:
+    - Maximilian Michels
+    asf_id: mxm
+    verified: true
+  naamamaoz:
+    names:
+    - Naama Maoz
+    verified: false
+  nandorKollar:
+    names:
+    - Nándor Kollár
+    verified: false
+  nastra:
+    names:
+    - Eduard Tudenhoefner
+    asf_id: etudenhoefner
+    verified: true
+  Neuw84:
+    names:
+    - Angel Conde
+    verified: false
+  nhuantho:
+    names: []
+    verified: false
+  NNSatyaKarthik:
+    names: []
+    verified: false
+  nssalian:
+    names:
+    - Neelesh Salian
+    verified: false
+  oguzhanunlu:
+    names:
+    - Oguzhan Unlu
+    verified: false
+  okumin:
+    names:
+    - Shohei Okumiya
+    verified: false
+  omalley:
+    names:
+    - Owen O'Malley
+    asf_id: omalley
+    verified: false
+  ooreally:
+    names:
+    - Anupam Srivastava
+    verified: false
+  openinx:
+    names:
+    - Zheng Hu
+    asf_id: openinx
+    verified: true
+  oresttokovenko:
+    names:
+    - Orest Tokovenko
+    verified: false
+  owen6314:
+    names:
+    - Owen Zhang
+    verified: false
+  pallevam:
+    names:
+    - Vamsi Krishna
+    verified: false
+  pan3793:
+    names:
+    - Cheng Pan
+    verified: false
+  paultmathew:
+    names:
+    - Paul Mathew
+    verified: false
+  pbajpai21:
+    names:
+    - Prashant Bajpai
+    verified: false
+  PDGGK:
+    names:
+    - ZIHAN DAI
+    verified: false
+  PFischbeck:
+    names:
+    - Philipp Fischbeck
+    verified: false
+  piotrrzysko:
+    names:
+    - Piotr Rżysko
+    verified: false
+  PLTNGM:
+    names:
+    - Platon G. Gimp
+    verified: false
+  plusplusjiajia:
+    names:
+    - Jiajia Li
+    verified: false
+  porkedchop:
+    names:
+    - Bishop Kammeraad
+    verified: false
+  prabhleen2317:
+    names: []
+    verified: false
+  Prathameshk2696:
+    names:
+    - Prathamesh Kulkarni
+    verified: false
+  pritampan:
+    names:
+    - Pritam
+    verified: false
+  psvri:
+    names:
+    - Vrishabh
+    verified: false
+  puchengy:
+    names:
+    - Pucheng Yang
+    verified: false
+  pvary:
+    names:
+    - Peter Vary
+    asf_id: pvary
+    verified: true
+  raghav-reglobe:
+    names:
+    - Raghvendra Singh
+    verified: false
+  ragnard:
+    names:
+    - Ragnar Dahlén
+    verified: false
+  rahulsmahadev:
+    names:
+    - Rahul Shivu Mahadev
+    verified: false
+  rainerschamm:
+    names:
+    - Rainer Schamm
+    verified: false
+  rajarshisarkar:
+    names:
+    - Rajarshi Sarkar
+    verified: false
+  rambleraptor:
+    names:
+    - Alex Stephen
+    verified: false
+  rameshreddy-adutla:
+    names:
+    - Ramesh Reddy Adutla
+    verified: false
+  randreucetti:
+    names:
+    - Ross Andreucetti
+    verified: false
+  Rango-2017:
+    names:
+    - Rango
+    verified: false
+  raulcd:
+    names:
+    - Raúl Cumplido
+    verified: false
+  raunaqmorarka:
+    names:
+    - Raunaq Morarka
+    verified: false
+  rchowell:
+    names:
+    - R. Conner Howell
+    verified: false
+  rcjverhoef:
+    names: []
+    verified: false
+  rdblue:
+    names:
+    - Ryan Blue
+    asf_id: blue
+    verified: true
+  rdsr:
+    names:
+    - Ratandeep Ratti
+    asf_id: rdsr
+    verified: false
+  Remenby31:
+    names: []
+    verified: false
+  rexminnis:
+    names:
+    - Rexwell Minnis
+    verified: false
+  RjLi13:
+    names:
+    - Ruijing Li
+    verified: false
+  rmannibucau:
+    names:
+    - Romain Manni-Bucau
+    verified: false
+  rmoff:
+    names:
+    - Robin Moffatt
+    verified: false
+  robert3005:
+    names:
+    - Robert Kruszewski
+    verified: false
+  robreeves:
+    names:
+    - Rob Reeves
+    verified: false
+  Rodrigo-Palma:
+    names:
+    - Rodrigo Stachlewski Palma
+    verified: false
+  roryqi:
+    names: []
+    verified: false
+  rshdhere:
+    names:
+    - raashed
+    verified: false
+  Ruobing1997:
+    names:
+    - Ruobing Wang
+    verified: false
+  RussellSpitzer:
+    names:
+    - Russell Spitzer
+    asf_id: russellspitzer
+    verified: true
+  rymurr:
+    names:
+    - Ryan Murray
+    asf_id: rymurr
+    verified: true
+  rynewang:
+    names:
+    - Ruiyang Wang
+    verified: false
+  sachinnn99:
+    names:
+    - Sachin Ranjalkar
+    verified: false
+  sagib1:
+    names:
+    - sagib-sqream
+    verified: false
+  SamWheating:
+    names:
+    - Sam Wheating
+    verified: false
+  sarthaksin1857:
+    names:
+    - Sarthak Singh
+    verified: false
+  sarthakuwar:
+    names:
+    - sarthak kuwar
+    verified: false
+  saths008:
+    names:
+    - Saath
+    verified: false
+  SaymV:
+    names:
+    - Sam Verhasselt
+    verified: false
+  Schlitzohr101:
+    names:
+    - William E. Murray
+    verified: false
+  sdd:
+    names:
+    - Scott Donnelly
+    asf_id: sdd
+    verified: false
+  sejal-gupta-ksolves:
+    names:
+    - Sejal Gupta
+    verified: false
+  seokyun-ha-toss:
+    names:
+    - seokyun.ha
+    verified: false
+  SEPURI-SAI-KRISHNA:
+    names:
+    - Sepuri Sai Krishna
+    verified: false
+  Shahzeb-DataEngineer:
+    names:
+    - Shahzeb Ali
+    verified: false
+  shanzi:
+    names:
+    - Chase Zhang
+    verified: false
+  shardulm94:
+    names:
+    - Shardul Mahadik
+    asf_id: shardul
+    verified: false
+  shaynhornik:
+    names:
+    - Shayn Hornik
+    verified: false
+  shiwk:
+    names: []
+    verified: false
+  shubham19may:
+    names:
+    - Shubham Baldava
+    verified: false
+  Sidra-009:
+    names:
+    - Sidra
+    verified: false
+  simpleqt:
+    names:
+    - 陈志谦
+    verified: false
+  singhpk234:
+    names:
+    - Prashant Singh
+    asf_id: singhpk234
+    verified: true
+  sjs004:
+    names:
+    - Simranjeet Singh
+    verified: false
+  slachiewicz:
+    names:
+    - Sylwester Lachiewicz
+    verified: false
+  slfan1989:
+    names: []
+    verified: false
+  smaheshwar-pltr:
+    names:
+    - Sreesh Maheshwar
+    verified: false
+  snicholasbarton:
+    names:
+    - Nicholas Barton
+    verified: false
+  sohailshk:
+    names:
+    - Mohammad Sohail Shaikh
+    verified: false
+  somasays:
+    names:
+    - Somasundaram Sekar
+    verified: false
+  Soumo-git-hub:
+    names:
+    - Soumyadyuti Dey
+    verified: false
+  soumyajit-sahu:
+    names:
+    - Soumyajit Sahu
+    verified: false
+  spr0els:
+    names: []
+    verified: false
+  sqd:
+    names:
+    - Han You
+    verified: false
+  sririshindra:
+    names:
+    - Rishi
+    verified: false
+  statsops:
+    names:
+    - Stats
+    verified: false
+  steveloughran:
+    names:
+    - Steve Loughran
+    verified: false
+  stevenzwu:
+    names:
+    - Steven Wu
+    - Steven Zhen Wu
+    asf_id: stevenwu
+    verified: true
+  SteveStevenpoor:
+    names:
+    - Stepan Stepanishchev
+    verified: false
+  sumanth-manchala:
+    names:
+    - Sumanth
+    verified: false
+  sumtiogo:
+    names:
+    - Ayson Chang
+    verified: false
+  sungwy:
+    names:
+    - Sung Yun
+    asf_id: sungwy
+    verified: true
+  superdiaodiao:
+    names:
+    - Chester
+    verified: false
+  swapna267:
+    names:
+    - Swapna Marru
+    verified: false
+  syahra712:
+    names:
+    - Syed Ahnaf Raza
+    verified: false
+  szehon-ho:
+    names:
+    - Szehon Ho
+    asf_id: szehon
+    verified: true
+  szlta:
+    names:
+    - Adam Szita
+    verified: false
+  takayoshi-makabe:
+    names:
+    - Takayoshi Makabe
+    verified: false
+  talatuyarer:
+    names:
+    - Talat UYARER
+    verified: false
+  tanmayrauth:
+    names:
+    - Tanmay Rauth
+    verified: false
+  teamurko:
+    names:
+    - Stas Pak
+    verified: false
+  terrytlu:
+    names: []
+    verified: false
+  TGooch44:
+    names:
+    - Ted Gooch
+    asf_id: gooch
+    verified: false
+  thisismiller:
+    names:
+    - Alex Miller
+    verified: false
+  thomas-pfeiffer:
+    names:
+    - Thomas Pfeiffer
+    verified: false
+  thswlsqls:
+    names:
+    - Eunbin Son
+    verified: false
+  tmater:
+    names:
+    - Tamas Mate
+    verified: false
+  tom-s-powell:
+    names:
+    - Thomas Powell
+    verified: false
+  ts-tarou:
+    names:
+    - Resort_Annex
+    verified: false
+  tsho:
+    names:
+    - Sho Tanaka
+    verified: false
+  turboFei:
+    names:
+    - Fei Wang
+    verified: false
+  twthorn:
+    names:
+    - Thomas Thornton
+    verified: false
+  ulysses-you:
+    names:
+    - Xiduo You
+    verified: false
+  ump45nose:
+    names: []
+    verified: false
+  uros-b:
+    names:
+    - Uros
+    - Uros Bojanic
+    verified: false
+  vaibhav5140:
+    names:
+    - Vaibhav Ahuja
+    verified: false
+  varun-lakhyani:
+    names:
+    - Varun Lakhyani
+    verified: false
+  vbhanuchander-lang:
+    names: []
+    verified: false
+  venkata91:
+    names:
+    - Venkata krishnan Sowrirajan
+    verified: false
+  vishnuprakaz:
+    names:
+    - vishnu prakash
+    verified: false
+  vladislav-sidorovich:
+    names:
+    - Vladislav Sidorovich
+    verified: false
+  VVKot:
+    names:
+    - Vova Kot
+    verified: false
+  wangyum:
+    names:
+    - Yuming Wang
+    verified: false
+  waterlx:
+    names:
+    - Xiang Li
+    verified: false
+  Wenjun7J:
+    names:
+    - SevenJ
+    verified: false
+  wgtmac:
+    names:
+    - Gang Wu
+    asf_id: gangwu
+    verified: true
+  williamhyun:
+    names:
+    - William Hyun
+    verified: false
+  wobu:
+    names: []
+    verified: false
+  wombatu-kun:
+    names:
+    - Vova Kolmakov
+    verified: false
+  Wyatt-Hawes:
+    names:
+    - Wyatt H
+    verified: false
+  wypoon:
+    names:
+    - Wing Yew Poon
+    verified: false
+  xanderbailey:
+    names:
+    - Xander
+    verified: false
+  xiaoxuandev:
+    names:
+    - Xiaoxuan
+    verified: false
+  XJDKC:
+    names:
+    - Rulin Xing
+    verified: false
+  xndai:
+    names:
+    - Xiening Dai
+    verified: false
+  Xuanwo:
+    names:
+    - Hao Ding
+    asf_id: xuanwo
+    verified: false
+  xxubai:
+    names:
+    - Xu Bai
+    verified: false
+  yadavay-amzn:
+    names:
+    - Anupam Yadav
+    verified: false
+  yangshangqing95:
+    names:
+    - yangshangqing
+    verified: false
+  YanivZalach:
+    names:
+    - Yaniv Zalach
+    verified: false
+  yayaha:
+    names:
+    - Wei Luo
+    verified: false
+  yguy-ryft:
+    names: []
+    verified: false
+  yhyyz:
+    names: []
+    verified: false
+  yingjianwu98:
+    names:
+    - Yingjian Wu
+    verified: false
+  youngrae81:
+    names:
+    - youngrae kim
+    verified: false
+  YuangGao:
+    names:
+    - Yuang Gao
+    verified: false
+  yusufyildiz34:
+    names:
+    - Yusuf YILDIZ
+    verified: false
+  yyanyy:
+    names:
+    - Yan Yan
+    asf_id: yyan
+    verified: true
+  zenfenan:
+    names:
+    - Sivaprasanna
+    verified: false
+  zeroshade:
+    names:
+    - Matthew Topol
+    - Matt Topol
+    asf_id: zeroshade
+    verified: true
+  zhengxiang378928908-code:
+    names: []
+    verified: false
+  zhjwpku:
+    names:
+    - Junwang Zhao
+    verified: false
+  zhongyujiang:
+    names:
+    - Yujiang Zhong
+    verified: false

@@ -1,0 +1,258 @@
+#!/usr/bin/env python3
+"""kb: query the Iceberg Context knowledge base.
+
+Standard library only. Reads index/*.jsonl, the Markdown pages, data/raw/ and data/state/ from the
+repository, and keeps a full-text index in a cache directory outside the repository.
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import hashlib
+import json
+import os
+import re
+import sqlite3
+import sys
+from pathlib import Path
+
+PAGE_DIRS = ("people", "groups", "initiatives", "modules", "repos", "releases", "records")
+DOC_DIRS = ("docs", "research", "notes", "briefings", "maps")
+DOC_FILES = ("state-of-iceberg.md", "opportunities.md")
+SOURCES = ("devlist", "github", "git", "spec", "asf", "siblings", "syncdocs", "designdocs", "calendar", "youtube")
+FRONTMATTER = re.compile(r"\A---\n.*?\n---\n?", re.S)
+
+
+def repo_root() -> Path:
+    env = os.environ.get("ICEBERG_CONTEXT_ROOT")
+    if env:
+        return Path(env).resolve()
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "schema" / "page.json").exists():
+            return parent
+    sys.exit("kb: cannot find the iceberg-context repository (set ICEBERG_CONTEXT_ROOT)")
+
+
+def read_jsonl(path: Path):
+    if not path.exists():
+        return
+    with path.open(encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if line:
+                yield json.loads(line)
+
+
+# ---------------------------------------------------------------- index
+
+def indexed_files(root: Path) -> list[Path]:
+    files: list[Path] = []
+    for d in PAGE_DIRS + DOC_DIRS:
+        if (root / d).is_dir():
+            files += (root / d).rglob("*.md")
+    files += [root / f for f in DOC_FILES if (root / f).exists()]
+    for d in ("index", "data/raw", "data/links"):
+        if (root / d).is_dir():
+            files += (root / d).rglob("*.jsonl")
+    return sorted(files)
+
+
+def fingerprint(root: Path, files: list[Path]) -> str:
+    h = hashlib.sha1()
+    for f in files:
+        st = f.stat()
+        h.update(f"{f.relative_to(root)}|{st.st_size}|{st.st_mtime_ns}\n".encode())
+    return h.hexdigest()[:16]
+
+
+def cache_dir() -> Path:
+    base = os.environ.get("XDG_CACHE_HOME") or str(Path.home() / ".cache")
+    d = Path(base) / "iceberg-context"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def open_db(root: Path) -> sqlite3.Connection:
+    files = indexed_files(root)
+    db_path = cache_dir() / f"kb-{fingerprint(root, files)}.sqlite"
+    if db_path.exists():
+        con = sqlite3.connect(db_path)
+        con.row_factory = sqlite3.Row
+        return con
+    for old in cache_dir().glob("kb-*.sqlite"):
+        old.unlink(missing_ok=True)
+    tmp = db_path.with_suffix(".tmp")
+    tmp.unlink(missing_ok=True)
+    con = sqlite3.connect(tmp)
+    con.executescript(
+        """
+        create table nodes(id text primary key, type text, title text, status text, updated text, path text, meta text);
+        create table edges(src text, rel text, dst text, confidence text, source text, since text, meta text);
+        create index edges_src on edges(src); create index edges_dst on edges(dst);
+        create table raw(id text primary key, source text, type text, date text, url text, title text,
+                         people text, refs text, file text);
+        create virtual table fts using fts5(id unindexed, kind unindexed, date unindexed, title, body,
+                                            tokenize='porter unicode61');
+        """
+    )
+    for n in read_jsonl(root / "index" / "nodes.jsonl"):
+        con.execute("insert or replace into nodes values(?,?,?,?,?,?,?)",
+                    (n["id"], n.get("type"), n.get("title"), n.get("status"), str(n.get("updated") or ""),
+                     n.get("path"), json.dumps(n, ensure_ascii=False)))
+    for e in read_jsonl(root / "index" / "edges.jsonl"):
+        con.execute("insert into edges values(?,?,?,?,?,?,?)",
+                    (e["src"], e["rel"], e["to"], e.get("confidence"), e.get("source"), e.get("since"),
+                     json.dumps(e, ensure_ascii=False)))
+    node_by_path = {r[0]: r[1] for r in con.execute("select path, id from nodes")}
+    for f in files:
+        rel = f.relative_to(root).as_posix()
+        if f.suffix == ".md":
+            text = FRONTMATTER.sub("", f.read_text(encoding="utf-8", errors="replace"))
+            first = next((ln.lstrip("# ").strip() for ln in text.splitlines() if ln.startswith("#")), rel)
+            pid = node_by_path.get(rel, f"file:{rel}")
+            kind = pid.split("/")[0] if rel in node_by_path else "doc"
+            con.execute("insert into fts values(?,?,?,?,?)", (pid, kind, "", first, text))
+        elif rel.startswith("data/raw/"):
+            for r in read_jsonl(f):
+                con.execute("insert or replace into raw values(?,?,?,?,?,?,?,?,?)",
+                            (r["id"], r.get("source"), r.get("type"), r.get("date"), r.get("url"), r.get("title"),
+                             json.dumps(r.get("people") or []), json.dumps(r.get("refs") or []), rel))
+                con.execute("insert into fts values(?,?,?,?,?)",
+                            (r["id"], r.get("type") or "raw", r.get("date") or "", r.get("title") or "", r.get("body") or ""))
+    con.commit()
+    con.close()
+    tmp.replace(db_path)
+    con = sqlite3.connect(db_path)
+    con.row_factory = sqlite3.Row
+    return con
+
+
+# ---------------------------------------------------------------- commands
+
+def age(ts: str | None) -> str:
+    if not ts:
+        return "never"
+    try:
+        then = dt.datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+    except ValueError:
+        return ts
+    hours = (dt.datetime.now(dt.timezone.utc) - then).total_seconds() / 3600
+    return f"{hours:.0f}h ago" if hours < 48 else f"{hours / 24:.0f}d ago"
+
+
+def cmd_status(root: Path, args) -> int:
+    con = open_db(root)
+    print("Iceberg Context status\n")
+    print(f"{'source':<12} {'status':<8} {'last success':<14} detail")
+    for s in SOURCES:
+        p = root / "data" / "state" / f"{s}.json"
+        st = json.loads(p.read_text()) if p.exists() else {"status": "never"}
+        counts = ", ".join(f"{k}={v}" for k, v in sorted((st.get("counts") or {}).items()))
+        detail = st.get("error") or counts
+        print(f"{s:<12} {st.get('status', 'never'):<8} {age(st.get('last_success')):<14} {detail}")
+    print("\nKnowledge base:")
+    rows = con.execute("select type, count(*) c from nodes group by type order by type").fetchall()
+    print("  pages: " + (", ".join(f"{r['type']}={r['c']}" for r in rows) or "none yet"))
+    print(f"  links: {con.execute('select count(*) from edges').fetchone()[0]}")
+    rows = con.execute("select source, count(*) c, max(date) d from raw group by source order by source").fetchall()
+    print("  raw records: " + (", ".join(f"{r['source']}={r['c']} (to {str(r['d'])[:10]})" for r in rows) or "none yet"))
+    briefs = sorted((root / "briefings" / "weekly").glob("*.md"))
+    print(f"  latest briefing: {briefs[-1].relative_to(root) if briefs else 'none yet'}")
+    return 0
+
+
+def fts_terms(q: str) -> list[str]:
+    """Split user text into safely quoted FTS5 terms: quoted phrases stay phrases, every other word is quoted."""
+    out = []
+    for phrase, word in re.findall(r'"([^"]+)"|(\S+)', q):
+        term = (phrase or word).replace('"', " ").strip()
+        if term:
+            out.append('"' + term + '"')
+    return out
+
+
+def cmd_search(root: Path, args) -> int:
+    con = open_db(root)
+    terms = fts_terms(" ".join(args.query))
+    if not terms:
+        print("no results")
+        return 0
+    kind = "and kind = ?" if args.type else ""
+    sql = ("select id, kind, date, title, snippet(fts, 4, '[', ']', ' … ', 24) snip from fts "
+           f"where fts match ? {kind} order by bm25(fts, 0, 0, 0, 5.0, 1.0) limit ?")
+    rows, mode = [], "all"
+    # First require every term; if nothing matches, fall back to any term, best matches first.
+    for mode, joiner in (("all", " "), ("any", " OR ")):
+        params = [joiner.join(terms)] + ([args.type] if args.type else []) + [args.limit]
+        rows = con.execute(sql, params).fetchall()
+        if rows or len(terms) == 1:
+            break
+    if not rows:
+        print("no results")
+        return 0
+    if mode == "any":
+        print("(nothing matched every word; showing matches for any of them)\n")
+    for r in rows:
+        date = f" {r['date'][:10]}" if r["date"] else ""
+        print(f"{r['id']}  [{r['kind']}{date}]\n  {r['title']}\n  {' '.join(r['snip'].split())}\n")
+    print(f"{len(rows)} result(s). Show one with: kb source <id>")
+    return 0
+
+
+def cmd_source(root: Path, args) -> int:
+    con = open_db(root)
+    ident = args.id
+    row = con.execute("select * from raw where id = ?", (ident,)).fetchone()
+    if row:
+        rec = next(r for r in read_jsonl(root / row["file"]) if r["id"] == ident)
+        print(f"id:     {rec['id']}\ntype:   {rec.get('type')} ({rec.get('source')})\ndate:   {rec.get('date')}")
+        print(f"title:  {rec.get('title', '')}\npeople: {', '.join(rec.get('people') or [])}\nurl:    {rec.get('url')}")
+        if rec.get("ai_generated"):
+            print("note:   this source text was itself AI-generated")
+        if rec.get("refs"):
+            print(f"refs:   {', '.join(rec['refs'][:20])}")
+        print()
+        print(excerpt(rec.get("body") or "", args.grep, args.chars))
+        return 0
+    node = con.execute("select * from nodes where id = ?", (ident,)).fetchone()
+    path = root / node["path"] if node else (root / ident[5:] if ident.startswith("file:") else None)
+    if path and path.exists():
+        print(f"id:   {ident}\nfile: {path.relative_to(root)}\n")
+        print(excerpt(path.read_text(encoding="utf-8"), args.grep, args.chars))
+        return 0
+    print(f"kb: no record or page with id {ident!r}. Try: kb search <words>", file=sys.stderr)
+    return 1
+
+
+def excerpt(text: str, grep: str | None, chars: int) -> str:
+    if grep:
+        hits = [m.start() for m in re.finditer(re.escape(grep), text, re.I)]
+        if not hits:
+            return f"(no match for {grep!r} in this source)"
+        half = max(200, chars // (2 * min(len(hits), 3)))
+        parts = [text[max(0, h - half): h + half].strip() for h in hits[:3]]
+        return "\n…\n".join(parts) + (f"\n\n({len(hits)} matches)" if len(hits) > 3 else "")
+    return text if len(text) <= chars else text[:chars].rstrip() + f"\n… ({len(text) - chars} more characters; use --chars or --grep)"
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="kb", description="Query the Iceberg Context knowledge base.")
+    sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("status", help="how fresh each source is and what the knowledge base holds").set_defaults(fn=cmd_status)
+    p = sub.add_parser("search", help="full-text search over pages and raw records")
+    p.add_argument("query", nargs="+")
+    p.add_argument("--type", help="limit to one kind: person, initiative, meeting, thread, email, pr, transcript, doc, …")
+    p.add_argument("--limit", type=int, default=10)
+    p.set_defaults(fn=cmd_search)
+    p = sub.add_parser("source", help="show the text and link behind an id")
+    p.add_argument("id")
+    p.add_argument("--grep", help="show only the passages containing this text")
+    p.add_argument("--chars", type=int, default=3000)
+    p.set_defaults(fn=cmd_source)
+    args = parser.parse_args(argv)
+    return args.fn(repo_root(), args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

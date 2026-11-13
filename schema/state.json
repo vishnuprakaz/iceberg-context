@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Per-source sync state (data/state/<source>.json)",
+  "type": "object",
+  "required": ["source", "status"],
+  "properties": {
+    "source": {"type": "string"},
+    "status": {"enum": ["ok", "failed", "partial", "never"]},
+    "last_run": {"type": "string"},
+    "last_success": {"type": "string"},
+    "error": {"type": "string"},
+    "counts": {"type": "object"},
+    "cursor": {}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw record (one JSON line in data/raw/<source>/YYYY/MM.jsonl)",
+  "type": "object",
+  "required": ["id", "source", "type", "date", "url", "hash"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^(devlist|gh|commit|meet|yt|doc|spec|asf|cal):.+"},
+    "source": {"enum": ["devlist", "github", "git", "spec", "asf", "siblings", "syncdocs", "designdocs", "calendar", "youtube"]},
+    "type": {"enum": ["email", "pr", "issue", "review", "commit", "meeting-notes", "transcript", "event", "doc", "spec-section", "roster"]},
+    "date": {"type": "string"},
+    "url": {"type": "string"},
+    "people": {"type": "array", "items": {"type": "string"}},
+    "title": {"type": "string"},
+    "body": {"type": "string"},
+    "refs": {"type": "array", "items": {"type": "string"}},
+    "hash": {"type": "string"},
+    "ai_generated": {"type": "boolean"},
+    "meta": {"type": "object"}
+  },
+  "additionalProperties": false
+}

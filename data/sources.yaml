@@ -1,0 +1,65 @@
+# Registry of everything the pipeline collects. Collectors read this file; add a source here first.
+
+repos:
+  - {name: apache/iceberg, depth: full, default_branch: main}
+  - {name: apache/iceberg-python, depth: full, default_branch: main}
+  - {name: apache/iceberg-rust, depth: light}
+  - {name: apache/iceberg-go, depth: light}
+  - {name: apache/iceberg-cpp, depth: light}
+  - {name: apache/iceberg-verification, depth: light}
+  - {name: apache/terraform-provider-iceberg, depth: light}
+
+devlist:
+  list: dev
+  domain: iceberg.apache.org
+  api: https://lists.apache.org/api
+  history_start: "2018-11"
+
+asf:
+  committee_info: https://whimsy.apache.org/public/committee-info.json
+  ldap_projects: https://whimsy.apache.org/public/public_ldap_projects.json
+  project: iceberg
+
+calendar:
+  name: Iceberg Dev Events
+  id: 3905d492f1b450ba0712f2ae6afa76eb757f13d85220cc03aa4527885adc5629@group.calendar.google.com
+
+youtube:
+  channel: "@ApacheIceberg"
+  channel_id: UCAg-s6wxgQRmEBohfuWTEXA
+  caption_track: en-orig
+
+# Working groups. `doc` is the Google Doc holding the running notes; `tab` names the tab with the notes when
+# the document has several. `title_match` are lowercase fragments found in recording and calendar titles.
+groups:
+  - {slug: community, name: Iceberg Community Sync, cadence: every 3 weeks (Wed), doc: 1YuGhUdukLP5gGiqCbk0A5_Wifqe2CZWgOd3TbhY3UQg,
+     playlist: Iceberg Community Syncs, title_match: [community sync], exclude_match: [catalog, rust, spark, variant]}
+  - {slug: catalog, name: Catalog Community Sync, cadence: every 3 weeks (Wed), doc: 1iPGVCIcr-M0XtAiudOguWAvmqIdVgpYN5vz5ohO8PKw,
+     title_match: [catalog community sync]}
+  - {slug: v4-metadata, name: V4 Metadata (AMT / Single File Commits), cadence: every 2 weeks (Mon), doc: 1k4x8utgh41Sn1tr98eynDKCWq035SV_f75rtNHcerVw,
+     tab: Meeting notes, playlist: V4 Single File Commit Community Sync, title_match: [v4 metadata, v4 amt, single file commit]}
+  - {slug: index, name: Index Support Sync, cadence: every 2 weeks (Mon), doc: 1N6a2IOzC6Qsqv7NBqHKesees4N6WF49YUSIX2FrF7S0,
+     tab: Meeting notes, playlist: Iceberg Index Support Community sync, title_match: [index support]}
+  - {slug: file-vector-type, name: File and Vector Type Sync, cadence: every 2 weeks (Thu), doc: 1zA8PskNDFKXXJpzWQr25CFoX_aIZHBNHbkxk0t3PteE,
+     tab: Sync notes, title_match: [vector type, file type, file and vector]}
+  - {slug: materialized-views, name: Materialized View Sync, cadence: about every 2 weeks (Thu), doc: 1UnhldHhe3Grz8JBngwXPA6ZZord1xMedY5ukEhZYF-A,
+     tab: Agenda, playlist: Iceberg MV Sync, title_match: [mv sync, materialized view]}
+  - {slug: column-updates, name: Efficient Column Updates Sync, cadence: every 2 weeks (Tue), doc: 1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs,
+     tab: Meeting Notes, playlist: Efficient column updates sync, title_match: [column updates]}
+  - {slug: variant, name: Variant Community Sync, cadence: monthly (1st Thu), doc: 1IuhLRxw1rcPD_f4jgHuGe3SwFgy7Y5wgEGvLzf6311s,
+     tab: Meeting Notes, title_match: [variant]}
+  - {slug: spark, name: Spark Community Sync, cadence: monthly (3rd Tue), doc: 19nno1RoPznbbxKOZZddZNHHafa7XULjbN6RPExdr2n4,
+     playlist: Iceberg - Spark Community Sync, title_match: [spark community sync]}
+  - {slug: python, name: PyIceberg Sync, cadence: monthly (last Tue), doc: 1oMKodaZJrOJjPfc8PDVAoTdl02eGQKHlhwuggiw7s9U,
+     title_match: [python library sync, pyiceberg]}
+  - {slug: rust, name: Iceberg Rust Community Sync, cadence: about monthly, playlist: Iceberg Rust Community Sync, title_match: [rust community sync]}
+  - {slug: read-restrictions, name: Read Restrictions Sync, cadence: dormant since 2026-09, doc: 1iGNydKY7XT1N5Nz056vDPM0P8v0MFymGqNtOlUGUp-c,
+     playlist: Iceberg Read Restrictions Sync, title_match: [read restrictions]}
+  - {slug: constraints, name: Constraints Support, cadence: dormant since 2026-06, doc: 1re65fx3uqC7I_tJuS79IxLiB7HEN2Grt5qRIDjd3p-4,
+     playlist: Constraints support in Iceberg, title_match: [constraints]}
+  - {slug: udf, name: UDF Community Sync, cadence: unknown, playlist: Iceberg UDF Community Sync, title_match: [udf]}
+  - {slug: conformance, name: Shared Conformance Testing Sync, cadence: unknown, title_match: [conformance testing]}
+
+# Design documents known up front. More are discovered from links in threads, issues and notes.
+design_docs:
+  - {id: 1m8b7u97uteHYjXk-4DNglJSpQO8OcZOCzW2tApCNTW4, title: Collation Support proposal}
