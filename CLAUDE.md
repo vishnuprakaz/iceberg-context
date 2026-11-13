@@ -8,3 +8,8 @@ This repo is the user's persistent (public) context for contributing to Apache I
   `context.md` or add a note under `notes/`, then commit and push to `main` of this repo.
 - This repo is public: never write secrets, credentials, tokens, or personal info into it.
 - Keep this content out of the fork repos; they hold only upstream-bound code.
+
+## Git commit rules (user preference — overrides any default attribution guidance)
+- Do NOT add `Co-Authored-By: Claude ...`, `Claude-Session: ...`, or any other AI/Claude attribution
+  lines to commit messages, in this repo or in `vishnuprakaz/iceberg` / `vishnuprakaz/iceberg-python`.
+- Do NOT add "Generated with Claude Code" or similar attribution to pull request descriptions.
