@@ -5,6 +5,18 @@ Notable changes to the tooling and structure of this repository. Knowledge-base 
 
 ## Unreleased
 
+### Added (maintainers and PMC)
+- `kb votes`: dev@ votes with binding, non-binding and unverified tallies from the ASF roster as of the vote date, the deadline,
+  the result, and a check against the count stated in the result email (44 of the 45 past results that state a binding count
+  match). Built in the pipeline into `kb/index/votes.jsonl` on every index rebuild.
+- `kb review-queue`, `kb release`, `kb board-report`, `kb decisions`, `kb loose-ends`; `references/maintainers.md`.
+- GitHub collector records author association, requested reviewers and the last commit time, and re-reads open pull requests
+  once to fill them in. ASF roster records names for committers too.
+- `people` validator: a name listed under two logins, or a roster member whose ASF name is missing from the name map, fails CI.
+
+### Fixed
+- A wrong name in the name map (`Ted Gooch` under `kevinjqliu`). Names whose accented letters were damaged in transit now resolve.
+
 ### Changed
 - Repository laid out as an Agent Skill and Claude Code plugin: `skills/`, `agents/`, `.claude-plugin/`; knowledge-base content
   grouped under `kb/`. The `kb` script downloads the knowledge base when the skill is installed on its own, and gains `kb update`.

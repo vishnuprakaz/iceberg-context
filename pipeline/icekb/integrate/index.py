@@ -1,4 +1,4 @@
-"""Build index/nodes.jsonl and index/edges.jsonl from page frontmatter.
+"""Build kb/index/: nodes.jsonl and edges.jsonl from page frontmatter, votes.jsonl from the dev-list votes.
 
 The `kb` script in the skill reads these files, so it needs no YAML parser.
 """
@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from icekb import frontmatter
+from icekb.integrate import votes
 from icekb.paths import KB, page_files
 
 
@@ -36,7 +37,7 @@ def write(root: Path, check_only: bool = False) -> bool:
     """Write the index. With check_only, return False if the files on disk are stale."""
     nodes, edges = build(root)
     out = root / KB / "index"
-    wanted = {"nodes.jsonl": _render(nodes), "edges.jsonl": _render(edges)}
+    wanted = {"nodes.jsonl": _render(nodes), "edges.jsonl": _render(edges), "votes.jsonl": votes.render(votes.build(root))}
     fresh = all((out / n).exists() and (out / n).read_text(encoding="utf-8") == t for n, t in wanted.items())
     if check_only or fresh:
         return fresh

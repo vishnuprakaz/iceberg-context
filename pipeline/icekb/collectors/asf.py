@@ -16,6 +16,8 @@ def collect(root: Path, **_ignored) -> dict:
     project = cfg["project"]
     committee = json.loads(http_get(cfg["committee_info"]))["committees"][project]
     ldap = json.loads(http_get(cfg["ldap_projects"]))["projects"][project]
+    names = {k: v.get("name") for k, v in json.loads(http_get(cfg["ldap_people"]))["people"].items()} if cfg.get(
+        "ldap_people") else {}
     identity = Identity(root)
     chair = next(iter((committee.get("chair") or {}).keys()), None)
     pmc = committee.get("roster") or {}
@@ -23,6 +25,7 @@ def collect(root: Path, **_ignored) -> dict:
     rows = []
     for asf_id in sorted(members):
         info = pmc.get(asf_id) or {}
+        name = info.get("name") or names.get(asf_id)
         role = "pmc" if asf_id in pmc else "committer"
         rows.append({
             "id": f"asf:{project}:{asf_id}",
@@ -31,9 +34,9 @@ def collect(root: Path, **_ignored) -> dict:
             "date": f"{info.get('date') or '1970-01-01'}T00:00:00Z",
             "url": f"https://projects.apache.org/committee.html?{project}",
             "people": [identity.by_asf.get(asf_id.lower()) or f"asf:{asf_id}"],
-            "title": f"{info.get('name') or asf_id}: {'PMC chair' if asf_id == chair else role.upper() if role == 'pmc' else role}",
-            "hash": sha(f"{asf_id}{role}{info.get('date')}{asf_id == chair}"),
-            "meta": {"asf_id": asf_id, "role": role, "chair": asf_id == chair, "name": info.get("name"),
+            "title": f"{name or asf_id}: {'PMC chair' if asf_id == chair else role.upper() if role == 'pmc' else role}",
+            "hash": sha(f"{asf_id}{role}{info.get('date')}{asf_id == chair}{name}"),
+            "meta": {"asf_id": asf_id, "role": role, "chair": asf_id == chair, "name": name,
                      "pmc_since": info.get("date")},
         })
     write_jsonl(root / "data" / "raw" / "asf" / "roster.jsonl", rows)

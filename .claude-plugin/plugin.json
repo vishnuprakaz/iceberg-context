@@ -1,7 +1,7 @@
 {
   "name": "iceberg-context",
   "version": "0.1.0",
-  "description": "Agent Skill that gives coding agents the full context of the Apache Iceberg project: why the code is the way it is, what the community is deciding, who reviews what and where to contribute, with a source for every answer. Unofficial; not affiliated with the ASF.",
+  "description": "Agent Skill that gives coding agents the full context of the Apache Iceberg project: why the code is the way it is, what the community is deciding, who reviews what and where to contribute, plus vote tallies, the review queue, release status and a board-report draft for maintainers, with a source for every answer. Unofficial; not affiliated with the ASF.",
   "author": {
     "name": "vishnuprakaz"
   },
@@ -17,6 +17,7 @@
     "pyiceberg",
     "open-source-contribution",
     "knowledge-base",
-    "code-history"
+    "code-history",
+    "asf"
   ]
 }

@@ -30,11 +30,18 @@ AI summaries cover meetings and mailing-list threads from May 2026 on. Older mat
 - **Thread splitting.** A few long mailing-list threads are stored as two parts when a mail client cut the reply chain.
 - **Names.** People are matched to GitHub logins through `data/aliases.yaml`, which is partly unverified. Unmatched names appear
   as plain names.
+- **Votes.** Binding status comes from the ASF roster, which records when each person joined the PMC but not when anyone left.
+  Senders whose names are not mapped show as unverified. 44 of the 45 past result emails that state a binding count match the
+  tally; in the other, the email states 7 binding +1 and eight PMC members voted +1.
+- **Review queue.** Counts formal reviews only; comment replies are not collected for every pull request. Commit times and
+  author association fill in after the GitHub collector re-reads open pull requests once.
 - **Scope.** Java and PyIceberg in depth; Rust, Go and C++ through the mailing list and meeting notes only. Slack is not collected.
 
 ## Roadmap
 
 - [x] Collectors, generated pages, AI summaries of six months, initiative pages, overview, opportunities, weekly briefing
+- [x] Maintainer and PMC commands: votes, review queue, release, board report, decisions, loose ends
+- [ ] A committer or PMC member tries the maintainer commands for a week
 - [ ] Weekly sync running unattended for two consecutive weeks
 - [ ] Transcripts for all recordings
 - [ ] Website with a graph view

@@ -660,6 +660,469 @@ def cmd_opportunities(root: Path, args) -> int:
     return 0
 
 
+# ---------------------------------------------------------------- maintainer and PMC commands
+
+BINDING_NOTE = ("Binding = PMC member on the vote date, per the ASF roster. 'unverified' = the sender's name is not mapped to "
+                "a GitHub login yet, so only their own declaration is known. The dev@ thread is the authority.")
+
+
+def ts(value: str) -> dt.datetime:
+    return dt.datetime.strptime(value[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=dt.timezone.utc)
+
+
+def days_since(value: str | None) -> int | None:
+    return (dt.datetime.now(dt.timezone.utc) - ts(value)).days if value else None
+
+
+def until(value: str) -> str:
+    hours = (ts(value) - dt.datetime.now(dt.timezone.utc)).total_seconds() / 3600
+    if hours >= 0:
+        return f"closes in {hours:.0f}h" if hours < 48 else f"closes in {hours / 24:.0f}d"
+    return f"closed {-hours:.0f}h ago" if hours > -48 else f"closed {-hours / 24:.0f}d ago"
+
+
+def load_votes(root: Path) -> list[dict]:
+    return list(read_jsonl(root / KB / "index" / "votes.jsonl"))
+
+
+def tally_line(t: dict) -> str:
+    def part(label, d):
+        return f"{label} +1 {d['+1']}, 0 {d['0']}, -1 {d['-1']}"
+    text = part("binding", t["binding"]) + "  |  " + part("non-binding", t["non-binding"])
+    if any(t["unverified"].values()):
+        text += "  |  " + part("unverified", t["unverified"])
+    return text
+
+
+def print_vote(v: dict, verbose: bool) -> None:
+    print(f"{v['subject']}  [{v['id']}]")
+    print(f"  opened {v['opened'][:10]} by {who(v['opener'])}; {v['messages']} messages; {v['url']}")
+    res = v.get("result")
+    if res:
+        print(f"  result: {res['status']} on {res['date'][:10]} by {who(res['by'])}  [{res['source']}]")
+    elif v.get("superseded_by"):
+        print(f"  no result posted; superseded by a later release candidate [{v['superseded_by']}]")
+    else:
+        print(f"  no result posted; deadline {v['deadline'][:16].replace('T', ' ')} UTC ({until(v['deadline'])})")
+        if v["kind"] == "release-vote":
+            b = v["tally"]["binding"]
+            print(f"  release votes need at least 3 binding +1 and more +1 than -1: has {b['+1']} binding +1, {b['-1']} binding -1")
+    print(f"  {tally_line(v['tally'])}")
+    if v.get("check"):
+        print(f"  check against the result email: {v['check']}")
+    for value in ("-1", "0"):
+        against = [x for x in v["votes"] if x["value"] == value]
+        if against:
+            print(f"  {value} votes: " + ", ".join(f"{who(x['who'])} ({x['status']}) [{x['source']}]" for x in against))
+    unverified = [x for x in v["votes"] if x["status"] == "unverified"]
+    if unverified:
+        print("  unverified voters: " + ", ".join(f"{who(x['who'])} ({x['value']}, declared {x['declared'] or 'nothing'})"
+                                                  for x in unverified))
+    if verbose:
+        for x in v["votes"]:
+            note = f", declared {x['declared']}" if x["declared"] and x["declared"] != x["status"] else ""
+            print(f"    {x['date'][:10]}  {x['value']:>2}  {who(x['who'])}  {x['status']}{note}  [{x['source']}]")
+    print()
+
+
+def cmd_votes(root: Path, args) -> int:
+    rows = load_votes(root)
+    if not rows:
+        print("kb: no vote index yet (kb/index/votes.jsonl is built by the sync)")
+        return 1
+    since = since_date(args.since, 30)
+    shown = [v for v in rows if v["opened"][:10] >= since]
+    if args.open:
+        shown = [v for v in shown if not v.get("result")]
+    if args.match:
+        words = [w.lower() for w in args.match]
+        shown = [v for v in rows if all(w in v["subject"].lower() for w in words)] if not args.since else [
+            v for v in shown if all(w in v["subject"].lower() for w in words)]
+    if args.kind:
+        shown = [v for v in shown if v["kind"] == ("release-vote" if args.kind == "release" else "vote")]
+    shown = shown[: args.limit]
+    if not shown:
+        print(f"no votes match (opened since {since}); try --since 6m or kb votes --match WORDS")
+        return 0
+    print(f"{len(shown)} vote(s)" + (" without a result" if args.open else "") + "\n")
+    for v in shown:
+        print_vote(v, args.verbose or len(shown) == 1)
+    print(BINDING_NOTE)
+    return 0
+
+
+def open_prs(con, repo: str | None, path: str | None) -> list[dict]:
+    sql = "select * from raw where type = 'pr' and json_extract(meta, '$.state') = 'open'"
+    params: list = []
+    if repo:
+        sql += " and json_extract(meta, '$.repo') like ?"
+        params.append(f"%{repo}")
+    if path:
+        cond, p = match_paths(con, path)
+        sql += f" and id in (select id from files where {cond})"
+        params += p
+    out = []
+    for r in con.execute(sql, params).fetchall():
+        meta = json.loads(r["meta"])
+        author = (json.loads(r["people"] or "[]") or [""])[0]
+        out.append({"id": r["id"], "title": r["title"], "url": r["url"], "created": r["date"], "author": author, **meta})
+    return out
+
+
+def committers(con) -> set[str]:
+    return {p for r in con.execute("select people from raw where type = 'roster'") for p in json.loads(r[0] or "[]")}
+
+
+def pr_state(pr: dict, team: set[str] = frozenset()) -> str:
+    """Whose turn it is on an open pull request, from reviews and the time of the last commit."""
+    reviews = [x for x in pr.get("reviews") or [] if x.get("by") != pr["author"]]
+    if not reviews:
+        return "no review yet"
+    last_review = max(x["at"] for x in reviews)
+    pushed = pr.get("last_commit")
+    latest = {}
+    for x in sorted(reviews, key=lambda x: x["at"]):
+        if x["state"] in ("APPROVED", "CHANGES_REQUESTED"):
+            latest[x["by"]] = x["state"]
+    if "APPROVED" in latest.values() and "CHANGES_REQUESTED" not in latest.values():
+        if any(state == "APPROVED" and by in team for by, state in latest.items()):
+            return "approved by a committer, not merged"
+        return "approved by others, needs a committer" if team else "approved, not merged"
+    if pushed and pushed > last_review:
+        return "updated since the last review"
+    return "waiting on the author" if pushed else "reviewed (push time not collected yet)"
+
+
+def median(values: list[float]) -> float | None:
+    values = sorted(values)
+    if not values:
+        return None
+    mid = len(values) // 2
+    return values[mid] if len(values) % 2 else (values[mid - 1] + values[mid]) / 2
+
+
+def cmd_review_queue(root: Path, args) -> int:
+    con = open_db(root)
+    prs = [p for p in open_prs(con, args.repo, args.path) if args.drafts or not p.get("draft")]
+    if not prs:
+        print("no open pull requests match")
+        return 0
+    team = committers(con)
+    for p in prs:
+        p["queue"] = pr_state(p, team)
+        anchor = p.get("last_commit") or p["created"]
+        if p["queue"] != "no review yet" and p["queue"] != "updated since the last review":
+            anchor = max(x["at"] for x in p.get("reviews") or [{"at": anchor}])
+        p["waiting"] = days_since(max(anchor, p["created"])) or 0
+    scope = " ".join(x for x in (args.repo, args.path) if x) or "all collected repositories"
+    print(f"Open pull requests in {scope}: {len(prs)}" + ("" if args.drafts else " (drafts left out; --drafts to include)"))
+    if not any("association" in p for p in prs):
+        print("note: author association, requested reviewers and commit times are not collected yet for these pull requests")
+    print()
+    first_time = [p for p in prs if p.get("association") in ("FIRST_TIME_CONTRIBUTOR", "FIRST_TIMER") and p["queue"] == "no review yet"]
+    groups = [("First-time contributors with no review", first_time)]
+    for name in ("no review yet", "updated since the last review", "approved by a committer, not merged",
+                 "approved by others, needs a committer", "waiting on the author", "reviewed (push time not collected yet)"):
+        groups.append((name[0].upper() + name[1:], [p for p in prs if p["queue"] == name and p not in first_time]))
+    for title, items in groups:
+        if not items:
+            continue
+        stale = [p for p in items if p["waiting"] >= args.stale]
+        print(f"{title}: {len(items)} ({len(stale)} waiting {args.stale}+ days)")
+        for p in sorted(stale, key=lambda p: -p["waiting"])[: args.limit]:
+            extra = []
+            if p.get("requested"):
+                extra.append("review requested from " + ", ".join(who(x) for x in p["requested"]))
+            if p.get("comments"):
+                extra.append(f"{p['comments']} comments")
+            if p.get("labels"):
+                extra.append(", ".join(p["labels"][:3]))
+            print(f"  {p['waiting']:>4}d  #{p['number']} {p['title'][:80]}  by {who(p['author'])}"
+                  + (f"  ({'; '.join(extra)})" if extra else ""))
+            print(f"         {p['url']}")
+        print()
+    # Aggregate health: time to first review for pull requests opened in the last 90 days.
+    start = since_date("90d", 90)
+    sql = "select * from raw where type = 'pr' and date >= ?"
+    params = [start]
+    if args.repo:
+        sql += " and json_extract(meta, '$.repo') like ?"
+        params.append(f"%{args.repo}")
+    waits, by_area, unreviewed = [], {}, 0
+    for r in con.execute(sql, params).fetchall():
+        meta = json.loads(r["meta"])
+        author = (json.loads(r["people"] or "[]") or [""])[0]
+        if meta.get("draft"):
+            continue
+        firsts = [x["at"] for x in meta.get("reviews") or [] if x.get("by") != author]
+        area = (meta.get("files") or ["?"])[0].split("/")[0]
+        if args.path and not any(f.startswith(args.path.strip("/")) for f in meta.get("files") or []):
+            continue
+        if not firsts:
+            unreviewed += 1
+            continue
+        d = (ts(min(firsts)) - ts(r["date"])).total_seconds() / 86400
+        waits.append(d)
+        by_area.setdefault(area, []).append(d)
+    if waits:
+        print(f"Time to first review, pull requests opened since {start} (aggregate):")
+        print(f"  median {median(waits):.1f} days; {sum(w <= 7 for w in waits) * 100 // len(waits)}% within 7 days; "
+              f"{unreviewed} not reviewed yet")
+        areas = sorted(by_area.items(), key=lambda kv: -len(kv[1]))[:8]
+        print("  by top-level directory: " + ", ".join(f"{a} {median(v):.1f}d (n={len(v)})" for a, v in areas))
+        print("  (counts formal reviews only; replies in comments are not counted)")
+    return 0
+
+
+def version_re(version: str) -> re.Pattern:
+    return re.compile(r"(?<![\d.])v?" + re.escape(version.lstrip("v")) + r"(?![\d])", re.I)
+
+
+def cmd_release(root: Path, args) -> int:
+    con = open_db(root)
+    pat = version_re(args.version)
+    repo = (args.repo or "").lower()
+    found = False
+    for n in con.execute("select * from nodes where type = 'release' order by id").fetchall():
+        meta = json.loads(n["meta"])
+        if str(meta.get("version")) == args.version.lstrip("v") and repo in n["id"].lower():
+            found = True
+            show_node(root, con, n, 2500)
+            print()
+    votes = [v for v in load_votes(root) if v["kind"] == "release-vote" and pat.search(v["subject"])
+             and repo in v["subject"].lower().replace(" ", "-")]
+    if votes:
+        found = True
+        print("Release votes (newest first):\n")
+        for v in votes:
+            print_vote(v, False)
+    managers = sorted({v["opener"] for v in votes if v["opener"]})
+    if managers:
+        print("Release manager (opened the vote): " + ", ".join(who(m) for m in managers) + "\n")
+    team = committers(con)
+    rows = con.execute("select * from raw where type = 'pr' and json_extract(meta, '$.milestone') like ?",
+                       (f"%{args.version.lstrip('v')}%",)).fetchall()
+    rows = [r for r in rows if pat.search(json.loads(r["meta"]).get("milestone") or "")]
+    if rows:
+        found = True
+        open_ = [r for r in rows if json.loads(r["meta"])["state"] == "open"]
+        milestones = sorted({json.loads(r["meta"])["milestone"] for r in rows})
+        print(f"Milestone {', '.join(milestones)}: {len(rows)} pull requests, {len(open_)} open")
+        for r in sorted(open_, key=lambda r: r["date"])[: args.limit]:
+            print(f"  open  {r['url']}  {r['title'][:80]}  ({pr_state({**json.loads(r['meta']), 'author': (json.loads(r['people'] or '[]') or [''])[0], 'created': r['date']}, team)})")
+        print()
+    planning = con.execute("select * from raw where type = 'email' and json_extract(meta, '$.kind') in ('release-planning', 'discuss') "
+                           "and json_extract(meta, '$.reply') = 0 order by date desc").fetchall()
+    near = re.compile(r"(iceberg|release|rust|go|cpp|c\+\+)\W[^\n]{0,30}?" + pat.pattern, re.I)
+    planning = [r for r in planning if near.search(r["title"])][:10]
+    if planning:
+        found = True
+        print("Release discussions on dev@:")
+        for r in planning:
+            n = con.execute("select count(*) from raw where type = 'email' and json_extract(meta, '$.thread') = ?",
+                            (json.loads(r["meta"])["thread"],)).fetchone()[0]
+            print(f"  {r['date'][:10]}  {r['title'][:90]}  ({n} messages)  [{r['id']}]")
+    if not found:
+        print(f"nothing found for {args.version}; release pages: kb search --type release {args.version}")
+        return 1
+    return 0
+
+
+def quarter_bounds(text: str | None) -> tuple[str, str, str]:
+    if text:
+        m = re.fullmatch(r"(\d{4})\s*-?\s*Q([1-4])", text.strip(), re.I)
+        if not m:
+            raise SystemExit("kb: --quarter takes a value such as 2026Q4")
+        y, q = int(m.group(1)), int(m.group(2))
+        start = dt.date(y, 3 * q - 2, 1)
+        end = dt.date(y + (q == 4), 1 if q == 4 else 3 * q + 1, 1)
+        return start.isoformat(), end.isoformat(), f"{y} Q{q}"
+    end = today() + dt.timedelta(days=1)
+    start = end - dt.timedelta(days=91)
+    return start.isoformat(), end.isoformat(), f"the last three months ({start} to {today()})"
+
+
+def cmd_board_report(root: Path, args) -> int:
+    con = open_db(root)
+    start, end, label = quarter_bounds(args.quarter)
+    span = (dt.date.fromisoformat(end) - dt.date.fromisoformat(start)).days
+    pstart = (dt.date.fromisoformat(start) - dt.timedelta(days=span)).isoformat()
+
+    def count(sql, params):
+        return con.execute(sql, params).fetchone()[0]
+
+    def both(sql, extra=()):
+        return count(sql, (start, end, *extra)), count(sql, (pstart, start, *extra))
+
+    def change(now, before):
+        return f"{now} (previous period {before}" + (f", {(now - before) * 100 // before:+d}%)" if before else ")")
+
+    print(f"# Apache Iceberg board report draft: {label}\n")
+    print("Draft generated from public sources by the Iceberg Context skill. Every number is computed from the archives named "
+          "next to it; the PMC reviews, corrects and completes this before submitting it.\n")
+    print("## Description\n")
+    print("Apache Iceberg is a high-performance format for huge analytic tables.\n")
+    print("## Project Status\n")
+    print("- Current project status: to be written by the PMC.")
+    print("- Issues for the board: to be written by the PMC (none known from public sources).\n")
+    print("## Membership Data\n")
+    roster = con.execute("select * from raw where type = 'roster'").fetchall()
+    pmc = [r for r in roster if json.loads(r["meta"]).get("role") == "pmc"]
+    print(f"- {len(roster)} committers, {len(pmc)} of them on the PMC (ASF roster as last synced; source: whimsy committee-info)")
+    joined = sorted((json.loads(r["meta"]).get("pmc_since") or "", r["title"].split(":")[0]) for r in pmc)
+    new = [j for j in joined if start <= j[0] < end]
+    print("- New PMC members in the period: " + (", ".join(f"{n} ({d})" for d, n in new) or "none"))
+    if joined:
+        print(f"- Last PMC addition: {joined[-1][1]} on {joined[-1][0]}")
+    ann = con.execute("select * from raw where type = 'email' and json_extract(meta, '$.kind') = 'roster' "
+                      "and json_extract(meta, '$.reply') = 0 and date >= ? and date < ? order by date", (start, end)).fetchall()
+    print("- Committer and PMC announcements on dev@ in the period: " + (
+        "; ".join(f"{r['date'][:10]} {r['title'][:80]} [{r['id']}]" for r in ann) or "none"))
+    print("\n## Project Activity\n")
+    rel = con.execute("select * from nodes where type = 'release' order by id").fetchall()
+    rel = sorted((json.loads(n["meta"]).get("date") or "", n["title"], n["id"]) for n in rel)
+    rel = [x for x in rel if start <= str(x[0]) < end]
+    print(f"Releases ({len(rel)}, from [ANNOUNCE] emails):")
+    for d, title, nid in rel:
+        print(f"- {d}  {title}  [{nid}]")
+    passed = [v for v in load_votes(root) if v["kind"] == "vote" and v.get("result") and start <= v["result"]["date"][:10] < end]
+    print(f"\nNon-release votes concluded ({len(passed)}):")
+    for v in sorted(passed, key=lambda v: v["result"]["date"]):
+        print(f"- {v['result']['date'][:10]}  {v['subject'][:90]}: {v['result']['status']}  [{v['result']['source']}]")
+    meets = con.execute("select json_extract(meta, '$.group') g, count(*) n from raw where type = 'meeting-notes' and date >= ? "
+                        "and date < ? group by g order by n desc", (start, end)).fetchall()
+    print(f"\nCommunity syncs with published notes: {sum(m['n'] for m in meets)} "
+          f"({', '.join(f'{m[0]} {m[1]}' for m in meets) or 'none synced'})")
+    print("\n## Community Health\n")
+    mails = both("select count(*) from raw where type = 'email' and date >= ? and date < ?")
+    threads = both("select count(*) from raw where type = 'email' and json_extract(meta, '$.reply') = 0 and date >= ? and date < ?")
+    senders = both("select count(distinct p.person) from people p join raw r on r.id = p.id where r.type = 'email' "
+                   "and r.date >= ? and r.date < ?")
+    print(f"- dev@ messages: {change(*mails)}; threads started: {change(*threads)}; distinct senders: {change(*senders)} "
+          "(source: lists.apache.org)")
+    opened = both("select count(*) from raw where type = 'pr' and date >= ? and date < ?")
+    merged = both("select count(*) from raw where type = 'pr' and json_extract(meta, '$.merged_at') >= ? "
+                  "and json_extract(meta, '$.merged_at') < ?")
+    authors = both("select count(distinct p.person) from people p join raw r on r.id = p.id where r.type = 'pr' "
+                   "and r.date >= ? and r.date < ?")
+    issues = both("select count(*) from raw where type = 'issue' and date >= ? and date < ?")
+    newest_issue = con.execute("select max(json_extract(meta, '$.updated_at')) from raw where type = 'issue'").fetchone()[0] or ""
+    issue_text = change(*issues) if newest_issue >= end else f"not fully collected yet (issues synced up to {newest_issue[:10] or 'none'})"
+    print(f"- Pull requests opened: {change(*opened)}; merged: {change(*merged)}; distinct authors: {change(*authors)}; "
+          f"issues opened: {issue_text} (source: GitHub, repositories collected in full: "
+          + ", ".join(sorted({json.loads(r['meta']).get('repo', '') for r in con.execute(
+              "select meta from raw where type = 'pr' limit 2000").fetchall()} - {''})) + ")")
+    for repo in sorted({r[0] for r in con.execute("select distinct json_extract(meta, '$.repo') from raw where type = 'commit'")
+                        if r[0]}):
+        c = both("select count(*) from raw where type = 'commit' and date >= ? and date < ? and json_extract(meta, '$.repo') = ?",
+                 (repo,))
+        a = both("select count(distinct p.person) from people p join raw r on r.id = p.id where r.type = 'commit' "
+                 "and r.date >= ? and r.date < ? and json_extract(r.meta, '$.repo') = ?", (repo,))
+        print(f"- {repo}: commits {change(*c)}; distinct commit authors {change(*a)} (source: git history)")
+    print("\nNumbers are counted from the collected archives; check `kb status` for how complete each source is.")
+    return 0
+
+
+def extractions(root: Path, kind: str):
+    base = root / "data" / "extract" / kind
+    if base.is_dir():
+        for path in sorted(base.rglob("*.json")):
+            try:
+                yield json.loads(path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                continue
+
+
+def matches(text: str, words: list[str]) -> bool:
+    low = text.lower()
+    return all(w in low for w in words)
+
+
+def thread_dates(con) -> dict[str, str]:
+    return {r[0]: r[1] for r in con.execute("select json_extract(meta, '$.thread'), max(date) from raw where type = 'email' "
+                                            "group by json_extract(meta, '$.thread')")}
+
+
+def cmd_decisions(root: Path, args) -> int:
+    con = open_db(root)
+    words = [w.lower() for w in args.topic]
+    items = []
+    for v in load_votes(root):
+        res = v.get("result")
+        if res and res["status"] in ("passed", "failed") and matches(v["subject"], words):
+            items.append((res["date"][:10], "vote", f"{v['subject']}: {res['status']} ({tally_line(v['tally'])})", res["source"]))
+    for ex in extractions(root, "meetings"):
+        date = ex["id"].rsplit("/", 1)[-1]
+        for t in ex.get("topics") or []:
+            context = " ".join([t.get("title", ""), " ".join(t.get("initiatives") or [])])
+            for d in t.get("decisions") or []:
+                if matches(d + " " + context, words):
+                    items.append((date, "meeting", f"{t.get('title', '')}: {d}", ex["sources"][0]))
+    dates = thread_dates(con)
+    for ex in extractions(root, "threads"):
+        out = ex.get("outcome") or {}
+        if out.get("status") in ("passed", "failed", "consensus") and matches(
+                " ".join([ex.get("title", ""), ex.get("summary", ""), " ".join(ex.get("initiatives") or [])]), words):
+            items.append((dates.get(ex["id"].split("/")[1], "")[:10], "thread",
+                          f"{ex.get('title', '')}: {out['status']}" + (f". {out['note']}" if out.get("note") else ""),
+                          out.get("source") or ex["sources"][0]))
+    if not items:
+        print(f"no recorded decisions match {' '.join(args.topic)!r}; try fewer words, or kb search")
+        return 1
+    seen, rows = set(), []
+    for item in sorted(items, reverse=True):
+        if (item[1], item[2]) not in seen:
+            seen.add((item[1], item[2]))
+            rows.append(item)
+    print(f"Decisions matching {' '.join(args.topic)!r}, newest first:\n")
+    for date, kind, text, src in rows[: args.limit]:
+        basis = {"vote": "counted from the vote thread", "meeting": "from meeting notes, AI-extracted",
+                 "thread": "from the dev@ thread, AI-summarized"}[kind]
+        print(f"{date}  [{kind}] {text[:300]}")
+        print(f"            {basis}  [{src}]")
+    print("\nMeeting decisions are proposals until confirmed on dev@; check the source before relying on one.")
+    return 0
+
+
+def cmd_loose_ends(root: Path, args) -> int:
+    con = open_db(root)
+    since = since_date(args.since, 60)
+    print(f"Loose ends since {since}\n")
+    unowned = []
+    for ex in extractions(root, "meetings"):
+        date = ex["id"].rsplit("/", 1)[-1]
+        if date < since:
+            continue
+        for a in ex.get("action_items") or []:
+            if not (a.get("who") or "").strip() or (a.get("who") or "").strip().lower() in ("unassigned", "tbd", "?", "none"):
+                unowned.append((date, ex["id"], a["what"]))
+    print(f"Action items from meetings with no owner ({len(unowned)}):")
+    for date, mid, what in sorted(unowned, reverse=True)[: args.limit]:
+        print(f"  {date}  {what[:160]}  [{mid}]")
+    dates = thread_dates(con)
+    decided = {v["id"].split(":", 1)[1] for v in load_votes(root) if v.get("result")}
+    stalled = []
+    for ex in extractions(root, "threads"):
+        tid = ex["id"].split("/")[1]
+        last = dates.get(tid, "")
+        if (ex.get("outcome") or {}).get("status") in ("open", "no-conclusion") and last[:10] >= since and tid not in decided:
+            stalled.append((last[:10], ex.get("title", ""), ex["id"]))
+    print(f"\nDiscussions with no conclusion ({len(stalled)}, last message date shown):")
+    for last, title, tid in sorted(stalled, reverse=True)[: args.limit]:
+        print(f"  {last}  {title[:110]}  [{tid}]")
+    rows = con.execute(
+        "select r.*, count(*) over (partition by json_extract(r.meta, '$.thread')) n from raw r where r.type = 'email' "
+        "and json_extract(r.meta, '$.thread') in (select json_extract(meta, '$.thread') from raw where type = 'email' "
+        "and json_extract(meta, '$.reply') = 0 and date >= ? and json_extract(meta, '$.kind') in ('discuss', 'other'))",
+        (since,)).fetchall()
+    lonely = [r for r in rows if r["n"] == 1 and not re.match(r"\s*(\[(announce|result|fyi)|(re|fwd?|aw)\s*:)", r["title"], re.I)]
+    print(f"\ndev@ threads with no reply ({len(lonely)}):")
+    for r in sorted(lonely, key=lambda r: r["date"], reverse=True)[: args.limit]:
+        print(f"  {r['date'][:10]}  {r['title'][:100]}  by {people_of(r)}  [{r['id']}]")
+    print("\nThreads are matched by their reply headers, so a reply posted as a new thread can make one look unanswered.")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="kb", description="Query the Iceberg Context knowledge base.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -719,6 +1182,43 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--area", help="filter by text, e.g. python, spark, rest")
     p.add_argument("--level", help="filter by level: starter, intermediate, advanced")
     p.set_defaults(fn=cmd_opportunities)
+
+    p = sub.add_parser("votes", help="dev@ votes with binding and non-binding tallies (maintainers and PMC)")
+    p.add_argument("--open", action="store_true", help="only votes with no result posted")
+    p.add_argument("--since", help="opened after: YYYY-MM-DD or a span such as 30d, 6m (default 30d)")
+    p.add_argument("--match", nargs="+", help="words that must appear in the subject (searches all years unless --since)")
+    p.add_argument("--kind", choices=("release", "other"), help="release votes or other votes")
+    p.add_argument("--verbose", action="store_true", help="list every voter")
+    p.add_argument("--limit", type=int, default=15)
+    p.set_defaults(fn=cmd_votes)
+
+    p = sub.add_parser("review-queue", help="open pull requests by whose turn it is, and time to first review")
+    p.add_argument("--path", help="only pull requests touching this path, e.g. flink/ or core/src/main")
+    p.add_argument("--repo", help="iceberg or iceberg-python (default: all collected)")
+    p.add_argument("--stale", type=int, default=14, help="list items waiting at least this many days (default 14)")
+    p.add_argument("--drafts", action="store_true", help="include draft pull requests")
+    p.add_argument("--limit", type=int, default=10)
+    p.set_defaults(fn=cmd_review_queue)
+
+    p = sub.add_parser("release", help="a release: votes, release manager, milestone pull requests, dev@ discussion")
+    p.add_argument("version", help="e.g. 1.10.0 or 0.10.0")
+    p.add_argument("--repo", help="narrow to a project, e.g. python, rust, go")
+    p.add_argument("--limit", type=int, default=20)
+    p.set_defaults(fn=cmd_release)
+
+    p = sub.add_parser("board-report", help="draft of the quarterly ASF board report, numbers from public sources")
+    p.add_argument("--quarter", help="e.g. 2026Q4 (default: the last three months)")
+    p.set_defaults(fn=cmd_board_report)
+
+    p = sub.add_parser("decisions", help="past decisions and vote results on a topic, with sources")
+    p.add_argument("topic", nargs="+")
+    p.add_argument("--limit", type=int, default=15)
+    p.set_defaults(fn=cmd_decisions)
+
+    p = sub.add_parser("loose-ends", help="unowned action items, discussions with no conclusion, unanswered dev@ threads")
+    p.add_argument("--since", help="YYYY-MM-DD or a span such as 30d (default 60d)")
+    p.add_argument("--limit", type=int, default=12)
+    p.set_defaults(fn=cmd_loose_ends)
 
     args = parser.parse_args(argv)
     try:

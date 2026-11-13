@@ -53,10 +53,20 @@ class Identity:
             clean = clean.split("@")[0]
         if not clean or clean.isdigit():
             return None
-        hit = self.by_login.get(clean.lower()) or self.by_name.get(_key(clean))
+        hit = self.by_login.get(clean.lower()) or self.by_name.get(_key(clean)) or self._garbled(clean)
         if hit is None:
             self.unresolved[clean] = self.unresolved.get(clean, 0) + 1
         return hit
+
+    def _garbled(self, name: str) -> str | None:
+        """A name whose accented letter was lost in transit ('Tudenh\ufffd\ufffdfner'): match it only when exactly one
+        known name fits with one or two letters in each damaged spot."""
+        if "\ufffd" not in name:
+            return None
+        parts = [_key(p) for p in re.split("\ufffd+", name)]
+        pattern = re.compile(".{1,2}".join(re.escape(p) for p in parts) + "$")
+        hits = {login for k, login in self.by_name.items() if pattern.match(k)}
+        return hits.pop() if len(hits) == 1 else None
 
     def person(self, name: str) -> str:
         """A stable people[] entry: the login when known, otherwise 'name:<Display Name>'."""

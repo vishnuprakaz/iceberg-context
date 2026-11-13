@@ -43,6 +43,8 @@ This skill keeps all of that in one place, in sync with the codebase, and teache
 - **Brief you on the week.** Votes, results, design discussions, releases and upcoming meetings.
 - **Point you to people.** Active authors and reviewers for any path or topic, and the working group that handles it.
 - **Find you work.** A ranked list of places to contribute, with evidence, who to ask and a first step.
+- **Help maintainers and the PMC.** Vote tallies split into binding and non-binding and checked against the result email, the
+  review queue by whose turn it is, release status, a board-report draft, past decisions and loose ends.
 - **Prove it.** Each answer links to a mailing-list message, a pull request, a notes section or a moment in a recording.
 
 ## Installation
@@ -111,6 +113,8 @@ Just ask. The skill loads when a question is about Iceberg's code history, commu
 - "Where are materialized views at, and who should I talk to about helping?"
 - "What happened on the Iceberg dev list this week?"
 - "I know Python. What could I pick up in PyIceberg?"
+- "Which votes are open, and do they have enough binding +1s?" (maintainers)
+- "What has been waiting longest for a committer review in Spark?" (maintainers)
 
 ## Usage examples
 
@@ -144,8 +148,20 @@ $ kb who-to-ask flink/
   reviewers: @pvary (83), @mxm (44), @huaxingao (41), …
 ```
 
+**For maintainers: a vote**
+
+```console
+$ kb votes --match default value expressions
+[VOTE] Default Value Expressions for v4  [vote:t-33958badf295b701]
+  opened 2026-11-02 by @danielcweeks; 20 messages; https://lists.apache.org/thread/th30oq0rcvn5gmn2qdx790k8vf4fz1ob
+  result: passed on 2026-11-06 by @danielcweeks  [devlist:h5jnk7l2op325x545hfnrpbo3qmh2ovo]
+  binding +1 11, 0 0, -1 0  |  non-binding +1 7, 0 0, -1 0  |  unverified +1 1, 0 0, -1 0
+  check against the result email: match
+```
+
 All commands: `status`, `update`, `search`, `source`, `why`, `context`, `initiative`, `group`, `person`, `who-to-ask`,
-`whats-new`, `upcoming`, `opportunities`. See the [command reference](skills/iceberg-context/references/commands.md).
+`whats-new`, `upcoming`, `opportunities`, and for maintainers `votes`, `review-queue`, `release`, `board-report`, `decisions`,
+`loose-ends`. See the [command reference](skills/iceberg-context/references/commands.md).
 
 Prefer reading? Start with the [state of Iceberg](kb/state-of-iceberg.md), the [weekly briefings](kb/briefings/weekly/) and the
 [opportunities list](kb/opportunities.md).

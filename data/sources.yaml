@@ -22,6 +22,7 @@ devlist:
 asf:
   committee_info: https://whimsy.apache.org/public/committee-info.json
   ldap_projects: https://whimsy.apache.org/public/public_ldap_projects.json
+  ldap_people: https://whimsy.apache.org/public/public_ldap_people.json
   project: iceberg
 
 calendar:

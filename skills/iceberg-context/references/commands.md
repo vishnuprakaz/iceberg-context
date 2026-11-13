@@ -70,6 +70,20 @@ kb whats-new --since 14d --area REST
 kb upcoming --days 21
 ```
 
+## Maintainer and PMC commands
+
+```bash
+kb votes --open                       # votes with no result yet, with binding tallies
+kb votes --match row lineage          # one vote, every voter
+kb review-queue --path spark/         # open pull requests by whose turn it is
+kb release 1.12.0                     # candidates, release manager, milestone, discussions
+kb board-report --quarter 2026Q4      # draft of the ASF board report
+kb decisions equality deletes         # past votes and decisions on a topic
+kb loose-ends --since 30d             # unowned action items, stalled and unanswered threads
+```
+
+How binding status is decided, the review-queue groups and the rules for these answers: `maintainers.md`.
+
 ## Opportunities
 
 ```bash

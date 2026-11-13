@@ -51,7 +51,10 @@ Open items, most important first:
 3. GitHub backfill: issues, comments and apache/iceberg-python are still filling in over the next scheduled runs.
 4. Mailing-list threads are keyed by the first Message-ID in `References`, so a few long threads are split in two. Fix by
    resolving threads through hashed parent ids; this changes thread ids, so re-run thread extraction afterwards.
-5. `data/aliases.yaml` is mostly unverified. Review `data/state/unresolved-people.json` and confirm logins.
+5. `data/aliases.yaml` is mostly unverified. Every committer and PMC member is now checked against their ASF roster name (CI
+   fails otherwise). Review `data/state/unresolved-people.json` for the rest.
+5b. Maintainer commands are built (`kb votes`, `review-queue`, `release`, `board-report`, `decisions`, `loose-ends`). Next: have
+   a committer or PMC member try them; confirm the GitHub Action filled in commit times for open pull requests.
 6. Run the `open-source-launch` readiness gate before inviting others, and the trigger tests in `docs/skill-testing.md`.
 7. Then: pick a contribution from `kb/opportunities.md`.
 
@@ -63,6 +66,7 @@ Open items, most important first:
 | 2026-11-13 | — | Build plan approved; Phase 0 foundation built | done |
 | 2026-11-13 | — | Phases 1–5 built: collectors, kb commands, summaries, initiative pages, weekly task | done, see open items |
 | 2026-11-13 | — | Independent verification: 388 claims checked, 16 failed, all 16 fixed; skills aligned with Anthropic's skill guide | done |
+| 2026-11-13 | — | Maintainer and PMC commands added to the one skill (decided: no second skill); vote tallies match 44/45 result emails | done |
 | 2026-11-13 | — | Researched all sources (dev@, sync notes docs + calendar, YouTube, GitHub/git/ASF); wrote KB plan | proposal |
 
 ## Open questions / ideas

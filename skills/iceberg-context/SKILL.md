@@ -1,6 +1,6 @@
 ---
 name: iceberg-context
-description: Answers questions about the Apache Iceberg project and its community from a synced, source-cited knowledge base (dev mailing list, pull requests and reviews, git history, the spec, working-group meeting notes and recordings, calendar, ASF roster). Use before changing code in apache/iceberg or apache/iceberg-python, and when the user asks "why is this code like this", "what is the history of this file", "what did the community decide", "what is the status of" a proposal such as v4, materialized views or variant, "who reviews" or "who owns" an area, "who should I ask", "what happened on the dev list this week", "when is the next sync", or "where can I contribute" or "good first issue". Do not use for general questions on how to use Iceberg as a product (SQL syntax, configuration, tuning); answer those from the Iceberg documentation.
+description: Answers questions about the Apache Iceberg project and community from a synced, source-cited knowledge base (dev mailing list, pull requests and reviews, git history, spec, working-group notes and recordings, calendar, ASF roster), for contributors, committers and PMC members. Use before changing code in apache/iceberg or apache/iceberg-python, and when the user asks "why is this code like this", "what did the community decide", "what is the status of" a proposal such as v4 or materialized views, "who reviews" an area, "what happened on the dev list this week", "where can I contribute", "open votes", "is the vote passing", "binding votes", "review queue", "PRs waiting for review", "release readiness", "board report", "did we already decide" or "unowned action items". Do not use for how to use Iceberg as a product (SQL, configuration, tuning); answer those from the Iceberg documentation.
 license: Apache-2.0
 compatibility: Claude Code or any agent with a shell, Python 3.10+ and git. The knowledge base is data in the skill repository; when the skill is installed without it, the script downloads a copy on first use (about 80 MB, network access to github.com) and refreshes it every 12 hours. No Python packages needed.
 metadata:
@@ -41,7 +41,9 @@ It is unofficial and not affiliated with the Apache Software Foundation.
 5. **Say how you know.** Links are labeled `observed` (straight from data), `extracted` (taken by an AI model from a cited
    source) or `inferred` (an AI judgment, such as who is speaking in a recording). Meeting and thread summaries are AI-written;
    transcripts are machine captions without speaker names. Pass that on when it matters.
-6. **Asked to sync or update the knowledge base:** use the `iceberg-context-sync` skill.
+6. **Maintainer and PMC questions** (votes, review queue, releases, board report, decisions, loose ends): use the commands
+   in the next section and read `references/maintainers.md` first.
+7. **Asked to sync or update the knowledge base:** use the `iceberg-context-sync` skill.
 
 ## Commands
 
@@ -63,6 +65,26 @@ It is unofficial and not affiliated with the Apache Software Foundation.
 | `kb show ID_OR_NAME` | Print any page |
 
 Paths are relative to the upstream repository root (`core/src/main/java/…`, `pyiceberg/table/…`).
+
+## Maintainer and PMC tasks
+
+| Command | Use it for |
+|---|---|
+| `kb votes [--open] [--match WORDS] [--since 30d]` | Votes with binding, non-binding and unverified tallies, deadline, result, and a check against the result email |
+| `kb review-queue [--path DIR] [--stale 14]` | Open pull requests by whose turn it is, first-time contributors with no review, time to first review per area |
+| `kb release VERSION [--repo python]` | Release votes and candidates, release manager, milestone pull requests, release discussions |
+| `kb board-report [--quarter 2026Q4]` | A draft of the quarterly ASF board report with counts from the archives |
+| `kb decisions TOPIC` | Past votes and decisions on a topic, newest first |
+| `kb loose-ends [--since 60d]` | Unowned action items, discussions with no conclusion, dev@ threads with no reply |
+
+Details, how binding is decided and worked examples: `references/maintainers.md`. Rules for these answers:
+
+- Never suggest, rank or compare people as candidates for committer or PMC membership, and never guess what was said on
+  private lists. Those discussions are private by ASF policy.
+- Report health numbers in aggregate (per area or period), never as a list of slow or inactive people.
+- Give counts with their uncertainty, for example "5 binding +1 (1 voter unverified)", and pass on any mismatch with the
+  result email.
+- The dev@ thread is the record. Link to it for every vote, result and decision.
 
 ## Examples
 

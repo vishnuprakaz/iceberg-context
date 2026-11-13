@@ -252,6 +252,7 @@ references/           process.md (how decisions get made), glossary.md, schema.m
 | **3. Connector collectors + AI processing** | syncdocs, designdocs, calendar, youtube collectors; extraction schemas and prompts; agent definitions; the sync skill; run it once by hand for the current week | One full weekly run finishes end to end and passes the verifier |
 | **4. Backfill 6 months** | About 80 meetings and the DISCUSS/VOTE/RESULT threads since May 2026, in batches | Each initiative page has a timeline from discussion to vote to PRs |
 | **5. Automate + polish** | Create the weekly scheduled task; full `kb` command set; SKILL.md polish; README quick start; onboarding path for newcomers; add friends | Two consecutive unattended weekly runs succeed |
+| **5b. Maintainers and PMC** | In the same skill: `kb votes` (binding from the ASF roster on the vote date, checked against result emails), `review-queue`, `release`, `board-report`, `decisions`, `loose-ends`; `references/maintainers.md`; GitHub fields for author association, requested reviewers and last commit; name-map validator | Binding tallies match the result emails that state them; a committer confirms `votes` and `review-queue` are useful |
 | **6. Later** | Website on GitHub Pages (dashboard, graph, timelines); dev@ history back to 2018 summarized on demand; optional MCP wrapper | Not part of this build |
 
 Each phase leaves something usable. Phases 0–2 are the first working session or two.

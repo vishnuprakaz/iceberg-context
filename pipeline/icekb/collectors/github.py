@@ -31,7 +31,12 @@ PR_FIELDS = """
   files(first: 80) { nodes { path } }
   reviews(first: 40) { nodes { author { login } state submittedAt } }
   closingIssuesReferences(first: 5) { nodes { number } }
+  authorAssociation
+  reviewRequests(first: 10) { nodes { requestedReviewer { ... on User { login } ... on Team { name } } } }
+  commits(last: 1) { nodes { commit { committedDate } } }
 """
+# Bump when PR_FIELDS gains a field: the next run re-reads every open pull request once to fill it in.
+PR_FIELDS_VERSION = 2
 ISSUE_FIELDS = """
   number title bodyText state stateReason closedAt createdAt updatedAt url
   author { login } milestone { title }
@@ -113,6 +118,10 @@ def item_record(repo: str, node: dict) -> dict:
             "reviews": [{"by": _login(r["author"]), "state": r["state"], "at": r["submittedAt"]}
                         for r in node["reviews"]["nodes"] if _login(r["author"]) and not BOT.search(_login(r["author"]))],
             "closes": [n["number"] for n in node["closingIssuesReferences"]["nodes"]],
+            "association": node.get("authorAssociation"),
+            "requested": [(r.get("requestedReviewer") or {}).get("login") or (r.get("requestedReviewer") or {}).get("name")
+                          for r in (node.get("reviewRequests") or {}).get("nodes") or [] if r.get("requestedReviewer")],
+            "last_commit": next((c["commit"]["committedDate"] for c in (node.get("commits") or {}).get("nodes") or []), None),
         })
     else:
         meta["state_reason"] = node.get("stateReason")
@@ -205,6 +214,24 @@ def collect_comments(client: Client, root: Path, repo: str, kind: str, cursor: d
             return total
 
 
+def refresh_open(client: Client, root: Path, repo: str, cursor: dict, page_size: int) -> int:
+    """Re-read all open pull requests once after PR_FIELDS changes, so that fields new to the query are filled in
+    for pull requests that have not been updated since."""
+    if cursor.get("open_fields_version") == PR_FIELDS_VERSION:
+        return 0
+    short, total, after = repo.split("/")[1], 0, None
+    while True:
+        data = client.graphql(QUERY, {"q": f"repo:{repo} is:pr is:open sort:updated-desc", "n": page_size, "after": after})
+        nodes = [n for n in data["search"]["nodes"] if n.get("number")]
+        upsert(root, f"github/{short}/prs", [item_record(repo, n) for n in nodes])
+        total += len(nodes)
+        info = data["search"]["pageInfo"]
+        if not info["hasNextPage"]:
+            cursor["open_fields_version"] = PR_FIELDS_VERSION
+            return total
+        after = info["endCursor"]
+
+
 def collect(root: Path, *, max_minutes: str | int = 25, page_size: str | int = 40, **_ignored) -> dict:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if not token:
@@ -220,6 +247,8 @@ def collect(root: Path, *, max_minutes: str | int = 25, page_size: str | int = 4
     try:
         for repo in repos:
             cur = cursor.setdefault(repo, {})
+            if cur.get("prs_caught_up"):
+                counts["prs"] += refresh_open(client, root, repo, cur, int(page_size))
             for kind in ("prs", "issues"):
                 counts[kind] += collect_items(client, root, repo, kind, cur, int(page_size))
         for repo in repos:
