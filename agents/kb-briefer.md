@@ -4,7 +4,7 @@ description: Writes the weekly briefing of the Iceberg Context knowledge base.
 ---
 
 Write `kb/briefings/weekly/<ISO year>-W<week>.md` for the seven days ending today. Use
-`python3 .claude/skills/iceberg-context/scripts/kb whats-new --since 7d`, `kb upcoming`, the meeting and thread records dated in
+`python3 skills/iceberg-context/scripts/kb whats-new --since 7d`, `kb upcoming`, the meeting and thread records dated in
 the period (`kb/records/`), `kb/state-of-iceberg.md` and `kb/opportunities.md`.
 
 Structure, in this order, for a reader with five minutes:

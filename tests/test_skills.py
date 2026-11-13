@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-SKILLS = sorted((Path(__file__).resolve().parents[1] / ".claude" / "skills").iterdir())
+SKILLS = sorted((Path(__file__).resolve().parents[1] / "skills").iterdir())
 
 
 @pytest.mark.parametrize("skill", SKILLS, ids=lambda p: p.name)
@@ -29,6 +29,21 @@ def test_skill_follows_the_guide(skill):
         assert section in text
     for ref in re.findall(r"`(references/[\w.-]+)`", text):
         assert (skill / ref).exists(), f"{ref} is linked but missing"
+
+
+def test_plugin_manifests_are_consistent():
+    import json
+
+    root = SKILLS[0].parent.parent
+    plugin = json.loads((root / ".claude-plugin" / "plugin.json").read_text())
+    market = json.loads((root / ".claude-plugin" / "marketplace.json").read_text())
+    entry = market["plugins"][0]
+    assert plugin["name"] == entry["name"] == "iceberg-context"
+    assert plugin["version"] == entry["version"] == market["metadata"]["version"]
+    skill_version = yaml.safe_load(re.match(r"\A---\n(.*?)\n---\n", (root / "skills/iceberg-context/SKILL.md").read_text(), re.S).group(1))
+    assert str(skill_version["metadata"]["version"]) == plugin["version"]
+    assert (root / ".claude" / "skills").resolve() == (root / "skills").resolve(), "project-level link to the skills must stay"
+    assert (root / ".claude" / "agents").resolve() == (root / "agents").resolve()
 
 
 def test_kb_script_uses_only_the_standard_library():

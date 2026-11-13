@@ -3,7 +3,7 @@
 This repo is the user's persistent (public) context for contributing to Apache Iceberg
 (`vishnuprakaz/iceberg`) and PyIceberg (`vishnuprakaz/iceberg-python`).
 
-- At the start of every session, run `python3 .claude/skills/iceberg-context/scripts/kb status`, then read `context.md`
+- At the start of every session, run `python3 skills/iceberg-context/scripts/kb status`, then read `context.md`
   (our work log) and relevant files in `notes/` before doing other work.
 - Use the `iceberg-context` skill for questions about the Iceberg project, community or code history, and cite sources.
 - Building this repository follows `docs/build-plan.md`. Before committing, run

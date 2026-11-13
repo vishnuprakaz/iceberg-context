@@ -22,7 +22,7 @@ Never mark something as synced when it failed.
 ```bash
 git pull --rebase origin main
 uv sync
-python3 .claude/skills/iceberg-context/scripts/kb status
+python3 skills/iceberg-context/scripts/kb status
 ```
 
 ## 1. Collect (agent: `kb-collector`)

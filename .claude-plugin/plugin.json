@@ -1,0 +1,22 @@
+{
+  "name": "iceberg-context",
+  "version": "0.1.0",
+  "description": "Agent Skill that gives coding agents the full context of the Apache Iceberg project: why the code is the way it is, what the community is deciding, who reviews what and where to contribute, with a source for every answer. Unofficial; not affiliated with the ASF.",
+  "author": {
+    "name": "vishnuprakaz"
+  },
+  "homepage": "https://github.com/vishnuprakaz/iceberg-context",
+  "repository": "https://github.com/vishnuprakaz/iceberg-context",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skill",
+    "claude-skill",
+    "claude-code",
+    "apache-iceberg",
+    "iceberg",
+    "pyiceberg",
+    "open-source-contribution",
+    "knowledge-base",
+    "code-history"
+  ]
+}

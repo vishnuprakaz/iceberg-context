@@ -1,6 +1,6 @@
 # Content licence
 
-Code in this repository (the `pipeline/`, `tests/`, `.claude/skills/*/scripts/` and `.github/` directories) is licensed under the
+Code in this repository (the `pipeline/`, `tests/`, `skills/*/scripts/` and `.github/` directories) is licensed under the
 [Apache License 2.0](LICENSE).
 
 The knowledge-base pages written for this project (summaries, entity pages, briefings, maps, documentation) are licensed under

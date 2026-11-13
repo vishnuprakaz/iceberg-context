@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """kb: query the Iceberg Context knowledge base.
 
-Standard library only. Reads index/*.jsonl, the Markdown pages, data/raw/ and data/state/ from the
-repository, and keeps a search index in a cache directory outside the repository.
+Standard library only. Reads kb/ and data/ from the Iceberg Context repository and keeps a search index in a
+cache directory. When the skill is installed without the repository, it downloads a copy on first use.
 """
 from __future__ import annotations
 
@@ -26,6 +26,59 @@ FRONTMATTER = re.compile(r"\A---\n.*?\n---\n?", re.S)
 SCHEMA_VERSION = "4"
 
 
+REPO_URL = os.environ.get("ICEBERG_CONTEXT_REPO", "https://github.com/vishnuprakaz/iceberg-context")
+REFRESH_HOURS = 12
+
+
+def cache_dir() -> Path:
+    base = os.environ.get("XDG_CACHE_HOME") or str(Path.home() / ".cache")
+    d = Path(base) / "iceberg-context"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def offline() -> bool:
+    return os.environ.get("ICEBERG_CONTEXT_OFFLINE", "") not in ("", "0")
+
+
+def refresh(repo: Path) -> bool:
+    """Bring the downloaded copy of the knowledge base up to date. Returns False if the network or git failed."""
+    try:
+        fetch = subprocess.run(["git", "-C", str(repo), "fetch", "--quiet", "--depth", "1", "origin", "main"],
+                               capture_output=True, text=True, timeout=180)
+        if fetch.returncode != 0:
+            return False
+        subprocess.run(["git", "-C", str(repo), "reset", "--quiet", "--hard", "FETCH_HEAD"], capture_output=True, timeout=120)
+        (repo.parent / "last-refresh").write_text(dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
+        return True
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        return False
+
+
+def downloaded_copy() -> Path:
+    """The knowledge base is data in the skill's repository. When the skill is installed on its own
+    (for example with `npx skills add`), keep a shallow clone in the cache and refresh it now and then."""
+    repo = cache_dir() / "repo"
+    if not (repo / "schema" / "page.json").exists():
+        if offline():
+            sys.exit("kb: no knowledge base found and ICEBERG_CONTEXT_OFFLINE is set. Clone the repository and set ICEBERG_CONTEXT_ROOT.")
+        print(f"kb: downloading the knowledge base from {REPO_URL} (first use only)…", file=sys.stderr)
+        try:
+            res = subprocess.run(["git", "clone", "--quiet", "--depth", "1", REPO_URL, str(repo)], capture_output=True, text=True, timeout=900)
+        except (subprocess.TimeoutExpired, FileNotFoundError) as exc:
+            sys.exit(f"kb: could not download the knowledge base ({exc}). Clone {REPO_URL} yourself and set ICEBERG_CONTEXT_ROOT to it.")
+        if res.returncode != 0:
+            sys.exit(f"kb: could not download the knowledge base: {res.stderr.strip()[-300:]}\n"
+                     f"Clone {REPO_URL} yourself and set ICEBERG_CONTEXT_ROOT to it.")
+        (repo.parent / "last-refresh").write_text(dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
+    elif not offline():
+        stamp = repo.parent / "last-refresh"
+        age_h = (dt.datetime.now().timestamp() - stamp.stat().st_mtime) / 3600 if stamp.exists() else 1e9
+        if age_h > REFRESH_HOURS:
+            refresh(repo)  # best effort: an old copy is still usable
+    return repo
+
+
 def repo_root() -> Path:
     env = os.environ.get("ICEBERG_CONTEXT_ROOT")
     if env:
@@ -34,7 +87,7 @@ def repo_root() -> Path:
     for parent in here.parents:
         if (parent / "schema" / "page.json").exists():
             return parent
-    sys.exit("kb: cannot find the iceberg-context repository (set ICEBERG_CONTEXT_ROOT)")
+    return downloaded_copy()
 
 
 def read_jsonl(path: Path):
@@ -67,13 +120,6 @@ def fingerprint(root: Path, files: list[Path]) -> str:
         st = f.stat()
         h.update(f"{f.relative_to(root)}|{st.st_size}|{st.st_mtime_ns}\n".encode())
     return h.hexdigest()[:16]
-
-
-def cache_dir() -> Path:
-    base = os.environ.get("XDG_CACHE_HOME") or str(Path.home() / ".cache")
-    d = Path(base) / "iceberg-context"
-    d.mkdir(parents=True, exist_ok=True)
-    return d
 
 
 def connect(path: Path) -> sqlite3.Connection:
@@ -241,9 +287,23 @@ def print_mentions(con, target: str, indent: str = "    ", limit: int = 6) -> No
 
 # ---------------------------------------------------------------- commands
 
+def cmd_update(root: Path, args) -> int:
+    if root == cache_dir() / "repo":
+        ok = refresh(root)
+    else:
+        res = subprocess.run(["git", "-C", str(root), "pull", "--ff-only", "--quiet"], capture_output=True, text=True)
+        ok = res.returncode == 0
+        if not ok:
+            print(res.stderr.strip()[-300:], file=sys.stderr)
+    print("knowledge base updated" if ok else "kb: update failed; still using the existing copy")
+    return 0 if ok else 1
+
+
 def cmd_status(root: Path, args) -> int:
     con = open_db(root)
     print("Iceberg Context status\n")
+    where = "downloaded copy, refreshed automatically" if root == cache_dir() / "repo" else "repository checkout; `kb update` or `git pull` to refresh"
+    print(f"knowledge base: {root} ({where})\n")
     print(f"{'source':<10} {'status':<8} {'last success':<13} detail")
     for s in SOURCES:
         p = root / "data" / "state" / f"{s}.json"
@@ -604,6 +664,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="kb", description="Query the Iceberg Context knowledge base.")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("status", help="how fresh each source is and what the knowledge base holds").set_defaults(fn=cmd_status)
+    sub.add_parser("update", help="fetch the latest knowledge base now").set_defaults(fn=cmd_update)
 
     p = sub.add_parser("search", help="full-text search over pages and source records")
     p.add_argument("query", nargs="+")

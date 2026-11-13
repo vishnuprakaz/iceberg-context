@@ -5,6 +5,10 @@ Notable changes to the tooling and structure of this repository. Knowledge-base 
 
 ## Unreleased
 
+### Changed
+- Repository laid out as an Agent Skill and Claude Code plugin: `skills/`, `agents/`, `.claude-plugin/`; knowledge-base content
+  grouped under `kb/`. The `kb` script downloads the knowledge base when the skill is installed on its own, and gains `kb update`.
+
 ### Added
 - Collectors for the dev mailing list, git history and spec, ASF roster, GitHub pull requests/issues/comments, YouTube captions,
   working-group notes documents and the community calendar; a sync workflow that runs them every six hours.

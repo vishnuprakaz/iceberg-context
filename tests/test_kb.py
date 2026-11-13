@@ -5,7 +5,7 @@ from pathlib import Path
 from icekb import state
 from icekb.integrate import index
 
-KB = Path(__file__).resolve().parents[1] / ".claude" / "skills" / "iceberg-context" / "scripts" / "kb"
+KB = Path(__file__).resolve().parents[1] / "skills" / "iceberg-context" / "scripts" / "kb"
 
 
 def kb(*args):

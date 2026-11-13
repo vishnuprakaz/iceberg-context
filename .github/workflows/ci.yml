@@ -24,4 +24,4 @@ jobs:
       - name: Index is up to date
         run: uv run python -m icekb index --check
       - name: Skill script runs without the pipeline installed
-        run: python3 -I .claude/skills/iceberg-context/scripts/kb status
+        run: ICEBERG_CONTEXT_OFFLINE=1 python3 -I skills/iceberg-context/scripts/kb status

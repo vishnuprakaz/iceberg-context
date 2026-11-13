@@ -27,7 +27,7 @@ uv run python -m icekb index
 ```
 
 - Pipeline code lives in `pipeline/icekb/`, tests in `tests/`.
-- The skill lives in `.claude/skills/iceberg-context/`. Its `kb` script uses only the Python standard library; keep it that way.
+- The skill lives in `skills/iceberg-context/`. Its `kb` script uses only the Python standard library; keep it that way.
 - To add a data source, read `docs/build-plan.md` section 4 and add an entry to `data/sources.yaml`.
 
 ## Rules for content about people

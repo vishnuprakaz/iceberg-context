@@ -1,0 +1,27 @@
+{
+  "name": "iceberg-context",
+  "owner": {
+    "name": "vishnuprakaz"
+  },
+  "metadata": {
+    "description": "Agent Skill with the full, synced context of the Apache Iceberg project and community",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "iceberg-context",
+      "source": "./",
+      "description": "Gives coding agents the context behind Apache Iceberg: code history tied to votes and meetings, the state of each initiative, who reviews what, and where to contribute. Every answer cites its source.",
+      "version": "0.1.0",
+      "author": {
+        "name": "vishnuprakaz"
+      },
+      "homepage": "https://github.com/vishnuprakaz/iceberg-context",
+      "repository": "https://github.com/vishnuprakaz/iceberg-context",
+      "license": "Apache-2.0",
+      "keywords": ["agent-skill", "claude-skill", "apache-iceberg", "pyiceberg", "open-source-contribution"],
+      "category": "development",
+      "tags": ["iceberg", "data-engineering", "open-source", "code-history", "community"]
+    }
+  ]
+}

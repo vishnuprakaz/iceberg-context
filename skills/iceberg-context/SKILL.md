@@ -2,7 +2,7 @@
 name: iceberg-context
 description: Answers questions about the Apache Iceberg project and its community from a synced, source-cited knowledge base (dev mailing list, pull requests and reviews, git history, the spec, working-group meeting notes and recordings, calendar, ASF roster). Use before changing code in apache/iceberg or apache/iceberg-python, and when the user asks "why is this code like this", "what is the history of this file", "what did the community decide", "what is the status of" a proposal such as v4, materialized views or variant, "who reviews" or "who owns" an area, "who should I ask", "what happened on the dev list this week", "when is the next sync", or "where can I contribute" or "good first issue". Do not use for general questions on how to use Iceberg as a product (SQL syntax, configuration, tuning); answer those from the Iceberg documentation.
 license: Apache-2.0
-compatibility: Claude Code or any agent with a shell and Python 3.10+, plus a checkout of the iceberg-context repository (the skill reads its data files). The script needs no packages and no network access.
+compatibility: Claude Code or any agent with a shell, Python 3.10+ and git. The knowledge base is data in the skill repository; when the skill is installed without it, the script downloads a copy on first use (about 80 MB, network access to github.com) and refreshes it every 12 hours. No Python packages needed.
 metadata:
   author: Iceberg Context contributors
   version: 0.1.0
@@ -19,8 +19,10 @@ meeting notes, the community calendar, YouTube recordings and the ASF roster. Qu
 python3 SKILL_DIR/scripts/kb status
 ```
 
-`SKILL_DIR` is the directory that contains this file. In the examples below, `kb` stands for `python3 SKILL_DIR/scripts/kb`. The script finds the repository on its own
-when the skill sits inside it. If the skill was copied elsewhere, set `ICEBERG_CONTEXT_ROOT` to the path of the checkout.
+`SKILL_DIR` is the directory that contains this file. In the examples below, `kb` stands for `python3 SKILL_DIR/scripts/kb`. The script finds
+the knowledge base on its own: inside the skill's repository when it is installed as a plugin or attached to the session,
+otherwise in a copy it downloads on first use and refreshes every 12 hours. `kb update` fetches the latest now. Set
+`ICEBERG_CONTEXT_ROOT` to use a specific checkout, or `ICEBERG_CONTEXT_OFFLINE=1` to stop all network use.
 
 It is unofficial and not affiliated with the Apache Software Foundation.
 
@@ -46,6 +48,7 @@ It is unofficial and not affiliated with the Apache Software Foundation.
 | Command | Use it for |
 |---|---|
 | `kb status` | Freshness of each source, failures, size of the knowledge base |
+| `kb update` | Fetch the latest knowledge base now |
 | `kb search WORDS [--type T] [--since 30d] [--limit N]` | Full-text search over pages and records. Put a phrase in double quotes. Types: `initiative`, `group`, `person`, `module`, `meeting`, `thread`, `email`, `pr`, `issue`, `comment`, `meeting-notes`, `transcript`, `spec-section`, `doc` |
 | `kb source ID [--grep text] [--chars N]` | The text and link behind any id. `--grep` shows only the matching passages |
 | `kb why PATH [--limit N]` | History of a file or directory: commits, their pull requests, and the list threads and meetings that discussed them. A file name alone works (`SnapshotProducer.java`). With `--symbol NAME --checkout CLONE` it adds `git log -L` for one function |
@@ -94,8 +97,12 @@ Terms: `references/glossary.md`.
 
 ## Troubleshooting
 
-**`kb: cannot find the iceberg-context repository`**
-Cause: the skill folder was copied outside the repository. Fix: `export ICEBERG_CONTEXT_ROOT=/path/to/iceberg-context`.
+**`kb: could not download the knowledge base`**
+Cause: no network access to github.com, or git is missing. Fix: clone the repository where there is access and set
+`ICEBERG_CONTEXT_ROOT=/path/to/iceberg-context`.
+
+**Answers look out of date**
+Run `kb update`, then `kb status`. A downloaded copy refreshes itself every 12 hours; a checkout needs `git pull`.
 
 **The first command after an update takes several seconds**
 Cause: the search index is rebuilt when the data changes. It is cached in `~/.cache/iceberg-context/`; later commands are fast.

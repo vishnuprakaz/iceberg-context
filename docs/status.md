@@ -46,7 +46,8 @@ AI summaries cover meetings and mailing-list threads from May 2026 on. Older mat
 | `kb/` | Everything people and agents read: overview, opportunities, briefings, initiatives, groups, people, modules, releases, meeting and thread records, and the index the skill reads |
 | `data/` | Cleaned source records (`raw/`), AI extractions (`extract/`), sync state, the source list and the name map |
 | `pipeline/` | Collectors, processing, page generators and validators |
-| `.claude/` | The skill, the weekly sync runbook and the agents it uses |
+| `skills/`, `agents/` | The skill, the weekly sync runbook and the agents it uses (`.claude/` links to them so sessions with the repository attached load them) |
+| `.claude-plugin/` | Plugin and marketplace manifests |
 | `schema/`, `tests/` | Rules for records and pages; tests |
 | `docs/` | This file, the pipeline reference, plans, research on each source, changelog |
 | `notes/` | Human notes; the pipeline never writes here |

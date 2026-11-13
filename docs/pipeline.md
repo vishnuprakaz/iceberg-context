@@ -51,7 +51,7 @@ One JSON object per line; schema in [`schema/raw-record.json`](../schema/raw-rec
 
 ## AI processing
 
-Extractions are JSON files under `data/extract/`, written by the extractor agents in `.claude/agents/` and checked by `apply`:
+Extractions are JSON files under `data/extract/`, written by the extractor agents in `agents/` and checked by `apply`:
 
 - they must match `schema/extract-meeting.json` or `schema/extract-thread.json`;
 - every cited source must exist, and for threads must belong to that thread;
