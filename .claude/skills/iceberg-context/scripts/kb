@@ -312,7 +312,7 @@ def cmd_source(root: Path, args) -> int:
         meta = rec.get("meta") or {}
         print(f"id:     {rec['id']}\ntype:   {rec.get('type')} ({rec.get('source')})\ndate:   {rec.get('date')}")
         print(f"title:  {rec.get('title', '')}\npeople: {people_of(row)}\nurl:    {rec.get('url')}")
-        for key in ("state", "merged_by", "labels", "milestone", "group", "status", "kind", "video", "confidence"):
+        for key in ("state", "merged_at", "merged_by", "closed_at", "updated_at", "labels", "milestone", "group", "status", "kind", "video", "confidence"):
             if meta.get(key):
                 value = meta[key]
                 print(f"{key + ':':<8}{', '.join(value) if isinstance(value, list) else value}")
@@ -550,7 +550,8 @@ def cmd_whats_new(root: Path, args) -> int:
             [since] + extra, line)
     section("Spec and API changes merged",
             "select * from raw where type = 'commit' and date >= ? and (title like 'Spec%' or title like '%OpenAPI%' or title like 'API%' "
-            f"or title like 'REST%') {like} order by date desc limit 20", [since] + extra, lambda r: f"{r['date'][:10]}  {r['title'][:110]}")
+            f"or title like 'REST%') {like} order by date desc limit 20", [since] + extra,
+            lambda r: f"{r['date'][:10]}  [{json.loads(r['meta'])['repo'].split('/')[1]}] {r['title'][:110]}")
     n = con.execute("select count(*) from raw where type = 'commit' and date >= ?", (since,)).fetchone()[0]
     print(f"Commits merged upstream in the period: {n}")
     briefs = sorted((root / "briefings" / "weekly").glob("*.md"))

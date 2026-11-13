@@ -42,7 +42,7 @@ iceberg-context/
 │   ├── ISSUE_TEMPLATE/              correction, new source, privacy request
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── .claude/
-│   ├── skills/iceberg-context/      the skill everyone uses (SKILL.md, scripts/kb, reference/)
+│   ├── skills/iceberg-context/      the skill everyone uses (SKILL.md, scripts/kb, references/)
 │   ├── skills/iceberg-context-sync/ the maintainer skill: the weekly runbook
 │   └── agents/                      sync agent definitions (section 6)
 ├── docs/                      architecture.md, pipeline.md, schema.md, runbook.md, adding-a-source.md
@@ -212,7 +212,7 @@ Then the main session commits `sync(kb): YYYY-Www`, pushes, and ends with a shor
 ```
 SKILL.md              when to use it, the workflow, citation rules
 scripts/kb            Python, standard library only
-reference/            process.md (how decisions get made), glossary.md, schema.md
+references/           process.md (how decisions get made), glossary.md, schema.md
 ```
 
 `kb` reads `index/*.jsonl` plus the Markdown pages, and builds a local SQLite full-text index on first use (cached outside the repo, rebuilt when the repo's commit changes). No install step, no server.
