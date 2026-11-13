@@ -1,0 +1,38 @@
+{
+  "id": "thread/t-51925c451e4cf72d",
+  "_input_hash": "sha256:42cf7646a257704b6a4d",
+  "sources": [
+    "devlist:xwqz0j6g2fcvq4hf5xs63ll4137ch0n6",
+    "devlist:l7mgmm4bg5xvc0wy414ss43v56kf5vok",
+    "devlist:lfqdckm995dggtprfyo6r4mr3rqpf518",
+    "devlist:d595jc4jg6hqtgnb4ytnp2jx4dgwgbob"
+  ],
+  "title": "Release vote: Apache Iceberg Terraform Provider v0.1.0 RC2",
+  "summary": "zeroshade (Matt) proposed release candidate 2 of the Apache Iceberg Terraform provider v0.1.0, based on commit 186d4f48b9e98386b044e1367d6fdf8d47a3ff8d, with the source release on dist.apache.org and convenience binaries for the Terraform and OpenTofu registries attached to a GitHub prerelease. rambleraptor voted +1 non-binding after the release script, RAT check, build, tests and checksums succeeded. JB Onofré voted 0 non-binding: the source distribution is correct, but the LICENSE in the binary distribution omits four dependencies that come transitively from iceberg-go v0.6.0 (hashicorp golang-lru, golang.org/x/oauth2, twmb/avro and clipperhouse/uax29) and lists some that are not in the distribution. Matt replied that he is preparing a PR to fix the LICENSE issues. No vote result is stated in the thread.",
+  "positions": [
+    {
+      "who": "rambleraptor",
+      "stance": "+1 non-binding; the release script, RAT check, build, tests and checksums all pass.",
+      "source": "devlist:l7mgmm4bg5xvc0wy414ss43v56kf5vok"
+    },
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "0 non-binding; the source distribution is correct, but the binary distribution's LICENSE misses some bundled dependencies and lists others that are not included, and should be fixed.",
+      "source": "devlist:lfqdckm995dggtprfyo6r4mr3rqpf518"
+    },
+    {
+      "who": "zeroshade",
+      "stance": "Is preparing a PR to fix the LICENSE issues.",
+      "source": "devlist:d595jc4jg6hqtgnb4ytnp2jx4dgwgbob"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result is announced. The thread shows one non-binding +1 and one non-binding 0, and the release manager is preparing a fix for the binary LICENSE."
+  },
+  "initiatives": [
+    "iceberg-go"
+  ],
+  "refs": [],
+  "why_it_matters": "The first Terraform provider release is held up by licensing details of the binary distribution."
+}

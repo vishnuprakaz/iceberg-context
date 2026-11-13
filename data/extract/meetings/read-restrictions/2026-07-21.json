@@ -1,0 +1,88 @@
+{
+  "id": "meeting/read-restrictions/2026-07-21",
+  "_input_hash": "sha256:2e33ad157cead1a912b8",
+  "sources": [
+    "meet:read-restrictions:2026-07-21"
+  ],
+  "summary": "The Read Restrictions sync on 21 July 2026 reported that the expression REST spec PR is ready for a vote, with a follow-up planned for the Java parser and model. It raised the order in which restrictions apply to nested data types, and whether to disallow that for now. The proposed next step was to merge the expression spec, rebase, and start voting on the read restrictions spec. Nevin raised the concern that read restrictions on loadTable inhibit caching of loadTable responses. Follow-ups went to Sung and Prashant.",
+  "topics": [
+    {
+      "title": "Expression REST spec ready for vote",
+      "summary": "The notes state that the expression REST spec PR is ready for a vote, with thanks to Ryan and Nevin. A follow-up PR will update the Java parser and model to match.",
+      "initiatives": [
+        "expressions-spec",
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17138",
+        "yt:L0EGYMFyTRc"
+      ]
+    },
+    {
+      "title": "Order of application of restrictions on nested data types",
+      "summary": "The question was whether an order of application of restrictions is needed for nested data types, or whether the spec can say this is not allowed for now for simplicity. It refers to a review thread on the spec PR. A follow-up was recorded for Prashant (marked with a question mark in the notes) to send a discussion, document or examples on nesting read restrictions, covering examples and how it will work.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#13879"
+      ],
+      "open_questions": [
+        "Is an order of application needed for restrictions on nested data types, or should nesting be disallowed for now?"
+      ]
+    },
+    {
+      "title": "Next steps towards the read restrictions vote",
+      "summary": "The proposed sequence was to get the expression spec PR merged, then rebase and start voting on the read restrictions spec. Three pull requests are listed under this step: #16082, #16198 and #16131. Prashant is to mail or submit these.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16082",
+        "gh:apache/iceberg#16198",
+        "gh:apache/iceberg#16131"
+      ]
+    },
+    {
+      "title": "loadTable caching concerns",
+      "summary": "Nevin asked to discuss a concern from the mailing list, time-boxed to under ten minutes: read restrictions on loadTable inhibit caching of loadTable responses, and whether and how this is being addressed. The item references a review thread from Sung on the spec PR. Sung is to write up his position on loadTable caching.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#13879"
+      ],
+      "open_questions": [
+        "Should the effect of read restrictions on loadTable response caching be addressed, and how?"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Sung",
+      "what": "Write up position on loadTable caching."
+    },
+    {
+      "who": "Prashant",
+      "what": "Mail / submit the PRs listed under next steps (#16082, #16198, #16131)."
+    },
+    {
+      "who": "Prashant",
+      "what": "Mail a discussion / doc / examples on nesting read restrictions: examples and how it will work (owner marked with a question mark in the notes)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Prashant",
+      "basis": "notes"
+    },
+    {
+      "who": "Nevin",
+      "basis": "notes"
+    },
+    {
+      "who": "Sung",
+      "basis": "notes"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "thread/t-f9e1b8daeae100d8",
+  "_input_hash": "sha256:e498053dc8a4588b782b",
+  "sources": [
+    "devlist:3zq0vpkw5xkp48okq5ocpqft5mnyg03s",
+    "devlist:6gt6r47mn4589d918hkpyy8d3603d2dt",
+    "devlist:g6strrb3vmtg3yp8fqw6mrwt32gnvv8p",
+    "devlist:bmkkh401fcq29mjbs9m0k41oy5k4zfpd",
+    "devlist:mdm4f1ppsz7ocdp03osyw73lsrolzrzr"
+  ],
+  "title": "PyIceberg 0.12.0rc2 release vote",
+  "summary": "rambleraptor proposed release candidate 2 (commit 75396614, tag pyiceberg-0.12.0rc2) as PyIceberg 0.12.0, with a 72-hour vote. Listed highlights are view support, geometry and geography types, Python 3.14 support, the new File Format API and commit retry support. Voters verified signatures, checksums, licenses, source builds and unit tests on Windows, macOS and other environments. Jean-Baptiste Onofré voted +1 and noted minor issues in the wheel distributions: the LICENSE refers to vendor/fb303 and vendor/hive_metastore paths that differ in the wheels, the bundled Cython runtime code is not documented in LICENSE, and one source file has an unusual ASF header. kevinjqliu opened iceberg-python issue #3877 to track these. All votes were +1; the bundle contains no result message.",
+  "positions": [
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Votes +1 and asks that wheel LICENSE paths for the Thrift/Hive code, the undocumented bundled Cython runtime and an odd header in literals.py be fixed in the next release.",
+      "source": "devlist:g6strrb3vmtg3yp8fqw6mrwt32gnvv8p"
+    },
+    {
+      "who": "Xuanwo",
+      "stance": "Considers the environment-sensitive integration failures and the distribution/module version distinction non-blocking and the source artifact ready for release.",
+      "source": "devlist:6gt6r47mn4589d918hkpyy8d3603d2dt"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Votes +1 and tracks the license issues from the thread in a GitHub issue.",
+      "source": "devlist:mdm4f1ppsz7ocdp03osyw73lsrolzrzr"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. The messages show +1 votes only: two marked binding (danielcweeks, kevinjqliu) and five marked non-binding; no -1 votes."
+  },
+  "initiatives": [
+    "pyiceberg"
+  ],
+  "refs": [
+    "gh:apache/iceberg-python#3877"
+  ]
+}

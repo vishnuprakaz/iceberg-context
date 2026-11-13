@@ -1,0 +1,43 @@
+{
+  "id": "thread/t-48a3b37c45d4bf29",
+  "_input_hash": "sha256:d91317b9b2f3641d438d",
+  "sources": [
+    "devlist:nxbxbs0x8h7xc73czgg3pryl42tr0zz5",
+    "devlist:3o56vo64rjd94mkf75nc4on7qh5hwwqx",
+    "devlist:rzsw267fw7lcn187d2bh0ww9bxw3jmch",
+    "devlist:xf30qn3vs9r3qzvw5hclcyt91673nf8h"
+  ],
+  "title": "Defining gc.enabled semantics across engines and clients",
+  "summary": "Alexander Bailey asked the list to define what `gc.enabled=false` means before his PR relaxing it for snapshot expiry proceeds. He showed that the property is not in the spec and that Java treats it in several ways: dropTableData skips data files but deletes metadata, RemoveSnapshots and the Spark actions fail outright, and the Hive helper maps it to a drop-purge flag. Rust and C++ copy Java's rejection of expiry, Go documents the same, and PyIceberg has no check. Russell Spitzer said the invariant is simply not to remove the table's data files and nothing needs to change. Dan (danielcweeks) said it is a convention that should not be codified, and that catalogs should enforce requirements. Bailey dropped the formal definition and asked whether a narrower change would be acceptable; no reply is in the thread.",
+  "positions": [
+    {
+      "who": "Alexander Bailey",
+      "stance": "The meaning of gc.enabled=false should be settled on the list, allowing snapshot expiry that deletes no files while rejecting expiry that would delete files.",
+      "source": "devlist:nxbxbs0x8h7xc73czgg3pryl42tr0zz5"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "The property was added for tables whose data files are owned by another system; the invariant is not to remove the table's data files, enforcement may differ, and it could be written in a spec appendix.",
+      "source": "devlist:3o56vo64rjd94mkf75nc4on7qh5hwwqx"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "gc.enabled is a convention clients should generally follow but it should not be codified; catalogs should enforce requirements when necessary.",
+      "source": "devlist:rzsw267fw7lcn187d2bh0ww9bxw3jmch"
+    },
+    {
+      "who": "Alexander Bailey",
+      "stance": "Leave the formal definition aside and narrow the PR to allow expiry under gc.enabled=false only with CleanupLevel.NONE, keeping the default and METADATA_ONLY modes blocked.",
+      "source": "devlist:xf30qn3vs9r3qzvw5hclcyt91673nf8h"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "The proposal to formally define the property was set aside. The question whether the narrowed change in apache/iceberg#17791 can proceed had no reply when the thread stopped."
+  },
+  "initiatives": [],
+  "refs": [
+    "gh:apache/iceberg#17791"
+  ],
+  "why_it_matters": "Implementations differ on what gc.enabled=false blocks, and the thread leaves the property as an unspecified convention."
+}

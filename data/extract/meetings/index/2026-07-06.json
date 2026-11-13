@@ -1,0 +1,39 @@
+{
+  "id": "meeting/index/2026-07-06",
+  "_input_hash": "sha256:63dc232a3dcca68c68f2",
+  "sources": [
+    "meet:index:2026-07-06"
+  ],
+  "summary": "The notes for this index sync contain only a proposed agenda with two items: a requested presentation on Bloom filter index improvements from Kushagra and Anirban, and the index draft spec pull request. No discussion, decisions or action items are recorded in the notes, and no transcript was included with this source.",
+  "topics": [
+    {
+      "title": "Bloom filter index improvements (presentation request)",
+      "summary": "The agenda lists a requested presentation on Bloom filter index improvements from Kushagra and Anirban. The notes do not record its content or any outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Index draft spec",
+      "summary": "The agenda lists the index draft spec pull request for discussion. The notes record no outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Kushagra",
+      "basis": "notes"
+    },
+    {
+      "who": "Anirban",
+      "basis": "notes"
+    }
+  ]
+}

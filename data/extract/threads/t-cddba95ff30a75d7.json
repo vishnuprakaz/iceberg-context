@@ -1,0 +1,53 @@
+{
+  "id": "thread/t-cddba95ff30a75d7",
+  "_input_hash": "sha256:9d8310cd4cb627b1ec8f",
+  "sources": [
+    "devlist:zh25o2msbjw3skd577qzsyrcorobcthz",
+    "devlist:ntvydm2d08hylmm49qsqs5rmm8for5g0",
+    "devlist:r61278kmpywytmbffovlmn120jko9tto",
+    "devlist:ly2ql4dw2y80vvg24xywmm26vdwlhyxd",
+    "devlist:d5wl8t0nx7c825obbkbmgxr23lqvpr30",
+    "devlist:52yxgdqfcmow0zcx3nt2nz9n2vhr3nnq",
+    "devlist:70gpyd7fox899cdrl5zf1qcyttj8qyb2"
+  ],
+  "title": "Read Restrictions: overlapping column projections on nested types",
+  "summary": "Prashant (singhpk234) raised the last open item on the Read Restrictions spec PR (#13879) before a vote: what a client should do when a catalog returns one column projection on a nested container (struct, list or map) and another on a field beneath it. Option A, the current PR text, forbids the overlap and requires a reader to fail the query; option B defines a precedence such as outer-most wins. Prashant, Sung, Steven (stevenzwu) and Nevin Zheng favoured A, citing diverging behaviour across BigQuery, Redshift and other systems and arguing the rule can be relaxed later. Dan Weeks disagreed that relaxing a MUST NOT is backward compatible, since older validating clients would break, and wanted an application order defined now, along with a reference implementation. Steven suggested a later relaxation could use MAY wording. The thread ends without agreement.",
+  "positions": [
+    {
+      "who": "singhpk234",
+      "stance": "Forbid overlapping projections on a nested container and its nested fields and fail closed, because no industry semantics exist to borrow and forbidding can be relaxed later while precedence cannot.",
+      "source": "devlist:zh25o2msbjw3skd577qzsyrcorobcthz"
+    },
+    {
+      "who": "sungwy",
+      "stance": "Supports option A for the initial release, with RFC 2119 wording, leaving conflict resolution to the policy engine.",
+      "source": "devlist:ntvydm2d08hylmm49qsqs5rmm8for5g0"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Relaxing the prohibition later is not behaviourally backward compatible for clients, so the order in which nested restrictions apply should be defined now.",
+      "source": "devlist:r61278kmpywytmbffovlmn120jko9tto"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Agrees clients must fail on conflicting nested policies; a future relaxation could say readers may fail or may apply a precedence rule, so older clients that fail stay compliant.",
+      "source": "devlist:52yxgdqfcmow0zcx3nt2nz9n2vhr3nnq"
+    },
+    {
+      "who": "Nevin Zheng",
+      "stance": "Prefers the strict contract (catalog must not send overlaps, reader fails closed) but is comfortable with another coherent contract if it is specified and implemented well.",
+      "source": "devlist:70gpyd7fox899cdrl5zf1qcyttj8qyb2"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "Four participants favoured forbidding overlapping nested projections with fail-closed readers; Dan Weeks objected on backward-compatibility grounds and asked for precedence to be defined now. No resolution is stated in the thread."
+  },
+  "initiatives": [
+    "read-restrictions"
+  ],
+  "refs": [
+    "gh:apache/iceberg#13879"
+  ],
+  "why_it_matters": "This is the last open item before the Read Restrictions REST spec change goes to a vote."
+}

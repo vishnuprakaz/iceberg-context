@@ -1,0 +1,49 @@
+{
+  "id": "thread/t-c8eead2c8a5ef24b",
+  "_input_hash": "sha256:ac59a37411dbac52e7ac",
+  "sources": [
+    "devlist:vo8wfvp4cncggng31c5l6ksh7nnv1bsm",
+    "devlist:l05dk23t42ntbhxbl8g5d249rh4b2tph",
+    "devlist:lfcd8z9j02oc09qpwf94pg60ovmgltmt",
+    "devlist:so84ch2z2d10p4mrk1jopcpho630dky8",
+    "devlist:f01pyvzc97j932cf64bq6b02kl6bj9mw",
+    "devlist:m45f5ovy43212trgp9xwxnb4yx3rfx2s",
+    "devlist:sf2xb2h3qo60vzrm0r8xqyhqdq59k5q5"
+  ],
+  "title": "Release Apache Iceberg C++ 0.3.0 RC0",
+  "summary": "zhjwpku proposed release candidate 0 of Apache Iceberg C++ 0.3.0, based on commit ae29c3d4. Several +1 votes followed. stevenzwu voted +1 but reported that dev/release/verify_rc.sh failed out of the box on recent macOS because the vendored avro-cpp pins fmt 10.2.1, which no longer compiles under Apple Clang 21; installing a newer fmt with Homebrew worked around it. wgtmac and zhjwpku said this is a known issue already fixed upstream in avro-cpp (apache/avro PR #3788) and will go away when the dependency is bumped. manuzhang pointed out that the RC source builds with a 0.3.0-SNAPSHOT version, which a REST client would send in its User-Agent header; zhjwpku agreed and opened iceberg-cpp PR #705. zhjwpku then aborted the vote to fix both issues and prepare RC1.",
+  "positions": [
+    {
+      "who": "stevenzwu",
+      "stance": "Votes +1; the verify script fails on recent macOS because the vendored avro-cpp pins fmt 10.2.1, which is not a blocker but needs a follow-up.",
+      "source": "devlist:l05dk23t42ntbhxbl8g5d249rh4b2tph"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "The fmt problem is already fixed in avro-cpp, which now uses std::format, and will disappear once the avro-cpp version is bumped.",
+      "source": "devlist:lfcd8z9j02oc09qpwf94pg60ovmgltmt"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "An RC should not carry a SNAPSHOT suffix in its version, since a REST client built from it would send iceberg-cpp/0.3.0-SNAPSHOT as User-Agent.",
+      "source": "devlist:f01pyvzc97j932cf64bq6b02kl6bj9mw"
+    },
+    {
+      "who": "zhjwpku",
+      "stance": "The RC source should not build as 0.3.0-SNAPSHOT; both that and the vendored fmt verification issue will be fixed in RC1.",
+      "source": "devlist:sf2xb2h3qo60vzrm0r8xqyhqdq59k5q5"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The release manager aborted the vote because of the -SNAPSHOT suffix in the CMake version string and a verification issue caused by the vendored fmt version; RC1 is to follow. Only +1 votes had been cast.",
+    "source": "devlist:sf2xb2h3qo60vzrm0r8xqyhqdq59k5q5"
+  },
+  "initiatives": [
+    "iceberg-cpp"
+  ],
+  "refs": [
+    "gh:apache/iceberg-cpp#705",
+    "gh:apache/avro#3788"
+  ]
+}

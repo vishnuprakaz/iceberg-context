@@ -1,0 +1,27 @@
+{
+  "id": "thread/t-69a16596451dbbe3",
+  "_input_hash": "sha256:ca486c6fe9bc4c11cda7",
+  "sources": [
+    "devlist:l86ozt0zp3t4rr3qstqd4vkmyhj1cdrw",
+    "devlist:csconm9q419yg6kv5xkxq07l5tjfzk41",
+    "devlist:wh31pm2yf4jxb9gmqwql1g24v12x2h68",
+    "devlist:ymn5zd55c9hqpbt1yjrymm7xqm0jdops"
+  ],
+  "title": "Result of the vote on releasing Apache Iceberg 1.12.0 RC2",
+  "summary": "The messages available for this thread are replies to the result announcement of the Apache Iceberg 1.12.0 RC2 release vote; the announcement itself and its vote counts are not among them. Seven people thanked Neelesh Salian for leading the release. Russell Spitzer remarked that this release was a slog. Hongyue Zhang thanked everyone for releasing 1.12 and hoped the project can keep the cadence going forward, and Yufei (flyrain) offered congratulations on the new release. No technical points, objections or follow-up actions were raised in these replies.",
+  "positions": [
+    {
+      "who": "Hongyue Zhang",
+      "stance": "Hopes the project can keep the release cadence going forward after 1.12.",
+      "source": "devlist:wh31pm2yf4jxb9gmqwql1g24v12x2h68"
+    }
+  ],
+  "outcome": {
+    "status": "informational",
+    "note": "The replies congratulate the release manager on the 1.12 release; the result message and the vote counts are not in the messages available for this thread."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": []
+}

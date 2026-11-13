@@ -1,0 +1,50 @@
+{
+  "id": "thread/t-44ddd498b576dea4",
+  "_input_hash": "sha256:ad3775aaf81b8be895d0",
+  "sources": [
+    "devlist:t4nm0blbo33y5fnkcok6lrmdc4k4toxr",
+    "devlist:19rv6sons3fmjl0h06st8pzs57wxlbgo",
+    "devlist:30v5gm09rhfpqk5wtjkt4psx21xzymvm",
+    "devlist:1zd0wwwx5jfs1z3z7l8y70rk9yfbsj5k",
+    "devlist:h2zmgk8f9b1mcx80dshslztfkg6x8573",
+    "devlist:ygsww828k5z5fj5otz2hpcjcmqwhmz60"
+  ],
+  "title": "Stats-only fields",
+  "summary": "rdblue announced that the V4 spec change for what was previously called non-materialized columns is about ready in PR #18405, now named 'stats-only fields', and said he chose not to unify them with expression-generated materialized columns because that would add an unneeded indirection. pvary suggested modelling them as schema fields with a 'generated' block and a 'stats-only' strategy. rdblue replied that stats-only fields are not part of the table schema and should not be displayed in it, that their types are derived and can change with schema changes, and that nesting them in the schema would need composition rules; pvary accepted this. laskoviymishka supported the change, noted collation support (#16972) could use it, and asked whether readers should be required to ignore stats for expressions they cannot evaluate. rdblue preferred a new type with standardized metadata for collations and leaving unbindable expressions to implementations, and said he would start a vote.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Stats-only fields should stay separate from the schema and from generated columns, because they are not table data, have derived types and would complicate schema composition.",
+      "source": "devlist:30v5gm09rhfpqk5wtjkt4psx21xzymvm"
+    },
+    {
+      "who": "pvary",
+      "stance": "Suggested expressing stats-only fields as generated schema fields with a stats-only strategy, then agreed with the proposal because they should not be displayed as part of the table schema.",
+      "source": "devlist:1zd0wwwx5jfs1z3z7l8y70rk9yfbsj5k"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Supports the change and asks that the unsupported-type rule also cover expressions, so readers ignore stats for expression values they cannot evaluate, which would serve collations.",
+      "source": "devlist:h2zmgk8f9b1mcx80dshslztfkg6x8573"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Collations should use a new type with standardized metadata rather than an expression, and whether to ignore unbindable expressions should be left to implementations.",
+      "source": "devlist:ygsww828k5z5fj5otz2hpcjcmqwhmz60"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "No objections remained; rdblue said most PR comments were addressed and that he would start a vote thread.",
+    "source": "devlist:ygsww828k5z5fj5otz2hpcjcmqwhmz60"
+  },
+  "initiatives": [
+    "v4-content-stats",
+    "collations"
+  ],
+  "refs": [
+    "gh:apache/iceberg#18405",
+    "gh:apache/iceberg#16972"
+  ],
+  "why_it_matters": "V4 statistics can cover derived values through stats-only fields that live outside the table schema, so schema consumers do not need to filter them out."
+}

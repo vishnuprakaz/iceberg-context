@@ -1,0 +1,40 @@
+{
+  "id": "thread/t-0cd4766cfa975dcc",
+  "_input_hash": "sha256:6287ea5ae8bbe4f37d2c",
+  "sources": [
+    "devlist:vkn21zvbcg9vxt2prysp15f269l0s9h0",
+    "devlist:4h6g5r633r65x5k92vqsn9ho0bhnry36",
+    "devlist:lgmjrhbqcvgk2lnk90j0zobqkjy37b7b",
+    "devlist:jzh3xyoc3c2qktgxzy7wd74057r8bndj"
+  ],
+  "title": "Core: repartitioning data files written with an old partition spec",
+  "summary": "mukund-thakur proposed support for rewriting only the data files that belong to an old partition spec so they conform to the current spec (PR #16190). Today such files are skipped by rewrite jobs when they already have the target size. Using rewrite-all with a filter and partial progress does not work well for large tables, because a rerun after a failure picks up the same files again and files cannot be filtered by spec ID. He suggested a new rewrite-partition-spec-mismatch flag used together with partial-progress.enabled, and later mentioned an optimized repartitioning algorithm in PR #16515. Imran Rashid, who works with the author, said this matters for large tables because storage-partitioned joins need consistent partitioning and existing tools cannot make incremental progress. pan3793 supported it, having seen SPJ fail because a scan mixed old-spec files. No committer feedback on the design appears in the thread.",
+  "positions": [
+    {
+      "who": "mukund-thakur",
+      "stance": "Add a rewrite-partition-spec-mismatch option so that rewrite jobs pick up only files written with an old partition spec and can make partial progress.",
+      "source": "devlist:vkn21zvbcg9vxt2prysp15f269l0s9h0"
+    },
+    {
+      "who": "Imran Rashid",
+      "stance": "Large tables need an incremental way to move old data to the new partitioning, in particular because storage-partitioned joins require consistent partitioning.",
+      "source": "devlist:lgmjrhbqcvgk2lnk90j0zobqkjy37b7b"
+    },
+    {
+      "who": "pan3793",
+      "stance": "Supports the change after finding that SPJ did not work because the scan mixed data files not matching the current partition spec.",
+      "source": "devlist:jzh3xyoc3c2qktgxzy7wd74057r8bndj"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "Two supporting replies; no review of the proposed option or decision appears in the thread."
+  },
+  "initiatives": [],
+  "refs": [
+    "gh:apache/iceberg#16190",
+    "gh:apache/iceberg#12083",
+    "gh:apache/iceberg#16515"
+  ],
+  "why_it_matters": "Tables whose partition spec has evolved currently have no incremental, restartable way to bring old files to the new spec, which blocks storage-partitioned joins on them."
+}

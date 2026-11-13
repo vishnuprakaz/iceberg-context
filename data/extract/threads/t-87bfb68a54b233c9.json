@@ -1,0 +1,42 @@
+{
+  "id": "thread/t-87bfb68a54b233c9",
+  "_input_hash": "sha256:1a86383cf1609185b375",
+  "sources": [
+    "devlist:35lj7vhtqtwl5nv9rzpln4mw4fbh7gdp",
+    "devlist:yqbnqkpxq9omkp5296314l5pblgy4tmy",
+    "devlist:jroymxghttw3dwrojlltno1ly1vc6mc9",
+    "devlist:w9olh0nwwxm2tcrlq5m7q1vsc25rzwd9",
+    "devlist:p4h2t4t79jr2m51lq48zygy2403g4kc8",
+    "devlist:h2ldw5tkyxmd029jnp8841scnr4fvyxv",
+    "devlist:6b7fn5ykwsnydstv0vgnjx2w6r330d95",
+    "devlist:00ghs2og6pgq402n3xld2rrqj8x0t2rt"
+  ],
+  "title": "Refreshing storage credentials for staged table creation",
+  "summary": "Maninder Parmar proposed a way to refresh storage credentials for staged tables (used for CTAS), which are not yet committed and so are not visible to loadTable or the credentials endpoint. The first design returned a stagingSession identifier, modelled on planId. huaxingao asked about treating it as a secret and about cleanup; the author said it is only an identifier and its lifecycle is up to the catalog. After catalog syncs the direction changed to a storage refresh token tied to the existing StorageCredential mechanism, reusable beyond staging, without server-side state; table-uuid, sessions and OAuth scopes were discarded. Later syncs decided refresh happens only on the loadCredentials endpoint, and an S3-only proof of concept was added to PR #15280. In May 2026 the author reported the last two issues resolved: a 1:1 mapping between credential and refresh token, and sending the token in headers rather than URL parameters.",
+  "positions": [
+    {
+      "who": "Maninder Parmar",
+      "stance": "Staged tables need a credential refresh mechanism; after sync feedback it should be a generic storage refresh token on StorageCredential rather than a staging-specific session.",
+      "source": "devlist:w9olh0nwwxm2tcrlq5m7q1vsc25rzwd9"
+    },
+    {
+      "who": "huaxingao",
+      "stance": "Supports the direction and asks whether the stagingSession should be a secret, who may use it, and how abandoned staged creates are cleaned up.",
+      "source": "devlist:yqbnqkpxq9omkp5296314l5pblgy4tmy"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "The author reported that the community sync closed all known spec issues: a 1:1 mapping between storage credential and refresh token, and the token sent in headers. An updated PR was to follow; no vote was held in this thread.",
+    "source": "devlist:00ghs2og6pgq402n3xld2rrqj8x0t2rt"
+  },
+  "initiatives": [
+    "rest-auth"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15280",
+    "doc:1R1K6X7qYqvIFkPG3m1neV5Mvy8rwWJvhSFr8DgJgQ-E",
+    "list:q5n355d89nxbhywtlv3qhq7dchbyb67d"
+  ],
+  "why_it_matters": "Long-running CTAS jobs against REST catalogs can outlive vended credentials, and the refresh-token design is meant to be reused for other credential vending cases."
+}

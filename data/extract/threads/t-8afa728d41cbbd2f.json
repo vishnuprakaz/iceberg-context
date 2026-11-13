@@ -1,0 +1,41 @@
+{
+  "id": "thread/t-8afa728d41cbbd2f",
+  "_input_hash": "sha256:04a593a10ade0d929088",
+  "sources": [
+    "devlist:4zm5jhwp42z10pfz2sths7q59r9dlf8l",
+    "devlist:tq6vrnw76lff35oy9wkdvdwfk4476zfk",
+    "devlist:2f8j4pocqvsok4xh42gp9tnv8k5f2cr6",
+    "devlist:jnkdx9696r9qy1yzykfc97xrgom6wzlr",
+    "devlist:0nd3chfg45b6ypjmcw1h2nk2s6rrrl8m"
+  ],
+  "title": "Specifying the encryption key metadata formats for cross-implementation interop",
+  "summary": "While implementing table encryption in iceberg-rust, Alexander Bailey found formats needed for interoperability that the spec calls implementation-specific and that had to be reverse-engineered from Java. He proposed specifying two things: the `StandardKeyMetadata` format used in the `key_metadata` field (a version byte followed by an Avro datum holding the encryption key, an optional AAD prefix and an optional file length), and the convention in the table-level `encryption-keys` list that separates KMS-wrapped key-encryption keys from manifest-list keys wrapped with AES-GCM using the KEK timestamp as AAD. The KMS-wrapped key metadata would stay opaque. Without this, he argued, tables encrypted by one implementation could be unreadable by another that also complies with the spec. Yufei and Szita Ádám agreed. He opened PR #16527 and, following a suggestion on the PR, later refactored it into a new encryption spec document and asked for further review.",
+  "positions": [
+    {
+      "who": "Alexander Bailey",
+      "stance": "The spec should document the StandardKeyMetadata wire format and the KEK versus wrapped-DEK convention in `encryption-keys`, leaving only the KMS-wrapped KEK metadata implementation-specific.",
+      "source": "devlist:4zm5jhwp42z10pfz2sths7q59r9dlf8l"
+    },
+    {
+      "who": "flyrain",
+      "stance": "Supports putting these formats in the spec because there is currently a gap between spec-compliant and cross-implementation compatible.",
+      "source": "devlist:tq6vrnw76lff35oy9wkdvdwfk4476zfk"
+    },
+    {
+      "who": "Szita Ádám",
+      "stance": "Agrees the formats need a stricter specification.",
+      "source": "devlist:jnkdx9696r9qy1yzykfc97xrgom6wzlr"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "Replies supported the idea; PR #16527 was reworked into a separate encryption spec document and was still awaiting review at the last message."
+  },
+  "initiatives": [
+    "v4-encryption"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16527"
+  ],
+  "why_it_matters": "Until these formats are in the spec, non-Java implementations must copy Java's behavior byte for byte to read or write encrypted tables."
+}

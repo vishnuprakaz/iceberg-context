@@ -1,0 +1,69 @@
+{
+  "id": "meeting/index/2026-07-20",
+  "_input_hash": "sha256:fe3cdaeb45d4d4ec93be",
+  "sources": [
+    "meet:index:2026-07-20"
+  ],
+  "summary": "The notes for this index sync are a proposed agenda of open questions in the index draft spec, each with the author's stated preference. The questions cover whether an index type is needed and whether it is an enum or a string, whether transform functions are needed and how they are represented, whether to use a transform function or an index sort algorithm for key ordering, how to treat future index types, whether to keep index metadata history, how to represent min/max statistics, and where the file format is specified. The notes record preferences and trade-offs but no decisions from the meeting.",
+  "topics": [
+    {
+      "title": "Index types",
+      "summary": "The first question is whether the spec needs an index type (SCALAR in the current spec, VECTOR later, BITMAP maybe). The author prefers to keep it, since future index types may differ in usage, capabilities and storage layout. The author also prefers an enum over a string, with the catalog API staying forward-compatible so readers handle unknown types or users request only supported ones. A related question is whether long-term index types (VECTOR, IVF, TERM) should be mentioned as planned or reserved, or omitted.",
+      "initiatives": [
+        "secondary-indexes",
+        "vector-type"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ],
+      "open_questions": [
+        "Does the spec need an index type, and should it be an enum or a string?",
+        "Should future index types (VECTOR, IVF, TERM, etc.) be mentioned as planned/reserved or omitted?"
+      ]
+    },
+    {
+      "title": "Transform functions",
+      "summary": "The author believes transform functions (IDENTITY, HASH, HILBERT) are needed because they let engines optimize index use: Flink can avoid reshuffling for HASH indexes, and HILBERT and IDENTITY enable better file pruning when the transform is known. The author leans toward strings rather than an enum, without a strong opinion, since an index often stays usable from standard column statistics even when a reader does not understand the transform.",
+      "initiatives": [
+        "secondary-indexes",
+        "flink-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ],
+      "open_questions": [
+        "Are transform functions needed, and should they be an enum or a string?"
+      ]
+    },
+    {
+      "title": "Transform function or index sort algorithm",
+      "summary": "Two approaches are compared. A transform function with a signature like long transform(StructLike) works well for HASH and HILBERT when keys map losslessly to integers, but is problematic for strings and other high-cardinality domains, where truncation loses information and hashing loses ordering useful for range queries. An index sort algorithm defines key ordering, with leaf statistics storing the first and last key; it is more general but needs min/max per key column and can make exact filtering more expensive.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ],
+      "open_questions": [
+        "Should key organization be defined by a transform function or by an index sort algorithm?"
+      ]
+    },
+    {
+      "title": "Index history, statistics representation and file format location",
+      "summary": "On history, the notes observe that most databases treat index changes as drop-and-recreate, so there is little value in keeping index metadata history: maintenance can create a new metadata.json and swap it in atomically, with the catalog cleaning up obsolete files under its retention policy. On statistics, the author prefers keeping transform or sort min/max inside the statistics structure of the file schema, exposed through the Java API if needed. On file format, the author prefers to stay aligned with the table metadata model to maximize code reuse.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ],
+      "open_questions": [
+        "Should index metadata history be kept, or should changes be an atomic swap of a new metadata.json?",
+        "Should min/max values use the existing file statistics structure or separate fields?",
+        "Should the file format be specified per leaf file or only at the index level?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "thread/t-31c8012d43fc214e",
+  "_input_hash": "sha256:1341f5089ee8c4c20a2d",
+  "sources": [
+    "devlist:qch7jjnwb8pm49lt3h7lqfxj82hlg8ps",
+    "devlist:w2mo24kk86jzokxr55nqko349rr2cvcm",
+    "devlist:gw1jf5j1l9hk369lbcz6g4rn4l06t77c"
+  ],
+  "title": "Vote to merge the baseline V4 AMT spec PR into the main repo",
+  "summary": "Amogh Jahagirdar called a vote to merge the baseline V4 adaptive metadata tree spec PR into the main repository. He stressed that, like earlier spec votes, this is a vote to merge the changes and not a vote for adoption. Encryption, specific requirements for column file updates, dropping the partition tuple and other areas can be iterated on later; the aim is to land a baseline that will not need extensive rebasing while other V4 work continues. Replies were all in favor. Gábor Kaszab said he would cover the encryption part in an immediate follow-up change, and Szehon Ho left comments on the PR to clarify harder-to-read parts. Amogh announced that the vote passed and said he would merge the PR.",
+  "positions": [
+    {
+      "who": "amogh-jahagirdar",
+      "stance": "Merge the baseline V4 AMT spec changes now, as a merge and not an adoption vote, and iterate later on encryption, column file updates and dropping the partition tuple.",
+      "source": "devlist:qch7jjnwb8pm49lt3h7lqfxj82hlg8ps"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Supports the merge and will cover the encryption part with an immediate follow-up change.",
+      "source": "devlist:w2mo24kk86jzokxr55nqko349rr2cvcm"
+    },
+    {
+      "who": "szehon-ho",
+      "stance": "The spec looks correct; he left comments to clarify some of the harder-to-read parts.",
+      "source": "devlist:jttjxn4kdkydk5xhb8t97ozjwxco00y0"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "note": "Passed with 18 +1 votes (9 binding, 9 non-binding) and no 0 or -1 votes. Amogh Jahagirdar said he would merge the baseline spec PR.",
+    "source": "devlist:gw1jf5j1l9hk369lbcz6g4rn4l06t77c"
+  },
+  "initiatives": [
+    "v4-metadata-tree"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16025"
+  ],
+  "why_it_matters": "The baseline V4 adaptive metadata tree spec text lands in the main repository, giving other V4 changes a common base, without being adopted yet."
+}

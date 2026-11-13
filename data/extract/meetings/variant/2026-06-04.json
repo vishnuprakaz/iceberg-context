@@ -1,0 +1,124 @@
+{
+  "id": "meeting/variant/2026-06-04",
+  "_input_hash": "sha256:cd3b38f394ea0319628d",
+  "sources": [
+    "meet:variant:2026-06-04"
+  ],
+  "summary": "The Variant sync on 4 June 2026 centred on shredded read performance. Benchmarks on 10M and 100M rows show shredded variant reads about 4 to 5 times slower than unshredded, because vectorization is disabled for shredded variants and there is no sub-field projection, so the whole variant is reconstructed. Qiegang is building sub-field projection for project and filter queries; aggregates and joins need a Spark rule. The community did not favor a user-declared shredding schema and will instead work on a canonical automated inference algorithm. Updates covered Iceberg 1.11, Flink, Go, Rust and Python.",
+  "topics": [
+    {
+      "title": "Action items and active work overview",
+      "summary": "Previous action items were reviewed: the Flink shredded write PR #15596 merged on 2026-05-22, the variant trackers were refreshed, the vectorized read PR #16292 is open, the benchmark PR #15629 is still a draft, and the filter/projection pushdown boundary is in progress. Open Java and Spark work includes the vectorized read, malformed-input hardening, a variant metrics empty-stats fix, the file-skipping chain, sub-field projection (an issue without a PR), memory hardening, the REST VariantType spec, Kafka Connect shredded write and TCK variant coverage. The overview table also lists work in Flink, Trino, Go, Rust, Python, arrow-rs and parquet-java.",
+      "initiatives": [
+        "variant",
+        "flink-integration",
+        "kafka-connect"
+      ],
+      "refs": [
+        "gh:apache/iceberg#15596",
+        "gh:apache/iceberg#16292",
+        "gh:apache/iceberg#15629",
+        "gh:apache/iceberg#15384",
+        "gh:apache/iceberg#15385",
+        "gh:apache/iceberg#16448",
+        "gh:apache/iceberg#16568",
+        "gh:apache/iceberg#16585",
+        "gh:apache/iceberg#16455",
+        "gh:apache/iceberg#14242",
+        "gh:apache/iceberg#16370",
+        "gh:apache/iceberg#15795",
+        "gh:apache/iceberg#16450"
+      ]
+    },
+    {
+      "title": "Benchmarks: shredded variant reads are slower",
+      "summary": "Benchmarks re-run on main, which now includes shredded write (#14297), with 10M rows, default auto-inference and a 100-row buffer show shredded reads 4.0x to 5.0x slower than unshredded variant across flat projection, nested projection, filter and aggregation; the picture is the same at 100M rows (4.1x to 5.4x). The notes give two structural causes, both described as fixable: vectorization is explicitly disabled for shredded variants, forcing row-at-a-time reads, and there is no sub-field projection, so all shredded typed_value columns are read whatever the query needs. On the write side the cost is parse_json plus per-shredded-field Parquet column encoding, so the lever is how many fields are selected for shredding.",
+      "initiatives": [
+        "variant"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14297",
+        "gh:apache/iceberg#16292",
+        "gh:apache/iceberg#16448",
+        "yt:HW80v23j7Jw"
+      ]
+    },
+    {
+      "title": "Read path: sub-field projection",
+      "summary": "Qiegang is developing sub-field projection so that queries no longer reconstruct the entire variant. Iceberg handles project and filter queries; Spark needs a new rule to extract sub-fields from aggregate and join expressions so they become eligible for pushdown. The notes call this work critical to making shredded variants performant. Ryan Blue will review the upcoming PRs.",
+      "initiatives": [
+        "variant",
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16448"
+      ]
+    },
+    {
+      "title": "Automated inference over a user-declared shredding schema",
+      "summary": "A proposal for a user-declared shredding schema, from the document on variant shredding policy across Iceberg implementations, was debated. The community was not in favor: it makes users manage complex configurations that go stale, and it cannot adapt to data patterns such as shredding different fields per file based on data clustering. The new direction is to improve automated inference. The community will define a canonical inference algorithm for consistent shredding across implementations, considering statistical sampling (for example jackknifing) to estimate field entropy from a small sample, shredding a field only when its type is uniform across records, and testing strategies on real-world data.",
+      "initiatives": [
+        "variant"
+      ],
+      "refs": [
+        "doc:1OaB45mg9JJ_JRg-ipuvyh4AtOmaGmdWMsy_mJKiu5xs"
+      ],
+      "decisions": [
+        "The community was not in favor of a user-declared shredding schema; the focus moves to improving automated inference algorithms.",
+        "The community will define a canonical inference algorithm for shredding across implementations."
+      ]
+    },
+    {
+      "title": "Community updates",
+      "summary": "Iceberg 1.11 shipped with shredding, Kafka variant support and logical types. The Flink shredded path merged after the release candidate and will be in 1.12. A PR enabling vectorization for unshredded variants is ready for review. Iceberg Go 0.6.0 was released with non-shredded variant support, Christian Thiel is completing the Rust variant implementation, and the Python implementation is blocked on Arrow C++ work that Gang is doing.",
+      "initiatives": [
+        "variant",
+        "java-releases",
+        "flink-integration",
+        "iceberg-go",
+        "iceberg-rust",
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/arrow#45937",
+        "gh:apache/iceberg#16292"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "nssalian",
+      "what": "Work with community members to define a canonical variant inference algorithm."
+    },
+    {
+      "who": "nssalian",
+      "what": "Secure a real-world dataset (from companies / the community) for testing inference strategies."
+    },
+    {
+      "who": "Qiegang Long",
+      "what": "Submit PRs for sub-field projection on project and filter queries."
+    },
+    {
+      "who": "rdblue",
+      "what": "Review Qiegang's sub-field projection PRs."
+    },
+    {
+      "who": "rdblue",
+      "what": "Close Parquet PR #520, which misinterprets the spec."
+    }
+  ],
+  "participants": [
+    {
+      "who": "nssalian",
+      "basis": "notes"
+    },
+    {
+      "who": "Qiegang Long",
+      "basis": "notes"
+    },
+    {
+      "who": "rdblue",
+      "basis": "notes"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "thread/t-b9f73c21a4179dc6",
+  "_input_hash": "sha256:ba701950043e1b0e8851",
+  "sources": [
+    "devlist:xlqx6k7g625p38bxxy141wt02d00w2h4",
+    "devlist:qq04pz07frmrg8v3110d6l32ndg2x6q2",
+    "devlist:81wmp8w02oj8ctxtznntlj0tg5m6d0gt",
+    "devlist:gwg4tdpmrlgxsp8t41hymmdp3pon20hg",
+    "devlist:y5xtx8csdjpxjpl6poqrbfbc3jz81f79",
+    "devlist:vqtprg7gsm7lcmtk8l5bhkcsd42x1cyo",
+    "devlist:1yt689xpk435ypcxm6vnr69rmh5zm3p2",
+    "devlist:mmb0bb8sj12tj64swv8pmm10pqgrpo3c"
+  ],
+  "title": "Adding an X-Iceberg-Client-Capabilities header to the REST spec",
+  "summary": "singhpk234 proposed a generic X-Iceberg-Client-Capabilities header (PR #16394) sent on catalog requests so that a client can declare which features it understands, such as vended-credentials, remote-signing and scan-planning, with read-restrictions to follow. The header is a forward-compatibility hint, not a security mechanism. sungwy supported it and asked whether capability values need versioning; the author replied that a fail-closed rule makes versions unnecessary. danielcweeks preferred feature-specific headers on the endpoints where they apply, and later listed concerns: capabilities depend on engine and configuration, a global header does not say which endpoints are targeted, and capabilities may proliferate. He and rdblue suggested that a versioned v2 loadTable endpoint is the existing way to introduce forward-breaking changes and should be considered instead. RussellSpitzer saw no reason a generic header must be sent on every request. The thread ends with the v2 endpoint suggestion and no decision.",
+  "positions": [
+    {
+      "who": "singhpk234",
+      "stance": "A single generic capabilities header with an enum of values is a static advertisement of what the client understands and is easy to extend.",
+      "source": "devlist:y5xtx8csdjpxjpl6poqrbfbc3jz81f79"
+    },
+    {
+      "who": "sungwy",
+      "stance": "Supports a generic header for compatibility and response shaping, and asks whether capability values should be versioned contracts.",
+      "source": "devlist:qq04pz07frmrg8v3110d6l32ndg2x6q2"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "A generic header does not require sending every capability with every request; clients could send only the relevant ones per endpoint.",
+      "source": "devlist:gwg4tdpmrlgxsp8t41hymmdp3pon20hg"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "A global capabilities header adds complexity that is not narrowly targeted; a v2 loadTable endpoint should be examined instead.",
+      "source": "devlist:1yt689xpk435ypcxm6vnr69rmh5zm3p2"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Versioned endpoints are the existing way to introduce forward-breaking changes, so a v2 loadTable endpoint is cleaner than either header approach.",
+      "source": "devlist:mmb0bb8sj12tj64swv8pmm10pqgrpo3c"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No agreement. The author reported that the 26 May sync leaned towards a generic header, while danielcweeks and rdblue proposed considering a v2 loadTable endpoint instead."
+  },
+  "initiatives": [
+    "rest-spec",
+    "read-restrictions"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16394",
+    "gh:apache/iceberg#13879",
+    "yt:b9p6mI-k-0I",
+    "yt:-KEesN1udyY"
+  ],
+  "why_it_matters": "The choice between a capabilities header and a v2 loadTable endpoint decides how clients opt into forward-breaking REST features such as read restrictions."
+}

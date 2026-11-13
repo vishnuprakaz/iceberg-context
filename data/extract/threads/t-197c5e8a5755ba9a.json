@@ -1,0 +1,48 @@
+{
+  "id": "thread/t-197c5e8a5755ba9a",
+  "_input_hash": "sha256:e0bbf1fc025ed9979e93",
+  "sources": [
+    "devlist:z5fk8q6pwx6v5nkm3r4l3olf300myghh",
+    "devlist:sgqpwxyo6wm5zkb3d86lq90jnv5q0mx0",
+    "devlist:zyknw7xt7dz8cz7yg1v5z3g4krzoftd3",
+    "devlist:j69x3778c4xkdb15yf8lo9ggcfpnt3sh",
+    "devlist:gfy6p268pw7npz0wmjxb2gh77g7k4pzl",
+    "devlist:gqf8mlp7xlygpm9qlmy0otxbyhdht6g9"
+  ],
+  "title": "Vote: release Apache Iceberg 1.12.0 RC1",
+  "summary": "The vote thread for Apache Iceberg 1.12.0 RC1 surfaced several issues. nssalian summarized them: a fix for issue #18164 (reading variant columns failed with commons-lang3 older than 3.13) in PR #18208 should go into the next RC; the fix in PR #18069 was already in this RC; and a missing Caffeine LICENSE entry found by Kurtis needs a new RC. He closed the thread and said a new candidate would be built with Amogh. kevinjqliu then reviewed bundled dependencies: Caffeine was fixed by PR #18218, OpenTelemetry and Apache HttpComponents 5 were already covered, CEL Java is a non-blocking nit (PR #18226), and a new gap for Jackson was found (PR #18227). He suggested adding a license check to the release process. Jean-Baptiste Onofré voted -1 (non-binding) over the incomplete bundle LICENSE files. nssalian reported the license fixes merged.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "A new release candidate is needed to include the commons-lang3 variant fix and the missing Caffeine license entry.",
+      "source": "devlist:sgqpwxyo6wm5zkb3d86lq90jnv5q0mx0"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "The Jackson attribution gap in PR #18227 is what blocks the next RC, and the release process should include a license check.",
+      "source": "devlist:j69x3778c4xkdb15yf8lo9ggcfpnt3sh"
+    },
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Votes -1 because the GCP bundle LICENSE omits Caffeine and the Jackson (FastDoubleParser) entry needs updating in several bundle and runtime LICENSE files.",
+      "source": "devlist:gfy6p268pw7npz0wmjxb2gh77g7k4pzl"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The release manager closed the thread and said a new release candidate would be cut to include the fixes; the license fixes were later reported merged.",
+    "source": "devlist:sgqpwxyo6wm5zkb3d86lq90jnv5q0mx0"
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#18164",
+    "gh:apache/iceberg#18208",
+    "gh:apache/iceberg#18069",
+    "gh:apache/iceberg#18218",
+    "gh:apache/iceberg#18226",
+    "gh:apache/iceberg#18227"
+  ],
+  "why_it_matters": "Incomplete LICENSE entries in bundled runtime jars were enough to restart the 1.12.0 release candidate, and a license check in the release process was suggested."
+}

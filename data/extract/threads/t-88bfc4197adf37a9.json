@@ -1,0 +1,41 @@
+{
+  "id": "thread/t-88bfc4197adf37a9",
+  "_input_hash": "sha256:9a1ba4146167d01d0070",
+  "sources": [
+    "devlist:o5rmmlqvyl6my1p5mr6jxxo8cs0lvyo1",
+    "devlist:ptdcp81xcmt01gc1tygj91zcdq9fr5tj",
+    "devlist:k6wpt88k0ok6yz7yd2byfkhzfns86wgl",
+    "devlist:lpnl4vs602gbot7nzd1ddc2b1zfnd5yr",
+    "devlist:6mfgo130g503c9rokmlsggf8vnld0sd9",
+    "devlist:dry06oboxj8ww6v3z4j52zg5fs00dvny"
+  ],
+  "title": "Release vote: Apache Iceberg 1.10.2 RC1",
+  "summary": "Amogh Jahagirdar proposed release candidate 1 of Apache Iceberg 1.10.2, built from commit 57396d628cb9f92e121f9c2919398475393f0a3a (tag apache-iceberg-1.10.2-rc1), with a 72-hour vote. Voters verified signatures, checksums, license files, the source build and tests. Russell Spitzer and Eduard Tudenhöfner noted that a NOTICE copyright line on the 1.10.x branch still reads 2017-2025 and both said it does not block the release. Kevin Liu confirmed the open-api jar is not published in this release, unlike 1.10.1, and that the kafka-connect jar still is, as expected. Yuya Ebihara reported Trino CI is green against the staged artifacts across several catalogs, and roryqi ran tests against Gravitino. Amogh closed the vote on May 18th and announced that the release candidate passed.",
+  "positions": [
+    {
+      "who": "RussellSpitzer",
+      "stance": "+1 binding; the NOTICE copyright year was not bumped on the 1.10.x branch, which should be cleaned up but does not block the release.",
+      "source": "devlist:ptdcp81xcmt01gc1tygj91zcdq9fr5tj"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "+1 binding; LICENSE and NOTICE match main, the open-api jar is no longer published and the kafka-connect jar is still published as expected.",
+      "source": "devlist:k6wpt88k0ok6yz7yd2byfkhzfns86wgl"
+    },
+    {
+      "who": "Yuya Ebihara",
+      "stance": "+1 non-binding; Trino CI passes against the staged repository with HMS, Glue, JDBC, REST, Nessie and Snowflake catalogs.",
+      "source": "devlist:lpnl4vs602gbot7nzd1ddc2b1zfnd5yr"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:dry06oboxj8ww6v3z4j52zg5fs00dvny",
+    "note": "The vote passed with 5 binding and 5 non-binding +1 votes, and no +0 or -1 votes."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [],
+  "why_it_matters": "1.10.2 is approved as a patch release on the 1.10 line."
+}

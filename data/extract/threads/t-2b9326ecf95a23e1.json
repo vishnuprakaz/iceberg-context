@@ -1,0 +1,35 @@
+{
+  "id": "thread/t-2b9326ecf95a23e1",
+  "_input_hash": "sha256:a0dc95e9892c276f6ab6",
+  "sources": [
+    "devlist:xyzlndcp4x7zq6xydpcbp192ov9p2skz",
+    "devlist:1kpybsksswymdktf9d64lz2oz4ytlg1k",
+    "devlist:4v7w45lm2v9fq6z60k2xwvzc55b4zndj"
+  ],
+  "title": "OpenAPI: add CatalogObjectIdentifier schema",
+  "summary": "stevenzwu called a vote to add a CatalogObjectIdentifier schema to the REST catalog OpenAPI spec (PR #16144). The schema is an ordered list of hierarchical levels, a JSON array of strings, that identifies any catalog object such as a table, view, materialized view, namespace or function. It is structurally the same as Namespace, and the kind of object is determined by context, either the endpoint or a companion type discriminator, not by the identifier. The motivation is that the events endpoint (#12584), the resolve endpoint (#15830) and the functions endpoint (#15180) each need a generic identifier and would otherwise define their own. A Java implementation is in PR #16160. Only +1 votes were cast; pvary left a small suggestion on the PR. stevenzwu closed the vote as passed and said he would merge the OpenAPI change.",
+  "positions": [
+    {
+      "who": "stevenzwu",
+      "stance": "One shared CatalogObjectIdentifier schema avoids each new endpoint introducing its own identifier type as object types are added to the spec.",
+      "source": "devlist:xyzlndcp4x7zq6xydpcbp192ov9p2skz"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "note": "Passed with 12 +1 votes, 6 of them binding; no -1 or +0 votes.",
+    "source": "devlist:4v7w45lm2v9fq6z60k2xwvzc55b4zndj"
+  },
+  "initiatives": [
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16144",
+    "gh:apache/iceberg#16160",
+    "gh:apache/iceberg#12584",
+    "gh:apache/iceberg#15830",
+    "gh:apache/iceberg#15180",
+    "doc:1NTQhgNbP2dkIMuXUMA5JdwliVQKCp1TU_ux5J_AaPiw"
+  ],
+  "why_it_matters": "New REST endpoints for events, resolve and functions can reference one generic identifier schema instead of defining their own."
+}

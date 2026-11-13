@@ -1,0 +1,43 @@
+{
+  "id": "thread/t-fa69aa12d0302acd",
+  "_input_hash": "sha256:889a9dc1a65dd1b42218",
+  "sources": [
+    "devlist:yvf1ywkwwdw3f28b7xskqt2y0hsmtv2l",
+    "devlist:99ckwlm11fbzsfobq08m247nb9hhf50m",
+    "devlist:9dh60kgxy1vv8zhfk4ofbxp8qk1h5392",
+    "devlist:jt617254r2bs1hl5vb8yvxflkt7jrt6w",
+    "devlist:37qrc24fr5l0dolr11yqpny3qf8l2oln"
+  ],
+  "title": "Vote: release Apache Iceberg Go v0.6.0 RC0",
+  "summary": "zeroshade proposed release candidate RC0 of Apache Iceberg Go v0.6.0, based on commit 53fa29cc, and asked for verification and votes. Several +1 votes followed with verification details. nssalian voted +1 but suggested another RC could include Variant non-shredding support from iceberg-go PR #932. kevinjqliu first hit a verification failure that turned out to be a test failing because he was logged in to the az CLI, then voted +1 binding. Tobias voted -1 (non-binding) because a commit made iceberg-go write a deprecated manifest field (distinct_counts) that PyIceberg rejects when reading, a regression in compatibility; iceberg-go PR #1102 would fix it. zeroshade agreed that PyIceberg compatibility must not break and said he would merge the fix and cut a new RC, so this candidate was not released.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "The RC is good to go, though cutting another RC with Variant non-shredding support would be preferable if PR #932 merges soon.",
+      "source": "devlist:99ckwlm11fbzsfobq08m247nb9hhf50m"
+    },
+    {
+      "who": "Tobias",
+      "stance": "Do not release: a commit made iceberg-go write a deprecated field that PyIceberg rejects, breaking compatibility that existed before.",
+      "source": "devlist:jt617254r2bs1hl5vb8yvxflkt7jrt6w"
+    },
+    {
+      "who": "zeroshade",
+      "stance": "PyIceberg compatibility must not be broken, so the fix will be merged and a new RC cut.",
+      "source": "devlist:37qrc24fr5l0dolr11yqpny3qf8l2oln"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The release manager said he would merge the PyIceberg compatibility fix and cut a new RC. Before that the thread had 1 binding +1, 4 non-binding +1 and 1 non-binding -1.",
+    "source": "devlist:37qrc24fr5l0dolr11yqpny3qf8l2oln"
+  },
+  "initiatives": [
+    "iceberg-go"
+  ],
+  "refs": [
+    "gh:apache/iceberg-go#932",
+    "gh:apache/iceberg-go#1102"
+  ],
+  "why_it_matters": "A release candidate was dropped because manifests written by iceberg-go could no longer be read by PyIceberg, showing cross-implementation compatibility is treated as release-blocking."
+}

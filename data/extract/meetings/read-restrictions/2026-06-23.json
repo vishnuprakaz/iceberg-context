@@ -1,0 +1,48 @@
+{
+  "id": "meeting/read-restrictions/2026-06-23",
+  "_input_hash": "sha256:b9fe90ae3b440f35ceb3",
+  "sources": [
+    "meet:read-restrictions:2026-06-23"
+  ],
+  "summary": "The Read Restrictions sync notes for 23 June 2026 list three short items. On whether fixed(n) should be included in SHA256Global / SHA256QueryLocal, the recorded feedback was that either way is fine. The group was again asked to review the spec pull request and the API pull request. The last item raised implementation strategy, asking whether to start with Iceberg generics or Iceberg Python; no answer is recorded.",
+  "topics": [
+    {
+      "title": "fixed(n) in SHA256Global / SHA256QueryLocal",
+      "summary": "The question was whether fixed(n) should be included for the SHA256Global and SHA256QueryLocal functions. The feedback recorded in the notes is that either way is fine. No firm decision is stated.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "yt:rkbZrGWkay8"
+      ]
+    },
+    {
+      "title": "Call for review",
+      "summary": "The group was asked to review the two pull requests: #13879 and #16198. No review outcome is recorded.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#13879",
+        "gh:apache/iceberg#16198"
+      ]
+    },
+    {
+      "title": "Implementation strategy",
+      "summary": "Agenda item on where to implement first, with the options written as Iceberg generics or Iceberg Python. The notes record no answer.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should the first implementation be in Iceberg generics or in Iceberg Python?"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review apache/iceberg#13879 and apache/iceberg#16198."
+    }
+  ],
+  "participants": []
+}

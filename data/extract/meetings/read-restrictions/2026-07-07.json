@@ -1,0 +1,60 @@
+{
+  "id": "meeting/read-restrictions/2026-07-07",
+  "_input_hash": "sha256:871ee4804e46db10a253",
+  "sources": [
+    "meet:read-restrictions:2026-07-07"
+  ],
+  "summary": "The Read Restrictions sync on 7 July 2026 asked whether IDReference should be added to the spec PR for completeness, discussed a review thread on that PR, and noted two changes: map keys are excluded from masks, and geo types were removed from mask-to-default. Nevin Zheng and Mark Hoerth of Datastrato introduced themselves and offered help. The recorded action item, owned by Nevin Zheng with a 15 July 2026 deadline and coordinated with Prashant Singh, is to mirror the adopted expressions spec and add IDReference in PR #13879 before it goes to a vote.",
+  "topics": [
+    {
+      "title": "IDReference and open review thread on the spec PR",
+      "summary": "The agenda asked whether IDReference should be added to the spec PR now for completeness, and listed a review discussion on PR #13879. The action item that came out of the sync names two changes needed before #13879 goes to a vote: mirror the adopted expressions spec (#16652) into it, replacing the deprecated 'term' labels with 'left'/'right', and add IDReference so that policies bind to field ids instead of column names and survive renames and drops.",
+      "initiatives": [
+        "read-restrictions",
+        "expressions-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#13879",
+        "gh:apache/iceberg#16652",
+        "yt:I_aOSlBT4RM"
+      ]
+    },
+    {
+      "title": "FYI: mask changes",
+      "summary": "Two changes were announced for information. Map keys are excluded from masks. Geo types were removed from mask-to-default.",
+      "initiatives": [
+        "read-restrictions",
+        "geospatial"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Introduction from Datastrato (Apache Gravitino) contributors",
+      "summary": "Nevin Zheng (software engineer) and Mark Hoerth (product lead) introduced themselves; their company Datastrato uses and contributes to Apache Gravitino. They are interested in seeing this land and offered help with documentation, driving alignment on open questions through the mailing list or working group, implementation against the spec, and a downstream vendor's view of adoption considerations.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [
+    {
+      "who": "nevzheng",
+      "what": "Mirror the adopted expressions spec (#16652) into PR #13879, replacing deprecated 'term' labels with 'left'/'right', and add IDReference so policies bind to field ids; deadline July 15, 2026, coordinating with singhpk234."
+    }
+  ],
+  "participants": [
+    {
+      "who": "nevzheng",
+      "basis": "notes"
+    },
+    {
+      "who": "Mark Hoerth",
+      "basis": "notes"
+    },
+    {
+      "who": "singhpk234",
+      "basis": "notes"
+    }
+  ]
+}

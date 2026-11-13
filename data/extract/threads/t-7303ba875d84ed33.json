@@ -1,0 +1,136 @@
+{
+  "id": "thread/t-7303ba875d84ed33",
+  "_input_hash": "sha256:fe28e7b41eb372729038",
+  "sources": [
+    "devlist:2z1lxfo33t5rgbrzq5lvcyk9k5qd4509",
+    "devlist:lwfl739v778kphm31hhblmbd6t5z6zh0",
+    "devlist:26gmw545g1ffnvvg8j4r2zgw97o7h2h5",
+    "devlist:9ymwgcgr5zhhkrtjfj8p0b6rh2lprq7d",
+    "devlist:mqtmk0m8sbx9rs525322y0kf25tgt3t4",
+    "devlist:lb2kfpjygf9vm13bh220h63hzq7ydwwk",
+    "devlist:p3y98zdnhwsbhtb79vo6dcrfxr33wg7m",
+    "devlist:127glfsd29zk2x72x4wn5ggjnzq2hq2k",
+    "devlist:ob97s6mton2r315mylvzkgkt5mobszfl",
+    "devlist:83z91vhlygwrk5zl8dcrv48h4r029zyr",
+    "devlist:f81dq6bj8gg6woz666for0ry80vwnb78",
+    "devlist:olf541tyyqz5y8boswqgshbhz3782yj8"
+  ],
+  "title": "Efficient column updates in Iceberg",
+  "summary": "Discussion of Anurag Mantripragada's proposal to update or add columns by writing separate column files instead of rewriting whole data files. A February sync agreed the feature belongs in the table format, not in Parquet, because manifests keep complete stats and file lineage and the design is not tied to one file format. The thread then debated full versus partial (row-level) updates, sparse versus dense update files, compaction, column families, packing updates for several base files into one file, and interaction with equality deletes, deletion vectors and change detection. A proof of concept for full column updates in Spark showed single-column updates running in about 1.5s against 20s for copy-on-write or merge-on-read, with read cost growing with the number of update files. A May sync reached consensus on the dense (\"complete\") representation for partial updates; how to represent rows deleted in the base file and whether update files need a position column stayed open.",
+  "positions": [
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Equality deletes cannot be applied correctly between stitched column updates, so column updates and equality deletes on the same fields should not be allowed together.",
+      "source": "devlist:lwfl739v778kphm31hhblmbd6t5z6zh0"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Rejecting a column update on a column that is part of some delete's equality field IDs makes sense, since equality IDs are like primary key fields.",
+      "source": "devlist:hxg51o5rh91jtrd9v0zq80xk3083l267"
+    },
+    {
+      "who": "anuragmantri",
+      "stance": "The Parquet-native approach was dropped because handling updates in Iceberg keeps complete stats and file lineage in manifests, avoids depending on Parquet format changes and releases, and can extend to other formats.",
+      "source": "devlist:9ymwgcgr5zhhkrtjfj8p0b6rh2lprq7d"
+    },
+    {
+      "who": "Micah Kornfield",
+      "stance": "Sparse update files are a superset of full ones, since writers can write fully populated columns and readers can take a fast path when row counts match.",
+      "source": "devlist:9hgvcwo4346hp00o771ozjxhfn83x9oh"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Full column updates are agreed and simple; row-level partial updates need strong use cases and measurements to justify their complexity, and file-level partial updates are a possible middle ground.",
+      "source": "devlist:mqtmk0m8sbx9rs525322y0kf25tgt3t4"
+    },
+    {
+      "who": "CTTY",
+      "stance": "Additive column files make compaction a must, and compaction could be tied to writes, for example triggered after a number of column files.",
+      "source": "devlist:l13vmn5jrq93qpq0fnos9drb7bmfhrxv"
+    },
+    {
+      "who": "pvary",
+      "stance": "Keeping files vertically split can help wide tables, so a sort-order-like column layout enforced by compaction would be useful, without adding it to the commit or write paths.",
+      "source": "devlist:t5kcz7d9bx2g01xfws1xpnq3o4dc65gg"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "When and how to compact column files should be an implementation decision, and column families could be left out of the spec so engines decide grouping.",
+      "source": "devlist:bx051p2b69dxwxgbwmj4k32shb9bnfzb"
+    },
+    {
+      "who": "Frank Bertsch",
+      "stance": "Column families chosen by engineers would benefit very wide tables that combine many sources.",
+      "source": "devlist:f805r6j1lynkt5v7npfkl9dhd3vtlp9r"
+    },
+    {
+      "who": "Micah Kornfield",
+      "stance": "Row-level merge-on-read style column updates should be avoided without a strong use case, and a record range in the metadata would let updates for several base files be packed into one file to avoid small files.",
+      "source": "devlist:gt9w7o47dzwzc3p69006ql7k0rbmo4j0"
+    },
+    {
+      "who": "aokolnychyi",
+      "stance": "Spark DML has to be extended in Spark itself for column updates because it cannot be done through Iceberg extensions.",
+      "source": "devlist:yvn4fwssjchzrsomo458c2qdms3rq66y"
+    },
+    {
+      "who": "pvary",
+      "stance": "Only full column updates should be supported because cost is dominated by file access, not data volume, and predicate pushdown does not work well with partial updates.",
+      "source": "devlist:rx45lxp71r6mh4k5r8nzx1vwz47y9559"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "If deletion vectors cover updates to few rows and full column updates cover many rows, the sparse representation is only needed for deleted rows, which could instead be filled with nulls or defaults.",
+      "source": "devlist:qqzc28zxwy0cd3692smb3vmz78c2jqjt"
+    },
+    {
+      "who": "pvary",
+      "stance": "Tracking changed rows needs a merged _last_updated_sequence_number for both partial and full updates, which shrinks the benefit of partial updates and adds complexity.",
+      "source": "devlist:p3y98zdnhwsbhtb79vo6dcrfxr33wg7m"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "Maintaining the last-updated sequence number for the sparse format is too complicated, so full column updates are preferred.",
+      "source": "devlist:058dotj2d3gdr9wl1wwqp5cxblc4vtd3"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "The spec need not force an encoding for the position column, but engines should use delta encoding, which was 43 kb against 3910 kb for plain in his example.",
+      "source": "devlist:j83wxcfnhxlhn6g6b6ddz6gtfz1odfbf"
+    },
+    {
+      "who": "pvary",
+      "stance": "Update files that materialize every row keep vectorized stitching a simple concatenation of column vectors, so that representation is strongly preferred for vectorized reads.",
+      "source": "devlist:6bs5o0xb0hbkxr63mjn19cm5dm671oyd"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "Dense update files help reads but complicate the SQL update plan, which must read before-update values or carry per-file metadata such as row counts.",
+      "source": "devlist:jq1lo82tnocczbhvkvv8ks93f7yy7omm"
+    },
+    {
+      "who": "mkroll-db",
+      "stance": "An internal dense, row-aligned proof of concept was slower than copy-on-write below about 16MB target file size and up to about 5x faster at 1GB, so the spec may need a writer fallback or row-range packing, and an explicit ordering rule with deletion vectors.",
+      "source": "devlist:f81dq6bj8gg6woz666for0ry80vwnb78"
+    },
+    {
+      "who": "anuragmantri",
+      "stance": "The file-size crossover should not be a hard constraint on writers in the spec, and under the V4 single-file-commit design deletion vectors always win over column updates at read time.",
+      "source": "devlist:olf541tyyqz5y8boswqgshbhz3782yj8"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "A sync reached consensus on the dense (complete) update file representation for partial updates. How to represent rows deleted in the base file and whether a position column is required were still open when the thread stopped.",
+    "source": "devlist:83z91vhlygwrk5zl8dcrv48h4r029zyr"
+  },
+  "initiatives": [
+    "v4-column-updates"
+  ],
+  "refs": [
+    "doc:1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs",
+    "gh:apache/iceberg#15445",
+    "doc:1k4x8utgh41Sn1tr98eynDKCWq035SV_f75rtNHcerVw"
+  ],
+  "why_it_matters": "It records why column updates are being designed in the table format with dense update files, and which questions the design still has to answer."
+}

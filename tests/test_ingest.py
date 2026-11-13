@@ -46,7 +46,7 @@ def test_syncdocs_ingest_tabs_refs_and_status(kb_root):
     doc.write_text(
         "# Design  \n\n2026-01-01\n\ndesign text that is not a meeting\n\n# Meeting notes  \n\n"
         "## Nov 9, 2026 ([recording](https://youtu.be/abcdefghijk))\n\n- \\[Ada Example\\] index layout, see \\#18585\n"
-        "- Python\n    - fix in \\#4291 (Thanks Ada Example\\!)\n\n" + "discussion text. " * 20 + "\n\n"
+        "- Python\n    - fix in \\#4291 (Thanks Ada Example\\!)\n- Other news\n    - spec change \\#17000\n\n" + "discussion text. " * 20 + "\n\n"
         "## Oct 26, 2026 (Cancelled)\n\nnothing\n\n# Appendix  \n\n## Dec 1, 2026\n\nnot a meeting\n")
     out = syncdocs.ingest(kb_root, "index", doc, "2026-11-10T00:00:00Z")
     assert out["meetings"] == 2
@@ -54,6 +54,7 @@ def test_syncdocs_ingest_tabs_refs_and_status(kb_root):
     held = next(r for r in recs if r["id"] == "meet:index:2026-11-09")
     assert held["meta"]["status"] == "held" and held["meta"]["recordings"] == ["abcdefghijk"] and held["people"] == ["ada"]
     assert "gh:apache/iceberg#18585" in held["refs"] and "gh:apache/iceberg-python#4291" in held["refs"]
+    assert "gh:apache/iceberg#17000" in held["refs"]  # the Python subsection ended at the next item on its level
     assert next(r for r in recs if r["id"] == "meet:index:2026-10-26")["meta"]["status"] == "cancelled"
     state = json.loads((kb_root / "data/state/syncdocs.json").read_text())
     assert state["cursor"]["index"]["modified"] == "2026-11-10T00:00:00Z"

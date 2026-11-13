@@ -1,0 +1,47 @@
+---
+id: thread/t-fd1e0ca37f3dd78c
+type: thread
+title: 'REST catalog spec: semantics of the metrics reporting endpoint when the server fails to process a report'
+date: '2026-11-03'
+url: https://lists.apache.org/thread/1nfwnk1j8sppmsry675ygr1jbxyhvrdx
+kind: discuss
+status: consensus
+messages: 6
+sources:
+- devlist:1nfwnk1j8sppmsry675ygr1jbxyhvrdx
+refs:
+- gh:apache/polaris#5395
+- list:0r7fpq153d2ny0tbt162051dh0jv3wjb
+links: []
+updated: '2026-11-13'
+---
+
+# REST catalog spec: semantics of the metrics reporting endpoint when the server fails to process a report
+
+<!-- kb:generated:start -->
+**Thread:** [[DISCUSS] REST catalog spec: semantics of the metrics reporting endpoint when the server fails to process a report](https://lists.apache.org/thread/1nfwnk1j8sppmsry675ygr1jbxyhvrdx) · **Started:** 2026-11-03 by Anand Kumar Sankaran · **Messages:** 6 (last 2026-11-04) · **Outcome:** consensus
+
+> Summary written by an AI model from the messages. Check the thread before relying on a detail.
+
+## Summary
+
+Anand Kumar Sankaran, a Polaris contributor, asked how the REST catalog's reportMetrics endpoint should behave when the server cannot persist a report. A pending Polaris change would return 204 instead of 500 in that case, and the spec does not say whether reporting is best-effort or whether clients should retry. Eduard Tudenhöfner answered that metrics reporting is intended to be best-effort, that the catalog decides whether to return a 500, log an error or discard reports, that clients are not expected to retry, and that the spec wording need not change. Yufei Gu (flyrain) first asked for the behavior to be documented in the spec. Daniel Weeks disagreed: the endpoint has defined behavior and return codes, reporting is separate from the commit, a server returning success when the request failed is an implementation issue, and retrying is a client-side choice. Gu then agreed to leave the spec unchanged, reading the endpoint as a standard REST endpoint for which returning 204 on failure would be misleading.
+
+**Why it matters:** Catalog implementers get no new spec text for the metrics endpoint and have to choose their failure behavior from this discussion.
+
+## Outcome
+
+The repliers agreed to leave the spec unchanged. Clients are not required to retry failed reports. Weeks and Gu held that a server should not return 204 when processing failed, while Tudenhöfner had said a catalog may discard reports and return 204. ([message](https://lists.apache.org/thread/82jnp6t55ozt9dqvd1r99kdrn5cwdro9), `devlist:82jnp6t55ozt9dqvd1r99kdrn5cwdro9`)
+
+## Positions
+
+- **Anand Kumar Sankaran:** The spec should clarify whether reportMetrics is best-effort, what a catalog returns when it cannot process a report, and whether clients retry. ([message](https://lists.apache.org/thread/1nfwnk1j8sppmsry675ygr1jbxyhvrdx))
+- **Eduard Tudenh��fner:** Metrics reporting is best-effort, the catalog implementation decides whether to return an error or discard reports, clients are not expected to retry, and the spec need not be more prescriptive. ([message](https://lists.apache.org/thread/cxbd9xkw0hor0vpm8hh73kjx2rsp7lh8))
+- **[[person/flyrain|Yufei Gu]]:** Treating the endpoint as best-effort is reasonable, but the behavior should be documented in the spec rather than left to interpretation. ([message](https://lists.apache.org/thread/ypkg1cpo9kznwgp54qccrvsfms8ogkhc))
+- **[[person/danielcweeks|Daniel C. Weeks]]:** The spec does not need to define best-effort behavior; a server should not return a success code for a failed request, and whether a client retries or ignores a failure is a client implementation matter. ([message](https://lists.apache.org/thread/3n037w70kzh0vhforwq5ckt7v9mwzplt))
+- **[[person/flyrain|Yufei Gu]]:** Leaving the spec unchanged is fine, with the endpoint read as a standard REST endpoint that returns an error status on failure; retrying is the client's decision. ([message](https://lists.apache.org/thread/82jnp6t55ozt9dqvd1r99kdrn5cwdro9))
+
+References: [polaris#5395](https://github.com/apache/polaris/issues/5395), [thread](https://lists.apache.org/thread/0r7fpq153d2ny0tbt162051dh0jv3wjb)
+<!-- kb:generated:end -->
+
+## Notes

@@ -1,0 +1,60 @@
+{
+  "id": "thread/t-4ba0b50d52976551",
+  "_input_hash": "sha256:f61ba4b8053dd60ba6ed",
+  "sources": [
+    "devlist:5f40shqmwc2l647oskjg1vv8pq7q8od7",
+    "devlist:tymgygw574bh77398ybzndxwm0rcrzws",
+    "devlist:fsospqnz3od4orrmkjbwj3y2n49do56v",
+    "devlist:7jl993mp1l3zkbc84695l5qmk6ozz4sw",
+    "devlist:xwjhb99zl0ob1cthjpcyvx4ypq276vyf",
+    "devlist:gmcj93sjdpwd3dnbq7sov2w48q4b5607",
+    "devlist:3t1nq9n9d1oxx78xmyjgshy7nbd8dv94",
+    "devlist:vjf87md908mf903mdjqrgo2qglopxox2"
+  ],
+  "title": "Spark: use the catalog's Hadoop configuration when listing orphan files",
+  "summary": "Sebastian Daberdaku asked for agreement on PR #17862, which fixes remove_orphan_files listing the table location with a Hadoop FileSystem built from the Spark session configuration only, so catalogs that use other credentials (for example a cross-account role) fail with AccessDenied. The PR added a public catalogName(String) method to DeleteOrphanFilesSparkAction. Dan Weeks and Russell Spitzer preferred reading the configuration from the table's FileIO when it is HadoopConfigurable, without new API. Sebastian noted that S3FileIO, GCSFileIO and ADLSFileIO are not HadoopConfigurable, so the reported Glue case (#17860) stays unfixed, and proposed hadoopConf(Configuration), a ResolvingFileIO default for Glue, or a parallel prefix listing. JB Onofré and Dan said listing should go through the table FileIO; Dan opposed delimiter-based listing (#17790) and favoured splitting the key space with prefix listing. Sebastian reworked the PR to the HadoopConfigurable shape for Spark 4.2, 4.1, 4.0 and 3.5, with no new API.",
+  "positions": [
+    {
+      "who": "Sebastian Daberdaku",
+      "stance": "The listing should pick up the catalog's spark.sql.catalog.<name>.hadoop.* overrides, first via catalogName(String) and later via a proposed hadoopConf(Configuration) setter, because S3FileIO holds no Hadoop configuration.",
+      "source": "devlist:0m2gc9yqt77cpy2nvcthm9vkvgsgwrqq"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Read the exact Hadoop configuration from the table's FileIO when it is HadoopConfigurable instead of going through the catalog.",
+      "source": "devlist:tymgygw574bh77398ybzndxwm0rcrzws"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Avoid expanding the API; a Hadoop configuration only makes sense for Hadoop-based FileIOs, and there is no reason to allow one for S3FileIO and the other non-Hadoop IOs.",
+      "source": "devlist:vzgnwm1hwg6k6rgmb4j5kjo2rxo62369"
+    },
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Do not add catalogName() or hadoopConf(); rework #17862 to use the FileIO's configuration when HadoopConfigurable, fix the S3FileIO case with a parallel listing through table.io(), and do not make ResolvingFileIO the Glue default.",
+      "source": "devlist:3t1nq9n9d1oxx78xmyjgshy7nbd8dv94"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Listing should use the table's FileIO, but not through a delimiter-based recursive walk, which does not scale with object store layout; break up the listing namespace and use prefix listing instead.",
+      "source": "devlist:gmcj93sjdpwd3dnbq7sov2w48q4b5607"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:vjf87md908mf903mdjqrgo2qglopxox2",
+    "note": "Sebastian reworked #17862 so the listing uses the FileIO's Hadoop configuration when table.io() is HadoopConfigurable and the session configuration otherwise, with no new API, across Spark 4.2, 4.1, 4.0 and 3.5. The S3FileIO case in #17860 is left to a future parallel FileIO listing, whose design (delimiter walk versus prefix enumeration) was still being discussed."
+  },
+  "initiatives": [
+    "spark-integration"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17862",
+    "gh:apache/iceberg#17860",
+    "gh:apache/iceberg#17790",
+    "gh:apache/iceberg#11906",
+    "gh:apache/iceberg#16932",
+    "gh:apache/iceberg#17387"
+  ],
+  "why_it_matters": "Orphan file removal with S3FileIO and catalog-specific credentials still needs prefix_listing until a parallel FileIO-based listing exists."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "thread/t-993bbf42f9af82cf",
+  "_input_hash": "sha256:c2d596f1feabcdf8af20",
+  "sources": [
+    "devlist:x5x9fzq3j1wybx3fc5orbc5c2mnxmbzp",
+    "devlist:ddw8cvyrvypoolmzhd673s5wglhdpd5f",
+    "devlist:420tbbr0rxslknb2fj3ndnzxklb4b5ct",
+    "devlist:wcojy9opbjx3qpph0lbohh1hpjo7dd7j",
+    "devlist:pjvvsczjtq8bo2xjdwvcd4plyzyc0k5j",
+    "devlist:vng16frrh45q2nzzryt2yl2vqfqkw4n1",
+    "devlist:qb466tcgdj4w9lpfj6ly42k9jk4vnqm0",
+    "devlist:fl0b1mn0b64x7hxh3kw1mr3xzgxnjwl2"
+  ],
+  "title": "Release Apache Iceberg 1.11.0 RC4",
+  "summary": "aihuaxu proposed release candidate 4 (commit 6976e020, tag apache-iceberg-1.11.0-rc4) as Apache Iceberg 1.11.0, with a 72-hour vote. Voters verified signatures, checksums, license checks and source builds; kevinjqliu also ran PyIceberg integration, Yuya Ebihara confirmed Trino CI was green across several catalogs, and bryanck reported validation tests passing on a fork in a test environment. Jean-Baptiste Onofré voted +1 while listing minor LICENSE and NOTICE issues in the AWS, Azure, GCP and Flink runtime bundles, such as files packaged twice and missing NOTICE content from some dependencies. kevinjqliu opened issue #16396 to track those fixes, and aihuaxu said they would be fixed in a following release. No -1 votes were cast and the vote passed.",
+  "positions": [
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Votes +1 but notes minor LICENSE and NOTICE issues in the bundle and Flink runtime jars, including duplicate packaging and missing NOTICE content from some dependencies.",
+      "source": "devlist:ddw8cvyrvypoolmzhd673s5wglhdpd5f"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Verified that the open-api jar is not published and the Kafka Connect artifact contains only Iceberg code, and filed an issue to track the license follow-ups.",
+      "source": "devlist:vng16frrh45q2nzzryt2yl2vqfqkw4n1"
+    },
+    {
+      "who": "aihuaxu",
+      "stance": "The license nits will be fixed in a following release and the 1.11.0 release moves forward.",
+      "source": "devlist:fl0b1mn0b64x7hxh3kw1mr3xzgxnjwl2"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "note": "Passed with +1: 6 binding and 7 non-binding; no +0 or -1 votes.",
+    "source": "devlist:qb466tcgdj4w9lpfj6ly42k9jk4vnqm0"
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16396"
+  ],
+  "why_it_matters": "Apache Iceberg 1.11.0 was approved for release, with bundle LICENSE and NOTICE clean-ups deferred to a later release."
+}

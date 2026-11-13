@@ -1,0 +1,45 @@
+{
+  "id": "thread/t-709611fe90159e57",
+  "_input_hash": "sha256:de714fa0617511e3996d",
+  "sources": [
+    "devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b",
+    "devlist:j7sggw14p560mgnhp8tm31h2ypl5phn8",
+    "devlist:4kr518oookg35bnpds5skxv0y1srjy8r",
+    "devlist:pvgqm0r4m1yy43do8k4sflzryoobgwmr"
+  ],
+  "title": "AI Functions for FILE/VECTOR types",
+  "summary": "Alex Stephen proposed adding a generative AI function and an AI embedding function to the Iceberg Spark and Flink connectors, as part of the work on the FILE and VECTOR types, so users have vendor-agnostic functions for multimodal data and embeddings; a proposal document is linked. Russell Spitzer said he did not understand the goal and was hesitant, since each engine's API would likely have engine-specific parts beyond function names and arguments. Stephen clarified that he wants to learn whether the community is interested in shipping SQL functions in the Iceberg codebase, either built into the connectors or as default UDFs under the UDF spec. Szehon Ho preferred not to standardize AI functions and to use the existing function and UDF mechanisms. The thread stops there.",
+  "positions": [
+    {
+      "who": "rambleraptor",
+      "stance": "Add a generative AI function and an AI embedding function to the Iceberg Spark and Flink connectors as vendor-agnostic functions for multimodal data.",
+      "source": "devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "The goal and use case are unclear, because each engine's API would likely contain engine-specific elements beyond function names and arguments.",
+      "source": "devlist:j7sggw14p560mgnhp8tm31h2ypl5phn8"
+    },
+    {
+      "who": "rambleraptor",
+      "stance": "The question is whether the community wants SQL functions shipped in the Iceberg codebase, either built into the connectors or as default UDFs that engines implement under the UDF spec.",
+      "source": "devlist:4kr518oookg35bnpds5skxv0y1srjy8r"
+    },
+    {
+      "who": "szehon-ho",
+      "stance": "AI functions should not be standardized in the Iceberg expression spec, which is deliberately small; existing function and UDF mechanisms should be used unless there is a clear Iceberg-specific need.",
+      "source": "devlist:pvgqm0r4m1yy43do8k4sflzryoobgwmr"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "Two replies questioned or opposed the proposal and the proposer acknowledged it may not fit the project; no decision was reached."
+  },
+  "initiatives": [
+    "file-type",
+    "vector-type",
+    "udf"
+  ],
+  "refs": [],
+  "why_it_matters": "It tests whether Iceberg should ship or standardize SQL functions beyond partition transforms, and the first replies leaned against it."
+}

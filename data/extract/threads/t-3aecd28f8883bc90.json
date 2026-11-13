@@ -1,0 +1,48 @@
+{
+  "id": "thread/t-3aecd28f8883bc90",
+  "_input_hash": "sha256:af37cee59ea38df68d13",
+  "sources": [
+    "devlist:h21x5r8bfrv3zg700y9py84plrfmtmsr",
+    "devlist:69xxw3j3xfwk8h03gsd4vjhrhdxptb1l",
+    "devlist:skk2hfx6mh9o898l0jhwyroxvh02tm5c",
+    "devlist:5psp1347y4cjmstwjg0q65ldxjnycmy8"
+  ],
+  "title": "Cross-implementation conformance testing for Iceberg",
+  "summary": "Replies to Neelesh Salian's write-up on conformance testing across Iceberg implementations. Sung (sungwy) said his own parallel proposal is substantially the same, differing on repository layout and integration plan, and asked to merge the two documents and bring one proposal back for lazy consensus; he wants contribution guides, a submodule-based integration with each implementation pinning the fixture repository, and a CI integration plan folded in. Tanmay Rauth backed comparing decoded values and suggested fixtures structured as input, golden file and expected value so they serve read and write tests. Andrei Tserakhau agreed and refined the rule: normalize representation where the spec leaves it open, but keep the physical type where the spec pins one. Neelesh Salian reported that he, Sung, Andrei and Amogh are preparing a joint proposal and supported a community sync.",
+  "positions": [
+    {
+      "who": "sungwy",
+      "stance": "The two proposals are substantially the same and should be converged into one, including contribution guides, submodule-based pinning of the fixture repository and per-implementation CI integration.",
+      "source": "devlist:h21x5r8bfrv3zg700y9py84plrfmtmsr"
+    },
+    {
+      "who": "tanmayrauth",
+      "stance": "Comparing decoded values is right, and fixtures should be structured as input, golden file and expected value from the start so the same fixture covers reads and writes.",
+      "source": "devlist:69xxw3j3xfwk8h03gsd4vjhrhdxptb1l"
+    },
+    {
+      "who": "nssalian",
+      "stance": "The proposers are working offline on a single proposal to share with the group, and a community sync is worthwhile.",
+      "source": "devlist:skk2hfx6mh9o898l0jhwyroxvh02tm5c"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Comparison must be spec-semantic: normalize where the spec leaves representation open, as for the day transform, but keep the physical type where the spec pins it, as for equality_ids; fixtures will be bidirectional from v1.",
+      "source": "devlist:5psp1347y4cjmstwjg0q65ldxjnycmy8"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "The authors of the two proposals are merging them offline and plan to share one proposal and hold a community sync; nothing was decided in these messages."
+  },
+  "initiatives": [
+    "conformance-testing"
+  ],
+  "refs": [
+    "list:964630c6q0jovs579x1jzb1t0o19jgjg",
+    "gh:sungwy/iceberg-testing#1",
+    "gh:apache/iceberg#16414",
+    "gh:apache/iceberg-go#880"
+  ],
+  "why_it_matters": "A single shared-fixture conformance proposal is being prepared, which would change how each implementation tests spec behavior in CI."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "thread/t-8ba58766eb647f36",
+  "_input_hash": "sha256:b5feb4faeba3e7827f10",
+  "sources": [
+    "devlist:7wmhcjwv8opxh4hgj284w5yl578rnbjz",
+    "devlist:lyq9yps5xxnpdr5q0bjzvotzvzky5zsf"
+  ],
+  "title": "Vote: adopt the expressions spec",
+  "summary": "These are the closing messages of the vote to adopt the expressions spec; the message that called the vote is not part of this set. Fokko and Eduard Tudenhöfner cast binding +1 votes, and Neelesh Salian and Huang-Hsiang Cheng cast non-binding +1 votes. On June 30th Ryan Blue, noting that he had replied from the wrong account the day before, announced the result: the vote passes with 30 +1 votes, of which 13 are binding, and no -1 or +0 votes. He thanked everyone for reviewing.",
+  "positions": [],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:lyq9yps5xxnpdr5q0bjzvotzvzky5zsf",
+    "note": "The vote passed with 30 +1 votes, 13 of them binding, and no -1 or +0 votes."
+  },
+  "initiatives": [
+    "expressions-spec"
+  ],
+  "refs": [],
+  "why_it_matters": "The expressions spec is adopted by vote."
+}

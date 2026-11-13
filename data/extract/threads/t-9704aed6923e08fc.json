@@ -1,0 +1,36 @@
+{
+  "id": "thread/t-9704aed6923e08fc",
+  "_input_hash": "sha256:ff50970e0d79dafee33d",
+  "sources": [
+    "devlist:cv1ks4gcvqpy3jmm8x00hxxyjz776d8r",
+    "devlist:j4yy5jpvyy0tvxtfyth1ofh842m3vp5y",
+    "devlist:7hoj4k2stvsg6gjywbcdyyqfdkv4tnjc",
+    "devlist:k1zo93v0zq8f783hnswt1n29g5clzqyd"
+  ],
+  "title": "Vote on adding table constraints to the v4 table spec",
+  "summary": "Huaxin started a vote on adding table constraints to the Iceberg v4 table spec through PR #17822. The change adds three constraint types: `check`, `unique` and `primary-key`. Definitions are stored in table metadata with an `enforced` flag that controls whether writers must verify the rows they add or modify. Each snapshot records the status of every constraint in `constraint-statuses` as `validated`, `valid`, `invalid` or `unvalidated`. A `primary-key` constraint replaces identifier field IDs in v4; on upgrade, identifier fields become a primary-key constraint that is not enforced. Voters left minor wording comments. Ryan Blue voted +1 while noting small issues, including type promotion for fields referenced by a check constraint, and Huaxin said the comments were addressed in the PR. The vote passed, with the PR to be merged the following day.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Votes +1 overall; some edits for clarity and minor issues, such as type promotion of fields referenced by a check constraint, should be fixed but should not prevent the vote from passing.",
+      "source": "devlist:j4yy5jpvyy0tvxtfyth1ofh842m3vp5y"
+    },
+    {
+      "who": "huaxingao",
+      "stance": "Addressed the review comments in the PR, including allowing type promotion for fields referenced by a check constraint.",
+      "source": "devlist:7hoj4k2stvsg6gjywbcdyyqfdkv4tnjc"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "note": "Passed with 8 +1 votes, 5 of them binding, and no -1 or +0 votes.",
+    "source": "devlist:k1zo93v0zq8f783hnswt1n29g5clzqyd"
+  },
+  "initiatives": [
+    "constraints"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17822"
+  ],
+  "why_it_matters": "The v4 spec gains check, unique and primary-key constraints, and primary-key constraints replace identifier field IDs in v4 tables."
+}

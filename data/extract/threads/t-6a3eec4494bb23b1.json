@@ -1,0 +1,19 @@
+{
+  "id": "thread/t-6a3eec4494bb23b1",
+  "_input_hash": "sha256:92a9ac95d48d8ae341bb",
+  "sources": [
+    "devlist:t0dk2b3nc8wx445jwg378xtk59bc9lnf",
+    "devlist:mp14sbz5ws8ygbzhf5o0r3z8zrvv5vsp"
+  ],
+  "title": "Vote to clarify the day partition transform result type as date in the spec",
+  "summary": "This is the vote on clarifying in the spec that the result type of the day partition transform is date. The messages available start with the replies; the message that opened the vote is not among them. Fokko voted +1 binding, and huaxingao, Steve, wgtmac and tanmayrauth replied with +1 votes marked non-binding. No objections or technical comments were raised. Kevin Liu closed the vote on June 13, reporting 6 binding and 7 non-binding +1 votes, declared it passed, and said he would merge the PR. laskoviymishka thanked those involved.",
+  "positions": [],
+  "outcome": {
+    "status": "passed",
+    "note": "Passed with 6 binding and 7 non-binding +1 votes. Kevin Liu said he would merge the PR.",
+    "source": "devlist:mp14sbz5ws8ygbzhf5o0r3z8zrvv5vsp"
+  },
+  "initiatives": [],
+  "refs": [],
+  "why_it_matters": "The spec now states that the day partition transform produces a date, which implementations should follow when writing partition values."
+}

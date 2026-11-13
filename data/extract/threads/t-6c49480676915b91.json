@@ -1,0 +1,37 @@
+{
+  "id": "thread/t-6c49480676915b91",
+  "_input_hash": "sha256:686b105ca015e83984c0",
+  "sources": [
+    "devlist:gkj526shb0y96hdmms73sn3tvsw8mgw9",
+    "devlist:4y2g4yysml95ctklmf70pymr9yf5gh5c",
+    "devlist:gdnconfhokobc6mpc01pok71tw13cx0f",
+    "devlist:0108ssrzgjc5py0d9rpmmb96ctn5ytrs"
+  ],
+  "title": "Vote: add the variant type to the REST catalog spec",
+  "summary": "Neelesh Salian called a 72-hour vote on adding the variant type to the REST catalog OpenAPI spec (PR #17256), so that variant columns can be represented in table schemas exchanged over REST. The thread consists of +1 votes with no objections. Russell Spitzer, voting binding, said this is what the Java, Rust, Go and C++ implementations already ship. Okumin, non-binding, thanked the author for including REST compatibility kit updates as a follow-up task and said the Apache Hive community relies on the kit to develop its Iceberg REST API. On August 2nd Neelesh said the voting has concluded and that a result email would follow; the result itself is not stated in this thread.",
+  "positions": [
+    {
+      "who": "RussellSpitzer",
+      "stance": "+1 binding; the change matches what the Java, Rust, Go and C++ implementations already ship.",
+      "source": "devlist:4y2g4yysml95ctklmf70pymr9yf5gh5c"
+    },
+    {
+      "who": "okumin",
+      "stance": "+1 non-binding; welcomes the compatibility kit updates as a follow-up, since Apache Hive uses the kit for its Iceberg REST API.",
+      "source": "devlist:gdnconfhokobc6mpc01pok71tw13cx0f"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "Voting concluded on 2026-08-02, but the result is announced in a separate email, not here. The replies show seven +1 votes marked binding, fourteen marked non-binding and one unmarked, with no +0 or -1."
+  },
+  "initiatives": [
+    "variant",
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17256",
+    "list:ycvrcb60m5y3hmjw2rfhkmxlcwkqnnnj"
+  ],
+  "why_it_matters": "Once adopted, REST catalogs and clients have a specified way to exchange schemas that contain variant columns."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "thread/t-cf32601a8df15f27",
+  "_input_hash": "sha256:2845e895291a1f0ee8c3",
+  "sources": [
+    "devlist:r3pfnttb56ml60h1l8jd5okqd2qdomv1",
+    "devlist:nzdv7f794js2fl8skcx5god79r425xso",
+    "devlist:7jon4mpgt2wzdr08mh0sxrk8zz1s0w0j",
+    "devlist:y2jpnyy6n5tg3796o7kggb2bnd0n64kp",
+    "devlist:vj3x5knqb1h71j2sgpsbgbbsdb1kz7b6",
+    "devlist:9xs8bq8q6f3xobxcp1bqvchxj9nsn3f0",
+    "devlist:j5wfskb6zl763j18oh4nsjy6nwxnwl77",
+    "devlist:983qkhmh08q2n6bcl9kypxblf3chh0dv"
+  ],
+  "title": "Migrating Iceberg to Jackson 3",
+  "summary": "Alex Dutra opened a discussion on moving Iceberg from Jackson 2 to Jackson 3. The main difficulty is iceberg-core, where Jackson types appear in the public API of the parser classes, JsonUtil and the REST HTTP layer; he first suggested Jackson 3 overloads with both versions coexisting. Steve Loughran argued against putting Jackson 3 in signatures and proposed an indirection layer that hides the JSON binding, deprecating the Jackson 2 APIs or moving them to a legacy module. In November Alex adopted that direction: Iceberg-owned shim types, compatibility tests and both Jackson versions shipped during a transition. JB Onofré agreed and proposed doing the shims first while still on Jackson 2, deprecating Jackson-typed APIs in 1.13, running existing parser tests against both backends, and providing thin adapter artifacts with a Jackson module for REST servers. Alex and JB agreed on this phasing, starting with one PR that adds the shim types and migrates one parser package.",
+  "positions": [
+    {
+      "who": "adutra",
+      "stance": "Reduce Jackson 2 exposure first by making parser classes and JsonUtil package-private or deprecated, and keep overloads or an indirection only for the ObjectMapper extension points.",
+      "source": "devlist:7jon4mpgt2wzdr08mh0sxrk8zz1s0w0j"
+    },
+    {
+      "who": "steveloughran",
+      "stance": "Do not expose Jackson 3 in public signatures; add an API that hides the JSON binding, deprecate the Jackson 2 APIs with a clear removal plan, and move to Jackson 3 internally.",
+      "source": "devlist:y2jpnyy6n5tg3796o7kggb2bnd0n64kp"
+    },
+    {
+      "who": "Alex Dutra",
+      "stance": "Introduce Iceberg-owned shims over Jackson types in the serde and REST layers and ship both Jackson versions during a transition period.",
+      "source": "devlist:vj3x5knqb1h71j2sgpsbgbbsdb1kz7b6"
+    },
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Introduce the shims first as a pure refactor on Jackson 2, and keep core binding agnostic with separate thin Jackson 2 and Jackson 3 adapter artifacts because REST servers need a Jackson module for their own mapper.",
+      "source": "devlist:9xs8bq8q6f3xobxcp1bqvchxj9nsn3f0"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:983qkhmh08q2n6bcl9kypxblf3chh0dv",
+    "note": "Alex Dutra and JB Onofré agreed on a phased plan: shim types and API deprecation first on Jackson 2, then adapter artifacts for the REST layer, dual-backend tests, the switch to Jackson 3, and later removal of Jackson 2. The first step proposed is one PR with the shim types and one migrated parser package; no PR is referenced yet."
+  },
+  "initiatives": [],
+  "refs": [],
+  "why_it_matters": "Downstream users of iceberg-core's Jackson-typed APIs, including REST catalog servers, should expect those APIs to be deprecated in favour of Iceberg-owned types."
+}

@@ -1,0 +1,106 @@
+{
+  "id": "meeting/spark/2026-07-21",
+  "_input_hash": "sha256:934584e15d96ccfd395d",
+  "sources": [
+    "meet:spark:2026-07-21"
+  ],
+  "summary": "The Spark sync notes list highlights: vectorized Parquet reads for variant columns, end-to-end geo type support in Spark 4.1, listTableSummaries, a session-level split size override, the REST_CATALOG_PURGE property and correct delete file sizes in the rewrite table action with a 1.10.x backport. Discussion points were Spark versioning, covering the Spark 4.2.0 support PR now up for review since 4.2 is released, Spark 4.3 plans and deprecation of 4.0, and Spark CI improvements that select Spark and Flink PR matrices by changed version. A long list of review requests covers sort order and K-way merge, RewriteTablePath, compaction and actions, and new PRs. The notes record no decisions.",
+  "topics": [
+    {
+      "title": "Highlights",
+      "summary": "Vectorized Parquet reads for variant columns merged, described as a major variant read performance gain that unblocks shredded extraction. Spark 4.1 gained end-to-end geo type support: type mapping, Parquet reads and writes of geometry and geography, and DML tests with fallback from vectorized reads. Other merges are listTableSummaries in Spark 4.1 to tell tables from views without loading the table, a session-level split size override with backports to 3.5 and 4.0, the REST_CATALOG_PURGE property for Spark 4.1 and 4.0, and correct delete file sizes in the rewrite table action with a 1.10.x backport.",
+      "initiatives": [
+        "spark-integration",
+        "variant",
+        "geospatial"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16292",
+        "gh:apache/iceberg#16851",
+        "gh:apache/iceberg#17073",
+        "gh:apache/iceberg#17149",
+        "gh:apache/iceberg#16891",
+        "gh:apache/iceberg#16154",
+        "gh:apache/iceberg#17199",
+        "gh:apache/iceberg#17186",
+        "gh:apache/iceberg#17185",
+        "gh:apache/iceberg#15470",
+        "gh:apache/iceberg#17215"
+      ]
+    },
+    {
+      "title": "Spark versioning: 4.2, 4.3 and deprecating 4.0",
+      "summary": "Spark 4.2 is released, so the PR adding Spark 4.2.0 support is up for review. Spark 4.3 plans and deprecation of Spark 4.0 were also on the agenda. The notes record no outcome.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14984"
+      ]
+    },
+    {
+      "title": "Spark CI improvements",
+      "summary": "Three CI PRs were listed: reducing TestRewriteDataFilesAction data volume, selecting the Spark PR matrix by changed version, and selecting the Flink PR matrix by changed version.",
+      "initiatives": [
+        "spark-integration",
+        "flink-integration",
+        "community-process"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16565",
+        "gh:apache/iceberg#16946",
+        "gh:apache/iceberg#16947"
+      ]
+    },
+    {
+      "title": "Review requests: sort order and K-way merge",
+      "summary": "The MergingSortedRowDataReader PR for Spark 4.1 is listed for review. The SupportsReportOrdering PR is a draft blocked on it and has no reviewers, and the K-way merge rewrite strategy PR also depends on it and is unchanged since July 7.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14948",
+        "gh:apache/iceberg#16750",
+        "gh:apache/iceberg#16305"
+      ]
+    },
+    {
+      "title": "Review requests: RewriteTablePath, compaction and actions",
+      "summary": "For RewriteTablePath, a fix for stale manifest_length in manifest lists is a 1.11.1 candidate, the invalid snapshot ID filtering fix needs its author to split it to Spark 4.1 only, and the multiple source/destination prefixes PR has no new reviews and is at risk. For compaction and actions, the list has a fix for the partial commit failure count, aligned compaction commit filtering (open since July 12 with no reviews), parallelized RemoveOrphanFiles prefix listing (which bundles three changes and has a Hadoop dependency concern), and a guard for DeleteOrphanFiles against shared table locations.",
+      "initiatives": [
+        "spark-integration",
+        "java-releases"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16910",
+        "gh:apache/iceberg#16220",
+        "gh:apache/iceberg#14355",
+        "gh:apache/iceberg#16970",
+        "gh:apache/iceberg#17176",
+        "gh:apache/iceberg#16933",
+        "gh:apache/iceberg#17254"
+      ]
+    },
+    {
+      "title": "New PR review requests",
+      "summary": "New requests include time type support in Spark 4.1, broadcasting slim rewritable delete metadata in position delta writes, removing dangling v2 file-scoped position delete files, a Hilbert-curve clustering strategy for rewrite_data_files, a clustered DV writer, a metadata table for discovering metadata tables, aggregate pushdown for identity partition GROUP BY, and several fixes.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16665",
+        "gh:apache/iceberg#17281",
+        "gh:apache/iceberg#17205",
+        "gh:apache/iceberg#16827",
+        "gh:apache/iceberg#17287",
+        "gh:apache/iceberg#17134",
+        "gh:apache/iceberg#16176",
+        "gh:apache/iceberg#16913",
+        "gh:apache/iceberg#16956",
+        "gh:apache/iceberg#16570"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

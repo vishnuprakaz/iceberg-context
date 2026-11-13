@@ -1,0 +1,59 @@
+{
+  "id": "thread/t-23d6d63c9969129d",
+  "_input_hash": "sha256:998c980e968b0ea12f48",
+  "sources": [
+    "devlist:vrt3oytl3dwo34wr07tkf73r0kkx0b1h",
+    "devlist:wyq2lgc39l1xxm8mf642b559l1lwq4s6",
+    "devlist:b0bmsb0bx7q8zp5207srw3djc6n7coo4",
+    "devlist:optfgcg9hwhyjbobvymqgqvg1dj9dpm9",
+    "devlist:h1qsxzxxpygbgfr2sxj5z3w2tnws79b4",
+    "devlist:3stzqvrc429dm6trrvhv4g170nntol6x"
+  ],
+  "title": "Docs: duplicated search results on iceberg.apache.org",
+  "summary": "Max Konstantinov reported that search on iceberg.apache.org returns the same result many times because every documentation version from 1.4 to 1.10 is indexed, and asked whether that should be fixed. rmoff agreed the behaviour is poor since results do not show a version. Max suggested indexing only one version. RussellSpitzer and stevenzwu preferred search and navigation scoped to a selected version; kevinjqliu said that would mean migrating to mike (issue #14521), which is a lot of work, and supported indexing only latest or nightly. Max tested the mkdocs-exclude-search plugin, which left only nightly in the index, and opened a PR. kevinjqliu reported the fix live, added a fix for a second duplicate issue, suggested pointing the Docs tab and search at latest instead of nightly, and closed the loop once PRs #16368, #16371 and #16398 were merged.",
+  "positions": [
+    {
+      "who": "Max Konstantinov",
+      "stance": "Exclude all but one documentation version from the search index as a quick fix, and look at a version selector separately.",
+      "source": "devlist:optfgcg9hwhyjbobvymqgqvg1dj9dpm9"
+    },
+    {
+      "who": "rmoff",
+      "stance": "The current behaviour is not ideal for users because results are literal duplicates with no version shown.",
+      "source": "devlist:tlo89xr7lm7h6d026q0j7745trm1jpdk"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Asks whether a version dropdown could be added to search.",
+      "source": "devlist:648ptz48qxk2lg9owp9zph5n6rzrfphy"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Index only latest or nightly; a version selector would need a migration to mike, which is a lot of work and risks breaking the site.",
+      "source": "devlist:b0bmsb0bx7q8zp5207srw3djc6n7coo4"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Doc navigation and search should be scoped to a version, and restructuring the doc site might be a good idea.",
+      "source": "devlist:j5y6hx6mk2jpxw9khvb3scoxsjgj6mbd"
+    },
+    {
+      "who": "rmannibucau",
+      "stance": "Each version could be rendered independently into its own folder with a versions index and some JavaScript to list versions.",
+      "source": "devlist:v6wxn21mp2nbflkgy080703on17zc2jc"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Previous documentation versions were removed from the search index and the related PRs (#16368, #16371, #16398) were merged.",
+    "source": "devlist:3stzqvrc429dm6trrvhv4g170nntol6x"
+  },
+  "initiatives": [],
+  "refs": [
+    "gh:apache/iceberg#14521",
+    "gh:apache/iceberg#16368",
+    "gh:apache/iceberg#16371",
+    "gh:apache/iceberg#16398"
+  ],
+  "why_it_matters": "Site search now covers a single documentation version, so older versions are reachable by URL but not through search."
+}

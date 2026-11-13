@@ -1,0 +1,199 @@
+{
+  "id": "meeting/community/2026-07-15",
+  "_input_hash": "sha256:403ab93a66c5b89bf6d1",
+  "sources": [
+    "meet:community:2026-07-15"
+  ],
+  "summary": "The sync notes list recent merges, including the expressions spec, an optional specific-name in the UDF model and a Flink equality delete conversion API. Release updates covered Java 1.12, Java 1.10.3, Terraform 0.1.0 and Rust 0.10, which is voting on RC4 with a few process improvements to make. Discussion items included technical blogs, re-partitioning old partitions, Vortex as a file format, PyIceberg DataFusion integration, CI resource usage, Iceberg Summit 2027 (a proposal is to be submitted), Avro encoding for non-zone timestamps, collations support (Andrei to set up a separate sync in two weeks), an encryption-specific spec, a shared testing repository, the FileRef proposal, the vector type proposal and a unique files spec clarification.",
+  "topics": [
+    {
+      "title": "Highlights",
+      "summary": "Java merges include the expressions spec, correct delete file sizes in the rewrite table action, mapping geometry and geography to Parquet logical types, EagerInputFile for buffering small files, an optional specific-name in the UDF definition model, and a Flink equality delete conversion API. PyIceberg added deletion vector support, an incremental append scan and a configurable manifest cache size. Iceberg Rust continued encryption work and parses server-advertised endpoints. Iceberg Go expanded deletion vectors, compaction and views and added a shredded variant writer. Iceberg C++ added deletion-vector-v1 blobs in Puffin, vended storage credentials and v3 column default values.",
+      "initiatives": [
+        "expressions-spec",
+        "udf",
+        "geospatial",
+        "flink-integration",
+        "pyiceberg",
+        "iceberg-rust",
+        "iceberg-go",
+        "iceberg-cpp"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16652",
+        "gh:apache/iceberg#15470",
+        "gh:apache/iceberg#16765",
+        "gh:apache/iceberg#16729",
+        "gh:apache/iceberg#16727",
+        "gh:apache/iceberg#16948",
+        "gh:apache/iceberg-python#3491",
+        "gh:apache/iceberg-python#3576",
+        "gh:apache/iceberg-python#3512",
+        "gh:apache/iceberg-python#3517",
+        "gh:apache/iceberg-python#2993",
+        "gh:apache/iceberg-rust#2586",
+        "gh:apache/iceberg-rust#2628",
+        "gh:apache/iceberg-rust#2650",
+        "gh:apache/iceberg-rust#2666",
+        "gh:apache/iceberg-rust#2692",
+        "gh:apache/iceberg-rust#2561",
+        "gh:apache/iceberg-rust#2781",
+        "gh:apache/iceberg-go#1283",
+        "gh:apache/iceberg-go#1351"
+      ]
+    },
+    {
+      "title": "Release updates",
+      "summary": "Neelesh gave a Java 1.12 update, Amogh a Java 1.10.3 update and Alex a Terraform 0.1.0 update. Danny reported that Rust 0.10 is voting on RC4, thanked those validating the release candidates, and noted a few process improvements to make.",
+      "initiatives": [
+        "java-releases",
+        "iceberg-rust",
+        "iceberg-go"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Technical blogs, CI resource usage and Iceberg Summit 2027",
+      "summary": "Kevin raised technical blogs, CI resource usage with improvements and next steps, and next steps for Iceberg Summit 2027. For the Summit the notes record a to-do to submit a proposal.",
+      "initiatives": [
+        "community-process"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Carried-over proposals: re-partitioning, Vortex, PyIceberg DataFusion, Avro timestamps",
+      "summary": "Four items repeat from the previous sync: Mukund's issue on optimizing re-partitioning of old partitions, Martin's proposal to add Vortex as a file format, Jared's PyIceberg DataFusion integration issue, and Shekhar's dev list discussion on Avro encoding for non-zone timestamp types. The notes record no outcomes.",
+      "initiatives": [
+        "file-format-api",
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16514",
+        "doc:1g0EJDr3DkSmfAce8C94zA2JyWRj2SeNeAeiYOotnSww",
+        "gh:apache/iceberg-python#3554",
+        "list:jncwontk4xkmt7n5ml0pbgk4x54cwzgo"
+      ]
+    },
+    {
+      "title": "Collations support",
+      "summary": "Andrei brought the collations support discussion (#16972). The notes record a to-do for Andrei to set up a separate sync in two weeks.",
+      "initiatives": [
+        "collations"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Encryption-specific spec",
+      "summary": "Matt raised an encryption-specific spec (#16527). The notes record no outcome.",
+      "initiatives": [
+        "v4-encryption"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Shared testing repository proposal",
+      "summary": "Neelesh presented a proposal for shared test fixtures across Apache Iceberg implementations. The notes link the document and record no outcome.",
+      "initiatives": [
+        "conformance-testing"
+      ],
+      "refs": [
+        "doc:1Qr82hccxJhWxKRT7B-3ylhOLSaJTYfc7hU51-mhzK6Y"
+      ]
+    },
+    {
+      "title": "FileRef and vector type proposals",
+      "summary": "Talat listed the FileRef proposal and Yan the vector type proposal, each with a design document. The notes record no outcome.",
+      "initiatives": [
+        "file-type",
+        "vector-type"
+      ],
+      "refs": [
+        "doc:1BdA4G-38GoVcpX6UY4UI-QA1MvrDnH6uSKeCJBadILQ",
+        "doc:1zA8PskNDFKXXJpzWQr25CFoX_aIZHBNHbkxk0t3PteE"
+      ]
+    },
+    {
+      "title": "Unique files spec clarification",
+      "summary": "Russ had an item on a spec clarification about unique files. The notes give no details.",
+      "initiatives": [],
+      "refs": []
+    },
+    {
+      "title": "PRs to review",
+      "summary": "Review was again requested for the UUID comparison bug fix #14500 (Vishal), the old-partition rewrite PRs #16190 and #16515 (Mukund), multi-snapshot support in SnapshotChanges #16224 (Shekhar), and encoding non-zone timestamps with Avro local-timestamp logical types #16577.",
+      "initiatives": [],
+      "refs": []
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Andrei",
+      "what": "Set up a separate sync on collations support in two weeks."
+    },
+    {
+      "what": "Submit a proposal for Iceberg Summit 2027."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    },
+    {
+      "who": "Danny",
+      "basis": "notes"
+    },
+    {
+      "who": "Amogh",
+      "basis": "notes"
+    },
+    {
+      "who": "Alex",
+      "basis": "notes"
+    },
+    {
+      "who": "Kevin",
+      "basis": "notes"
+    },
+    {
+      "who": "Mukund",
+      "basis": "notes"
+    },
+    {
+      "who": "Martin",
+      "basis": "notes"
+    },
+    {
+      "who": "Jared",
+      "basis": "notes"
+    },
+    {
+      "who": "Shekhar",
+      "basis": "notes"
+    },
+    {
+      "who": "Andrei",
+      "basis": "notes"
+    },
+    {
+      "who": "Matt",
+      "basis": "notes"
+    },
+    {
+      "who": "Talat",
+      "basis": "notes"
+    },
+    {
+      "who": "Yan",
+      "basis": "notes"
+    },
+    {
+      "who": "Russ",
+      "basis": "notes"
+    },
+    {
+      "who": "Vishal",
+      "basis": "notes"
+    }
+  ]
+}

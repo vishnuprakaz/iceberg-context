@@ -1,0 +1,19 @@
+{
+  "id": "thread/t-914ce4905899b010",
+  "_input_hash": "sha256:596796d7eb3208f490f6",
+  "sources": [
+    "devlist:0wsv94hy4sgw1js557ps4xfonjpfbf2",
+    "devlist:3mgyxsk8g4s0qq6drxh2go4xgzfz7s4v"
+  ],
+  "title": "Iceberg Summit 2027: planning and early sponsor interest",
+  "summary": "Sung Yun announced that planning for Iceberg Summit 2027 has begun and that a formal proposal is being prepared for PMC approval. The organizers are reaching out early so the proposal reflects a broad and diverse set of interested companies. Organizations interested in sponsoring are asked to fill out a short form as an indication of intent; the sponsorship packages are not final yet. The organizers are also looking for a small number of Lead Sponsors who want to be closely involved in funding and helping organize the event, which can be flagged in the form. Readers are asked to forward the message, since not everyone with sponsorship interest follows the dev list. Kevin Liu shared a LinkedIn post to help spread the word; the other replies were thanks.",
+  "positions": [],
+  "outcome": {
+    "status": "informational",
+    "note": "A call for early sponsorship interest in Iceberg Summit 2027; the formal proposal for PMC approval was still being prepared."
+  },
+  "initiatives": [
+    "community-process"
+  ],
+  "refs": []
+}

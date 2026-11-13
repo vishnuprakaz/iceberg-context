@@ -1,0 +1,31 @@
+{
+  "id": "thread/t-0eb2bea9a6273744",
+  "_input_hash": "sha256:35854bcf4faa8c075377",
+  "sources": [
+    "devlist:5jm8jpp327w9yn4zznlrlv5165mz4vt3",
+    "devlist:z4488b25x0ljp49do5yvnbw4qcy7sttg",
+    "devlist:q388wd0qwy8lfmqobyltt0t8x6zkw12h"
+  ],
+  "title": "Vote: create the apache/iceberg-verification repository",
+  "summary": "nssalian, with Sung Yun and Andrei Tserakhau, called a vote to create a new standalone repository, apache/iceberg-verification, for language-neutral Apache Iceberg conformance fixtures, following a discussion thread and an earlier community sync. The proposal document is titled 'Shared conformance fixtures for Apache Iceberg implementations'. The vote was to stay open for at least 72 hours; nssalian later extended it to the following Monday morning Pacific time so more people could look. All replies in the thread were +1 votes, several with short comments welcoming the effort, and no +0 or -1 votes or concerns appear. nssalian closed the thread saying the voting had concluded and passed, and that a separate result email would follow.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "Create a standalone apache/iceberg-verification repository for language-neutral conformance fixtures.",
+      "source": "devlist:5jm8jpp327w9yn4zznlrlv5165mz4vt3"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "note": "The closing message states that the vote concluded and passed; it gives no counts and says a result email will follow. All votes in the thread were +1.",
+    "source": "devlist:q388wd0qwy8lfmqobyltt0t8x6zkw12h"
+  },
+  "initiatives": [
+    "conformance-testing"
+  ],
+  "refs": [
+    "doc:1Qr82hccxJhWxKRT7B-3ylhOLSaJTYfc7hU51-mhzK6Y",
+    "list:8wsvnhktw27h0tqnxljzmnsogwd52tjj"
+  ],
+  "why_it_matters": "Iceberg implementations in different languages get a shared home for conformance fixtures, where contributors can add cases that all implementations are checked against."
+}

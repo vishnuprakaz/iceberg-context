@@ -1,0 +1,44 @@
+{
+  "id": "thread/t-6293c79628424192",
+  "_input_hash": "sha256:b4bb2c07e25ecd308dd4",
+  "sources": [
+    "devlist:nj95255r4ofqszpfx6pd8hbf8yxxydzv",
+    "devlist:mthncncxfnvr5c6r1tso1bnvysz1nrcz",
+    "devlist:2nbm37qpvkykljqzdtbtfqtk75sqfdzl",
+    "devlist:433wxmpfddwx7y49vsc28zvy8fsb9xwt",
+    "devlist:9dvp6bpz998615m9zlkg6yqf8m6jbct9"
+  ],
+  "title": "Vote to release Apache Iceberg Rust 0.11.0 RC1",
+  "summary": "Danny Jones called a vote on Apache Iceberg Rust 0.11.0 RC1 (tag v0.11.0-rc.1). Two non-binding +1 votes came in after verification on macOS and Linux; one verifier saw a flaky REST catalog rename test caused by a locked SQLite test fixture and did not consider it a blocker. Kevin Liu voted -1 because the candidate cannot be published: the iceberg crate depends on the new iceberg-property-macro crate, which has iceberg as a versioned dev-dependency, so cargo publish fails for both. He recalled that the same circular dependency after the 0.5.0 vote forced a 0.5.1 release, and opened a fix that also adds a cargo publish dry-run check to CI. He also noted that make test from the tarball fails at docker-up because the Hive image's apt repository has expired, which a change on main fixes. Danny Jones agreed it is a blocker, voted -1 and said he would prepare RC2.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "The candidate cannot be published because of a circular dependency between iceberg and iceberg-property-macro, so it should be fixed and a new RC cut.",
+      "source": "devlist:433wxmpfddwx7y49vsc28zvy8fsb9xwt"
+    },
+    {
+      "who": "anoopj",
+      "stance": "The candidate verified on Linux; a flaky REST catalog rename test caused by a locked SQLite test fixture is not a blocker.",
+      "source": "devlist:2nbm37qpvkykljqzdtbtfqtk75sqfdzl"
+    },
+    {
+      "who": "Danny Jones",
+      "stance": "The publishing problem is a blocker for the release and RC2 will follow.",
+      "source": "devlist:9dvp6bpz998615m9zlkg6yqf8m6jbct9"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "source": "devlist:9dvp6bpz998615m9zlkg6yqf8m6jbct9",
+    "note": "RC1 was abandoned in favor of an RC2: after two non-binding +1 votes, kevinjqliu voted -1 over a crate circular dependency that blocks publishing, and the release manager agreed with a non-binding -1. No formal result message was sent."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [
+    "gh:apache/iceberg-rust#3184",
+    "gh:apache/iceberg-rust#3174",
+    "gh:apache/iceberg-rust#1325"
+  ],
+  "why_it_matters": "A cargo publish dry-run check in CI is being added so that unpublishable crate dependencies are caught on pull requests."
+}

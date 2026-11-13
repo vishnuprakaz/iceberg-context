@@ -1,0 +1,44 @@
+{
+  "id": "thread/t-b838f79509420b04",
+  "_input_hash": "sha256:53e57133f6152a764596",
+  "sources": [
+    "devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057",
+    "devlist:rydk12wxqs73ynfj80v21xbsgq520q9h",
+    "devlist:ol5mok9821468bfkctq4hm638pynvjvb",
+    "devlist:q1bybsc9owhf9xq68lv1317ggf4rr8hs"
+  ],
+  "title": "Should incremental (append) scan semantics be part of the spec?",
+  "summary": "Alexander Bailey asked whether incremental append scan semantics should be written into the table spec. Today the spec is silent, the Java IncrementalAppendScan is the de facto reference, and PyIceberg, iceberg-cpp and iceberg-rust each follow it. He noted that the REST scan-planning API already exposes start-snapshot-id (exclusive) and end-snapshot-id (inclusive), so catalogs must produce incremental plans whose correctness is defined only by Java's behaviour, and argued the result should not depend on where the scan is planned. He listed ambiguities to pin down, such as ancestry traversal and what happens when the start is not an ancestor of the end. xndai said the REST plan API returns files and so only covers the append-only case, and that should be clarified. Ryan Blue noted that v4 changes are planned to tighten change-detection requirements so the spec supports all incremental scans. Manu Zhang pointed to the V4 Single File Commits sync to follow that work.",
+  "positions": [
+    {
+      "who": "Alexander Bailey",
+      "stance": "Incremental append scan semantics should be codified in the spec so client-side and catalog-side planning return the same files, rather than relying on Java's behaviour.",
+      "source": "devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057"
+    },
+    {
+      "who": "xndai",
+      "stance": "The REST plan API returns a file set and so can only support append-only incremental scans; that limit should be stated, and scanning deletes and updates between snapshots needs a separate design.",
+      "source": "devlist:rydk12wxqs73ynfj80v21xbsgq520q9h"
+    },
+    {
+      "who": "rdblue",
+      "stance": "V4 changes are planned to tighten change-detection requirements so the spec supports all kinds of incremental scans without relying on one implementation's conventions.",
+      "source": "devlist:ol5mok9821468bfkctq4hm638pynvjvb"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "No decision on adding incremental append scan semantics to the current spec; the proposer was pointed to the V4 single file commits sync, where change-detection requirements are being worked on."
+  },
+  "initiatives": [
+    "rest-spec",
+    "v4-general"
+  ],
+  "refs": [
+    "gh:apache/iceberg-python#3512",
+    "gh:apache/iceberg-cpp#559",
+    "gh:apache/iceberg-rust#2337",
+    "yt:G5m039mXgG4"
+  ],
+  "why_it_matters": "Until the spec defines incremental scans, implementations and REST catalogs have only the Java behaviour to follow."
+}

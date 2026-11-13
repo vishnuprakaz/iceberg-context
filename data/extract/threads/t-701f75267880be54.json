@@ -1,0 +1,26 @@
+{
+  "id": "thread/t-701f75267880be54",
+  "_input_hash": "sha256:bae752020e61fefeae3c",
+  "sources": [
+    "devlist:sgtobp6b3w9b3t4xdzo2xfgrsz960yxv",
+    "devlist:3w6gqfb37fbtondf052cmo4dlzx8ft7g",
+    "devlist:sj1q3q6l77wmoy2dgtc86qb7g3n6qj7j"
+  ],
+  "title": "Vote: release Apache Iceberg Go v0.6.0 RC2",
+  "summary": "zeroshade proposed release candidate RC2 of Apache Iceberg Go v0.6.0, based on commit 350ae727, with the source release hosted on the Apache dist dev area, and asked voters to verify checksums and signatures, run the unit tests and vote within at least 72 hours. nssalian reported verifying on macOS the SHA-512 checksum, GPG signature, tag, LICENSE and NOTICE files, RAT license check, absence of binary artifacts, and a successful build and test run. The other replies were +1 votes without further comment. No -1 or +0 votes and no issues were raised. The thread as captured ends with the last vote on 26 May 2026 and does not contain a result message.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "The candidate verifies cleanly: checksum, signature, tag, license files, RAT check, build and tests all pass.",
+      "source": "devlist:3w6gqfb37fbtondf052cmo4dlzx8ft7g"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. The votes shown are all +1: 2 marked binding, 4 marked non-binding and 1 unmarked."
+  },
+  "initiatives": [
+    "iceberg-go"
+  ],
+  "refs": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "meeting/read-restrictions/2026-06-09",
+  "_input_hash": "sha256:91b2044d42329563bccc",
+  "sources": [
+    "meet:read-restrictions:2026-06-09"
+  ],
+  "summary": "The Read Restrictions sync notes for 9 June 2026 consist of two agenda lines and a recording link, with no outcomes recorded. The first item was what is expected of the client in order to move forward with v1, described as how to craft a shared responsibility model between the admin and the catalog. The second item stated that the Iceberg functions are ready for review. No pull requests or documents are linked in this section.",
+  "topics": [
+    {
+      "title": "Client expectations for moving forward with v1",
+      "summary": "Agenda item on what is expected of the client for v1 to move forward, framed as how to craft a shared responsibility model between admin and catalog. The notes record no discussion or outcome.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "yt:GUhCr-PnSo8"
+      ],
+      "open_questions": [
+        "What is expected of the client in v1, and how is responsibility shared between the admin and the catalog?"
+      ]
+    },
+    {
+      "title": "Iceberg functions ready for review",
+      "summary": "Agenda item stating that the Iceberg functions are ready for review. The notes link no pull request and record no outcome.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

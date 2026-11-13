@@ -1,0 +1,43 @@
+{
+  "id": "thread/t-97adb77b6cd93c6b",
+  "_input_hash": "sha256:c105ff03bac08aab008c",
+  "sources": [
+    "devlist:0r9fhdb1zc74ycz0hx2wyl1xyn48jyxl",
+    "devlist:mp9fsgjm9bbtrk4rctrd0ho9p4rg9kjr",
+    "devlist:bpgl12cdvwnwpzppzt6cw1993qv13pxo",
+    "devlist:1zs16ykm5dv065djhoqbx8r82sv1r3w0"
+  ],
+  "title": "Spec changes in release notes",
+  "summary": "While reviewing the 1.12.0 release notes, Péter Váry noticed that the Java binary release notes list spec changes, such as the SQL UDF specification (#14117), bringing back added-rows in snapshot fields (#14048) and clarified restrictions for geometry types in V3 (#14250). He called this misleading, because spec changes take effect when the vote happens and the PR merges, or when a spec version is finalized, and have no connection to Java binary releases. He proposed to stop including them in the Java release notes and suggested a separate page for spec version changes. Manu Zhang agreed, noting that the spec and the Java implementation live in one repository but are released separately. Szehon agreed as well. Kevin Liu agreed and suggested removing the spec entries retrospectively from the releases page and perhaps moving them to a changelog on the spec page. Nobody objected.",
+  "positions": [
+    {
+      "who": "pvary",
+      "stance": "Stop listing spec changes in Java release notes, since spec changes are not tied to Java binary releases, and give them a dedicated page.",
+      "source": "devlist:0r9fhdb1zc74ycz0hx2wyl1xyn48jyxl"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Agrees; the spec and Java implementation share a repository but are released separately, so their notes should be separated.",
+      "source": "devlist:mp9fsgjm9bbtrk4rctrd0ho9p4rg9kjr"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Agrees, and suggests removing spec entries from past release notes and possibly moving them to a changelog on the spec page.",
+      "source": "devlist:1zs16ykm5dv065djhoqbx8r82sv1r3w0"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "All four participants agreed that spec changes should be left out of Java release notes; no PR or follow-up action is recorded in the thread."
+  },
+  "initiatives": [
+    "java-releases",
+    "community-process"
+  ],
+  "refs": [
+    "gh:apache/iceberg#14117",
+    "gh:apache/iceberg#14048",
+    "gh:apache/iceberg#14250"
+  ],
+  "why_it_matters": "Release notes for Java releases are expected to stop listing spec changes, which may move to a changelog of their own."
+}

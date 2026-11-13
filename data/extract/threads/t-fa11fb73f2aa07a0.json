@@ -1,0 +1,31 @@
+{
+  "id": "thread/t-fa11fb73f2aa07a0",
+  "_input_hash": "sha256:eade75d3651a45d06d0e",
+  "sources": [
+    "devlist:wtntmmsmnxscfb8w1hr4slvmt2r8ghn5",
+    "devlist:lvjhc6xjhv8jcsdp6xop0g5nvo7bvpgw",
+    "devlist:63dgst6cph9732jzwb3vp09yzk2nmfkj",
+    "devlist:2tm94lbc5x3683s5t8hrgwm41jdby8bv",
+    "devlist:y7h7o6yflxl5g3lbznwyjjq76qoo6xtw",
+    "devlist:v8md335tv581zk6zmcdslv7s4htlx44y",
+    "devlist:ovs974octxm1d899jp08hwsm44z90ppl",
+    "devlist:r422xdj4vrmrp5ghlf4nb3qor1ywwt3k"
+  ],
+  "title": "Spec: addition of relative paths to v4",
+  "summary": "This bundle holds only replies to the vote on adding relative paths to the V4 spec; the message that opened the vote, and any result message, are not included. All eight replies are +1. Fokko thanked Dan and Talat for working on the change. zhjwpku voted +1 (non-binding) and said he had left a few minor comments that would be good to address. kevinjqliu and Steve remarked that it was good to see the work come together and V4 progressing; Steve credited Dan with the spec change. RussellSpitzer, stevenzwu and kevinjqliu marked their votes binding, while laskoviymishka, zhjwpku, huaxingao and Steve marked theirs non-binding, and Fokko did not mark his. No concerns or objections were raised in these replies.",
+  "positions": [
+    {
+      "who": "zhjwpku",
+      "stance": "Votes +1 (non-binding) and left a few minor comments that should be addressed.",
+      "source": "devlist:lvjhc6xjhv8jcsdp6xop0g5nvo7bvpgw"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. The replies show eight +1 votes: three marked binding, four marked non-binding and one unmarked; no -1 votes."
+  },
+  "initiatives": [
+    "v4-relative-paths"
+  ],
+  "refs": []
+}

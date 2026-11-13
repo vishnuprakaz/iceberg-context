@@ -1,0 +1,52 @@
+{
+  "id": "thread/t-3f1ab71baa4cf070",
+  "_input_hash": "sha256:ffc8fa2a6a9c3ec1e6f5",
+  "sources": [
+    "devlist:6kmh92wl6qkw08dpgv04bl51v590phbl",
+    "devlist:q329pwcopzc601lq86k4zd12ohxnhdq2",
+    "devlist:8t1otyz8r1tq5qjfp0pqg6vyv60x823f",
+    "devlist:dm9j0gzc990fxycpv071z1n5mwf7clj0",
+    "devlist:rz6fnbd5b6b0pcr61yhqwn75t0rkbnxs",
+    "devlist:qgp9zs3z4y2cc7pltx83prgxd7f8hrt2",
+    "devlist:o27vy0wbojp0yorns09kng8nmks8xzzj",
+    "devlist:z7jhm8dl7bm2h7gzglqp43sk802pbw67"
+  ],
+  "title": "Spark versioning strategy with accelerated Spark releases",
+  "summary": "anuragmantri asked how Iceberg should support Spark versions now that Spark plans quarterly minor releases with six-month maintenance and a yearly LTS. Main supports 3.5, 4.0 and 4.1, and CI is already a bottleneck, so he suggested at most three versions and two policy options: the LTS plus a rolling window of the two latest minors, or the LTS plus selected minors. szehon-ho explained that Spark promises no breaking public API changes within a major version, so one Iceberg-Spark jar could in theory run on later minors, but verifying that needs CI. pan3793 doubted this because Iceberg uses Spark internal Catalyst APIs with no compatibility guarantee. The discussion settled on the LTS plus the two latest minors. Participants agreed to merge Spark 4.2 support first and then vote on removing Spark 4.0; aokolnychyi agreed and said a module per Spark version remains necessary.",
+  "positions": [
+    {
+      "who": "anuragmantri",
+      "stance": "Adopt an explicit policy with at most three Spark versions, restricted to one LTS and two minors because of CI limits.",
+      "source": "devlist:8t1otyz8r1tq5qjfp0pqg6vyv60x823f"
+    },
+    {
+      "who": "szehon-ho",
+      "stance": "A jar built for one minor would in theory work on later minors of the same major, but given CI limits and lack of confidence the LTS plus two latest minors is more likely.",
+      "source": "devlist:rz6fnbd5b6b0pcr61yhqwn75t0rkbnxs"
+    },
+    {
+      "who": "pan3793",
+      "stance": "Cross-minor compatibility cannot be relied on because Iceberg uses internal Catalyst APIs; LTS plus two minors is reasonable if Iceberg releases about every three months, and 4.2 support should merge before a vote on dropping 4.0.",
+      "source": "devlist:qgp9zs3z4y2cc7pltx83prgxd7f8hrt2"
+    },
+    {
+      "who": "aokolnychyi",
+      "stance": "A module per Spark version is still needed because of reliance on Spark internals; LTS plus a rolling window of two minors is reasonable.",
+      "source": "devlist:z7jhm8dl7bm2h7gzglqp43sk802pbw67"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Participants converged on supporting the last Spark LTS plus the two latest minors, merging Spark 4.2 support first and then holding a separate vote to remove Spark 4.0.",
+    "source": "devlist:o27vy0wbojp0yorns09kng8nmks8xzzj"
+  },
+  "initiatives": [
+    "spark-integration"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16397",
+    "gh:apache/iceberg#14984",
+    "doc:1gBoZ4KH5zQUWpgK3M7zAN7p6Glz4S_e9bO3PvQA9sQs"
+  ],
+  "why_it_matters": "It sets expectations for which Spark versions Iceberg adds and drops as Spark moves to quarterly minors, which affects users' upgrade paths and CI load."
+}

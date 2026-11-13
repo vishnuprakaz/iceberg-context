@@ -1,0 +1,60 @@
+{
+  "id": "thread/t-98bf4fbbbb6c143a",
+  "_input_hash": "sha256:378d51b391b421d96769",
+  "sources": [
+    "devlist:j83qwbv8vplqcx7b298toxmbrbckvprf",
+    "devlist:lcss3p2jg5qmf15hdnwww3tv0b9dfj8c",
+    "devlist:6glvdyfnchbol0wrs13r0p5x27oorfdt",
+    "devlist:v6lmcgxq4rddp4fxydwk6crv1o9mh9pg",
+    "devlist:8vthqjz6ywc0fvprq67pp2ycbbfk71gr"
+  ],
+  "title": "Vote on releasing Apache Iceberg 1.11.0 RC1",
+  "summary": "These messages from the 1.11.0 RC1 vote thread cover fixes wanted before the next candidate. Ajay (ajayky-os) reported a performance regression in Spark queries on cloud storage: SerializableFileIOWithSize drops the file length, causing extra metadata calls, with a fix in a PR. Kevin Liu said the issues raised in the thread (first row ID, analyticscore, SerializableFileIOWithSize) were resolved and the 1.11.0 milestone complete, and proposed backporting several PRs to Spark 3.4 since 1.11 is its last release. Release manager Aihua (aihuaxu) wanted to cut the next candidate without waiting. Manu (manuzhang) argued for the backports, and Huaxin (huaxingao) asked to include a rewriteTablePath correctness fix. Kevin Liu opened four backport PRs; three were merged and the last awaited CI.",
+  "positions": [
+    {
+      "who": "ajayky-os",
+      "stance": "The SerializableFileIOWithSize regression, which drops file length and causes excess metadata calls on cloud storage, should be fixed in 1.11.0.",
+      "source": "devlist:j83qwbv8vplqcx7b298toxmbrbckvprf"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "The reported blockers are resolved; as an optional step, PRs missing from Spark 3.4 should be backported because this is the last release supporting it.",
+      "source": "devlist:lcss3p2jg5qmf15hdnwww3tv0b9dfj8c"
+    },
+    {
+      "who": "aihuaxu",
+      "stance": "The backports are not blocking and Spark 3.4 is deprecated, so the next RC should be cut now and the backports added only if another RC is needed.",
+      "source": "devlist:6glvdyfnchbol0wrs13r0p5x27oorfdt"
+    },
+    {
+      "who": "huaxingao",
+      "stance": "The fix for stale file_size_in_bytes of rewritten position delete files in rewriteTablePath is a correctness issue that should go into 1.11.",
+      "source": "devlist:2y1f7tf4qwv50trn459w7nbvbzgy17wq"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Since Spark 3.4 is dropped after 1.11.0, the backports should go in so it is not left in a broken state.",
+      "source": "devlist:g32677sb5tx9x4gkvphbko3owkvz0ybj"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "These messages do not state a result for the RC1 vote. The reported blockers were fixed, three of four Spark 3.4 backport PRs were merged and the fourth awaited CI, with a further release candidate planned."
+  },
+  "initiatives": [
+    "java-releases",
+    "spark-integration"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16283",
+    "gh:apache/iceberg#16284",
+    "gh:apache/iceberg#16263",
+    "gh:apache/iceberg#16258",
+    "gh:apache/iceberg#15470",
+    "gh:apache/iceberg#16306",
+    "gh:apache/iceberg#16307",
+    "gh:apache/iceberg#16308",
+    "gh:apache/iceberg#16311"
+  ],
+  "why_it_matters": "It shows which fixes and Spark 3.4 backports were pulled into 1.11.0, the last release to support Spark 3.4."
+}

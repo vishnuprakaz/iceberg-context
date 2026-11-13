@@ -1,0 +1,90 @@
+{
+  "id": "meeting/spark/2026-05-19",
+  "_input_hash": "sha256:afc6d5f5c79f77df6529",
+  "sources": [
+    "meet:spark:2026-05-19"
+  ],
+  "summary": "The Spark sync notes list highlights: shredded variant writes in Spark 4.1 with a 4.0 backport, migrations to newer DSv2 interfaces, disabling min/max aggregate pushdown for string and binary, and bug fixes. Review was requested for RewriteTablePath fixes, CALL older_than with function expressions, and three sort-related PRs. The main discussion topic was the Spark version strategy after 1.11: Spark 3.4 is removed with that release, and the proposed matrix keeps 3.5 and 4.1, removes 4.0 and adds 4.2, with a list of new Spark 4.2 features relevant to Iceberg. Spark CI improvements were also on the agenda. The notes record proposals without a stated decision.",
+  "topics": [
+    {
+      "title": "Highlights",
+      "summary": "Spark 4.1 gained support for writing shredded variant, with a Spark 4.0 backport. DSv2 upgrades migrated SparkWriteBuilder to SupportsOverwriteV2, RollBackStageTable to SupportsDeleteV2 and SparkCopyOnWriteScan to SupportsRuntimeV2Filtering. Min/max aggregate pushdown was disabled for string under any mode and for binary. Bug fixes covered a ThreadLocal leak in CommitMetadata, FileIO path and length passthrough, and an NPE in RemoveOrphanFiles with prefix listing.",
+      "initiatives": [
+        "spark-integration",
+        "variant"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14297",
+        "gh:apache/iceberg#16241",
+        "gh:apache/iceberg#16164",
+        "gh:apache/iceberg#16211",
+        "gh:apache/iceberg#16295",
+        "gh:apache/iceberg#16320",
+        "gh:apache/iceberg#16328",
+        "gh:apache/iceberg#16031",
+        "gh:apache/iceberg#16284",
+        "gh:apache/iceberg#16351"
+      ]
+    },
+    {
+      "title": "Review requests: RewriteTablePath and older_than expressions",
+      "summary": "Several RewriteTablePath PRs need review: a fix for invalid snapshot ID filtering with no activity since May 8, targetTable support and separate data/metadata file lists (both marked stale again May 15), multiple prefix support, and updating manifest delete file size after the rewrite table action. A PR supporting CALL older_than with function expressions has had no activity since April 25 and needs a policy check.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16220",
+        "gh:apache/iceberg#15975",
+        "gh:apache/iceberg#15412",
+        "gh:apache/iceberg#15382",
+        "gh:apache/iceberg#14355",
+        "gh:apache/iceberg#15470",
+        "gh:apache/iceberg#16058"
+      ]
+    },
+    {
+      "title": "Review requests: sort improvements",
+      "summary": "Three related PRs together enable sort-aware compaction and sort elimination: implementing the SupportsReportOrdering DSv2 API (reviewed by manuzhang on May 15, awaiting a response), a K-way merge rewrite strategy for pre-sorted data files, and a rewrite-stale-sort-order option that rewrites only files not matching the current sort order.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14948",
+        "gh:apache/iceberg#16305",
+        "gh:apache/iceberg#16330"
+      ]
+    },
+    {
+      "title": "Spark version strategy after 1.11",
+      "summary": "With the 1.11 release Spark 3.4 is removed, and the notes say in-flight Spark 3.4 PRs should be pinged or closed. The proposed matrix keeps Spark 3.5 as the single 3.x line, removes 4.0, keeps 4.1 and adds 4.2. New Spark 4.2 features listed include the SupportsReportOrdering interface, sort elimination via DSv2, K-way merge for sorted reads, a CDC connector API, CREATE TABLE LIKE for V2, enhanced partition stats filtering and PartitionPredicate in metadata-only delete. The notes present the matrix as a proposal and record no decision.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14122",
+        "gh:apache/spark#55036",
+        "gh:apache/spark#55116"
+      ],
+      "open_questions": [
+        "Should the Spark matrix become 3.5, 4.1 and 4.2, with 4.0 removed?"
+      ]
+    },
+    {
+      "title": "Spark CI improvements",
+      "summary": "Spark CI improvements were on the agenda, tracked in an issue. The notes give no details.",
+      "initiatives": [
+        "spark-integration",
+        "community-process"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16397"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Ping or close all in-flight Spark 3.4 PRs."
+    }
+  ],
+  "participants": []
+}

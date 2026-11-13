@@ -1,3 +1,66 @@
+{"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-05-20", "src": "meeting/catalog/2026-05-20", "to": "person/c-thiel"}
+{"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-05-20", "src": "meeting/catalog/2026-05-20", "to": "person/manisin"}
+{"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-05-20", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-06-10", "src": "meeting/catalog/2026-06-10", "to": "person/c-thiel"}
+{"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-06-10", "to": "group/catalog"}
+{"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-07-01", "to": "group/catalog"}
+{"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-07-22", "to": "group/catalog"}
+{"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-08-12", "to": "group/catalog"}
+{"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-06-16", "to": "group/column-updates"}
+{"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-06-30", "to": "group/column-updates"}
+{"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-07-14", "to": "group/column-updates"}
+{"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-07-28", "to": "group/column-updates"}
+{"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-08-11", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "named", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "person/gabeiglio"}
+{"confidence": "extracted", "rel": "named", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "person/vladislav-sidorovich"}
+{"confidence": "observed", "rel": "of", "src": "meeting/community/2026-05-13", "to": "group/community"}
+{"confidence": "observed", "rel": "of", "src": "meeting/community/2026-06-03", "to": "group/community"}
+{"confidence": "extracted", "rel": "named", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "named", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "of", "src": "meeting/community/2026-06-24", "to": "group/community"}
+{"confidence": "observed", "rel": "of", "src": "meeting/community/2026-07-15", "to": "group/community"}
+{"confidence": "observed", "rel": "of", "src": "meeting/community/2026-08-05", "to": "group/community"}
+{"confidence": "observed", "rel": "of", "src": "meeting/constraints/2026-06-04", "to": "group/constraints"}
+{"confidence": "observed", "rel": "of", "src": "meeting/constraints/2026-06-18", "to": "group/constraints"}
+{"confidence": "observed", "rel": "of", "src": "meeting/index/2026-05-27", "to": "group/index"}
+{"confidence": "observed", "rel": "of", "src": "meeting/index/2026-06-08", "to": "group/index"}
+{"confidence": "observed", "rel": "of", "src": "meeting/index/2026-06-22", "to": "group/index"}
+{"confidence": "observed", "rel": "of", "src": "meeting/index/2026-07-06", "to": "group/index"}
+{"confidence": "observed", "rel": "of", "src": "meeting/index/2026-07-20", "to": "group/index"}
+{"confidence": "observed", "rel": "of", "src": "meeting/index/2026-08-03", "to": "group/index"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-05-14", "to": "group/materialized-views"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-05-28", "to": "group/materialized-views"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-06-25", "to": "group/materialized-views"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-07-07", "to": "group/materialized-views"}
+{"confidence": "observed", "rel": "of", "src": "meeting/python/2026-05-26", "to": "group/python"}
+{"confidence": "observed", "rel": "of", "src": "meeting/python/2026-06-30", "to": "group/python"}
+{"confidence": "observed", "rel": "of", "src": "meeting/python/2026-07-28", "to": "group/python"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-05-26", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-06-09", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-06-23", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "named", "source": "meet:read-restrictions:2026-07-07", "src": "meeting/read-restrictions/2026-07-07", "to": "person/singhpk234"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-07-07", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-07-21", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-08-04", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-05-19", "to": "group/spark"}
+{"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-06-16", "to": "group/spark"}
+{"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-07-21", "to": "group/spark"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-05-18", "to": "group/v4-metadata"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-01", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "person/stevenzwu"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-15", "to": "group/v4-metadata"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-29", "to": "group/v4-metadata"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-07-13", "to": "group/v4-metadata"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-07-27", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-08-10", "src": "meeting/v4-metadata/2026-08-10", "to": "person/anoopj"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-08-10", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-06-04", "to": "group/variant"}
+{"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-07-02", "to": "group/variant"}
+{"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-08-06", "to": "group/variant"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/avro", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/catalog", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/cli", "to": "repo/iceberg-python"}
@@ -453,3 +516,89 @@
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.9.0", "to": "repo/iceberg-rust"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.9.1", "to": "repo/iceberg-rust"}
 {"confidence": "observed", "rel": "release_of", "src": "release/terraform-provider-iceberg-0.2.0", "to": "repo/terraform-provider-iceberg"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-019f2b7ebaa9b671", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-01f21da0dbe27e4f", "to": "person/talatuyarer"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-07dfa8ee9a2cbc37", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-08d45a08d5e25761", "to": "person/singhpk234"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-09a6303d5e1af395", "to": "person/kevinjqliu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-0eb2bea9a6273744", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-1579f8b73b2494e8", "to": "person/manuzhang"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-197c5e8a5755ba9a", "to": "person/Kurtiscwright"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-1d01d1d5d742962e", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-1d3c20c5c64f7fcb", "to": "person/pvary"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-218176922d9b85f8", "to": "person/laskoviymishka"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-26347b0fcdb11b56", "to": "person/Fokko"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-2932dfb021d2cdf3", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-2b9326ecf95a23e1", "to": "person/stevenzwu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-31c8012d43fc214e", "to": "person/amogh-jahagirdar"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-31edf75f84e57ef0", "to": "person/RussellSpitzer"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-33958badf295b701", "to": "person/danielcweeks"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-3548f77d85b2a887", "to": "person/zeroshade"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-36974638264b04f5", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-3948c81a19bd7c87", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-3a558d67a81956a4", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-3aecd28f8883bc90", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-3d4f26de01d84b04", "to": "person/simpleqt"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-3f1ab71baa4cf070", "to": "person/anuragmantri"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-418bd34af8479e56", "to": "person/zhjwpku"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-43bc363d6f78db31", "to": "person/aihuaxu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-4438607328a252c1", "to": "person/laskoviymishka"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-447ec59251977712", "to": "person/stevenzwu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-44dd42ceee95da54", "to": "person/huaxingao"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-44ddd498b576dea4", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-4a4da37a5d6b9841", "to": "person/xndai"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-4cd20220f5ceef8a", "to": "person/talatuyarer"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-4f8a5ccaf1b60f7d", "to": "person/varun-lakhyani"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-50827b2ab1b71544", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-51925c451e4cf72d", "to": "person/zeroshade"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-5744501ab331d678", "to": "person/moomindani"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-584ad622bd8bd6d8", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-59cdd1fc4c8fabde", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-5dd317254d01abc3", "to": "person/manuzhang"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-69a16596451dbbe3", "to": "person/Kurtiscwright"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-6a3eec4494bb23b1", "to": "person/Fokko"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-6b556fb65dd1775f", "to": "person/varun-lakhyani"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-6c49480676915b91", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-6f85b49f1b2788b5", "to": "person/Fokko"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-701f75267880be54", "to": "person/zeroshade"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-709611fe90159e57", "to": "person/rambleraptor"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-7347c79968e5d24f", "to": "person/zhjwpku"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-7cb3b0fb5a513b73", "to": "person/adutra"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-7ff555b89c73c647", "to": "person/Kurtiscwright"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-88bfc4197adf37a9", "to": "person/amogh-jahagirdar"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-89ed0cd9b2602f90", "to": "person/kevinjqliu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-8a1d2c357afe958e", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-8ba58766eb647f36", "to": "person/Fokko"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-8e05ea5cfb5440f5", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-8fe86d8b03cd0963", "to": "person/wombatu-kun"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-95092e2c0cd7ae07", "to": "person/stevenzwu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-9704aed6923e08fc", "to": "person/huaxingao"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-97adb77b6cd93c6b", "to": "person/pvary"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-97f54e45553021e0", "to": "person/amogh-jahagirdar"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-993bbf42f9af82cf", "to": "person/aihuaxu"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-9da84e6ec274a52c", "to": "person/rdblue"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-a9927e0959daeebf", "to": "person/zeroshade"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-aa8645f8aa979099", "to": "person/rambleraptor"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-b00cc9ec1c194566", "to": "person/anoopj"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-b9627d1f1c298c57", "to": "person/pvary"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-b9f73c21a4179dc6", "to": "person/singhpk234"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-bacc923f0d0a8d51", "to": "person/laskoviymishka"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-bd70f40d4eb1876d", "to": "person/Kurtiscwright"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-c455572cb549f180", "to": "person/laskoviymishka"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-c8eead2c8a5ef24b", "to": "person/zhjwpku"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-cbbca521b592906a", "to": "person/CTTY"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-cddba95ff30a75d7", "to": "person/singhpk234"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-ceb017adb8f59712", "to": "person/wgtmac"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-cf32601a8df15f27", "to": "person/adutra"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-d0d4a69708620931", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-db8ec8a6f20fbd0d", "to": "person/anoopj"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-e1938ca21167e827", "to": "person/zhjwpku"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-e2b669d1053d1cbb", "to": "person/nssalian"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-e3df87d32bc07907", "to": "person/huaxingao"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-e5e8356da0183206", "to": "person/zeroshade"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-eb9773fe398a7232", "to": "person/Fokko"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-ed866fa82546916e", "to": "person/xndai"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-f324967b2d45dc23", "to": "person/mbutrovich"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-f9e1b8daeae100d8", "to": "person/rambleraptor"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-fa11fb73f2aa07a0", "to": "person/Fokko"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-fa69aa12d0302acd", "to": "person/zeroshade"}

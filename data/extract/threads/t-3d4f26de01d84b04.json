@@ -1,0 +1,41 @@
+{
+  "id": "thread/t-3d4f26de01d84b04",
+  "_input_hash": "sha256:2550593d7f155aeb31a2",
+  "sources": [
+    "devlist:5v8j1zj2l8ntygph47r0k61xyskxc5o1",
+    "devlist:3b4q7zk420g45h8vwxxooh90tzpxt69r",
+    "devlist:n4j0z773lh7y4mobjx3hl1pjvsjsz601",
+    "devlist:hk1h60k1moyozllpkyk264oq8x33o7xs"
+  ],
+  "title": "Reducing per-row position delete index probes in the vectorized read path",
+  "summary": "simpleqt proposed PR #18027 (issue #18026) to cut the cost of Spark's vectorized reader calling PositionDeleteIndex.isDeleted once per row, although a batch covers a contiguous ascending range of positions. The change adds a default method forEachInRange(posStart, length, consumer) to PositionDeleteIndex, whose default is the existing per-position loop, and overrides it in BitmapPositionDeleteIndex; ColumnarBatchUtil uses it only when the scan has no equality deletes. Reported results are 2.6x to 9.3x less delete-check CPU and 13 to 19 percent end to end on narrow integer projections, with no measurable gain at ten or more columns. The author asked mainly whether adding another default method to the interface is acceptable. Peter (pvary) suggested a batch iterator like RoaringBatchIterator; the author benchmarked it and found it slightly slower than the PR's approach, and kept the current design while offering to explore a persistent iterator.",
+  "positions": [
+    {
+      "who": "simpleqt",
+      "stance": "Add a forEachInRange default method to PositionDeleteIndex so a batch's position range is resolved once, keeping the per-row loop as the default for other implementations.",
+      "source": "devlist:5v8j1zj2l8ntygph47r0k61xyskxc5o1"
+    },
+    {
+      "who": "pvary",
+      "stance": "Consider something like a PositionBatchIterator backed by RoaringBatchIterator instead.",
+      "source": "devlist:n4j0z773lh7y4mobjx3hl1pjvsjsz601"
+    },
+    {
+      "who": "simpleqt",
+      "stance": "A BatchIterator measured slightly slower than forEachInRange in JMH and would add a new API and lifecycle, so the PR keeps the default-method approach.",
+      "source": "devlist:hk1h60k1moyozllpkyk264oq8x33o7xs"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No decision on the interface addition is recorded; the author kept forEachInRange after benchmarking the suggested batch iterator and offered to investigate a persistent-iterator variant."
+  },
+  "initiatives": [
+    "spark-integration"
+  ],
+  "refs": [
+    "gh:apache/iceberg#18027",
+    "gh:apache/iceberg#18026"
+  ],
+  "why_it_matters": "The PR adds a method to the core PositionDeleteIndex interface, so it needs maintainer agreement on the API shape before it can land."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "meeting/constraints/2026-06-18",
+  "_input_hash": "sha256:69eb42a5a6b82d611611",
+  "sources": [
+    "meet:constraints:2026-06-18"
+  ],
+  "summary": "The notes section for the Constraints Support sync of 2026-06-18 contains only a link to the recording and a link to a separate document of Gemini-generated notes. No agenda, discussion points, decisions or action items are written in the section itself, and no transcript was included, so nothing about the content of the meeting can be summarized from this source.",
+  "topics": [
+    {
+      "title": "Constraints support sync (links only)",
+      "summary": "The notes section holds only links to the recording and to an AI-generated notes document. No discussion content, decisions or open questions are recorded in the source.",
+      "initiatives": [
+        "constraints"
+      ],
+      "refs": [
+        "doc:183A3vTH7OWZWI5tNDD97cvbqCY4ZtQ-7"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

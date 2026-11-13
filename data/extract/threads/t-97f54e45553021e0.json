@@ -1,0 +1,39 @@
+{
+  "id": "thread/t-97f54e45553021e0",
+  "_input_hash": "sha256:d206e81536060a6ef808",
+  "sources": [
+    "devlist:k5pfk4rork0mp2p303pd70q9nx0tsl9w",
+    "devlist:o81rwpwhcvvro6qlxyfmwzostjr9zg1l",
+    "devlist:dxkp581cs9kq2s1qh68dxtgctvffvxyj"
+  ],
+  "title": "1.11.1 and 1.10.3 patch releases",
+  "summary": "Amogh Jahagirdar opened a discussion on patch releases after finding a bug where the Spark rewrite manifests procedure does not carry over first row IDs correctly, for which he has a fix in PR #16699. He asked which other fixes people want included, reminding that patch releases typically cover correctness fixes, security fixes or significant regressions. He also asked whether v3 metadata correctness fixes should keep being backported to 1.10 or only go to 1.11, and argued for continuing on 1.10 because many clients run it and a patch upgrade is easier than a minor upgrade. Steven Wu supported both a 1.11.1 and a 1.10.3 release and noted that a 1.11.1 milestone already exists. Yufei Gu agreed. Dan Weeks agreed as well, provided the 1.10 backports stay narrow.",
+  "positions": [
+    {
+      "who": "amogh-jahagirdar",
+      "stance": "Do patch releases, and keep backporting v3 metadata correctness fixes to 1.10 since many clients are on it.",
+      "source": "devlist:k5pfk4rork0mp2p303pd70q9nx0tsl9w"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Supports both 1.11.1 and 1.10.3; a 1.11.1 milestone already exists.",
+      "source": "devlist:o81rwpwhcvvro6qlxyfmwzostjr9zg1l"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Supports it as long as the 1.10 backports are kept narrow.",
+      "source": "devlist:dxkp581cs9kq2s1qh68dxtgctvffvxyj"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "All repliers supported doing both 1.11.1 and 1.10.3 patch releases, with narrow backports to 1.10."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16699"
+  ],
+  "why_it_matters": "The 1.10 line continues to receive v3 correctness fixes, so users on 1.10 can pick them up with a patch upgrade."
+}

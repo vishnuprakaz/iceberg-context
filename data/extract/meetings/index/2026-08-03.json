@@ -1,0 +1,49 @@
+{
+  "id": "meeting/index/2026-08-03",
+  "_input_hash": "sha256:73b840a591df348c79f3",
+  "sources": [
+    "meet:index:2026-08-03"
+  ],
+  "summary": "The notes for this index sync are a proposed agenda. Offline discussions produced a recommendation to prevent scope creep by limiting the index to a single layout and a single use case, full key lookup: the index has a specific depth requirement and performance guarantee for only a single transform, and using it requires the full key and knowledge of the transform applied before sorting. Two open questions on the draft spec remain: whether transform functions are an enum or an Iceberg expression, where the author leans toward an enum, and whether index metadata history should be kept. The notes record no decisions from the meeting.",
+  "topics": [
+    {
+      "title": "Limit scope to a single layout and full key lookup",
+      "summary": "A recommendation from offline discussions is to limit the scope to a single layout and a single use case, full key lookup, to prevent scope creep. The index would have a specific depth requirement and performance guarantee for only a single transform, and getting that performance requires the full key and knowing how to implement the transform used before sorting. The notes present this as a recommendation, not a recorded decision.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ]
+    },
+    {
+      "title": "Transform functions: enum or Iceberg expression",
+      "summary": "The open question is whether transform functions should be an enum or an Iceberg expression. The author leans toward an enum, reasoning that otherwise engines cannot share the index because no other guarantees are planned.",
+      "initiatives": [
+        "secondary-indexes",
+        "expressions-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ],
+      "open_questions": [
+        "Should transform functions be an enum or an Iceberg expression?"
+      ]
+    },
+    {
+      "title": "Index history handling",
+      "summary": "The notes repeat that most database systems treat index changes as drop-and-recreate, so keeping index metadata history has little value. Under that approach maintenance creates a new metadata.json and swaps it in atomically, and the catalog cleans up obsolete metadata and index data files per its retention policy.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ],
+      "open_questions": [
+        "Should index metadata history be maintained?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

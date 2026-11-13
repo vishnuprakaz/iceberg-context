@@ -1,0 +1,50 @@
+{
+  "id": "thread/t-6b0913d5ecae698f",
+  "_input_hash": "sha256:dc13b1f38f39e27d9983",
+  "sources": [
+    "devlist:r5r3vpmrfy9wmmb4sdybwcjz1c4wld5b",
+    "devlist:1gt2f69yr44yxy580mc982p9o3qk7r8l",
+    "devlist:5g6wpfdy0glphqcgjdol179dzfd9bn5l",
+    "devlist:32mtdxdlq7w5j52rpfn802n6rphvhdrw",
+    "devlist:65rrbbl38c31q4dgccxv31zbj89ldfwb"
+  ],
+  "title": "First-class Tag concept in the Iceberg REST Catalog",
+  "summary": "EJ Wang, working on tagging in Apache Polaris, proposed standardizing a first-class Tag in the REST catalog spec: a Tag entity with namespace-level CRUD, attachments with a value on tables, columns (by field-id), views and namespaces, a reverse lookup endpoint, and normative clauses on privileges, visibility and rename atomicity. Typed multi-field values, a governed/standard distinction and tag-to-policy binding were left out of the first pass. flyrain was concerned that catalogs and engines would interpret tags differently, so identical structures would not be interoperable in behavior. laskoviymishka pointed to the labels proposal (#15521, OpenAPI PR #15750) and suggested treating labels as the attachment mechanism with tags as a governance model on top. EJ Wang preferred Tag as a separate first-class REST concept, with storage shared with labels left as a catalog implementation choice, and proposed paired proposals with a coordinated boundary and a sync before the design doc. No decision was reached.",
+  "positions": [
+    {
+      "who": "EJ Wang",
+      "stance": "A first-class Tag entity with identity, allowed values and attachments should be standardized in the REST catalog spec, complementing read restrictions as the classification input side.",
+      "source": "devlist:r5r3vpmrfy9wmmb4sdybwcjz1c4wld5b"
+    },
+    {
+      "who": "EJ Wang",
+      "stance": "Tag should stay a separate first-class REST concept rather than depend on labels at the spec level; reusing label machinery for storage is a catalog implementation choice.",
+      "source": "devlist:32mtdxdlq7w5j52rpfn802n6rphvhdrw"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Labels already cover most of the attachment side, so Tag definitions should be built on top of the labels track rather than as a parallel attachment mechanism.",
+      "source": "devlist:5g6wpfdy0glphqcgjdol179dzfd9bn5l"
+    },
+    {
+      "who": "flyrain",
+      "stance": "A new REST catalog entity should improve interoperability, and tags may not because their behavioral semantics vary across systems; if tags are added they should be a separate first-class entity.",
+      "source": "devlist:65rrbbl38c31q4dgccxv31zbj89ldfwb"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "The thread ends with EJ Wang planning a sync with the labels author and a full design doc, and flyrain still unconvinced that tags belong in the REST catalog spec."
+  },
+  "initiatives": [
+    "catalog-labels",
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16165",
+    "gh:apache/iceberg#15521",
+    "gh:apache/iceberg#15750",
+    "gh:apache/iceberg#13879"
+  ],
+  "why_it_matters": "Whether tags become a separate REST catalog entity or a layer on labels decides how the two in-flight proposals are scoped."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "thread/t-43bc363d6f78db31",
+  "_input_hash": "sha256:78f901d0344286afdbb4",
+  "sources": [
+    "devlist:j1v2yc69sbh7p85oftcy9tdqph5sxqt7",
+    "devlist:kw0s6p4jg8rf3cg63bhxpjj6nfv44qpj",
+    "devlist:kl4ffxynzompo1svwt29bmydol7b1x9d",
+    "devlist:0n1hb3lrgsz8jm8q1skgzs9mf4rvosjz",
+    "devlist:csplkdc6c2w8whtg98gbort4jbh2g1tx",
+    "devlist:2dws3p3ozk67k177nvy8pvjtkjz02z3w",
+    "devlist:n2pvczw75t92070yk5opyjpscx0o1jxj"
+  ],
+  "title": "Vote on releasing Apache Iceberg 1.11.0 RC1",
+  "summary": "This part of the 1.11.0 RC1 vote thread is about what should go into the next candidate. Aihua, the release manager, asked how critical a long-standing bug was and whether it should be added to the 1.11.0 milestone, and mentioned PR #15470. Huaxin answered that it is a correctness issue affecting readers such as Trino, Impala, Comet and iceberg-rust, but that it already exists in 1.10 and so is not a hard blocker. Steve Loughran said the SerializableFileIOWithSize fix in #16284 makes the file length more of an issue, especially for the GCS FileIO, but that #15470 was still stabilising and would be a risky last-minute patch. Kevin Liu agreed not to wait for it. Aihua reported that the last Spark backport, #16303, had merged and no blockers remained in the milestone, then announced RC4 for vote, RC2 and RC3 having been built but skipped as further backports and issues were found.",
+  "positions": [
+    {
+      "who": "huaxingao",
+      "stance": "The bug is a correctness issue but exists in 1.10 already, so it is not a hard blocker for 1.11.0.",
+      "source": "devlist:kl4ffxynzompo1svwt29bmydol7b1x9d"
+    },
+    {
+      "who": "steveloughran",
+      "stance": "The #16284 fix makes file length matter more, notably for GCS FileIO, but #15470 is still stabilising and is a dangerous last-minute patch.",
+      "source": "devlist:0n1hb3lrgsz8jm8q1skgzs9mf4rvosjz"
+    },
+    {
+      "who": "aihuaxu",
+      "stance": "With the last Spark backport merged and no blockers left in the milestone, the release should move on to the next candidate without #15470, which is not a regression.",
+      "source": "devlist:csplkdc6c2w8whtg98gbort4jbh2g1tx"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "The release should not wait for #15470, with the final call left to the release manager.",
+      "source": "devlist:2dws3p3ozk67k177nvy8pvjtkjz02z3w"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "RC1 was superseded: the release manager published RC4 for a new vote, after RC2 and RC3 were built but not put to a vote.",
+    "source": "devlist:n2pvczw75t92070yk5opyjpscx0o1jxj"
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15470",
+    "gh:apache/iceberg#16284",
+    "gh:apache/iceberg#16303"
+  ],
+  "why_it_matters": "Iceberg 1.11.0 went to RC4 without PR #15470, leaving a pre-existing correctness issue for a later release."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "thread/t-85705605bcf82331",
+  "_input_hash": "sha256:46dd61e76629e5938965",
+  "sources": [
+    "devlist:qvsvdn0nsj4wv3ox004h0948xp0c83bk",
+    "devlist:msg7kgfj4kqhpz6qd6k6h54chpr085g9",
+    "devlist:n36l5pfb8xnl38fwswco2841lo91rh47",
+    "devlist:8y4ywqsd0rxc0pq9dlnqgodq7hp0gzkd",
+    "devlist:26v1ckr0w26430gf0r9xk8zvd9pc1b3z",
+    "devlist:7nt92f494fxh7bwrz8376pg42nrpj3by"
+  ],
+  "title": "Website: versioned docs and the future of MkDocs",
+  "summary": "Max Konstantinov noted that MkDocs appears abandoned, with no contributions in about 18 months, and asked whether it is still worth pursuing mike (which builds on MkDocs) for a versioned docs dropdown, or whether Iceberg should look for a new documentation engine. rambleraptor said he had a frustrating experience with mike in iceberg-python because its CLI makes commits itself, and that a migration needs strong use cases. kevinjqliu confirmed MkDocs is abandoned but said the pinned older version works, the manual deployment process works, and migrating to mike is a big lift that may not be worth it after recent docs improvements. stevenzwu pointed out that older versions can be reached by URL but search covers only the latest version, so proper versioned docs are still wanted. Max concluded the current state is satisfactory and there is no demand strong enough to justify a new engine or mike; kevinjqliu agreed.",
+  "positions": [
+    {
+      "who": "Max Konstantinov",
+      "stance": "Wants to know whether investing in mike is wasted effort given MkDocs is abandoned; concludes there is no strong enough need for a new engine or mike yet.",
+      "source": "devlist:8y4ywqsd0rxc0pq9dlnqgodq7hp0gzkd"
+    },
+    {
+      "who": "rambleraptor",
+      "stance": "Would like a different documentation engine in principle, but a migration is a lot of work and needs use cases MkDocs cannot support; mike did not work well for iceberg-python.",
+      "source": "devlist:msg7kgfj4kqhpz6qd6k6h54chpr085g9"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "The pinned MkDocs version and manual deployment work, so neither mike nor a new engine is worth the effort now; per-version search indexes might be possible without a big migration.",
+      "source": "devlist:7nt92f494fxh7bwrz8376pg42nrpj3by"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Navigation and search should work together per version, which needs proper versioned doc support, though that is significant work.",
+      "source": "devlist:26v1ckr0w26430gf0r9xk8zvd9pc1b3z"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "The participants agreed not to migrate to mike or a new documentation engine for now; per-version search was noted as worth tracking if users ask for it.",
+    "source": "devlist:7nt92f494fxh7bwrz8376pg42nrpj3by"
+  },
+  "initiatives": [],
+  "refs": [
+    "gh:apache/iceberg#14521",
+    "gh:apache/iceberg#16368",
+    "list:vrt3oytl3dwo34wr07tkf73r0kkx0b1h"
+  ],
+  "why_it_matters": "The docs site stays on a pinned MkDocs version with the manual versioned deployment, so contributors should not expect a docs engine migration soon."
+}

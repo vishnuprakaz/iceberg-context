@@ -1,0 +1,35 @@
+{
+  "id": "thread/t-d332ec73c7f3e8cc",
+  "_input_hash": "sha256:935ba2ab6a922dd5a22b",
+  "sources": [
+    "devlist:8z0kc8vz1379lghwlcwl0jmsoym6shd7",
+    "devlist:tttbovgpx9nh0yn289qsyls615y8h0oq",
+    "devlist:sp4ocy229pwl7ncowlw55h9mhy9cnrm2"
+  ],
+  "title": "Vote to update the spec wording for the geospatial type CRS parameter",
+  "summary": "Milan Stefanovic (milastdbx) called a vote to update the wording of the CRS parameter for the geospatial types in the spec, with the change in PR #15834. Depending on how the current text is read, it can be taken as either suggestive or restrictive about how a CRS field is populated, that is, whether the 'srid:' and 'projjson:' forms are the only allowed formats or just examples. The proposal rewords the text so that the purpose is clear and unambiguous. He noted that a similar proposal was made in the Parquet community. All eight replies were +1. Steven Wu left minor comments on syntax and grammar in the PR and asked that they be addressed before merging. The bundle contains no message that closes the vote or announces the result.",
+  "positions": [
+    {
+      "who": "milastdbx",
+      "stance": "The CRS wording should be updated so it is unambiguous whether 'srid:' and 'projjson:' are the only allowed formats or examples.",
+      "source": "devlist:8z0kc8vz1379lghwlcwl0jmsoym6shd7"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Votes +1 (binding) and asks that minor syntax and grammar comments on the PR be addressed before merging.",
+      "source": "devlist:tttbovgpx9nh0yn289qsyls615y8h0oq"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. Votes cast: 5 binding +1, 2 non-binding +1 and one +1 with no binding status stated, with no 0 or -1 votes."
+  },
+  "initiatives": [
+    "geospatial"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15834",
+    "gh:apache/parquet-format#560",
+    "list:r5x0do8f241bpf565rx8s5s3wc9ogp0f"
+  ]
+}

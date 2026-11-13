@@ -1,0 +1,35 @@
+{
+  "id": "thread/t-418bd34af8479e56",
+  "_input_hash": "sha256:3816cc97d4db3add4da4",
+  "sources": [
+    "devlist:fkvc8wmzokym5hmtv8gb3w6b9k8fgbp9",
+    "devlist:kort9x9zrnh8h6zg53df3phvr2n1gtfn",
+    "devlist:ssxvs911p9h9t31738f0mq441zby89zj"
+  ],
+  "title": "Vote on releasing Apache Iceberg C++ 0.3.0 RC1",
+  "summary": "zhjwpku proposed release candidate RC1 of Apache Iceberg C++ 0.3.0, based on commit 9dbad3139df6fcdfc8d3f0bf6127dff9611ca9cd, with a vote open for at least 72 hours. Five non-binding +1 votes arrived within hours, some reporting verification of the signature and checksum, the CMake build, unit tests and the install step. manuzhang then reported that the generated `version.h` header is not installed, said he was unsure whether that blocks the release, and linked a fix. The release manager replied that the problem had not been found in previous releases, and that the vote would be aborted and an RC2 prepared.",
+  "positions": [
+    {
+      "who": "manuzhang",
+      "stance": "The generated version.h header is not installed, which may be a release blocker; a fix is available.",
+      "source": "devlist:kort9x9zrnh8h6zg53df3phvr2n1gtfn"
+    },
+    {
+      "who": "zhjwpku",
+      "stance": "The issue warrants aborting this vote and preparing RC2.",
+      "source": "devlist:ssxvs911p9h9t31738f0mq441zby89zj"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The release manager aborted the vote to prepare RC2 after the missing version.h install was reported. Five non-binding +1 votes had been cast.",
+    "source": "devlist:ssxvs911p9h9t31738f0mq441zby89zj"
+  },
+  "initiatives": [
+    "iceberg-cpp"
+  ],
+  "refs": [
+    "gh:apache/iceberg-cpp#710"
+  ],
+  "why_it_matters": "Iceberg C++ 0.3.0 RC1 was abandoned because the installed package lacked the generated version.h header."
+}

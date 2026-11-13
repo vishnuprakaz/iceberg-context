@@ -1,0 +1,55 @@
+{
+  "id": "thread/t-89ed0cd9b2602f90",
+  "_input_hash": "sha256:2f19dcd4308e4a8c3a19",
+  "sources": [
+    "devlist:vsxpk5glhf38nnm7yx8llh5p1wn5yc20",
+    "devlist:0gbbjrhcv1tc67b907q2p2lb373jr12x",
+    "devlist:82wdnh75n992r7rn5p44gdsctqv0ksyt",
+    "devlist:zl26gll47yddgoqrxxc4hb63ltq1onmg",
+    "devlist:lyvj64s0p9shs5k348sdx357mt1krdj5",
+    "devlist:x6bpjghs66f30m23oh9gtxfp9h0lsrqc",
+    "devlist:ngfrz7cdqpn2h97jm1zpfjctvclc3xzq"
+  ],
+  "title": "Iceberg Summit 2027: starting planning early",
+  "summary": "Kevin Liu raised planning for next year's Iceberg Summit, reporting that the event coordinator said most conference venues in San Francisco are already booked for 2027, and suggested starting early and reusing this year's structure and proposal. JB Onofré agreed, offered to help with the ASF paperwork and proposal, and suggested considering other locations in the Bay Area or Seattle. Sung Yun and Steven Wu supported starting the process early to keep flexibility on location and dates. Others proposed locations: Kurtis Wright the Seattle and Bellevue area, Chicago, Denver or British Columbia; Neelesh Salian venues in Santa Clara and San Jose; Bill Zhang New York City; Viktor Kessler European cities such as Barcelona, Paris and Berlin. Several people offered to volunteer. The thread does not settle on a location or date.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "Start Summit 2027 planning early because San Francisco venues are mostly booked, and reuse this year's structure and proposal.",
+      "source": "devlist:vsxpk5glhf38nnm7yx8llh5p1wn5yc20"
+    },
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Consider another location such as elsewhere in the Bay Area or Seattle if San Francisco venues are booked.",
+      "source": "devlist:82wdnh75n992r7rn5p44gdsctqv0ksyt"
+    },
+    {
+      "who": "Kurtiscwright",
+      "stance": "Supports the Seattle and Bellevue area, and suggests Chicago, Denver or British Columbia as alternatives.",
+      "source": "devlist:zl26gll47yddgoqrxxc4hb63ltq1onmg"
+    },
+    {
+      "who": "nssalian",
+      "stance": "Suggests venues south of San Francisco in Santa Clara and San Jose.",
+      "source": "devlist:lyvj64s0p9shs5k348sdx357mt1krdj5"
+    },
+    {
+      "who": "Bill Zhang",
+      "stance": "New York City could be an option if the east coast is considered.",
+      "source": "devlist:x6bpjghs66f30m23oh9gtxfp9h0lsrqc"
+    },
+    {
+      "who": "Viktor Kessler",
+      "stance": "Europe has affordable options such as Barcelona, Paris and Berlin.",
+      "source": "devlist:ngfrz7cdqpn2h97jm1zpfjctvclc3xzq"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Participants agreed to start planning Iceberg Summit 2027 earlier than in previous years. No location or date was decided in the thread."
+  },
+  "initiatives": [
+    "community-process"
+  ],
+  "refs": []
+}

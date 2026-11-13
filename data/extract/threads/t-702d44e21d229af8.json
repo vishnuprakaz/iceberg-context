@@ -1,0 +1,38 @@
+{
+  "id": "thread/t-702d44e21d229af8",
+  "_input_hash": "sha256:01a2e0ed36c406528eab",
+  "sources": [
+    "devlist:221q2qconm1zyxtor0fs86yt3st0xmo6",
+    "devlist:58dpf2hnynhbx26q54rxx5pr70b1cwtx",
+    "devlist:9k6mj1q09wcgpk99h8y9y11drtxxb3ph",
+    "devlist:57j0bgds22rhomp9ctkjw9w32mbn7r4o"
+  ],
+  "title": "Release vote: Apache Iceberg Rust 0.10.0 RC4",
+  "summary": "Danny Jones, with Shawn Chang, called a vote to release Apache Iceberg Rust 0.10.0 from tag v0.10.0-rc.4, open for at least 72 hours. Voters checked the download links, checksums and signatures, LICENSE and NOTICE files, ASF headers, the source build and tests, and the pyiceberg-core build. Xin Huang and L. C. Hsieh each reported 1839 tests passing. Neelesh Salian noted that the LICENSE and NOTICE files missing from three crates in RC3 are now present through PR #2830, a cherry-pick of #2823 and #2828, and that all ten publishable crates carry both files. liurenjie1024 cast a binding +1 after running the verify_rc.sh script. On July 20th Danny said the vote passes and that a separate result email would follow.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "+1 non-binding; the per-crate LICENSE and NOTICE files that were missing in RC3 are present in RC4.",
+      "source": "devlist:9k6mj1q09wcgpk99h8y9y11drtxxb3ph"
+    },
+    {
+      "who": "liurenjie1024",
+      "stance": "+1 binding after verifying signature, checksum, and the builds and tests of iceberg-rust and pyiceberg-core.",
+      "source": "devlist:58dpf2hnynhbx26q54rxx5pr70b1cwtx"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:57j0bgds22rhomp9ctkjw9w32mbn7r4o",
+    "note": "Danny Jones stated that the vote passes; the tally is left to a separate result email. The replies in this thread show one binding +1 and six non-binding +1 votes, with no -1."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [
+    "gh:apache/iceberg-rust#2830",
+    "gh:apache/iceberg-rust#2823",
+    "gh:apache/iceberg-rust#2828"
+  ],
+  "why_it_matters": "Iceberg Rust 0.10.0 is approved for release, with the per-crate licensing gap from RC3 fixed."
+}

@@ -1,0 +1,69 @@
+{
+  "id": "thread/t-3948c81a19bd7c87",
+  "_input_hash": "sha256:50113973bce51ed34423",
+  "sources": [
+    "devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180",
+    "devlist:12bsyhd2g7z3sf86l6j681god6jvyrf1",
+    "devlist:pn74s66ovj8hg6csv1n9cr34zt450q02",
+    "devlist:4ktckw5qlxsllhnk7vzbfbopdcslqx4c",
+    "devlist:gkhmlpbqj7oqq1ptgcbbr5bh59bsdz86",
+    "devlist:6krz0g0h3hc2v3w5x8wgbhbx1sg8gr9j",
+    "devlist:k71frpsmbzbr7r4h8orcyln57r97jlny",
+    "devlist:p53gtdlfh81vt5h59tvwqksr1fn6v8kt",
+    "devlist:sq52zcsmc7ls7gzv6o10r9r5m4kobvx4"
+  ],
+  "title": "Field ID tracking for non-materialized columns in v4",
+  "summary": "Ryan Blue proposed how v4 assigns table field IDs to values that are not written into the table, so their stats can be tracked: one table of non-materialized fields, with entry types for partition output values, collation bounds and expression results, instead of a table of all expressions. Gianluca Graziadei asked about expressions such as Hilbert curves whose meaning depends on the data distribution; Blue answered that the stored expression must completely describe a transformation of a single row, with any parameters embedded, and Graziadei agreed. Péter Váry noted that an explicit data type removes some schema evolution flexibility, asked for ID-based field references and suggested a dedicated identity type; Blue would require the data type only where it cannot be derived, agreed on ID-based references and saw no value in an identity case. Russell Spitzer asked to define an output for sort orders and how these fields are versioned. In October Váry asked whether derived virtual columns could handle this instead. No decision is recorded in the thread.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Non-materialized values should get field IDs from a single table of non-materialized fields with typed entries (partition value, collation bounds, expression value), leaving existing structures alone.",
+      "source": "devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180"
+    },
+    {
+      "who": "GGraziadei",
+      "stance": "Expressions whose values depend on the data distribution need different handling from row-deterministic ones, possibly with a persisted distribution.",
+      "source": "devlist:12bsyhd2g7z3sf86l6j681god6jvyrf1"
+    },
+    {
+      "who": "pvary",
+      "stance": "Expressions should reference fields by ID, an explicit data type trades away some schema evolution flexibility, and a compact identity-value type may be worth adding for indexes.",
+      "source": "devlist:pn74s66ovj8hg6csv1n9cr34zt450q02"
+    },
+    {
+      "who": "rdblue",
+      "stance": "The data type is required only when it cannot be derived, references are bound or ID-based, an identity special case has little value, and expressions with hidden inputs need not be designed for.",
+      "source": "devlist:4ktckw5qlxsllhnk7vzbfbopdcslqx4c"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "An output for sort orders should be defined as well, and it should be clear whether these expressions are versioned over time alongside the schema ID.",
+      "source": "devlist:gkhmlpbqj7oqq1ptgcbbr5bh59bsdz86"
+    },
+    {
+      "who": "GGraziadei",
+      "stance": "The spec should state that an expression is a deterministic function of the referenced fields with fitted parameters as literals, and that entries are immutable so a changed expression gets a new field ID.",
+      "source": "devlist:6krz0g0h3hc2v3w5x8wgbhbx1sg8gr9j"
+    },
+    {
+      "who": "pvary",
+      "stance": "Non-materialized columns could instead be handled as derived virtual columns, as described in a separate document.",
+      "source": "devlist:sq52zcsmc7ls7gzv6o10r9r5m4kobvx4"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No decision is recorded. Repliers supported the direction, and the last message raises derived virtual columns as an alternative without a reply."
+  },
+  "initiatives": [
+    "v4-content-stats",
+    "secondary-indexes",
+    "collations"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16961",
+    "gh:apache/iceberg#17893",
+    "doc:1u93kyIrTc8bt9VSTB4O0GM9S7zuXekqixJR6Id2FZC4"
+  ],
+  "why_it_matters": "The choice determines how stats for partition outputs, collation bounds and index expressions are addressed in v4 metadata."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "meeting/read-restrictions/2026-05-26",
+  "_input_hash": "sha256:5f3fcc9ee76b6af2543b",
+  "sources": [
+    "meet:read-restrictions:2026-05-26"
+  ],
+  "summary": "The Read Restrictions sync notes for 26 May 2026 are an agenda with links and record no outcomes. The first item was the capabilities header: a single static capability header versus a dedicated header on the loadTable request, and whether versioning is required given that the spec says a client that cannot understand a restriction must fail. The second was decoupling the bound expression spec enhancement so UDFs can be supported, which depends on expressions referencing source ids rather than names. The third asked whether the spec PR and the API for Actions PR are ready for final review.",
+  "topics": [
+    {
+      "title": "Capabilities header",
+      "summary": "The discussion item covered the capabilities header thread and its spec PR. Two questions were posed: whether to use a single static capability header or a dedicated header for the loadTable API request (the notes give 'X-Iceberg-Decision-Exchange: ReadRestriction' as the example), and whether versioning is required, especially since the spec says the client must fail (fail closed) if it cannot understand a restriction. No outcome is recorded.",
+      "initiatives": [
+        "read-restrictions",
+        "rest-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16394",
+        "list:xlqx6k7g625p38bxxy141wt02d00w2h4",
+        "yt:-KEesN1udyY"
+      ],
+      "open_questions": [
+        "Single static capability header, or a dedicated header for the loadTable request?",
+        "Is versioning required, given that clients must fail closed when they cannot understand a restriction?"
+      ]
+    },
+    {
+      "title": "Decoupling the bound expression spec enhancement to have UDFs",
+      "summary": "The item was about decoupling the bound expression spec enhancement so that UDFs can be included. The notes say read restrictions depend on expressions referencing a source id instead of a name, and point to an earlier thread and to Ryan's expression expansion proposal thread. No outcome is recorded.",
+      "initiatives": [
+        "read-restrictions",
+        "expressions-spec",
+        "udf"
+      ],
+      "refs": [
+        "list:nb2mp70ypt0vlj4pqrf5wzkdlcnkdyqf",
+        "list:9qly8km5q816300t93cn6d130r2lvy7r"
+      ]
+    },
+    {
+      "title": "Ready for final review?",
+      "summary": "The agenda asked whether the read restrictions spec PR and the API for Actions PR are ready for final review. The notes do not record the answer.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#13879",
+        "gh:apache/iceberg#16198"
+      ],
+      "open_questions": [
+        "Are the spec PR (#13879) and the API for Actions PR (#16198) ready for final review?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

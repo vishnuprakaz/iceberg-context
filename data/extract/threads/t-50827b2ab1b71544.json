@@ -1,0 +1,39 @@
+{
+  "id": "thread/t-50827b2ab1b71544",
+  "_input_hash": "sha256:25e0f564378dd12e39ca",
+  "sources": [
+    "devlist:3nxxy6q2cjqwjwvnpnxnj4z5vl3ddlcb",
+    "devlist:r3hvf2o8qo1zt45b81y0p25c06lxxv54",
+    "devlist:70tw7hoftdxjry61yq8txnrsrlfjx8m8",
+    "devlist:3dyrmb9j80y9739wzt3mf1tnhvppnzpy"
+  ],
+  "title": "Write-path gap for field-id-bound policy during schema evolution",
+  "summary": "The messages here start with Sung Yun (sungwy) replying to Andrei about a broader pattern; Sung wanted the community to first decide whether the 'Drift' and 'Creation' problems described in a Google Doc, which have security consequences for fine-grained access control policies, merit a first-class construct in the REST catalog write path, and planned to bring the policy case to the catalog sync. Prashant Singh saw no gap: catalogs resolve column names to field IDs before persisting a policy attachment, and when ReadRestrictions was modeled, defining and attaching policies was intentionally left as a catalog concern. Sung agreed that binding by field ID addresses drift, but pointed out that a field ID does not exist until the schema change commits, leaving a window in which a new column meant to be protected is not; the question is whether to accept that or let a column land protected in the same commit. Yufei Gu (flyrain) considered this mostly a catalog implementation concern that the spec need not mandate. The thread ends before the sync discussion.",
+  "positions": [
+    {
+      "who": "sungwy",
+      "stance": "Because a field ID does not exist until the schema change commits, a new column is unprotected until a policy is attached out of band, and the community should decide whether to allow a column to be created already protected.",
+      "source": "devlist:70tw7hoftdxjry61yq8txnrsrlfjx8m8"
+    },
+    {
+      "who": "singhpk234",
+      "stance": "There is no gap, since policies are bound by field ID in catalog metadata and defining and attaching policies was intentionally left to the catalog.",
+      "source": "devlist:r3hvf2o8qo1zt45b81y0p25c06lxxv54"
+    },
+    {
+      "who": "flyrain",
+      "stance": "This is mostly a catalog implementation concern; a catalog may support committing policy with DDL, but the REST spec need not mandate it.",
+      "source": "devlist:3dyrmb9j80y9739wzt3mf1tnhvppnzpy"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "The thread ends without agreement; the topic was put on the agenda of the REST catalog sync."
+  },
+  "initiatives": [
+    "read-restrictions"
+  ],
+  "refs": [
+    "yt:orAXA5e9pmU"
+  ]
+}

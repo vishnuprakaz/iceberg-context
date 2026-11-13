@@ -1,0 +1,62 @@
+{
+  "id": "thread/t-1bfe2cedf06f8797",
+  "_input_hash": "sha256:1a05e9138cfb2af91123",
+  "sources": [
+    "devlist:81vqxtw6tlvszon1tzymjbjbmo0hjy0n",
+    "devlist:2f5p6r5vh4ocjswfthjfg4k0mkdwsb5j",
+    "devlist:9s6h9lq9yzzq9gpryqr2v36jg5so7lt5",
+    "devlist:25htkq0nts5hc9z27wgvhr9l6x4pdoxn",
+    "devlist:c5v3qgwdc9n4y0shzc57mqlv2kotgr9v",
+    "devlist:ow6j7rx35yojzssslhhn85gq2v0yp8t0",
+    "devlist:qqmvd8cndj3216bjvhpt5coz2ym0q4ns"
+  ],
+  "title": "V4: improved column statistics",
+  "summary": "Eduard Tudenhöfner proposed replacing the map-based column statistics in manifests with a typed, per-field stats structure so that individual stats can be projected, original types are kept, and new stats (for example for geo and variant) can be added. Replies supported the goal. Discussion centred on how stats field IDs are derived (10000 + 200 * field ID), whether that leaves enough ID space, how to handle reserved columns, whether stats for sort orders or expressions should be covered, and whether engine-specific custom stats should be allowed. After two community meetings the proposal was updated: stats renamed to content stats, IDs defined for the table and reserved ID spaces, custom stats not supported with expressions preferred, column_size removed and avg/max value size added. Eduard said the design could go to a vote; the last message points to the spec changes in PR #14234 for review.",
+  "positions": [
+    {
+      "who": "Eduard Tudenhöfner",
+      "stance": "Column stats should move from field-id maps to a projectable, typed, extensible per-field structure.",
+      "source": "devlist:81vqxtw6tlvszon1tzymjbjbmo0hjy0n"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Avro manifests also benefit because unprojected stats fields can be skipped, and the ID scheme leaves room for more than 10.7 million table field IDs; stats for expressions should be a later proposal.",
+      "source": "devlist:2f5p6r5vh4ocjswfthjfg4k0mkdwsb5j"
+    },
+    {
+      "who": "pvary",
+      "stance": "The 10000 + 200 * field ID scheme is too limiting and leaves no way to store non-standard stats; metadata describing the stats present would use less ID space.",
+      "source": "devlist:1hrc8ophzkymv6m1md46l31fbjg71nl0"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Space should be reserved for stats on the sort order transform applied to a file, to allow pruning and compaction optimizations.",
+      "source": "devlist:fy2dpyzg6w9glz4pn2qwr39o94j3mgn7"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "The stats ID space should have an upper bound with ranges for sort orders and expressions, and custom stats should not be supported; expressions are a better way to customize.",
+      "source": "devlist:9s6h9lq9yzzq9gpryqr2v36jg5so7lt5"
+    },
+    {
+      "who": "Micah Kornfield",
+      "stance": "Keep the V4 scheme as simple as possible and revise later if needed; implementations wanting custom stats could use the top of the reserved offset range.",
+      "source": "devlist:2464p6c9nos9h4rj8lct0ldc1txk95yn"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No vote was held in this thread. The proposal was updated after two meetings and the spec changes are under review in PR #14234."
+  },
+  "initiatives": [
+    "v4-content-stats"
+  ],
+  "refs": [
+    "gh:apache/iceberg#13933",
+    "gh:apache/iceberg#14234",
+    "doc:1uvbrwwAJW2TgsnoaIcwAFpjbhHkBUL5wY_24nKgtt9I",
+    "doc:1s9_o_Y8js4kHVCYI2OeL0Yh3Ey0qfkuE7Mm-z-QoEfo",
+    "doc:1ZK5g8_bA1Y9SQ4UA5jAREX9iNX56xLWA5vAuKpQC4L8"
+  ],
+  "why_it_matters": "This is the design thread behind the V4 content stats structure and its field ID assignment, which every implementation reading V4 manifests will need to follow."
+}

@@ -68,15 +68,24 @@ def split_meetings(text: str) -> list[tuple[dt.date, str, str]]:
 
 
 def refs_by_language(body: str) -> list[str]:
-    """Bare '#12345' refers to the repository of the surrounding Java / Python / Rust / Go / C++ subsection."""
-    repo, refs = "apache/iceberg", []
+    """Bare '#12345' refers to the repository of the Java / Python / Rust / Go / C++ subsection it sits under.
+
+    A subsection is a short label line; it covers the more-indented lines below it and ends at the next line
+    indented the same or less.
+    """
+    default, repo, label_indent, refs = "apache/iceberg", "apache/iceberg", None, []
     for line in body.split("\n"):
+        if not line.strip():
+            continue
+        indent = len(line) - len(line.lstrip(" "))
         label = re.sub(r"[^a-z+ ]", "", _LEAD.sub("", line).lower()).strip()
+        target = None
         if 0 < len(label) < 30:
-            for word, target in _LANG:
-                if label == word or label.startswith(word + " ") or label.split(" ")[0] == word:
-                    repo = target
-                    break
+            target = next((t for word, t in _LANG if label == word or label.split(" ")[0] == word), None)
+        if target:
+            repo, label_indent = target, indent
+        elif label_indent is not None and indent <= label_indent:
+            repo, label_indent = default, None
         refs += extract_refs(line, repo)
     return list(dict.fromkeys(refs))
 

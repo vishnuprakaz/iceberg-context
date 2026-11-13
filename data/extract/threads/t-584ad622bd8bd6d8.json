@@ -1,0 +1,39 @@
+{
+  "id": "thread/t-584ad622bd8bd6d8",
+  "_input_hash": "sha256:82ca67f55465fe1b0aa1",
+  "sources": [
+    "devlist:vy9fqyopp9c149oy40brdhb10grpq32g",
+    "devlist:30voqgmho92o0bnv79qcz1rzlkwh5z39"
+  ],
+  "title": "Vote: add an unregister endpoint to the REST spec",
+  "summary": "rdblue called a vote on adding an unregister endpoint to the REST catalog spec, with the change in PR #16400. Unregister is the opposite of register: it removes a table from a catalog without deleting the underlying data and metadata files, and returns the latest catalog state of the table. The stated purpose is to allow moving a table from one catalog to another, which needs a new endpoint because the files must be left in place. The vote was open for 72 hours. All replies were +1; adutra noted it will be useful for catalog migration, and Maninder Parmar said it defines clearer semantics about data lifecycle. rdblue closed the vote as passed.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Add an unregister endpoint that removes a table from a catalog while leaving its data and metadata files in place, to support moving tables between catalogs.",
+      "source": "devlist:vy9fqyopp9c149oy40brdhb10grpq32g"
+    },
+    {
+      "who": "adutra",
+      "stance": "Supports the endpoint as useful for catalog migration scenarios.",
+      "source": "devlist:3gy49fhyy6kd1ytb606804z1o797k63c"
+    },
+    {
+      "who": "Maninder Parmar",
+      "stance": "Supports the endpoint because it defines clearer semantics about data lifecycle.",
+      "source": "devlist:df2sz62rvnx8fhz51m98l21o9tcsxvnw"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "note": "Passed with 16 +1 votes (9 binding, 7 non-binding) and no +0 or -1 votes.",
+    "source": "devlist:30voqgmho92o0bnv79qcz1rzlkwh5z39"
+  },
+  "initiatives": [
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16400"
+  ],
+  "why_it_matters": "REST catalogs gain a standard way to drop a table from the catalog without touching its files, which catalog migration tools can rely on."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "thread/t-e423f0a28f74a2c0",
+  "_input_hash": "sha256:44e69e87efeb7efbde3d",
+  "sources": [
+    "devlist:967dbjpjqt6kl9pnwv39vkvlvxv9rkcn",
+    "devlist:h97sp0ohxskpx27pvwk667772jl7gwot",
+    "devlist:g3094rr9sv75085xjzzh2n8lx95w95vj",
+    "devlist:jgpor2cyzr16ls3z71kcbfc66s2tpjcj"
+  ],
+  "title": "Dropping Python 3.10 support in PyIceberg",
+  "summary": "Orest Tokovenko proposed dropping Python 3.10 from PyIceberg. Python 3.10 reached end of life on 2026-10-01, and pyarrow, a major dependency, no longer ships 3.10 wheels with its 26.x releases, so users on 3.10 get pyarrow 25.x while users on 3.11 and later get 26.x. He would set requires-python to >=3.11, raise the floor versions of some libraries (which would also allow moving the pyarrow floor from >=18.0.0 to >=26.0.0), and remove version gates in pyiceberg/io/pyarrow.py, all in one PR. Users on 3.10 can stay on the last release that supports it, as was done for 3.9 and 3.8. Fokko Driesprong agreed that end-of-life versions should not be supported and asked for a PR, which Tokovenko opened as iceberg-python #4170. Kevin Liu confirmed that the end-of-life date had just passed and thanked him.",
+  "positions": [
+    {
+      "who": "oresttokovenko",
+      "stance": "PyIceberg should drop Python 3.10, require Python 3.11 or later, raise dependency floors and remove the version gates that are no longer needed.",
+      "source": "devlist:967dbjpjqt6kl9pnwv39vkvlvxv9rkcn"
+    },
+    {
+      "who": "Fokko",
+      "stance": "End-of-life Python versions should not be supported, in line with how older versions were dropped before.",
+      "source": "devlist:h97sp0ohxskpx27pvwk667772jl7gwot"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:h97sp0ohxskpx27pvwk667772jl7gwot",
+    "note": "Both repliers agreed with dropping Python 3.10, and a PR (iceberg-python #4170) was opened; nobody objected."
+  },
+  "initiatives": [
+    "pyiceberg"
+  ],
+  "refs": [
+    "gh:apache/iceberg-python#4170"
+  ],
+  "why_it_matters": "Once the PR merges, PyIceberg users on Python 3.10 have to stay on the last release that supports it."
+}

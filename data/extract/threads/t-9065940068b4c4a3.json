@@ -1,0 +1,54 @@
+{
+  "id": "thread/t-9065940068b4c4a3",
+  "_input_hash": "sha256:149ed2e1721d47199c53",
+  "sources": [
+    "devlist:wnt4ojcjsv1frfg1drxpz3gj0l91c5jl",
+    "devlist:k5hjjtmj1z3gdwtrlf4v5ovz1wp1p14q",
+    "devlist:gvfzk3b4g6c1b6xw0lhhc7xjfcvyvz1l",
+    "devlist:j1w7556o1v1gdqd8c8vo5cfmkhdl79fq"
+  ],
+  "title": "Switching S3 test backend to address issue #14638",
+  "summary": "In March, Chris (chrislusf), the author of SeaweedFS, proposed switching the S3 test backend from MinIO to SeaweedFS, citing its IAM and STS support for testing credential scenarios, and opened a PR. The thread was quiet until September, when Sreesh Maheshwar revived it after MinIO images were removed from Docker Hub and blocked CI across Iceberg projects; he noted that Polaris and PyIceberg had moved to RustFS. Kevin Liu supported leaving MinIO and suggested RustFS across the Iceberg repositories for consistency; Xuanwo and Szehon (szehon-ho) agreed. Neelesh Salian recalled CVE concerns about RustFS raised in another thread and asked for long-term support and prompt security fixes. After stevenzwu reported Kafka Connect integration test failures tied to MinIO, Kevin Liu said the work was done across all Iceberg repositories, referring to issue 18246.",
+  "positions": [
+    {
+      "who": "chrislusf",
+      "stance": "Replace MinIO with SeaweedFS as the S3 test backend to improve reliability and enable testing of IAM, STS and vended-credential scenarios; multiple backends are an alternative.",
+      "source": "devlist:wnt4ojcjsv1frfg1drxpz3gj0l91c5jl"
+    },
+    {
+      "who": "smaheshwar-pltr",
+      "stance": "The removal of MinIO images from Docker Hub is another reason to move quickstarts and integration tests away from MinIO.",
+      "source": "devlist:k5hjjtmj1z3gdwtrlf4v5ovz1wp1p14q"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Move away from MinIO and use RustFS across the Iceberg repositories for consistency, unless something specific is needed from SeaweedFS.",
+      "source": "devlist:gvfzk3b4g6c1b6xw0lhhc7xjfcvyvz1l"
+    },
+    {
+      "who": "Xuanwo",
+      "stance": "RustFS is fine; it is only for CI and easy to change later.",
+      "source": "devlist:ght0c5ljqb90zd7n3zcqs81ot50wqd2b"
+    },
+    {
+      "who": "nssalian",
+      "stance": "Either choice is acceptable provided RustFS has long-term support and prompt security fixes, given CVE concerns raised earlier.",
+      "source": "devlist:k4bkk3lmjr00y5k6vqqjsybonmtop4oj"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Replies in September agreed to move away from MinIO, with RustFS preferred for consistency. Kevin Liu reported the work done across all Iceberg repositories, pointing to apache/iceberg#18246.",
+    "source": "devlist:j1w7556o1v1gdqd8c8vo5cfmkhdl79fq"
+  },
+  "initiatives": [],
+  "refs": [
+    "gh:apache/iceberg#14638",
+    "gh:apache/iceberg#15577",
+    "gh:apache/iceberg#18071",
+    "gh:apache/iceberg-python#3928",
+    "gh:apache/iceberg#18246",
+    "gh:apache/iceberg#18247"
+  ],
+  "why_it_matters": "Integration tests and quickstarts across the Iceberg repositories no longer depend on MinIO images."
+}

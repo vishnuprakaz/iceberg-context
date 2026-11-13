@@ -1,0 +1,51 @@
+{
+  "id": "thread/t-e1938ca21167e827",
+  "_input_hash": "sha256:1e33f8761cd3473350e2",
+  "sources": [
+    "devlist:x5y5h0yk8vwzgm7r5b78o0tmp442hyky",
+    "devlist:gpftfm7odlgv9yb6tmc8poh9ns0dr7ht",
+    "devlist:p4l3clp7z7kknwbjlzytnj3xk9502w6g",
+    "devlist:ozclnzp7vkkm1zs7pjz6krktwkrf0n6k",
+    "devlist:8p9rb0bjzrtd5y4rf8yl0n8g4qtvsn9g",
+    "devlist:p23go2wzy30t5g5brdxy8wk6zbbqhkmc",
+    "devlist:8g5hgy6y07koyyxg0tls5jt511m9djt6",
+    "devlist:r3jyoj3tnryvc6qs43potbx463gkohn1",
+    "devlist:5p3frrkhnjcfvq4hzmlnlh9tjrhy72pg",
+    "devlist:xxh9mxn8jpc1js6ycy86orvkn3xfg6b3"
+  ],
+  "title": "Release Apache Iceberg C++ 0.3.0 RC2",
+  "summary": "zhjwpku proposed release candidate 2 of Apache Iceberg C++ 0.3.0, based on commit b6508226. wgtmac and manuzhang voted +1 (non-binding). zeroshade voted -1 (binding): on Ubuntu 25.10 the verify script needed meson and gtest/gmock that are not listed as requirements, and linking libiceberg_rest.so failed because the libcurl pulled in through the cpr dependency was not built as position-independent code. zhjwpku replied that meson is not required and googletest should be fetched by CMake. kevinjqliu suggested running the verify script in a GitHub workflow; wgtmac said one already exists, viewed the problems as third-party dependency issues that should not block the release, and proposed making the script vendor third-party libraries. zhjwpku then aborted the vote, citing an issue in how cpr is resolved, addressed by iceberg-cpp PR #717, and announced an RC3 vote.",
+  "positions": [
+    {
+      "who": "zeroshade",
+      "stance": "Votes -1 (binding) because the shared library link fails on Ubuntu 25.10 when the fetched libcurl is not built with position-independent code; the unlisted verify script requirements need not block.",
+      "source": "devlist:p4l3clp7z7kknwbjlzytnj3xk9502w6g"
+    },
+    {
+      "who": "zhjwpku",
+      "stance": "Meson is not required since the verify script depends on CMake, and googletest should be made available automatically by FetchContent.",
+      "source": "devlist:ozclnzp7vkkm1zs7pjz6krktwkrf0n6k"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "The reported problems are third-party dependency issues that should not block the release; the verify script should vendor third-party libraries and fail fast on an incompatible libcurl.",
+      "source": "devlist:8g5hgy6y07koyyxg0tls5jt511m9djt6"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Use a GitHub workflow to run the verification script in a clean workspace.",
+      "source": "devlist:p23go2wzy30t5g5brdxy8wk6zbbqhkmc"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The release manager aborted the vote because of an issue with how the cpr dependency is resolved; the fix went into RC3, for which a new vote thread was announced. Votes before the abort: two +1 non-binding and one -1 binding.",
+    "source": "devlist:5p3frrkhnjcfvq4hzmlnlh9tjrhy72pg"
+  },
+  "initiatives": [
+    "iceberg-cpp"
+  ],
+  "refs": [
+    "gh:apache/iceberg-cpp#717"
+  ]
+}

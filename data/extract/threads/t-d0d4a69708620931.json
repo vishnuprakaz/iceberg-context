@@ -1,0 +1,21 @@
+{
+  "id": "thread/t-d0d4a69708620931",
+  "_input_hash": "sha256:4a7447c4d7886ebe06a4",
+  "sources": [
+    "devlist:hk1gnjrqnfvmjknrsyyphfs6mfxkz20s",
+    "devlist:n9k9sbbl4wj7qy5pl03r0990rwpcs6zg"
+  ],
+  "title": "Iceberg Summit 2027 Selection Committee",
+  "summary": "Sung Yun announced that the Iceberg PMC approved the proposal for Iceberg Summit 2027 and opened a call for volunteers for the Selection Committee, which coordinates the agenda, defines the tracks and selects the sessions from the CFP submissions (about 3 to 6 hours of review last year). Any community member could volunteer by replying before September 11th 2026. The PMC would then vote to select 11 members, with no more than one member per company and at least three members from the Iceberg PMC. Nearly forty people replied to volunteer. On October 19th Sung closed the thread, saying the committee has been finalized and the CFP will open shortly; the thread does not list the selected members.",
+  "positions": [],
+  "outcome": {
+    "status": "informational",
+    "source": "devlist:n9k9sbbl4wj7qy5pl03r0990rwpcs6zg",
+    "note": "The Selection Committee for Iceberg Summit 2027 has been finalized and the CFP will open shortly. The members are not named in the thread."
+  },
+  "initiatives": [
+    "community-process"
+  ],
+  "refs": [],
+  "why_it_matters": "The Summit 2027 program committee is set, and the call for proposals is the next step for contributors who want to speak."
+}

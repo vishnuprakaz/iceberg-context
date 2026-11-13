@@ -1,0 +1,51 @@
+{
+  "id": "meeting/index/2026-05-27",
+  "_input_hash": "sha256:d1419a753c88761be597",
+  "sources": [
+    "meet:index:2026-05-27"
+  ],
+  "summary": "The index sync worked through the physical design of a secondary index: a single tracking file on top of non-overlapping leaf files in a standard format, organized by a routing transform such as a sort or a space-filling curve. The tracking file is copy-on-write and points at specific base and update files. Incremental updates use one base file per region with at most one update file. Deletes are by position, and the group leans toward reusing Iceberg's deletion vectors as a separate structure. The first version excludes column updates and targets reasonably sized tables such as CDC; whether the index becomes a table was deliberately deferred.",
+  "topics": [
+    {
+      "title": "Index structure and routing transform",
+      "summary": "The structure is a single tracking file, holding file names and transform min/max per leaf, on top of leaf files that hold index data in a standard format (Parquet or ORC). Leaf files do not overlap in the transform space and can be read and written in parallel. An organization transform (a sort, or a space-filling curve such as Hilbert or z-order) splits keys into one file per region; a writer needs the transform, while a reader can use it for direct lookup or fall back to min/max ranges, which supports partial-key queries. Regions can be split and balanced, matching Flink rescaling.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Whether the index becomes a table (deliberately deferred)."
+      ]
+    },
+    {
+      "title": "Tracking file and incremental updates",
+      "summary": "The tracking file is copy-on-write, rewritten every version like a manifest list, and points at specific base and update files by unique name to avoid concurrent-write conflicts. Each region has one base file with at most one update file, read in parallel and joined to keep IO bounded. Update files are replaced or merged into the base, and a Flink rebalance drives an index rebalance.",
+      "initiatives": [
+        "secondary-indexes",
+        "flink-integration"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Deletes",
+      "summary": "Deletes are done by position because a key may have duplicates. The group leans toward reusing Iceberg's deletion vector as a separate structure rather than tombstones or a DV embedded in the Parquet file. A lookup may read up to three files (base, update and DV), which partly parallelize, and the DV can be skipped when false positives are acceptable.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Scope of the first version",
+      "summary": "The first version has no column updates. The first pass targets reasonably sized tables such as CDC, with very large indexes secondary for now.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [],
+      "decisions": [
+        "No column updates in v1; the first pass targets reasonably sized tables (e.g. CDC), with very large indexes secondary for now."
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

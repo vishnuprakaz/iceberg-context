@@ -1,0 +1,30 @@
+{
+  "id": "thread/t-8a1d2c357afe958e",
+  "_input_hash": "sha256:2f7ffd84e81df3fb87bd",
+  "sources": [
+    "devlist:ztrygfd46607pns9t2d4hs0x95595cb2",
+    "devlist:hc174wtpcltjgvlxlwxm4jkq4tf1g47l",
+    "devlist:8rbkjzs59ycq442o1v4bpkzftwkr62ol"
+  ],
+  "title": "Variant shredding policy across Iceberg implementations",
+  "summary": "Neelesh Salian proposed a shared policy for variant shredding, since shredding writers exist in iceberg-java, arrow-go and arrow-rs and are landing in iceberg-go, iceberg-rust and later PyIceberg, with no agreement yet on whether to shred, how the layout is declared and how it is expressed so that implementations produce compatible output. The planned steps were community review, a vote, adjustments in the Java implementation, and then the other implementations aligning. After the Variant sync, he reported that the proposal should instead focus on agreeing on the best inference algorithm for shredding, backed by data and testing. On July 25th he shared an update: he benchmarked a set of inference strategies, the proposal now contains the resulting inference algorithm, and the tunable thresholds move from constants to table properties. He asked for further review; no vote has been started in the thread.",
+  "positions": [
+    {
+      "who": "nssalian",
+      "stance": "Implementations need one shared shredding policy; after feedback it centres on a benchmarked inference algorithm with thresholds exposed as table properties.",
+      "source": "devlist:8rbkjzs59ycq442o1v4bpkzftwkr62ol"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "The updated proposal with a benchmarked inference algorithm is out for review; no vote has been called."
+  },
+  "initiatives": [
+    "variant"
+  ],
+  "refs": [
+    "doc:1OaB45mg9JJ_JRg-ipuvyh4AtOmaGmdWMsy_mJKiu5xs",
+    "doc:1IuhLRxw1rcPD_f4jgHuGe3SwFgy7Y5wgEGvLzf6311s"
+  ],
+  "why_it_matters": "The outcome would decide how every Iceberg writer chooses which variant fields to shred, which affects cross-implementation consistency."
+}

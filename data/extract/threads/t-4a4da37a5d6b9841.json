@@ -1,0 +1,69 @@
+{
+  "id": "thread/t-4a4da37a5d6b9841",
+  "_input_hash": "sha256:fd50196635866011356d",
+  "sources": [
+    "devlist:1684dbkvsoromj4nnjwjrzzr2zotl5bo",
+    "devlist:qm2fxqryvxpc47jnp70lfy6hpqgpyxpd",
+    "devlist:4rxs1p22r435hlnmn7yg96tvbw8pybmo",
+    "devlist:274y3nc1q0p838k5x4mqxgmv7zbc36tt",
+    "devlist:bs4906f2v0t2p5ky79vf65jlrvcrlcs7",
+    "devlist:26fvm80plfosqvf66q8pd38zc7vmh7dv",
+    "devlist:lbrokby9z6j3q61kc4o95v4f0hnn750s",
+    "devlist:4m8ddnodf0x69glo5n30vnxw9ynmd000",
+    "devlist:llzndp1q8wn95p46cm12826sgkywk7xd",
+    "devlist:12dn5tw8zgr1d9z24ncyzjl0d6tqwnc9",
+    "devlist:c0c0t3vftsynwj5486cwjnynfhvxvbzd",
+    "devlist:bj0sgk79yx0yt0wnr8jww2dsjsjc5tqj"
+  ],
+  "title": "Column update file representation",
+  "summary": "The thread covers how V4 column update files represent rows. xndai first raised that bumping the base file's sequence number when adding a column file breaks the spec invariant that a data sequence number never changes, and listed options for the deletion-vector case; anuragmantri moved that part to the metadata thread. anuragmantri reported a sync decision to leave dense versus sparse representation to engines as long as an explicit _pos column is written. pvary objected that leaving it open forces every reader to support sparse. stevenzwu and Gábor Kaszab argued the objections to dense (filler values, statistics, storage size, needing the base record count) are weak, and laskoviymishka proposed mandating dense now with sparse as a later extension tied to column families. anuragmantri agreed, and after the next sync reported the decision: column files must include values for deleted rows, using NULL, so every leaf column in a column update is nullable; partition tuples must always match file content.",
+  "positions": [
+    {
+      "who": "xndai",
+      "stance": "Bumping the base file sequence number when adding a column file breaks the invariant that a data sequence number never changes and needs careful evaluation, including the deletion-vector case.",
+      "source": "devlist:1684dbkvsoromj4nnjwjrzzr2zotl5bo"
+    },
+    {
+      "who": "pvary",
+      "stance": "Not specifying dense or sparse effectively requires all engines to support sparse, which adds a materialization step on the performance-sensitive read path.",
+      "source": "devlist:274y3nc1q0p838k5x4mqxgmv7zbc36tt"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "The arguments against filler values are weak, and zero-copy stitching and simpler readers outweigh them; start with the dense representation.",
+      "source": "devlist:bs4906f2v0t2p5ky79vf65jlrvcrlcs7"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Prefers a single dense representation; experiments showed no significant storage difference between sparse and dense because _pos compresses worse as more rows are deleted.",
+      "source": "devlist:26fvm80plfosqvf66q8pd38zc7vmh7dv"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Mandate dense now and keep sparse as a documented future extension with its own format version, to be decided as part of the column families effort.",
+      "source": "devlist:12dn5tw8zgr1d9z24ncyzjl0d6tqwnc9"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "Column files are not necessarily short-lived, because separate column files for column families can be a desired long-term state.",
+      "source": "devlist:llzndp1q8wn95p46cm12826sgkywk7xd"
+    },
+    {
+      "who": "anuragmantri",
+      "stance": "Initially reported that the choice between dense and sparse would be left to engines, then was convinced by the arguments for mandating dense.",
+      "source": "devlist:c0c0t3vftsynwj5486cwjnynfhvxvbzd"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "The sync agreed to mandate a column file representation that includes values for deleted rows, aligned with the base file, using NULL for deleted positions, so every leaf column in a column update is nullable. The partition tuple in file metadata must always match the file's content, and updates to it are permitted.",
+    "source": "devlist:bj0sgk79yx0yt0wnr8jww2dsjsjc5tqj"
+  },
+  "initiatives": [
+    "v4-column-updates"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16285"
+  ],
+  "why_it_matters": "Readers of V4 column files only need positional, dense stitching and do not have to implement a sparse merge path."
+}

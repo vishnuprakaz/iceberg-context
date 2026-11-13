@@ -1,0 +1,45 @@
+{
+  "id": "thread/t-09a6303d5e1af395",
+  "_input_hash": "sha256:75f7c31f7fcd3e2aa7c0",
+  "sources": [
+    "devlist:kyqh5z72qfjknljhm6c5px9ymlrhdycp",
+    "devlist:dts9bwpf9tff3c8q7drdpx3dc89thmhz",
+    "devlist:08o6jbn4dmxbv6vsttbommybk31tn0g4",
+    "devlist:wcwg8r25k8bhxznjoo9mz5d18cc70wsj",
+    "devlist:1q65f5t3h0v6jsd3fb3mpz7sll8vsq2g",
+    "devlist:9t4l1kp4zjk7cjynd81nlsv2rttjkwcl"
+  ],
+  "title": "Iceberg Rust: moving the DataFusion integration into a separate repository",
+  "summary": "The thread reached the Iceberg dev list when Kevin Liu added it to a discussion already under way elsewhere, so the original proposal is not among these messages. It concerns moving the Iceberg Rust DataFusion integration into a new repository, apache/datafusion-iceberg. Renjie Liu, Alexander Bailey and Neelesh Salian supported Andrew Lamb's proposal. Lamb filed an infrastructure request and the repository was created on September 9. Asked whether the thread was enough, Lamb said a formal vote should be held in a separate thread in both communities, once there was a repository and a PR to vote on. Gabriel was asked to prepare the PR moving the content, and Kevin Liu approved it. Lamb started a vote on the DataFusion dev list to accept the code and Kevin Liu started the vote on the Iceberg dev list. On September 16 Lamb reported that both votes passed unanimously and that the move could go ahead.",
+  "positions": [
+    {
+      "who": "Andrew Lamb",
+      "stance": "The move needs a formal vote in a separate thread in both the Iceberg and DataFusion communities, based on a repository and a PR.",
+      "source": "devlist:08o6jbn4dmxbv6vsttbommybk31tn0g4"
+    },
+    {
+      "who": "nssalian",
+      "stance": "The integration should move to the new apache/datafusion-iceberg repository.",
+      "source": "devlist:tg1pd18jq6bo6y3yrj47qwwddvtgf7bk"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "The PR porting the code to the new repository is approved and the Iceberg side should vote on it.",
+      "source": "devlist:1q65f5t3h0v6jsd3fb3mpz7sll8vsq2g"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "source": "devlist:9t4l1kp4zjk7cjynd81nlsv2rttjkwcl",
+    "note": "The discussion ended in agreement and the repository apache/datafusion-iceberg was created. Andrew Lamb reported that the separate vote threads on the Iceberg and DataFusion dev lists both passed unanimously."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [
+    "gh:apache/datafusion-iceberg#1",
+    "list:6k5lws31c61y1lx2s34pxo4lmc7334lr",
+    "list:ytb9x7x8ff3b7031kcrc05nzjtmh091s"
+  ],
+  "why_it_matters": "The DataFusion integration for Iceberg Rust now lives in apache/datafusion-iceberg rather than in the iceberg-rust repository."
+}

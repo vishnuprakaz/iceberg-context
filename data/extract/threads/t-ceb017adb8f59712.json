@@ -1,0 +1,62 @@
+{
+  "id": "thread/t-ceb017adb8f59712",
+  "_input_hash": "sha256:6cbd03380e331611ca8d",
+  "sources": [
+    "devlist:n2s6z7rt745cgftsb8j9yob0kc70cgny",
+    "devlist:sg4hpvn4l6477zrbqgbqgskdp19h5mfv",
+    "devlist:3dlz3t0g1ffqh98kdwwb04ozrn448vd8",
+    "devlist:fhto0symb2lzlk1rqvzpg0krznzsk86g"
+  ],
+  "title": "Enable GitHub Copilot code review",
+  "summary": "Gang (wgtmac) proposed enabling ASF-managed GitHub Copilot code review through the `.asf.yaml` `github.copilot_code_review` setting, starting with iceberg-cpp as a trial because reviewer bandwidth is limited there. Replies supported the trial. Several asked for custom Copilot instructions, for example comparing against the Java reference implementation, and for guidance on how contributors should respond to its feedback. Kevin Liu asked about quota and CI resource impact, then reported that the setting only creates a ruleset that requests reviews, that AI credits for automatic reviews are attributed to the PR author, that Actions minutes are attributed to the repository, and that he believes reviews will not run for authors without Copilot review access. wgtmac said he would merge the iceberg-cpp PR.",
+  "positions": [
+    {
+      "who": "wgtmac",
+      "stance": "Enable automatic Copilot review on non-draft PRs in iceberg-cpp first as a trial, and let other repositories adopt it later if it works well.",
+      "source": "devlist:n2s6z7rt745cgftsb8j9yob0kc70cgny"
+    },
+    {
+      "who": "rambleraptor",
+      "stance": "The experiment is worth doing, and custom Copilot instructions should make it compare against the Java reference implementation.",
+      "source": "devlist:xks0fsr5ps6hnfzybjrwlvd9c2q1n134"
+    },
+    {
+      "who": "steveloughran",
+      "stance": "Copilot is acceptable as a general reviewer, best at low-level nitpicks; its output must be treated as hints and it needs custom instructions.",
+      "source": "devlist:jklh12z5od9w6o8l3fq60z4c77f6mfxd"
+    },
+    {
+      "who": "Danny Jones",
+      "stance": "Supports the trial and suggests defining how contributors should respond to Copilot feedback so comments can feed back into tuning the guidance.",
+      "source": "devlist:jkb1f6gpgznympvbch5dx7mrhhr80r5m"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "It is helpful as a first review, but the quota and the impact on CI resources should be understood before enabling it.",
+      "source": "devlist:sg4hpvn4l6477zrbqgbqgskdp19h5mfv"
+    },
+    {
+      "who": "Scott Haines",
+      "stance": "Supports it while wanting the limits understood; classifying or tagging PRs would also be a good use.",
+      "source": "devlist:61sy35gy7y6blqhxy23jhgk0yk6skshf"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "With the cost structure understood (credits attributed to the PR author, Actions minutes to the repository), the project can go ahead and try it.",
+      "source": "devlist:3dlz3t0g1ffqh98kdwwb04ozrn448vd8"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "No objections were raised. After the cost structure was clarified, wgtmac said he would merge the iceberg-cpp PR enabling Copilot review as a trial.",
+    "source": "devlist:fhto0symb2lzlk1rqvzpg0krznzsk86g"
+  },
+  "initiatives": [
+    "ai-contributions",
+    "iceberg-cpp"
+  ],
+  "refs": [
+    "gh:apache/iceberg-cpp#833"
+  ],
+  "why_it_matters": "iceberg-cpp becomes the trial for automatic Copilot review, and other Iceberg repositories may adopt the same setup depending on how it goes."
+}

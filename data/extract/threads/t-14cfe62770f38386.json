@@ -1,0 +1,64 @@
+{
+  "id": "thread/t-14cfe62770f38386",
+  "_input_hash": "sha256:50e70335ea6dec3aad13",
+  "sources": [
+    "devlist:tct2yp45ytsb6dqw1tq7b8gnfnp7jndo",
+    "devlist:vbq01jtsfgg2zfomsryvj2xpzlfv2gf3",
+    "devlist:2cy1bj1rxxj7lz9984b6y0hql70twb63",
+    "devlist:9wd2t4o66gr1t7zs2f6yycsljczk9wkj",
+    "devlist:18k80hydxtsd8m3935r20hpgd2tnw4n7",
+    "devlist:5m29cygfxd5815mcqc3g80jdsnsrxqbm",
+    "devlist:vgxtsjvcfhjq06lcg3mnstp2fyglgzbd"
+  ],
+  "title": "Name mapping for data files that carry only some field IDs",
+  "summary": "slachiewicz reported that the spec is ambiguous for Parquet files where only some fields carry field IDs, and that Java, PyIceberg, iceberg-rust and iceberg-go each resolve such files differently. Delta tables with column mapping but without IcebergCompatV2 produce these files. He proposed the per-field reading: an embedded ID is used, and fields without one fall back to the name mapping. manuzhang and Jean-Baptiste Onofré found it reasonable; JB noted the Java Parquet and ORC visitors would have to stop overwriting embedded IDs and asked the spec to cover ID collisions. wgtmac said partial or broken IDs should stay implementation-specific. RussellSpitzer first supported per-field resolution, then, after checking history, said per-file was the original 2021 intent and the per-column wording arrived unintentionally in 2024; he prefers fixing that sentence and treating partial-ID support as a new feature. No agreement yet.",
+  "positions": [
+    {
+      "who": "slachiewicz",
+      "stance": "The spec should adopt per-field resolution: embedded IDs win and fields without an ID fall back to the name mapping.",
+      "source": "devlist:tct2yp45ytsb6dqw1tq7b8gnfnp7jndo"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "The proposal is reasonable and matches the Java Avro reader; a spec PR should be opened for concrete discussion.",
+      "source": "devlist:vbq01jtsfgg2zfomsryvj2xpzlfv2gf3"
+    },
+    {
+      "who": "Jean-Baptiste Onofré",
+      "stance": "Per-field resolution makes sense, but the spec should state that a file's ID takes precedence and say what happens when a mapped ID collides with an embedded one.",
+      "source": "devlist:2cy1bj1rxxj7lz9984b6y0hql70twb63"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "Handling files with partial or broken field IDs should remain implementation-specific rather than be specified.",
+      "source": "devlist:9wd2t4o66gr1t7zs2f6yycsljczk9wkj"
+    },
+    {
+      "who": "binarybrain-009",
+      "stance": "Scope the change to missing IDs with an unambiguous mapping, and fail the read on collisions, checked before column pruning.",
+      "source": "devlist:18k80hydxtsd8m3935r20hpgd2tnw4n7"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Per-file fallback was the original intent, so the 2024 sentence should be corrected and partial-ID support discussed as a new feature starting from use cases.",
+      "source": "devlist:vgxtsjvcfhjq06lcg3mnstp2fyglgzbd"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No agreement. The latest message argues for restoring the per-file meaning in the spec and restarting partial-ID support as a new feature discussion."
+  },
+  "initiatives": [
+    "conformance-testing"
+  ],
+  "refs": [
+    "gh:apache/iceberg#3542",
+    "gh:apache/iceberg#3556",
+    "gh:apache/iceberg#10835",
+    "gh:apache/iceberg-cpp#1108",
+    "gh:apache/iceberg-cpp#1109",
+    "gh:apache/incubator-xtable#911",
+    "gh:apache/iceberg-verification#14"
+  ],
+  "why_it_matters": "Readers in different languages currently return different results for the same partially-ID'd file, and the outcome decides whether implementations must change their name-mapping fallback."
+}

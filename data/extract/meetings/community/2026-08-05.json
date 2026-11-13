@@ -1,0 +1,149 @@
+{
+  "id": "meeting/community/2026-08-05",
+  "_input_hash": "sha256:159cbb740644c1e76f6b",
+  "sources": [
+    "meet:community:2026-08-05"
+  ],
+  "summary": "The sync notes congratulate new committer Maximilian Michels and list recent merges across Java, Python, Rust, Go and C++, including a v4 manifest reader, vectorized Parquet reads for variant in Spark, and REST spec changes for VariantType, remote signing configuration and expressions. Neelesh gave a Java 1.12 release update, and Rust 0.10.0 and 0.10.1 are released. Discussion items were the shared testing repository proposal, the vector type proposal, a unique files spec clarification, V4 scope, and virtual community meetups and showcases. The PRs-to-review list repeats earlier requests and adds an item from Huaxin on deprecating equality deletes in V4. The notes record agenda items without outcomes.",
+  "topics": [
+    {
+      "title": "Highlights",
+      "summary": "Maximilian Michels is a new committer. Java merges include a v4 manifest reader, geometry and geography values in Avro, a streaming merge append write config and vectorized Parquet reads for variant in Spark, a Flink variant Avro record generator, and REST spec changes adding VariantType, formalizing remote signing configuration and aligning expressions with the new expressions spec. PyIceberg added a ParquetFormatModel using the format API, zstd Puffin blobs and basic assumptions in AGENTS.md. Iceberg Rust and Go continued encryption, Puffin and deletion vector work, and Rust added variant support. Iceberg C++ added merging of deletion vectors, row lineage support and metrics.",
+      "initiatives": [
+        "community-process",
+        "v4-metadata-tree",
+        "variant",
+        "geospatial",
+        "rest-spec",
+        "rest-auth",
+        "expressions-spec",
+        "spark-integration",
+        "flink-integration",
+        "pyiceberg",
+        "iceberg-rust",
+        "iceberg-go",
+        "iceberg-cpp",
+        "v4-encryption",
+        "ai-contributions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16958",
+        "gh:apache/iceberg#17119",
+        "gh:apache/iceberg#17347",
+        "gh:apache/iceberg#16292",
+        "gh:apache/iceberg#16450",
+        "gh:apache/iceberg#17256",
+        "gh:apache/iceberg#16822",
+        "gh:apache/iceberg#17138",
+        "gh:apache/iceberg#16692",
+        "gh:apache/iceberg-python#3660",
+        "gh:apache/iceberg-python#3575",
+        "gh:apache/iceberg-python#3723",
+        "gh:apache/iceberg-python#3552",
+        "gh:apache/iceberg-python#3381",
+        "gh:apache/iceberg-rust#2188",
+        "gh:apache/iceberg-rust#2794"
+      ]
+    },
+    {
+      "title": "Releases",
+      "summary": "Neelesh gave a Java 1.12 release update. Rust 0.10.0 and 0.10.1 are released.",
+      "initiatives": [
+        "java-releases",
+        "iceberg-rust"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Shared testing repository proposal",
+      "summary": "Neelesh again listed the proposal for shared test fixtures across Apache Iceberg implementations. The notes record no outcome.",
+      "initiatives": [
+        "conformance-testing"
+      ],
+      "refs": [
+        "doc:1Qr82hccxJhWxKRT7B-3ylhOLSaJTYfc7hU51-mhzK6Y"
+      ]
+    },
+    {
+      "title": "Vector type proposal",
+      "summary": "Yan listed the vector type proposal document. The notes record no outcome.",
+      "initiatives": [
+        "vector-type"
+      ],
+      "refs": [
+        "doc:1zA8PskNDFKXXJpzWQr25CFoX_aIZHBNHbkxk0t3PteE"
+      ]
+    },
+    {
+      "title": "Unique files spec clarification",
+      "summary": "Russ brought a pull request clarifying the spec on unique files. The notes record no outcome.",
+      "initiatives": [],
+      "refs": [
+        "gh:apache/iceberg#17198"
+      ]
+    },
+    {
+      "title": "V4 scope",
+      "summary": "Dan had an agenda item on the scope of V4. The notes give no details or outcome.",
+      "initiatives": [
+        "v4-general"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Virtual community meetups and showcases",
+      "summary": "Kevin raised virtual community meetups and showcases. The notes give no details.",
+      "initiatives": [
+        "community-process"
+      ],
+      "refs": []
+    },
+    {
+      "title": "PRs to review, including deprecating equality deletes in V4",
+      "summary": "The review list repeats the UUID comparison bug fix #14500 (Vishal), the old-partition rewrite PRs #16190 and #16515 (Mukund), multi-snapshot support in SnapshotChanges #16224 (Shekhar) and Avro local-timestamp encoding #16577. Huaxin added an item on deprecating equality deletes in V4.",
+      "initiatives": [
+        "v4-equality-deletes"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    },
+    {
+      "who": "Yan",
+      "basis": "notes"
+    },
+    {
+      "who": "Russ",
+      "basis": "notes"
+    },
+    {
+      "who": "Dan",
+      "basis": "notes"
+    },
+    {
+      "who": "Kevin",
+      "basis": "notes"
+    },
+    {
+      "who": "Vishal",
+      "basis": "notes"
+    },
+    {
+      "who": "Mukund",
+      "basis": "notes"
+    },
+    {
+      "who": "Shekhar",
+      "basis": "notes"
+    },
+    {
+      "who": "Huaxin",
+      "basis": "notes"
+    }
+  ]
+}

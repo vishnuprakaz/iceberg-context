@@ -1,0 +1,28 @@
+{
+  "id": "thread/t-31edf75f84e57ef0",
+  "_input_hash": "sha256:1acc94c13471e58e7cf0",
+  "sources": [
+    "devlist:orwny91fqyfmzx7w7p6wj7cgmndvd8r3",
+    "devlist:31bkxwff6kc9pp2l0r656yjxt32lxwgw"
+  ],
+  "title": "Vote to clarify content file uniqueness in the table spec",
+  "summary": "Russell Spitzer called a vote on a spec clarification in PR #17198. He explained that scan planning has stated since PR #4272 that duplicate live file paths in a snapshot produce undefined scan results, and that the new change makes that expectation explicit as a snapshot invariant in the main body of the spec. He said he believed consensus already existed and raised the vote for awareness before merging. The vote was open for 72 hours. Twelve people replied, all with +1 and without objections. Spitzer then announced that the vote passes, and noted that the language in the PR is being softened to refer just to 'live' entries; further comments belong on the PR, which can be merged once the final wording has consensus there.",
+  "positions": [
+    {
+      "who": "RussellSpitzer",
+      "stance": "The spec should state as a snapshot invariant that live content file paths in a snapshot are unique, since duplicates already produce undefined scan results.",
+      "source": "devlist:orwny91fqyfmzx7w7p6wj7cgmndvd8r3"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:31bkxwff6kc9pp2l0r656yjxt32lxwgw",
+    "note": "The vote passed; the result message gives no counts. Replies in the thread: 2 binding +1, 9 non-binding +1 and one +1 with no binding status stated, with no -1 votes. The PR wording is being softened to refer to 'live' entries before merging."
+  },
+  "initiatives": [],
+  "refs": [
+    "gh:apache/iceberg#17198",
+    "gh:apache/iceberg#4272"
+  ],
+  "why_it_matters": "Writers are expected to keep live file paths unique within a snapshot, and readers may treat duplicates as undefined behavior."
+}

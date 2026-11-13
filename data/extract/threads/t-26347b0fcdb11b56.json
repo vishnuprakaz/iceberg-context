@@ -1,0 +1,60 @@
+{
+  "id": "thread/t-26347b0fcdb11b56",
+  "_input_hash": "sha256:b1455022776b093940f2",
+  "sources": [
+    "devlist:o3oycdqw4sm1sqt54hfrj8c2hwxc0yww",
+    "devlist:vv80hjdlo5b3o5fnffv89lr15wl2t5zt",
+    "devlist:scnz8cvf4jf5r85qnvcsqqj2yhoxg4hd",
+    "devlist:c7nyxzkshl4d4bvjdjcgqpdr703y5617",
+    "devlist:wx40fxmplrlsmwhyn8dqohm0ppnshgp1"
+  ],
+  "title": "Spec ambiguity: Avro schema for day partition transform fields in manifests",
+  "summary": "The thread settles which type the `day` partition transform produces in manifests. Fokko noted the spec line had been changed a few times and suggested reverting the spec change. Kevin Liu laid out the current state: Java, Python and Rust write the result as an Iceberg date (Avro int with the date logical type) and can read either form, while Go writes a plain int and can only read a plain int. He supported changing the spec back to date. Ryan (rdblue) added that the Avro spec requires readers to ignore logical types they do not support, so reading either form follows from Avro. Andrei Tserakhau updated the spec PR to make the result type date with a note on the history; Gang Wu (wgtmac) confirmed iceberg-cpp also writes date.",
+  "positions": [
+    {
+      "who": "Fokko",
+      "stance": "The spec text was changed several times, and the spec change should perhaps be reverted.",
+      "source": "devlist:o3oycdqw4sm1sqt54hfrj8c2hwxc0yww"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Change the spec back to date to match what Java, Python and Rust write, and have readers accept both int and date; changing all implementations to match the current spec would be much work for little value.",
+      "source": "devlist:vv80hjdlo5b3o5fnffv89lr15wl2t5zt"
+    },
+    {
+      "who": "rdblue",
+      "stance": "The Avro spec requires readers that do not support a logical type annotation to ignore it, so reading either date or int correctly is inherited from Avro.",
+      "source": "devlist:scnz8cvf4jf5r85qnvcsqqj2yhoxg4hd"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "The spec PR now makes the day result type date and adds a note on the history; iceberg-go will align its writer and reader once the spec change lands.",
+      "source": "devlist:c7nyxzkshl4d4bvjdjcgqpdr703y5617"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "No vote should be needed because this is a clarification and not a change.",
+      "source": "devlist:g6p56rsnndq64zvbm5w7xz7v6wz9y5rv"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "iceberg-cpp also produces a date type for the day transform and is fine with the consensus.",
+      "source": "devlist:y4xq9lyrd8jdxrjo0klfbwvbslog8zl0"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Participants agreed that the day transform result type is date, with reading of plain-int manifests following from the Avro spec. The spec PR apache/iceberg#16446 was updated accordingly and was still unmerged at the last message.",
+    "source": "devlist:c7nyxzkshl4d4bvjdjcgqpdr703y5617"
+  },
+  "initiatives": [
+    "iceberg-go"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16446",
+    "gh:apache/iceberg#5980",
+    "gh:apache/iceberg-go#915",
+    "gh:apache/iceberg-go#1176"
+  ],
+  "why_it_matters": "Implementations should write day partition values as date in manifests, and iceberg-go changes its writer and reader to match."
+}

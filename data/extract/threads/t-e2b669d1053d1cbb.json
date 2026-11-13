@@ -1,0 +1,42 @@
+{
+  "id": "thread/t-e2b669d1053d1cbb",
+  "_input_hash": "sha256:5b71e0037cd555db6554",
+  "sources": [
+    "devlist:ptq6gyf6gcd4xwwkn2q3yrt9lxr7ojdk",
+    "devlist:3qs9qsnmh8vd7pmxljnj04ztwmm1qtkt",
+    "devlist:qy8pj2rdojo2kybds2dj0z21flsxmb6x",
+    "devlist:9ovw5bv8gm3fdlqv38dtb7bv73zfj5fr",
+    "devlist:fqytwbgt9c3ccgjlj5gzf59t1p4yd2pk",
+    "devlist:ggc497r70j8050dpfm0tnp1mvz3mzkv9"
+  ],
+  "title": "Release Apache Iceberg 1.12.0 RC1",
+  "summary": "nssalian proposed release candidate 1 (commit e8d0f0f3, tag apache-iceberg-1.12.0-rc1) as Apache Iceberg 1.12.0, with a 72-hour vote. Voters verified checksums, signatures, licenses and builds. GGraziadei voted +1 and repeated a finding from RC0: reading variant columns throws NoSuchMethodError when commons-lang3 older than 3.13 is on the classpath, because iceberg-parquet uses Streams.of(Iterable) without declaring the dependency. It also exists in 1.11.0, is tracked in issue #18164, and he asked for the fix to be included if a new RC is made. nssalian replied that since it is not a regression it can be patched into the respective branches after the release. szehon-ho asked that PR #18069, another pre-existing issue, be included if there is another RC, and voted +1. The bundle contains no result message for this RC.",
+  "positions": [
+    {
+      "who": "GGraziadei",
+      "stance": "Votes +1; the variant NoSuchMethodError with commons-lang3 older than 3.13 is not a regression and should not block, but the fix should be included if a new RC is cut.",
+      "source": "devlist:qy8pj2rdojo2kybds2dj0z21flsxmb6x"
+    },
+    {
+      "who": "nssalian",
+      "stance": "Because the issue is not a regression and depends on the commons-lang3 version, it can be fixed with a patch to the respective branches after the release.",
+      "source": "devlist:9ovw5bv8gm3fdlqv38dtb7bv73zfj5fr"
+    },
+    {
+      "who": "szehon-ho",
+      "stance": "PR #18069 fixes another pre-existing issue that is not worth stopping this RC for but should be included if another RC is made.",
+      "source": "devlist:fqytwbgt9c3ccgjlj5gzf59t1p4yd2pk"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. The messages show +1 votes only: one marked binding (liurenjie1024), three marked non-binding and one unmarked; no -1 votes."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#18164",
+    "gh:apache/iceberg#18069"
+  ]
+}

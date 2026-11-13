@@ -1,0 +1,27 @@
+{
+  "id": "thread/t-cbbca521b592906a",
+  "_input_hash": "sha256:20c98ec7789dc00578d4",
+  "sources": [
+    "devlist:mgtkn0oprblt1tg7m0h3k1jo3lln6mc2",
+    "devlist:7b609f90yklf3nywzg2gjr8dgwdc6q7x",
+    "devlist:9jdks52doz822o9vjhn3gcqbr99ogvmd",
+    "devlist:4xwbxbkdqk7t46r10g0wfvxxjpcz5j3p"
+  ],
+  "title": "Release Apache Iceberg Rust 0.10.1 RC1",
+  "summary": "CTTY called a vote to release Apache Iceberg Rust 0.10.1 from tag v0.10.1-rc.1, open for at least 72 hours and until the required number of votes is reached. The verification checklist covers download links, checksums and signatures, LICENSE and NOTICE files, binary files, ASF headers, building from source and building and testing pyiceberg-core. kevinjqliu voted +1 after checking the changes since 0.10.0 and described the release as a patch release that helps fix pyiceberg-core. Other voters verified on Linux and macOS and reported the build, Rust test suites and the Python bindings passing. All replies were +1; the bundle contains no message announcing the result.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "Votes +1 after verifying the checklist and reviewing the changes between v0.10.0 and v0.10.1-rc.1, noting the patch release helps fix pyiceberg-core.",
+      "source": "devlist:7b609f90yklf3nywzg2gjr8dgwdc6q7x"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. The messages show +1 votes only: two marked binding (kevinjqliu, liurenjie1024) and six marked non-binding; no -1 votes."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": []
+}

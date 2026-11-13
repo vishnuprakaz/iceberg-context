@@ -1,0 +1,40 @@
+{
+  "id": "thread/t-dea37ea5d432effa",
+  "_input_hash": "sha256:7b591fd29b98a9dc0b5e",
+  "sources": [
+    "devlist:h8ohxh44g1zc32clg3sgxr80xjc4nnr9",
+    "devlist:ml7h653yvy5wn8jkvgl4qdlh9wc612jn",
+    "devlist:rtn30pj4fjl70m6f0rzzmt8gml82lohw"
+  ],
+  "title": "Vote on releasing Apache Iceberg Rust 0.10.0 RC3",
+  "summary": "Danny Jones called a vote to release Apache Iceberg Rust 0.10.0 from tag v0.10.0-rc.3. Voters reported verifying checksums, signatures, license files and headers, the build and tests, and the pyiceberg-core build and tests; Matt Butrovich also ran DataFusion Comet CI against the candidate. Kevin Liu first voted +1 and noted that Python build directories trip the license header check. On July 14 he changed his vote to -1 because the iceberg-storage-opendal, iceberg-catalog-loader and iceberg-cache-moka crates lack LICENSE and NOTICE files, and said a new release candidate is needed. The thread ends with that message and no result is stated.",
+  "positions": [
+    {
+      "who": "mbutrovich",
+      "stance": "The candidate verifies on macOS and DataFusion Comet CI, which runs Iceberg Java 1.10 Spark tests against iceberg-rust, is green with it.",
+      "source": "devlist:1rsn9dkdr3rn12krz9z7f4sn5zor1166"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "The candidate passes the checklist; bindings/python/.venv/ and .pytest_cache/ should be added to the ignore list in .licenserc.yaml.",
+      "source": "devlist:ml7h653yvy5wn8jkvgl4qdlh9wc612jn"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Three crates are missing LICENSE and NOTICE files and should not be published that way, so the vote changes to -1 and a new RC is needed.",
+      "source": "devlist:rtn30pj4fjl70m6f0rzzmt8gml82lohw"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "No result is stated in the thread. Before the -1 there were +1 votes marked binding from liurenjie1024, kevinjqliu and amogh-jahagirdar and seven marked non-binding; kevinjqliu then changed his vote to -1 and asked for a new RC.",
+    "source": "devlist:rtn30pj4fjl70m6f0rzzmt8gml82lohw"
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [
+    "gh:apache/iceberg-rust#2823"
+  ],
+  "why_it_matters": "Each published crate needs its own LICENSE and NOTICE files; their absence in three crates drew a -1 on this candidate."
+}

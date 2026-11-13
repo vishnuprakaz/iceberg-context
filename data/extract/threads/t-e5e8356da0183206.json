@@ -1,0 +1,36 @@
+{
+  "id": "thread/t-e5e8356da0183206",
+  "_input_hash": "sha256:f283c286a01699389ee7",
+  "sources": [
+    "devlist:krophr3htb39xhxr3ldbcn7ghqm82ohj",
+    "devlist:cxg23cptpp2c3p81b1h84q5co4wco9o6",
+    "devlist:7h5zj2ytstfkfdqkcoxnpclxl021c8rw",
+    "devlist:jldd9sf9r0wnrhgwd55mzhh0gt87jc2k",
+    "devlist:32f91dv0yom2pc309l4y76w4hq0pycqb",
+    "devlist:fcq2x1dw79pj06hcl0z7qf87kqrt8vcz"
+  ],
+  "title": "Release Apache Iceberg Terraform provider v0.1.0 RC1",
+  "summary": "zeroshade proposed release candidate 1 of the Apache Iceberg Terraform provider v0.1.0, based on commit ce85caf0, with convenience binaries for the Terraform and OpenTofu registries attached to a GitHub prerelease. sungwy, rambleraptor and Rich Bowen voted +1 after verifying signatures, checksums and license files; two of them also built from source and ran the tests. kevinjqliu then reported a schema-validation problem he considered a release blocker: on table creation, omitted field IDs are serialized as 0, so the published example sends duplicate field IDs and the catalog rejects it; on table update, the provider does not check Iceberg schema evolution rules and committed a long-to-string change and an optional-to-required change. He also noted leftover 'polaris' references and a 1.0.0 version in build.sh. zeroshade said he would fix the issues and cut a new RC.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "The release should wait until the provider submits schemas with unique field IDs on create and rejects table updates that are not valid Iceberg schema evolutions.",
+      "source": "devlist:32f91dv0yom2pc309l4y76w4hq0pycqb"
+    },
+    {
+      "who": "zeroshade",
+      "stance": "Will look into fixing the reported issues and cut a new release candidate when done.",
+      "source": "devlist:fcq2x1dw79pj06hcl0z7qf87kqrt8vcz"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The release manager said he would fix the reported schema issues and cut a new RC. Votes cast before that: one +1 binding and two +1 non-binding.",
+    "source": "devlist:fcq2x1dw79pj06hcl0z7qf87kqrt8vcz"
+  },
+  "initiatives": [
+    "iceberg-go"
+  ],
+  "refs": [],
+  "why_it_matters": "The first Terraform provider release is held back until table schemas are created with valid field IDs and incompatible schema changes are rejected."
+}

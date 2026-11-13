@@ -1,0 +1,28 @@
+{
+  "id": "thread/t-07dfa8ee9a2cbc37",
+  "_input_hash": "sha256:5541c170677e527b2299",
+  "sources": [
+    "devlist:ldkpj659fjrf6nrc8vbg0b3fknxwdg38",
+    "devlist:1nq15gfnxdpkxgxfwr1mxrjxvk3skq7v",
+    "devlist:wzz1hkm25rkr3d7nfv109oqv80tl9lvp",
+    "devlist:67550w1l8cdy5rkr3lwkod53n2xpqdhd"
+  ],
+  "title": "Vote on adding the File type to the Iceberg v4 spec (later votes)",
+  "summary": "These are later replies to the vote on adding the File type to the Iceberg v4 spec; the opening message of the vote is not among them. Seven of the eight replies are +1 votes, three of them marked binding. Kurtis Wright voted +0 (non-binding) and repeated a comment he had left on the specification PR: he wants a field, under any name, that tells maintenance operations whether the files at the URI are safe to remove or otherwise manipulate. Without it, he argued, there is no way to have a media bucket that several tables point to, which then requires copying the data multiple times. He said the spec need not define how such an indicator is updated, and that he would change his vote to +1 if the field were added. Nobody replied to this point here, and no result is announced in these messages.",
+  "positions": [
+    {
+      "who": "Kurtiscwright",
+      "stance": "Votes +0 (non-binding): the file type needs a field telling maintenance operations whether referenced files are safe to delete, so several tables can share one media bucket without copying data.",
+      "source": "devlist:1nq15gfnxdpkxgxfwr1mxrjxvk3skq7v"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result is announced in these messages. Votes cast here: three binding +1, four non-binding +1 and one non-binding +0."
+  },
+  "initiatives": [
+    "file-type"
+  ],
+  "refs": [],
+  "why_it_matters": "The one reservation recorded in the vote is that the file type has no way to mark who owns referenced files for cleanup."
+}

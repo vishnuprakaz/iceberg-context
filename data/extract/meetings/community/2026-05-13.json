@@ -1,0 +1,168 @@
+{
+  "id": "meeting/community/2026-05-13",
+  "_input_hash": "sha256:ba3d315cd96692ebac06",
+  "sources": [
+    "meet:community:2026-05-13"
+  ],
+  "summary": "The community sync notes welcome new committers Shawn Chang and Andrei Tserakhau, point to the Iceberg Summit 2026 selection committee retrospective, and list recent merges across Java, infra, Python, Rust, Go and C++. On releases, Java 1.11 RC1 had a few blockers that were addressed and another release candidate is planned, and Rust 0.9.1 is out. The discussion agenda covered review of the Delta to Iceberg conversion PR, Vortex integration, the constraint support proposal, a Spark conf for session-level time travel, Iceberg support for Spark 4.2, and the v4 spec changes for relative paths and columnar content stats. The notes list agenda items only and do not record outcomes of the discussions.",
+  "topics": [
+    {
+      "title": "Highlights: new committers, Summit 2026 and recent merges",
+      "summary": "The notes welcome Shawn Chang and Andrei Tserakhau as new committers and link the Iceberg Summit 2026 selection committee retrospective on the dev list; Summit videos are noted as coming. Java highlights include license, notice and bundle work, removing the runtime jar from build and deploy, v4 struct builders and TrackedFile implementations, a row ID assignment fix during manifest merge, writing shredded variant in Spark, and TCK tests for schema evolution in the format model tests. Infra added a Trivy CVE scan and a PR title check workflow.",
+      "initiatives": [
+        "community-process",
+        "v4-metadata-tree",
+        "variant",
+        "file-format-api"
+      ],
+      "refs": [
+        "list:mpdmy3odvyoxgk0osoyj2zxdprfwdfyc",
+        "gh:apache/iceberg#16163",
+        "gh:apache/iceberg#16092",
+        "gh:apache/iceberg#15854",
+        "gh:apache/iceberg#16253",
+        "gh:apache/iceberg#16263",
+        "gh:apache/iceberg#14297",
+        "gh:apache/iceberg#15843",
+        "gh:apache/iceberg#15430",
+        "gh:apache/iceberg#16101"
+      ]
+    },
+    {
+      "title": "Highlights: Python, Rust, Go and C++",
+      "summary": "PyIceberg added Python 3.14 to CI and build, register_view and REST load_view, an initial pluggable file format writer API, an overwrite parameter for register_table, and fixes for manifest entry snapshot_id handling. Iceberg Rust added an EncryptionManager with envelope encryption, a KeyManagementClient trait, StandardKeyMetadata and per-scan I/O metrics. Iceberg Go added maintenance CLI wiring, commit retry and OCC conflict validation, a v3 deletion vector reader and a clustered partitioned write path. Iceberg C++ added a delete filter for merge-on-read batches, streaming FileIO, a separate iceberg_data library, a ReachableFileCleanup strategy and commit retry.",
+      "initiatives": [
+        "pyiceberg",
+        "iceberg-rust",
+        "iceberg-go",
+        "iceberg-cpp",
+        "v4-encryption"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3299",
+        "gh:apache/iceberg-python#3288",
+        "gh:apache/iceberg-python#3224",
+        "gh:apache/iceberg-python#3119",
+        "gh:apache/iceberg-python#3327",
+        "gh:apache/iceberg-python#3290",
+        "gh:apache/iceberg-python#3237",
+        "gh:apache/iceberg-python#3257",
+        "gh:apache/iceberg-rust#2383",
+        "gh:apache/iceberg-rust#2339",
+        "gh:apache/iceberg-rust#2340",
+        "gh:apache/iceberg-rust#2405",
+        "gh:apache/iceberg-rust#2349",
+        "gh:apache/iceberg-go#1073",
+        "gh:apache/iceberg-go#912",
+        "gh:apache/iceberg-go#928",
+        "gh:apache/iceberg-go#866",
+        "gh:apache/iceberg-go#948",
+        "gh:apache/iceberg-cpp#650",
+        "gh:apache/iceberg-cpp#641",
+        "gh:apache/iceberg-cpp#631",
+        "gh:apache/iceberg-cpp#592",
+        "gh:apache/iceberg-cpp#626"
+      ]
+    },
+    {
+      "title": "Releases: Java 1.10.x and 1.11.x, Rust 0.9.1",
+      "summary": "Kevin gave the status of the 1.10.x and 1.11.x lines. For 1.11.x, RC1 had a few blockers that were addressed, and there will be another release candidate. Rust 0.9.1 is out.",
+      "initiatives": [
+        "java-releases",
+        "iceberg-rust"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Delta to Iceberg conversion review",
+      "summary": "Vladislav Sidorovich put the Delta to Iceberg conversion pull request on the agenda for review. The notes do not record the discussion or an outcome.",
+      "initiatives": [],
+      "refs": [
+        "gh:apache/iceberg#15407"
+      ]
+    },
+    {
+      "title": "Vortex integration",
+      "summary": "Will and Kevin had an agenda item on Vortex integration. The notes give no details of what was discussed.",
+      "initiatives": [
+        "file-format-api"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Constraint support proposal",
+      "summary": "Huaxin brought the constraint support proposal document to the sync. The notes link the proposal and record no outcome.",
+      "initiatives": [
+        "constraints"
+      ],
+      "refs": [
+        "doc:1re65fx3uqC7I_tJuS79IxLiB7HEN2Grt5qRIDjd3p-4"
+      ]
+    },
+    {
+      "title": "Spark session-level time travel conf and Spark 4.2 support",
+      "summary": "Gabriel Igliozzi raised a proposal for a Spark conf that enables session-level time travel, tracked in an issue. Neelesh had a separate item on Iceberg support for Spark 4.2. The notes record no outcome for either.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16226"
+      ]
+    },
+    {
+      "title": "Iceberg Rust PRs for review",
+      "summary": "Two Iceberg Rust pull requests were listed for review: adding VariantType and adding deletion vector read support.",
+      "initiatives": [
+        "iceberg-rust",
+        "variant"
+      ],
+      "refs": [
+        "gh:apache/iceberg-rust#2423",
+        "gh:apache/iceberg-rust#2414"
+      ]
+    },
+    {
+      "title": "v4 spec changes: relative paths and columnar content stats",
+      "summary": "Ryan listed two v4 spec changes for discussion: the relative paths spec pull request and the columnar content stats pull request. The notes do not record the discussion.",
+      "initiatives": [
+        "v4-relative-paths",
+        "v4-content-stats"
+      ],
+      "refs": [
+        "gh:apache/iceberg#15630",
+        "gh:apache/iceberg#14234"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "vladislav-sidorovich",
+      "basis": "notes"
+    },
+    {
+      "who": "Will",
+      "basis": "notes"
+    },
+    {
+      "who": "Kevin",
+      "basis": "notes"
+    },
+    {
+      "who": "Huaxin",
+      "basis": "notes"
+    },
+    {
+      "who": "gabeiglio",
+      "basis": "notes"
+    },
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    },
+    {
+      "who": "Ryan",
+      "basis": "notes"
+    }
+  ]
+}

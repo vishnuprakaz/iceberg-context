@@ -1,0 +1,82 @@
+{
+  "id": "thread/t-98226ff1baae6ac7",
+  "_input_hash": "sha256:eafda24165dfe063398b",
+  "sources": [
+    "devlist:6zspb6cpb6j2po5lm57mq1sgcp2hppkf",
+    "devlist:vbbhm3wrbdzjn7qy3kzsz7y84wbgrd0h",
+    "devlist:7yv3039nk3ns6t8l65403mvm96opd8x0",
+    "devlist:yz3fo98sgyctcmfp15f349n14j3y6nmm",
+    "devlist:gzk47w9yhkhjopjo8mk1qyv0ql1koo4p",
+    "devlist:9zthft8ozrjxn2s88k47pn7yydgdc4jo",
+    "devlist:3r6wrblr0l7xs7cb2f7qs07ovh792vyo",
+    "devlist:1odoc5lm0xfrptkh38knqyqsp3n6l7x9",
+    "devlist:z817y0bxyyy0zbks7261x36vy3pky4hj",
+    "devlist:l02zjbx3j1pddqhj3wg8gkj10o90l2cp",
+    "devlist:1sfcy4dfvmfts6xz8g27h0qj9zrq9j0n",
+    "devlist:ws89d7doddgqc2j8fc2xt84bchr374t2",
+    "devlist:8oyfc2on473fyp8ht64nhoryhhzhm9gr",
+    "devlist:k01njq713y9ggxy8rhw6pxxdv2rms93p",
+    "devlist:nbtw9wg699w07wrp2xy03mjjchob6vjq",
+    "devlist:dzhzwjpzb1q6lx45p7c1qf6nx7y9wbzx",
+    "devlist:tg0tqhlml3rcrts9s9rbvnx9d4dqo107",
+    "devlist:70c96rm1zo3xhmrhwb9wb68qf79t2h2g",
+    "devlist:6mcyszh49l25z6k2lcvhjv13hoz2dgtl",
+    "devlist:trfh2lxjdrj1w0ljtrmggq4h4xn8k6p1"
+  ],
+  "title": "REST spec: expected server behavior when X-Iceberg-Access-Delegation cannot be satisfied",
+  "summary": "youngrae81 asked what a REST catalog should do when the X-Iceberg-Access-Delegation header is present but none of the requested mechanisms can be provided; Apache Polaris fails such requests with HTTP 400, and the spec text 'any or none' does not say whether rejection is allowed. Alex Dutra proposed that servers SHOULD return 400 in that case, and flyrain supported fail-fast. danielcweeks disagreed: the wording was intentionally loose, the catalog should decide the access model through storage-credentials and remote-signing-config, and Polaris's behavior is fine as an implementation choice but should not be required. Alex Dutra then suggested a new header value 'local'; danielcweeks preferred 'none', which flyrain and Dmitri Bourlatchkov accepted. A sentence explicitly permitting failure was dropped because a server may always reject a request. youngrae81 opened PR #18480 adding only 'none'. flyrain later asked again to document that servers may fail with a specific reason; youngrae81 offered a separate PR if others agree.",
+  "positions": [
+    {
+      "who": "youngrae81",
+      "stance": "The spec does not settle whether a server may reject a request when no requested delegation mechanism is available, and a clarification is needed.",
+      "source": "devlist:6zspb6cpb6j2po5lm57mq1sgcp2hppkf"
+    },
+    {
+      "who": "Alex Dutra",
+      "stance": "The spec should say servers SHOULD return HTTP 400 when none of the requested mechanisms is available, because a 200 without access only moves the failure to first data access.",
+      "source": "devlist:vbbhm3wrbdzjn7qy3kzsz7y84wbgrd0h"
+    },
+    {
+      "who": "Alex Dutra",
+      "stance": "The header cannot express that a client can work with its own storage credentials, so a new enum value should be added for that.",
+      "source": "devlist:l02zjbx3j1pddqhj3wg8gkj10o90l2cp"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "The catalog should be the sole authority on access, the loose wording is intentional, and catalogs should not be required to fail when they cannot provide a requested mechanism.",
+      "source": "devlist:9zthft8ozrjxn2s88k47pn7yydgdc4jo"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Use 'none' rather than 'local' so the client states it does not need credentials or access from the catalog and the catalog can skip generating them.",
+      "source": "devlist:1sfcy4dfvmfts6xz8g27h0qj9zrq9j0n"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Only the 'none' value needs to be added; no clarification about failing is needed because a server may always reject a request.",
+      "source": "devlist:nbtw9wg699w07wrp2xy03mjjchob6vjq"
+    },
+    {
+      "who": "flyrain",
+      "stance": "Failing the request when the requested mechanism cannot be provided is acceptable and expected, and the spec should state explicitly that a server may fail for a specific reason.",
+      "source": "devlist:6mcyszh49l25z6k2lcvhjv13hoz2dgtl"
+    },
+    {
+      "who": "Dmitri Bourlatchkov",
+      "stance": "'none' is clearer than 'local', and no specific statement about failing requests is needed.",
+      "source": "devlist:dzhzwjpzb1q6lx45p7c1qf6nx7y9wbzx"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Agreement to add a 'none' value to the X-Iceberg-Access-Delegation enum and leave the rest of the description unchanged; PR #18480 does this. Whether to also state that servers may reject unsatisfiable requests was raised again at the end and is unresolved.",
+    "source": "devlist:70c96rm1zo3xhmrhwb9wb68qf79t2h2g"
+  },
+  "initiatives": [
+    "rest-auth"
+  ],
+  "refs": [
+    "gh:apache/iceberg#18480"
+  ],
+  "why_it_matters": "Clients gain an explicit way to tell a catalog they do not need delegated access, while failing on unsatisfiable delegation remains a catalog implementation choice rather than a spec requirement."
+}

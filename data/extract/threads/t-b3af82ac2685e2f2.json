@@ -1,0 +1,52 @@
+{
+  "id": "thread/t-b3af82ac2685e2f2",
+  "_input_hash": "sha256:34c61aebe13616415356",
+  "sources": [
+    "devlist:owfk09ll0n1crtfbl8jnyzmg8tm1dbrg",
+    "devlist:j769l8hcxn0vzq1ly24x5zhdmvsjm2vv",
+    "devlist:hb4xz96257gkqwxc4khyjzsfm2d8v9h0",
+    "devlist:hjjhl6ybmd84g8lwc0x7qg206lyy10rt",
+    "devlist:y1fy0vrz8vo6n5vy7yc27sojt6bxbfw4",
+    "devlist:ykwvhnl6lypzztcydp34pw4vloy72r88",
+    "devlist:sz2h9ho13rvwftfz4bzj0qlwxntntjgn",
+    "devlist:vpwwwojz9p4x9s8z3yg75gjotql4sp7o",
+    "devlist:qqbo7byynvd16rop6687b6gxow9gn6b1",
+    "devlist:nznf7tnk9t47kq8dzyw7p9pozq0sxh6z"
+  ],
+  "title": "Handling of existing statistics files",
+  "summary": "Dzeri96 reported that a stats-only commit (running ANALYZE TABLE in iceberg-spark) replaced a snapshot's statistics file and dropped proprietary index blobs another writer had stored there. Three options were put forward: require writers to carry unknown blobs over into new Puffin files, allow several statistics files per snapshot, or create a new snapshot when statistics are computed. tmater preferred dropping unknown blobs and tying statistics to a new snapshot. Gábor Kaszab objected to creating snapshots for statistics and to the spec mandating carry-over of proprietary blobs; he found that the spec does not forbid several statistics entries for one snapshot, but the Java TableMetadata builder and the UpdateStatistics.setStatistics contract replace existing ones. Dzeri96 then proposed a 'type' field on statistics file metadata with a required iceberg-statistics-v1 type. The thread ends there without agreement.",
+  "positions": [
+    {
+      "who": "Dzeri96",
+      "stance": "Writers should not delete each other's statistics metadata; allow multiple statistics files per snapshot and add a 'type' field to statistics file metadata, with iceberg-statistics-v1 required for compliance.",
+      "source": "devlist:nznf7tnk9t47kq8dzyw7p9pozq0sxh6z"
+    },
+    {
+      "who": "tmater",
+      "stance": "Dropping an unknown blob is safer than carrying it forward unvalidated, multiple files per snapshot add planning cost, and creating a snapshot when statistics are written is the simplest model.",
+      "source": "devlist:j769l8hcxn0vzq1ly24x5zhdmvsjm2vv"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Creating a snapshot for statistics breaks the model that snapshots are for data changes, and the spec should not mandate that engines carry over proprietary blobs they do not understand.",
+      "source": "devlist:hb4xz96257gkqwxc4khyjzsfm2d8v9h0"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "The spec already permits several statistics entries per snapshot ID and only the Java builder and API contract enforce replacement, but statistics ownership would add spec complexity without benefit for open source engines.",
+      "source": "devlist:sz2h9ho13rvwftfz4bzj0qlwxntntjgn"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Secondary indexes will not be wired through the table metadata statistics field, and gaps should be closed by adding officially supported features to the spec.",
+      "source": "devlist:qqbo7byynvd16rop6687b6gxow9gn6b1"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "The thread stops after Dzeri96's concrete proposal for a 'type' field on statistics files; Dzeri96 asked for more opinions and nobody else replied."
+  },
+  "initiatives": [],
+  "refs": [],
+  "why_it_matters": "Until this is settled, a stats-producing operation in one engine can replace the statistics file of a snapshot and drop blobs written by another engine."
+}

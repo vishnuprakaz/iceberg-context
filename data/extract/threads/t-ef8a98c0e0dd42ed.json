@@ -1,0 +1,35 @@
+{
+  "id": "thread/t-ef8a98c0e0dd42ed",
+  "_input_hash": "sha256:f98c10934abb7a989e2a",
+  "sources": [
+    "devlist:bzs62qqt9k4t9sr76pk0d36l47zwcpyb",
+    "devlist:r1hv5ybpbbwg9n7tno3prnlm73nnfn5p",
+    "devlist:tkvlq11rhvnbmoh7v0hom31kg6rz76fo"
+  ],
+  "title": "Vote to recommend a standard User-Agent format for REST clients (reopened)",
+  "summary": "Rahul Mahadev reopened the vote on standardizing the client User-Agent format in the REST catalog spec after incorporating review comments from Alex Dutra. A +1 endorses that clients identify themselves with the standard HTTP User-Agent header as whitespace-separated product/version tokens, most specific first (engine, integration or connector, Iceberg library, runtime), with an optional parenthesized comment; that the Iceberg library token must be present when the header is sent; and that the header is advisory, so servers must not reject requests because it is missing or malformed and must not use it for authentication, though they may refuse operations from client versions known to be unsafe. It is not a capability negotiation mechanism. The spec change is PR #17727, with follow-ups to make the Java, Python, Rust and Go clients emit the format. All replies were +1. Zheng Hu (openinx) left comments on the PR and asked whether CVE scanning failures there are blocking. The bundle contains no message announcing the result.",
+  "positions": [
+    {
+      "who": "rahul mahadev",
+      "stance": "The REST spec should recommend an advisory User-Agent format of product/version tokens that always includes the Iceberg library token.",
+      "source": "devlist:bzs62qqt9k4t9sr76pk0d36l47zwcpyb"
+    },
+    {
+      "who": "openinx",
+      "stance": "Votes +1 (binding), with comments left on the PR and a question on whether its CVE scanning failures block it.",
+      "source": "devlist:r1hv5ybpbbwg9n7tno3prnlm73nnfn5p"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. Votes cast: 9 binding +1, 9 non-binding +1, one +1 with no binding status stated, and no 0 or -1 votes."
+  },
+  "initiatives": [
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17727",
+    "list:d6hkx66o8qc1lolh11l1lmswxlq0bpj9"
+  ],
+  "why_it_matters": "If adopted, the Java, Python, Rust and Go clients are to be changed to emit the common User-Agent format."
+}
