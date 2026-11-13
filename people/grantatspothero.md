@@ -16,6 +16,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person grantatspothero` for live numbers.
 
 - **Merged commits:** 1. Areas: [[module/iceberg/core|iceberg/core]] (1)
+- **Pull requests reviewed (6 months):** 2
 - **Dev list:** 4 messages, 2 threads started (1 discuss)
 
 ## Recent threads started

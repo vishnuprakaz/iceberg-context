@@ -21,17 +21,17 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg-python/manifest
-  n: 4
-  window: 12m
-  confidence: observed
-- rel: contributes
   to: module/iceberg-python/expressions
   n: 4
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg-python/io
+  to: module/iceberg-python/manifest
+  n: 4
+  window: 12m
+  confidence: observed
+- rel: contributes
+  to: module/iceberg-python/utils
   n: 3
   window: 12m
   confidence: observed
@@ -50,7 +50,8 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person rambleraptor` for live numbers.
 
-- **Merged commits:** 48. Areas: [[module/iceberg-python/catalog|iceberg-python/catalog]] (10), [[module/iceberg-python/table|iceberg-python/table]] (9), [[module/iceberg-python/docs|iceberg-python/docs]] (8), [[module/iceberg-python/manifest|iceberg-python/manifest]] (4), [[module/iceberg-python/expressions|iceberg-python/expressions]] (4), [[module/iceberg-python/io|iceberg-python/io]] (3)
+- **Merged commits:** 48. Areas: [[module/iceberg-python/catalog|iceberg-python/catalog]] (10), [[module/iceberg-python/table|iceberg-python/table]] (9), [[module/iceberg-python/docs|iceberg-python/docs]] (8), [[module/iceberg-python/expressions|iceberg-python/expressions]] (4), [[module/iceberg-python/manifest|iceberg-python/manifest]] (4), [[module/iceberg-python/utils|iceberg-python/utils]] (3)
+- **Pull requests reviewed (6 months):** 5
 - **Dev list:** 58 messages, 14 threads started (3 discuss, 2 vote, 2 announce)
 - **Named in meeting notes:** [[group/community|community]] (6)
 

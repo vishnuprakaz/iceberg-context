@@ -66,6 +66,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person nastra` for live numbers.
 
 - **Merged commits:** 66. Areas: [[module/iceberg/core|iceberg/core]] (37), [[module/iceberg/spark|iceberg/spark]] (19), [[module/iceberg/api|iceberg/api]] (13), [[module/iceberg/build|iceberg/build]] (9), [[module/iceberg/open-api|iceberg/open-api]] (7), [[module/iceberg/aws|iceberg/aws]] (5)
+- **Pull requests reviewed (6 months):** 96
 - **Dev list:** 86 messages, 6 threads started (4 vote, 2 discuss)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

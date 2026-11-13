@@ -15,6 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person dimas-b` for live numbers.
 
+- **Pull requests reviewed (6 months):** 2
 - **Dev list:** 12 messages, 0 threads started
 <!-- kb:generated:end -->
 

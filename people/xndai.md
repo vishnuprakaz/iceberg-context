@@ -16,6 +16,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person xndai` for live numbers.
 
 - **Merged commits:** 4. Areas: [[module/iceberg/arrow|iceberg/arrow]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1)
+- **Pull requests reviewed (6 months):** 3
 - **Dev list:** 24 messages, 4 threads started (2 discuss)
 
 ## Recent threads started

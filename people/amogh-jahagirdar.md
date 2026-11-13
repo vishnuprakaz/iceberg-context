@@ -80,6 +80,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person amogh-jahagirdar` for live numbers.
 
 - **Merged commits:** 17. Areas: [[module/iceberg/core|iceberg/core]] (7), [[module/iceberg/spark|iceberg/spark]] (7), [[module/iceberg/build|iceberg/build]] (2), [[module/iceberg/data|iceberg/data]] (2), [[module/iceberg/format|iceberg/format]] (2), [[module/iceberg/docs|iceberg/docs]] (2)
+- **Pull requests reviewed (6 months):** 60
 - **Dev list:** 92 messages, 9 threads started (3 discuss, 2 release-vote, 1 announce, 1 vote)
 - **Named in meeting notes:** [[group/v4-metadata|v4-metadata]] (2), [[group/community|community]] (1)
 

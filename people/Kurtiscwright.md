@@ -16,6 +16,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person Kurtiscwright` for live numbers.
 
 - **Merged commits:** 3. Areas: [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Pull requests reviewed (6 months):** 1
 - **Dev list:** 36 messages, 4 threads started (2 discuss)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

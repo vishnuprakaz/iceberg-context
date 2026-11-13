@@ -31,7 +31,7 @@ Long-term authors (all time): [[person/pvary|Peter Vary]] (31), [[person/nastra|
 
 Most active authors (last 12 months): [[person/thswlsqls|Eunbin Son]] (2), [[person/pvary|Peter Vary]] (1)
 
-Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
+Most active reviewers (last 6 months): [[person/pvary|Peter Vary]] (2), [[person/uros-b|Uros]] (2), [[person/gaborkaszab|Gabor Kaszab]] (2), [[person/pan3793|Cheng Pan]] (1), [[person/findepi|Piotr Findeisen]] (1), [[person/anuragmantri|Anurag Mantripragada]] (1), [[person/nastra|Eduard Tudenhoefner]] (1)
 
 ## Latest changes
 

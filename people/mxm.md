@@ -50,6 +50,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person mxm` for live numbers.
 
 - **Merged commits:** 67. Areas: [[module/iceberg/flink|iceberg/flink]] (58), [[module/iceberg/docs|iceberg/docs]] (8), [[module/iceberg/spark|iceberg/spark]] (4), [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/build|iceberg/build]] (2), [[module/iceberg/site|iceberg/site]] (1)
+- **Pull requests reviewed (6 months):** 34
 - **Dev list:** 76 messages, 4 threads started (3 discuss)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

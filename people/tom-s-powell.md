@@ -46,6 +46,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person tom-s-powell` for live numbers.
 
 - **Merged commits:** 9. Areas: [[module/iceberg/core|iceberg/core]] (4), [[module/iceberg/api|iceberg/api]] (3), [[module/iceberg/aws|iceberg/aws]] (3), [[module/iceberg/spark|iceberg/spark]] (3), [[module/iceberg/azure|iceberg/azure]] (3), [[module/iceberg/gcp|iceberg/gcp]] (2)
+- **Pull requests reviewed (6 months):** 1
 
 ## Recent merged changes
 

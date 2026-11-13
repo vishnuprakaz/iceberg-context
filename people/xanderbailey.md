@@ -35,7 +35,8 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person xanderbailey` for live numbers.
 
-- **Merged commits:** 12. Areas: [[module/iceberg-python/table|iceberg-python/table]] (4), [[module/iceberg-python/manifest|iceberg-python/manifest]] (2), [[module/iceberg-python/io|iceberg-python/io]] (2), [[module/iceberg-python/transforms|iceberg-python/transforms]] (1), [[module/iceberg-python/utils|iceberg-python/utils]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
+- **Merged commits:** 12. Areas: [[module/iceberg-python/table|iceberg-python/table]] (4), [[module/iceberg-python/manifest|iceberg-python/manifest]] (2), [[module/iceberg-python/io|iceberg-python/io]] (2), [[module/iceberg-python/utils|iceberg-python/utils]] (1), [[module/iceberg-python/transforms|iceberg-python/transforms]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
+- **Pull requests reviewed (6 months):** 1
 - **Dev list:** 20 messages, 5 threads started (4 discuss, 1 vote)
 - **Named in meeting notes:** [[group/community|community]] (11)
 

@@ -61,6 +61,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person nssalian` for live numbers.
 
 - **Merged commits:** 38. Areas: [[module/iceberg/parquet|iceberg/parquet]] (9), [[module/iceberg/site|iceberg/site]] (6), [[module/iceberg/core|iceberg/core]] (5), [[module/iceberg-python/io|iceberg-python/io]] (4), [[module/iceberg/spark|iceberg/spark]] (4), [[module/iceberg/build|iceberg/build]] (3)
+- **Pull requests reviewed (6 months):** 51
 - **Dev list:** 121 messages, 19 threads started (5 discuss, 3 result, 3 release-vote, 2 vote, 2 announce)
 - **Named in meeting notes:** [[group/community|community]] (4), [[group/spark|spark]] (2)
 

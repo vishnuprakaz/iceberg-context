@@ -16,6 +16,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person steveloughran` for live numbers.
 
 - **Merged commits:** 1. Areas: [[module/iceberg/build|iceberg/build]] (1)
+- **Pull requests reviewed (6 months):** 7
 - **Dev list:** 43 messages, 2 threads started (1 discuss)
 
 ## Recent threads started

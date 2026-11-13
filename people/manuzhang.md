@@ -56,6 +56,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person manuzhang` for live numbers.
 
 - **Merged commits:** 66. Areas: [[module/iceberg/build|iceberg/build]] (28), [[module/iceberg/spark|iceberg/spark]] (22), [[module/iceberg/core|iceberg/core]] (9), [[module/iceberg/site|iceberg/site]] (6), [[module/iceberg/open-api|iceberg/open-api]] (5), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (3)
+- **Pull requests reviewed (6 months):** 19
 - **Dev list:** 75 messages, 8 threads started (2 discuss, 1 vote, 1 release-vote, 1 result, 1 announce)
 - **Named in meeting notes:** [[group/community|community]] (3)
 

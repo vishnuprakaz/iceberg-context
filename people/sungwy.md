@@ -39,6 +39,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person sungwy` for live numbers.
 
 - **Merged commits:** 6. Areas: [[module/iceberg/arrow|iceberg/arrow]] (1), [[module/iceberg/site|iceberg/site]] (1), [[module/iceberg/format|iceberg/format]] (1), [[module/iceberg-python/io|iceberg-python/io]] (1)
+- **Pull requests reviewed (6 months):** 8
 - **Dev list:** 61 messages, 10 threads started (8 discuss, 1 announce)
 
 ## Recent threads started

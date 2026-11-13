@@ -68,6 +68,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person rdblue` for live numbers.
 
 - **Merged commits:** 32. Areas: [[module/iceberg/core|iceberg/core]] (16), [[module/iceberg/api|iceberg/api]] (7), [[module/iceberg/spark|iceberg/spark]] (5), [[module/iceberg/flink|iceberg/flink]] (4), [[module/iceberg/format|iceberg/format]] (3), [[module/iceberg/parquet|iceberg/parquet]] (3)
+- **Pull requests reviewed (6 months):** 41
 - **Dev list:** 129 messages, 16 threads started (10 discuss, 4 vote)
 - **Named in meeting notes:** [[group/community|community]] (3)
 

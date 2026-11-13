@@ -40,6 +40,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person danielcweeks` for live numbers.
 
 - **Merged commits:** 9. Areas: [[module/iceberg/format|iceberg/format]] (3), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/aws|iceberg/aws]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Pull requests reviewed (6 months):** 45
 - **Dev list:** 128 messages, 5 threads started (2 vote, 2 discuss, 1 result)
 - **Named in meeting notes:** [[group/community|community]] (2)
 

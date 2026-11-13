@@ -21,6 +21,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person chenjian2664` for live numbers.
 
 - **Merged commits:** 4. Areas: [[module/iceberg/flink|iceberg/flink]] (2), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Pull requests reviewed (6 months):** 3
 
 ## Recent merged changes
 

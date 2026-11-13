@@ -46,6 +46,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person wombatu-kun` for live numbers.
 
 - **Merged commits:** 28. Areas: [[module/iceberg/flink|iceberg/flink]] (9), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (5), [[module/iceberg/parquet|iceberg/parquet]] (4), [[module/iceberg/build|iceberg/build]] (3), [[module/iceberg/spark|iceberg/spark]] (3), [[module/iceberg/data|iceberg/data]] (2)
+- **Pull requests reviewed (6 months):** 86
 - **Dev list:** 3 messages, 3 threads started (3 discuss)
 
 ## Recent threads started

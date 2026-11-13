@@ -32,7 +32,7 @@ Long-term authors (all time): [[person/rdblue|Ryan Blue]] (409), [[person/nastra
 
 Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (37), [[person/anoopj|Anoop Johnson]] (36), [[person/gaborkaszab|Gabor Kaszab]] (35), [[person/singhpk234|Prashant Singh]] (17), [[person/ebyhr|Yuya Ebihara]] (17), [[person/rdblue|Ryan Blue]] (16), [[person/stevenzwu|Steven Wu]] (12), [[person/uros-b|Uros]] (10)
 
-Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
+Most active reviewers (last 6 months): [[person/uros-b|Uros]] (49), [[person/singhpk234|Prashant Singh]] (33), [[person/nastra|Eduard Tudenhoefner]] (33), [[person/rdblue|Ryan Blue]] (31), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (31), [[person/stevenzwu|Steven Wu]] (28), [[person/szehon-ho|Szehon Ho]] (26), [[person/anoopj|Anoop Johnson]] (25)
 
 ## Latest changes
 

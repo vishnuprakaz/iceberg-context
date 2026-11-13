@@ -36,6 +36,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person zhjwpku` for live numbers.
 
 - **Merged commits:** 8. Areas: [[module/iceberg/site|iceberg/site]] (3), [[module/iceberg-python/transforms|iceberg-python/transforms]] (2), [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/format|iceberg/format]] (1)
+- **Pull requests reviewed (6 months):** 4
 - **Dev list:** 61 messages, 9 threads started (4 release-vote, 2 discuss, 1 vote, 1 announce)
 - **Named in meeting notes:** [[group/community|community]] (3)
 

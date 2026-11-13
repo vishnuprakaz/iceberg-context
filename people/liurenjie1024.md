@@ -25,6 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person liurenjie1024` for live numbers.
 
+- **Pull requests reviewed (6 months):** 1
 - **Dev list:** 54 messages, 1 threads started (1 announce)
 
 ## Recent threads started

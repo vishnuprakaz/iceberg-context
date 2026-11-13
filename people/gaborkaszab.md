@@ -14,12 +14,12 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/orc
+  to: module/iceberg/api
   n: 4
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/api
+  to: module/iceberg/orc
   n: 4
   window: 12m
   confidence: observed
@@ -50,7 +50,8 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person gaborkaszab` for live numbers.
 
-- **Merged commits:** 39. Areas: [[module/iceberg/core|iceberg/core]] (35), [[module/iceberg/orc|iceberg/orc]] (4), [[module/iceberg/api|iceberg/api]] (4), [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/flink|iceberg/flink]] (2)
+- **Merged commits:** 39. Areas: [[module/iceberg/core|iceberg/core]] (35), [[module/iceberg/api|iceberg/api]] (4), [[module/iceberg/orc|iceberg/orc]] (4), [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/flink|iceberg/flink]] (2)
+- **Pull requests reviewed (6 months):** 27
 - **Dev list:** 58 messages, 4 threads started (2 discuss, 1 vote)
 
 ## Recent threads started

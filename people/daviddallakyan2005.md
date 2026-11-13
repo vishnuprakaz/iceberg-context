@@ -6,12 +6,12 @@ login: daviddallakyan2005
 github: https://github.com/daviddallakyan2005
 links:
 - rel: contributes
-  to: module/iceberg/docs
+  to: module/iceberg/site
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/site
+  to: module/iceberg/docs
   n: 2
   window: 12m
   confidence: observed
@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person daviddallakyan2005` for live numbers.
 
-- **Merged commits:** 4. Areas: [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg-python/table|iceberg-python/table]] (1)
+- **Merged commits:** 4. Areas: [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg-python/table|iceberg-python/table]] (1)
 
 ## Recent merged changes
 

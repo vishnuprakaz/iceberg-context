@@ -26,6 +26,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person anuragmantri` for live numbers.
 
 - **Merged commits:** 13. Areas: [[module/iceberg/spark|iceberg/spark]] (11), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/aws|iceberg/aws]] (1), [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (1)
+- **Pull requests reviewed (6 months):** 11
 - **Dev list:** 79 messages, 8 threads started (5 discuss)
 
 ## Recent threads started

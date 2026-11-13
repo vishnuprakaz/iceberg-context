@@ -21,6 +21,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person RjLi13` for live numbers.
 
 - **Merged commits:** 5. Areas: [[module/iceberg/spark|iceberg/spark]] (5), [[module/iceberg/docs|iceberg/docs]] (1)
+- **Pull requests reviewed (6 months):** 1
 
 ## Recent merged changes
 

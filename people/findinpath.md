@@ -16,6 +16,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person findinpath` for live numbers.
 
 - **Merged commits:** 2. Areas: [[module/iceberg/gcp|iceberg/gcp]] (1), [[module/iceberg/azure|iceberg/azure]] (1)
+- **Pull requests reviewed (6 months):** 3
 - **Dev list:** 1 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

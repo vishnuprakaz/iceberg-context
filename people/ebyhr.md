@@ -51,6 +51,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person ebyhr` for live numbers.
 
 - **Merged commits:** 143. Areas: [[module/iceberg/build|iceberg/build]] (52), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (40), [[module/iceberg/core|iceberg/core]] (17), [[module/iceberg-python/catalog|iceberg-python/catalog]] (13), [[module/iceberg/flink|iceberg/flink]] (12), [[module/iceberg/spark|iceberg/spark]] (12)
+- **Pull requests reviewed (6 months):** 92
 - **Dev list:** 20 messages, 6 threads started (4 discuss, 1 announce)
 - **Named in meeting notes:** [[group/community|community]] (3)
 

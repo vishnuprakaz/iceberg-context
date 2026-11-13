@@ -21,6 +21,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person karuppayya` for live numbers.
 
 - **Merged commits:** 2. Areas: [[module/iceberg/spark|iceberg/spark]] (2)
+- **Pull requests reviewed (6 months):** 1
 - **Dev list:** 2 messages, 0 threads started
 
 ## Recent merged changes

@@ -71,6 +71,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person kevinjqliu` for live numbers.
 
 - **Merged commits:** 172. Areas: [[module/iceberg/build|iceberg/build]] (39), [[module/iceberg/site|iceberg/site]] (18), [[module/iceberg-python/docs|iceberg-python/docs]] (12), [[module/iceberg-python/catalog|iceberg-python/catalog]] (10), [[module/iceberg/spark|iceberg/spark]] (10), [[module/iceberg-python/table|iceberg-python/table]] (7)
+- **Pull requests reviewed (6 months):** 59
 - **Dev list:** 262 messages, 20 threads started (6 discuss, 4 vote, 1 announce)
 - **Named in meeting notes:** [[group/community|community]] (5)
 

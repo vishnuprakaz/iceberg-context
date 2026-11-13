@@ -36,6 +36,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person talatuyarer` for live numbers.
 
 - **Merged commits:** 34. Areas: [[module/iceberg/flink|iceberg/flink]] (24), [[module/iceberg/docs|iceberg/docs]] (5), [[module/iceberg/site|iceberg/site]] (3), [[module/iceberg/build|iceberg/build]] (3), [[module/iceberg/gcp|iceberg/gcp]] (1), [[module/iceberg/core|iceberg/core]] (1)
+- **Pull requests reviewed (6 months):** 3
 - **Dev list:** 38 messages, 8 threads started (3 discuss, 3 announce, 1 vote, 1 result)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

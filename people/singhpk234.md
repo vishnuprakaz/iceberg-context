@@ -60,6 +60,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person singhpk234` for live numbers.
 
 - **Merged commits:** 32. Areas: [[module/iceberg/core|iceberg/core]] (17), [[module/iceberg/open-api|iceberg/open-api]] (9), [[module/iceberg/build|iceberg/build]] (5), [[module/iceberg/spark|iceberg/spark]] (5), [[module/iceberg/api|iceberg/api]] (4), [[module/iceberg/azure|iceberg/azure]] (2)
+- **Pull requests reviewed (6 months):** 160
 - **Dev list:** 87 messages, 16 threads started (7 discuss, 5 vote, 2 result)
 - **Named in meeting notes:** [[group/read-restrictions|read-restrictions]] (1), [[group/community|community]] (1)
 

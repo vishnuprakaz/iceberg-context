@@ -61,6 +61,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person pvary` for live numbers.
 
 - **Merged commits:** 40. Areas: [[module/iceberg/spark|iceberg/spark]] (12), [[module/iceberg/core|iceberg/core]] (9), [[module/iceberg/flink|iceberg/flink]] (9), [[module/iceberg/data|iceberg/data]] (5), [[module/iceberg/site|iceberg/site]] (3), [[module/iceberg/build|iceberg/build]] (3)
+- **Pull requests reviewed (6 months):** 137
 - **Dev list:** 176 messages, 7 threads started (3 discuss)
 - **Named in meeting notes:** [[group/community|community]] (2)
 

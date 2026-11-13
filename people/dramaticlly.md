@@ -15,6 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person dramaticlly` for live numbers.
 
+- **Pull requests reviewed (6 months):** 48
 - **Dev list:** 23 messages, 1 threads started (1 discuss)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

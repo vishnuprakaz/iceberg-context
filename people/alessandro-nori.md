@@ -26,6 +26,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person alessandro-nori` for live numbers.
 
 - **Merged commits:** 4. Areas: [[module/iceberg/spark|iceberg/spark]] (3), [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/api|iceberg/api]] (1)
+- **Pull requests reviewed (6 months):** 1
 
 ## Recent merged changes
 

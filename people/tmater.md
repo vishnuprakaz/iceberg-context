@@ -21,6 +21,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person tmater` for live numbers.
 
 - **Merged commits:** 3. Areas: [[module/iceberg/parquet|iceberg/parquet]] (2), [[module/iceberg/core|iceberg/core]] (1)
+- **Pull requests reviewed (6 months):** 1
 - **Dev list:** 2 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

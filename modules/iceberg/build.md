@@ -31,7 +31,7 @@ Long-term authors (all time): [[person/rdblue|Ryan Blue]] (70), [[person/Fokko|F
 
 Most active authors (last 12 months): [[person/ebyhr|Yuya Ebihara]] (52), [[person/kevinjqliu|Kevin Liu]] (39), [[person/manuzhang|Manu Zhang]] (28), [[person/nastra|Eduard Tudenhoefner]] (9), [[person/huaxingao|Huaxin Gao]] (7), [[person/singhpk234|Prashant Singh]] (5), [[person/uros-b|Uros]] (5), [[person/Fokko|Fokko Driesprong]] (4)
 
-Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
+Most active reviewers (last 6 months): [[person/huaxingao|Huaxin Gao]] (122), [[person/singhpk234|Prashant Singh]] (53), [[person/ebyhr|Yuya Ebihara]] (24), [[person/uros-b|Uros]] (20), [[person/nastra|Eduard Tudenhoefner]] (17), [[person/wombatu-kun|Vova Kolmakov]] (12), [[person/kevinjqliu|Kevin Liu]] (12), [[person/Fokko|Fokko Driesprong]] (9)
 
 ## Latest changes
 

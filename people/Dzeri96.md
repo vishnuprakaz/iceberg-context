@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person Dzeri96` for live numbers.
 
-- **Merged commits:** 1. Areas: [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Merged commits:** 1. Areas: [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/docs|iceberg/docs]] (1)
 - **Dev list:** 8 messages, 3 threads started (3 discuss)
 
 ## Recent threads started

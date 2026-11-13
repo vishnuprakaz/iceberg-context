@@ -67,6 +67,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person Fokko` for live numbers.
 
 - **Merged commits:** 16. Areas: [[module/iceberg-python/expressions|iceberg-python/expressions]] (4), [[module/iceberg/build|iceberg/build]] (4), [[module/iceberg/site|iceberg/site]] (3), [[module/iceberg-python/transforms|iceberg-python/transforms]] (2), [[module/iceberg-python/io|iceberg-python/io]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1)
+- **Pull requests reviewed (6 months):** 16
 - **Dev list:** 61 messages, 4 threads started (2 discuss, 1 announce)
 - **Named in meeting notes:** [[group/community|community]] (5)
 

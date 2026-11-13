@@ -31,6 +31,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person openinx` for live numbers.
 
 - **Merged commits:** 4. Areas: [[module/iceberg/flink|iceberg/flink]] (4)
+- **Pull requests reviewed (6 months):** 3
 - **Dev list:** 3 messages, 0 threads started
 
 ## Recent merged changes

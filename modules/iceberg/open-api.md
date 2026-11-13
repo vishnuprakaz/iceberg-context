@@ -32,7 +32,7 @@ Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (27), [[pers
 
 Most active authors (last 12 months): [[person/singhpk234|Prashant Singh]] (9), [[person/nastra|Eduard Tudenhoefner]] (7), [[person/ebyhr|Yuya Ebihara]] (7), [[person/manuzhang|Manu Zhang]] (5), [[person/adutra|Alexandre Dutra]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/stevenzwu|Steven Wu]] (3), [[person/ajreid21|ajreid21]] (2)
 
-Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
+Most active reviewers (last 6 months): [[person/huaxingao|Huaxin Gao]] (16), [[person/danielcweeks|Daniel C. Weeks]] (15), [[person/singhpk234|Prashant Singh]] (12), [[person/nastra|Eduard Tudenhoefner]] (9), [[person/uros-b|Uros]] (7), [[person/adutra|Alexandre Dutra]] (6), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (5), [[person/ebyhr|Yuya Ebihara]] (5)
 
 ## Latest changes
 

@@ -40,6 +40,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person laskoviymishka` for live numbers.
 
 - **Merged commits:** 6. Areas: [[module/iceberg/open-api|iceberg/open-api]] (2), [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/format|iceberg/format]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Pull requests reviewed (6 months):** 32
 - **Dev list:** 92 messages, 12 threads started (8 discuss, 3 vote, 1 result)
 - **Named in meeting notes:** [[group/community|community]] (3)
 

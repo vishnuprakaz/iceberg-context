@@ -26,6 +26,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person raunaqmorarka` for live numbers.
 
 - **Merged commits:** 9. Areas: [[module/iceberg/core|iceberg/core]] (6), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/arrow|iceberg/arrow]] (1)
+- **Pull requests reviewed (6 months):** 3
 
 ## Recent merged changes
 

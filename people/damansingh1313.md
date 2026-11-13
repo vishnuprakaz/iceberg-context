@@ -6,12 +6,12 @@ login: damansingh1313
 github: https://github.com/damansingh1313
 links:
 - rel: contributes
-  to: module/iceberg/core
+  to: module/iceberg/api
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/api
+  to: module/iceberg/core
   n: 2
   window: 12m
   confidence: observed
@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person damansingh1313` for live numbers.
 
-- **Merged commits:** 5. Areas: [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
+- **Merged commits:** 5. Areas: [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
 
 ## Recent merged changes
 

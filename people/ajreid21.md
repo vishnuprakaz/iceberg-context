@@ -26,6 +26,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person ajreid21` for live numbers.
 
 - **Merged commits:** 4. Areas: [[module/iceberg/open-api|iceberg/open-api]] (2), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (2)
+- **Pull requests reviewed (6 months):** 7
 
 ## Recent merged changes
 

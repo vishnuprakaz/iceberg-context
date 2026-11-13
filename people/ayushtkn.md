@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person ayushtkn` for live numbers.
 
-- **Merged commits:** 4. Areas: [[module/iceberg/core|iceberg/core]] (3), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/data|iceberg/data]] (1)
+- **Merged commits:** 4. Areas: [[module/iceberg/core|iceberg/core]] (3), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/data|iceberg/data]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
 
 ## Recent merged changes
 

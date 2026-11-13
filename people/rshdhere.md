@@ -21,6 +21,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person rshdhere` for live numbers.
 
 - **Merged commits:** 5. Areas: [[module/iceberg/spark|iceberg/spark]] (3), [[module/iceberg/nessie|iceberg/nessie]] (1), [[module/iceberg/azure|iceberg/azure]] (1), [[module/iceberg/core|iceberg/core]] (1)
+- **Pull requests reviewed (6 months):** 1
 
 ## Recent merged changes
 

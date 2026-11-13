@@ -36,6 +36,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person adutra` for live numbers.
 
 - **Merged commits:** 9. Areas: [[module/iceberg/core|iceberg/core]] (5), [[module/iceberg/open-api|iceberg/open-api]] (4), [[module/iceberg/aws|iceberg/aws]] (3), [[module/iceberg/build|iceberg/build]] (2)
+- **Pull requests reviewed (6 months):** 12
 - **Dev list:** 98 messages, 17 threads started (10 discuss, 4 vote, 1 result)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person williamhyun` for live numbers.
 
-- **Merged commits:** 1. Areas: [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/api|iceberg/api]] (1)
+- **Merged commits:** 1. Areas: [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1)
 - **Dev list:** 7 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

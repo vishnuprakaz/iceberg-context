@@ -63,6 +63,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person RussellSpitzer` for live numbers.
 
 - **Merged commits:** 19. Areas: [[module/iceberg/spark|iceberg/spark]] (10), [[module/iceberg/core|iceberg/core]] (8), [[module/iceberg/flink|iceberg/flink]] (4), [[module/iceberg/site|iceberg/site]] (3), [[module/iceberg/api|iceberg/api]] (3), [[module/iceberg/build|iceberg/build]] (3)
+- **Pull requests reviewed (6 months):** 50
 - **Dev list:** 157 messages, 9 threads started (5 discuss, 1 vote, 1 result)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

@@ -26,6 +26,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person swapna267` for live numbers.
 
 - **Merged commits:** 13. Areas: [[module/iceberg/flink|iceberg/flink]] (13), [[module/iceberg/docs|iceberg/docs]] (2)
+- **Pull requests reviewed (6 months):** 3
 
 ## Recent merged changes
 

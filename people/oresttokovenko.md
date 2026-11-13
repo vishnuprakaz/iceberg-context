@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person oresttokovenko` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg-python/catalog|iceberg-python/catalog]] (1), [[module/iceberg-python/manifest|iceberg-python/manifest]] (1)
+- **Merged commits:** 3. Areas: [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg-python/manifest|iceberg-python/manifest]] (1), [[module/iceberg-python/catalog|iceberg-python/catalog]] (1)
 - **Dev list:** 3 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

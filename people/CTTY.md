@@ -48,6 +48,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person CTTY` for live numbers.
 
 - **Merged commits:** 2. Areas: [[module/iceberg/site|iceberg/site]] (2)
+- **Pull requests reviewed (6 months):** 6
 - **Dev list:** 47 messages, 14 threads started (5 release-vote, 3 discuss, 3 announce, 2 result)
 - **Named in meeting notes:** [[group/community|community]] (3)
 

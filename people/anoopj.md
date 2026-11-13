@@ -36,6 +36,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person anoopj` for live numbers.
 
 - **Merged commits:** 40. Areas: [[module/iceberg/core|iceberg/core]] (36), [[module/iceberg/api|iceberg/api]] (13), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/format|iceberg/format]] (1)
+- **Pull requests reviewed (6 months):** 41
 - **Dev list:** 48 messages, 5 threads started (2 discuss, 1 vote, 1 result)
 - **Named in meeting notes:** [[group/v4-metadata|v4-metadata]] (4), [[group/community|community]] (4)
 

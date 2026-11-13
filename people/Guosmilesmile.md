@@ -51,6 +51,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person Guosmilesmile` for live numbers.
 
 - **Merged commits:** 46. Areas: [[module/iceberg/flink|iceberg/flink]] (34), [[module/iceberg/data|iceberg/data]] (13), [[module/iceberg/docs|iceberg/docs]] (8), [[module/iceberg/spark|iceberg/spark]] (8), [[module/iceberg/build|iceberg/build]] (4), [[module/iceberg/core|iceberg/core]] (3)
+- **Pull requests reviewed (6 months):** 17
 - **Named in meeting notes:** [[group/community|community]] (2)
 
 ## Recent merged changes

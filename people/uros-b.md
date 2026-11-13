@@ -26,7 +26,7 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/parquet
+  to: module/iceberg/flink
   n: 3
   window: 12m
   confidence: observed
@@ -40,7 +40,8 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person uros-b` for live numbers.
 
-- **Merged commits:** 39. Areas: [[module/iceberg/core|iceberg/core]] (10), [[module/iceberg/api|iceberg/api]] (10), [[module/iceberg/docs|iceberg/docs]] (6), [[module/iceberg/build|iceberg/build]] (5), [[module/iceberg/parquet|iceberg/parquet]] (3)
+- **Merged commits:** 39. Areas: [[module/iceberg/core|iceberg/core]] (10), [[module/iceberg/api|iceberg/api]] (10), [[module/iceberg/docs|iceberg/docs]] (6), [[module/iceberg/build|iceberg/build]] (5), [[module/iceberg/flink|iceberg/flink]] (3)
+- **Pull requests reviewed (6 months):** 158
 - **Dev list:** 1 messages, 0 threads started
 
 ## Recent merged changes

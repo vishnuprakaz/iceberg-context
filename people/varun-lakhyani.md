@@ -31,6 +31,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person varun-lakhyani` for live numbers.
 
 - **Merged commits:** 9. Areas: [[module/iceberg/spark|iceberg/spark]] (7), [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1)
+- **Pull requests reviewed (6 months):** 2
 - **Dev list:** 38 messages, 13 threads started (7 discuss)
 - **Named in meeting notes:** [[group/community|community]] (2)
 

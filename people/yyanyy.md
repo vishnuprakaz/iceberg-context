@@ -24,6 +24,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person yyanyy` for live numbers.
 
+- **Pull requests reviewed (6 months):** 2
 - **Dev list:** 3 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

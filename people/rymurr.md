@@ -23,6 +23,8 @@ updated: '2026-11-13'
 ## Activity in the last 12 months
 
 Counted from public records; see `kb person rymurr` for live numbers.
+
+- **Pull requests reviewed (6 months):** 1
 <!-- kb:generated:end -->
 
 ## Notes

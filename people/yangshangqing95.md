@@ -26,6 +26,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person yangshangqing95` for live numbers.
 
 - **Merged commits:** 8. Areas: [[module/iceberg/core|iceberg/core]] (5), [[module/iceberg/parquet|iceberg/parquet]] (2), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/orc|iceberg/orc]] (1)
+- **Pull requests reviewed (6 months):** 6
 
 ## Recent merged changes
 

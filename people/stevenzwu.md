@@ -70,6 +70,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person stevenzwu` for live numbers.
 
 - **Merged commits:** 23. Areas: [[module/iceberg/core|iceberg/core]] (12), [[module/iceberg/api|iceberg/api]] (5), [[module/iceberg/spark|iceberg/spark]] (4), [[module/iceberg/open-api|iceberg/open-api]] (3), [[module/iceberg/format|iceberg/format]] (2), [[module/iceberg/site|iceberg/site]] (2)
+- **Pull requests reviewed (6 months):** 47
 - **Dev list:** 192 messages, 16 threads started (8 discuss, 5 vote, 1 announce)
 - **Named in meeting notes:** [[group/v4-metadata|v4-metadata]] (2), [[group/community|community]] (2)
 

@@ -29,6 +29,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person bryanck` for live numbers.
 
 - **Merged commits:** 2. Areas: [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/aws|iceberg/aws]] (1)
+- **Pull requests reviewed (6 months):** 4
 - **Dev list:** 5 messages, 0 threads started
 
 ## Recent merged changes

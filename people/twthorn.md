@@ -21,6 +21,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person twthorn` for live numbers.
 
 - **Merged commits:** 4. Areas: [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (4), [[module/iceberg/core|iceberg/core]] (1)
+- **Pull requests reviewed (6 months):** 2
 - **Dev list:** 1 messages, 1 threads started
 
 ## Recent merged changes

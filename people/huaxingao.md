@@ -59,6 +59,7 @@ updated: '2026-11-13'
 Counted from public records; see `kb person huaxingao` for live numbers.
 
 - **Merged commits:** 33. Areas: [[module/iceberg/core|iceberg/core]] (7), [[module/iceberg/build|iceberg/build]] (7), [[module/iceberg/spark|iceberg/spark]] (4), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (4), [[module/iceberg/format|iceberg/format]] (4), [[module/iceberg/open-api|iceberg/open-api]] (3)
+- **Pull requests reviewed (6 months):** 267
 - **Dev list:** 120 messages, 20 threads started (5 vote, 4 release-vote, 4 discuss, 2 result, 1 announce)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

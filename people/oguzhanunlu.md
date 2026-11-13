@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person oguzhanunlu` for live numbers.
 
-- **Merged commits:** 2. Areas: [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/api|iceberg/api]] (1)
+- **Merged commits:** 2. Areas: [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1)
 - **Dev list:** 6 messages, 3 threads started (1 discuss, 1 vote)
 
 ## Recent threads started
