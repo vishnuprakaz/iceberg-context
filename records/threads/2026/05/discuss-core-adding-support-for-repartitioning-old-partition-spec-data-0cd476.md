@@ -13,14 +13,17 @@ refs:
 - gh:apache/iceberg#16190
 - gh:apache/iceberg#12083
 - gh:apache/iceberg#16515
-links: []
+links:
+- rel: started_by
+  to: person/mukund-thakur
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Core: repartitioning data files written with an old partition spec
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] CORE: Adding support for repartitioning old partition spec data files](https://lists.apache.org/thread/vkn21zvbcg9vxt2prysp15f269l0s9h0) · **Started:** 2026-05-13 by mukund-thakur · **Messages:** 4 (last 2026-06-24) · **Outcome:** open
+**Thread:** [[DISCUSS] CORE: Adding support for repartitioning old partition spec data files](https://lists.apache.org/thread/vkn21zvbcg9vxt2prysp15f269l0s9h0) · **Started:** 2026-05-13 by [[person/mukund-thakur|Mukund Thakur]] · **Messages:** 4 (last 2026-06-24) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -36,7 +39,7 @@ Two supporting replies; no review of the proposed option or decision appears in 
 
 ## Positions
 
-- **mukund-thakur:** Add a rewrite-partition-spec-mismatch option so that rewrite jobs pick up only files written with an old partition spec and can make partial progress. ([message](https://lists.apache.org/thread/vkn21zvbcg9vxt2prysp15f269l0s9h0))
+- **[[person/mukund-thakur|Mukund Thakur]]:** Add a rewrite-partition-spec-mismatch option so that rewrite jobs pick up only files written with an old partition spec and can make partial progress. ([message](https://lists.apache.org/thread/vkn21zvbcg9vxt2prysp15f269l0s9h0))
 - **Imran Rashid:** Large tables need an incremental way to move old data to the new partitioning, in particular because storage-partitioned joins require consistent partitioning. ([message](https://lists.apache.org/thread/lgmjrhbqcvgk2lnk90j0zobqkjy37b7b))
 - **[[person/pan3793|Cheng Pan]]:** Supports the change after finding that SPJ did not work because the scan mixed data files not matching the current partition spec. ([message](https://lists.apache.org/thread/jzh3xyoc3c2qktgxzy7wd74057r8bndj))
 

@@ -10,7 +10,11 @@ messages: 4
 sources:
 - devlist:3jcdq4w6kvyfjbczddch6hzhbt1qjor0
 refs: []
-links: []
+links:
+- rel: discussed
+  to: initiative/community-process
+  confidence: extracted
+  source: devlist:3jcdq4w6kvyfjbczddch6hzhbt1qjor0
 updated: '2026-11-13'
 ---
 

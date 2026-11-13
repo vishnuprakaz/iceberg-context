@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#14234
 links:
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:v3bq8snhtdwmj20v4s6kv5byg18cv84t
 - rel: started_by
   to: person/nastra
   confidence: observed

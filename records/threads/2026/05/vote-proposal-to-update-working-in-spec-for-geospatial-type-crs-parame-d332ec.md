@@ -13,7 +13,11 @@ refs:
 - gh:apache/iceberg#15834
 - gh:apache/parquet-format#560
 - list:r5x0do8f241bpf565rx8s5s3wc9ogp0f
-links: []
+links:
+- rel: discussed
+  to: initiative/geospatial
+  confidence: extracted
+  source: devlist:8z0kc8vz1379lghwlcwl0jmsoym6shd7
 updated: '2026-11-13'
 ---
 

@@ -14,6 +14,10 @@ refs:
 - gh:apache/iceberg#14743
 - gh:apache/iceberg#14869
 links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:q60ymn6rq1qzs102zj0vm0fnqjjv0knw
 - rel: started_by
   to: person/rdblue
   confidence: observed

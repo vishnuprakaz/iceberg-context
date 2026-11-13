@@ -13,6 +13,14 @@ refs:
 - gh:apache/iceberg#17845
 - gh:apache/iceberg#17849
 links:
+- rel: discussed
+  to: initiative/flink-integration
+  confidence: extracted
+  source: devlist:8fsqcovm1cn7zdl571t4f9qlyqgf5qxy
+- rel: discussed
+  to: initiative/java-releases
+  confidence: extracted
+  source: devlist:8fsqcovm1cn7zdl571t4f9qlyqgf5qxy
 - rel: started_by
   to: person/pvary
   confidence: observed

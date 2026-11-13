@@ -11,6 +11,10 @@ sources:
 - devlist:hk1gnjrqnfvmjknrsyyphfs6mfxkz20s
 refs: []
 links:
+- rel: discussed
+  to: initiative/community-process
+  confidence: extracted
+  source: devlist:hk1gnjrqnfvmjknrsyyphfs6mfxkz20s
 - rel: started_by
   to: person/sungwy
   confidence: observed

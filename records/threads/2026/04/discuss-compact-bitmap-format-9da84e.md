@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#16518
 links:
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:ccd7tx23fbg4ry8sc3pl7n6np8s8tl5f
 - rel: started_by
   to: person/rdblue
   confidence: observed

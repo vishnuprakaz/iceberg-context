@@ -62,7 +62,7 @@
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-60b37c70a0f57b2a", "src": "initiative/iceberg-rust", "to": "person/dannycjones"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-449e67b8e640cd82", "src": "initiative/iceberg-rust", "to": "person/liurenjie1024"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-f324967b2d45dc23", "src": "initiative/iceberg-rust", "to": "person/mbutrovich"}
-{"confidence": "inferred", "rel": "handled_by", "src": "initiative/iceberg-rust", "to": "group/rust"}
+{"confidence": "inferred", "rel": "handled_by", "source": "thread/t-cf8ecdd2fd7d10db", "src": "initiative/iceberg-rust", "to": "group/rust"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-993bbf42f9af82cf", "src": "initiative/java-releases", "to": "person/aihuaxu"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-88bfc4197adf37a9", "src": "initiative/java-releases", "to": "person/amogh-jahagirdar"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-b00cc9ec1c194566", "src": "initiative/java-releases", "to": "person/anuragmantri"}
@@ -97,6 +97,17 @@
 {"confidence": "extracted", "rel": "tracked_in", "source": "thread/t-7cb3b0fb5a513b73", "src": "initiative/rest-auth", "to": "gh:apache/iceberg#16822"}
 {"confidence": "extracted", "rel": "tracked_in", "source": "thread/t-019f2b7ebaa9b671", "src": "initiative/rest-auth", "to": "gh:apache/iceberg#18254"}
 {"confidence": "extracted", "rel": "tracked_in", "source": "thread/t-4c863ceec72fa0da", "src": "initiative/rest-auth", "to": "gh:apache/iceberg#18480"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-4fdcd748e0704aa5", "src": "initiative/rest-spec", "to": "person/danielcweeks"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-61befdbae30765dd", "src": "initiative/rest-spec", "to": "person/huaxingao"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-ef8a98c0e0dd42ed", "src": "initiative/rest-spec", "to": "person/rahulsmahadev"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-584ad622bd8bd6d8", "src": "initiative/rest-spec", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-8d54c4be3c9cc0d5", "src": "initiative/rest-spec", "to": "person/singhpk234"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-2b9326ecf95a23e1", "src": "initiative/rest-spec", "to": "person/stevenzwu"}
+{"confidence": "extracted", "rel": "handled_by", "source": "meeting/catalog/2026-11-04", "src": "initiative/rest-spec", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "touches", "source": "meeting/community/2026-10-28", "src": "initiative/rest-spec", "to": "module/iceberg/core"}
+{"confidence": "extracted", "rel": "touches", "source": "thread/t-584ad622bd8bd6d8", "src": "initiative/rest-spec", "to": "module/iceberg/open-api"}
+{"confidence": "extracted", "rel": "tracked_in", "source": "thread/t-4fdcd748e0704aa5", "src": "initiative/rest-spec", "to": "gh:apache/iceberg#17642"}
+{"confidence": "extracted", "rel": "tracked_in", "source": "thread/t-ef8a98c0e0dd42ed", "src": "initiative/rest-spec", "to": "gh:apache/iceberg#17727"}
 {"confidence": "extracted", "rel": "championed_by", "source": "meeting/index/2026-10-26", "src": "initiative/secondary-indexes", "to": "person/huaxingao"}
 {"confidence": "extracted", "rel": "championed_by", "source": "meeting/index/2026-11-09", "src": "initiative/secondary-indexes", "to": "person/pvary"}
 {"confidence": "extracted", "rel": "handled_by", "source": "meeting/index/2026-11-09", "src": "initiative/secondary-indexes", "to": "group/index"}
@@ -104,6 +115,13 @@
 {"confidence": "extracted", "rel": "touches", "source": "meeting/index/2026-10-26", "src": "initiative/secondary-indexes", "to": "module/iceberg/open-api"}
 {"confidence": "extracted", "rel": "tracked_in", "source": "meeting/index/2026-11-09", "src": "initiative/secondary-indexes", "to": "gh:apache/iceberg#16961"}
 {"confidence": "extracted", "rel": "tracked_in", "source": "meeting/index/2026-11-09", "src": "initiative/secondary-indexes", "to": "gh:apache/iceberg#16963"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-1f7d78172b69f87c", "src": "initiative/spark-integration", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-3f1ab71baa4cf070", "src": "initiative/spark-integration", "to": "person/anuragmantri"}
+{"confidence": "extracted", "rel": "championed_by", "source": "thread/t-e6327b02ad166780", "src": "initiative/spark-integration", "to": "person/kevinjqliu"}
+{"confidence": "extracted", "rel": "handled_by", "source": "meeting/spark/2026-11-11", "src": "initiative/spark-integration", "to": "group/spark"}
+{"confidence": "extracted", "rel": "touches", "source": "meeting/spark/2026-11-11", "src": "initiative/spark-integration", "to": "module/iceberg/spark"}
+{"confidence": "extracted", "rel": "tracked_in", "source": "meeting/spark/2026-07-21", "src": "initiative/spark-integration", "to": "gh:apache/iceberg#14984"}
+{"confidence": "extracted", "rel": "tracked_in", "source": "meeting/spark/2026-11-11", "src": "initiative/spark-integration", "to": "gh:apache/iceberg#17959"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-61befdbae30765dd", "src": "initiative/udf", "to": "person/huaxingao"}
 {"confidence": "extracted", "rel": "championed_by", "source": "thread/t-5cba9bc4818eb482", "src": "initiative/udf", "to": "person/szehon-ho"}
 {"confidence": "inferred", "rel": "handled_by", "source": "thread/t-61befdbae30765dd", "src": "initiative/udf", "to": "group/udf"}
@@ -185,45 +203,244 @@
 {"confidence": "extracted", "rel": "handled_by", "source": "meeting/file-vector-type/2026-10-08", "src": "initiative/vector-type", "to": "group/file-vector-type"}
 {"confidence": "extracted", "rel": "touches", "source": "meeting/file-vector-type/2026-10-22", "src": "initiative/vector-type", "to": "module/iceberg/format"}
 {"confidence": "inferred", "rel": "tracked_in", "source": "meeting/file-vector-type/2026-10-22", "src": "initiative/vector-type", "to": "gh:apache/iceberg#18416"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-05-20", "src": "meeting/catalog/2026-05-20", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-05-20", "src": "meeting/catalog/2026-05-20", "to": "initiative/v4-encryption"}
 {"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-05-20", "src": "meeting/catalog/2026-05-20", "to": "person/c-thiel"}
 {"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-05-20", "src": "meeting/catalog/2026-05-20", "to": "person/manisin"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-05-20", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-06-10", "src": "meeting/catalog/2026-06-10", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-06-10", "src": "meeting/catalog/2026-06-10", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-06-10", "src": "meeting/catalog/2026-06-10", "to": "initiative/v4-encryption"}
 {"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-06-10", "src": "meeting/catalog/2026-06-10", "to": "person/c-thiel"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-06-10", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-07-01", "src": "meeting/catalog/2026-07-01", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-07-01", "src": "meeting/catalog/2026-07-01", "to": "initiative/rest-auth"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-07-01", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-07-22", "src": "meeting/catalog/2026-07-22", "to": "initiative/catalog-labels"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-07-22", "src": "meeting/catalog/2026-07-22", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-07-22", "src": "meeting/catalog/2026-07-22", "to": "person/williamhyun"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-07-22", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-08-12", "src": "meeting/catalog/2026-08-12", "to": "initiative/catalog-labels"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-08-12", "src": "meeting/catalog/2026-08-12", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-08-12", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-02", "src": "meeting/catalog/2026-09-02", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-02", "src": "meeting/catalog/2026-09-02", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-02", "src": "meeting/catalog/2026-09-02", "to": "initiative/v4-general"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-09-02", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-23", "src": "meeting/catalog/2026-09-23", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-23", "src": "meeting/catalog/2026-09-23", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-23", "src": "meeting/catalog/2026-09-23", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-09-23", "src": "meeting/catalog/2026-09-23", "to": "initiative/v4-general"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-09-23", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "initiative/v4-general"}
 {"confidence": "inferred", "rel": "named", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "person/danielcweeks"}
 {"confidence": "extracted", "rel": "named", "source": "meet:catalog:2026-10-14", "src": "meeting/catalog/2026-10-14", "to": "person/sungwy"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-10-14", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-11-04", "src": "meeting/catalog/2026-11-04", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-11-04", "src": "meeting/catalog/2026-11-04", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:catalog:2026-11-04", "src": "meeting/catalog/2026-11-04", "to": "initiative/v4-general"}
 {"confidence": "observed", "rel": "of", "src": "meeting/catalog/2026-11-04", "to": "group/catalog"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-06-16", "src": "meeting/column-updates/2026-06-16", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-06-16", "src": "meeting/column-updates/2026-06-16", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-06-16", "src": "meeting/column-updates/2026-06-16", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-06-16", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-06-30", "src": "meeting/column-updates/2026-06-30", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-06-30", "src": "meeting/column-updates/2026-06-30", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-06-30", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-07-14", "src": "meeting/column-updates/2026-07-14", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-07-14", "src": "meeting/column-updates/2026-07-14", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-07-14", "src": "meeting/column-updates/2026-07-14", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-07-14", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-07-28", "src": "meeting/column-updates/2026-07-28", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-07-28", "src": "meeting/column-updates/2026-07-28", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-07-28", "src": "meeting/column-updates/2026-07-28", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-07-28", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-08-11", "src": "meeting/column-updates/2026-08-11", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-08-11", "src": "meeting/column-updates/2026-08-11", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-08-11", "src": "meeting/column-updates/2026-08-11", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-08-11", "src": "meeting/column-updates/2026-08-11", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-08-11", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-09-08", "src": "meeting/column-updates/2026-09-08", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-09-08", "src": "meeting/column-updates/2026-09-08", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-09-08", "src": "meeting/column-updates/2026-09-08", "to": "initiative/v4-equality-deletes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-09-08", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-10-06", "src": "meeting/column-updates/2026-10-06", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-10-06", "src": "meeting/column-updates/2026-10-06", "to": "initiative/v4-column-updates"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-10-06", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-10-20", "src": "meeting/column-updates/2026-10-20", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:column-updates:2026-10-20", "src": "meeting/column-updates/2026-10-20", "to": "initiative/v4-row-lineage-timestamps"}
 {"confidence": "observed", "rel": "of", "src": "meeting/column-updates/2026-10-20", "to": "group/column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/constraints"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/v4-relative-paths"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "initiative/variant"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "person/gabeiglio"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-05-13", "src": "meeting/community/2026-05-13", "to": "person/vladislav-sidorovich"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-05-13", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/v4-relative-paths"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-03", "src": "meeting/community/2026-06-03", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-06-03", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/catalog-labels"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/udf"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "initiative/v4-metadata-tree"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "person/amogh-jahagirdar"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-06-24", "src": "meeting/community/2026-06-24", "to": "person/nssalian"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-06-24", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/collations"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/conformance-testing"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/udf"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-07-15", "src": "meeting/community/2026-07-15", "to": "initiative/vector-type"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-07-15", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/conformance-testing"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/variant"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-05", "src": "meeting/community/2026-08-05", "to": "initiative/vector-type"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-08-05", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/v4-relative-paths"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "initiative/variant"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-08-26", "src": "meeting/community/2026-08-26", "to": "person/gaborkaszab"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-08-26", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/catalog-labels"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/conformance-testing"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "named", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "person/JeonDaehong"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "person/kevinjqliu"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-09-16", "src": "meeting/community/2026-09-16", "to": "person/nssalian"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-09-16", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/v4-default-expressions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/variant"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "initiative/vector-type"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "person/pvary"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-10-07", "src": "meeting/community/2026-10-07", "to": "person/yyanyy"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-10-07", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/collations"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/kafka-connect"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-default-expressions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/v4-row-lineage-timestamps"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "initiative/vector-type"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "person/RussellSpitzer"}
 {"confidence": "inferred", "rel": "named", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "person/amogh-jahagirdar"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "person/kevinjqliu"}
@@ -232,87 +449,268 @@
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "person/szehon-ho"}
 {"confidence": "extracted", "rel": "named", "source": "meet:community:2026-10-28", "src": "meeting/community/2026-10-28", "to": "person/talatuyarer"}
 {"confidence": "observed", "rel": "of", "src": "meeting/community/2026-10-28", "to": "group/community"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:constraints:2026-06-04", "src": "meeting/constraints/2026-06-04", "to": "initiative/constraints"}
 {"confidence": "observed", "rel": "of", "src": "meeting/constraints/2026-06-04", "to": "group/constraints"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:constraints:2026-06-18", "src": "meeting/constraints/2026-06-18", "to": "initiative/constraints"}
 {"confidence": "observed", "rel": "of", "src": "meeting/constraints/2026-06-18", "to": "group/constraints"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-08", "src": "meeting/file-vector-type/2026-10-08", "to": "initiative/constraints"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-08", "src": "meeting/file-vector-type/2026-10-08", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-08", "src": "meeting/file-vector-type/2026-10-08", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-08", "src": "meeting/file-vector-type/2026-10-08", "to": "initiative/vector-type"}
+{"confidence": "extracted", "rel": "named", "source": "meet:file-vector-type:2026-10-08", "src": "meeting/file-vector-type/2026-10-08", "to": "person/PFischbeck"}
 {"confidence": "observed", "rel": "of", "src": "meeting/file-vector-type/2026-10-08", "to": "group/file-vector-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-22", "src": "meeting/file-vector-type/2026-10-22", "to": "initiative/constraints"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-22", "src": "meeting/file-vector-type/2026-10-22", "to": "initiative/v4-default-expressions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-10-22", "src": "meeting/file-vector-type/2026-10-22", "to": "initiative/vector-type"}
 {"confidence": "observed", "rel": "of", "src": "meeting/file-vector-type/2026-10-22", "to": "group/file-vector-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-11-05", "src": "meeting/file-vector-type/2026-11-05", "to": "initiative/catalog-labels"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-11-05", "src": "meeting/file-vector-type/2026-11-05", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-11-05", "src": "meeting/file-vector-type/2026-11-05", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-11-05", "src": "meeting/file-vector-type/2026-11-05", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:file-vector-type:2026-11-05", "src": "meeting/file-vector-type/2026-11-05", "to": "initiative/vector-type"}
 {"confidence": "observed", "rel": "of", "src": "meeting/file-vector-type/2026-11-05", "to": "group/file-vector-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-05-27", "src": "meeting/index/2026-05-27", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-05-27", "src": "meeting/index/2026-05-27", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-05-27", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-06-08", "src": "meeting/index/2026-06-08", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-06-08", "src": "meeting/index/2026-06-08", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-06-08", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-06-22", "src": "meeting/index/2026-06-22", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-06-22", "src": "meeting/index/2026-06-22", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-06-22", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-07-06", "src": "meeting/index/2026-07-06", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-07-06", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-07-20", "src": "meeting/index/2026-07-20", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-07-20", "src": "meeting/index/2026-07-20", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-07-20", "src": "meeting/index/2026-07-20", "to": "initiative/vector-type"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-07-20", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-03", "src": "meeting/index/2026-08-03", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-03", "src": "meeting/index/2026-08-03", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-08-03", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-17", "src": "meeting/index/2026-08-17", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-17", "src": "meeting/index/2026-08-17", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-17", "src": "meeting/index/2026-08-17", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-17", "src": "meeting/index/2026-08-17", "to": "initiative/v4-encryption"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-08-17", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-31", "src": "meeting/index/2026-08-31", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-31", "src": "meeting/index/2026-08-31", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-31", "src": "meeting/index/2026-08-31", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-08-31", "src": "meeting/index/2026-08-31", "to": "initiative/v4-encryption"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-08-31", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-09-14", "src": "meeting/index/2026-09-14", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-09-14", "src": "meeting/index/2026-09-14", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-09-14", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-09-28", "src": "meeting/index/2026-09-28", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-09-28", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-10-26", "src": "meeting/index/2026-10-26", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-10-26", "src": "meeting/index/2026-10-26", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-10-26", "src": "meeting/index/2026-10-26", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-10-26", "src": "meeting/index/2026-10-26", "to": "initiative/v4-content-stats"}
 {"confidence": "extracted", "rel": "named", "source": "meet:index:2026-10-26", "src": "meeting/index/2026-10-26", "to": "person/huaxingao"}
 {"confidence": "extracted", "rel": "named", "source": "meet:index:2026-10-26", "src": "meeting/index/2026-10-26", "to": "person/pvary"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-10-26", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "initiative/v4-general"}
 {"confidence": "extracted", "rel": "named", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "person/danielcweeks"}
 {"confidence": "extracted", "rel": "named", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "person/pvary"}
 {"confidence": "inferred", "rel": "named", "source": "meet:index:2026-11-09", "src": "meeting/index/2026-11-09", "to": "person/rdblue"}
 {"confidence": "observed", "rel": "of", "src": "meeting/index/2026-11-09", "to": "group/index"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-05-14", "src": "meeting/materialized-views/2026-05-14", "to": "initiative/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-05-14", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-05-28", "src": "meeting/materialized-views/2026-05-28", "to": "initiative/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-05-28", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-06-25", "src": "meeting/materialized-views/2026-06-25", "to": "initiative/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-06-25", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-07-07", "src": "meeting/materialized-views/2026-07-07", "to": "initiative/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-07-07", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-09-17", "src": "meeting/materialized-views/2026-09-17", "to": "initiative/materialized-views"}
 {"confidence": "extracted", "rel": "named", "source": "meet:materialized-views:2026-09-17", "src": "meeting/materialized-views/2026-09-17", "to": "person/danielcweeks"}
+{"confidence": "extracted", "rel": "named", "source": "meet:materialized-views:2026-09-17", "src": "meeting/materialized-views/2026-09-17", "to": "person/findinpath"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-09-17", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-10-01", "src": "meeting/materialized-views/2026-10-01", "to": "initiative/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-10-01", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-10-29", "src": "meeting/materialized-views/2026-10-29", "to": "initiative/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-10-29", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-11-12", "src": "meeting/materialized-views/2026-11-12", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-11-12", "src": "meeting/materialized-views/2026-11-12", "to": "initiative/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-11-12", "src": "meeting/materialized-views/2026-11-12", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:materialized-views:2026-11-12", "src": "meeting/materialized-views/2026-11-12", "to": "initiative/v4-general"}
 {"confidence": "extracted", "rel": "named", "source": "meet:materialized-views:2026-11-12", "src": "meeting/materialized-views/2026-11-12", "to": "person/talatuyarer"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-11-12", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-05-26", "src": "meeting/python/2026-05-26", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-05-26", "src": "meeting/python/2026-05-26", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-05-26", "src": "meeting/python/2026-05-26", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-05-26", "src": "meeting/python/2026-05-26", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-05-26", "to": "group/python"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-06-30", "src": "meeting/python/2026-06-30", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-06-30", "src": "meeting/python/2026-06-30", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-06-30", "to": "group/python"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-07-28", "src": "meeting/python/2026-07-28", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-07-28", "to": "group/python"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-09-29", "src": "meeting/python/2026-09-29", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-09-29", "to": "group/python"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:python:2026-10-27", "src": "meeting/python/2026-10-27", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-10-27", "to": "group/python"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-05-26", "src": "meeting/read-restrictions/2026-05-26", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-05-26", "src": "meeting/read-restrictions/2026-05-26", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-05-26", "src": "meeting/read-restrictions/2026-05-26", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-05-26", "src": "meeting/read-restrictions/2026-05-26", "to": "initiative/udf"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-05-26", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-06-09", "src": "meeting/read-restrictions/2026-06-09", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-06-09", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-06-23", "src": "meeting/read-restrictions/2026-06-23", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-06-23", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-07-07", "src": "meeting/read-restrictions/2026-07-07", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-07-07", "src": "meeting/read-restrictions/2026-07-07", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-07-07", "src": "meeting/read-restrictions/2026-07-07", "to": "initiative/read-restrictions"}
 {"confidence": "extracted", "rel": "named", "source": "meet:read-restrictions:2026-07-07", "src": "meeting/read-restrictions/2026-07-07", "to": "person/singhpk234"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-07-07", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-07-21", "src": "meeting/read-restrictions/2026-07-21", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-07-21", "src": "meeting/read-restrictions/2026-07-21", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-07-21", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-08-04", "src": "meeting/read-restrictions/2026-08-04", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-08-04", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-08-18", "src": "meeting/read-restrictions/2026-08-18", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-08-18", "src": "meeting/read-restrictions/2026-08-18", "to": "initiative/rest-spec"}
 {"confidence": "extracted", "rel": "named", "source": "meet:read-restrictions:2026-08-18", "src": "meeting/read-restrictions/2026-08-18", "to": "person/sungwy"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-08-18", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-01", "src": "meeting/read-restrictions/2026-09-01", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-01", "src": "meeting/read-restrictions/2026-09-01", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-01", "src": "meeting/read-restrictions/2026-09-01", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-09-01", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-15", "src": "meeting/read-restrictions/2026-09-15", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-15", "src": "meeting/read-restrictions/2026-09-15", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-15", "src": "meeting/read-restrictions/2026-09-15", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-15", "src": "meeting/read-restrictions/2026-09-15", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-15", "src": "meeting/read-restrictions/2026-09-15", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:read-restrictions:2026-09-15", "src": "meeting/read-restrictions/2026-09-15", "to": "initiative/rest-auth"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-09-15", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-05-19", "src": "meeting/spark/2026-05-19", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-05-19", "src": "meeting/spark/2026-05-19", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-05-19", "src": "meeting/spark/2026-05-19", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-05-19", "to": "group/spark"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-06-16", "src": "meeting/spark/2026-06-16", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-06-16", "src": "meeting/spark/2026-06-16", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-06-16", "to": "group/spark"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-07-21", "src": "meeting/spark/2026-07-21", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-07-21", "src": "meeting/spark/2026-07-21", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-07-21", "src": "meeting/spark/2026-07-21", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-07-21", "src": "meeting/spark/2026-07-21", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-07-21", "src": "meeting/spark/2026-07-21", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-07-21", "src": "meeting/spark/2026-07-21", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-07-21", "to": "group/spark"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/materialized-views"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-08-18", "src": "meeting/spark/2026-08-18", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-08-18", "to": "group/spark"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-10-20", "src": "meeting/spark/2026-10-20", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-10-20", "src": "meeting/spark/2026-10-20", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-10-20", "to": "group/spark"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-11-11", "src": "meeting/spark/2026-11-11", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-11-11", "src": "meeting/spark/2026-11-11", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-11-11", "src": "meeting/spark/2026-11-11", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:spark:2026-11-11", "src": "meeting/spark/2026-11-11", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-11-11", "to": "group/spark"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-05-18", "src": "meeting/v4-metadata/2026-05-18", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-05-18", "src": "meeting/v4-metadata/2026-05-18", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-05-18", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-01", "src": "meeting/v4-metadata/2026-06-01", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-01", "src": "meeting/v4-metadata/2026-06-01", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-01", "src": "meeting/v4-metadata/2026-06-01", "to": "initiative/v4-row-lineage-timestamps"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-01", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "initiative/v4-metadata-tree"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "person/amogh-jahagirdar"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "person/stevenzwu"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-15", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-29", "src": "meeting/v4-metadata/2026-06-29", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-29", "src": "meeting/v4-metadata/2026-06-29", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-06-29", "src": "meeting/v4-metadata/2026-06-29", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-29", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-13", "src": "meeting/v4-metadata/2026-07-13", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-13", "src": "meeting/v4-metadata/2026-07-13", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-13", "src": "meeting/v4-metadata/2026-07-13", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-13", "src": "meeting/v4-metadata/2026-07-13", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-07-13", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-27", "src": "meeting/v4-metadata/2026-07-27", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-27", "src": "meeting/v4-metadata/2026-07-27", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-27", "src": "meeting/v4-metadata/2026-07-27", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-07-27", "src": "meeting/v4-metadata/2026-07-27", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-07-27", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-08-10", "src": "meeting/v4-metadata/2026-08-10", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-08-10", "src": "meeting/v4-metadata/2026-08-10", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-08-10", "src": "meeting/v4-metadata/2026-08-10", "to": "initiative/v4-metadata-tree"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-08-10", "src": "meeting/v4-metadata/2026-08-10", "to": "person/anoopj"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-08-10", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-08-24", "src": "meeting/v4-metadata/2026-08-24", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-08-24", "src": "meeting/v4-metadata/2026-08-24", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-08-24", "src": "meeting/v4-metadata/2026-08-24", "to": "initiative/v4-metadata-tree"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-08-24", "src": "meeting/v4-metadata/2026-08-24", "to": "person/stevenzwu"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-08-24", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "initiative/v4-metadata-tree"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "initiative/v4-row-lineage-timestamps"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "person/amogh-jahagirdar"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "person/stevenzwu"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-09-21", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "initiative/v4-metadata-tree"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "person/amogh-jahagirdar"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "person/anoopj"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-10-05", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-10-19", "src": "meeting/v4-metadata/2026-10-19", "to": "initiative/v4-content-stats"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-10-19", "src": "meeting/v4-metadata/2026-10-19", "to": "person/anoopj"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-10-19", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-11-02", "src": "meeting/v4-metadata/2026-11-02", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-11-02", "src": "meeting/v4-metadata/2026-11-02", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-11-02", "src": "meeting/v4-metadata/2026-11-02", "to": "initiative/v4-encryption"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:v4-metadata:2026-11-02", "src": "meeting/v4-metadata/2026-11-02", "to": "initiative/v4-general"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-11-02", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/kafka-connect"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "initiative/variant"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "person/nssalian"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "person/rdblue"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-06-04", "to": "group/variant"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "initiative/variant"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "person/nssalian"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-07-02", "to": "group/variant"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/conformance-testing"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/iceberg-cpp"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/kafka-connect"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-08-06", "src": "meeting/variant/2026-08-06", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-08-06", "to": "group/variant"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/kafka-connect"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/pyiceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "initiative/variant"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "person/rambleraptor"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-09-03", "to": "group/variant"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/avro", "to": "repo/iceberg-python"}
@@ -348,8 +746,13 @@
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg/parquet", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg/site", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg/spark", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/010Soham", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/AP24110011695", "to": "module/iceberg-python/expressions", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/AntonioYuen", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Anurag-S1ngh", "to": "module/iceberg-python/catalog", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Anurag-S1ngh", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/Baunsgaard", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Baunsgaard", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/CTTY", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/CTTY", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 3, "rel": "participates", "src": "person/CTTY", "to": "group/community", "window": "12m"}
@@ -369,6 +772,7 @@
 {"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.9.1"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-rust-0.2.0"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/GGraziadei", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/GayathriSrividya", "to": "module/iceberg-python/io", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 13, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/data", "window": "12m"}
@@ -378,7 +782,11 @@
 {"confidence": "observed", "n": 2, "rel": "participates", "src": "person/Guosmilesmile", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-07-23", "src": "person/HonahX", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/HonahX", "to": "release/iceberg-python-0.6.1"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/JeonDaehong", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/JingsongLi", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/MaxNevermind", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/RjLi13", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/Rodrigo-Palma", "to": "module/iceberg-python/expressions", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/core", "window": "12m"}
@@ -388,14 +796,18 @@
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2021-11-14", "src": "person/RussellSpitzer", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/RussellSpitzer", "to": "release/iceberg-1.7.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/RussellSpitzer", "to": "release/iceberg-1.9.1"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/SteveStevenpoor", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/TGooch44", "to": "repo/iceberg"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/Xuanwo", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/Xuanwo", "to": "release/iceberg-rust-0.3.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/Xuanwo", "to": "release/iceberg-rust-0.6.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/YuangGao", "to": "module/iceberg-python/catalog", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/YuangGao", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/aws", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/afeldman1", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/aiborodin", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 11, "rel": "contributes", "src": "person/aiborodin", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/aihuaxu", "to": "module/iceberg/build", "window": "12m"}
@@ -405,6 +817,10 @@
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/ajantha-bhat", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/ajantha-bhat", "to": "release/iceberg-1.5.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/ajantha-bhat", "to": "release/iceberg-1.9.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/ajreid21", "to": "module/iceberg/kafka-connect", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/ajreid21", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/alessandro-nori", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/alessandro-nori", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/data", "window": "12m"}
@@ -423,6 +839,7 @@
 {"confidence": "observed", "n": 36, "rel": "contributes", "src": "person/anoopj", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "participates", "src": "person/anoopj", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "participates", "src": "person/anoopj", "to": "group/v4-metadata", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/anshulbaliga7", "to": "module/iceberg/docs", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/anuragmantri", "to": "module/iceberg/docs", "window": "12m"}
 {"confidence": "observed", "n": 11, "rel": "contributes", "src": "person/anuragmantri", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/anxkhn", "to": "module/iceberg-python/table", "window": "12m"}
@@ -436,15 +853,20 @@
 {"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-0.11.1"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-1.3.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-1.4.0"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/avison9", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/ayushtkn", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/bharos", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/bharos", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/bryanck", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/bryanck", "to": "release/iceberg-1.7.1"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/c-thiel", "to": "module/iceberg/open-api", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "participates", "src": "person/c-thiel", "to": "group/catalog", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/chenjian2664", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/cwsteinbach", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/cwsteinbach", "to": "release/iceberg-0.12.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/cwsteinbach", "to": "release/iceberg-1.6.1"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/damansingh1313", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/damansingh1313", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/danielcweeks", "to": "module/iceberg/format", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/danielcweeks", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 2, "rel": "participates", "src": "person/danielcweeks", "to": "group/community", "window": "12m"}
@@ -452,6 +874,10 @@
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/dannycjones", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/dannycjones", "to": "release/iceberg-rust-0.10.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/dannycjones", "to": "release/iceberg-rust-0.11.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/daviddallakyan2005", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/daviddallakyan2005", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/dossett", "to": "module/iceberg-python/expressions", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/dossett", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/drexler-sky", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/drexler-sky", "to": "module/iceberg/docs", "window": "12m"}
 {"confidence": "observed", "n": 11, "rel": "contributes", "src": "person/drexler-sky", "to": "module/iceberg/spark", "window": "12m"}
@@ -468,6 +894,7 @@
 {"confidence": "observed", "n": 7, "rel": "participates", "src": "person/fallintoplace", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/findepi", "to": "repo/iceberg"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-07", "src": "person/flyrain", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/fmorillo7694", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/gabeiglio", "to": "module/iceberg-python/partitioning", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/gabeiglio", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/api", "window": "12m"}
@@ -485,6 +912,8 @@
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/geruh", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 3, "rel": "participates", "src": "person/geruh", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/ggershinsky", "to": "module/iceberg/hive-metastore", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/hantangwangd", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/hcrosse", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/hemanthboyina", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/hemanthboyina", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/huan233usc", "to": "module/iceberg/api", "window": "12m"}
@@ -512,11 +941,15 @@
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/jbewing", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/jbonofre", "to": "release/iceberg-1.4.3"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/jbonofre", "to": "release/iceberg-1.6.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/jordepic", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/jordepic", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/data", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/julienledem", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/jx2lee", "to": "module/iceberg-python/cli", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/karuppayya", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/kbendick", "to": "release/iceberg-0.12.1"}
 {"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg-python/catalog", "window": "12m"}
 {"confidence": "observed", "n": 12, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg-python/docs", "window": "12m"}
@@ -532,10 +965,15 @@
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/kinolaev", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/kinolaev", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/kinolaev", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/krishnakaanchan-png", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/kumarpritam863", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/kumarpritam863", "to": "module/iceberg/kafka-connect", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/laskoviymishka", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/laskoviymishka", "to": "module/iceberg/open-api", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/laskoviymishka", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 3, "rel": "participates", "src": "person/laskoviymishka", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/lawofcycles", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/lilei1128", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-07-23", "src": "person/liurenjie1024", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 5, "rel": "participates", "src": "person/manisin", "to": "group/catalog", "window": "12m"}
 {"confidence": "observed", "n": 28, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/build", "window": "12m"}
@@ -548,8 +986,11 @@
 {"confidence": "observed", "rel": "release_manager", "src": "person/manuzhang", "to": "release/iceberg-cpp-0.4.0"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mbutrovich", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "participates", "src": "person/mbutrovich", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mengna-lin", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mengna-lin", "to": "module/iceberg/docs", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/moomindani", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/moomindani", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mukund-thakur", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/docs", "window": "12m"}
@@ -578,6 +1019,9 @@
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/omalley", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/openinx", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2021-06-29", "src": "person/openinx", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/oresttokovenko", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/plusplusjiajia", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/psvri", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/data", "window": "12m"}
@@ -594,9 +1038,9 @@
 {"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/catalog", "window": "12m"}
 {"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/docs", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/expressions", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/io", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/manifest", "window": "12m"}
 {"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/table", "window": "12m"}
-{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/utils", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "participates", "src": "person/rambleraptor", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/raunaqmorarka", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/raunaqmorarka", "to": "module/iceberg/core", "window": "12m"}
@@ -616,8 +1060,10 @@
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/kafka-connect", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rshdhere", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/rymurr", "to": "repo/iceberg"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/sdd", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/shanzi", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/shardulm94", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/azure", "window": "12m"}
@@ -627,12 +1073,14 @@
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2026-02-24", "src": "person/singhpk234", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/singhpk234", "to": "release/iceberg-1.9.2"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/slfan1989", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/aws", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/hive-metastore", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/kafka-connect", "window": "12m"}
-{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/somasays", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/sqd", "to": "module/iceberg/docs", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/sqd", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/api", "window": "12m"}
@@ -657,6 +1105,7 @@
 {"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/szehon-ho", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-21", "src": "person/szehon-ho", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/szehon-ho", "to": "release/iceberg-1.3.1"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/szlta", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/docs", "window": "12m"}
 {"confidence": "observed", "n": 24, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/flink", "window": "12m"}
@@ -668,17 +1117,19 @@
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/orc", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/tmater", "to": "module/iceberg/parquet", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/aws", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/azure", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/gcp", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/twthorn", "to": "module/iceberg/kafka-connect", "window": "12m"}
 {"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/docs", "window": "12m"}
-{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/parquet", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/varun-lakhyani", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/varun-lakhyani", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "participates", "src": "person/varun-lakhyani", "to": "group/community", "window": "12m"}
@@ -697,16 +1148,19 @@
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/kafka-connect", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/parquet", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/wypoon", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/xanderbailey", "to": "module/iceberg-python/io", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/xanderbailey", "to": "module/iceberg-python/manifest", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/xanderbailey", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 11, "rel": "participates", "src": "person/xanderbailey", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/xiaoxuandev", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yadavay-amzn", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/yadavay-amzn", "to": "module/iceberg/kafka-connect", "window": "12m"}
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/yangshangqing95", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yangshangqing95", "to": "module/iceberg/parquet", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yingjianwu98", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/yingjianwu98", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yusufyildiz34", "to": "module/iceberg/aws", "window": "12m"}
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/yyanyy", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/zeroshade", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2025-11-24", "src": "person/zeroshade", "to": "repo/iceberg"}
@@ -720,6 +1174,7 @@
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/zhjwpku", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "participates", "src": "person/zhjwpku", "to": "group/community", "window": "12m"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/zhjwpku", "to": "release/iceberg-cpp-0.3.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/zhongyujiang", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.10.0", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.11.1", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.12.0", "to": "repo/iceberg"}
@@ -788,138 +1243,344 @@
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.9.0", "to": "repo/iceberg-rust"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.9.1", "to": "repo/iceberg-rust"}
 {"confidence": "observed", "rel": "release_of", "src": "release/terraform-provider-iceberg-0.2.0", "to": "repo/terraform-provider-iceberg"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:o7tzt04by73l0hpjd58t2wgvl4ct9lrc", "src": "thread/t-003a5548469ee105", "to": "initiative/constraints"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hpdmzppsl87l0olkpzm3q47occ9cfydo", "src": "thread/t-007945f7f6f7274a", "to": "initiative/v4-encryption"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-007945f7f6f7274a", "to": "person/xanderbailey"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8pnj238xly2dmzb55tfb9bjny7sp34nd", "src": "thread/t-019f2b7ebaa9b671", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8pnj238xly2dmzb55tfb9bjny7sp34nd", "src": "thread/t-019f2b7ebaa9b671", "to": "initiative/rest-auth"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-019f2b7ebaa9b671", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:nsj0dtxop4h115j6yrcx2vmxpzwt1ow2", "src": "thread/t-01f21da0dbe27e4f", "to": "initiative/v4-relative-paths"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-01f21da0dbe27e4f", "to": "person/talatuyarer"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6", "src": "thread/t-03ef420b5ad9206f", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6", "src": "thread/t-03ef420b5ad9206f", "to": "initiative/community-process"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-03ef420b5ad9206f", "to": "person/RussellSpitzer"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ldkpj659fjrf6nrc8vbg0b3fknxwdg38", "src": "thread/t-07dfa8ee9a2cbc37", "to": "initiative/file-type"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-07dfa8ee9a2cbc37", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:0zloqhp8wkgyn04yg69j71cwcg5n7g74", "src": "thread/t-08d45a08d5e25761", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-08d45a08d5e25761", "to": "person/singhpk234"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:kyqh5z72qfjknljhm6c5px9ymlrhdycp", "src": "thread/t-09a6303d5e1af395", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-09a6303d5e1af395", "to": "person/kevinjqliu"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-0c4e8f7ab63cfb6d", "to": "person/ebyhr"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-0cd4766cfa975dcc", "to": "person/mukund-thakur"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:5jm8jpp327w9yn4zznlrlv5165mz4vt3", "src": "thread/t-0eb2bea9a6273744", "to": "initiative/conformance-testing"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-0eb2bea9a6273744", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:79b5p9pfjso9d8tbs1w10619qz61rt85", "src": "thread/t-0fe216b27de16fe7", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6y4txojozlrhoslkkygcp3lkdyv2sktf", "src": "thread/t-0fffc650114a3f55", "to": "initiative/rest-spec"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-0fffc650114a3f55", "to": "person/MonkeyCanCode"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:m35vm2j7z9pdv2o3jtyvd5vls0bko0xj", "src": "thread/t-13fce5373af3fa44", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-13fce5373af3fa44", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:tct2yp45ytsb6dqw1tq7b8gnfnp7jndo", "src": "thread/t-14cfe62770f38386", "to": "initiative/conformance-testing"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qqrg1l5qntf2m8h11gvopyvojrffgbw3", "src": "thread/t-1579f8b73b2494e8", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-1579f8b73b2494e8", "to": "person/manuzhang"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:z5fk8q6pwx6v5nkm3r4l3olf300myghh", "src": "thread/t-197c5e8a5755ba9a", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-197c5e8a5755ba9a", "to": "person/Kurtiscwright"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:81vqxtw6tlvszon1tzymjbjbmo0hjy0n", "src": "thread/t-1bfe2cedf06f8797", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-1bfe2cedf06f8797", "to": "person/nastra"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:59bn4jty8jmtbks8td8zfqodkcpro1hw", "src": "thread/t-1d01d1d5d742962e", "to": "initiative/v4-general"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-1d01d1d5d742962e", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8fsqcovm1cn7zdl571t4f9qlyqgf5qxy", "src": "thread/t-1d3c20c5c64f7fcb", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8fsqcovm1cn7zdl571t4f9qlyqgf5qxy", "src": "thread/t-1d3c20c5c64f7fcb", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-1d3c20c5c64f7fcb", "to": "person/pvary"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:tv7bvqctdfh5qng1sx5rp8r4r00nsv60", "src": "thread/t-1dfccee77a1376e9", "to": "initiative/v4-content-stats"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:tv7bvqctdfh5qng1sx5rp8r4r00nsv60", "src": "thread/t-1dfccee77a1376e9", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-1dfccee77a1376e9", "to": "person/anoopj"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:sk1j4jo6s7ntr880tt7ktdt636nwzt5n", "src": "thread/t-1f7d78172b69f87c", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-1f7d78172b69f87c", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:dqlgo3rmz1tnshx0bgk2cv4qm1h06k2n", "src": "thread/t-214dc89c07f6f226", "to": "initiative/v4-relative-paths"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-214dc89c07f6f226", "to": "person/danielcweeks"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:k72c2y72w2j00xph2mn2bnsbvcbj43o4", "src": "thread/t-2155678929401961", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:k72c2y72w2j00xph2mn2bnsbvcbj43o4", "src": "thread/t-2155678929401961", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-2155678929401961", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:0mpgn3p2xhlf5165m40oxbptmcf7f87m", "src": "thread/t-218176922d9b85f8", "to": "initiative/catalog-labels"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-218176922d9b85f8", "to": "person/laskoviymishka"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6wfmjhgthlykwbk3f7df4zgcm40xtm2o", "src": "thread/t-2625714567b6a82f", "to": "initiative/expressions-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-2625714567b6a82f", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:o3oycdqw4sm1sqt54hfrj8c2hwxc0yww", "src": "thread/t-26347b0fcdb11b56", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-26347b0fcdb11b56", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:v3bq8snhtdwmj20v4s6kv5byg18cv84t", "src": "thread/t-28612214cb0c85f1", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-28612214cb0c85f1", "to": "person/nastra"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:tnfzjdyjlgvqhzvmwvn80qx7n107mm4m", "src": "thread/t-2932dfb021d2cdf3", "to": "initiative/expressions-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-2932dfb021d2cdf3", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:xyzlndcp4x7zq6xydpcbp192ov9p2skz", "src": "thread/t-2b9326ecf95a23e1", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-2b9326ecf95a23e1", "to": "person/stevenzwu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qch7jjnwb8pm49lt3h7lqfxj82hlg8ps", "src": "thread/t-31c8012d43fc214e", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-31c8012d43fc214e", "to": "person/amogh-jahagirdar"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-31edf75f84e57ef0", "to": "person/RussellSpitzer"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:th30oq0rcvn5gmn2qdx790k8vf4fz1ob", "src": "thread/t-33958badf295b701", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:th30oq0rcvn5gmn2qdx790k8vf4fz1ob", "src": "thread/t-33958badf295b701", "to": "initiative/v4-default-expressions"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-33958badf295b701", "to": "person/danielcweeks"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:gmkj55oc0k1k72gobsylgfc9ngk9lyxn", "src": "thread/t-34ed4df6d3f60b91", "to": "initiative/kafka-connect"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:gmkj55oc0k1k72gobsylgfc9ngk9lyxn", "src": "thread/t-34ed4df6d3f60b91", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:18mcytdbd953cdwz5wsvzx6sbqzsvofh", "src": "thread/t-3548f77d85b2a887", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3548f77d85b2a887", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7qtxrysl1w5sjs7o74y31snt0jrkf5qb", "src": "thread/t-36974638264b04f5", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7qtxrysl1w5sjs7o74y31snt0jrkf5qb", "src": "thread/t-36974638264b04f5", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-36974638264b04f5", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:oxdht2fxkg4l7mh60lfts09g12hx4lh8", "src": "thread/t-38a79cd7862dfb2b", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-38a79cd7862dfb2b", "to": "person/aihuaxu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180", "src": "thread/t-3948c81a19bd7c87", "to": "initiative/collations"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180", "src": "thread/t-3948c81a19bd7c87", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180", "src": "thread/t-3948c81a19bd7c87", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3948c81a19bd7c87", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:q60ymn6rq1qzs102zj0vm0fnqjjv0knw", "src": "thread/t-3a558d67a81956a4", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3a558d67a81956a4", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:h21x5r8bfrv3zg700y9py84plrfmtmsr", "src": "thread/t-3aecd28f8883bc90", "to": "initiative/conformance-testing"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3aecd28f8883bc90", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:5v8j1zj2l8ntygph47r0k61xyskxc5o1", "src": "thread/t-3d4f26de01d84b04", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3d4f26de01d84b04", "to": "person/simpleqt"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:9gsvkhsd4xr3po9wr3bwtfr9vzyrxqbg", "src": "thread/t-3de1185baccbc276", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3de1185baccbc276", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6kmh92wl6qkw08dpgv04bl51v590phbl", "src": "thread/t-3f1ab71baa4cf070", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-3f1ab71baa4cf070", "to": "person/anuragmantri"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:fkvc8wmzokym5hmtv8gb3w6b9k8fgbp9", "src": "thread/t-418bd34af8479e56", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-418bd34af8479e56", "to": "person/zhjwpku"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:j1v2yc69sbh7p85oftcy9tdqph5sxqt7", "src": "thread/t-43bc363d6f78db31", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-43bc363d6f78db31", "to": "person/aihuaxu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4p8345gb8jo03l27qh86kbbpvolwc09j", "src": "thread/t-4438607328a252c1", "to": "initiative/collations"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4p8345gb8jo03l27qh86kbbpvolwc09j", "src": "thread/t-4438607328a252c1", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-4438607328a252c1", "to": "person/laskoviymishka"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:nxqw16p5wt8oorrtsbc28phkosp0g55l", "src": "thread/t-444dbbca629c1693", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:nxqw16p5wt8oorrtsbc28phkosp0g55l", "src": "thread/t-444dbbca629c1693", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-444dbbca629c1693", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:pwzmjq579svsw7qh0nzpqwg25lqrdgrv", "src": "thread/t-447ec59251977712", "to": "initiative/v4-row-lineage-timestamps"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-447ec59251977712", "to": "person/stevenzwu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:k3rqkf2k7zcxh9ggboblymynkzf3m61c", "src": "thread/t-449e67b8e640cd82", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:2pgfvf8v5ob221q5t2xwzjo4xvw5ltz1", "src": "thread/t-44dd42ceee95da54", "to": "initiative/v4-equality-deletes"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-44dd42ceee95da54", "to": "person/huaxingao"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:t4nm0blbo33y5fnkcok6lrmdc4k4toxr", "src": "thread/t-44ddd498b576dea4", "to": "initiative/collations"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:t4nm0blbo33y5fnkcok6lrmdc4k4toxr", "src": "thread/t-44ddd498b576dea4", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-44ddd498b576dea4", "to": "person/rdblue"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-48a3b37c45d4bf29", "to": "person/xanderbailey"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:1684dbkvsoromj4nnjwjrzzr2zotl5bo", "src": "thread/t-4a4da37a5d6b9841", "to": "initiative/v4-column-updates"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-4a4da37a5d6b9841", "to": "person/xndai"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:5f40shqmwc2l647oskjg1vv8pq7q8od7", "src": "thread/t-4ba0b50d52976551", "to": "initiative/spark-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hc2764vozz7ygx5fjj64104hotrof0lk", "src": "thread/t-4c863ceec72fa0da", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hc2764vozz7ygx5fjj64104hotrof0lk", "src": "thread/t-4c863ceec72fa0da", "to": "initiative/rest-spec"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-4c863ceec72fa0da", "to": "person/youngrae81"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7ctclwomk8yqcclzj82z0htlqk2xjf49", "src": "thread/t-4cd20220f5ceef8a", "to": "initiative/file-type"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-4cd20220f5ceef8a", "to": "person/talatuyarer"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:yb8nom3w2zplb703m0p052kcc1wwotrr", "src": "thread/t-4f8a5ccaf1b60f7d", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-4f8a5ccaf1b60f7d", "to": "person/varun-lakhyani"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl", "src": "thread/t-4fdcd748e0704aa5", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl", "src": "thread/t-4fdcd748e0704aa5", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl", "src": "thread/t-4fdcd748e0704aa5", "to": "initiative/v4-relative-paths"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:3nxxy6q2cjqwjwvnpnxnj4z5vl3ddlcb", "src": "thread/t-50827b2ab1b71544", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-50827b2ab1b71544", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:xwqz0j6g2fcvq4hf5xs63ll4137ch0n6", "src": "thread/t-51925c451e4cf72d", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-51925c451e4cf72d", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:sx4tndlb4vkcpj2yq9cob7fhddzd701x", "src": "thread/t-555b31c6e34eed92", "to": "initiative/v4-column-updates"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-555b31c6e34eed92", "to": "person/mkroll-db"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-5744501ab331d678", "to": "person/moomindani"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:vy9fqyopp9c149oy40brdhb10grpq32g", "src": "thread/t-584ad622bd8bd6d8", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-584ad622bd8bd6d8", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8wsvnhktw27h0tqnxljzmnsogwd52tjj", "src": "thread/t-59cdd1fc4c8fabde", "to": "initiative/conformance-testing"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-59cdd1fc4c8fabde", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:fym02576n5sqy298fjxl0xmsv9z5rb7y", "src": "thread/t-5c70639b9c0f57ff", "to": "initiative/file-format-api"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:fym02576n5sqy298fjxl0xmsv9z5rb7y", "src": "thread/t-5c70639b9c0f57ff", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-5c70639b9c0f57ff", "to": "person/stevenzwu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:75xs4trcgcpog8b2zoxpknf8bq6vfk4c", "src": "thread/t-5cba9bc4818eb482", "to": "initiative/udf"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-5cba9bc4818eb482", "to": "person/szehon-ho"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:y93010hlq2m59jjw9lsjbrs38xw8nkdb", "src": "thread/t-5dd317254d01abc3", "to": "initiative/ai-contributions"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-5dd317254d01abc3", "to": "person/manuzhang"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:x1mlyjg7xlmkc9hqb1w8x8r97ovb1smq", "src": "thread/t-60b37c70a0f57b2a", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-60b37c70a0f57b2a", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qd7jb3fdx65mcjvcjomrxg7rgxf3yn0m", "src": "thread/t-61befdbae30765dd", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qd7jb3fdx65mcjvcjomrxg7rgxf3yn0m", "src": "thread/t-61befdbae30765dd", "to": "initiative/udf"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-61befdbae30765dd", "to": "person/huaxingao"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:nj95255r4ofqszpfx6pd8hbf8yxxydzv", "src": "thread/t-6293c79628424192", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-6293c79628424192", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:odof6m2npvktwd51cz8qnrxjv95ws4wm", "src": "thread/t-643f9a86cf02dd71", "to": "initiative/rest-auth"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-643f9a86cf02dd71", "to": "person/williamhyun"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:d6hkx66o8qc1lolh11l1lmswxlq0bpj9", "src": "thread/t-64d9cbfda2cf0c40", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:l86ozt0zp3t4rr3qstqd4vkmyhj1cdrw", "src": "thread/t-69a16596451dbbe3", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-69a16596451dbbe3", "to": "person/Kurtiscwright"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-6a3eec4494bb23b1", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:r5r3vpmrfy9wmmb4sdybwcjz1c4wld5b", "src": "thread/t-6b0913d5ecae698f", "to": "initiative/catalog-labels"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:r5r3vpmrfy9wmmb4sdybwcjz1c4wld5b", "src": "thread/t-6b0913d5ecae698f", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qhn00762nrxl1zmb817wqqq5tzlqolbq", "src": "thread/t-6b556fb65dd1775f", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-6b556fb65dd1775f", "to": "person/varun-lakhyani"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:gkj526shb0y96hdmms73sn3tvsw8mgw9", "src": "thread/t-6c49480676915b91", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:gkj526shb0y96hdmms73sn3tvsw8mgw9", "src": "thread/t-6c49480676915b91", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-6c49480676915b91", "to": "person/nssalian"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-6f85b49f1b2788b5", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:sgtobp6b3w9b3t4xdzo2xfgrsz960yxv", "src": "thread/t-701f75267880be54", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-701f75267880be54", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:221q2qconm1zyxtor0fs86yt3st0xmo6", "src": "thread/t-702d44e21d229af8", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-702d44e21d229af8", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b", "src": "thread/t-709611fe90159e57", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b", "src": "thread/t-709611fe90159e57", "to": "initiative/udf"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b", "src": "thread/t-709611fe90159e57", "to": "initiative/vector-type"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-709611fe90159e57", "to": "person/rambleraptor"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:kf6cbb2lyjxcrno17q0wkb2k2hzglb52", "src": "thread/t-7111d9ac329a3767", "to": "initiative/catalog-labels"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-7111d9ac329a3767", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8f91nk08cq2pxtsdpf1o34ktthn7jcwk", "src": "thread/t-72545de0b328100f", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-72545de0b328100f", "to": "person/nastra"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:2z1lxfo33t5rgbrzq5lvcyk9k5qd4509", "src": "thread/t-7303ba875d84ed33", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8b145f8kw1mwy0ggn9jyfj6khbkb70l3", "src": "thread/t-7347c79968e5d24f", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-7347c79968e5d24f", "to": "person/zhjwpku"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8zq10wdsz5rx8v35zgon24r4gnsjsv9h", "src": "thread/t-7c950e8f34655555", "to": "initiative/secondary-indexes"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-7c950e8f34655555", "to": "person/CTTY"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:n4hyqr3k2gnzbxvs3l1o4cz3ggdfwkx2", "src": "thread/t-7cb3b0fb5a513b73", "to": "initiative/rest-auth"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-7cb3b0fb5a513b73", "to": "person/adutra"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:f7nwynr69g18kj61nt5h1f45cn8g768t", "src": "thread/t-7d24fa0351cadc2c", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-7d24fa0351cadc2c", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:3otgz8ll1zkt3wt3hvjpll6pmzr4w57j", "src": "thread/t-7ff555b89c73c647", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:3otgz8ll1zkt3wt3hvjpll6pmzr4w57j", "src": "thread/t-7ff555b89c73c647", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-7ff555b89c73c647", "to": "person/Kurtiscwright"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:26g46qtgy3nr435wdg5wh53q48k17zo3", "src": "thread/t-824f8a51f5314747", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-824f8a51f5314747", "to": "person/Kurtiscwright"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ytb9x7x8ff3b7031kcrc05nzjtmh091s", "src": "thread/t-85a04b03334ef096", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-85a04b03334ef096", "to": "person/kevinjqliu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:35lj7vhtqtwl5nv9rzpln4mw4fbh7gdp", "src": "thread/t-87bfb68a54b233c9", "to": "initiative/rest-auth"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:r5otylsrm4txd4oxyv7c6scdwrbolck9", "src": "thread/t-8853b84d399d7c2a", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:o5rmmlqvyl6my1p5mr6jxxo8cs0lvyo1", "src": "thread/t-88bfc4197adf37a9", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-88bfc4197adf37a9", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:lqo71bs2hvzj38f4ljrkz77ncq4boltl", "src": "thread/t-88c698db226931c9", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:vsxpk5glhf38nnm7yx8llh5p1wn5yc20", "src": "thread/t-89ed0cd9b2602f90", "to": "initiative/community-process"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-89ed0cd9b2602f90", "to": "person/kevinjqliu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ztrygfd46607pns9t2d4hs0x95595cb2", "src": "thread/t-8a1d2c357afe958e", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-8a1d2c357afe958e", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4zm5jhwp42z10pfz2sths7q59r9dlf8l", "src": "thread/t-8afa728d41cbbd2f", "to": "initiative/v4-encryption"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-8afa728d41cbbd2f", "to": "person/xanderbailey"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7wmhcjwv8opxh4hgj284w5yl578rnbjz", "src": "thread/t-8ba58766eb647f36", "to": "initiative/expressions-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-8ba58766eb647f36", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:njo5bzgf4m126ly74ydz1pfznhz70h38", "src": "thread/t-8d54c4be3c9cc0d5", "to": "initiative/expressions-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:njo5bzgf4m126ly74ydz1pfznhz70h38", "src": "thread/t-8d54c4be3c9cc0d5", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-8d54c4be3c9cc0d5", "to": "person/singhpk234"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:l8gjs6z1ocfd70hv6dj923s7p9qm0w77", "src": "thread/t-8e05ea5cfb5440f5", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:l8gjs6z1ocfd70hv6dj923s7p9qm0w77", "src": "thread/t-8e05ea5cfb5440f5", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-8e05ea5cfb5440f5", "to": "person/nssalian"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-8fe86d8b03cd0963", "to": "person/wombatu-kun"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:9rvgx11ly1j3p570rg1rldsg1h10bzcx", "src": "thread/t-90d2a9cd80ec9ab2", "to": "initiative/v4-equality-deletes"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-90d2a9cd80ec9ab2", "to": "person/xndai"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:0wqsv94hy4sgw1js557ps4xfonjpfbf2", "src": "thread/t-914ce4905899b010", "to": "initiative/community-process"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-914ce4905899b010", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:y2fvgh4ojfcss7o76drkgdvdrpb17ccm", "src": "thread/t-94521177da7f4309", "to": "initiative/v4-row-lineage-timestamps"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-94521177da7f4309", "to": "person/stevenzwu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:kd183vz2v2y69v4kwbz5wbjfxvx3gf1f", "src": "thread/t-95092e2c0cd7ae07", "to": "initiative/flink-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-95092e2c0cd7ae07", "to": "person/stevenzwu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:cv1ks4gcvqpy3jmm8x00hxxyjz776d8r", "src": "thread/t-9704aed6923e08fc", "to": "initiative/constraints"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-9704aed6923e08fc", "to": "person/huaxingao"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:0r9fhdb1zc74ycz0hx2wyl1xyn48jyxl", "src": "thread/t-97adb77b6cd93c6b", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:0r9fhdb1zc74ycz0hx2wyl1xyn48jyxl", "src": "thread/t-97adb77b6cd93c6b", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-97adb77b6cd93c6b", "to": "person/pvary"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:k5pfk4rork0mp2p303pd70q9nx0tsl9w", "src": "thread/t-97f54e45553021e0", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-97f54e45553021e0", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:6zspb6cpb6j2po5lm57mq1sgcp2hppkf", "src": "thread/t-98226ff1baae6ac7", "to": "initiative/rest-auth"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-98226ff1baae6ac7", "to": "person/youngrae81"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:j83qwbv8vplqcx7b298toxmbrbckvprf", "src": "thread/t-98bf4fbbbb6c143a", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:j83qwbv8vplqcx7b298toxmbrbckvprf", "src": "thread/t-98bf4fbbbb6c143a", "to": "initiative/spark-integration"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-98bf4fbbbb6c143a", "to": "person/ajayky-os"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:x5x9fzq3j1wybx3fc5orbc5c2mnxmbzp", "src": "thread/t-993bbf42f9af82cf", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-993bbf42f9af82cf", "to": "person/aihuaxu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:jbh1gbrso5h6l4by9rh9poy2cjjtb8j0", "src": "thread/t-9a2fc459da7341e3", "to": "initiative/v4-column-updates"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-9a2fc459da7341e3", "to": "person/anuragmantri"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:f8l27lr55nlrdg4qwno29r796d4v2p8l", "src": "thread/t-9b4ac94de3e00827", "to": "initiative/variant"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-9b4ac94de3e00827", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ccd7tx23fbg4ry8sc3pl7n6np8s8tl5f", "src": "thread/t-9da84e6ec274a52c", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-9da84e6ec274a52c", "to": "person/rdblue"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:yk7o9v6f44tym72rmr5qpz9dzxbwh870", "src": "thread/t-9f4560b42e64c533", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-9f4560b42e64c533", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qtjkm2xhby3x8hp0yvfj22bsvhyz6ro9", "src": "thread/t-a1627a890918338f", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:qtjkm2xhby3x8hp0yvfj22bsvhyz6ro9", "src": "thread/t-a1627a890918338f", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-a1627a890918338f", "to": "person/Kurtiscwright"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:nh8zy6s9kbhd5mvcctfhl71jzgcc1krs", "src": "thread/t-a1beaa110569764f", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-a1beaa110569764f", "to": "person/aihuaxu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:w5qnj9gnl4rjhjnzyxlsbdzjx3kw9j8q", "src": "thread/t-a59bca208d82363d", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:w5qnj9gnl4rjhjnzyxlsbdzjx3kw9j8q", "src": "thread/t-a59bca208d82363d", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-a59bca208d82363d", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ks01jpv40qjlvz4yop5tlqv4x5oxbwy6", "src": "thread/t-a938dd33b7b841d9", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ks01jpv40qjlvz4yop5tlqv4x5oxbwy6", "src": "thread/t-a938dd33b7b841d9", "to": "initiative/secondary-indexes"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ks01jpv40qjlvz4yop5tlqv4x5oxbwy6", "src": "thread/t-a938dd33b7b841d9", "to": "initiative/v4-equality-deletes"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-a938dd33b7b841d9", "to": "person/huaxingao"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7qo3nydsv4fcx9z94p1gb53oqydsl5oc", "src": "thread/t-a9927e0959daeebf", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-a9927e0959daeebf", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:5qhn33k5kr0t9g3vvqqxc893bs11jxlc", "src": "thread/t-aa8645f8aa979099", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-aa8645f8aa979099", "to": "person/rambleraptor"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:4fnks078pwlgoyhckjvonvm6dgo0ywc8", "src": "thread/t-af00f4d1a06fa71b", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7d4mzx3ft3b0x1kb5g1jk91wkxnm0qf0", "src": "thread/t-af6ebed2f3531bd4", "to": "initiative/iceberg-go"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7d4mzx3ft3b0x1kb5g1jk91wkxnm0qf0", "src": "thread/t-af6ebed2f3531bd4", "to": "initiative/iceberg-rust"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:mj8czb2ljf8kj1d7ldbfw39sffr9knjc", "src": "thread/t-b00cc9ec1c194566", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:mj8czb2ljf8kj1d7ldbfw39sffr9knjc", "src": "thread/t-b00cc9ec1c194566", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-b00cc9ec1c194566", "to": "person/anoopj"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-b3af82ac2685e2f2", "to": "person/Dzeri96"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:33h4ppbrkmm83no3x6mfxqkv4zdw6ynv", "src": "thread/t-b5daefa7bb409f3d", "to": "initiative/file-type"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057", "src": "thread/t-b838f79509420b04", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057", "src": "thread/t-b838f79509420b04", "to": "initiative/v4-general"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-b838f79509420b04", "to": "person/xanderbailey"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-b9627d1f1c298c57", "to": "person/pvary"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:xlqx6k7g625p38bxxy141wt02d00w2h4", "src": "thread/t-b9f73c21a4179dc6", "to": "initiative/read-restrictions"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:xlqx6k7g625p38bxxy141wt02d00w2h4", "src": "thread/t-b9f73c21a4179dc6", "to": "initiative/rest-spec"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-b9f73c21a4179dc6", "to": "person/singhpk234"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-bacc923f0d0a8d51", "to": "person/laskoviymishka"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:fhs5rkkzlp3fy7wok2jh05p6dt7csyky", "src": "thread/t-bd70f40d4eb1876d", "to": "initiative/v4-general"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:fhs5rkkzlp3fy7wok2jh05p6dt7csyky", "src": "thread/t-bd70f40d4eb1876d", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-bd70f40d4eb1876d", "to": "person/Kurtiscwright"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:38rkthkr1fg0s86493fjq755cnl3y90s", "src": "thread/t-c3195bd81b8adb3b", "to": "initiative/v4-encryption"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-c3195bd81b8adb3b", "to": "person/gaborkaszab"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:mptyj9nh6xd9zymbyq6qvf35j9x9hwyg", "src": "thread/t-c455572cb549f180", "to": "initiative/catalog-labels"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-c455572cb549f180", "to": "person/laskoviymishka"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:vo8wfvp4cncggng31c5l6ksh7nnv1bsm", "src": "thread/t-c8eead2c8a5ef24b", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-c8eead2c8a5ef24b", "to": "person/zhjwpku"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:mgtkn0oprblt1tg7m0h3k1jo3lln6mc2", "src": "thread/t-cbbca521b592906a", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-cbbca521b592906a", "to": "person/CTTY"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:3vdtx3m4xbcw5htj246yhjt6wrc5rjo8", "src": "thread/t-cbe85b13658ba33b", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-cbe85b13658ba33b", "to": "person/zhjwpku"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:zh25o2msbjw3skd577qzsyrcorobcthz", "src": "thread/t-cddba95ff30a75d7", "to": "initiative/read-restrictions"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-cddba95ff30a75d7", "to": "person/singhpk234"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz", "src": "thread/t-ce325e60255c54b1", "to": "initiative/flink-integration"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz", "src": "thread/t-ce325e60255c54b1", "to": "initiative/v4-equality-deletes"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:n2s6z7rt745cgftsb8j9yob0kc70cgny", "src": "thread/t-ceb017adb8f59712", "to": "initiative/ai-contributions"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:n2s6z7rt745cgftsb8j9yob0kc70cgny", "src": "thread/t-ceb017adb8f59712", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-ceb017adb8f59712", "to": "person/wgtmac"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-cf32601a8df15f27", "to": "person/adutra"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hb12b05y2rxv98641dwdvdjh58po0h8r", "src": "thread/t-cf8ecdd2fd7d10db", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hb12b05y2rxv98641dwdvdjh58po0h8r", "src": "thread/t-cf8ecdd2fd7d10db", "to": "initiative/iceberg-rust"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-cf8ecdd2fd7d10db", "to": "person/jordepic"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hk1gnjrqnfvmjknrsyyphfs6mfxkz20s", "src": "thread/t-d0d4a69708620931", "to": "initiative/community-process"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-d0d4a69708620931", "to": "person/sungwy"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:8z0kc8vz1379lghwlcwl0jmsoym6shd7", "src": "thread/t-d332ec73c7f3e8cc", "to": "initiative/geospatial"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:txorrcfb5ft95q8kq2gypdcj1gd7zzxl", "src": "thread/t-db8ec8a6f20fbd0d", "to": "initiative/v4-content-stats"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-db8ec8a6f20fbd0d", "to": "person/anoopj"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:yfjj2p96w4s0fd7067fkr5dgknwp62d1", "src": "thread/t-dc8bbfb604d6e4b4", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-dc8bbfb604d6e4b4", "to": "person/manuzhang"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:h8ohxh44g1zc32clg3sgxr80xjc4nnr9", "src": "thread/t-dea37ea5d432effa", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-dea37ea5d432effa", "to": "person/dannycjones"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:x5y5h0yk8vwzgm7r5b78o0tmp442hyky", "src": "thread/t-e1938ca21167e827", "to": "initiative/iceberg-cpp"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-e1938ca21167e827", "to": "person/zhjwpku"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:ptq6gyf6gcd4xwwkn2q3yrt9lxr7ojdk", "src": "thread/t-e2b669d1053d1cbb", "to": "initiative/java-releases"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-e2b669d1053d1cbb", "to": "person/nssalian"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:3jcdq4w6kvyfjbczddch6hzhbt1qjor0", "src": "thread/t-e3a4cbb57895e29d", "to": "initiative/community-process"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:5x8ovvz3ppf4krqs543sqjcy3dqdhthm", "src": "thread/t-e3df87d32bc07907", "to": "initiative/v4-equality-deletes"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-e3df87d32bc07907", "to": "person/huaxingao"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:967dbjpjqt6kl9pnwv39vkvlvxv9rkcn", "src": "thread/t-e423f0a28f74a2c0", "to": "initiative/pyiceberg"}
+{"confidence": "observed", "rel": "started_by", "src": "thread/t-e423f0a28f74a2c0", "to": "person/oresttokovenko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:krophr3htb39xhxr3ldbcn7ghqm82ohj", "src": "thread/t-e5e8356da0183206", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-e5e8356da0183206", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:n8qy5nsdw35vjog5lb4kp15989b800cv", "src": "thread/t-e6327b02ad166780", "to": "initiative/java-releases"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:n8qy5nsdw35vjog5lb4kp15989b800cv", "src": "thread/t-e6327b02ad166780", "to": "initiative/spark-integration"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-e6327b02ad166780", "to": "person/kevinjqliu"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:lfr1kb253m99dg0mbdzpm6g1k3nbd6fc", "src": "thread/t-e7c5d0287bca96b4", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-e7c5d0287bca96b4", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:zdvc0gmqjgws8whwxv0ztn7h1jqclzyk", "src": "thread/t-e821af59b904a5ea", "to": "initiative/collations"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:y2n3yy1007t6rsyhtro7kww76047kozc", "src": "thread/t-eb9773fe398a7232", "to": "initiative/geospatial"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-eb9773fe398a7232", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7jryw9dfvc02s411twn4o7s5gjrybfxg", "src": "thread/t-ec167869ed1e0e08", "to": "initiative/v4-column-updates"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:7jryw9dfvc02s411twn4o7s5gjrybfxg", "src": "thread/t-ec167869ed1e0e08", "to": "initiative/v4-metadata-tree"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-ec167869ed1e0e08", "to": "person/gaborkaszab"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:r6dv9wry0c52ypsm6g9twko1ctvdrdtc", "src": "thread/t-ed866fa82546916e", "to": "initiative/v4-equality-deletes"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-ed866fa82546916e", "to": "person/xndai"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:bzs62qqt9k4t9sr76pk0d36l47zwcpyb", "src": "thread/t-ef8a98c0e0dd42ed", "to": "initiative/rest-spec"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:rx0tcnqkq0nzj1phwo64ng79pp51hzf9", "src": "thread/t-f262a08fa26f3d8c", "to": "initiative/v4-encryption"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-f262a08fa26f3d8c", "to": "person/gaborkaszab"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:hrcyh8nqf1svrwnm279n466c75r3wwxn", "src": "thread/t-f30173754f0d73b2", "to": "initiative/catalog-labels"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-f30173754f0d73b2", "to": "person/laskoviymishka"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:pk4yqd4llr85lmq3gskbfl9v31sfqpp9", "src": "thread/t-f324967b2d45dc23", "to": "initiative/iceberg-rust"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-f324967b2d45dc23", "to": "person/mbutrovich"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:3zq0vpkw5xkp48okq5ocpqft5mnyg03s", "src": "thread/t-f9e1b8daeae100d8", "to": "initiative/pyiceberg"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-f9e1b8daeae100d8", "to": "person/rambleraptor"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:wtntmmsmnxscfb8w1hr4slvmt2r8ghn5", "src": "thread/t-fa11fb73f2aa07a0", "to": "initiative/v4-relative-paths"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-fa11fb73f2aa07a0", "to": "person/Fokko"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:yvf1ywkwwdw3f28b7xskqt2y0hsmtv2l", "src": "thread/t-fa69aa12d0302acd", "to": "initiative/iceberg-go"}
 {"confidence": "observed", "rel": "started_by", "src": "thread/t-fa69aa12d0302acd", "to": "person/zeroshade"}
+{"confidence": "extracted", "rel": "discussed", "source": "devlist:1nfwnk1j8sppmsry675ygr1jbxyhvrdx", "src": "thread/t-fd1e0ca37f3dd78c", "to": "initiative/rest-spec"}

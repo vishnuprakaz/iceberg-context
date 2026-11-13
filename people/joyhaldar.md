@@ -11,12 +11,12 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/data
+  to: module/iceberg/flink
   n: 6
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/flink
+  to: module/iceberg/data
   n: 6
   window: 12m
   confidence: observed
@@ -35,7 +35,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person joyhaldar` for live numbers.
 
-- **Merged commits:** 15. Areas: [[module/iceberg/spark|iceberg/spark]] (7), [[module/iceberg/data|iceberg/data]] (6), [[module/iceberg/flink|iceberg/flink]] (6), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/gcp|iceberg/gcp]] (1)
+- **Merged commits:** 15. Areas: [[module/iceberg/spark|iceberg/spark]] (7), [[module/iceberg/flink|iceberg/flink]] (6), [[module/iceberg/data|iceberg/data]] (6), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/gcp|iceberg/gcp]] (1)
 
 ## Recent merged changes
 

@@ -12,6 +12,10 @@ sources:
 refs:
 - doc:12ifnKwiWemXcLndv19QJXOxh5o4lOsRxw_HsOgQ4sdU
 links:
+- rel: discussed
+  to: initiative/v4-equality-deletes
+  confidence: extracted
+  source: devlist:9rvgx11ly1j3p570rg1rldsg1h10bzcx
 - rel: started_by
   to: person/xndai
   confidence: observed

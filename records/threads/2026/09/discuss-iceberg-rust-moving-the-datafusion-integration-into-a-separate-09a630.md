@@ -14,6 +14,10 @@ refs:
 - list:6k5lws31c61y1lx2s34pxo4lmc7334lr
 - list:ytb9x7x8ff3b7031kcrc05nzjtmh091s
 links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:kyqh5z72qfjknljhm6c5px9ymlrhdycp
 - rel: started_by
   to: person/kevinjqliu
   confidence: observed

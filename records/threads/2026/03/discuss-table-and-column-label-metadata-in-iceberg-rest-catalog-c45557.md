@@ -18,6 +18,10 @@ refs:
 - gh:apache/iceberg#13879
 - doc:1aj-6JlfBiMYEEVtNuh5WLMOrRQiMCcyYUGbouPM4hXI
 links:
+- rel: discussed
+  to: initiative/catalog-labels
+  confidence: extracted
+  source: devlist:mptyj9nh6xd9zymbyq6qvf35j9x9hwyg
 - rel: started_by
   to: person/laskoviymishka
   confidence: observed

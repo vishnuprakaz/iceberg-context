@@ -18,7 +18,11 @@ refs:
 - gh:apache/polaris#5833
 - list:q7vgnfwdxng5q6mq45m0psghzy7553r7
 - list:d5ft79ogcxx15ccr1n1bc0rvsl14tf6v
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:r5otylsrm4txd4oxyv7c6scdwrbolck9
 updated: '2026-11-13'
 ---
 

@@ -17,6 +17,10 @@ refs:
 - list:jz4534dodn0zhwdg2wojwkkohg2dps9p
 - list:cy6y5xf5gg8fr12pg64f77gxdrtv52fn
 links:
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:yb8nom3w2zplb703m0p052kcc1wwotrr
 - rel: started_by
   to: person/varun-lakhyani
   confidence: observed

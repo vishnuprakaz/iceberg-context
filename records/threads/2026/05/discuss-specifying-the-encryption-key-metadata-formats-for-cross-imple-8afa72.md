@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#16527
 links:
+- rel: discussed
+  to: initiative/v4-encryption
+  confidence: extracted
+  source: devlist:4zm5jhwp42z10pfz2sths7q59r9dlf8l
 - rel: started_by
   to: person/xanderbailey
   confidence: observed

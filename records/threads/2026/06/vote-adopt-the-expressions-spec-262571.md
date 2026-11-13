@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg#16652
 - doc:1VthBz0S2I39TeQM8oiF9_gSPQu_gHAjWXvdFpv0QqDk
 links:
+- rel: discussed
+  to: initiative/expressions-spec
+  confidence: extracted
+  source: devlist:6wfmjhgthlykwbk3f7df4zgcm40xtm2o
 - rel: started_by
   to: person/rdblue
   confidence: observed

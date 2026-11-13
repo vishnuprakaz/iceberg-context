@@ -11,6 +11,10 @@ sources:
 - devlist:r6dv9wry0c52ypsm6g9twko1ctvdrdtc
 refs: []
 links:
+- rel: discussed
+  to: initiative/v4-equality-deletes
+  confidence: extracted
+  source: devlist:r6dv9wry0c52ypsm6g9twko1ctvdrdtc
 - rel: started_by
   to: person/xndai
   confidence: observed

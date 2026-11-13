@@ -17,6 +17,10 @@ refs:
 - gh:apache/iceberg#15180
 - doc:1NTQhgNbP2dkIMuXUMA5JdwliVQKCp1TU_ux5J_AaPiw
 links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:xyzlndcp4x7zq6xydpcbp192ov9p2skz
 - rel: started_by
   to: person/stevenzwu
   confidence: observed

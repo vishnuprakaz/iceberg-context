@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#12841
 links:
+- rel: discussed
+  to: initiative/read-restrictions
+  confidence: extracted
+  source: devlist:9gsvkhsd4xr3po9wr3bwtfr9vzyrxqbg
 - rel: started_by
   to: person/sungwy
   confidence: observed

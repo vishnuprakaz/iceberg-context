@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg#18027
 - gh:apache/iceberg#18026
 links:
+- rel: discussed
+  to: initiative/spark-integration
+  confidence: extracted
+  source: devlist:5v8j1zj2l8ntygph47r0k61xyskxc5o1
 - rel: started_by
   to: person/simpleqt
   confidence: observed

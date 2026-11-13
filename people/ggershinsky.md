@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person ggershinsky` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (2), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Merged commits:** 3. Areas: [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (2), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
 - **Dev list:** 9 messages, 0 threads started
 
 ## Recent merged changes

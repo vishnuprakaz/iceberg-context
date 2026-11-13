@@ -12,6 +12,10 @@ sources:
 refs:
 - doc:1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs
 links:
+- rel: discussed
+  to: initiative/v4-column-updates
+  confidence: extracted
+  source: devlist:jbh1gbrso5h6l4by9rh9poy2cjjtb8j0
 - rel: started_by
   to: person/anuragmantri
   confidence: observed

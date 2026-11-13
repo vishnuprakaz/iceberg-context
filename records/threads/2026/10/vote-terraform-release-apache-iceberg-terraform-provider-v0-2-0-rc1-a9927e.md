@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/terraform-provider-iceberg#154
 links:
+- rel: discussed
+  to: initiative/iceberg-go
+  confidence: extracted
+  source: devlist:7qo3nydsv4fcx9z94p1gb53oqydsl5oc
 - rel: started_by
   to: person/zeroshade
   confidence: observed

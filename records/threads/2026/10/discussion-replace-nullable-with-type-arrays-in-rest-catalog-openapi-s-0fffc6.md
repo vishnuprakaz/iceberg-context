@@ -11,14 +11,21 @@ sources:
 - devlist:6y4txojozlrhoslkkygcp3lkdyv2sktf
 refs:
 - gh:apache/iceberg#18428
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:6y4txojozlrhoslkkygcp3lkdyv2sktf
+- rel: started_by
+  to: person/MonkeyCanCode
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Replace nullable with type arrays in the REST catalog OpenAPI spec
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSSION] Replace nullable with type arrays in rest catalog openapi spec](https://lists.apache.org/thread/6y4txojozlrhoslkkygcp3lkdyv2sktf) · **Started:** 2026-10-21 by MonkeyCanCode · **Messages:** 4 (last 2026-10-22) · **Outcome:** consensus
+**Thread:** [[DISCUSSION] Replace nullable with type arrays in rest catalog openapi spec](https://lists.apache.org/thread/6y4txojozlrhoslkkygcp3lkdyv2sktf) · **Started:** 2026-10-21 by [[person/MonkeyCanCode|Yong Zheng]] · **Messages:** 4 (last 2026-10-22) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,7 +41,7 @@ All three replies supported the fix and one approved PR #18428; the thread does 
 
 ## Positions
 
-- **MonkeyCanCode:** The Iceberg REST OpenAPI spec is invalid as 3.1.x because it uses nullable, which should be replaced with type arrays. ([message](https://lists.apache.org/thread/6y4txojozlrhoslkkygcp3lkdyv2sktf))
+- **[[person/MonkeyCanCode|Yong Zheng]]:** The Iceberg REST OpenAPI spec is invalid as 3.1.x because it uses nullable, which should be replaced with type arrays. ([message](https://lists.apache.org/thread/6y4txojozlrhoslkkygcp3lkdyv2sktf))
 - **Alex Dutra:** The proposed changes make sense; he approved the PR. ([message](https://lists.apache.org/thread/jm0w6okxv1gs4q4bhvlox38cls5npdr7))
 
 References: [iceberg#18428](https://github.com/apache/iceberg/issues/18428)

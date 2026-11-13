@@ -11,7 +11,15 @@ sources:
 - devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz
 refs:
 - gh:apache/iceberg#15996
-links: []
+links:
+- rel: discussed
+  to: initiative/flink-integration
+  confidence: extracted
+  source: devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz
+- rel: discussed
+  to: initiative/v4-equality-deletes
+  confidence: extracted
+  source: devlist:d5wr7567ccfd86kf64n7snovnjhvtlqz
 updated: '2026-11-13'
 ---
 

@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#16285
 links:
+- rel: discussed
+  to: initiative/v4-column-updates
+  confidence: extracted
+  source: devlist:1684dbkvsoromj4nnjwjrzzr2zotl5bo
 - rel: started_by
   to: person/xndai
   confidence: observed

@@ -11,14 +11,25 @@ sources:
 - devlist:hc2764vozz7ygx5fjj64104hotrof0lk
 refs:
 - gh:apache/iceberg#18480
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-auth
+  confidence: extracted
+  source: devlist:hc2764vozz7ygx5fjj64104hotrof0lk
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:hc2764vozz7ygx5fjj64104hotrof0lk
+- rel: started_by
+  to: person/youngrae81
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # REST spec: add none to X-Iceberg-Access-Delegation header values
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] REST spec: Add none to X-Iceberg-Access-Delegation header values](https://lists.apache.org/thread/hc2764vozz7ygx5fjj64104hotrof0lk) · **Started:** 2026-10-25 by youngrae81 · **Messages:** 9 (last 2026-10-28) · **Outcome:** passed
+**Thread:** [[VOTE] REST spec: Add none to X-Iceberg-Access-Delegation header values](https://lists.apache.org/thread/hc2764vozz7ygx5fjj64104hotrof0lk) · **Started:** 2026-10-25 by [[person/youngrae81|youngrae kim]] · **Messages:** 9 (last 2026-10-28) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,7 +45,7 @@ Passed with 7 +1 votes (3 binding, 4 non-binding) and no 0 or -1 votes. The chan
 
 ## Positions
 
-- **youngrae81:** Add none to the X-Iceberg-Access-Delegation values so a client can signal it can operate without any access delegation mechanism. ([message](https://lists.apache.org/thread/hc2764vozz7ygx5fjj64104hotrof0lk))
+- **[[person/youngrae81|youngrae kim]]:** Add none to the X-Iceberg-Access-Delegation values so a client can signal it can operate without any access delegation mechanism. ([message](https://lists.apache.org/thread/hc2764vozz7ygx5fjj64104hotrof0lk))
 
 References: [iceberg#18480](https://github.com/apache/iceberg/issues/18480)
 <!-- kb:generated:end -->

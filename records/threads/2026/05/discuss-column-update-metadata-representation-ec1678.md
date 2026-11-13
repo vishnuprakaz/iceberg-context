@@ -16,6 +16,14 @@ refs:
 - list:jbh1gbrso5h6l4by9rh9poy2cjjtb8j0
 - yt:exC7RCDYtk4
 links:
+- rel: discussed
+  to: initiative/v4-column-updates
+  confidence: extracted
+  source: devlist:7jryw9dfvc02s411twn4o7s5gjrybfxg
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:7jryw9dfvc02s411twn4o7s5gjrybfxg
 - rel: started_by
   to: person/gaborkaszab
   confidence: observed

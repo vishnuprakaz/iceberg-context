@@ -19,7 +19,15 @@ refs:
 - gh:apache/iceberg-go#817
 - gh:apache/iceberg-go#983
 - gh:apache/iceberg-go#947
-links: []
+links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:7d4mzx3ft3b0x1kb5g1jk91wkxnm0qf0
+- rel: discussed
+  to: initiative/iceberg-go
+  confidence: extracted
+  source: devlist:7d4mzx3ft3b0x1kb5g1jk91wkxnm0qf0
 updated: '2026-11-13'
 ---
 

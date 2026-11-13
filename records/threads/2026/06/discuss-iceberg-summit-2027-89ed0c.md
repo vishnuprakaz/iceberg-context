@@ -11,6 +11,10 @@ sources:
 - devlist:vsxpk5glhf38nnm7yx8llh5p1wn5yc20
 refs: []
 links:
+- rel: discussed
+  to: initiative/community-process
+  confidence: extracted
+  source: devlist:vsxpk5glhf38nnm7yx8llh5p1wn5yc20
 - rel: started_by
   to: person/kevinjqliu
   confidence: observed

@@ -15,6 +15,14 @@ refs:
 - list:44todz4x460g8pb89y8rpozlnmo8vdhc
 - list:t3r68d7mrpjxdlfv8brttr692os2jryc
 links:
+- rel: discussed
+  to: initiative/collations
+  confidence: extracted
+  source: devlist:4p8345gb8jo03l27qh86kbbpvolwc09j
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:4p8345gb8jo03l27qh86kbbpvolwc09j
 - rel: started_by
   to: person/laskoviymishka
   confidence: observed

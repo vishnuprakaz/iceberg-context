@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#17403
 links:
+- rel: discussed
+  to: initiative/spark-integration
+  confidence: extracted
+  source: devlist:sk1j4jo6s7ntr880tt7ktdt636nwzt5n
 - rel: started_by
   to: person/amogh-jahagirdar
   confidence: observed

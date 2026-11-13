@@ -13,6 +13,14 @@ refs:
 - gh:apache/iceberg#16100
 - list:ko8cs3tgol97f0m20yozchpxlotzl1mj
 links:
+- rel: discussed
+  to: initiative/v4-general
+  confidence: extracted
+  source: devlist:fhs5rkkzlp3fy7wok2jh05p6dt7csyky
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:fhs5rkkzlp3fy7wok2jh05p6dt7csyky
 - rel: started_by
   to: person/Kurtiscwright
   confidence: observed

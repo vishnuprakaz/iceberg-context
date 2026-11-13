@@ -11,6 +11,10 @@ sources:
 - devlist:kf6cbb2lyjxcrno17q0wkb2k2hzglb52
 refs: []
 links:
+- rel: discussed
+  to: initiative/catalog-labels
+  confidence: extracted
+  source: devlist:kf6cbb2lyjxcrno17q0wkb2k2hzglb52
 - rel: started_by
   to: person/Fokko
   confidence: observed

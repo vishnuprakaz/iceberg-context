@@ -12,6 +12,14 @@ sources:
 refs:
 - doc:13DbwnwKQXjvY3vRcFJo-qVAQWk-GB4zLzzYmFdPntZg
 links:
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:tv7bvqctdfh5qng1sx5rp8r4r00nsv60
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:tv7bvqctdfh5qng1sx5rp8r4r00nsv60
 - rel: started_by
   to: person/anoopj
   confidence: observed

@@ -12,6 +12,14 @@ sources:
 refs:
 - gh:apache/iceberg-rust#2907
 links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:nxqw16p5wt8oorrtsbc28phkosp0g55l
+- rel: discussed
+  to: initiative/pyiceberg
+  confidence: extracted
+  source: devlist:nxqw16p5wt8oorrtsbc28phkosp0g55l
 - rel: started_by
   to: person/dannycjones
   confidence: observed

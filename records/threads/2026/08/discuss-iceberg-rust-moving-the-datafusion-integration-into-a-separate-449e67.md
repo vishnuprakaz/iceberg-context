@@ -10,7 +10,11 @@ messages: 6
 sources:
 - devlist:k3rqkf2k7zcxh9ggboblymynkzf3m61c
 refs: []
-links: []
+links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:k3rqkf2k7zcxh9ggboblymynkzf3m61c
 updated: '2026-11-13'
 ---
 
@@ -36,7 +40,7 @@ Respondents favoured moving the integration to DataFusion governance within the 
 - **Gabriel Musat:** Keep iceberg-datafusion in apache/iceberg-rust but grant DataFusion PMC members committer access scoped to the crate via CODEOWNERS. ([message](https://lists.apache.org/thread/k3rqkf2k7zcxh9ggboblymynkzf3m61c))
 - **[[person/liurenjie1024|Renjie Liu]]:** Moving the crate to the Apache DataFusion project is more reasonable than scoped access, and testing should not block the move. ([message](https://lists.apache.org/thread/5r2419sqw2wdf5pcq8rh4r4n56q2hj1l))
 - **[[person/Xuanwo|Hao Ding]]:** Supports moving to the DataFusion PMC if it accepts the project, since DataFusion is the largest dependency and Comet the largest downstream user. ([message](https://lists.apache.org/thread/8c9ztyo3nq1wd6cjn9nvfbjf578flgko))
-- **andygrove:** Supports moving to the DataFusion PMC; the integration is very important for Comet. ([message](https://lists.apache.org/thread/hwzx0xcq64lc60hv7v9mo9yy0y7oxcdt))
+- **[[person/andygrove|Andy Grove]]:** Supports moving to the DataFusion PMC; the integration is very important for Comet. ([message](https://lists.apache.org/thread/hwzx0xcq64lc60hv7v9mo9yy0y7oxcdt))
 - **Andrew Lamb:** Proposes creating a new Apache repository, a PR with the code, and formal votes on both the Iceberg and DataFusion dev lists. ([message](https://lists.apache.org/thread/1mzshyr7mk9r28dvxbjw71nwn3dplwt1))
 <!-- kb:generated:end -->
 

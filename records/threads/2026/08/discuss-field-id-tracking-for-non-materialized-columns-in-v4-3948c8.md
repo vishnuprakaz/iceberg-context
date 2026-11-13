@@ -14,6 +14,18 @@ refs:
 - gh:apache/iceberg#17893
 - doc:1u93kyIrTc8bt9VSTB4O0GM9S7zuXekqixJR6Id2FZC4
 links:
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180
+- rel: discussed
+  to: initiative/secondary-indexes
+  confidence: extracted
+  source: devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180
+- rel: discussed
+  to: initiative/collations
+  confidence: extracted
+  source: devlist:4h53r1nvvgxqymfvx7vcyhqgh1fk8180
 - rel: started_by
   to: person/rdblue
   confidence: observed

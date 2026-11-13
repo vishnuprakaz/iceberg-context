@@ -11,6 +11,10 @@ sources:
 - devlist:8zq10wdsz5rx8v35zgon24r4gnsjsv9h
 refs: []
 links:
+- rel: discussed
+  to: initiative/secondary-indexes
+  confidence: extracted
+  source: devlist:8zq10wdsz5rx8v35zgon24r4gnsjsv9h
 - rel: started_by
   to: person/CTTY
   confidence: observed

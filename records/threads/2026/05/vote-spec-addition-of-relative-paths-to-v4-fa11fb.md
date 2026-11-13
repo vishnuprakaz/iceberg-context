@@ -11,6 +11,10 @@ sources:
 - devlist:wtntmmsmnxscfb8w1hr4slvmt2r8ghn5
 refs: []
 links:
+- rel: discussed
+  to: initiative/v4-relative-paths
+  confidence: extracted
+  source: devlist:wtntmmsmnxscfb8w1hr4slvmt2r8ghn5
 - rel: started_by
   to: person/Fokko
   confidence: observed

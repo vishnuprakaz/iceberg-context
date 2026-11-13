@@ -12,6 +12,10 @@ sources:
 - devlist:bg80qn7v5v13s7tqxps9w6kwg4mdt91v
 refs: []
 links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:mgtkn0oprblt1tg7m0h3k1jo3lln6mc2
 - rel: started_by
   to: person/CTTY
   confidence: observed

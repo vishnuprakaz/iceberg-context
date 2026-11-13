@@ -11,14 +11,21 @@ sources:
 - devlist:odof6m2npvktwd51cz8qnrxjv95ws4wm
 refs:
 - list:ko9kp0gvzhx85n7cvoxqnpw4vwnhmdg6
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-auth
+  confidence: extracted
+  source: devlist:odof6m2npvktwd51cz8qnrxjv95ws4wm
+- rel: started_by
+  to: person/williamhyun
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Proposal: file-level access delegation in the Iceberg REST catalog spec
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Proposal: File-Level Access Delegation in the Iceberg REST Catalog Spec](https://lists.apache.org/thread/odof6m2npvktwd51cz8qnrxjv95ws4wm) · **Started:** 2026-07-01 by williamhyun · **Messages:** 4 (last 2026-07-08) · **Outcome:** open
+**Thread:** [[DISCUSS] Proposal: File-Level Access Delegation in the Iceberg REST Catalog Spec](https://lists.apache.org/thread/odof6m2npvktwd51cz8qnrxjv95ws4wm) · **Started:** 2026-07-01 by [[person/williamhyun|William Hyun]] · **Messages:** 4 (last 2026-07-08) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,9 +41,9 @@ No decision. The author is evaluating bulk remote signing with caching through a
 
 ## Positions
 
-- **williamhyun:** Table-scoped delegation forces over-provisioning or table fragmentation; the REST spec should support file-level delegation during scan planning using pre-signed URLs. ([message](https://lists.apache.org/thread/odof6m2npvktwd51cz8qnrxjv95ws4wm))
+- **[[person/williamhyun|William Hyun]]:** Table-scoped delegation forces over-provisioning or table fragmentation; the REST spec should support file-level delegation during scan planning using pre-signed URLs. ([message](https://lists.apache.org/thread/odof6m2npvktwd51cz8qnrxjv95ws4wm))
 - **[[person/kevinjqliu|Kevin Liu]]:** Supports addressing the use case; pre-signed URL support in the Java implementation and subprojects may have gaps that need checking. ([message](https://lists.apache.org/thread/dqnqwyw9gsljo9gjyy3bm4mbmrhk44x6))
-- **williamhyun:** Scoped credential vending is impractical for many specific files because each scope needs a new STS session with rate and policy-size limits; bulk remote signing with caching is worth evaluating as an alternative to pre-signed URLs. ([message](https://lists.apache.org/thread/k4kxnr870b6q4wrdnqov8ro98rmq1955))
+- **[[person/williamhyun|William Hyun]]:** Scoped credential vending is impractical for many specific files because each scope needs a new STS session with rate and policy-size limits; bulk remote signing with caching is worth evaluating as an alternative to pre-signed URLs. ([message](https://lists.apache.org/thread/k4kxnr870b6q4wrdnqov8ro98rmq1955))
 
 References: [thread](https://lists.apache.org/thread/ko9kp0gvzhx85n7cvoxqnpw4vwnhmdg6)
 <!-- kb:generated:end -->

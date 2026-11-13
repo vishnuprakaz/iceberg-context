@@ -11,7 +11,11 @@ sources:
 - devlist:4fnks078pwlgoyhckjvonvm6dgo0ywc8
 refs:
 - doc:1qpSWM4PtaFcI_at2LuKc0Cd2xblOannaAGIgJrAvICU
-links: []
+links:
+- rel: discussed
+  to: initiative/community-process
+  confidence: extracted
+  source: devlist:4fnks078pwlgoyhckjvonvm6dgo0ywc8
 updated: '2026-11-13'
 ---
 

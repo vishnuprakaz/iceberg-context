@@ -11,6 +11,14 @@ sources:
 - devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6
 refs: []
 links:
+- rel: discussed
+  to: initiative/community-process
+  confidence: extracted
+  source: devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6
+- rel: discussed
+  to: initiative/ai-contributions
+  confidence: extracted
+  source: devlist:s5jqhbczoknftmojhrvzpsb53w1s7gd6
 - rel: started_by
   to: person/RussellSpitzer
   confidence: observed

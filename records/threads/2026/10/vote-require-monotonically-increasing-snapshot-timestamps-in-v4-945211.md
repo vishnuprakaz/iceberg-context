@@ -14,6 +14,10 @@ refs:
 - gh:apache/iceberg#16293
 - list:cln7xtjy9kw2096gzqlg5c4gg8b9td10
 links:
+- rel: discussed
+  to: initiative/v4-row-lineage-timestamps
+  confidence: extracted
+  source: devlist:y2fvgh4ojfcss7o76drkgdvdrpb17ccm
 - rel: started_by
   to: person/stevenzwu
   confidence: observed

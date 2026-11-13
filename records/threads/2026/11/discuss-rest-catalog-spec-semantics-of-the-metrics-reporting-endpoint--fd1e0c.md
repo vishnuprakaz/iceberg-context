@@ -12,7 +12,11 @@ sources:
 refs:
 - gh:apache/polaris#5395
 - list:0r7fpq153d2ny0tbt162051dh0jv3wjb
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:1nfwnk1j8sppmsry675ygr1jbxyhvrdx
 updated: '2026-11-13'
 ---
 

@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person vladislav-sidorovich` for live numbers.
 
-- **Merged commits:** 2. Areas: [[module/iceberg/azure|iceberg/azure]] (1), [[module/iceberg/gcp|iceberg/gcp]] (1), [[module/iceberg/aws|iceberg/aws]] (1)
+- **Merged commits:** 2. Areas: [[module/iceberg/aws|iceberg/aws]] (1), [[module/iceberg/gcp|iceberg/gcp]] (1), [[module/iceberg/azure|iceberg/azure]] (1)
 - **Dev list:** 12 messages, 2 threads started
 - **Named in meeting notes:** [[group/community|community]] (1)
 

@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#17822
 links:
+- rel: discussed
+  to: initiative/constraints
+  confidence: extracted
+  source: devlist:cv1ks4gcvqpy3jmm8x00hxxyjz776d8r
 - rel: started_by
   to: person/huaxingao
   confidence: observed

@@ -17,6 +17,10 @@ refs:
 - gh:sungwy/iceberg-python#1
 - gh:sungwy/iceberg-rust#2
 links:
+- rel: discussed
+  to: initiative/conformance-testing
+  confidence: extracted
+  source: devlist:8wsvnhktw27h0tqnxljzmnsogwd52tjj
 - rel: started_by
   to: person/nssalian
   confidence: observed

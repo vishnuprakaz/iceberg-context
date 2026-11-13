@@ -16,6 +16,10 @@ refs:
 - doc:1s9_o_Y8js4kHVCYI2OeL0Yh3Ey0qfkuE7Mm-z-QoEfo
 - doc:1ZK5g8_bA1Y9SQ4UA5jAREX9iNX56xLWA5vAuKpQC4L8
 links:
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:81vqxtw6tlvszon1tzymjbjbmo0hjy0n
 - rel: started_by
   to: person/nastra
   confidence: observed

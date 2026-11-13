@@ -143,7 +143,7 @@ def build(data: Data) -> dict:
     score = Counter()
     for p in set(commits_by_person) | set(mails_by_person) | set(credited) | set(reviews_by_person):
         score[p] = len(commits_by_person[p]) * 2 + mails_by_person[p] + sum(credited[p].values()) * 2 + reviews_by_person[p]
-    selected = set(roster) | {p for p, s in score.items() if s >= 12 and p in data.aliases}
+    selected = set(roster) | {p for p, s in score.items() if s >= 5 and p in data.aliases}
     selected |= {p for (_, _, mail) in release_pages.values() for p in mail["people"] if is_person(p)}
     group_slugs = {g["slug"] for g in data.cfg["groups"]}
     for (repo, version, mail) in release_pages.values():

@@ -16,6 +16,14 @@ refs:
 - list:ko8cs3tgol97f0m20yozchpxlotzl1mj
 - list:w0xqrm0dpnsgvw0dyvy4r34y0dtzmn7f
 links:
+- rel: discussed
+  to: initiative/v4-default-expressions
+  confidence: extracted
+  source: devlist:th30oq0rcvn5gmn2qdx790k8vf4fz1ob
+- rel: discussed
+  to: initiative/expressions-spec
+  confidence: extracted
+  source: devlist:th30oq0rcvn5gmn2qdx790k8vf4fz1ob
 - rel: started_by
   to: person/danielcweeks
   confidence: observed

@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#17783
 links:
+- rel: discussed
+  to: initiative/v4-equality-deletes
+  confidence: extracted
+  source: devlist:2pgfvf8v5ob221q5t2xwzjo4xvw5ltz1
 - rel: started_by
   to: person/huaxingao
   confidence: observed

@@ -35,7 +35,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person vishnuprakaz` for live numbers.
 
-- **Merged commits:** 16. Areas: [[module/iceberg/flink|iceberg/flink]] (7), [[module/iceberg-python/utils|iceberg-python/utils]] (2), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/parquet|iceberg/parquet]] (2), [[module/iceberg-python/io|iceberg-python/io]] (1), [[module/iceberg-python/catalog|iceberg-python/catalog]] (1)
+- **Merged commits:** 16. Areas: [[module/iceberg/flink|iceberg/flink]] (7), [[module/iceberg-python/utils|iceberg-python/utils]] (2), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/parquet|iceberg/parquet]] (2), [[module/iceberg-python/catalog|iceberg-python/catalog]] (1), [[module/iceberg-python/io|iceberg-python/io]] (1)
 - **Dev list:** 1 messages, 0 threads started
 - **Named in meeting notes:** [[group/community|community]] (1)
 

@@ -11,6 +11,10 @@ sources:
 - devlist:y2n3yy1007t6rsyhtro7kww76047kozc
 refs: []
 links:
+- rel: discussed
+  to: initiative/geospatial
+  confidence: extracted
+  source: devlist:y2n3yy1007t6rsyhtro7kww76047kozc
 - rel: started_by
   to: person/Fokko
   confidence: observed

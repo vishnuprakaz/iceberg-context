@@ -15,6 +15,14 @@ refs:
 - gh:apache/iceberg-rust#2337
 - yt:G5m039mXgG4
 links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057
+- rel: discussed
+  to: initiative/v4-general
+  confidence: extracted
+  source: devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057
 - rel: started_by
   to: person/xanderbailey
   confidence: observed

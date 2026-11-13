@@ -11,6 +11,10 @@ sources:
 - devlist:7wmhcjwv8opxh4hgj284w5yl578rnbjz
 refs: []
 links:
+- rel: discussed
+  to: initiative/expressions-spec
+  confidence: extracted
+  source: devlist:7wmhcjwv8opxh4hgj284w5yl578rnbjz
 - rel: started_by
   to: person/Fokko
   confidence: observed

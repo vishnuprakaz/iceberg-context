@@ -19,7 +19,15 @@ refs:
 - gh:apache/iceberg#16961
 - list:96dhf3sj5pc4ql0l8yk8sxgtr78bchrd
 - list:wfd3s65dpyzto8g8poffcg1tcqpgk5k7
-links: []
+links:
+- rel: discussed
+  to: initiative/kafka-connect
+  confidence: extracted
+  source: devlist:gmkj55oc0k1k72gobsylgfc9ngk9lyxn
+- rel: discussed
+  to: initiative/v4-equality-deletes
+  confidence: extracted
+  source: devlist:gmkj55oc0k1k72gobsylgfc9ngk9lyxn
 updated: '2026-11-13'
 ---
 

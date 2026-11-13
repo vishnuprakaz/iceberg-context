@@ -11,7 +11,11 @@ sources:
 - devlist:o7tzt04by73l0hpjd58t2wgvl4ct9lrc
 refs:
 - doc:1re65fx3uqC7I_tJuS79IxLiB7HEN2Grt5qRIDjd3p-4
-links: []
+links:
+- rel: discussed
+  to: initiative/constraints
+  confidence: extracted
+  source: devlist:o7tzt04by73l0hpjd58t2wgvl4ct9lrc
 updated: '2026-11-13'
 ---
 

@@ -12,6 +12,14 @@ sources:
 refs:
 - gh:apache/iceberg-cpp#833
 links:
+- rel: discussed
+  to: initiative/ai-contributions
+  confidence: extracted
+  source: devlist:n2s6z7rt745cgftsb8j9yob0kc70cgny
+- rel: discussed
+  to: initiative/iceberg-cpp
+  confidence: extracted
+  source: devlist:n2s6z7rt745cgftsb8j9yob0kc70cgny
 - rel: started_by
   to: person/wgtmac
   confidence: observed

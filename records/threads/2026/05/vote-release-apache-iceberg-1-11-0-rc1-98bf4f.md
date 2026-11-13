@@ -19,14 +19,25 @@ refs:
 - gh:apache/iceberg#16307
 - gh:apache/iceberg#16308
 - gh:apache/iceberg#16311
-links: []
+links:
+- rel: discussed
+  to: initiative/java-releases
+  confidence: extracted
+  source: devlist:j83qwbv8vplqcx7b298toxmbrbckvprf
+- rel: discussed
+  to: initiative/spark-integration
+  confidence: extracted
+  source: devlist:j83qwbv8vplqcx7b298toxmbrbckvprf
+- rel: started_by
+  to: person/ajayky-os
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Vote on releasing Apache Iceberg 1.11.0 RC1
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Release Apache Iceberg 1.11.0 RC1](https://lists.apache.org/thread/j83qwbv8vplqcx7b298toxmbrbckvprf) · **Started:** 2026-05-11 by ajayky-os · **Messages:** 7 (last 2026-05-13) · **Outcome:** no-conclusion
+**Thread:** [[VOTE] Release Apache Iceberg 1.11.0 RC1](https://lists.apache.org/thread/j83qwbv8vplqcx7b298toxmbrbckvprf) · **Started:** 2026-05-11 by [[person/ajayky-os|Ajay Yadav]] · **Messages:** 7 (last 2026-05-13) · **Outcome:** no-conclusion
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -42,7 +53,7 @@ These messages do not state a result for the RC1 vote. The reported blockers wer
 
 ## Positions
 
-- **ajayky-os:** The SerializableFileIOWithSize regression, which drops file length and causes excess metadata calls on cloud storage, should be fixed in 1.11.0. ([message](https://lists.apache.org/thread/j83qwbv8vplqcx7b298toxmbrbckvprf))
+- **[[person/ajayky-os|Ajay Yadav]]:** The SerializableFileIOWithSize regression, which drops file length and causes excess metadata calls on cloud storage, should be fixed in 1.11.0. ([message](https://lists.apache.org/thread/j83qwbv8vplqcx7b298toxmbrbckvprf))
 - **[[person/kevinjqliu|Kevin Liu]]:** The reported blockers are resolved; as an optional step, PRs missing from Spark 3.4 should be backported because this is the last release supporting it. ([message](https://lists.apache.org/thread/lcss3p2jg5qmf15hdnwww3tv0b9dfj8c))
 - **[[person/aihuaxu|Aihua Xu]]:** The backports are not blocking and Spark 3.4 is deprecated, so the next RC should be cut now and the backports added only if another RC is needed. ([message](https://lists.apache.org/thread/6glvdyfnchbol0wrs13r0p5x27oorfdt))
 - **[[person/huaxingao|Huaxin Gao]]:** The fix for stale file_size_in_bytes of rewritten position delete files in rewriteTablePath is a correctness issue that should go into 1.11. ([message](https://lists.apache.org/thread/2y1f7tf4qwv50trn459w7nbvbzgy17wq))

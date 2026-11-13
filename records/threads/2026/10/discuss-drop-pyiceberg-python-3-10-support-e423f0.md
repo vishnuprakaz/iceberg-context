@@ -11,14 +11,21 @@ sources:
 - devlist:967dbjpjqt6kl9pnwv39vkvlvxv9rkcn
 refs:
 - gh:apache/iceberg-python#4170
-links: []
+links:
+- rel: discussed
+  to: initiative/pyiceberg
+  confidence: extracted
+  source: devlist:967dbjpjqt6kl9pnwv39vkvlvxv9rkcn
+- rel: started_by
+  to: person/oresttokovenko
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Dropping Python 3.10 support in PyIceberg
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Drop PyIceberg Python 3.10 support](https://lists.apache.org/thread/967dbjpjqt6kl9pnwv39vkvlvxv9rkcn) · **Started:** 2026-10-28 by oresttokovenko · **Messages:** 4 (last 2026-10-28) · **Outcome:** consensus
+**Thread:** [[DISCUSS] Drop PyIceberg Python 3.10 support](https://lists.apache.org/thread/967dbjpjqt6kl9pnwv39vkvlvxv9rkcn) · **Started:** 2026-10-28 by [[person/oresttokovenko|Orest Tokovenko]] · **Messages:** 4 (last 2026-10-28) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,7 +41,7 @@ Both repliers agreed with dropping Python 3.10, and a PR (iceberg-python #4170) 
 
 ## Positions
 
-- **oresttokovenko:** PyIceberg should drop Python 3.10, require Python 3.11 or later, raise dependency floors and remove the version gates that are no longer needed. ([message](https://lists.apache.org/thread/967dbjpjqt6kl9pnwv39vkvlvxv9rkcn))
+- **[[person/oresttokovenko|Orest Tokovenko]]:** PyIceberg should drop Python 3.10, require Python 3.11 or later, raise dependency floors and remove the version gates that are no longer needed. ([message](https://lists.apache.org/thread/967dbjpjqt6kl9pnwv39vkvlvxv9rkcn))
 - **[[person/Fokko|Fokko Driesprong]]:** End-of-life Python versions should not be supported, in line with how older versions were dropped before. ([message](https://lists.apache.org/thread/h97sp0ohxskpx27pvwk667772jl7gwot))
 
 References: [iceberg-python#4170](https://github.com/apache/iceberg-python/issues/4170)

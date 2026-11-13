@@ -11,6 +11,10 @@ sources:
 - devlist:8b145f8kw1mwy0ggn9jyfj6khbkb70l3
 refs: []
 links:
+- rel: discussed
+  to: initiative/iceberg-cpp
+  confidence: extracted
+  source: devlist:8b145f8kw1mwy0ggn9jyfj6khbkb70l3
 - rel: started_by
   to: person/zhjwpku
   confidence: observed

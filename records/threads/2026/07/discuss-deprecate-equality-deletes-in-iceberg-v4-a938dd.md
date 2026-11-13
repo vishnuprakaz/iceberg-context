@@ -18,6 +18,18 @@ refs:
 - gh:apache/iceberg#16889
 - gh:apache/iceberg#16948
 links:
+- rel: discussed
+  to: initiative/v4-equality-deletes
+  confidence: extracted
+  source: devlist:ks01jpv40qjlvz4yop5tlqv4x5oxbwy6
+- rel: discussed
+  to: initiative/secondary-indexes
+  confidence: extracted
+  source: devlist:ks01jpv40qjlvz4yop5tlqv4x5oxbwy6
+- rel: discussed
+  to: initiative/flink-integration
+  confidence: extracted
+  source: devlist:ks01jpv40qjlvz4yop5tlqv4x5oxbwy6
 - rel: started_by
   to: person/huaxingao
   confidence: observed

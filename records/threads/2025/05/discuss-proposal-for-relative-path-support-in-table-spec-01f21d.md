@@ -15,6 +15,10 @@ refs:
 - gh:apache/iceberg#16174
 - doc:1t0RxrK-nsCT83zXeD66kmGx_TMU2X8_xfN1A_k6dCV0
 links:
+- rel: discussed
+  to: initiative/v4-relative-paths
+  confidence: extracted
+  source: devlist:nsj0dtxop4h115j6yrcx2vmxpzwt1ow2
 - rel: started_by
   to: person/talatuyarer
   confidence: observed
@@ -41,7 +45,7 @@ General agreement on the approach was reported after a January 2026 meeting, and
 ## Positions
 
 - **[[person/talatuyarer|Talat UYARER]]:** Relative paths should be added to the table spec in V4 with a scoped-down proposal. ([message](https://lists.apache.org/thread/nsj0dtxop4h115j6yrcx2vmxpzwt1ow2))
-- **wypoon:** Inferring the table location from the metadata path does not support one copy of metadata with two or more copies of data. ([message](https://lists.apache.org/thread/g3vxkp2x2hl5r8cfjrsobz7f6y2lrytt))
+- **[[person/wypoon|Wing Yew Poon]]:** Inferring the table location from the metadata path does not support one copy of metadata with two or more copies of data. ([message](https://lists.apache.org/thread/g3vxkp2x2hl5r8cfjrsobz7f6y2lrytt))
 - **[[person/danielcweeks|Daniel C. Weeks]]:** Multiple copies or locations of the same data files under one table is a non-goal and is better handled by engine or FileIO implementations; all paths should be relative to the table location. ([message](https://lists.apache.org/thread/qwojqz44s6sh421r5549m5cps01yp6t3))
 - **Steve:** With relative paths a location update is no longer a metadata-only operation, so the spec should acknowledge the behavior change and its effect on snapshot expiration and orphan removal. ([message](https://lists.apache.org/thread/wt3ot7vjrc96m713l9rq8hglo4cvokb3))
 - **[[person/danielcweeks|Daniel C. Weeks]]:** How data is relocated when the base location changes is the responsibility of the catalog or implementation, and writers can still produce absolute paths to keep the v1-3 behavior. ([message](https://lists.apache.org/thread/58f3n3k5smbj64r62bpryv4g9d464sgb))

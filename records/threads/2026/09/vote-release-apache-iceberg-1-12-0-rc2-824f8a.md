@@ -11,6 +11,10 @@ sources:
 - devlist:26g46qtgy3nr435wdg5wh53q48k17zo3
 refs: []
 links:
+- rel: discussed
+  to: initiative/java-releases
+  confidence: extracted
+  source: devlist:26g46qtgy3nr435wdg5wh53q48k17zo3
 - rel: started_by
   to: person/Kurtiscwright
   confidence: observed

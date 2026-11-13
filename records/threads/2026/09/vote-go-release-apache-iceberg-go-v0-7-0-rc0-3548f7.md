@@ -13,6 +13,10 @@ sources:
 refs:
 - gh:apache/iceberg-go#2069
 links:
+- rel: discussed
+  to: initiative/iceberg-go
+  confidence: extracted
+  source: devlist:18mcytdbd953cdwz5wsvzx6sbqzsvofh
 - rel: started_by
   to: person/zeroshade
   confidence: observed

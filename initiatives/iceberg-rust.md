@@ -47,6 +47,7 @@ links:
 - rel: handled_by
   to: group/rust
   confidence: inferred
+  source: thread/t-cf8ecdd2fd7d10db
 ---
 
 # Iceberg Rust

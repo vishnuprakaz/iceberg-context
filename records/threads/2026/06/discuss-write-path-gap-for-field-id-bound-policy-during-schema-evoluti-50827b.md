@@ -12,6 +12,10 @@ sources:
 refs:
 - yt:orAXA5e9pmU
 links:
+- rel: discussed
+  to: initiative/read-restrictions
+  confidence: extracted
+  source: devlist:3nxxy6q2cjqwjwvnpnxnj4z5vl3ddlcb
 - rel: started_by
   to: person/sungwy
   confidence: observed

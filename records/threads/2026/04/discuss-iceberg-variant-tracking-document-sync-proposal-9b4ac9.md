@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg#10392
 - doc:1IuhLRxw1rcPD_f4jgHuGe3SwFgy7Y5wgEGvLzf6311s
 links:
+- rel: discussed
+  to: initiative/variant
+  confidence: extracted
+  source: devlist:f8l27lr55nlrdg4qwno29r796d4v2p8l
 - rel: started_by
   to: person/nssalian
   confidence: observed

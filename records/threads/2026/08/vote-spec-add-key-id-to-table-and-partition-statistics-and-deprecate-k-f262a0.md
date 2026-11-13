@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#17533
 links:
+- rel: discussed
+  to: initiative/v4-encryption
+  confidence: extracted
+  source: devlist:rx0tcnqkq0nzj1phwo64ng79pp51hzf9
 - rel: started_by
   to: person/gaborkaszab
   confidence: observed

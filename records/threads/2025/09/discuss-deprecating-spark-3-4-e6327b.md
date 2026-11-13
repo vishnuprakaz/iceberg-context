@@ -14,6 +14,14 @@ refs:
 - gh:apache/iceberg#14099
 - gh:apache/iceberg#14122
 links:
+- rel: discussed
+  to: initiative/spark-integration
+  confidence: extracted
+  source: devlist:n8qy5nsdw35vjog5lb4kp15989b800cv
+- rel: discussed
+  to: initiative/java-releases
+  confidence: extracted
+  source: devlist:n8qy5nsdw35vjog5lb4kp15989b800cv
 - rel: started_by
   to: person/kevinjqliu
   confidence: observed

@@ -13,7 +13,11 @@ refs:
 - doc:1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs
 - gh:apache/iceberg#15445
 - doc:1k4x8utgh41Sn1tr98eynDKCWq035SV_f75rtNHcerVw
-links: []
+links:
+- rel: discussed
+  to: initiative/v4-column-updates
+  confidence: extracted
+  source: devlist:2z1lxfo33t5rgbrzq5lvcyk9k5qd4509
 updated: '2026-11-13'
 ---
 
@@ -54,7 +58,7 @@ A sync reached consensus on the dense (complete) update file representation for 
 - **[[person/RussellSpitzer|Russell Spitzer]]:** The spec need not force an encoding for the position column, but engines should use delta encoding, which was 43 kb against 3910 kb for plain in his example. ([message](https://lists.apache.org/thread/j83wxcfnhxlhn6g6b6ddz6gtfz1odfbf))
 - **[[person/pvary|Peter Vary]]:** Update files that materialize every row keep vectorized stitching a simple concatenation of column vectors, so that representation is strongly preferred for vectorized reads. ([message](https://lists.apache.org/thread/6bs5o0xb0hbkxr63mjn19cm5dm671oyd))
 - **[[person/wgtmac|Gang Wu]]:** Dense update files help reads but complicate the SQL update plan, which must read before-update values or carry per-file metadata such as row counts. ([message](https://lists.apache.org/thread/jq1lo82tnocczbhvkvv8ks93f7yy7omm))
-- **mkroll-db:** An internal dense, row-aligned proof of concept was slower than copy-on-write below about 16MB target file size and up to about 5x faster at 1GB, so the spec may need a writer fallback or row-range packing, and an explicit ordering rule with deletion vectors. ([message](https://lists.apache.org/thread/f81dq6bj8gg6woz666for0ry80vwnb78))
+- **[[person/mkroll-db|Marco Kroll]]:** An internal dense, row-aligned proof of concept was slower than copy-on-write below about 16MB target file size and up to about 5x faster at 1GB, so the spec may need a writer fallback or row-range packing, and an explicit ordering rule with deletion vectors. ([message](https://lists.apache.org/thread/f81dq6bj8gg6woz666for0ry80vwnb78))
 - **[[person/anuragmantri|Anurag Mantripragada]]:** The file-size crossover should not be a hard constraint on writers in the spec, and under the V4 single-file-commit design deletion vectors always win over column updates at read time. ([message](https://lists.apache.org/thread/olf541tyyqz5y8boswqgshbhz3782yj8))
 
 References: [doc](https://docs.google.com/document/d/1Bd7JVzgajA8-DozzeEE24mID_GLuz6iwj0g4TlcVJcs), [iceberg#15445](https://github.com/apache/iceberg/issues/15445), [doc](https://docs.google.com/document/d/1k4x8utgh41Sn1tr98eynDKCWq035SV_f75rtNHcerVw)

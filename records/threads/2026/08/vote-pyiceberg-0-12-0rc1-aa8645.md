@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg-python#3758
 links:
+- rel: discussed
+  to: initiative/pyiceberg
+  confidence: extracted
+  source: devlist:5qhn33k5kr0t9g3vvqqxc893bs11jxlc
 - rel: started_by
   to: person/rambleraptor
   confidence: observed

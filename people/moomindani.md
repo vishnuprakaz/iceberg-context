@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person moomindani` for live numbers.
 
-- **Merged commits:** 6. Areas: [[module/iceberg/core|iceberg/core]] (3), [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/aws|iceberg/aws]] (1)
+- **Merged commits:** 6. Areas: [[module/iceberg/core|iceberg/core]] (3), [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/aws|iceberg/aws]] (1)
 - **Dev list:** 7 messages, 3 threads started (3 discuss)
 
 ## Recent threads started

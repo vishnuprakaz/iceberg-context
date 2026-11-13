@@ -13,6 +13,10 @@ refs:
 - doc:1Qr82hccxJhWxKRT7B-3ylhOLSaJTYfc7hU51-mhzK6Y
 - list:8wsvnhktw27h0tqnxljzmnsogwd52tjj
 links:
+- rel: discussed
+  to: initiative/conformance-testing
+  confidence: extracted
+  source: devlist:5jm8jpp327w9yn4zznlrlv5165mz4vt3
 - rel: started_by
   to: person/nssalian
   confidence: observed

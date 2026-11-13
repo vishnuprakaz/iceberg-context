@@ -14,6 +14,10 @@ refs:
 - gh:apache/iceberg#16284
 - gh:apache/iceberg#16303
 links:
+- rel: discussed
+  to: initiative/java-releases
+  confidence: extracted
+  source: devlist:j1v2yc69sbh7p85oftcy9tdqph5sxqt7
 - rel: started_by
   to: person/aihuaxu
   confidence: observed

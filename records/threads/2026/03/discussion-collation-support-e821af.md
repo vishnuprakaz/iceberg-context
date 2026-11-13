@@ -13,7 +13,11 @@ refs:
 - doc:1m8b7u97uteHYjXk-4DNglJSpQO8OcZOCzW2tApCNTW4
 - gh:apache/iceberg#16972
 - gh:apache/iceberg-go#1318
-links: []
+links:
+- rel: discussed
+  to: initiative/collations
+  confidence: extracted
+  source: devlist:zdvc0gmqjgws8whwxv0ztn7h1jqclzyk
 updated: '2026-11-13'
 ---
 

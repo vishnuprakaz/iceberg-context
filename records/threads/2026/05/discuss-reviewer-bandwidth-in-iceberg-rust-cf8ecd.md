@@ -10,14 +10,25 @@ messages: 6
 sources:
 - devlist:hb12b05y2rxv98641dwdvdjh58po0h8r
 refs: []
-links: []
+links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:hb12b05y2rxv98641dwdvdjh58po0h8r
+- rel: discussed
+  to: initiative/community-process
+  confidence: extracted
+  source: devlist:hb12b05y2rxv98641dwdvdjh58po0h8r
+- rel: started_by
+  to: person/jordepic
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Reviewer bandwidth in iceberg-rust
 
 <!-- kb:generated:start -->
-**Thread:** [[Discuss] Reviewer Bandwidth In Iceberg-Rust](https://lists.apache.org/thread/hb12b05y2rxv98641dwdvdjh58po0h8r) · **Started:** 2026-05-28 by jordepic · **Messages:** 6 (last 2026-05-29) · **Outcome:** no-conclusion
+**Thread:** [[Discuss] Reviewer Bandwidth In Iceberg-Rust](https://lists.apache.org/thread/hb12b05y2rxv98641dwdvdjh58po0h8r) · **Started:** 2026-05-28 by [[person/jordepic|Jordan Epstein]] · **Messages:** 6 (last 2026-05-29) · **Outcome:** no-conclusion
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -33,7 +44,7 @@ Participants agreed reviewer bandwidth is a bottleneck across Iceberg projects, 
 
 ## Positions
 
-- **jordepic:** Increase iceberg-rust review capacity by giving trusted representatives of downstream Rust projects or major companies a mandate to review changes that bring the project to parity with Java. ([message](https://lists.apache.org/thread/hb12b05y2rxv98641dwdvdjh58po0h8r))
+- **[[person/jordepic|Jordan Epstein]]:** Increase iceberg-rust review capacity by giving trusted representatives of downstream Rust projects or major companies a mandate to review changes that bring the project to parity with Java. ([message](https://lists.apache.org/thread/hb12b05y2rxv98641dwdvdjh58po0h8r))
 - **[[person/CTTY|Shawn Chang]]:** Agrees there is a reviewer bottleneck and welcomes outside reviews, but responsibility for code quality falls on the person who merges and the bottleneck may not be fixable immediately. ([message](https://lists.apache.org/thread/t0mjck5d5szkh6j716g7lct189fhxm29))
 - **Jared Yu:** PyIceberg is similarly bottlenecked; the community should nominate reliable, frequent unofficial reviewers to become committers. ([message](https://lists.apache.org/thread/00njkwrm7fcw55n3mnrjlg27kn6syo0y))
 - **[[person/anuragmantri|Anurag Mantripragada]]:** The Spark connector has the same bottleneck, and adding committers should not circumvent the qualities in the committer guidelines. ([message](https://lists.apache.org/thread/1h29ocbjbcwbj4s8fnyrl0h070q7h8zh))

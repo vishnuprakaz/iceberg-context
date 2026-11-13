@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#16025
 links:
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:qch7jjnwb8pm49lt3h7lqfxj82hlg8ps
 - rel: started_by
   to: person/amogh-jahagirdar
   confidence: observed

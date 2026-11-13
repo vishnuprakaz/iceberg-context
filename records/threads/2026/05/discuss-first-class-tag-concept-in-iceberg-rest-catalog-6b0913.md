@@ -14,7 +14,15 @@ refs:
 - gh:apache/iceberg#15521
 - gh:apache/iceberg#15750
 - gh:apache/iceberg#13879
-links: []
+links:
+- rel: discussed
+  to: initiative/catalog-labels
+  confidence: extracted
+  source: devlist:r5r3vpmrfy9wmmb4sdybwcjz1c4wld5b
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:r5r3vpmrfy9wmmb4sdybwcjz1c4wld5b
 updated: '2026-11-13'
 ---
 

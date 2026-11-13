@@ -15,6 +15,14 @@ refs:
 - yt:b9p6mI-k-0I
 - yt:-KEesN1udyY
 links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:xlqx6k7g625p38bxxy141wt02d00w2h4
+- rel: discussed
+  to: initiative/read-restrictions
+  confidence: extracted
+  source: devlist:xlqx6k7g625p38bxxy141wt02d00w2h4
 - rel: started_by
   to: person/singhpk234
   confidence: observed

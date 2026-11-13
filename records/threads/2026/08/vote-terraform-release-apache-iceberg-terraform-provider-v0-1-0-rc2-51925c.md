@@ -11,6 +11,10 @@ sources:
 - devlist:xwqz0j6g2fcvq4hf5xs63ll4137ch0n6
 refs: []
 links:
+- rel: discussed
+  to: initiative/iceberg-go
+  confidence: extracted
+  source: devlist:xwqz0j6g2fcvq4hf5xs63ll4137ch0n6
 - rel: started_by
   to: person/zeroshade
   confidence: observed

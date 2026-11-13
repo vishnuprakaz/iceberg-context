@@ -12,7 +12,19 @@ sources:
 refs:
 - gh:apache/iceberg#17543
 - gh:apache/iceberg#17642
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl
+- rel: discussed
+  to: initiative/v4-general
+  confidence: extracted
+  source: devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl
+- rel: discussed
+  to: initiative/v4-relative-paths
+  confidence: extracted
+  source: devlist:6y446mbtrho2r54cbd2x9gzyb13jjlbl
 updated: '2026-11-13'
 ---
 

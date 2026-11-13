@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg#17284
 - gh:apache/iceberg#16910
 links:
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:qhn00762nrxl1zmb817wqqq5tzlqolbq
 - rel: started_by
   to: person/varun-lakhyani
   confidence: observed

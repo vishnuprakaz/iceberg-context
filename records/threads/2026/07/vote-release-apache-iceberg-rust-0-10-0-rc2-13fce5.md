@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg-rust#2760
 - gh:apache/iceberg-rust#2527
 links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:m35vm2j7z9pdv2o3jtyvd5vls0bko0xj
 - rel: started_by
   to: person/dannycjones
   confidence: observed

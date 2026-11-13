@@ -11,14 +11,21 @@ sources:
 - devlist:6zspb6cpb6j2po5lm57mq1sgcp2hppkf
 refs:
 - gh:apache/iceberg#18480
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-auth
+  confidence: extracted
+  source: devlist:6zspb6cpb6j2po5lm57mq1sgcp2hppkf
+- rel: started_by
+  to: person/youngrae81
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # REST spec: expected server behavior when X-Iceberg-Access-Delegation cannot be satisfied
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] REST spec: expected server behavior when X-Iceberg-Access-Delegation cannot be satisfied](https://lists.apache.org/thread/6zspb6cpb6j2po5lm57mq1sgcp2hppkf) · **Started:** 2026-09-23 by youngrae81 · **Messages:** 20 (last 2026-10-21) · **Outcome:** consensus
+**Thread:** [[DISCUSS] REST spec: expected server behavior when X-Iceberg-Access-Delegation cannot be satisfied](https://lists.apache.org/thread/6zspb6cpb6j2po5lm57mq1sgcp2hppkf) · **Started:** 2026-09-23 by [[person/youngrae81|youngrae kim]] · **Messages:** 20 (last 2026-10-21) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -34,7 +41,7 @@ Agreement to add a 'none' value to the X-Iceberg-Access-Delegation enum and leav
 
 ## Positions
 
-- **youngrae81:** The spec does not settle whether a server may reject a request when no requested delegation mechanism is available, and a clarification is needed. ([message](https://lists.apache.org/thread/6zspb6cpb6j2po5lm57mq1sgcp2hppkf))
+- **[[person/youngrae81|youngrae kim]]:** The spec does not settle whether a server may reject a request when no requested delegation mechanism is available, and a clarification is needed. ([message](https://lists.apache.org/thread/6zspb6cpb6j2po5lm57mq1sgcp2hppkf))
 - **Alex Dutra:** The spec should say servers SHOULD return HTTP 400 when none of the requested mechanisms is available, because a 200 without access only moves the failure to first data access. ([message](https://lists.apache.org/thread/vbbhm3wrbdzjn7qy3kzsz7y84wbgrd0h))
 - **Alex Dutra:** The header cannot express that a client can work with its own storage credentials, so a new enum value should be added for that. ([message](https://lists.apache.org/thread/l02zjbx3j1pddqhj3wg8gkj10o90l2cp))
 - **[[person/danielcweeks|Daniel C. Weeks]]:** The catalog should be the sole authority on access, the loose wording is intentional, and catalogs should not be required to fail when they cannot provide a requested mechanism. ([message](https://lists.apache.org/thread/9zthft8ozrjxn2s88k47pn7yydgdc4jo))

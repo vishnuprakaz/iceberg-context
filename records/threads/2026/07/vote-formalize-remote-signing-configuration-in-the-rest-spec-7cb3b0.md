@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#16822
 links:
+- rel: discussed
+  to: initiative/rest-auth
+  confidence: extracted
+  source: devlist:n4hyqr3k2gnzbxvs3l1o4cz3ggdfwkx2
 - rel: started_by
   to: person/adutra
   confidence: observed

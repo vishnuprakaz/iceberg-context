@@ -24,6 +24,10 @@ refs:
 - doc:1TBiHZxZHTRHoc58V7f4HJWZFAJwQlizFT7usDNhtT8s
 - list:xddrotmxs7tyoc4jc5npwqs40vs120yr
 links:
+- rel: discussed
+  to: initiative/read-restrictions
+  confidence: extracted
+  source: devlist:0zloqhp8wkgyn04yg69j71cwcg5n7g74
 - rel: started_by
   to: person/singhpk234
   confidence: observed

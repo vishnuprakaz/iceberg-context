@@ -17,6 +17,14 @@ refs:
 - gh:apache/iceberg#18191
 - gh:apache/iceberg#15994
 links:
+- rel: discussed
+  to: initiative/java-releases
+  confidence: extracted
+  source: devlist:7qtxrysl1w5sjs7o74y31snt0jrkf5qb
+- rel: discussed
+  to: initiative/geospatial
+  confidence: extracted
+  source: devlist:7qtxrysl1w5sjs7o74y31snt0jrkf5qb
 - rel: started_by
   to: person/nssalian
   confidence: observed

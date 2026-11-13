@@ -14,6 +14,10 @@ refs:
 - doc:1aj-6JlfBiMYEEVtNuh5WLMOrRQiMCcyYUGbouPM4hXI
 - yt:lCTV-Rhiwyc
 links:
+- rel: discussed
+  to: initiative/catalog-labels
+  confidence: extracted
+  source: devlist:0mpgn3p2xhlf5165m40oxbptmcf7f87m
 - rel: started_by
   to: person/laskoviymishka
   confidence: observed

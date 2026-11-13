@@ -16,6 +16,14 @@ refs:
 - list:4fxylxkfj0ngp0ksfysgkhn8s6o9x4n5
 - list:s283f6obyqf6c14bn37sw7vtf9y1c9mj
 links:
+- rel: discussed
+  to: initiative/rest-auth
+  confidence: extracted
+  source: devlist:8pnj238xly2dmzb55tfb9bjny7sp34nd
+- rel: discussed
+  to: initiative/file-type
+  confidence: extracted
+  source: devlist:8pnj238xly2dmzb55tfb9bjny7sp34nd
 - rel: started_by
   to: person/sungwy
   confidence: observed

@@ -13,7 +13,11 @@ sources:
 refs:
 - gh:apache/iceberg#17727
 - list:d6hkx66o8qc1lolh11l1lmswxlq0bpj9
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:79b5p9pfjso9d8tbs1w10619qz61rt85
 updated: '2026-11-13'
 ---
 

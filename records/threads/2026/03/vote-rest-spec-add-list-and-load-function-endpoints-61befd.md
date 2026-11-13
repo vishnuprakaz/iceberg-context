@@ -13,6 +13,14 @@ refs:
 - gh:apache/iceberg#15180
 - gh:apache/iceberg#16144
 links:
+- rel: discussed
+  to: initiative/udf
+  confidence: extracted
+  source: devlist:qd7jb3fdx65mcjvcjomrxg7rgxf3yn0m
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:qd7jb3fdx65mcjvcjomrxg7rgxf3yn0m
 - rel: started_by
   to: person/huaxingao
   confidence: observed

@@ -17,6 +17,10 @@ refs:
 - gh:apache/iceberg-go#2101
 - doc:1aj-6JlfBiMYEEVtNuh5WLMOrRQiMCcyYUGbouPM4hXI
 links:
+- rel: discussed
+  to: initiative/catalog-labels
+  confidence: extracted
+  source: devlist:hrcyh8nqf1svrwnm279n466c75r3wwxn
 - rel: started_by
   to: person/laskoviymishka
   confidence: observed

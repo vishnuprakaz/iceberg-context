@@ -13,7 +13,11 @@ refs:
 - gh:apache/iceberg#15280
 - doc:1R1K6X7qYqvIFkPG3m1neV5Mvy8rwWJvhSFr8DgJgQ-E
 - list:q5n355d89nxbhywtlv3qhq7dchbyb67d
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-auth
+  confidence: extracted
+  source: devlist:35lj7vhtqtwl5nv9rzpln4mw4fbh7gdp
 updated: '2026-11-13'
 ---
 

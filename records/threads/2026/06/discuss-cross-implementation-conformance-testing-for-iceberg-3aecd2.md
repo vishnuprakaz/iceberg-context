@@ -15,6 +15,10 @@ refs:
 - gh:apache/iceberg#16414
 - gh:apache/iceberg-go#880
 links:
+- rel: discussed
+  to: initiative/conformance-testing
+  confidence: extracted
+  source: devlist:h21x5r8bfrv3zg700y9py84plrfmtmsr
 - rel: started_by
   to: person/sungwy
   confidence: observed

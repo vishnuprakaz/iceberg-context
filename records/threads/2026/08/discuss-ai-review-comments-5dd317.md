@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg#17670
 - gh:apache/iceberg#17671
 links:
+- rel: discussed
+  to: initiative/ai-contributions
+  confidence: extracted
+  source: devlist:y93010hlq2m59jjw9lsjbrs38xw8nkdb
 - rel: started_by
   to: person/manuzhang
   confidence: observed

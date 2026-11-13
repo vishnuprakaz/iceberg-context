@@ -14,6 +14,14 @@ refs:
 - gh:apache/iceberg#17138
 - gh:apache/iceberg#16652
 links:
+- rel: discussed
+  to: initiative/expressions-spec
+  confidence: extracted
+  source: devlist:njo5bzgf4m126ly74ydz1pfznhz70h38
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:njo5bzgf4m126ly74ydz1pfznhz70h38
 - rel: started_by
   to: person/singhpk234
   confidence: observed

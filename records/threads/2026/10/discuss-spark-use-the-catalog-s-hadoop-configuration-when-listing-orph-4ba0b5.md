@@ -16,7 +16,11 @@ refs:
 - gh:apache/iceberg#11906
 - gh:apache/iceberg#16932
 - gh:apache/iceberg#17387
-links: []
+links:
+- rel: discussed
+  to: initiative/spark-integration
+  confidence: extracted
+  source: devlist:5f40shqmwc2l647oskjg1vv8pq7q8od7
 updated: '2026-11-13'
 ---
 

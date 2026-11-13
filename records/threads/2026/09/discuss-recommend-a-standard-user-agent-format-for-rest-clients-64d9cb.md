@@ -12,7 +12,11 @@ sources:
 refs:
 - gh:apache/iceberg#17727
 - gh:apache/polaris#4236
-links: []
+links:
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:d6hkx66o8qc1lolh11l1lmswxlq0bpj9
 updated: '2026-11-13'
 ---
 

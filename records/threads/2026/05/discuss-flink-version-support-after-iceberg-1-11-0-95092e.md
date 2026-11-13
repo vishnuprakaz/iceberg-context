@@ -14,6 +14,10 @@ refs:
 - gh:apache/iceberg#15476
 - gh:apache/iceberg#13714
 links:
+- rel: discussed
+  to: initiative/flink-integration
+  confidence: extracted
+  source: devlist:kd183vz2v2y69v4kwbz5wbjfxvx3gf1f
 - rel: started_by
   to: person/stevenzwu
   confidence: observed

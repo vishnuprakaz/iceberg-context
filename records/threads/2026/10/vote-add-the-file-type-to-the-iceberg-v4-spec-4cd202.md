@@ -13,6 +13,10 @@ sources:
 refs:
 - gh:apache/iceberg#17918
 links:
+- rel: discussed
+  to: initiative/file-type
+  confidence: extracted
+  source: devlist:7ctclwomk8yqcclzj82z0htlqk2xjf49
 - rel: started_by
   to: person/talatuyarer
   confidence: observed

@@ -15,6 +15,10 @@ refs:
 - gh:apache/iceberg-go#915
 - gh:apache/iceberg-go#1176
 links:
+- rel: discussed
+  to: initiative/iceberg-go
+  confidence: extracted
+  source: devlist:o3oycdqw4sm1sqt54hfrj8c2hwxc0yww
 - rel: started_by
   to: person/Fokko
   confidence: observed

@@ -14,7 +14,11 @@ refs:
 - doc:1W25ztRqm2xXBxOzGtUHK_mv-FLviQeIcKnUcmvCKOuo
 - doc:1BdA4G-38GoVcpX6UY4UI-QA1MvrDnH6uSKeCJBadILQ
 - list:kz09b2rj7c00j6z2vlqg8v5myh94bgl5
-links: []
+links:
+- rel: discussed
+  to: initiative/file-type
+  confidence: extracted
+  source: devlist:33h4ppbrkmm83no3x6mfxqkv4zdw6ynv
 updated: '2026-11-13'
 ---
 

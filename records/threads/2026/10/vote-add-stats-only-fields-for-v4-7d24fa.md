@@ -13,6 +13,10 @@ refs:
 - gh:apache/iceberg#18405
 - list:t4nm0blbo33y5fnkcok6lrmdc4k4toxr
 links:
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:f7nwynr69g18kj61nt5h1f45cn8g768t
 - rel: started_by
   to: person/rdblue
   confidence: observed

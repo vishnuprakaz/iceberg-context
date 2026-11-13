@@ -12,6 +12,10 @@ sources:
 - devlist:6b63cbcsf0l69z9hs6v9nc1gp4y96tlp
 refs: []
 links:
+- rel: discussed
+  to: initiative/file-type
+  confidence: extracted
+  source: devlist:ldkpj659fjrf6nrc8vbg0b3fknxwdg38
 - rel: started_by
   to: person/sungwy
   confidence: observed

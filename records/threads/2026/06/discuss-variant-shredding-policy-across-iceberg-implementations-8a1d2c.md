@@ -13,6 +13,10 @@ refs:
 - doc:1OaB45mg9JJ_JRg-ipuvyh4AtOmaGmdWMsy_mJKiu5xs
 - doc:1IuhLRxw1rcPD_f4jgHuGe3SwFgy7Y5wgEGvLzf6311s
 links:
+- rel: discussed
+  to: initiative/variant
+  confidence: extracted
+  source: devlist:ztrygfd46607pns9t2d4hs0x95595cb2
 - rel: started_by
   to: person/nssalian
   confidence: observed

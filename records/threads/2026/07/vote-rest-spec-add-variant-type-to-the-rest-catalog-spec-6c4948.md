@@ -14,6 +14,14 @@ refs:
 - gh:apache/iceberg#17256
 - list:ycvrcb60m5y3hmjw2rfhkmxlcwkqnnnj
 links:
+- rel: discussed
+  to: initiative/variant
+  confidence: extracted
+  source: devlist:gkj526shb0y96hdmms73sn3tvsw8mgw9
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:gkj526shb0y96hdmms73sn3tvsw8mgw9
 - rel: started_by
   to: person/nssalian
   confidence: observed

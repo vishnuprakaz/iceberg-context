@@ -11,6 +11,10 @@ sources:
 - devlist:tnfzjdyjlgvqhzvmwvn80qx7n107mm4m
 refs: []
 links:
+- rel: discussed
+  to: initiative/expressions-spec
+  confidence: extracted
+  source: devlist:tnfzjdyjlgvqhzvmwvn80qx7n107mm4m
 - rel: started_by
   to: person/sungwy
   confidence: observed

@@ -13,6 +13,14 @@ refs:
 - gh:apache/iceberg#13879
 - list:wfgqlsnpyvt1t42fg6o4q48w8nc14oof
 links:
+- rel: discussed
+  to: initiative/read-restrictions
+  confidence: extracted
+  source: devlist:qtjkm2xhby3x8hp0yvfj22bsvhyz6ro9
+- rel: discussed
+  to: initiative/rest-spec
+  confidence: extracted
+  source: devlist:qtjkm2xhby3x8hp0yvfj22bsvhyz6ro9
 - rel: started_by
   to: person/Kurtiscwright
   confidence: observed

@@ -10,7 +10,11 @@ messages: 12
 sources:
 - devlist:lqo71bs2hvzj38f4ljrkz77ncq4boltl
 refs: []
-links: []
+links:
+- rel: discussed
+  to: initiative/v4-column-updates
+  confidence: extracted
+  source: devlist:lqo71bs2hvzj38f4ljrkz77ncq4boltl
 updated: '2026-11-13'
 ---
 

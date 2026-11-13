@@ -13,6 +13,14 @@ refs:
 - gh:apache/iceberg#16025
 - yt:dDZKzz3PKIk
 links:
+- rel: discussed
+  to: initiative/v4-metadata-tree
+  confidence: extracted
+  source: devlist:fym02576n5sqy298fjxl0xmsv9z5rb7y
+- rel: discussed
+  to: initiative/file-format-api
+  confidence: extracted
+  source: devlist:fym02576n5sqy298fjxl0xmsv9z5rb7y
 - rel: started_by
   to: person/stevenzwu
   confidence: observed

@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#16727
 links:
+- rel: discussed
+  to: initiative/udf
+  confidence: extracted
+  source: devlist:75xs4trcgcpog8b2zoxpknf8bq6vfk4c
 - rel: started_by
   to: person/szehon-ho
   confidence: observed

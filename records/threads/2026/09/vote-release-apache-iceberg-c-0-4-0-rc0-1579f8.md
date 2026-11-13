@@ -13,6 +13,10 @@ sources:
 refs:
 - gh:apache/iceberg-cpp#965
 links:
+- rel: discussed
+  to: initiative/iceberg-cpp
+  confidence: extracted
+  source: devlist:qqrg1l5qntf2m8h11gvopyvojrffgbw3
 - rel: started_by
   to: person/manuzhang
   confidence: observed

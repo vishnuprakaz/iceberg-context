@@ -14,6 +14,10 @@ refs:
 - gh:apache/iceberg#14984
 - doc:1gBoZ4KH5zQUWpgK3M7zAN7p6Glz4S_e9bO3PvQA9sQs
 links:
+- rel: discussed
+  to: initiative/spark-integration
+  confidence: extracted
+  source: devlist:6kmh92wl6qkw08dpgv04bl51v590phbl
 - rel: started_by
   to: person/anuragmantri
   confidence: observed

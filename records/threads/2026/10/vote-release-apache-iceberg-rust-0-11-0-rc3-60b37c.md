@@ -13,6 +13,10 @@ refs:
 - list:bvnhbx81620ho11vo1nyps3pnp9x0bth
 - list:rfc6bc7lq1xllv2hd4sy80qy39d1vlcc
 links:
+- rel: discussed
+  to: initiative/iceberg-rust
+  confidence: extracted
+  source: devlist:x1mlyjg7xlmkc9hqb1w8x8r97ovb1smq
 - rel: started_by
   to: person/dannycjones
   confidence: observed

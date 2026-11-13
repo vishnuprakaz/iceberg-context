@@ -11,6 +11,18 @@ sources:
 - devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b
 refs: []
 links:
+- rel: discussed
+  to: initiative/file-type
+  confidence: extracted
+  source: devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b
+- rel: discussed
+  to: initiative/vector-type
+  confidence: extracted
+  source: devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b
+- rel: discussed
+  to: initiative/udf
+  confidence: extracted
+  source: devlist:zv614sbcz0doshl4xpddpcj3oolfgo3b
 - rel: started_by
   to: person/rambleraptor
   confidence: observed

@@ -14,6 +14,10 @@ refs:
 - gh:apache/iceberg#18585
 - doc:13DbwnwKQXjvY3vRcFJo-qVAQWk-GB4zLzzYmFdPntZg
 links:
+- rel: discussed
+  to: initiative/v4-content-stats
+  confidence: extracted
+  source: devlist:txorrcfb5ft95q8kq2gypdcj1gd7zzxl
 - rel: started_by
   to: person/anoopj
   confidence: observed

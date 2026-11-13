@@ -12,6 +12,10 @@ sources:
 refs:
 - gh:apache/iceberg#15630
 links:
+- rel: discussed
+  to: initiative/v4-relative-paths
+  confidence: extracted
+  source: devlist:dqlgo3rmz1tnshx0bgk2cv4qm1h06k2n
 - rel: started_by
   to: person/danielcweeks
   confidence: observed
