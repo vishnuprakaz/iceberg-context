@@ -1,0 +1,38 @@
+# Controlled list of initiative slugs. Extractors tag meetings and threads with these; the integrator keeps one page
+# per slug in initiatives/. Add a slug here before using a new one.
+initiatives:
+  - {slug: v4-metadata-tree, title: "V4 adaptive metadata tree and single-file commits", keywords: [AMT, adaptive metadata tree, single file commit, root manifest, manifest list]}
+  - {slug: v4-column-updates, title: "V4 efficient column updates", keywords: [column updates, column files, partial updates]}
+  - {slug: v4-content-stats, title: "V4 statistics redesign", keywords: [content stats, tight_stats, stats-only fields, stats tightness]}
+  - {slug: v4-equality-deletes, title: "Deprecating equality deletes in V4", keywords: [equality deletes]}
+  - {slug: v4-row-lineage-timestamps, title: "V4 row timestamps and monotonic snapshot timestamps", keywords: [_last_updated_time, row timestamp, monotonic snapshot timestamp, row lineage]}
+  - {slug: v4-default-expressions, title: "V4 default value expressions", keywords: [default value expressions, write-default]}
+  - {slug: v4-relative-paths, title: "V4 relative paths", keywords: [relative paths, table location]}
+  - {slug: v4-encryption, title: "Table encryption (V3 and V4)", keywords: [encryption, KMS, key metadata, root manifest encryption]}
+  - {slug: v4-general, title: "V4 spec: planning and other changes", keywords: [v4, format version 4]}
+  - {slug: file-type, title: "File type for unstructured data", keywords: [file type, fileref, unstructured]}
+  - {slug: vector-type, title: "Vector type", keywords: [vector type, embeddings, float16]}
+  - {slug: secondary-indexes, title: "Secondary indexes", keywords: [index support, secondary index, bloom filter index]}
+  - {slug: materialized-views, title: "Materialized views", keywords: [materialized view, MV, storage table, freshness]}
+  - {slug: read-restrictions, title: "Read restrictions (row filters and column masks) in the REST catalog", keywords: [read restrictions, column mask, row filter, fine grained access]}
+  - {slug: constraints, title: "Table constraints", keywords: [check constraint, primary key, unique]}
+  - {slug: collations, title: "Collation support", keywords: [collation]}
+  - {slug: variant, title: "Variant type and shredding", keywords: [variant, shredding, shredded]}
+  - {slug: geospatial, title: "Geospatial types", keywords: [geometry, geography, geo]}
+  - {slug: udf, title: "SQL UDFs in catalogs", keywords: [udf, functions]}
+  - {slug: expressions-spec, title: "Expressions specification", keywords: [expression spec, bound expression, expressions-spec]}
+  - {slug: rest-auth, title: "REST catalog authentication and credentials", keywords: [oauth2, AuthManager, bearer, credential vending, signing, pre-signed, access delegation]}
+  - {slug: rest-spec, title: "REST catalog spec: other changes", keywords: [REST spec, user-agent, metrics endpoint, scan planning, capabilities]}
+  - {slug: catalog-labels, title: "Catalog labels", keywords: [labels]}
+  - {slug: file-format-api, title: "File Format API and new file formats", keywords: [file format api, vortex, lance, orc deprecation, avro data files]}
+  - {slug: spark-integration, title: "Spark integration and version support", keywords: [spark 4.2, spark 4.3, DSv2, shared spark source]}
+  - {slug: flink-integration, title: "Flink integration and table maintenance", keywords: [flink, dynamic sink, table maintenance]}
+  - {slug: kafka-connect, title: "Kafka Connect sink", keywords: [kafka connect]}
+  - {slug: java-releases, title: "Java releases", keywords: [1.11, 1.12, 1.13, release candidate]}
+  - {slug: pyiceberg, title: "PyIceberg roadmap and releases", keywords: [pyiceberg, 0.12, 0.13, 1.0]}
+  - {slug: iceberg-rust, title: "Iceberg Rust", keywords: [iceberg-rust, datafusion]}
+  - {slug: iceberg-go, title: "Iceberg Go", keywords: [iceberg-go, terraform]}
+  - {slug: iceberg-cpp, title: "Iceberg C++", keywords: [iceberg-cpp]}
+  - {slug: conformance-testing, title: "Shared conformance testing (iceberg-verification)", keywords: [conformance, verification, fixtures]}
+  - {slug: ai-contributions, title: "Policy on AI-assisted contributions and reviews", keywords: [AI, LLM, copilot, AGENTS.md]}
+  - {slug: community-process, title: "Community process, health and events", keywords: [community health, summit, meetup, committer, PMC, squash, stale]}

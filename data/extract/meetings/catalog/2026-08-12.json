@@ -1,0 +1,51 @@
+{
+  "id": "meeting/catalog/2026-08-12",
+  "_input_hash": "sha256:b21ec1e559009f314984",
+  "sources": [
+    "meet:catalog:2026-08-12"
+  ],
+  "summary": "The Catalog Community Sync notes for 12 August 2026 list two items and record no discussion. Andrei asked whether there were any final concerns on labels in the REST catalog read path before a vote, and again called for review of the spec change and of the reference implementation, which is now a stack of three pull requests: the load table/view read path, exposing labels through SupportsLabels, and exposing them in Spark 4.1 through a metadata table and DESCRIBE. Sung listed a spec pull request with field-id guidance for AddSchemaUpdate versus CreateTableRequest.",
+  "topics": [
+    {
+      "title": "Labels in the REST catalog read path: final concerns before vote",
+      "summary": "Andrei asked for any final concerns before starting a vote and for reviews. The reference implementation is a stack: #17337 adds labels to the load table/view read path and is the foundation, #17410 exposes labels on the loaded table via SupportsLabels, and #17411 exposes catalog labels in Spark 4.1 through a metadata table and DESCRIBE. The notes do not record whether concerns were raised.",
+      "initiatives": [
+        "catalog-labels"
+      ],
+      "refs": [
+        "gh:apache/iceberg#15750",
+        "gh:apache/iceberg#17337",
+        "gh:apache/iceberg#17410",
+        "gh:apache/iceberg#17411"
+      ],
+      "open_questions": [
+        "Are there any final concerns on labels in the read path before a vote?"
+      ]
+    },
+    {
+      "title": "Spec: field-id guidance on AddSchemaUpdate vs CreateTableRequest",
+      "summary": "Sung's item linking a spec pull request that gives guidance on field ids in AddSchemaUpdate compared with CreateTableRequest. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17137"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the labels spec change (apache/iceberg#15750) and the stacked implementation pull requests (#17337, #17410, #17411)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Andrei",
+      "basis": "notes"
+    },
+    {
+      "who": "Sung",
+      "basis": "notes"
+    }
+  ]
+}

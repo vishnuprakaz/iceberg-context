@@ -1,0 +1,56 @@
+{
+  "id": "meeting/catalog/2026-07-01",
+  "_input_hash": "sha256:64bec913530271895554",
+  "sources": [
+    "meet:catalog:2026-07-01"
+  ],
+  "summary": "The Catalog Community Sync notes for 1 July 2026 list three discussion items with links and record no outcomes. Alex and Sung brought the remote signing configuration pull request. Sung brought the question of fine-grained access control policies and field-id binding on schema change, with a mailing list thread and a document on co-committing access policy with schema changes in the Iceberg REST catalog. William brought file-level access delegation, which has its own mailing list thread.",
+  "topics": [
+    {
+      "title": "Remote signing configuration",
+      "summary": "Listed under Alex and Sung with a link to the pull request on remote signing configuration. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16822"
+      ]
+    },
+    {
+      "title": "FGAC policies and field-id binding on schema change",
+      "summary": "Sung's item on how fine-grained access control policies bind to field ids when a schema changes. It links a mailing list thread and a document titled 'V1: Co-Committing Access Policy with Schema Changes in Iceberg REST Catalog'. The notes record no discussion or outcome.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "list:cdph7m2hq5kmgfj5tq55o14nr31cynd3",
+        "doc:1yL2Yv70hJ569dpLdW_upTzzK8Zb3fAFEKEH4JRdosjU"
+      ]
+    },
+    {
+      "title": "File-level access delegation",
+      "summary": "William's item on file-level access delegation, linked to its mailing list thread. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "list:odof6m2npvktwd51cz8qnrxjv95ws4wm"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Alex",
+      "basis": "notes"
+    },
+    {
+      "who": "Sung",
+      "basis": "notes"
+    },
+    {
+      "who": "William",
+      "basis": "notes"
+    }
+  ]
+}

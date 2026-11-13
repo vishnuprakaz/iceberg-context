@@ -1,0 +1,56 @@
+{
+  "id": "thread/t-cf8ecdd2fd7d10db",
+  "_input_hash": "sha256:741cf741d5b48fe0d5c6",
+  "sources": [
+    "devlist:hb12b05y2rxv98641dwdvdjh58po0h8r",
+    "devlist:t0mjck5d5szkh6j716g7lct189fhxm29",
+    "devlist:00njkwrm7fcw55n3mnrjlg27kn6syo0y",
+    "devlist:1h29ocbjbcwbj4s8fnyrl0h070q7h8zh",
+    "devlist:fhkct439xwz2zbcg3zzg714hq47q0121",
+    "devlist:ztgof407gww4ctjq778w2lmkf3ojt9ch"
+  ],
+  "title": "Reviewer bandwidth in iceberg-rust",
+  "summary": "Jordan Epstein raised limited review capacity in iceberg-rust, saying he had heard of projects keeping their own forks because getting code reviewed is too hard, and listing missing features such as position delete writing, deletion vector writing and HDFS support. He suggested giving review mandates to trusted people from Rust projects that build on Iceberg (DataFusion Comet, RisingWave, Databend, Polars) or from major companies, focused on reaching parity with Java. Shawn Chang agreed there is a reviewer bottleneck, said responsibility for quality rests with whoever merges, and pointed to community syncs where parity features are discussed. Jared Yu described the same bottleneck in PyIceberg and suggested nominating steady unofficial reviewers as committers. Anurag Mantripragada reported similar delays in the Spark connector but said committer standards should not be bypassed. Gang Wu and Renjie Liu said new reviewers need deep understanding of the codebase and trust built through contributions and quality reviews. No concrete action was agreed.",
+  "positions": [
+    {
+      "who": "jordepic",
+      "stance": "Increase iceberg-rust review capacity by giving trusted representatives of downstream Rust projects or major companies a mandate to review changes that bring the project to parity with Java.",
+      "source": "devlist:hb12b05y2rxv98641dwdvdjh58po0h8r"
+    },
+    {
+      "who": "CTTY",
+      "stance": "Agrees there is a reviewer bottleneck and welcomes outside reviews, but responsibility for code quality falls on the person who merges and the bottleneck may not be fixable immediately.",
+      "source": "devlist:t0mjck5d5szkh6j716g7lct189fhxm29"
+    },
+    {
+      "who": "Jared Yu",
+      "stance": "PyIceberg is similarly bottlenecked; the community should nominate reliable, frequent unofficial reviewers to become committers.",
+      "source": "devlist:00njkwrm7fcw55n3mnrjlg27kn6syo0y"
+    },
+    {
+      "who": "anuragmantri",
+      "stance": "The Spark connector has the same bottleneck, and adding committers should not circumvent the qualities in the committer guidelines.",
+      "source": "devlist:1h29ocbjbcwbj4s8fnyrl0h070q7h8zh"
+    },
+    {
+      "who": "wgtmac",
+      "stance": "Maintainers also carry long-term maintenance of merged code, so new reviewers must show deep understanding of the codebase and willingness to share that responsibility.",
+      "source": "devlist:fhkct439xwz2zbcg3zzg714hq47q0121"
+    },
+    {
+      "who": "liurenjie1024",
+      "stance": "The bottleneck is understanding, not coding; contributors are encouraged to give high-quality code reviews, which builds trust.",
+      "source": "devlist:ztgof407gww4ctjq778w2lmkf3ojt9ch"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "Participants agreed reviewer bandwidth is a bottleneck across Iceberg projects, but no change was decided; replies pointed to the existing committer guidelines of building trust through contributions and reviews."
+  },
+  "initiatives": [
+    "iceberg-rust",
+    "community-process"
+  ],
+  "refs": [],
+  "why_it_matters": "Contributors who want faster reviews are told the route is sustained contributions and quality reviews leading to committership, not delegated review mandates."
+}

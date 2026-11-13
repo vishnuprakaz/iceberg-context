@@ -1,0 +1,59 @@
+{
+  "id": "thread/t-3a558d67a81956a4",
+  "_input_hash": "sha256:ac898ca1fcaa124ae68b",
+  "sources": [
+    "devlist:q60ymn6rq1qzs102zj0vm0fnqjjv0knw",
+    "devlist:4bnkv3gz6304cys6dxtpx0qxg8lg44jp",
+    "devlist:wlto1z6h41n8gwrf1gl0qtlo5t0l7yo3",
+    "devlist:vohj6979v5f05tmctgh40xnv2gwl6g54",
+    "devlist:m0s4ocmq7z721xxjd8xssbg1q55kt3f9",
+    "devlist:thxhdlhhl8ln51ncfyl5zn7h53goq99q"
+  ],
+  "title": "Adding an unregister table endpoint to the REST spec",
+  "summary": "Ryan Blue opened PR #16400 to add an `unregister` endpoint to the REST catalog spec. It is the opposite of `register`: it removes a table from a catalog without deleting its data and metadata files, so a table can be moved to another catalog. He gave two reasons the drop endpoint is not enough: most REST catalogs handle file cleanup themselves, so there must be a way to prevent removal, and drop is not safe with concurrent operations, whereas unregister returns the current table state and metadata location with the assurance that it is the latest. Replies were supportive. Ajantha Bhat asked why `purgeRequested` on drop does not already protect files and proposed an unregister-view endpoint as well. Daniel Weeks answered that setting `purgeRequested` to false does not require the server to keep the data. Ryan planned to start a vote that week. A final question about the difference from drop without purge closed the thread.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Add an `unregister` endpoint because drop cannot guarantee that files are kept and does not return the latest metadata location safely under concurrent operations.",
+      "source": "devlist:q60ymn6rq1qzs102zj0vm0fnqjjv0knw"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Supports it as completing the portability story between catalogs.",
+      "source": "devlist:4bnkv3gz6304cys6dxtpx0qxg8lg44jp"
+    },
+    {
+      "who": "ajantha-bhat",
+      "stance": "Generally in favor because returning the metadata location makes catalog migration atomic, but asks why `purgeRequested` on drop is insufficient and suggests adding unregister-view too.",
+      "source": "devlist:wlto1z6h41n8gwrf1gl0qtlo5t0l7yo3"
+    },
+    {
+      "who": "flyrain",
+      "stance": "Supports the endpoint; concurrent writes are where drop cannot be used safely.",
+      "source": "devlist:vohj6979v5f05tmctgh40xnv2gwl6g54"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Supports a new endpoint: `purgeRequested=false` only allows later cleanup and does not oblige the server to preserve data, while unregister specifically detaches the data from catalog management.",
+      "source": "devlist:m0s4ocmq7z721xxjd8xssbg1q55kt3f9"
+    },
+    {
+      "who": "xndai",
+      "stance": "Asks how unregister differs from `dropTable` with `purgeRequested` set to false.",
+      "source": "devlist:thxhdlhhl8ln51ncfyl5zn7h53goq99q"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "All replies that took a position supported the new endpoint; the proposer planned a vote thread, and no vote happened in this thread."
+  },
+  "initiatives": [
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16400",
+    "gh:apache/iceberg#14743",
+    "gh:apache/iceberg#14869"
+  ],
+  "why_it_matters": "An unregister endpoint gives a standard, concurrency-safe way to move a table between REST catalogs without risking file deletion."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "thread/t-c455572cb549f180",
+  "_input_hash": "sha256:f01b36ed41ef60782c5e",
+  "sources": [
+    "devlist:mptyj9nh6xd9zymbyq6qvf35j9x9hwyg",
+    "devlist:3cyf1g5768jpmm09hr8c31tpyfvmyrn5",
+    "devlist:6oxh4fg1wjyv8kzjkbb9bdsmrtwdycvh",
+    "devlist:96fd951v8wmrvrbj9xmxv85bgznbq76z",
+    "devlist:21zy35rgnlz3089ttwn2ttym80c5domc",
+    "devlist:shd3bmm15sry0gzy3xjycto063k8mbv7",
+    "devlist:qn6srwwkv7kct7ypqyyqo7hjl9v7br38",
+    "devlist:j5310o8cn73x95cmhlwrbq32d7fzjd0d"
+  ],
+  "title": "Table and column label metadata in the Iceberg REST catalog",
+  "summary": "Andrei Tserakhau proposed an optional `labels` field on `LoadTableResponse` so catalogs can surface catalog-managed context (ownership, cost attribution, classification, semantic hints) as string key-value pairs without writing it to table properties. Ryan Blue supported it as a generic channel that adds no requirements to catalogs. Andrei followed with a spec PR, a PyIceberg client and proofs of concept in Polaris, Unity Catalog and Lakekeeper. Syncs on May 28 and June 29 agreed to land the read API first with the write API as a separate follow-up, to keep labels flat, and to treat governance as one use case among many, with enforcement left to read restrictions. The shape was consolidated into one `labels` object with `table` and `columns` parts, and a proposed latency requirement was softened to implementation guidance. EJ Wang questioned whether labels should be a separate primitive rather than a projection of a structured Tag model. The thread ends with a call to review the spec PR; structured tags go to a follow-up sync.",
+  "positions": [
+    {
+      "who": "laskoviymishka",
+      "stance": "Add an optional, catalog-generated `labels` key-value field to `LoadTableResponse`, separate from table properties, which engines may use or ignore.",
+      "source": "devlist:mptyj9nh6xd9zymbyq6qvf35j9x9hwyg"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Supports labels as a generic way for catalogs to share extra metadata without adding REST spec requirements, and as an alternative to overriding table properties, which he calls an anti-pattern.",
+      "source": "devlist:3cyf1g5768jpmm09hr8c31tpyfvmyrn5"
+    },
+    {
+      "who": "EJ Wang",
+      "stance": "Before standardizing flat labels as an independent primitive, evaluate making a structured Tag/classification model the source of truth with REST response metadata as a projection of it, and do not pre-decide that tags are only catalog-internal.",
+      "source": "devlist:shd3bmm15sry0gzy3xjycto063k8mbv7"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Flat labels are the right shape for the read path and a structured tag layer can build on top; the write path and structured tags should not block read-path review.",
+      "source": "devlist:j5310o8cn73x95cmhlwrbq32d7fzjd0d"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "As of July 7 the read-path representation (`labels: { table, columns }`) was described as stable and the ask was review of the spec PR before a vote; the write path and structured tags were deferred to follow-up work."
+  },
+  "initiatives": [
+    "catalog-labels"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15521",
+    "gh:apache/iceberg#15750",
+    "gh:apache/iceberg-python#3191",
+    "gh:apache/polaris#3222",
+    "gh:apache/polaris#4048",
+    "gh:apache/iceberg#13879",
+    "doc:1aj-6JlfBiMYEEVtNuh5WLMOrRQiMCcyYUGbouPM4hXI"
+  ],
+  "why_it_matters": "It sets the direction for a new optional REST catalog field: read-only flat labels first, with write APIs and structured tags handled separately."
+}

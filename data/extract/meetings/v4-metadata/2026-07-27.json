@@ -1,0 +1,54 @@
+{
+  "id": "meeting/v4-metadata/2026-07-27",
+  "_input_hash": "sha256:a43b154d9e68e18d0a6b",
+  "sources": [
+    "meet:v4-metadata:2026-07-27"
+  ],
+  "summary": "The V4 metadata sync notes for 27 July 2026 are an agenda only, with no outcomes recorded. The items were check-ins on the document about aggregated stats for leaf manifest entries in the root and on the expression stats document, encryption keys for deletion vectors, the write path design (clustering retired entries in the root or in a dedicated leaf, an adaptive write algorithm, and handling of pre-v4 manifests), and the implications of prohibiting equality delete writes in v4.",
+  "topics": [
+    {
+      "title": "Aggregated stats for leaf manifest entries and expression stats",
+      "summary": "Two check-ins on existing design documents: aggregated stats for a leaf manifest entry in the root, and expression stats. The notes record no status or outcome.",
+      "initiatives": [
+        "v4-content-stats",
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "doc:1glCxPNWHWmlxc5ULBcpxmsgOKR6i4Y4RErDRZD7vuJc",
+        "doc:1oV8dapKVzB4pZy5pKHUCj5j9i2_1p37BJSeT7hyKPpg"
+      ]
+    },
+    {
+      "title": "Encryption keys for DVs",
+      "summary": "Agenda item on encryption keys for deletion vectors. The notes give no detail and record no outcome.",
+      "initiatives": [
+        "v4-encryption",
+        "v4-metadata-tree"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Write path design",
+      "summary": "The write path design document was on the agenda with three sub-points: whether retired entries are clustered in the root or in a dedicated leaf, the adaptive write algorithm, and how pre-v4 manifests are handled. The notes record no outcome.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "doc:1k4x8utgh41Sn1tr98eynDKCWq035SV_f75rtNHcerVw"
+      ],
+      "open_questions": [
+        "Should retired entries be clustered in the root or in a dedicated leaf manifest?"
+      ]
+    },
+    {
+      "title": "Implications of prohibiting equality delete writes in v4",
+      "summary": "Agenda item on what follows from prohibiting equality delete writes in v4. The notes give no detail and record no outcome.",
+      "initiatives": [
+        "v4-equality-deletes"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

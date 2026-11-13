@@ -1,0 +1,39 @@
+{
+  "id": "thread/t-e3a4cbb57895e29d",
+  "_input_hash": "sha256:c28325f370483fa715bc",
+  "sources": [
+    "devlist:3jcdq4w6kvyfjbczddch6hzhbt1qjor0",
+    "devlist:d243jz5rqfvp1phycdv9bgvk6258jwxv",
+    "devlist:to7fgchgnzrxm2vmhlc5rv54z8w5qdc9",
+    "devlist:353q4gmt0f5tws919qw08l6todrn4cr3"
+  ],
+  "title": "San Francisco Iceberg meetup in late September",
+  "summary": "Colby Foss asked whether the community and PMC had concerns about hosting an Apache Iceberg meetup in San Francisco in the last week of September, one week after a meetup already scheduled in Silicon Valley. Russell Spitzer replied that the PMC should stay out of such scheduling questions, that the blanket approval for meetups was meant to ensure no event would be large enough for this to be an issue, and that the organizer should ask the other hosts directly; personally he would space the events out. Kevin Liu noted that people travel along the peninsula for meetups, suggested coordinating with the other hosts, and pointed to the community guideline for hosting meetups. Colby said the other hosts were supportive, but decided to avoid competing for the same audience and to plan the event for November instead.",
+  "positions": [
+    {
+      "who": "RussellSpitzer",
+      "stance": "The PMC should stay out of meetup scheduling and the organizer should coordinate with the other hosts; personally he would space the two events out.",
+      "source": "devlist:d243jz5rqfvp1phycdv9bgvk6258jwxv"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Coordinate with the other hosts and gauge community interest, and follow the published guideline for hosting an Apache Iceberg meetup.",
+      "source": "devlist:to7fgchgnzrxm2vmhlc5rv54z8w5qdc9"
+    },
+    {
+      "who": "Colby Foss",
+      "stance": "Will move the San Francisco meetup to November instead of holding it a week after the Silicon Valley one.",
+      "source": "devlist:353q4gmt0f5tws919qw08l6todrn4cr3"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "The late-September date was dropped; the organizer plans a San Francisco meetup in November and will share details later.",
+    "source": "devlist:353q4gmt0f5tws919qw08l6todrn4cr3"
+  },
+  "initiatives": [
+    "community-process"
+  ],
+  "refs": [],
+  "why_it_matters": "It shows that meetup timing is left to hosts to coordinate under the existing community guideline, without PMC approval of individual dates."
+}

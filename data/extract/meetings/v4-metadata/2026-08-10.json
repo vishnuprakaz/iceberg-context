@@ -1,0 +1,66 @@
+{
+  "id": "meeting/v4-metadata/2026-08-10",
+  "_input_hash": "sha256:2dedebc092d833a1fae6",
+  "sources": [
+    "meet:v4-metadata:2026-08-10"
+  ],
+  "summary": "The V4 metadata sync on 10 August 2026 took three items from Anoop Johnson. The group decided to remove the partition tuple in v4 and replace it with content_stats, storing source column values for monotonic transforms and the expression for non-monotonic ones such as bucketing; the tuple stays temporarily to avoid breaking parameterized tests. On whether data files still need a spec_id, Ryan said it may be needed for storage-partitioned joins. The manifest DV format question (written in the notes as 'Mumbling or roaring') was continued separately by Ryan, Anoop and Neelesh.",
+  "topics": [
+    {
+      "title": "Whether partition tuples are stored in the AMT",
+      "summary": "Anoop Johnson asked for a decision on storing partition tuples in the adaptive metadata tree. The decision points were equality delete matching (new equality deletes might be deprecated in v4, but upgrades must still be handled) and bucketed partitions, which need a way to store stats on transformed values. The outcome was to remove the partition tuple in v4 and replace it with content_stats: source column values are stored for monotonic transforms, and for non-monotonic transforms such as bucketing the expression is stored. The tuple is kept temporarily to avoid breaking parameterized tests.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-content-stats",
+        "v4-equality-deletes"
+      ],
+      "refs": [],
+      "decisions": [
+        "Remove the partition tuple in v4 and replace it with content_stats: store source column values for monotonic transforms, and store the expression (e.g. bucketing) for non-monotonic transforms.",
+        "Keep the partition tuple temporarily for now to prevent test breakages (parameterized tests)."
+      ]
+    },
+    {
+      "title": "Is spec_id needed for data files?",
+      "summary": "A related question from Anoop Johnson: assuming equality deletes are not needed, do data files still need a spec_id. Ryan said it may be needed for storage-partitioned joins. No decision is recorded.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Do data files need spec_id if equality deletes are not needed?"
+      ]
+    },
+    {
+      "title": "Manifest DV format",
+      "summary": "Anoop Johnson raised the choice of manifest DV format, which the notes write as 'Mumbling or roaring'. Concerns were raised, and the discussion was continued separately by Ryan, Anoop and Neelesh. No decision is recorded.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Which format should manifest DVs use?"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Ryan, Anoop, Neelesh",
+      "what": "Continue the manifest DV format discussion separately to address the concerns raised."
+    }
+  ],
+  "participants": [
+    {
+      "who": "anoopj",
+      "basis": "notes"
+    },
+    {
+      "who": "Ryan",
+      "basis": "notes"
+    },
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    }
+  ]
+}

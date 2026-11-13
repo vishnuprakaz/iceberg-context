@@ -1,0 +1,65 @@
+{
+  "id": "meeting/python/2026-07-28",
+  "_input_hash": "sha256:bce8bd1d15aff5baaa2e",
+  "sources": [
+    "meet:python:2026-07-28"
+  ],
+  "summary": "The PyIceberg Sync notes for 28 July 2026 centre on Jared's pluggable backend architecture pull request and design document. The notes sketch an approach: add the interface first and wire existing code to it later, take an inventory of all PyArrow usage, move the PyArrow code into pyarrow.py, and then look for an abstraction covering Polars, DataFusion and PyArrow. Three follow-ups are listed: re-open one pull request, merge another, and file an issue or pull request for a Windows CI bug. Kevin listed the 0.12 milestone.",
+  "topics": [
+    {
+      "title": "Pluggable backend architecture",
+      "summary": "Jared presented the pull request and design document for a pluggable backend architecture. The notes describe adding the interface first as a pull request and wiring existing code to it later as the community adopts it. They call for an inventory of everything related to PyArrow (FileIO, scan planning, table operations), asking why there are PyArrow calls outside pyarrow.py, so that a later switch to DataFusion shows a 1:1 mapping. The steps noted are: move all PyArrow code into pyarrow.py, then look for an abstraction across Polars, DataFusion and PyArrow, referring to Java. The notes add not to try to work out user use cases (for example data sizes that may run out of memory); the UX lets people use whatever public API is available.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3716",
+        "doc:1RxLIBu2DTxDYfe0GHCecMafTOrQR-kK5mjOhm4w6yuU"
+      ],
+      "open_questions": [
+        "Where is PyArrow used across the code base, and why are there PyArrow calls outside pyarrow.py?",
+        "Once the PyArrow code is in one place, what abstraction would cover Polars, DataFusion and PyArrow?"
+      ]
+    },
+    {
+      "title": "Follow-ups: pull requests and Windows CI",
+      "summary": "Under the same item the notes list three follow-ups without further explanation: re-open pull request #3131, merge pull request #3320, and file an issue or pull request for a Windows CI bug.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3131",
+        "gh:apache/iceberg-python#3320"
+      ]
+    },
+    {
+      "title": "0.12 milestone",
+      "summary": "Kevin listed the 0.12 milestone link. The notes record no discussion or outcome.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Re-open apache/iceberg-python#3131."
+    },
+    {
+      "what": "Merge apache/iceberg-python#3320."
+    },
+    {
+      "what": "File an issue or pull request for the Windows CI bug."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Jared",
+      "basis": "notes"
+    },
+    {
+      "who": "Kevin",
+      "basis": "notes"
+    }
+  ]
+}

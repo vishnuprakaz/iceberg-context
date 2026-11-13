@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "failing": 0,
+    "transcripts": 3
+  },
+  "cursor": {
+    "done": {
+      "I1g51kzIec8": "2026-10-14",
+      "fPTtFTNf_Tc": "2026-10-28",
+      "q-A9Y5FMRY8": "2026-11-09"
+    },
+    "failed": {}
+  },
+  "last_run": "2026-11-13T12:40:57Z",
+  "last_success": "2026-11-13T12:40:57Z",
+  "source": "youtube",
+  "status": "ok"
+}

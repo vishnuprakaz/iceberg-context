@@ -1,0 +1,53 @@
+{
+  "id": "meeting/column-updates/2026-07-28",
+  "_input_hash": "sha256:ed835be2f94793fec01b",
+  "sources": [
+    "meet:column-updates:2026-07-28"
+  ],
+  "summary": "The Efficient Column Updates sync on 28 July 2026 was about the v3 to v4 upgrade strategy. Because a full metadata rewrite is too expensive for large tables, the consensus was an on-demand, incremental migration: v4 tables reference legacy v3 manifests, metadata deletion vectors in the root manifest track deleted files, and entries are promoted to v4 format when modified. Change data capture keeps working by diffing file entries. Amogh took actions to revise the spec PR with the finalized v4 entry schema and to start a dev list thread on the migration paths.",
+  "topics": [
+    {
+      "title": "V4 upgrade strategy",
+      "summary": "Moving from v3 to v4 has to handle legacy manifests without a full metadata rewrite, which is prohibitively expensive for large tables. The consensus was an on-demand, incremental migration. V4 tables reference legacy v3 manifests and use metadata deletion vectors (MDVs) in the root manifest to track deleted files; when a file is modified its entry is promoted to v4 format, with v2 positional deletes converted to v4 deletion vectors. For column updates that add or re-instate a whole column, this is a full rewrite of the metadata into v4.",
+      "initiatives": [
+        "v4-general",
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": [],
+      "decisions": [
+        "V3 to v4 migration is gradual and on demand: v4 tables reference legacy v3 manifests, and entries are promoted to v4 format when modified."
+      ]
+    },
+    {
+      "title": "Reader and writer requirements and CDC",
+      "summary": "Writers must write new entries in v4 format, and legacy entries need full component conversion when promoted. Legacy readers must apply MDVs, and v4 readers use format-version routing. Change data capture remains functional by diffing file entries, identifying column updates through replaced/modified entry pairs, and snapshots keep supporting mixed operations (DV, update, insert).",
+      "initiatives": [
+        "v4-general",
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Amogh",
+      "what": "Revise the specification PR to incorporate the finalized v4 entry schema and circulate it for community feedback."
+    },
+    {
+      "who": "Amogh",
+      "what": "Start a dev list thread to formalize and document the consensus on v3-to-v4 migration paths."
+    },
+    {
+      "who": "All participants",
+      "what": "Review the updated spec PR and take part in the dev list discussion on the migration framework."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Amogh",
+      "basis": "notes"
+    }
+  ]
+}

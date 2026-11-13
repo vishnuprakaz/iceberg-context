@@ -1,0 +1,29 @@
+{
+  "id": "meeting/materialized-views/2026-07-07",
+  "_input_hash": "sha256:fae8e23bdde8c9ee08f9",
+  "sources": [
+    "meet:materialized-views:2026-07-07"
+  ],
+  "summary": "The Materialized View Sync notes for 7 July 2026 contain a single entry: an introduction from Nevin Zheng (software engineer) and Mark Hoerth (product lead) of Datastrato, which uses and contributes to Apache Gravitino. They said they are interested in seeing the work land and offered help with documentation, driving alignment on open questions through the mailing list or working group, implementation against the spec, and giving a downstream vendor's view on adoption. No technical discussion or decisions are recorded.",
+  "topics": [
+    {
+      "title": "Introduction from Datastrato (Apache Gravitino) contributors",
+      "summary": "Nevin Zheng and Mark Hoerth introduced themselves; their company Datastrato uses and contributes to Apache Gravitino. They want to see this work land and asked where they can be most useful. They offered help with documentation (decision docs, proposal write-ups, scoping), driving alignment on open questions, implementation (building against the spec, demo implementations, feedback from consuming it in the REST catalog), and a downstream vendor's view of adoption considerations.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "nevzheng",
+      "basis": "notes"
+    },
+    {
+      "who": "Mark Hoerth",
+      "basis": "notes"
+    }
+  ]
+}

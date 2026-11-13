@@ -1,0 +1,53 @@
+{
+  "id": "thread/t-f324967b2d45dc23",
+  "_input_hash": "sha256:830cf486eac4cf855c4f",
+  "sources": [
+    "devlist:pk4yqd4llr85lmq3gskbfl9v31sfqpp9",
+    "devlist:jppc7p1oklcdh46nkvl11lcts5rk16kk",
+    "devlist:090ocgnm2qpbyrlznjhlz2sojg7wc4vf",
+    "devlist:gjx388zy633jxw1phdshp0f57odb4qrr",
+    "devlist:2bmj2mp2ggjd1qz466w06047p20kq64g"
+  ],
+  "title": "Iceberg Rust: moving the DataFusion integration into a separate repository",
+  "summary": "Matt Butrovich summarized discussions in both the Iceberg Rust and DataFusion communities about moving the DataFusion TableProvider integration out of the iceberg-rust repository. The motivations given were that issues and pull requests against the integration often go stale for lack of reviewers who use it, that Iceberg Rust wants to stay engine-agnostic, and that projects such as Comet cannot upgrade DataFusion and Arrow until Iceberg Rust does. Open questions were where the code would live and under what governance, and how Iceberg Rust would keep running its sqllogictest suite. Shawn Chang, Renjie Liu and Manu Zhang supported a move provided the new home is Apache-governed; Renjie leaned toward moving the sqllogictests to the new repository too. After a community sync, Shawn listed questions still open: whether separation or more DataFusion reviewers is the right fix, where the boundary with core lies, cross-repository testing, and location. No decision was reached.",
+  "positions": [
+    {
+      "who": "mbutrovich",
+      "stance": "Lays out the case for splitting the DataFusion integration out of iceberg-rust (stale PRs, engine neutrality, dependency upgrade coupling) and the open questions on governance and sqllogictests.",
+      "source": "devlist:pk4yqd4llr85lmq3gskbfl9v31sfqpp9"
+    },
+    {
+      "who": "CTTY",
+      "stance": "Agrees a separate repository can help, but wants it kept under Apache governance and maintained jointly by Iceberg Rust and DataFusion contributors, not owned only by the DataFusion side.",
+      "source": "devlist:jppc7p1oklcdh46nkvl11lcts5rk16kk"
+    },
+    {
+      "who": "liurenjie1024",
+      "stance": "Supports an Apache repository, for example a sub-repository of the DataFusion project, and leans toward moving the sqllogictests there to keep the dependency graph and releases simple.",
+      "source": "devlist:090ocgnm2qpbyrlznjhlz2sojg7wc4vf"
+    },
+    {
+      "who": "manuzhang",
+      "stance": "Supports moving the DataFusion integration and tests into a separate Apache-governed repository.",
+      "source": "devlist:gjx388zy633jxw1phdshp0f57odb4qrr"
+    },
+    {
+      "who": "CTTY",
+      "stance": "The main question is how to improve development velocity without losing the close design, testing and governance relationship between the integration and iceberg-rust core.",
+      "source": "devlist:2bmj2mp2ggjd1qz466w06047p20kq64g"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "General agreement that the integration has a reviewer-bandwidth problem and that a separate Apache-governed repository could help, but whether to split, where the code would live and how testing would work were left open after the August 26 community sync."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [
+    "gh:apache/iceberg-rust#3029",
+    "gh:apache/iceberg-rust#2613",
+    "gh:apache/iceberg-rust#3036"
+  ],
+  "why_it_matters": "The outcome decides where DataFusion users and projects such as Comet get their Iceberg integration and how iceberg-rust runs its SQL regression tests."
+}

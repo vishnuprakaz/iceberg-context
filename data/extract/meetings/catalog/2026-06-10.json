@@ -1,0 +1,59 @@
+{
+  "id": "meeting/catalog/2026-06-10",
+  "_input_hash": "sha256:3ce793fef77e79206b11",
+  "sources": [
+    "meet:catalog:2026-06-10"
+  ],
+  "summary": "The Catalog Community Sync notes for 10 June 2026 are a short agenda and record little beyond it. Prashant's item on encryption support in the REST catalog (credentials for the KMS) was listed again. The storage credential refresh item is struck through in the notes, with the remark that a summary email has been sent. The rest of the agenda consisted of calls for review on three pull requests: URL versus form encoding (Christian), events, and definer views (Referenced-By).",
+  "topics": [
+    {
+      "title": "Encryption support in the REST catalog (credentials for KMS)",
+      "summary": "Listed under Prashant with the same mailing list thread as at the previous sync. The notes record no discussion or outcome.",
+      "initiatives": [
+        "v4-encryption",
+        "rest-auth"
+      ],
+      "refs": [
+        "list:z48t5wgx778j17pzto9kqxwysw4ysxxo"
+      ]
+    },
+    {
+      "title": "Storage credential refresh",
+      "summary": "Maninder's item from the previous sync (single credential versus all credentials of a table, and the request to review the S3 prototype) is struck through in the notes. The only remaining remark is that a summary email has been sent.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "doc:1R1K6X7qYqvIFkPG3m1neV5Mvy8rwWJvhSFr8DgJgQ-E",
+        "gh:apache/iceberg#15899"
+      ]
+    },
+    {
+      "title": "Calls for review: URL vs form encoding, events, definer views",
+      "summary": "Three pull requests were put forward for review. Christian asked for review of the URL versus form encoding pull request. The events pull request and the definer views (Referenced-By) pull request were listed without a named owner. No review outcome is recorded.",
+      "initiatives": [
+        "rest-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#15989",
+        "gh:apache/iceberg#12584",
+        "gh:apache/iceberg#15895"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the URL vs form encoding (apache/iceberg#15989), events (apache/iceberg#12584) and definer views (apache/iceberg#15895) pull requests."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Prashant",
+      "basis": "notes"
+    },
+    {
+      "who": "c-thiel",
+      "basis": "notes"
+    }
+  ]
+}

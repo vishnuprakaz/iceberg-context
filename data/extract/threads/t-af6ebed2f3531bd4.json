@@ -1,0 +1,54 @@
+{
+  "id": "thread/t-af6ebed2f3531bd4",
+  "_input_hash": "sha256:7f61ffb0cbf6db0cd7c0",
+  "sources": [
+    "devlist:7d4mzx3ft3b0x1kb5g1jk91wkxnm0qf0",
+    "devlist:8sh5ftzkgyz7xyj234gnjgppx3ppv2g0",
+    "devlist:ns239wxx2xxfnl9t6rc7nd6c3krcbt0d",
+    "devlist:ssxgzwdccd4tb51b80t96bm7knj44h31"
+  ],
+  "title": "Row-delta commits and multi-table transactions in iceberg-rust: patterns from a CDC producer",
+  "summary": "Steve, building a Postgres-to-Iceberg CDC pipeline on iceberg-rust, opened two draft PRs for discussion: a RowDeltaAction that commits data files and equality or position delete files in one snapshot, and multi-table transaction commits through the REST `transactions/commit` endpoint. Andrei Tserakhau shared lessons from doing the same in iceberg-go: choose the operation type from the content, apply equality deletes only to data files with a strictly lower sequence number, expect most effort on the read side, and reject empty or float/double equality keys. For multi-table commits he advised a separate optional trait, reloading after the 204 response, and treating 5xx responses as commit-state-unknown. Steve applied several points and noted that his `prepare_commit` consumes the transaction. Andrei agreed that consuming is the right default in Rust and pointed to the iceberg-go changes for partition-scoped conflict detection and removal of dangling equality deletes. The PRs remained drafts in the thread.",
+  "positions": [
+    {
+      "who": "steveis",
+      "stance": "Proposes adding RowDeltaAction and REST multi-table transaction commits to iceberg-rust and is willing to adapt the APIs to the ongoing merge-on-read work.",
+      "source": "devlist:7d4mzx3ft3b0x1kb5g1jk91wkxnm0qf0"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Keep multi-table commit as a separate optional trait implemented by REST, split building a commit from committing it, and never blindly retry 5xx responses because the commit state is unknown.",
+      "source": "devlist:8sh5ftzkgyz7xyj234gnjgppx3ppv2g0"
+    },
+    {
+      "who": "steveis",
+      "stance": "`prepare_commit` should consume the transaction, because Rust ownership then prevents a prepared transaction from also being committed directly.",
+      "source": "devlist:ns239wxx2xxfnl9t6rc7nd6c3krcbt0d"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Consuming the transaction is the right default and fits the commit-state-unknown error model; iceberg-go needed a manual committed flag to get the same guarantee.",
+      "source": "devlist:ssxgzwdccd4tb51b80t96bm7knj44h31"
+    }
+  ],
+  "outcome": {
+    "status": "informational",
+    "note": "Design feedback was exchanged and partly applied to the draft PRs; the thread records no decision on merging them."
+  },
+  "initiatives": [
+    "iceberg-rust",
+    "iceberg-go"
+  ],
+  "refs": [
+    "gh:apache/iceberg-rust#2785",
+    "gh:apache/iceberg-rust#2786",
+    "gh:apache/iceberg-rust#2784",
+    "gh:apache/iceberg-rust#2218",
+    "gh:apache/iceberg-rust#2186",
+    "gh:apache/iceberg-go#787",
+    "gh:apache/iceberg-go#817",
+    "gh:apache/iceberg-go#983",
+    "gh:apache/iceberg-go#947"
+  ],
+  "why_it_matters": "It collects correctness pitfalls for row-delta and multi-table commits that iceberg-go already hit and that the iceberg-rust write path will need to handle."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "meeting/column-updates/2026-07-14",
+  "_input_hash": "sha256:046827ac5ac6a7f32d74",
+  "sources": [
+    "meet:column-updates:2026-07-14"
+  ],
+  "summary": "The Efficient Column Updates sync notes for 14 July 2026 are brief. On data file stats, they say null fillers should keep the stats correct, though they may not be accurate, and list updating content stats without detail. On the metadata representation, the two options for relating base files to column files were explored again, with the remark that treating the base file as just another ColumnFile is complicated because the base file is needed to track things like the row id. Format version, key metadata and file format in column files were also listed, along with the Column Updates project board for reviews.",
+  "topics": [
+    {
+      "title": "Data file stats",
+      "summary": "The notes say that null fillers should ensure the stats are still correct, although they may not be accurate. Updating content stats is listed as a sub-item with nothing recorded under it.",
+      "initiatives": [
+        "v4-column-updates",
+        "v4-content-stats"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Column updates metadata representation",
+      "summary": "The group again explored the two options for how base files relate to column files. The note against option 2 (base file as just another ColumnFile) is that it is complicated, because the base file is needed to track things like the row id. No final decision is stated.",
+      "initiatives": [
+        "v4-column-updates",
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "list:7jryw9dfvc02s411twn4o7s5gjrybfxg"
+      ]
+    },
+    {
+      "title": "Format version, key metadata and file format in column files",
+      "summary": "Agenda item on whether and how column files carry format version, key metadata and file format. The notes give no detail and record no outcome.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Reviews",
+      "summary": "The notes point reviewers to the Column Updates project board under the apache GitHub organization (project 619).",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

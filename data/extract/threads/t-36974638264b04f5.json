@@ -1,0 +1,78 @@
+{
+  "id": "thread/t-36974638264b04f5",
+  "_input_hash": "sha256:c9119df3e0269526c244",
+  "sources": [
+    "devlist:7qtxrysl1w5sjs7o74y31snt0jrkf5qb",
+    "devlist:yrsl0jmnbb6kmgywsxsmxbhocx42l6pb",
+    "devlist:ko87p9b1tq4ojzq0fpjbnog2rsrpo0w2",
+    "devlist:9nohzxmm1pxfbr30hmlht3xxyfns2670",
+    "devlist:op7tsgngmw17yoth6gr6m37r2mj4q2gw",
+    "devlist:k2r9hmxhyl2533kkvpqhss01bkxrc1fv",
+    "devlist:1k4bzksqm7vsllvw68495og8grv8gbwh",
+    "devlist:lohd2lhx14ly3bd0n1spv8kkyovbl61j",
+    "devlist:sv78bhczg9w7q6t11k0cfxchjdlx0kll",
+    "devlist:57jh9c9lm0j95o0v7o3zc3dylhcmpzpd"
+  ],
+  "title": "Vote on releasing Apache Iceberg 1.12.0 RC0",
+  "summary": "Neelesh Salian proposed RC0 as Apache Iceberg 1.12.0. The replies were non-binding +1 votes with verification reports, plus three issues. Yuya Ebihara noted that 1.12.0 removed the old helper logic for partition statistics and the new logic needs the Hadoop-based Parquet client. Xuanwo and Gianluca Graziadei found third-party doc-site assets (a Bootstrap stylesheet and lottie-player.js) in the source archive without matching LICENSE entries, raised as follow-ups rather than blockers. Steven Wu flagged that PR #16765 changed `toString()` of geometry and geography types to always print the resolved CRS and algorithm; reading stays compatible but written strings change. Xin Huang offered a PR restoring the old output, while Szehon Ho, Anoop Johnson, Huaxin Gao and the release manager preferred keeping the change and documenting it as a behavior change. After the fix for the license issue (#18191) merged, the release manager announced a new RC with a new vote thread.",
+  "positions": [
+    {
+      "who": "Yuya Ebihara",
+      "stance": "Votes +1 but notes that the new partition statistics read/write logic requires the Hadoop-based Parquet client, which may be a problem for downstream projects that prohibit such dependencies.",
+      "source": "devlist:yrsl0jmnbb6kmgywsxsmxbhocx42l6pb"
+    },
+    {
+      "who": "Xuanwo",
+      "stance": "The source archive bundles a Bootstrap CSS file without the MIT permission notice or a root LICENSE entry; this should be fixed for the next release and is not a blocker.",
+      "source": "devlist:ko87p9b1tq4ojzq0fpjbnog2rsrpo0w2"
+    },
+    {
+      "who": "GGraziadei",
+      "stance": "lottie-player.js is also bundled without a license entry, and a pre-existing NoSuchMethodError occurs when reading variant columns with commons-lang3 older than 3.13; neither is a regression or blocker.",
+      "source": "devlist:9nohzxmm1pxfbr30hmlht3xxyfns2670"
+    },
+    {
+      "who": "stevenzwu",
+      "stance": "The geometry/geography `toString()` change is a behavior change the community should be aware of; he is fine with 1.12 keeping it because reads are compatible.",
+      "source": "devlist:op7tsgngmw17yoth6gr6m37r2mj4q2gw"
+    },
+    {
+      "who": "huan233usc",
+      "stance": "Prefers restoring the old `toString()` output while still serializing explicit CRS and algorithm (PR #18169), but will follow the community's preference.",
+      "source": "devlist:k2r9hmxhyl2533kkvpqhss01bkxrc1fv"
+    },
+    {
+      "who": "szehon-ho",
+      "stance": "Keep the `toString()` change in 1.12 and list it under behavior changes: it is clearer, matches the serialization spec and simplifies the UDF definition-id work.",
+      "source": "devlist:1k4bzksqm7vsllvw68495og8grv8gbwh"
+    },
+    {
+      "who": "anoopj",
+      "stance": "Keeping the behavior change is reasonable, with the revert PR as a fallback if there are objections.",
+      "source": "devlist:62pqj5vnf6nsgl63mw2vbo4djr19r71g"
+    },
+    {
+      "who": "huaxingao",
+      "stance": "Keep the #16765 change and document it; old metadata still loads and equal Geography types now print the same, which the UDF work needs.",
+      "source": "devlist:lohd2lhx14ly3bd0n1spv8kkyovbl61j"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "note": "RC0 was not released: after the fix for the source-archive licensing issue (#18191) was merged, the release manager said a new RC would be cut and voted on in a new thread. Only non-binding +1 votes had been cast; no tally was posted.",
+    "source": "devlist:57jh9c9lm0j95o0v7o3zc3dylhcmpzpd"
+  },
+  "initiatives": [
+    "java-releases",
+    "geospatial"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16560",
+    "gh:apache/iceberg#16765",
+    "gh:apache/iceberg#18169",
+    "gh:apache/iceberg#18164",
+    "gh:apache/iceberg#18191",
+    "gh:apache/iceberg#15994"
+  ],
+  "why_it_matters": "1.12.0 RC0 was replaced by a new candidate over third-party license notices, and 1.12 keeps a geometry/geography type-string change that will be documented as a behavior change."
+}

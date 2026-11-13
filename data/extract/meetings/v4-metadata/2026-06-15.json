@@ -1,0 +1,55 @@
+{
+  "id": "meeting/v4-metadata/2026-06-15",
+  "_input_hash": "sha256:1e380cf67551da160cd0",
+  "sources": [
+    "meet:v4-metadata:2026-06-15"
+  ],
+  "summary": "The V4 metadata sync notes for 15 June 2026 hold two agenda entries and no recorded outcomes. Steven W described implementation milestone 1: a fixed two-level tree (root manifest to leaf data/delete manifests) with copy-on-write leaf rewrites for all mutations, aiming at end-to-end parity with v3 commit and scan paths, with optimizations deferred to later milestones. Amogh J raised two questions: when the DV snapshot ID should be set for leaf manifests and how snapshot ID inheritance works, and whether the group agrees on a List<ColumnFile> representation instead of a base file plus overlay list.",
+  "topics": [
+    {
+      "title": "Implementation milestone 1",
+      "summary": "Steven W presented milestone 1 of the v4 implementation. It keeps the metadata tree at a fixed two-level shape, root manifest to leaf data/delete manifests, and uses copy-on-write leaf rewrites for all mutations. Direct data-file content entries in the root manifest (a small-write optimization), manifest delete vectors at the root level, and column-file DV updates are reserved for follow-ups. The goal is end-to-end parity with v3 commit and scan paths so v4 tables can be read and written through the existing API; later optimizations are independent of each other and can be built in parallel.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16694"
+      ]
+    },
+    {
+      "title": "DV snapshot ID on leaf manifests",
+      "summary": "Amogh J noted that the current implementation sets the DV snapshot ID whenever replaced positions or deleted positions are set, and argued it should not. His reasoning is that the DV snapshot ID only applies to change detection for leaf data files, and the diff DV (replaced positions plus deleted positions) already implies the changes for that leaf manifest. He also raised inheritance of the DV snapshot ID and column file snapshot ID. No outcome is recorded.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should the DV snapshot ID be set on leaf manifest entries when replaced or deleted positions are set?",
+        "How should DV snapshot ID and column file snapshot ID inheritance work?"
+      ]
+    },
+    {
+      "title": "List<ColumnFile> vs base file plus overlay list",
+      "summary": "Amogh J recalled that the previous discussion leaned towards a List<ColumnFile>, where the original base file must be the first element of the list and must have no fields set. He wanted to confirm that this is the general consensus, since the spec pull request would need to be updated. The notes do not record the answer.",
+      "initiatives": [
+        "v4-column-updates",
+        "v4-metadata-tree"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Is List<ColumnFile>, with the base file as the first element and no fields set, the agreed representation?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "stevenzwu",
+      "basis": "notes"
+    },
+    {
+      "who": "amogh-jahagirdar",
+      "basis": "notes"
+    }
+  ]
+}

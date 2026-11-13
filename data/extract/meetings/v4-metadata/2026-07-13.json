@@ -1,0 +1,53 @@
+{
+  "id": "meeting/v4-metadata/2026-07-13",
+  "_input_hash": "sha256:c4f577e34543acdd66b5",
+  "sources": [
+    "meet:v4-metadata:2026-07-13"
+  ],
+  "summary": "The V4 metadata sync notes for 13 July 2026 list three agenda items, mostly as open questions. The first was partial updates of content_stats for column files, including whether a nested struct field can be column-updated and whether a writer carrying stats over from the read can avoid a manifest scan. The second was the use of partition_spec_id when the tuple is the union schema of all specs; the notes say spec projection is needed for equality delete matching. The third was the Java API design for colocated DVs and column files.",
+  "topics": [
+    {
+      "title": "Partial update of content_stats for column files",
+      "summary": "The item covered how content_stats is partially updated when column files are written. Two questions were posed: whether a column update of a nested field in a struct can be supported, or whether content_stats should be flattened and the wrapper layer removed; and whether a writer that carries the data file column stats over from the read can avoid scanning the manifest file to fetch the stats in the manifest DV path. No answers are recorded.",
+      "initiatives": [
+        "v4-content-stats",
+        "v4-column-updates"
+      ],
+      "refs": [
+        "yt:kBhesf_1pIM"
+      ],
+      "open_questions": [
+        "Can a column update target a nested field in a struct, or should content_stats be flattened and the wrapper layer removed?",
+        "If the writer carries data file column stats over from the read, can the manifest scan in the manifest DV path be avoided?"
+      ]
+    },
+    {
+      "title": "Utility of partition_spec_id with a union-schema tuple",
+      "summary": "The question was what partition_spec_id is for when the partition tuple is always the union schema of all specs at the time of the write. The notes say the spec projection is needed to tell tuples with explicit nulls apart from those without, which matters for equality delete matching (spec 1 with tuple A differs from spec 2 with tuple B containing nulls). They ask whether this need goes away when equality deletes go away.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-equality-deletes"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Does the need for partition_spec_id go away once equality deletes go away?"
+      ]
+    },
+    {
+      "title": "Java API design for colocated DV and column files",
+      "summary": "The group looked at the Java API design document for colocated DVs and column files. The question recorded is one of consistency: if the DataFile interface exposes List<ColumnFile> columnFiles(), why not DeletionVector deletionVector() as well. No outcome is recorded.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": [
+        "doc:1k4x8utgh41Sn1tr98eynDKCWq035SV_f75rtNHcerVw"
+      ],
+      "open_questions": [
+        "If DataFile exposes List<ColumnFile> columnFiles(), should it also expose DeletionVector deletionVector()?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

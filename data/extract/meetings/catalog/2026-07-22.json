@@ -1,0 +1,71 @@
+{
+  "id": "meeting/catalog/2026-07-22",
+  "_input_hash": "sha256:b5c31892802cf0288850",
+  "sources": [
+    "meet:catalog:2026-07-22"
+  ],
+  "summary": "The Catalog Community Sync notes for 22 July 2026 list four items with links and record no discussion. William returned with file-level access delegation, now with a spec change pull request and two proofs of concept in his fork, one for batch remote signing and one for batch pre-signed URLs. Alex asked for review of the URL versus form encoding pull request and raised the Jackson 3 migration in iceberg-core. Andrei covered labels on the REST catalog read path: the vote thread is marked withdrawn, and the group was asked to review the spec change and the reference implementation.",
+  "topics": [
+    {
+      "title": "File-level access delegation",
+      "summary": "William's item, continuing from the previous sync. The notes link the mailing list thread, a spec change pull request, and two proofs of concept in his fork: batch remote signing and batch pre-signed URLs. No discussion or outcome is recorded.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "list:odof6m2npvktwd51cz8qnrxjv95ws4wm",
+        "gh:apache/iceberg#17332"
+      ]
+    },
+    {
+      "title": "Call for review: URL vs form encoding",
+      "summary": "Alex asked for review of the URL versus form encoding pull request, which had also been on the agenda of earlier syncs. No outcome is recorded.",
+      "initiatives": [],
+      "refs": [
+        "gh:apache/iceberg#15989"
+      ]
+    },
+    {
+      "title": "Jackson 3 migration in iceberg-core",
+      "summary": "Alex's item on migrating iceberg-core to Jackson 3, linked to a mailing list thread. The notes record no discussion or outcome.",
+      "initiatives": [],
+      "refs": [
+        "list:r3pfnttb56ml60h1l8jd5okqd2qdomv1"
+      ]
+    },
+    {
+      "title": "Labels in the REST catalog read path",
+      "summary": "Andrei's item. The '[VOTE] REST Spec: Labels on the IRC read path' thread is struck through and marked withdrawn. In its place the notes ask people to review the spec change pull request and the reference implementation pull request.",
+      "initiatives": [
+        "catalog-labels"
+      ],
+      "refs": [
+        "list:do69l2nfm88m024ol34m2pdy0rqomqnz",
+        "gh:apache/iceberg#15750",
+        "gh:apache/iceberg#17337"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the labels spec change (apache/iceberg#15750) and reference implementation (apache/iceberg#17337)."
+    },
+    {
+      "what": "Review the URL vs form encoding pull request (apache/iceberg#15989)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "williamhyun",
+      "basis": "notes"
+    },
+    {
+      "who": "Alex",
+      "basis": "notes"
+    },
+    {
+      "who": "Andrei",
+      "basis": "notes"
+    }
+  ]
+}

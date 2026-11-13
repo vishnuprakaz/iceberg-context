@@ -1,0 +1,89 @@
+{
+  "id": "meeting/catalog/2026-05-20",
+  "_input_hash": "sha256:ffd2d63211fc7532a9d6",
+  "sources": [
+    "meet:catalog:2026-05-20"
+  ],
+  "summary": "The Catalog Community Sync notes for 20 May 2026 are an agenda with links and record no outcomes. Items carried over from the previous sync were the REST spec change to pass signer properties from server to client, Auth Manager v2 (a configuration pull request and an all-in-one pull request), URL versus form encoding in the Java clients, and the storage credential refresh design, with a request to review the S3 prototype before the broader implementation continues. The one new topic was encryption support in the REST catalog, specifically credentials for the KMS.",
+  "topics": [
+    {
+      "title": "REST spec: signer property passthrough from server to client",
+      "summary": "Carried over from the previous sync and listed under Alex. The item points to the spec pull request and its mailing list thread on passing signer properties from the server to the client. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "gh:apache/iceberg#15850",
+        "list:krvmczlbwpbn08c45w1dtvr5tor6ol1y"
+      ]
+    },
+    {
+      "title": "Auth Manager v2",
+      "summary": "Carried over from the previous sync and listed under Alex. Two pull requests are linked: a first one covering configuration and an all-in-one pull request. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "gh:apache/iceberg#15703",
+        "gh:apache/iceberg#15704"
+      ]
+    },
+    {
+      "title": "URL vs form encoding in Java clients",
+      "summary": "Carried over from the previous sync and listed under Christian. The item links the mailing list thread and the pull request on URL versus form encoding in the Java clients. The notes record no discussion or outcome.",
+      "initiatives": [],
+      "refs": [
+        "list:c498svln0x18vvm42998b9nm9j6ck5yh",
+        "gh:apache/iceberg#15989"
+      ]
+    },
+    {
+      "title": "Storage credential refresh",
+      "summary": "Maninder's discussion item on the storage credential refresh design document. The sub-point raised was refreshing a single credential versus all credentials of the same table. The ask to the group was to review the prototype pull request for the S3 implementation before work continues on the broader implementation.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "doc:1R1K6X7qYqvIFkPG3m1neV5Mvy8rwWJvhSFr8DgJgQ-E",
+        "gh:apache/iceberg#15899"
+      ],
+      "open_questions": [
+        "Should a refresh return a single credential or all credentials for the same table?"
+      ]
+    },
+    {
+      "title": "Encryption support in the REST catalog (credentials for KMS)",
+      "summary": "A new topic listed under Prashant, linked to a mailing list thread on encryption support in the REST catalog and credentials for the KMS. The notes record no discussion or outcome.",
+      "initiatives": [
+        "v4-encryption",
+        "rest-auth"
+      ],
+      "refs": [
+        "list:z48t5wgx778j17pzto9kqxwysw4ysxxo"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the S3 prototype pull request for storage credential refresh (apache/iceberg#15899) before the broader implementation continues."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Alex",
+      "basis": "notes"
+    },
+    {
+      "who": "c-thiel",
+      "basis": "notes"
+    },
+    {
+      "who": "manisin",
+      "basis": "notes"
+    },
+    {
+      "who": "Prashant",
+      "basis": "notes"
+    }
+  ]
+}

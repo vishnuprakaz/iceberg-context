@@ -1,0 +1,90 @@
+{
+  "id": "meeting/python/2026-05-26",
+  "_input_hash": "sha256:5bb185495ad1dad6babd",
+  "sources": [
+    "meet:python:2026-05-26"
+  ],
+  "summary": "The PyIceberg Sync notes for 26 May 2026 are an agenda with links and record no outcomes. Items were equality delete reads through the DeleteFileIndex, metadata maintenance operations (DeleteOrphanFiles, and adding expire snapshots to the CLI so it can run without standing up Spark), the timing of the next release (Kevin), a request to review the File Format for Parquet pull request (Neelesh), PyIceberg and Rust (Gabriel), and SKILLS / AGENTS.md (Kevin).",
+  "topics": [
+    {
+      "title": "Equality delete reads",
+      "summary": "Agenda item linking the pull request that adds equality deletes to the DeleteFileIndex. The notes record no discussion or outcome.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3285"
+      ]
+    },
+    {
+      "title": "Metadata maintenance operations",
+      "summary": "Two pull requests were listed: DeleteOrphanFiles, and adding expire snapshots to the CLI. The notes call the CLI change very useful because it allows running expire snapshots without standing up Spark. No outcome is recorded.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3361",
+        "gh:apache/iceberg-python#3379"
+      ]
+    },
+    {
+      "title": "Next release",
+      "summary": "Kevin raised the question of the next PyIceberg release. The notes record no version, date or decision.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [],
+      "open_questions": [
+        "When is the next PyIceberg release?"
+      ]
+    },
+    {
+      "title": "File Format for Parquet",
+      "summary": "Neelesh asked for review of the File Format for Parquet pull request. No review outcome is recorded.",
+      "initiatives": [
+        "pyiceberg",
+        "file-format-api"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3381"
+      ]
+    },
+    {
+      "title": "PyIceberg and Rust",
+      "summary": "Gabriel's agenda item, written as 'pyiceberg<>rust'. The notes give no further detail and record no outcome.",
+      "initiatives": [
+        "pyiceberg",
+        "iceberg-rust"
+      ],
+      "refs": []
+    },
+    {
+      "title": "SKILLS / AGENTS.md",
+      "summary": "Kevin's agenda item on SKILLS and AGENTS.md. The notes give no further detail and record no outcome.",
+      "initiatives": [
+        "pyiceberg",
+        "ai-contributions"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the File Format for Parquet pull request (apache/iceberg-python#3381)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "kevin",
+      "basis": "notes"
+    },
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    },
+    {
+      "who": "Gabriel",
+      "basis": "notes"
+    }
+  ]
+}

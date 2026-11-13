@@ -1,0 +1,65 @@
+{
+  "id": "thread/t-218176922d9b85f8",
+  "_input_hash": "sha256:202f2288c7828948436a",
+  "sources": [
+    "devlist:0mpgn3p2xhlf5165m40oxbptmcf7f87m",
+    "devlist:3yo28cl70fbspvn8jlokjhg51xg45nl8",
+    "devlist:zy7jrt2dzy5voo3bovr30hfqprq9g7br",
+    "devlist:kxj8nv2jdw15l2fvk6m1zlhto9l2ordy",
+    "devlist:yhcbd7dtx5yjk7nx9gj7q9nhboxfxpx1",
+    "devlist:wn7jh6h9mf8h0go2tb2b5pggsxqry52f",
+    "devlist:n62gnhww3qzgvr1l2b5qg3qcbtlx69tj"
+  ],
+  "title": "Table and column label metadata in the Iceberg REST catalog: moving the read path to a vote",
+  "summary": "After a catalog community sync, Andrei Tserakhau restated the labels proposal as a single optional, read-only `labels` field on the load response holding flat key-value metadata the catalog already owns, with no interpretation or enforcement in the spec, and asked to move to a vote on the read path. Prashant Singh asked why the existing `config` map could not carry this and why a structured tag entity should not be defined first, citing inheritance, nested-field conflicts and stable identity for cross-catalog sync. Andrei answered that config is client configuration that can carry credentials, while labels are a separate scope, and that the read surface should precede the structured entity. Ryan Blue called reusing config dangerous and saw no reason to hold back a read-only field. Prashant said he would not veto. Andrei proposed adding guidance that clients treat labels as opaque unless they understand them. Kevin Liu supported the proposal.",
+  "positions": [
+    {
+      "who": "laskoviymishka",
+      "stance": "Vote on a minimal read-only flat `labels` field now and handle structured tag entities, renames, identity and cross-system sync in a follow-up.",
+      "source": "devlist:0mpgn3p2xhlf5165m40oxbptmcf7f87m"
+    },
+    {
+      "who": "singhpk234",
+      "stance": "Questions the need for labels when `LoadTableResult` config already carries non-standard keys, and prefers defining the structured tag entity first because flat key-values lack inheritance and stable identity for governance and catalog sync.",
+      "source": "devlist:3yo28cl70fbspvn8jlokjhg51xg45nl8"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Config is client configuration that clients merge into session and FileIO properties and that may hold secrets, so labels need their own field; the flat read path comes first and the structured entity is added later.",
+      "source": "devlist:zy7jrt2dzy5voo3bovr30hfqprq9g7br"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Mixing this metadata into catalog-controlled config is dangerous, and a read-only field should not wait on other endpoints, as with the function list and load endpoints.",
+      "source": "devlist:kxj8nv2jdw15l2fvk6m1zlhto9l2ordy"
+    },
+    {
+      "who": "singhpk234",
+      "stance": "Still prefers settling what tag metadata looks like (for example multi-valued labels) and consumption guidelines first, and is not convinced flat key-values suffice for governance, but will not veto a vote.",
+      "source": "devlist:yhcbd7dtx5yjk7nx9gj7q9nhboxfxpx1"
+    },
+    {
+      "who": "laskoviymishka",
+      "stance": "Proposes adding spec wording that clients should treat label contents as opaque unless they understand a label's semantics, while keeping the field minimal.",
+      "source": "devlist:wn7jh6h9mf8h0go2tb2b5pggsxqry52f"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Supports the proposal and likes that use cases are left unspecified; wants implementations to keep interoperability in mind.",
+      "source": "devlist:n62gnhww3qzgvr1l2b5qg3qcbtlx69tj"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No vote result in this thread. The proposer intends to start a vote on the read path; the one stated objector said he would not veto."
+  },
+  "initiatives": [
+    "catalog-labels"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15750",
+    "doc:1aj-6JlfBiMYEEVtNuh5WLMOrRQiMCcyYUGbouPM4hXI",
+    "yt:lCTV-Rhiwyc"
+  ],
+  "why_it_matters": "It records the arguments for a separate `labels` field instead of reusing `config`, and that the read path is headed to a vote ahead of any structured tag model."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "thread/t-4cd20220f5ceef8a",
+  "_input_hash": "sha256:97e0a3f3efcf91a32c8b",
+  "sources": [
+    "devlist:7ctclwomk8yqcclzj82z0htlqk2xjf49",
+    "devlist:0xxxod3kz8srb77zf1p1rzph5wt9msg3",
+    "devlist:fg7yj0ymt49godhqvjkxm78ggkpnfl2y",
+    "devlist:3j8bn5xcwj37q0c7wj4rhbsk60hhqvdx",
+    "devlist:rvw7qggqvlyjjn5gk44dhfpk5sd0wbwd"
+  ],
+  "title": "Vote on adding the File type to the Iceberg v4 spec",
+  "summary": "Talat Uyarer, on behalf of the FILE type working group, started a vote on adding a `file` data type to the v4 table spec through PR #17918. A file value is a range of bytes stored inline or as a reference to an external file, following the Parquet FILE logical type. It has six fixed implicit sub-fields (uri, offset, size, content_type, checksum, inline) whose field IDs are offsets +1 to +6 from the file field's ID. Relative URIs resolve against the table location, and each sub-field gets its own stats. File values have no equality, ordering or hashing, cannot be identifier fields or partition or sort sources, must default to null, and cannot be promoted from a struct. Mappings are given for Parquet, Avro and ORC, and the type is valid only in v4. Every reply in this part of the thread was a +1; no result message appears here.",
+  "positions": [
+    {
+      "who": "talatuyarer",
+      "stance": "Proposes adding the `file` type to the v4 spec as defined in PR #17918.",
+      "source": "devlist:7ctclwomk8yqcclzj82z0htlqk2xjf49"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result is announced in these messages. Votes cast here were all +1: four marked binding, sixteen marked non-binding and one unmarked."
+  },
+  "initiatives": [
+    "file-type"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17918"
+  ],
+  "why_it_matters": "If adopted, v4 tables gain a first-class type for referencing or embedding unstructured files, with rules implementations in every language must follow."
+}

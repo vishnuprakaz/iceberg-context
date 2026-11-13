@@ -26,7 +26,8 @@ def kb_root(tmp_path, monkeypatch):
     (raw / "11.jsonl").write_text(
         '{"id": "devlist:<m1>", "source": "devlist", "type": "email", "date": "2026-11-02T10:00:00Z", '
         '"url": "https://lists.apache.org/thread/abc", "people": ["ada"], "title": "[VOTE] Widgets for v4", '
-        '"body": "I propose we adopt monotonic widgets. Please vote.", "refs": [], "hash": "x"}\n'
+        '"body": "I propose we adopt monotonic widgets. Please vote.", "refs": [], "hash": "x", '
+        '"meta": {"thread": "t-00000000000000aa", "kind": "vote", "reply": false, "subject": "[VOTE] Widgets for v4"}}\n'
     )
     (tmp_path / "people" / "aliases.yaml").write_text("people: {}\n")
     monkeypatch.setenv("ICEBERG_CONTEXT_ROOT", str(tmp_path))

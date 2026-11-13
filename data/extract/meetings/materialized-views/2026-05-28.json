@@ -1,0 +1,23 @@
+{
+  "id": "meeting/materialized-views/2026-05-28",
+  "_input_hash": "sha256:e7c0f8cf4bcc942d7428",
+  "sources": [
+    "meet:materialized-views:2026-05-28"
+  ],
+  "summary": "The Materialized View Sync notes section for 2026-05-28 contains no written content about the meeting. It holds only a link to the recording and a link to a separate document of Gemini-generated notes, which is not part of this input. There is no agenda or other text in the section. No topics, decisions, action items or participants can be taken from the notes for this meeting.",
+  "topics": [
+    {
+      "title": "No notes recorded in the sync document",
+      "summary": "The section for this date only links the recording and an external Gemini notes document. There is no agenda or other text in the section. What was discussed is not recorded in the available source.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "doc:1i2INxD_NL9aAqzIBIQ5uGwGOt1SxkN8o",
+        "yt:gPYSokphphg"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

@@ -88,6 +88,8 @@ def build_record(info: dict, json3: dict, groups: list[dict]) -> dict:
 
 
 def fetch(vid: str, track: str, tmp: Path) -> tuple[dict, dict]:
+    """Fetch metadata and captions for one video. YouTube sometimes answers cloud addresses with a bot check;
+    that is reported as a failure and retried on a later run, not worked around."""
     out = tmp / vid
     res = subprocess.run(_ytdlp() + ["--skip-download", "--write-auto-subs", "--sub-langs", track, "--sub-format", "json3",
                                      "--write-info-json", "--no-warnings", "-o", str(out), f"https://www.youtube.com/watch?v={vid}"],
@@ -105,8 +107,21 @@ def collect(root: Path, *, max_videos: str | int = 25, pause: str | float = 3, *
     cursor = dict(st.get("cursor") or {})
     done, failed = dict(cursor.get("done") or {}), dict(cursor.get("failed") or {})
     listing = list_videos(yt["channel"])
-    todo = [v for v in listing if v["id"] not in done and failed.get(v["id"], {}).get("tries", 0) < 5][: int(max_videos)]
-    records = []
+    pending = [v for v in listing if v["id"] not in done]
+    # New videos first; ones that failed before go to the back of the queue but are always retried.
+    todo = sorted(pending, key=lambda v: failed.get(v["id"], {}).get("tries", 0))[: int(max_videos)]
+    totals = {"new": 0, "changed": 0}
+    fetched = failed_now = 0
+
+    def save(batch: list[dict]) -> None:
+        counts = upsert(root, "youtube", batch)
+        totals["new"] += counts["new"]
+        totals["changed"] += counts["changed"]
+        remaining = sum(1 for v in listing if v["id"] not in done)
+        state.save(root, "youtube", ok=True, cursor={"done": done, "failed": failed},
+                   counts={"videos_listed": len(listing), "transcripts": len(done), "remaining": remaining, "failing": len(failed)})
+
+    batch: list[dict] = []
     with tempfile.TemporaryDirectory() as tmp:
         for i, video in enumerate(todo):
             if i:
@@ -114,14 +129,30 @@ def collect(root: Path, *, max_videos: str | int = 25, pause: str | float = 3, *
             try:
                 info, subs = fetch(video["id"], yt["caption_track"], Path(tmp))
                 rec = build_record(info, subs, cfg["groups"])
-                records.append(rec)
+                batch.append(rec)
                 done[video["id"]] = rec["date"][:10]
                 failed.pop(video["id"], None)
+                fetched += 1
             except Exception as exc:  # leave it for the next run; never mark a failed video as done
                 entry = failed.get(video["id"], {"tries": 0})
                 failed[video["id"]] = {"tries": entry["tries"] + 1, "error": str(exc)[:160], "title": video["title"][:80]}
-    counts = upsert(root, "youtube", records)
-    remaining = sum(1 for v in listing if v["id"] not in done)
-    state.save(root, "youtube", ok=True, cursor={"done": done, "failed": failed},
-               counts={"videos_listed": len(listing), "transcripts": len(done), "remaining": remaining, "failing": len(failed)})
-    return {"fetched": len(records), "failed_now": sum(1 for v in todo if v["id"] in failed), "remaining": remaining, **counts}
+                failed_now += 1
+            if len(batch) >= 10:  # save progress as we go, so an interrupted run keeps what it fetched
+                save(batch)
+                batch = []
+    save(batch)
+    return {"fetched": fetched, "failed_now": failed_now, "remaining": sum(1 for v in listing if v["id"] not in done), **totals}
+
+
+def ingest_files(root: Path, info_file: Path, captions_file: Path) -> dict:
+    """Store a transcript from files fetched elsewhere (for example on a machine YouTube does not challenge)."""
+    cfg = yaml.safe_load((root / "data" / "sources.yaml").read_text())
+    rec = build_record(json.loads(Path(info_file).read_text()), json.loads(Path(captions_file).read_text()), cfg["groups"])
+    counts = upsert(root, "youtube", [rec])
+    st = state.load(root, "youtube")
+    cursor = dict(st.get("cursor") or {})
+    done, failed = dict(cursor.get("done") or {}), dict(cursor.get("failed") or {})
+    done[rec["meta"]["video"]] = rec["date"][:10]
+    failed.pop(rec["meta"]["video"], None)
+    state.save(root, "youtube", ok=True, cursor={"done": done, "failed": failed}, counts={"transcripts": len(done), "failing": len(failed)})
+    return {"id": rec["id"], "group": rec["meta"].get("group"), "date": rec["date"][:10], **counts}

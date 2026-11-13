@@ -1,0 +1,65 @@
+{
+  "id": "thread/t-6b556fb65dd1775f",
+  "_input_hash": "sha256:0dedae33011ebfaa4499",
+  "sources": [
+    "devlist:qhn00762nrxl1zmb817wqqq5tzlqolbq",
+    "devlist:6fhnlrm2jxbn187txglmf31ydwhzp8fc",
+    "devlist:k3ffgrzd6pml1cwr7ks3nsjrg36qf1fk",
+    "devlist:pzyj0bzy7ns2yyhyzybt5v8bw3sbk1dm",
+    "devlist:mfct84rgsdt7w1govwgc58kqjm0kmpc6",
+    "devlist:zfxl1dz5xcmqzvmppt4hpqxv8ctwyc5g",
+    "devlist:omhfv3wj9xj9wqgmkb0zng2j9l2jgcc9",
+    "devlist:dr7f41zpyzs43dt9plgvn7sdddbd7khw",
+    "devlist:6jc5ob7hqkcj8zn8j3p8omszqcdzqvrw",
+    "devlist:fsvort474qbm3vhqt7knrbknzo33p89r",
+    "devlist:f5l472qtqrp2hosjsdfbk3qyhm2df37r",
+    "devlist:z02kw08yskh9ho2j1vpb63sh5pzg5d2j"
+  ],
+  "title": "Integrating EagerInputFile into the manifest reader",
+  "summary": "Varun Lakhyani reported benchmarks on S3 showing that reading v4 Parquet manifests through EagerInputFile, which fetches a small file in one request, cut read time by roughly 25 to 55 percent, and asked to wire it into the manifest read path with a flag on by default. Russell Spitzer supported making it a default. Daniel Weeks objected to a manifest-specific shortcut and preferred building eager fetching into FileIO implementations so any read benefits. Russell argued the decision belongs to the code opening the file, since it is essentially a Parquet reader fix; Avro benchmarks were roughly neutral. Daniel listed three integration points (FileReader API, FileIO layer, at the point of use) and both agreed on the first. Varun moved the eager read into the Parquet reader, which now buffers files of one megabyte or less in one request. That exposed incorrect manifest lengths written by rewrite-table-path, since fixed. Russell considered the PR ready to merge.",
+  "positions": [
+    {
+      "who": "varun-lakhyani",
+      "stance": "Wire EagerInputFile into the manifest read path behind a property that defaults to true, based on benchmark gains for v4 Parquet manifests.",
+      "source": "devlist:6fhnlrm2jxbn187txglmf31ydwhzp8fc"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Eager fetching should be native to existing FileIO implementations with a size threshold, so any `InputFile::newStream` is accelerated, instead of a bespoke shortcut in ManifestFiles.",
+      "source": "devlist:pzyj0bzy7ns2yyhyzybt5v8bw3sbk1dm"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "A full-file fetch is unlikely to be worse for Avro, since Avro files are usually read in full.",
+      "source": "devlist:zfxl1dz5xcmqzvmppt4hpqxv8ctwyc5g"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "The change is a performance fix for parquet-java and should live in Iceberg's Parquet reader code (Parquet.java), not add complexity to FileIO or apply to files such as Puffin or metadata.json.",
+      "source": "devlist:dr7f41zpyzs43dt9plgvn7sdddbd7khw"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Of the three possible integration points, wrapping the stream at the point of use is the tightest coupling; the FileReader API may be the better place.",
+      "source": "devlist:6jc5ob7hqkcj8zn8j3p8omszqcdzqvrw"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "The eager path should not re-fetch the file length for HadoopInputFile, since that masks bugs and costs an extra request, while the Hadoop configuration pass-through is preserved via HadoopConfigurable.",
+      "source": "devlist:z02kw08yskh9ho2j1vpb63sh5pzg5d2j"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "Agreed to integrate eager reads at the file reader level for Parquet instead of in the manifest reader or FileIO. The reworked PR buffers Parquet files of 1 MB or less in a single request; on August 26 it was described as ready to merge but not yet merged in the thread.",
+    "source": "devlist:f5l472qtqrp2hosjsdfbk3qyhm2df37r"
+  },
+  "initiatives": [
+    "v4-metadata-tree"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17284",
+    "gh:apache/iceberg#16910"
+  ],
+  "why_it_matters": "The change affects every Parquet read of small files, not only manifests, and makes readers trust the file length passed in from metadata."
+}

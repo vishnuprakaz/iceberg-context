@@ -45,6 +45,36 @@ def cmd_integrate(_args) -> int:
     return 0
 
 
+def cmd_queue(args) -> int:
+    import json
+
+    from icekb.integrate.store import Data
+    from icekb.process import queue
+
+    data = Data(repo_root())
+    since = args.since or data.since(14)
+    if args.kind == "meetings":
+        items = queue.queue_meetings(data, since, args.transcripts_since or since, args.force)
+    else:
+        items = queue.queue_threads(data, since, args.min_messages, args.force)
+    print(json.dumps(items, indent=1))
+    return 0
+
+
+def cmd_apply(_args) -> int:
+    from icekb.process import apply
+
+    root = repo_root()
+    result = apply.apply_all(root)
+    print(f"meetings: {result['meetings']}, threads: {result['threads']}, rejected: {len(result['rejected'])}")
+    for path, errors in result["rejected"].items():
+        print(f"  REJECTED {path}")
+        for e in errors:
+            print(f"    - {e}")
+    index.write(root)
+    return 1 if result["rejected"] else 0
+
+
 def cmd_ingest(args) -> int:
     root = repo_root()
     if args.kind == "syncdocs":
@@ -53,6 +83,12 @@ def cmd_ingest(args) -> int:
         if not args.group:
             raise SystemExit("ingest syncdocs needs --group <slug from data/sources.yaml>")
         print(syncdocs.ingest(root, args.group, args.file, args.modified))
+    elif args.kind == "transcript":
+        from icekb.collectors import youtube
+
+        if not args.captions:
+            raise SystemExit("ingest transcript needs the yt-dlp .info.json as the file and --captions <.json3 file>")
+        print(youtube.ingest_files(root, args.file, args.captions))
     else:
         from icekb.ingest import calendar
 
@@ -73,10 +109,19 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("-o", "--option", action="append", default=[], metavar="KEY=VALUE")
     p.set_defaults(fn=cmd_collect)
     sub.add_parser("integrate", help="regenerate people, group, module, repository and release pages").set_defaults(fn=cmd_integrate)
+    p = sub.add_parser("queue", help="list meetings or threads that need AI extraction and write their input bundles")
+    p.add_argument("kind", choices=["meetings", "threads"])
+    p.add_argument("--since", help="YYYY-MM-DD (default: 14 days ago)")
+    p.add_argument("--transcripts-since", help="include recording transcripts for meetings on or after this date (default: --since)")
+    p.add_argument("--min-messages", type=int, default=4)
+    p.add_argument("--force", action="store_true", help="include items whose extraction is already up to date")
+    p.set_defaults(fn=cmd_queue)
+    sub.add_parser("apply", help="validate AI extractions against their sources and render record pages").set_defaults(fn=cmd_apply)
     p = sub.add_parser("ingest", help="parse a file saved from a Claude connector (meeting notes or calendar)")
-    p.add_argument("kind", choices=["syncdocs", "calendar"])
+    p.add_argument("kind", choices=["syncdocs", "calendar", "transcript"])
     p.add_argument("file")
     p.add_argument("--group", help="working-group slug, for syncdocs")
+    p.add_argument("--captions", help="caption file (.json3), for transcript")
     p.add_argument("--modified", help="the document's modifiedTime, stored to detect changes next time")
     p.set_defaults(fn=cmd_ingest)
     args = parser.parse_args(argv)

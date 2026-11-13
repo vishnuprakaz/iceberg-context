@@ -1,0 +1,52 @@
+{
+  "id": "meeting/column-updates/2026-06-30",
+  "_input_hash": "sha256:d4ae5425215d4d43ef7a",
+  "sources": [
+    "meet:column-updates:2026-06-30"
+  ],
+  "summary": "The Efficient Column Updates sync on 30 June 2026 decided the column file representation. After pushback on leaving it to implementations, the group agreed to mandate a dense format in which column update files carry filler values for deleted rows. Required columns become optional in the file schema and fillers are written as null, which keeps min/max bounds clean. Writers should write null for rows known to be deleted at write time. The base file versus column file metadata relationship was still being explored, and the notes state that the partition tuple must always match the file's content.",
+  "topics": [
+    {
+      "title": "Column file representation",
+      "summary": "The dev list proposal left the representation to the implementation, and the meeting pushed back on that: it would force every implementation to support the superset, including files with only the live rows rather than rows with filler values. The argument made was to mandate rows with filler values in the spec. The group decided on a dense format, which simplifies readers by allowing direct batch reads without row alignment logic. Fillers are null, with required columns made optional in the file schema, so that min/max bounds are not polluted and existing Parquet/Arrow null handling is used.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [
+        "list:jbh1gbrso5h6l4by9rh9poy2cjjtb8j0"
+      ],
+      "decisions": [
+        "Column update files must use a dense format with filler values for deleted rows.",
+        "Required columns are made optional in the column file schema and filler values are written as null, to preserve stats.",
+        "Writers should write null for rows known to be deleted at write time; this is a 'should' requirement so that a DV applied mid-write does not invalidate files."
+      ]
+    },
+    {
+      "title": "Column updates metadata representation",
+      "summary": "The group continued exploring the two options for how the base file relates to column files: the base file as a special entity, or the base file as just another ColumnFile. The notes record no decision at this meeting.",
+      "initiatives": [
+        "v4-column-updates",
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "list:7jryw9dfvc02s411twn4o7s5gjrybfxg"
+      ],
+      "open_questions": [
+        "Should the base file be a special entity or just another ColumnFile?"
+      ]
+    },
+    {
+      "title": "Updates on partition tuples",
+      "summary": "The notes state that the partition tuple in file metadata must always match the file's content. Updates are allowed, including moving a file to an unpartitioned state by unsetting its tuple.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [],
+      "decisions": [
+        "The partition tuple in file metadata must always match the file's content; updates are allowed, including unsetting the tuple to make a file unpartitioned."
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

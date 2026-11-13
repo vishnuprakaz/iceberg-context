@@ -1,0 +1,27 @@
+{
+  "id": "meeting/v4-metadata/2026-05-18",
+  "_input_hash": "sha256:2dbc27f18961055300e1",
+  "sources": [
+    "meet:v4-metadata:2026-05-18"
+  ],
+  "summary": "The V4 metadata sync on 18 May 2026 discussed the REPLACED and MODIFIED entry statuses. The notes record two conclusions. When a deletion vector change or a column update change is made, the corresponding tracking snapshot ID is set to the current snapshot, the old entry is marked REPLACED and the changed entry is marked MODIFIED. The REPLACED and MODIFIED entries do not necessarily have to be colocated in the same manifest.",
+  "topics": [
+    {
+      "title": "REPLACED / MODIFIED entry status",
+      "summary": "The group discussed how the REPLACED and MODIFIED statuses apply to deletion vector changes and column update changes. The conclusion was that such a change sets the corresponding tracking snapshot ID to the current snapshot, marks the old entry REPLACED and marks the changed entry MODIFIED. It was also concluded that the two entries need not sit in the same manifest.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": [
+        "yt:kIoKuclAFc8"
+      ],
+      "decisions": [
+        "A DV change or column update change sets the corresponding tracking snapshot ID to the current snapshot; the old entry is marked REPLACED and the changed entry MODIFIED.",
+        "REPLACED and MODIFIED entries do not have to be colocated in the same manifest."
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

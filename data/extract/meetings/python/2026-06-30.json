@@ -1,0 +1,59 @@
+{
+  "id": "meeting/python/2026-06-30",
+  "_input_hash": "sha256:9fa979631eceb1b614e8",
+  "sources": [
+    "meet:python:2026-06-30"
+  ],
+  "summary": "The PyIceberg Sync notes for 30 June 2026 are an agenda only; the attendee and announcement sections are empty and no outcomes are recorded. Kevin listed the 0.12 release, with Alex as release manager and a link to the 0.12 milestone. Jared listed an issue and a design document on support for a pluggable backend architecture in PyIceberg, noting it had been discussed before in a GitHub discussion. Neelesh again asked for review of the File Format for Parquet pull request.",
+  "topics": [
+    {
+      "title": "0.12 release",
+      "summary": "Kevin's item on the 0.12 release. The notes name Alex as release manager and link the 0.12 milestone. No date or further detail is recorded.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Pluggable backend architecture",
+      "summary": "Jared's item, linking an issue and the design document 'Support for PyIceberg Pluggable Backend Architecture'. The notes mention that the subject was formerly discussed in a GitHub discussion. No discussion or outcome is recorded.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3554",
+        "doc:1HowY-j93fmyVSCDXnq43vaepSEQO9O04wdHAFVWkOZo"
+      ]
+    },
+    {
+      "title": "File Format for Parquet: needs review",
+      "summary": "Neelesh listed the File Format for Parquet pull request as needing review, as at the May sync. No outcome is recorded.",
+      "initiatives": [
+        "pyiceberg",
+        "file-format-api"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3381"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the File Format for Parquet pull request (apache/iceberg-python#3381)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "kevin",
+      "basis": "notes"
+    },
+    {
+      "who": "Jared",
+      "basis": "notes"
+    },
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    }
+  ]
+}
