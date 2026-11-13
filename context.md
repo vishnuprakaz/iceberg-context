@@ -1,6 +1,7 @@
 # Iceberg Contribution Context
 
-Private working memory for contributing to Apache Iceberg (Java) and PyIceberg.
+Working memory for contributing to Apache Iceberg (Java) and PyIceberg.
+This repo is **public by design** (may later grow into a shared Iceberg knowledge base).
 **Read this first at the start of every session.** Keep it current: update it
 whenever we learn something durable, finish a piece of work, or change plans.
 
@@ -15,7 +16,8 @@ whenever we learn something durable, finish a piece of work, or change plans.
 4. Read each repo's `AGENTS.md` and `CONTRIBUTING.md` before changing code.
 
 ## Ground rules
-- Never commit this context into the fork repos (forks of public repos are public).
+- This repo is public: never put secrets, credentials, tokens, or personal info here.
+- Keep this context out of the fork repos; forks hold only upstream-bound code.
 - Upstream PRs go fork -> `apache/*`; the user opens them (or approves).
 - Follow upstream conventions (see AGENTS.md); small, focused PRs.
 
@@ -40,9 +42,10 @@ _None yet._ Next: pick contribution areas (good-first-issues, spec gaps between 
 | Date | Repo | What | Status / Link |
 |------|------|------|---------------|
 | 2026-11-13 | — | Created context repo | done |
+| 2026-11-13 | — | Decided: keep repo public; for now it serves our own contribution work | decided |
 
 ## Open questions / ideas
-- 
+- Later: turn this repo into a public context system for anyone learning Iceberg.
 
 ## Learnings
 - 
