@@ -2,7 +2,7 @@
 """kb: query the Iceberg Context knowledge base.
 
 Standard library only. Reads index/*.jsonl, the Markdown pages, data/raw/ and data/state/ from the
-repository, and keeps a full-text index in a cache directory outside the repository.
+repository, and keeps a search index in a cache directory outside the repository.
 """
 from __future__ import annotations
 
@@ -13,14 +13,16 @@ import json
 import os
 import re
 import sqlite3
+import subprocess
 import sys
 from pathlib import Path
 
 PAGE_DIRS = ("people", "groups", "initiatives", "modules", "repos", "releases", "records")
 DOC_DIRS = ("docs", "research", "notes", "briefings", "maps")
 DOC_FILES = ("state-of-iceberg.md", "opportunities.md")
-SOURCES = ("devlist", "github", "git", "spec", "asf", "siblings", "syncdocs", "designdocs", "calendar", "youtube")
+SOURCES = ("devlist", "github", "git", "spec", "asf", "syncdocs", "calendar", "youtube")
 FRONTMATTER = re.compile(r"\A---\n.*?\n---\n?", re.S)
+SCHEMA_VERSION = "3"
 
 
 def repo_root() -> Path:
@@ -59,7 +61,7 @@ def indexed_files(root: Path) -> list[Path]:
 
 
 def fingerprint(root: Path, files: list[Path]) -> str:
-    h = hashlib.sha1()
+    h = hashlib.sha1(SCHEMA_VERSION.encode())
     for f in files:
         st = f.stat()
         h.update(f"{f.relative_to(root)}|{st.st_size}|{st.st_mtime_ns}\n".encode())
@@ -73,25 +75,33 @@ def cache_dir() -> Path:
     return d
 
 
+def connect(path: Path) -> sqlite3.Connection:
+    con = sqlite3.connect(path)
+    con.row_factory = sqlite3.Row
+    return con
+
+
 def open_db(root: Path) -> sqlite3.Connection:
     files = indexed_files(root)
     db_path = cache_dir() / f"kb-{fingerprint(root, files)}.sqlite"
     if db_path.exists():
-        con = sqlite3.connect(db_path)
-        con.row_factory = sqlite3.Row
-        return con
-    for old in cache_dir().glob("kb-*.sqlite"):
+        return connect(db_path)
+    for old in cache_dir().glob("kb-*"):
         old.unlink(missing_ok=True)
     tmp = db_path.with_suffix(".tmp")
-    tmp.unlink(missing_ok=True)
+    if sum(f.stat().st_size for f in files) > 20_000_000:
+        print("kb: building the search index (first run after an update; takes a moment)…", file=sys.stderr)
     con = sqlite3.connect(tmp)
     con.executescript(
         """
+        pragma journal_mode = off; pragma synchronous = off;
         create table nodes(id text primary key, type text, title text, status text, updated text, path text, meta text);
         create table edges(src text, rel text, dst text, confidence text, source text, since text, meta text);
-        create index edges_src on edges(src); create index edges_dst on edges(dst);
         create table raw(id text primary key, source text, type text, date text, url text, title text,
-                         people text, refs text, file text);
+                         people text, file text, meta text);
+        create table refs(src text, dst text);
+        create table people(person text, id text, type text, date text);
+        create table files(path text, id text, repo text, date text, kind text);
         create virtual table fts using fts5(id unindexed, kind unindexed, date unindexed, title, body,
                                             tokenize='porter unicode61');
         """
@@ -104,6 +114,8 @@ def open_db(root: Path) -> sqlite3.Connection:
         con.execute("insert into edges values(?,?,?,?,?,?,?)",
                     (e["src"], e["rel"], e["to"], e.get("confidence"), e.get("source"), e.get("since"),
                      json.dumps(e, ensure_ascii=False)))
+    for e in read_jsonl(root / "data" / "links" / "edges.jsonl"):
+        con.execute("insert into refs values(?,?)", (e["src"], e["dst"]))
     node_by_path = {r[0]: r[1] for r in con.execute("select path, id from nodes")}
     for f in files:
         rel = f.relative_to(root).as_posix()
@@ -115,20 +127,51 @@ def open_db(root: Path) -> sqlite3.Connection:
             con.execute("insert into fts values(?,?,?,?,?)", (pid, kind, "", first, text))
         elif rel.startswith("data/raw/"):
             for r in read_jsonl(f):
+                meta = r.get("meta") or {}
+                rid, date = r["id"], r.get("date") or ""
                 con.execute("insert or replace into raw values(?,?,?,?,?,?,?,?,?)",
-                            (r["id"], r.get("source"), r.get("type"), r.get("date"), r.get("url"), r.get("title"),
-                             json.dumps(r.get("people") or []), json.dumps(r.get("refs") or []), rel))
-                con.execute("insert into fts values(?,?,?,?,?)",
-                            (r["id"], r.get("type") or "raw", r.get("date") or "", r.get("title") or "", r.get("body") or ""))
+                            (rid, r.get("source"), r.get("type"), date, r.get("url"), r.get("title"),
+                             json.dumps(r.get("people") or []), rel, json.dumps(meta, ensure_ascii=False)))
+                con.executemany("insert into refs values(?,?)", [(rid, d) for d in r.get("refs") or []])
+                con.executemany("insert into people values(?,?,?,?)",
+                                [(p, rid, r.get("type"), date) for p in r.get("people") or []])
+                for person in {v.get("by") for v in meta.get("reviews") or [] if v.get("by")}:
+                    con.execute("insert into people values(?,?,?,?)", (person, rid, "reviewed", date))
+                if meta.get("files"):
+                    kind = r.get("type")
+                    con.executemany("insert into files values(?,?,?,?,?)",
+                                    [(p, rid, meta.get("repo"), date, kind) for p in meta["files"]])
+                if r.get("type") != "commit":
+                    con.execute("insert into fts values(?,?,?,?,?)",
+                                (rid, r.get("type") or "raw", date, r.get("title") or "", r.get("body") or ""))
+    con.executescript(
+        """
+        create index edges_src on edges(src); create index edges_dst on edges(dst);
+        create index refs_dst on refs(dst); create index refs_src on refs(src);
+        create index people_p on people(person, date); create index files_p on files(path, date);
+        create index raw_date on raw(type, date);
+        """
+    )
     con.commit()
     con.close()
     tmp.replace(db_path)
-    con = sqlite3.connect(db_path)
-    con.row_factory = sqlite3.Row
-    return con
+    return connect(db_path)
 
 
-# ---------------------------------------------------------------- commands
+# ---------------------------------------------------------------- helpers
+
+def today() -> dt.date:
+    return dt.datetime.now(dt.timezone.utc).date()
+
+
+def since_date(value: str | None, default_days: int) -> str:
+    """Accept YYYY-MM-DD or a span such as 7d, 6w, 3m, 1y."""
+    if value and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        return value
+    m = re.fullmatch(r"(\d+)([dwmy])", value or "")
+    days = int(m.group(1)) * {"d": 1, "w": 7, "m": 30, "y": 365}[m.group(2)] if m else default_days
+    return (today() - dt.timedelta(days=days)).isoformat()
+
 
 def age(ts: str | None) -> str:
     if not ts:
@@ -141,22 +184,77 @@ def age(ts: str | None) -> str:
     return f"{hours:.0f}h ago" if hours < 48 else f"{hours / 24:.0f}d ago"
 
 
+def who(p: str) -> str:
+    return p[5:] if p.startswith("name:") else ("@" + p if not p.startswith("asf:") else p)
+
+
+def people_of(row) -> str:
+    return ", ".join(who(p) for p in json.loads(row["people"] or "[]"))
+
+
+def excerpt(text: str, grep: str | None, chars: int) -> str:
+    if grep:
+        hits = [m.start() for m in re.finditer(re.escape(grep), text, re.I)]
+        if not hits:
+            return f"(no match for {grep!r} in this source)"
+        half = max(200, chars // (2 * min(len(hits), 3)))
+        parts = [text[max(0, h - half): h + half].strip() for h in hits[:3]]
+        return "\n…\n".join(parts) + (f"\n\n({len(hits)} matches)" if len(hits) > 3 else "")
+    return text if len(text) <= chars else text[:chars].rstrip() + f"\n… ({len(text) - chars} more characters; use --chars or --grep)"
+
+
+def load_record(root: Path, row) -> dict:
+    return next(r for r in read_jsonl(root / row["file"]) if r["id"] == row["id"])
+
+
+def match_paths(con, path: str) -> tuple[str, list]:
+    """Resolve a user path to a SQL condition: exact file, path suffix, or directory prefix."""
+    path = path.strip().lstrip("./")
+    if con.execute("select 1 from files where path = ? limit 1", (path,)).fetchone():
+        return "path = ?", [path]
+    if con.execute("select 1 from files where path like ? limit 1", (path.rstrip("/") + "/%",)).fetchone():
+        return "path like ?", [path.rstrip("/") + "/%"]
+    return "path like ?", ["%" + path]
+
+
+def find_node(con, text: str, kind: str | None = None):
+    cond, params = ("and type = ?", [kind]) if kind else ("", [])
+    for sql, arg in (("id = ?", text), ("id = ?", f"{kind}/{text}" if kind else text), ("id like ?", f"%/{text}"),
+                     ("lower(title) = lower(?)", text), ("id like ?", f"%{text}%"), ("title like ?", f"%{text}%")):
+        row = con.execute(f"select * from nodes where {sql} {cond} order by length(id) limit 1", [arg] + params).fetchone()
+        if row:
+            return row
+    return None
+
+
+def mentions(con, target: str, limit: int = 6) -> list:
+    return con.execute(
+        "select r.* from refs f join raw r on r.id = f.src where f.dst = ? and r.type != 'commit' "
+        "group by r.id order by r.date desc limit ?", (target, limit)).fetchall()
+
+
+def print_mentions(con, target: str, indent: str = "    ", limit: int = 6) -> None:
+    for m in mentions(con, target, limit):
+        print(f"{indent}↳ {m['type']} {m['date'][:10]}  {m['title'][:90]}  [{m['id']}]")
+
+
+# ---------------------------------------------------------------- commands
+
 def cmd_status(root: Path, args) -> int:
     con = open_db(root)
     print("Iceberg Context status\n")
-    print(f"{'source':<12} {'status':<8} {'last success':<14} detail")
+    print(f"{'source':<10} {'status':<8} {'last success':<13} detail")
     for s in SOURCES:
         p = root / "data" / "state" / f"{s}.json"
         st = json.loads(p.read_text()) if p.exists() else {"status": "never"}
         counts = ", ".join(f"{k}={v}" for k, v in sorted((st.get("counts") or {}).items()))
-        detail = st.get("error") or counts
-        print(f"{s:<12} {st.get('status', 'never'):<8} {age(st.get('last_success')):<14} {detail}")
+        print(f"{s:<10} {st.get('status', 'never'):<8} {age(st.get('last_success')):<13} {st.get('error') or counts}")
     print("\nKnowledge base:")
     rows = con.execute("select type, count(*) c from nodes group by type order by type").fetchall()
-    print("  pages: " + (", ".join(f"{r['type']}={r['c']}" for r in rows) or "none yet"))
-    print(f"  links: {con.execute('select count(*) from edges').fetchone()[0]}")
-    rows = con.execute("select source, count(*) c, max(date) d from raw group by source order by source").fetchall()
-    print("  raw records: " + (", ".join(f"{r['source']}={r['c']} (to {str(r['d'])[:10]})" for r in rows) or "none yet"))
+    print("  pages:   " + (", ".join(f"{r['type']}={r['c']}" for r in rows) or "none yet"))
+    print(f"  links:   {con.execute('select count(*) from edges').fetchone()[0]}")
+    rows = con.execute("select type, count(*) c, max(date) d from raw group by type order by type").fetchall()
+    print("  records: " + (", ".join(f"{r['type']}={r['c']} (to {str(r['d'])[:10]})" for r in rows) or "none yet"))
     briefs = sorted((root / "briefings" / "weekly").glob("*.md"))
     print(f"  latest briefing: {briefs[-1].relative_to(root) if briefs else 'none yet'}")
     return 0
@@ -172,22 +270,27 @@ def fts_terms(q: str) -> list[str]:
     return out
 
 
-def cmd_search(root: Path, args) -> int:
-    con = open_db(root)
-    terms = fts_terms(" ".join(args.query))
+def search_rows(con, query: str, kind: str | None, since: str | None, limit: int):
+    terms = fts_terms(query)
     if not terms:
-        print("no results")
-        return 0
-    kind = "and kind = ?" if args.type else ""
+        return [], "all"
+    cond = ("and kind = ? " if kind else "") + ("and (date = '' or date >= ?) " if since else "")
     sql = ("select id, kind, date, title, snippet(fts, 4, '[', ']', ' … ', 24) snip from fts "
-           f"where fts match ? {kind} order by bm25(fts, 0, 0, 0, 5.0, 1.0) limit ?")
+           f"where fts match ? {cond} order by bm25(fts, 0, 0, 0, 5.0, 1.0) limit ?")
     rows, mode = [], "all"
     # First require every term; if nothing matches, fall back to any term, best matches first.
     for mode, joiner in (("all", " "), ("any", " OR ")):
-        params = [joiner.join(terms)] + ([args.type] if args.type else []) + [args.limit]
+        params = [joiner.join(terms)] + ([kind] if kind else []) + ([since] if since else []) + [limit]
         rows = con.execute(sql, params).fetchall()
         if rows or len(terms) == 1:
             break
+    return rows, mode
+
+
+def cmd_search(root: Path, args) -> int:
+    con = open_db(root)
+    since = since_date(args.since, 0) if args.since else None
+    rows, mode = search_rows(con, " ".join(args.query), args.type, since, args.limit)
     if not rows:
         print("no results")
         return 0
@@ -205,13 +308,22 @@ def cmd_source(root: Path, args) -> int:
     ident = args.id
     row = con.execute("select * from raw where id = ?", (ident,)).fetchone()
     if row:
-        rec = next(r for r in read_jsonl(root / row["file"]) if r["id"] == ident)
+        rec = load_record(root, row)
+        meta = rec.get("meta") or {}
         print(f"id:     {rec['id']}\ntype:   {rec.get('type')} ({rec.get('source')})\ndate:   {rec.get('date')}")
-        print(f"title:  {rec.get('title', '')}\npeople: {', '.join(rec.get('people') or [])}\nurl:    {rec.get('url')}")
+        print(f"title:  {rec.get('title', '')}\npeople: {people_of(row)}\nurl:    {rec.get('url')}")
+        for key in ("state", "merged_by", "labels", "milestone", "group", "status", "kind", "video", "confidence"):
+            if meta.get(key):
+                value = meta[key]
+                print(f"{key + ':':<8}{', '.join(value) if isinstance(value, list) else value}")
+        if meta.get("reviews"):
+            print("reviews: " + ", ".join(f"@{v['by']} {v['state'].lower()}" for v in meta["reviews"][:15]))
         if rec.get("ai_generated"):
             print("note:   this source text was itself AI-generated")
         if rec.get("refs"):
             print(f"refs:   {', '.join(rec['refs'][:20])}")
+        if meta.get("files"):
+            print(f"files:  {', '.join(meta['files'][:12])}" + (" …" if len(meta["files"]) > 12 else ""))
         print()
         print(excerpt(rec.get("body") or "", args.grep, args.chars))
         return 0
@@ -225,33 +337,331 @@ def cmd_source(root: Path, args) -> int:
     return 1
 
 
-def excerpt(text: str, grep: str | None, chars: int) -> str:
-    if grep:
-        hits = [m.start() for m in re.finditer(re.escape(grep), text, re.I)]
-        if not hits:
-            return f"(no match for {grep!r} in this source)"
-        half = max(200, chars // (2 * min(len(hits), 3)))
-        parts = [text[max(0, h - half): h + half].strip() for h in hits[:3]]
-        return "\n…\n".join(parts) + (f"\n\n({len(hits)} matches)" if len(hits) > 3 else "")
-    return text if len(text) <= chars else text[:chars].rstrip() + f"\n… ({len(text) - chars} more characters; use --chars or --grep)"
+def cmd_why(root: Path, args) -> int:
+    con = open_db(root)
+    cond, params = match_paths(con, args.path)
+    commits = con.execute(
+        f"select r.*, count(*) n from files f join raw r on r.id = f.id where f.kind = 'commit' and {cond} "
+        "group by r.id order by r.date desc limit ?", params + [args.limit]).fetchall()
+    if not commits:
+        print(f"no history found for {args.path!r}. Paths are relative to the repository root, e.g. core/src/main/java/…")
+        return 1
+    total = con.execute(f"select count(distinct id), min(date), count(distinct path) from files where kind = 'commit' and {cond}",
+                        params).fetchone()
+    print(f"History of {args.path}: {total[0]} commits since {total[1][:10]}"
+          + (f" across {total[2]} files" if total[2] > 1 else "") + f". Newest {len(commits)}:\n")
+    for c in commits:
+        meta = json.loads(c["meta"])
+        target = f"gh:{meta['repo']}#{meta['pr']}" if meta.get("pr") else None
+        print(f"{c['date'][:10]}  {c['title']}\n    by {people_of(c)}   {c['url']}")
+        if target:
+            pr = con.execute("select * from raw where id = ?", (target,)).fetchone()
+            if pr:
+                pm = json.loads(pr["meta"])
+                revs = ", ".join(sorted({"@" + v["by"] for v in pm.get("reviews") or [] if v.get("by")}))
+                print(f"    PR {target}: reviewed by {revs or 'n/a'}; merged by @{pm.get('merged_by') or 'n/a'}; "
+                      f"{pm.get('comments', 0)} comments   (kb source {target})")
+            else:
+                print(f"    PR https://github.com/{meta['repo']}/pull/{meta['pr']}  (details not synced yet)")
+            print_mentions(con, target)
+        print()
+    if args.symbol:
+        checkout = Path(args.checkout or ".").resolve()
+        res = subprocess.run(["git", "-C", str(checkout), "log", "--format=%ad %h %s", "--date=short", "-s",
+                              f"-L:{args.symbol}:{args.path}"], capture_output=True, text=True)
+        print(f"Commits touching `{args.symbol}` (from the checkout at {checkout}):")
+        print(res.stdout.strip() or f"  (git log -L failed: {res.stderr.strip()[:200]}; pass --checkout <path to an Iceberg clone with history>)")
+    print("Next: `kb source <id>` shows the discussion text for any id in brackets.")
+    return 0
+
+
+def cmd_context(root: Path, args) -> int:
+    con = open_db(root)
+    recent = since_date(args.since, 365)
+    for path in args.paths:
+        cond, params = match_paths(con, path)
+        dir_cond, dir_params = ("path like ?", [path.rsplit("/", 1)[0] + "/%"]) if "/" in path else (cond, params)
+        print(f"== {path}")
+        repo = con.execute(f"select repo from files where {cond} limit 1", params).fetchone()
+        if not repo:
+            print("  no history found for this path\n")
+            continue
+        top = path.split("/")[0]
+        module = find_node(con, f"module/{repo['repo'].split('/')[1]}/{top}")
+        if module:
+            print(f"  module page: {module['path']} ({module['title']})")
+        rows = con.execute(
+            f"select p.person, count(distinct f.id) n from files f join people p on p.id = f.id "
+            f"where f.kind = 'commit' and f.date >= ? and {dir_cond} group by p.person order by n desc limit 6",
+            [recent] + dir_params).fetchall()
+        print(f"  active authors in this directory since {recent}: " + (", ".join(f"{who(r['person'])} ({r['n']})" for r in rows) or "none"))
+        rows = con.execute(
+            f"select p.person, count(distinct p.id) n from files f join people p on p.id = f.id "
+            f"where f.kind = 'pr' and p.type = 'reviewed' and f.date >= ? and {dir_cond} "
+            "group by p.person order by n desc limit 6", [recent] + dir_params).fetchall()
+        print("  reviewers of pull requests here: " + (", ".join(f"{who(r['person'])} ({r['n']})" for r in rows)
+                                                       or "not synced yet (see maps/reviewers.md)"))
+        open_prs = con.execute(
+            f"select distinct r.* from files f join raw r on r.id = f.id where f.kind = 'pr' and {cond} "
+            "and json_extract(r.meta, '$.state') = 'open' order by r.date desc limit 8", params).fetchall()
+        print(f"  open pull requests touching it: {len(open_prs) or 'none found'}")
+        for r in open_prs:
+            print(f"    {r['id']}  {r['title'][:90]}  ({people_of(r)}, {r['date'][:10]})")
+        commits = con.execute(
+            f"select distinct r.* from files f join raw r on r.id = f.id where f.kind = 'commit' and {cond} "
+            "order by r.date desc limit 5", params).fetchall()
+        print("  latest changes:")
+        seen_init = {}
+        for c in commits:
+            meta = json.loads(c["meta"])
+            print(f"    {c['date'][:10]}  {c['title'][:100]}")
+            if meta.get("pr"):
+                target = f"gh:{meta['repo']}#{meta['pr']}"
+                print_mentions(con, target, indent="        ", limit=3)
+                for e in con.execute("select n.id, n.title from edges e join nodes n on n.id = e.src where e.dst = ?", (target,)):
+                    seen_init[e["id"]] = e["title"]
+        if seen_init:
+            print("  related pages: " + ", ".join(f"{t} [{i}]" for i, t in seen_init.items()))
+        print()
+    print("Also read AGENTS.md and CONTRIBUTING.md in the repository you are editing. `kb why <path>` gives the longer history.")
+    return 0
+
+
+def show_node(root: Path, con, node, chars: int) -> None:
+    print(f"{node['title']}  [{node['id']}]" + (f"  status: {node['status']}" if node["status"] else "")
+          + (f"  updated: {node['updated']}" if node["updated"] else ""))
+    print(f"file: {node['path']}\n")
+    text = FRONTMATTER.sub("", (root / node["path"]).read_text(encoding="utf-8"))
+    text = re.sub(r"<!-- kb:generated:(start|end) -->\n?", "", text).strip()
+    print(excerpt(text, None, chars))
+    out = con.execute("select * from edges where src = ? order by rel, dst", (node["id"],)).fetchall()
+    inc = con.execute("select * from edges where dst = ? order by rel, src", (node["id"],)).fetchall()
+    if out or inc:
+        print("\nLinks:")
+    for e in out:
+        note = f" ({e['confidence']})" if e["confidence"] and e["confidence"] != "observed" else ""
+        print(f"  {e['rel']} → {e['dst']}{note}")
+    for e in inc:
+        print(f"  {e['src']} {e['rel']} → this")
+
+
+def cmd_show(kind: str | None):
+    def run(root: Path, args) -> int:
+        con = open_db(root)
+        node = find_node(con, " ".join(args.name), kind)
+        if not node:
+            label = kind or "page"
+            print(f"kb: no {label} matches {' '.join(args.name)!r}.")
+            rows = con.execute("select id, title from nodes where type = ? order by id limit 60", (kind,)).fetchall() if kind else []
+            if rows:
+                print(f"Known {label}s: " + ", ".join(r["id"].split("/", 1)[1] for r in rows))
+            return 1
+        show_node(root, con, node, args.chars)
+        if kind == "person":
+            login = node["id"].split("/", 1)[1]
+            recent = since_date(None, 365)
+            rows = con.execute("select type, count(distinct id) n from people where person = ? and date >= ? group by type",
+                               (login, recent)).fetchall()
+            if rows:
+                print(f"\nActivity since {recent}: " + ", ".join(f"{r['type']}={r['n']}" for r in rows))
+            rows = con.execute("select r.* from people p join raw r on r.id = p.id where p.person = ? and r.type = 'email' "
+                               "and json_extract(r.meta, '$.reply') = 0 order by r.date desc limit 6", (login,)).fetchall()
+            if rows:
+                print("Recent threads started:")
+                for r in rows:
+                    print(f"  {r['date'][:10]}  {r['title'][:100]}  [{r['id']}]")
+        return 0
+    return run
+
+
+def cmd_who(root: Path, args) -> int:
+    con = open_db(root)
+    topic = " ".join(args.topic)
+    recent = since_date(args.since, 365)
+    if "/" in topic or re.search(r"\.\w{1,5}$", topic):
+        cond, params = match_paths(con, topic)
+        if con.execute(f"select 1 from files where {cond} limit 1", params).fetchone():
+            print(f"People active on {topic} since {recent}:\n")
+            for label, kind, ptype in (("authors of merged changes", "commit", "commit"), ("reviewers", "pr", "reviewed")):
+                rows = con.execute(
+                    f"select p.person, count(distinct p.id) n, max(p.date) last from files f join people p on p.id = f.id "
+                    f"where f.kind = ? and p.type = ? and f.date >= ? and {cond} group by p.person order by n desc limit 8",
+                    [kind, ptype, recent] + params).fetchall()
+                print(f"  {label}: " + (", ".join(f"{who(r['person'])} ({r['n']}, last {r['last'][:10]})" for r in rows)
+                                         or "not synced yet"))
+            top = topic.split("/")[0]
+            module = con.execute("select * from nodes where type = 'module' and id like ?", (f"%/{top}",)).fetchone()
+            if module:
+                print(f"\n  module page: {module['path']}")
+            return 0
+    hits = []
+    for kind in ("initiative", "group", "module"):
+        rows, _ = search_rows(con, topic, kind, None, 3)
+        hits += rows
+    if not hits:
+        print(f"no group, initiative or module matches {topic!r}. Try `kb search {topic}`.")
+        return 1
+    print(f"Where {topic!r} is handled:\n")
+    for h in hits:
+        node = con.execute("select * from nodes where id = ?", (h["id"],)).fetchone()
+        meta = json.loads(node["meta"])
+        print(f"{node['title']}  [{node['id']}]")
+        for key in ("cadence", "status", "notes_doc"):
+            if meta.get(key):
+                print(f"  {key}: {meta[key]}")
+        rels = con.execute("select * from edges where (src = ? or dst = ?) and (src like 'person/%' or dst like 'person/%')",
+                           (node["id"], node["id"])).fetchall()
+        for e in rels[:10]:
+            other = e["dst"] if e["src"] == node["id"] else e["src"]
+            note = f" ({e['confidence']})" if e["confidence"] and e["confidence"] != "observed" else ""
+            print(f"  {e['rel']}: @{other.split('/', 1)[1]}{note}")
+        print()
+    return 0
+
+
+def cmd_whats_new(root: Path, args) -> int:
+    con = open_db(root)
+    since = since_date(args.since, 7)
+    area = f"%{args.area}%" if args.area else None
+    print(f"What changed since {since}" + (f" (filter: {args.area})" if args.area else "") + "\n")
+
+    def section(title, sql, params, fmt):
+        rows = con.execute(sql, params).fetchall()
+        if rows:
+            print(f"{title} ({len(rows)}):")
+            for r in rows:
+                print("  " + fmt(r))
+            print()
+
+    def line(r):
+        return f"{r['date'][:10]}  {r['title'][:100]}  [{r['id']}]"
+    like = "and title like ?" if area else ""
+    extra = [area] if area else []
+    for kinds, title in ((("vote", "release-vote"), "Votes started"), (("result",), "Vote results"), (("announce",), "Announcements"),
+                         (("discuss", "release-planning"), "Discussions started"), (("roster",), "Roster news")):
+        marks = ",".join("?" * len(kinds))
+        reply = "" if kinds == ("result",) else "and json_extract(meta, '$.reply') = 0"
+        section(title, f"select * from raw where type = 'email' and date >= ? and json_extract(meta, '$.kind') in ({marks}) "
+                       f"{reply} {like} group by json_extract(meta, '$.thread') order by date desc limit 25",
+                [since, *kinds] + extra, line)
+    section("Meetings with notes", f"select * from raw where type = 'meeting-notes' and date >= ? {like} order by date desc limit 25",
+            [since] + extra, line)
+    section("Recordings", f"select * from raw where type = 'transcript' and date >= ? {like} order by date desc limit 25",
+            [since] + extra, line)
+    section("Spec and API changes merged",
+            "select * from raw where type = 'commit' and date >= ? and (title like 'Spec%' or title like '%OpenAPI%' or title like 'API%' "
+            f"or title like 'REST%') {like} order by date desc limit 20", [since] + extra, lambda r: f"{r['date'][:10]}  {r['title'][:110]}")
+    n = con.execute("select count(*) from raw where type = 'commit' and date >= ?", (since,)).fetchone()[0]
+    print(f"Commits merged upstream in the period: {n}")
+    briefs = sorted((root / "briefings" / "weekly").glob("*.md"))
+    if briefs:
+        print(f"Latest written briefing: {briefs[-1].relative_to(root)}")
+    return 0
+
+
+def cmd_upcoming(root: Path, args) -> int:
+    con = open_db(root)
+    start = today().isoformat()
+    end = (today() + dt.timedelta(days=args.days)).isoformat()
+    rows = con.execute("select * from raw where type = 'event' and date >= ? and date <= ? order by date", (start, end + "T99")).fetchall()
+    if not rows:
+        print("no upcoming events synced (the calendar is collected in the weekly sync)")
+        return 0
+    print(f"Community meetings in the next {args.days} days (times in UTC):\n")
+    for r in rows:
+        meta = json.loads(r["meta"])
+        print(f"{r['date'][:16].replace('T', ' ')}  {r['title']}")
+        if meta.get("group"):
+            last = con.execute("select * from raw where type = 'meeting-notes' and json_extract(meta, '$.group') = ? "
+                               "order by date desc limit 1", (meta["group"],)).fetchone()
+            print(f"    group: groups/{meta['group']}.md" + (f"   last notes: {last['date'][:10]} [{last['id']}]" if last else ""))
+        for key in ("notes_doc", "join"):
+            if meta.get(key):
+                print(f"    {key}: {meta[key]}")
+    return 0
+
+
+def cmd_opportunities(root: Path, args) -> int:
+    path = root / "opportunities.md"
+    if not path.exists():
+        print("opportunities.md has not been written yet")
+        return 1
+    text = FRONTMATTER.sub("", path.read_text(encoding="utf-8"))
+    blocks = re.split(r"\n(?=### )", text)
+    wanted = [w.lower() for w in (args.area, args.level) if w]
+    if not wanted:
+        print(text.strip())
+        return 0
+    print(blocks[0].strip().split("\n")[0] + "\n")
+    shown = [b for b in blocks[1:] if all(w in b.lower() for w in wanted)]
+    print("\n\n".join(b.strip() for b in shown) or f"nothing matches {' + '.join(wanted)}; run `kb opportunities` for the full list")
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="kb", description="Query the Iceberg Context knowledge base.")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("status", help="how fresh each source is and what the knowledge base holds").set_defaults(fn=cmd_status)
-    p = sub.add_parser("search", help="full-text search over pages and raw records")
+
+    p = sub.add_parser("search", help="full-text search over pages and source records")
     p.add_argument("query", nargs="+")
-    p.add_argument("--type", help="limit to one kind: person, initiative, meeting, thread, email, pr, transcript, doc, …")
+    p.add_argument("--type", help="one kind: person, group, initiative, module, meeting, thread, email, pr, issue, comment, "
+                                  "meeting-notes, transcript, spec-section, doc")
+    p.add_argument("--since", help="only records dated after this: YYYY-MM-DD or a span such as 30d, 6m")
     p.add_argument("--limit", type=int, default=10)
     p.set_defaults(fn=cmd_search)
+
     p = sub.add_parser("source", help="show the text and link behind an id")
     p.add_argument("id")
     p.add_argument("--grep", help="show only the passages containing this text")
     p.add_argument("--chars", type=int, default=3000)
     p.set_defaults(fn=cmd_source)
+
+    p = sub.add_parser("why", help="the history behind a file or directory: commits, pull requests, discussions")
+    p.add_argument("path", help="path relative to the Iceberg repository root (a suffix such as SnapshotProducer.java also works)")
+    p.add_argument("--limit", type=int, default=12)
+    p.add_argument("--symbol", help="a function or class name; needs --checkout pointing at a clone with history")
+    p.add_argument("--checkout", help="path to a local Iceberg clone, for --symbol")
+    p.set_defaults(fn=cmd_why)
+
+    p = sub.add_parser("context", help="what to know before editing these paths")
+    p.add_argument("paths", nargs="+")
+    p.add_argument("--since", help="window for activity counts (default 1y)")
+    p.set_defaults(fn=cmd_context)
+
+    for name, kind, text in (("initiative", "initiative", "status and timeline of an initiative"),
+                             ("person", "person", "public roles and project activity of a contributor"),
+                             ("group", "group", "a working group: cadence, notes, recent meetings"),
+                             ("show", None, "print any page by id or name")):
+        p = sub.add_parser(name, help=text)
+        p.add_argument("name", nargs="+")
+        p.add_argument("--chars", type=int, default=6000)
+        p.set_defaults(fn=cmd_show(kind))
+
+    p = sub.add_parser("who-to-ask", help="who works on a path or topic, and which group handles it")
+    p.add_argument("topic", nargs="+")
+    p.add_argument("--since", help="activity window (default 1y)")
+    p.set_defaults(fn=cmd_who)
+
+    p = sub.add_parser("whats-new", help="votes, discussions, meetings and spec changes since a date")
+    p.add_argument("--since", help="YYYY-MM-DD or a span such as 7d, 2w (default 7d)")
+    p.add_argument("--area", help="keep only items whose title contains this text")
+    p.set_defaults(fn=cmd_whats_new)
+
+    p = sub.add_parser("upcoming", help="community meetings in the coming days")
+    p.add_argument("--days", type=int, default=14)
+    p.set_defaults(fn=cmd_upcoming)
+
+    p = sub.add_parser("opportunities", help="ranked places to contribute")
+    p.add_argument("--area", help="filter by text, e.g. python, spark, rest")
+    p.add_argument("--level", help="filter by level: starter, intermediate, advanced")
+    p.set_defaults(fn=cmd_opportunities)
+
     args = parser.parse_args(argv)
-    return args.fn(repo_root(), args)
+    try:
+        return args.fn(repo_root(), args)
+    except BrokenPipeError:
+        return 0
 
 
 if __name__ == "__main__":

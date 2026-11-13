@@ -1,0 +1,455 @@
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/avro", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/catalog", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/cli", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/docs", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/expressions", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/io", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/manifest", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/partitioning", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/schema", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/table", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/transforms", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/types", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/utils", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/api", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/arrow", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/aws", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/azure", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/build", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/core", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/data", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/docs", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/flink", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/format", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/gcp", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/hive-metastore", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/kafka-connect", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/mr", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/nessie", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/open-api", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/orc", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/parquet", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/site", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "part_of", "src": "module/iceberg/spark", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Anurag-S1ngh", "to": "module/iceberg-python/catalog", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Anurag-S1ngh", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/CTTY", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/CTTY", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/CTTY", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/CTTY", "to": "release/iceberg-rust-0.10.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/CTTY", "to": "release/iceberg-rust-0.7.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/CTTY", "to": "release/iceberg-rust-0.9.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/CTTY", "to": "release/iceberg-rust-0.9.1"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/Fokko", "to": "module/iceberg-python/expressions", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/Fokko", "to": "module/iceberg-python/transforms", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/Fokko", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Fokko", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-07", "src": "person/Fokko", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 5, "rel": "participates", "src": "person/Fokko", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.2.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.3.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.4.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.9.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-rust-0.2.0"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/GGraziadei", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 13, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/data", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 34, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/Guosmilesmile", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/Guosmilesmile", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-07-23", "src": "person/HonahX", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/HonahX", "to": "release/iceberg-python-0.6.1"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/JingsongLi", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/RussellSpitzer", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2021-11-14", "src": "person/RussellSpitzer", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/RussellSpitzer", "to": "release/iceberg-1.7.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/RussellSpitzer", "to": "release/iceberg-1.9.1"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/TGooch44", "to": "repo/iceberg"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/Xuanwo", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Xuanwo", "to": "release/iceberg-rust-0.3.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Xuanwo", "to": "release/iceberg-rust-0.6.0"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/aws", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/adutra", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/aiborodin", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 11, "rel": "contributes", "src": "person/aiborodin", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/aihuaxu", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/aihuaxu", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/aihuaxu", "to": "release/iceberg-1.11.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/ajantha-bhat", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/ajantha-bhat", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/ajantha-bhat", "to": "release/iceberg-1.5.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/ajantha-bhat", "to": "release/iceberg-1.9.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/data", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/format", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/amogh-jahagirdar", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-08-13", "src": "person/amogh-jahagirdar", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/amogh-jahagirdar", "to": "group/v4-metadata", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/amogh-jahagirdar", "to": "release/iceberg-0.13.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/amogh-jahagirdar", "to": "release/iceberg-1.10.2"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/amogh-jahagirdar", "to": "release/iceberg-1.4.2"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/amogh-jahagirdar", "to": "release/iceberg-1.5.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/amogh-jahagirdar", "to": "release/iceberg-1.5.2"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/amogh-jahagirdar", "to": "release/iceberg-1.8.0"}
+{"confidence": "observed", "n": 13, "rel": "contributes", "src": "person/anoopj", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 36, "rel": "contributes", "src": "person/anoopj", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "participates", "src": "person/anoopj", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "participates", "src": "person/anoopj", "to": "group/v4-metadata", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/anuragmantri", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 11, "rel": "contributes", "src": "person/anuragmantri", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/anxkhn", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/anxkhn", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/anxkhn", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/aokolnychyi", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/aokolnychyi", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 19, "rel": "contributes", "src": "person/aokolnychyi", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/aokolnychyi", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-0.10.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-0.11.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-1.3.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/aokolnychyi", "to": "release/iceberg-1.4.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/bharos", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/bharos", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/bryanck", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/bryanck", "to": "release/iceberg-1.7.1"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/c-thiel", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "participates", "src": "person/c-thiel", "to": "group/catalog", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/cwsteinbach", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/cwsteinbach", "to": "release/iceberg-0.12.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/cwsteinbach", "to": "release/iceberg-1.6.1"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/danielcweeks", "to": "module/iceberg/format", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/danielcweeks", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/danielcweeks", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/danielcweeks", "to": "release/iceberg-1.2.1"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/drexler-sky", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/drexler-sky", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 11, "rel": "contributes", "src": "person/drexler-sky", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/fallintoplace", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/fallintoplace", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "participates", "src": "person/fallintoplace", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/findepi", "to": "repo/iceberg"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-07", "src": "person/flyrain", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/gabeiglio", "to": "module/iceberg-python/partitioning", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/gabeiglio", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 35, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/orc", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/gaborkaszab", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/geruh", "to": "module/iceberg-python/catalog", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/geruh", "to": "module/iceberg-python/expressions", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/geruh", "to": "module/iceberg-python/manifest", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/geruh", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/geruh", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/geruh", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/geruh", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/hemanthboyina", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/hemanthboyina", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/huan233usc", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/huan233usc", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/huan233usc", "to": "module/iceberg/data", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/huan233usc", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/huan233usc", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/huan233usc", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/huaxingao", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/huaxingao", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/huaxingao", "to": "module/iceberg/format", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/huaxingao", "to": "module/iceberg/kafka-connect", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/huaxingao", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/huaxingao", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/huaxingao", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/huaxingao", "to": "release/iceberg-1.10.1"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2021-11-15", "src": "person/jackye1995", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/jackye1995", "to": "release/iceberg-0.13.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/jackye1995", "to": "release/iceberg-1.2.0"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/jackylee-ch", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/jackylee-ch", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/jackylee-ch", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/jbewing", "to": "module/iceberg/arrow", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/jbewing", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/jbewing", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/data", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/joyhaldar", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/julienledem", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg-python/catalog", "window": "12m"}
+{"confidence": "observed", "n": 12, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg-python/docs", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 39, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 18, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/kevinjqliu", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2025-11-17", "src": "person/kevinjqliu", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 5, "rel": "participates", "src": "person/kevinjqliu", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/kevinjqliu", "to": "release/iceberg-python-0.8.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/kevinjqliu", "to": "release/iceberg-python-0.8.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/kevinjqliu", "to": "release/iceberg-rust-0.5.1"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/kinolaev", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/kinolaev", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/kinolaev", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/laskoviymishka", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/laskoviymishka", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/laskoviymishka", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-07-23", "src": "person/liurenjie1024", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 5, "rel": "participates", "src": "person/manisin", "to": "group/catalog", "window": "12m"}
+{"confidence": "observed", "n": 28, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/kafka-connect", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 22, "rel": "contributes", "src": "person/manuzhang", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/manuzhang", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/manuzhang", "to": "release/iceberg-cpp-0.4.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mbutrovich", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "participates", "src": "person/mbutrovich", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/moomindani", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/moomindani", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 58, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/mxm", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/mxm", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 13, "rel": "contributes", "src": "person/nastra", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/nastra", "to": "module/iceberg/aws", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/nastra", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 37, "rel": "contributes", "src": "person/nastra", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/nastra", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 19, "rel": "contributes", "src": "person/nastra", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-08-13", "src": "person/nastra", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/nastra", "to": "release/iceberg-0.13.2"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/nastra", "to": "release/iceberg-1.4.1"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/nssalian", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/nssalian", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/nssalian", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/nssalian", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/nssalian", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/nssalian", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "participates", "src": "person/nssalian", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/nssalian", "to": "group/spark", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/nssalian", "to": "release/iceberg-1.12.0"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/omalley", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/openinx", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2021-06-29", "src": "person/openinx", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/data", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 12, "rel": "contributes", "src": "person/pvary", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2024-08-13", "src": "person/pvary", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/pvary", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rahulsmahadev", "to": "module/iceberg-python/catalog", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rahulsmahadev", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rahulsmahadev", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rahulsmahadev", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/rahulsmahadev", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/catalog", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/docs", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/expressions", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/manifest", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "participates", "src": "person/rambleraptor", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/raunaqmorarka", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/raunaqmorarka", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 16, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/format", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC chair", "rel": "has_role", "since": "2020-05-20", "src": "person/rdblue", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/rdblue", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/rdblue", "to": "release/iceberg-0.8.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/rdblue", "to": "release/iceberg-0.9.0"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2020-05-20", "src": "person/rdsr", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/kafka-connect", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/rmoff", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/rymurr", "to": "repo/iceberg"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/sdd", "to": "repo/iceberg"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/shardulm94", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/azure", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 17, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/singhpk234", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2026-02-24", "src": "person/singhpk234", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/singhpk234", "to": "release/iceberg-1.9.2"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/aws", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/hive-metastore", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/smaheshwar-pltr", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/sqd", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/sqd", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 12, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/format", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/open-api", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/stevenzwu", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-07", "src": "person/stevenzwu", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/stevenzwu", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/stevenzwu", "to": "group/v4-metadata", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/stevenzwu", "to": "release/iceberg-1.10.0"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2026-02-24", "src": "person/sungwy", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/sungwy", "to": "release/iceberg-python-0.6.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/sungwy", "to": "release/iceberg-python-0.7.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/sungwy", "to": "release/iceberg-python-0.7.1"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/sungwy", "to": "release/iceberg-rust-0.4.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/swapna267", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 13, "rel": "contributes", "src": "person/swapna267", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/szehon-ho", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/szehon-ho", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 8, "rel": "contributes", "src": "person/szehon-ho", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-21", "src": "person/szehon-ho", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/szehon-ho", "to": "release/iceberg-1.3.1"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 24, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/talatuyarer", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "participates", "src": "person/tanmayrauth", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/arrow", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/orc", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/thswlsqls", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/aws", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/azure", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/gcp", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/tom-s-powell", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/docs", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/varun-lakhyani", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/varun-lakhyani", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "participates", "src": "person/varun-lakhyani", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/vishnuprakaz", "to": "module/iceberg-python/utils", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/vishnuprakaz", "to": "module/iceberg/api", "window": "12m"}
+{"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/vishnuprakaz", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/vishnuprakaz", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/wgtmac", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2026-09-16", "src": "person/wgtmac", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 5, "rel": "participates", "src": "person/wgtmac", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/wgtmac", "to": "release/iceberg-cpp-0.1.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/wgtmac", "to": "release/iceberg-cpp-0.2.0"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/build", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/data", "window": "12m"}
+{"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/kafka-connect", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/wombatu-kun", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/xanderbailey", "to": "module/iceberg-python/io", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/xanderbailey", "to": "module/iceberg-python/manifest", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/xanderbailey", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 11, "rel": "participates", "src": "person/xanderbailey", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yadavay-amzn", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 4, "rel": "contributes", "src": "person/yadavay-amzn", "to": "module/iceberg/kafka-connect", "window": "12m"}
+{"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/yangshangqing95", "to": "module/iceberg/core", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yangshangqing95", "to": "module/iceberg/parquet", "window": "12m"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/yingjianwu98", "to": "module/iceberg-python/table", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/yingjianwu98", "to": "module/iceberg/spark", "window": "12m"}
+{"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/yyanyy", "to": "repo/iceberg"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/zeroshade", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2025-11-24", "src": "person/zeroshade", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zeroshade", "to": "release/iceberg-go-0.1.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zeroshade", "to": "release/iceberg-go-0.2.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zeroshade", "to": "release/iceberg-go-0.3.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zeroshade", "to": "release/iceberg-go-0.4.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zeroshade", "to": "release/iceberg-go-0.5.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zeroshade", "to": "release/terraform-provider-iceberg-0.2.0"}
+{"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/zhjwpku", "to": "module/iceberg-python/transforms", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/zhjwpku", "to": "module/iceberg/site", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "participates", "src": "person/zhjwpku", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/zhjwpku", "to": "release/iceberg-cpp-0.3.0"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.10.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.11.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.12.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.12.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.13.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.13.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.13.2", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.8.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.9.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.1.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.10.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.10.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.10.2", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.11.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.12.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.2.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.2.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.3.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.3.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.4.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.4.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.4.2", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.4.3", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.5.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.5.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.5.2", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.6.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.6.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.7.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.7.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.8.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.8.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.9.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.9.1", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-1.9.2", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-cpp-0.1.0", "to": "repo/iceberg-cpp"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-cpp-0.2.0", "to": "repo/iceberg-cpp"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-cpp-0.3.0", "to": "repo/iceberg-cpp"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-cpp-0.4.0", "to": "repo/iceberg-cpp"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.1.0", "to": "repo/iceberg-go"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.2.0", "to": "repo/iceberg-go"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.3.0", "to": "repo/iceberg-go"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.4.0", "to": "repo/iceberg-go"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.5.0", "to": "repo/iceberg-go"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.2.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.2.1", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.3.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.4.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.6.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.6.1", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.7.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.7.1", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.8.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.8.1", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.9.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.9.1", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.10.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.10.1", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.11.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.2.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.3.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.4.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.5.1", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.6.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.7.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.9.0", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-rust-0.9.1", "to": "repo/iceberg-rust"}
+{"confidence": "observed", "rel": "release_of", "src": "release/terraform-provider-iceberg-0.2.0", "to": "repo/terraform-provider-iceberg"}

@@ -9,6 +9,10 @@ repos:
   - {name: apache/iceberg-verification, depth: light}
   - {name: apache/terraform-provider-iceberg, depth: light}
 
+github:
+  # Review and issue comments are kept from this date on; pull requests and issues cover full history.
+  comments_since: "2026-01-01"
+
 devlist:
   list: dev
   domain: iceberg.apache.org

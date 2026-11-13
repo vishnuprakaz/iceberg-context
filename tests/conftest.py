@@ -28,6 +28,7 @@ def kb_root(tmp_path, monkeypatch):
         '"url": "https://lists.apache.org/thread/abc", "people": ["ada"], "title": "[VOTE] Widgets for v4", '
         '"body": "I propose we adopt monotonic widgets. Please vote.", "refs": [], "hash": "x"}\n'
     )
+    (tmp_path / "people" / "aliases.yaml").write_text("people: {}\n")
     monkeypatch.setenv("ICEBERG_CONTEXT_ROOT", str(tmp_path))
     monkeypatch.setenv("XDG_CACHE_HOME", str(tmp_path / ".cache"))
     return tmp_path

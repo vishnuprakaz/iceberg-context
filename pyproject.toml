@@ -29,8 +29,9 @@ include = ["icekb*"]
 testpaths = ["tests"]
 
 [tool.ruff]
-line-length = 130
+line-length = 150
 extend-exclude = ["pipeline/prototypes"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

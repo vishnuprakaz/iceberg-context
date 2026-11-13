@@ -1,0 +1,72 @@
+{
+  "counts": {
+    "groups": 12,
+    "meetings": 318
+  },
+  "cursor": {
+    "catalog": {
+      "latest": "2026-11-04",
+      "meetings": 48,
+      "modified": null
+    },
+    "column-updates": {
+      "latest": "2026-10-20",
+      "meetings": 9,
+      "modified": null
+    },
+    "community": {
+      "latest": "2026-10-28",
+      "meetings": 107,
+      "modified": null
+    },
+    "constraints": {
+      "latest": "2026-06-18",
+      "meetings": 2,
+      "modified": null
+    },
+    "file-vector-type": {
+      "latest": "2026-11-19",
+      "meetings": 4,
+      "modified": null
+    },
+    "index": {
+      "latest": "2026-11-09",
+      "meetings": 19,
+      "modified": null
+    },
+    "materialized-views": {
+      "latest": "2026-11-12",
+      "meetings": 21,
+      "modified": null
+    },
+    "python": {
+      "latest": "2026-10-27",
+      "meetings": 60,
+      "modified": null
+    },
+    "read-restrictions": {
+      "latest": "2026-09-15",
+      "meetings": 17,
+      "modified": null
+    },
+    "spark": {
+      "latest": "2026-11-11",
+      "meetings": 11,
+      "modified": null
+    },
+    "v4-metadata": {
+      "latest": "2026-11-02",
+      "meetings": 15,
+      "modified": null
+    },
+    "variant": {
+      "latest": "2026-09-03",
+      "meetings": 5,
+      "modified": null
+    }
+  },
+  "last_run": "2026-11-13T12:32:21Z",
+  "last_success": "2026-11-13T12:32:21Z",
+  "source": "syncdocs",
+  "status": "ok"
+}

@@ -6,7 +6,7 @@
   "properties": {
     "id": {"type": "string", "pattern": "^(devlist|gh|commit|meet|yt|doc|spec|asf|cal):.+"},
     "source": {"enum": ["devlist", "github", "git", "spec", "asf", "siblings", "syncdocs", "designdocs", "calendar", "youtube"]},
-    "type": {"enum": ["email", "pr", "issue", "review", "commit", "meeting-notes", "transcript", "event", "doc", "spec-section", "roster"]},
+    "type": {"enum": ["email", "pr", "issue", "review", "comment", "commit", "meeting-notes", "transcript", "event", "doc", "spec-section", "roster"]},
     "date": {"type": "string"},
     "url": {"type": "string"},
     "people": {"type": "array", "items": {"type": "string"}},

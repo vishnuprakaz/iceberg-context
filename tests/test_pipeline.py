@@ -1,6 +1,7 @@
 import json
 
-from icekb import frontmatter, index, state
+from icekb import frontmatter, state
+from icekb.integrate import index
 from icekb.validate import pages, privacy
 
 

@@ -41,6 +41,8 @@ def check(root: Path) -> list[str]:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
+        if path.suffix == ".jsonl":  # escaped newlines would otherwise glue a letter onto the next word
+            text = text.replace("\\n", " ").replace("\\t", " ")
         hits = find_emails(text)
         if hits:
             shown = ", ".join(h[:3] + "…" for h in sorted(set(hits))[:3])

@@ -2,7 +2,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from icekb import index, state
+from icekb import state
+from icekb.integrate import index
 
 KB = Path(__file__).resolve().parents[1] / ".claude" / "skills" / "iceberg-context" / "scripts" / "kb"
 
@@ -16,9 +17,9 @@ def test_status(kb_root):
     state.save(kb_root, "devlist", ok=True, counts={"messages": 1})
     out = kb("status")
     assert out.returncode == 0, out.stderr
-    assert "devlist      ok" in out.stdout
-    assert "person=1" in out.stdout and "devlist=1" in out.stdout
-    assert "youtube      never" in out.stdout
+    assert "devlist    ok" in out.stdout
+    assert "person=1" in out.stdout and "email=1" in out.stdout
+    assert "youtube    never" in out.stdout
 
 
 def test_search_finds_pages_and_raw(kb_root):

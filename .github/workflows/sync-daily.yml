@@ -1,0 +1,53 @@
+name: Sync (collectors)
+
+# Collects the dev mailing list, git history, the spec, the ASF roster and GitHub activity.
+# Runs every six hours so the GitHub history backfill finishes in a few days; once caught up, runs are short.
+on:
+  schedule:
+    - cron: "10 2,8,14,20 * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Collector to run: daily, devlist, git, asf or github"
+        default: daily
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/cache@v4
+        with:
+          path: .work/repos
+          key: upstream-clones-${{ github.run_id }}
+          restore-keys: upstream-clones-
+      - run: uv sync --no-dev
+      - name: Collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: uv run python -m icekb collect "${{ inputs.source || 'daily' }}"
+      - name: Rebuild index and validate
+        run: |
+          uv run python -m icekb index
+          uv run python -m icekb validate
+      - name: Commit and push
+        run: |
+          git config user.name "iceberg-context-sync"
+          git config user.email "iceberg-context-sync@users.noreply.github.com"
+          git add -A data index
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -q -m "sync(raw): $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+            sleep 10
+          done
+          exit 1
