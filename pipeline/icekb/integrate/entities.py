@@ -215,8 +215,12 @@ def build(data: Data) -> dict:
 
     # ---------------------------------------------------------------- releases
     for pid, (repo, version, mail) in sorted(release_pages.items()):
+        marker = {"iceberg-python": r"pyiceberg|python", "iceberg-rust": r"rust", "iceberg-go": r"\bgo\b", "iceberg-cpp": r"c\+\+|cpp",
+                  "terraform-provider-iceberg": r"terraform"}.get(repo)
+        others = r"rust|python|pyiceberg|\bgo\b|c\+\+|cpp|terraform"
         votes = [m for m in data.by_type["email"] if not m["meta"]["reply"] and m["meta"]["kind"] in ("release-vote", "result")
-                 and version in m["title"] and (repo == "iceberg") == (not re.search(r"rust|python|pyiceberg|\bgo\b|c\+\+|cpp|terraform", m["title"], re.I))]
+                 and re.search(rf"(?<![\d.]){re.escape(version)}(?![\d])", m["title"])
+                 and (re.search(marker, m["title"], re.I) if marker else not re.search(others, m["title"], re.I))]
         rm = mail["people"][0]
         lines = [f"**Announced:** {mail['date'][:10]} by {link('person/' + rm, data.name(rm)) if is_person(rm) and rm in selected else rm.removeprefix('name:')} "
                  f"([announcement]({mail['url']}), `{mail['id']}`)", ""]

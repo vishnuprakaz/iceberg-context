@@ -6,12 +6,12 @@ login: YuangGao
 github: https://github.com/YuangGao
 links:
 - rel: contributes
-  to: module/iceberg-python/table
+  to: module/iceberg-python/catalog
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg-python/catalog
+  to: module/iceberg-python/table
   n: 2
   window: 12m
   confidence: observed
@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person YuangGao` for live numbers.
 
-- **Merged commits:** 4. Areas: [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg-python/catalog|iceberg-python/catalog]] (2), [[module/iceberg-python/io|iceberg-python/io]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
+- **Merged commits:** 4. Areas: [[module/iceberg-python/catalog|iceberg-python/catalog]] (2), [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg-python/io|iceberg-python/io]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
 - **Named in meeting notes:** [[group/community|community]] (1)
 
 ## Recent merged changes

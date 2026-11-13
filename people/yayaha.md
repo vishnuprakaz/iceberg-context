@@ -6,12 +6,12 @@ login: yayaha
 github: https://github.com/yayaha
 links:
 - rel: contributes
-  to: module/iceberg-python/table
+  to: module/iceberg-python/catalog
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg-python/catalog
+  to: module/iceberg-python/table
   n: 2
   window: 12m
   confidence: observed
@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person yayaha` for live numbers.
 
-- **Merged commits:** 2. Areas: [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg-python/catalog|iceberg-python/catalog]] (2)
+- **Merged commits:** 2. Areas: [[module/iceberg-python/catalog|iceberg-python/catalog]] (2), [[module/iceberg-python/table|iceberg-python/table]] (2)
 - **Pull requests reviewed (6 months):** 1
 
 ## Recent merged changes

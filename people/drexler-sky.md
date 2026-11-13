@@ -11,12 +11,12 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/docs
+  to: module/iceberg/api
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/api
+  to: module/iceberg/docs
   n: 2
   window: 12m
   confidence: observed
@@ -30,7 +30,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person drexler-sky` for live numbers.
 
-- **Merged commits:** 14. Areas: [[module/iceberg/spark|iceberg/spark]] (11), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/arrow|iceberg/arrow]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1)
+- **Merged commits:** 14. Areas: [[module/iceberg/spark|iceberg/spark]] (11), [[module/iceberg/api|iceberg/api]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/arrow|iceberg/arrow]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1)
 
 ## Recent merged changes
 

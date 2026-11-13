@@ -32,7 +32,7 @@ Long-term authors (all time): [[person/rdblue|Ryan Blue]] (40), [[person/aokolny
 
 Most active authors (last 12 months): [[person/Guosmilesmile|GuoYu]] (13), [[person/joyhaldar|Joy Haldar]] (6), [[person/pvary|Peter Vary]] (5), [[person/ebyhr|Yuya Ebihara]] (2), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (2), [[person/RussellSpitzer|Russell Spitzer]] (2), [[person/wombatu-kun|Vova Kolmakov]] (2)
 
-Most active reviewers (last 6 months): [[person/pvary|Peter Vary]] (11), [[person/wombatu-kun|Vova Kolmakov]] (4), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (3), [[person/nssalian|Neelesh Salian]] (3), [[person/huaxingao|Huaxin Gao]] (3), [[person/singhpk234|Prashant Singh]] (3), [[person/rdblue|Ryan Blue]] (2), [[person/stevenzwu|Steven Wu]] (2)
+Most active reviewers (last 6 months): [[person/pvary|Peter Vary]] (11), [[person/wombatu-kun|Vova Kolmakov]] (4), [[person/nssalian|Neelesh Salian]] (3), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (3), [[person/huaxingao|Huaxin Gao]] (3), [[person/singhpk234|Prashant Singh]] (3), [[person/rdblue|Ryan Blue]] (2), [[person/stevenzwu|Steven Wu]] (2)
 
 ## Latest changes
 

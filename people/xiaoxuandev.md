@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person xiaoxuandev` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/core|iceberg/core]] (1)
+- **Merged commits:** 3. Areas: [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/core|iceberg/core]] (1)
 
 ## Recent merged changes
 

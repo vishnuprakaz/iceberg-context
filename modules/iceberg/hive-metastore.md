@@ -31,7 +31,7 @@ Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (13), [[pers
 
 Most active authors (last 12 months): [[person/smaheshwar-pltr|Sreesh Maheshwar]] (3), [[person/ggershinsky|Gidon Gershinsky]] (2), [[person/szlta|Adam Szita]] (1), [[person/hiwuya|wuya]] (1), [[person/nastra|Eduard Tudenhoefner]] (1), [[person/manuzhang|Manu Zhang]] (1), [[person/ebyhr|Yuya Ebihara]] (1), [[person/nssalian|Neelesh Salian]] (1)
 
-Most active reviewers (last 6 months): [[person/singhpk234|Prashant Singh]] (5), [[person/pvary|Peter Vary]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/ggershinsky|Gidon Gershinsky]] (3), [[person/uros-b|Uros]] (3), [[person/wombatu-kun|Vova Kolmakov]] (2), [[person/gaborkaszab|Gabor Kaszab]] (1), [[person/danielcweeks|Daniel C. Weeks]] (1)
+Most active reviewers (last 6 months): [[person/singhpk234|Prashant Singh]] (5), [[person/pvary|Peter Vary]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/ggershinsky|Gidon Gershinsky]] (3), [[person/uros-b|Uros]] (3), [[person/wombatu-kun|Vova Kolmakov]] (2), [[person/gaborkaszab|Gabor Kaszab]] (1), [[person/talatuyarer|Talat UYARER]] (1)
 
 ## Latest changes
 

@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person mkroll-db` for live numbers.
 
-- **Merged commits:** 1. Areas: [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1)
+- **Merged commits:** 1. Areas: [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1)
 - **Pull requests reviewed (6 months):** 2
 - **Dev list:** 5 messages, 1 threads started (1 discuss)
 

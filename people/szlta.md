@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person szlta` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (1), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/site|iceberg/site]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1)
+- **Merged commits:** 3. Areas: [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (1), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/site|iceberg/site]] (1)
 - **Dev list:** 3 messages, 0 threads started
 
 ## Recent merged changes

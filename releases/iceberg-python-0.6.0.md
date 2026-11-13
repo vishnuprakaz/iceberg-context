@@ -21,14 +21,12 @@ updated: '2026-11-13'
 
 ## Vote threads
 
+- 2024-01-31 [[VOTE] Release Apache PyIceberg 0.6.0rc1](https://lists.apache.org/thread/wtsnm3lshd5lhp8d6phxp1ovwb9g3hgr) `devlist:wtsnm3lshd5lhp8d6phxp1ovwb9g3hgr`
+- 2024-02-05 [[VOTE] Release Apache PyIceberg 0.6.0rc2](https://lists.apache.org/thread/6zvvqmzymp1kyg4jxnyqb5g2tz1d4x6k) `devlist:6zvvqmzymp1kyg4jxnyqb5g2tz1d4x6k`
+- 2024-02-06 [[VOTE] Release Apache PyIceberg 0.6.0rc3](https://lists.apache.org/thread/r5fxyo0yt7lsh817mtq9jgjgxwo5q2m2) `devlist:r5fxyo0yt7lsh817mtq9jgjgxwo5q2m2`
 - 2024-02-08 [[VOTE] Release Apache PyIceberg 0.6.0rc4](https://lists.apache.org/thread/d7x5oncmngtmw9l53w5hqmlrff9ykl9v) `devlist:d7x5oncmngtmw9l53w5hqmlrff9ykl9v`
 - 2024-02-12 [[VOTE] Release Apache PyIceberg 0.6.0rc5](https://lists.apache.org/thread/t7wtt71m7f7wg2s1ho0s4c97dhrhm6qq) `devlist:t7wtt71m7f7wg2s1ho0s4c97dhrhm6qq`
 - 2024-02-14 [[VOTE] Release Apache PyIceberg 0.6.0rc6](https://lists.apache.org/thread/f1fff046qdh70ox255h3mycmz622j4kd) `devlist:f1fff046qdh70ox255h3mycmz622j4kd`
-- 2025-07-22 [[VOTE] Release Apache Iceberg Rust 0.6.0 RC1](https://lists.apache.org/thread/1zbddkmncvbff06p30rgld34phjmhvk4) `devlist:1zbddkmncvbff06p30rgld34phjmhvk4`
-- 2025-07-30 [[RESULT][VOTE] Release Apache Iceberg Rust 0.6.0 RC1](https://lists.apache.org/thread/6skoq2r91hmfj6nk5s19lxwmxj10gvoh) `devlist:6skoq2r91hmfj6nk5s19lxwmxj10gvoh`
-- 2026-05-18 [[VOTE][Go] Release Apache Iceberg Go v0.6.0 RC0](https://lists.apache.org/thread/yvf1ywkwwdw3f28b7xskqt2y0hsmtv2l) `devlist:yvf1ywkwwdw3f28b7xskqt2y0hsmtv2l`
-- 2026-05-21 [[VOTE][Go] Release Apache Iceberg Go v0.6.0 RC1](https://lists.apache.org/thread/xz3dd9ltso3xw05k5l86fqrroddj9892) `devlist:xz3dd9ltso3xw05k5l86fqrroddj9892`
-- 2026-05-21 [[VOTE][Go] Release Apache Iceberg Go v0.6.0 RC2](https://lists.apache.org/thread/sgtobp6b3w9b3t4xdzo2xfgrsz960yxv) `devlist:sgtobp6b3w9b3t4xdzo2xfgrsz960yxv`
 <!-- kb:generated:end -->
 
 ## Notes

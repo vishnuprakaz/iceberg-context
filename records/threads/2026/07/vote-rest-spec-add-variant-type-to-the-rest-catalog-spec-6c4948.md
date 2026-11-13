@@ -5,7 +5,7 @@ title: 'Vote: add the variant type to the REST catalog spec'
 date: '2026-07-30'
 url: https://lists.apache.org/thread/gkj526shb0y96hdmms73sn3tvsw8mgw9
 kind: vote
-status: result-posted
+status: passed
 messages: 24
 sources:
 - devlist:gkj526shb0y96hdmms73sn3tvsw8mgw9
@@ -31,7 +31,7 @@ updated: '2026-11-13'
 # Vote: add the variant type to the REST catalog spec
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE][REST-SPEC] Add variant type to the REST catalog spec](https://lists.apache.org/thread/gkj526shb0y96hdmms73sn3tvsw8mgw9) · **Started:** 2026-07-30 by [[person/nssalian|Neelesh Salian]] · **Messages:** 24 (last 2026-08-02) · **Outcome:** result-posted
+**Thread:** [[VOTE][REST-SPEC] Add variant type to the REST catalog spec](https://lists.apache.org/thread/gkj526shb0y96hdmms73sn3tvsw8mgw9) · **Started:** 2026-07-30 by [[person/nssalian|Neelesh Salian]] · **Messages:** 24 (last 2026-08-02) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 
@@ -45,7 +45,7 @@ Neelesh Salian called a 72-hour vote on adding the variant type to the REST cata
 
 Voting concluded on 2026-08-02, but the result is announced in a separate email, not here. The replies show seven +1 votes marked binding, fourteen marked non-binding and one unmarked, with no +0 or -1.
 
-**Result posted in a separate thread on 2026-08-02:** [[VOTE][RESULT] Add variant type to the REST catalog spec](https://lists.apache.org/thread/2plrmco4k7vvb1jd8ythvjvko6nk6q9w) (`devlist:2plrmco4k7vvb1jd8ythvjvko6nk6q9w`). Outcome read from that message: result-posted.
+**Result posted in a separate thread on 2026-08-02:** [[VOTE][RESULT] Add variant type to the REST catalog spec](https://lists.apache.org/thread/2plrmco4k7vvb1jd8ythvjvko6nk6q9w) (`devlist:2plrmco4k7vvb1jd8ythvjvko6nk6q9w`). Outcome read from that message: passed.
 
 ## Positions
 

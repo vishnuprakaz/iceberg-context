@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person aiborodin` for live numbers.
 
-- **Merged commits:** 12. Areas: [[module/iceberg/flink|iceberg/flink]] (11), [[module/iceberg/core|iceberg/core]] (3), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/docs|iceberg/docs]] (1)
+- **Merged commits:** 12. Areas: [[module/iceberg/flink|iceberg/flink]] (11), [[module/iceberg/core|iceberg/core]] (3), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/docs|iceberg/docs]] (1)
 
 ## Recent merged changes
 

@@ -135,7 +135,8 @@ def separate_result(data: Data, mails: list[dict]) -> tuple[str, dict] | None:
     if not result or result["meta"]["thread"] == mails[0]["meta"]["thread"] or result["date"] < mails[0]["date"]:
         return None
     text = result["body"].lower()
-    if re.search(r"vote (has )?(passes|passed)|vote is successful|vote succeeded|proposal (passes|is accepted)|has passed", text):
+    if re.search(r"\b(passes|passed)\b|vote is successful|vote succeeded|has been accepted|is accepted", text) and not re.search(
+            r"\b(not|n't) pass", text):
         return "passed", result
     if re.search(r"vote (has )?(fails|failed)|did not pass|not enough", text):
         return "failed", result

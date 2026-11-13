@@ -21,8 +21,6 @@ updated: '2026-11-13'
 
 ## Vote threads
 
-- 2023-10-16 [[VOTE] Release Apache PyIceberg 0.5.1 (RC1)](https://lists.apache.org/thread/fcln3mkqnhvjd2prxb41zvfg7x4d2qod) `devlist:fcln3mkqnhvjd2prxb41zvfg7x4d2qod`
-- 2023-10-24 [[VOTE] Release Apache PyIceberg 0.5.1 RC2](https://lists.apache.org/thread/hx0bpbvlkl3gcwo24yfogyss4dvxzcx2) `devlist:hx0bpbvlkl3gcwo24yfogyss4dvxzcx2`
 - 2025-05-27 [[VOTE] Release Apache Iceberg Rust 0.5.1 RC1](https://lists.apache.org/thread/h1qw21cdc56vltt9mzkn0sq36mp9tmpw) `devlist:h1qw21cdc56vltt9mzkn0sq36mp9tmpw`
 <!-- kb:generated:end -->
 
