@@ -6,12 +6,12 @@ login: mengna-lin
 github: https://github.com/mengna-lin
 links:
 - rel: contributes
-  to: module/iceberg/core
+  to: module/iceberg/docs
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/docs
+  to: module/iceberg/core
   n: 2
   window: 12m
   confidence: observed
@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person mengna-lin` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
+- **Merged commits:** 3. Areas: [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
 - **Pull requests reviewed (6 months):** 1
 
 ## Recent merged changes

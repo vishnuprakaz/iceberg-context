@@ -30,7 +30,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person aihuaxu` for live numbers.
 
-- **Merged commits:** 6. Areas: [[module/iceberg/build|iceberg/build]] (2), [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/data|iceberg/data]] (1), [[module/iceberg/core|iceberg/core]] (1)
+- **Merged commits:** 6. Areas: [[module/iceberg/build|iceberg/build]] (2), [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/data|iceberg/data]] (1), [[module/iceberg/core|iceberg/core]] (1)
 - **Pull requests reviewed (6 months):** 2
 - **Dev list:** 38 messages, 4 threads started (2 release-vote, 1 announce)
 

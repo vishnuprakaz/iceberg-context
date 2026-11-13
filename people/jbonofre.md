@@ -23,7 +23,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person jbonofre` for live numbers.
 
-- **Merged commits:** 2. Areas: [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/build|iceberg/build]] (1)
+- **Merged commits:** 2. Areas: [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (1), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/flink|iceberg/flink]] (1), [[module/iceberg/open-api|iceberg/open-api]] (1), [[module/iceberg/build|iceberg/build]] (1)
 - **Pull requests reviewed (6 months):** 3
 - **Dev list:** 88 messages, 2 threads started (2 discuss)
 

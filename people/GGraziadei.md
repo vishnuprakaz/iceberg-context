@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person GGraziadei` for live numbers.
 
-- **Merged commits:** 4. Areas: [[module/iceberg/spark|iceberg/spark]] (3), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1)
+- **Merged commits:** 4. Areas: [[module/iceberg/spark|iceberg/spark]] (3), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1)
 - **Dev list:** 22 messages, 3 threads started
 
 ## Recent merged changes

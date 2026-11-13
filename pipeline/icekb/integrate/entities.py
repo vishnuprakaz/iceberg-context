@@ -18,8 +18,9 @@ MODULE_NOTES = {
     "flink": "Flink integration: sources, sinks, table maintenance.",
     "data": "Generic readers, writers and delete handling shared by engines.",
 }
-_RELEASE = re.compile(r"\[ANNOUNCE\]\s*(?:Release\s+)?Apache\s+(Iceberg(?:\s+(?:Rust|Python|Go|C\+\+|Cpp|Terraform Provider))?|PyIceberg)\s*"
-                      r"(?:Release\s+|version\s+)?v?(\d+\.\d+\.\d+)", re.I)
+_RELEASE = re.compile(r"\[ANNOUNCE\].*?\b(PyIceberg|Iceberg(?:[ -](?:Rust|Python|Go|C\+\+|Cpp|Terraform Provider))?)(?=[\s:,-])"
+                      r"[^0-9]{0,24}?v?(\d+\.\d+(?:\.\d+)?)(?![\d.]*\s*(?:am|pm|pt|utc))", re.I)
+_NOT_RELEASE = re.compile(r"meetup|summit|sync|call for|cfp|committer|pmc|repository", re.I)
 _PRODUCT = {"iceberg": "iceberg", "pyiceberg": "iceberg-python", "iceberg python": "iceberg-python", "iceberg rust": "iceberg-rust",
             "iceberg go": "iceberg-go", "iceberg c++": "iceberg-cpp", "iceberg cpp": "iceberg-cpp",
             "iceberg terraform provider": "terraform-provider-iceberg"}
@@ -101,12 +102,12 @@ def build(data: Data) -> dict:
     releases, rm_of = {}, defaultdict(list)
     for mail in data.by_type["email"]:
         m = _RELEASE.search(mail["title"])
-        if not m or mail["meta"]["reply"]:
+        if not m or mail["meta"]["reply"] or _NOT_RELEASE.search(mail["title"]):
             continue
         repo = _PRODUCT.get(" ".join(m.group(1).lower().split()))
         if not repo:
             continue
-        version = m.group(2)
+        version = m.group(2) if m.group(2).count(".") == 2 else m.group(2) + ".0"
         releases.setdefault((repo, version), mail)
     release_pages = {f"release/{repo}-{version}": (repo, version, mail) for (repo, version), mail in releases.items()}
 

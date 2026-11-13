@@ -766,9 +766,10 @@
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/Fokko", "to": "module/iceberg/site", "window": "12m"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2023-04-07", "src": "person/Fokko", "to": "repo/iceberg"}
 {"confidence": "observed", "n": 5, "rel": "participates", "src": "person/Fokko", "to": "group/community", "window": "12m"}
-{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.2.1"}
-{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.3.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.10.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.4.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.5.0"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.5.1"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-python-0.9.1"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/Fokko", "to": "release/iceberg-rust-0.2.0"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/GGraziadei", "to": "module/iceberg/spark", "window": "12m"}
@@ -932,6 +933,7 @@
 {"confidence": "observed", "note": "Committer", "rel": "has_role", "src": "person/huaxingao", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/huaxingao", "to": "release/iceberg-1.10.1"}
 {"confidence": "observed", "note": "PMC member", "rel": "has_role", "since": "2021-11-15", "src": "person/jackye1995", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/jackye1995", "to": "release/iceberg-0.11.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/jackye1995", "to": "release/iceberg-0.13.0"}
 {"confidence": "observed", "rel": "release_manager", "src": "person/jackye1995", "to": "release/iceberg-1.2.0"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/jackylee-ch", "to": "module/iceberg/docs", "window": "12m"}
@@ -1043,6 +1045,7 @@
 {"confidence": "observed", "n": 9, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/table", "window": "12m"}
 {"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/rambleraptor", "to": "module/iceberg-python/utils", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "participates", "src": "person/rambleraptor", "to": "group/community", "window": "12m"}
+{"confidence": "observed", "rel": "release_manager", "src": "person/rambleraptor", "to": "release/iceberg-python-0.12.0"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/raunaqmorarka", "to": "module/iceberg/api", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/raunaqmorarka", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/rdblue", "to": "module/iceberg/api", "window": "12m"}
@@ -1130,7 +1133,7 @@
 {"confidence": "observed", "n": 5, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/build", "window": "12m"}
 {"confidence": "observed", "n": 10, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 6, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/docs", "window": "12m"}
-{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/flink", "window": "12m"}
+{"confidence": "observed", "n": 3, "rel": "contributes", "src": "person/uros-b", "to": "module/iceberg/parquet", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/varun-lakhyani", "to": "module/iceberg/core", "window": "12m"}
 {"confidence": "observed", "n": 7, "rel": "contributes", "src": "person/varun-lakhyani", "to": "module/iceberg/spark", "window": "12m"}
 {"confidence": "observed", "n": 2, "rel": "participates", "src": "person/varun-lakhyani", "to": "group/community", "window": "12m"}
@@ -1180,6 +1183,7 @@
 {"confidence": "observed", "rel": "release_manager", "src": "person/zhjwpku", "to": "release/iceberg-cpp-0.3.0"}
 {"confidence": "observed", "n": 2, "rel": "contributes", "src": "person/zhongyujiang", "to": "module/iceberg/flink", "window": "12m"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.10.0", "to": "repo/iceberg"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.11.0", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.11.1", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.12.0", "to": "repo/iceberg"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-0.12.1", "to": "repo/iceberg"}
@@ -1223,10 +1227,15 @@
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.3.0", "to": "repo/iceberg-go"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.4.0", "to": "repo/iceberg-go"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-go-0.5.0", "to": "repo/iceberg-go"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.10.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.11.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.12.0", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.2.0", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.2.1", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.3.0", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.4.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.5.0", "to": "repo/iceberg-python"}
+{"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.5.1", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.6.0", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.6.1", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "release_of", "src": "release/iceberg-python-0.7.0", "to": "repo/iceberg-python"}

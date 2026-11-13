@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person mukund-thakur` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/api|iceberg/api]] (1), [[module/iceberg/parquet|iceberg/parquet]] (1)
+- **Merged commits:** 3. Areas: [[module/iceberg/core|iceberg/core]] (2), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/api|iceberg/api]] (1)
 - **Dev list:** 2 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

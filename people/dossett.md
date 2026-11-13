@@ -6,12 +6,12 @@ login: dossett
 github: https://github.com/dossett
 links:
 - rel: contributes
-  to: module/iceberg-python/expressions
+  to: module/iceberg-python/table
   n: 3
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg-python/table
+  to: module/iceberg-python/expressions
   n: 3
   window: 12m
   confidence: observed
@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person dossett` for live numbers.
 
-- **Merged commits:** 3. Areas: [[module/iceberg-python/expressions|iceberg-python/expressions]] (3), [[module/iceberg-python/table|iceberg-python/table]] (3)
+- **Merged commits:** 3. Areas: [[module/iceberg-python/table|iceberg-python/table]] (3), [[module/iceberg-python/expressions|iceberg-python/expressions]] (3)
 - **Dev list:** 3 messages, 2 threads started
 
 ## Recent merged changes

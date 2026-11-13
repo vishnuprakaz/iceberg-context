@@ -20,7 +20,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person hcrosse` for live numbers.
 
-- **Merged commits:** 4. Areas: [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/docs|iceberg/docs]] (1)
+- **Merged commits:** 4. Areas: [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg/parquet|iceberg/parquet]] (1), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/core|iceberg/core]] (1)
 - **Dev list:** 1 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

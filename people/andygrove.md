@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person andygrove` for live numbers.
 
-- **Merged commits:** 1. Areas: [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/docs|iceberg/docs]] (1)
+- **Merged commits:** 1. Areas: [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/docs|iceberg/docs]] (1), [[module/iceberg/spark|iceberg/spark]] (1)
 - **Dev list:** 6 messages, 1 threads started (1 discuss)
 
 ## Recent threads started

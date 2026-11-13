@@ -31,7 +31,7 @@ Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (4), [[perso
 
 Most active authors (last 12 months): [[person/tom-s-powell|Thomas Powell]] (3), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/singhpk234|Prashant Singh]] (2), [[person/nandorKollar|Nándor Kollár]] (1), [[person/sarthaksin1857|Sarthak Singh]] (1), [[person/findinpath|Marius Grama]] (1), [[person/ebyhr|Yuya Ebihara]] (1), [[person/vladislav-sidorovich|Vladislav Sidorovich]] (1)
 
-Most active reviewers (last 6 months): [[person/nandorKollar|Nándor Kollár]] (2), [[person/RussellSpitzer|Russell Spitzer]] (1), [[person/huaxingao|Huaxin Gao]] (1)
+Most active reviewers (last 6 months): [[person/nandorKollar|Nándor Kollár]] (2), [[person/huaxingao|Huaxin Gao]] (1), [[person/RussellSpitzer|Russell Spitzer]] (1)
 
 ## Latest changes
 

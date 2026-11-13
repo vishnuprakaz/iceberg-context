@@ -11,19 +11,22 @@ links:
   confidence: observed
   since: '2023-04-07'
 - rel: release_manager
+  to: release/iceberg-python-0.10.0
+  confidence: observed
+- rel: release_manager
   to: release/iceberg-python-0.9.1
   confidence: observed
 - rel: release_manager
   to: release/iceberg-rust-0.2.0
   confidence: observed
 - rel: release_manager
+  to: release/iceberg-python-0.5.1
+  confidence: observed
+- rel: release_manager
+  to: release/iceberg-python-0.5.0
+  confidence: observed
+- rel: release_manager
   to: release/iceberg-python-0.4.0
-  confidence: observed
-- rel: release_manager
-  to: release/iceberg-python-0.3.0
-  confidence: observed
-- rel: release_manager
-  to: release/iceberg-python-0.2.1
   confidence: observed
 - rel: contributes
   to: module/iceberg-python/expressions
@@ -60,7 +63,7 @@ updated: '2026-11-13'
 
 <!-- kb:generated:start -->
 **Role:** PMC member of Apache Iceberg since 2023-04-07 ([ASF roster](https://projects.apache.org/committee.html?iceberg)).
-**Release manager for:** [[release/iceberg-python-0.9.1|iceberg-python 0.9.1]] (2025-04-30), [[release/iceberg-rust-0.2.0|iceberg-rust 0.2.0]] (2024-02-20), [[release/iceberg-python-0.4.0|iceberg-python 0.4.0]] (2023-07-03), [[release/iceberg-python-0.3.0|iceberg-python 0.3.0]] (2023-02-09), [[release/iceberg-python-0.2.1|iceberg-python 0.2.1]] (2023-01-06).
+**Release manager for:** [[release/iceberg-python-0.10.0|iceberg-python 0.10.0]] (2025-09-16), [[release/iceberg-python-0.9.1|iceberg-python 0.9.1]] (2025-04-30), [[release/iceberg-rust-0.2.0|iceberg-rust 0.2.0]] (2024-02-20), [[release/iceberg-python-0.5.1|iceberg-python 0.5.1]] (2023-10-30), [[release/iceberg-python-0.5.0|iceberg-python 0.5.0]] (2023-09-18), [[release/iceberg-python-0.4.0|iceberg-python 0.4.0]] (2023-07-03).
 
 ## Activity in the last 12 months
 

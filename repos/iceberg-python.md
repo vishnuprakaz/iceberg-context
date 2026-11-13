@@ -30,6 +30,9 @@ updated: '2026-11-13'
 
 ## Releases announced on the dev list
 
+- 2026-09-01 [[release/iceberg-python-0.12.0|0.12.0]], announced by [[person/rambleraptor|Alex Stephen]]
+- 2026-02-10 [[release/iceberg-python-0.11.0|0.11.0]], announced by Drew
+- 2025-09-16 [[release/iceberg-python-0.10.0|0.10.0]], announced by [[person/Fokko|Fokko Driesprong]]
 - 2025-04-30 [[release/iceberg-python-0.9.1|0.9.1]], announced by [[person/Fokko|Fokko Driesprong]]
 - 2025-03-07 [[release/iceberg-python-0.9.0|0.9.0]], announced by Drew
 - 2024-12-06 [[release/iceberg-python-0.8.1|0.8.1]], announced by [[person/kevinjqliu|Kevin Liu]]
@@ -38,10 +41,7 @@ updated: '2026-11-13'
 - 2024-07-30 [[release/iceberg-python-0.7.0|0.7.0]], announced by [[person/sungwy|Sung Yun]]
 - 2024-05-01 [[release/iceberg-python-0.6.1|0.6.1]], announced by [[person/HonahX|Honah J.]]
 - 2024-02-19 [[release/iceberg-python-0.6.0|0.6.0]], announced by [[person/sungwy|Sung Yun]]
-- 2023-07-03 [[release/iceberg-python-0.4.0|0.4.0]], announced by [[person/Fokko|Fokko Driesprong]]
-- 2023-02-09 [[release/iceberg-python-0.3.0|0.3.0]], announced by [[person/Fokko|Fokko Driesprong]]
-- 2023-01-06 [[release/iceberg-python-0.2.1|0.2.1]], announced by [[person/Fokko|Fokko Driesprong]]
-- 2022-12-10 [[release/iceberg-python-0.2.0|0.2.0]], announced by Jun H.
+- 2023-10-30 [[release/iceberg-python-0.5.1|0.5.1]], announced by [[person/Fokko|Fokko Driesprong]]
 <!-- kb:generated:end -->
 
 ## Notes

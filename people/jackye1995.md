@@ -16,6 +16,9 @@ links:
 - rel: release_manager
   to: release/iceberg-0.13.0
   confidence: observed
+- rel: release_manager
+  to: release/iceberg-0.11.0
+  confidence: observed
 asf_id: jackye
 roles:
 - pmc
@@ -26,7 +29,7 @@ updated: '2026-11-13'
 
 <!-- kb:generated:start -->
 **Role:** PMC member of Apache Iceberg since 2021-11-15 ([ASF roster](https://projects.apache.org/committee.html?iceberg)).
-**Release manager for:** [[release/iceberg-1.2.0|iceberg 1.2.0]] (2023-03-23), [[release/iceberg-0.13.0|iceberg 0.13.0]] (2022-02-08).
+**Release manager for:** [[release/iceberg-1.2.0|iceberg 1.2.0]] (2023-03-23), [[release/iceberg-0.13.0|iceberg 0.13.0]] (2022-02-08), [[release/iceberg-0.11.0|iceberg 0.11.0]] (2021-01-26).
 
 ## Activity in the last 12 months
 

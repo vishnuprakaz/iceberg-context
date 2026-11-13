@@ -5,6 +5,9 @@ title: Alex Stephen
 login: rambleraptor
 github: https://github.com/rambleraptor
 links:
+- rel: release_manager
+  to: release/iceberg-python-0.12.0
+  confidence: observed
 - rel: contributes
   to: module/iceberg-python/catalog
   n: 10
@@ -46,6 +49,8 @@ updated: '2026-11-13'
 # Alex Stephen
 
 <!-- kb:generated:start -->
+**Release manager for:** [[release/iceberg-python-0.12.0|iceberg-python 0.12.0]] (2026-09-01).
+
 ## Activity in the last 12 months
 
 Counted from public records; see `kb person rambleraptor` for live numbers.

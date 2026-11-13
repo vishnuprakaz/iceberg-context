@@ -31,7 +31,7 @@ Long-term authors (all time): [[person/shardulm94|Shardul Mahadik]] (14), [[pers
 
 Most active authors (last 12 months): [[person/gaborkaszab|Gabor Kaszab]] (4), [[person/Guosmilesmile|GuoYu]] (3), [[person/HennesyChihiro|Chihiro]] (2), [[person/thswlsqls|Eunbin Son]] (2), [[person/pvary|Peter Vary]] (1), [[person/deniskuzZ|Denys Kuzmenko]] (1), [[person/wombatu-kun|Vova Kolmakov]] (1), [[person/uros-b|Uros]] (1)
 
-Most active reviewers (last 6 months): [[person/pvary|Peter Vary]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/singhpk234|Prashant Singh]] (2), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/uros-b|Uros]] (2), [[person/ebyhr|Yuya Ebihara]] (1), [[person/szehon-ho|Szehon Ho]] (1), [[person/vishnuprakaz|vishnu prakash]] (1)
+Most active reviewers (last 6 months): [[person/pvary|Peter Vary]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/singhpk234|Prashant Singh]] (2), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/uros-b|Uros]] (2), [[person/ebyhr|Yuya Ebihara]] (1), [[person/vishnuprakaz|vishnu prakash]] (1), [[person/wombatu-kun|Vova Kolmakov]] (1)
 
 ## Latest changes
 

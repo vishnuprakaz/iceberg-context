@@ -15,7 +15,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person nandorKollar` for live numbers.
 
-- **Merged commits:** 1. Areas: [[module/iceberg/azure|iceberg/azure]] (1), [[module/iceberg/build|iceberg/build]] (1)
+- **Merged commits:** 1. Areas: [[module/iceberg/build|iceberg/build]] (1), [[module/iceberg/azure|iceberg/azure]] (1)
 - **Pull requests reviewed (6 months):** 5
 
 ## Recent merged changes
