@@ -17,16 +17,16 @@ From `kb status` on 2026-11-13: all eight collectors last succeeded less than an
 | Calendar (`calendar`) | ok | 53 events, to 2026-12-10 |
 | Recordings (`youtube`) | ok | 3 transcripts, to 2026-11-09 |
 
-Limits that affect this page: apache/iceberg issues are only partly synced and apache/iceberg-python pull requests are not synced, so statements about PyIceberg, Go, Rust and C++ work come from meeting notes and dev list threads, not from GitHub state. The generated release pages stop at PyIceberg 0.9.1 ([release page](releases/iceberg-python-0.9.1.md)) and Go 0.5.0 ([release page](releases/iceberg-go-0.5.0.md)); later versions below are taken from meeting notes.
+Limits that affect this page: apache/iceberg issues are only partly synced and apache/iceberg-python pull requests are not synced, so statements about PyIceberg, Go, Rust and C++ work come from meeting notes and dev list threads, not from GitHub state. The generated release pages reach PyIceberg 0.12.0 ([release page](releases/iceberg-python-0.12.0.md)) and stop at Go 0.5.0 ([release page](releases/iceberg-go-0.5.0.md)); later Go versions below are taken from meeting notes.
 
 ## Releases
 
 | Implementation | Last release | Next release |
 |---|---|---|
 | Java | 1.12.0, announced 2026-10-01 ([release page](releases/iceberg-1.12.0.md)) | 1.13: a release manager is named, the date (end of year or early January) is not settled, and on 2026-11-11 there was no release candidate, branch or freeze date ([Java releases](initiatives/java-releases.md); [Spark sync 2026-11-11](records/meetings/spark/2026/2026-11-11.md)) |
-| PyIceberg | 0.12.0, marked done on 2026-09-16 ([PyIceberg roadmap](initiatives/pyiceberg.md); [community sync 2026-09-16](records/meetings/community/2026/2026-09-16.md)) | 0.13, with "Early December?" on the sync agenda and no recorded decision ([PyIceberg sync 2026-10-27](records/meetings/python/2026/2026-10-27.md)) |
+| PyIceberg | 0.12.0, announced 2026-09-01 ([release page](releases/iceberg-python-0.12.0.md); [announcement](https://lists.apache.org/thread/mhpf8k8ll8s035p3hyfofwt3jrd9309w), `devlist:mhpf8k8ll8s035p3hyfofwt3jrd9309w`) | 0.13, with "Early December?" on the sync agenda and no recorded decision ([PyIceberg sync 2026-10-27](records/meetings/python/2026/2026-10-27.md)) |
 | Rust | 0.11.0, announced 2026-11-04 ([release page](releases/iceberg-rust-0.11.0.md); [announcement](https://lists.apache.org/thread/lm4sskbfojckzmo6l3fkko1wcoz5v8h6)) | none on record ([Iceberg Rust](initiatives/iceberg-rust.md)) |
-| Go | 0.7.0, release blog post linked on 2026-10-07 ([Iceberg Go](initiatives/iceberg-go.md); [community sync 2026-10-07](records/meetings/community/2026/2026-10-07.md)) | v1, reported as planned "around the next community sync" after API cleanup ([community sync 2026-10-28](records/meetings/community/2026/2026-10-28.md)) |
+| Go | 0.7.0, release blog post linked on 2026-10-07 ([Iceberg Go](initiatives/iceberg-go.md); [community sync 2026-10-07](records/meetings/community/2026/2026-10-07.md)) | v1: on 2026-10-28 the API surface was being cleaned up for a v1 release, and the speaker said "we plan to do this maybe before the next community sync"; no date is set ([recording at 0:15:42](https://www.youtube.com/watch?v=fPTtFTNf_Tc), `yt:fPTtFTNf_Tc`; [community sync 2026-10-28](records/meetings/community/2026/2026-10-28.md)) |
 | C++ | 0.4.0, dated 2026-09-26 ([release page](releases/iceberg-cpp-0.4.0.md)) | a smaller follow-up release in late October was the release manager's stated preference; no record of it exists ([Iceberg C++](initiatives/iceberg-cpp.md)) |
 | Terraform provider | 0.2.0, dated 2026-11-04 ([release page](releases/terraform-provider-iceberg-0.2.0.md)) | none on record |
 
@@ -50,7 +50,10 @@ Closed in the last 30 days (from `kb whats-new --since 30d`):
 - FILE type in the V4 spec ([#17918](https://github.com/apache/iceberg/pull/17918)): passed on 2026-10-19 with 8 binding and 19 non-binding +1 votes and one non-binding +0 ([result](https://lists.apache.org/thread/6b63cbcsf0l69z9hs6v9nc1gp4y96tlp), `devlist:6b63cbcsf0l69z9hs6v9nc1gp4y96tlp`).
 - Iceberg Rust 0.11.0 RC3: the release manager reported the vote as passed ([thread](records/threads/2026/10/vote-release-apache-iceberg-rust-0-11-0-rc3-60b37c.md)).
 - Terraform provider v0.2.0 RC1: passed with 4 binding +1 votes ([thread](records/threads/2026/10/vote-terraform-release-apache-iceberg-terraform-provider-v0-2-0-rc1-a9927e.md)).
-- Standard User-Agent format for REST clients ([#17727](https://github.com/apache/iceberg/pull/17727)): the reopened vote has only +1 replies and no result message on record ([thread](records/threads/2026/10/vote-recommend-a-standard-user-agent-format-for-rest-clients-reopen-ef8a98.md)); git history shows the OpenAPI change merged on 2026-11-10 (`kb whats-new`).
+
+Closed earlier, with the change merged in the last 30 days:
+
+- Standard User-Agent format for REST clients ([#17727](https://github.com/apache/iceberg/pull/17727)): the reopened vote passed on 2026-10-09 with 19 +1 votes (10 binding, 9 non-binding) and no 0 or -1 votes ([result](https://lists.apache.org/thread/pllz983cvffryzcwskglsr0cyo7p0gxx), `devlist:pllz983cvffryzcwskglsr0cyo7p0gxx`); git history shows the OpenAPI change merged on 2026-11-10 (`kb whats-new`).
 
 ## Active initiatives
 
@@ -62,7 +65,7 @@ One line per initiative; the status word is the one on the initiative page.
 - [Adaptive metadata tree and single-file commits](initiatives/v4-metadata-tree.md) (implementing): the baseline spec and the first Java building blocks are merged; `Snapshot.rootManifestLocation()` ([#17523](https://github.com/apache/iceberg/pull/17523)) merged on 2026-11-13 (git history, `kb whats-new`).
 - [Efficient column updates](initiatives/v4-column-updates.md) (design): the spec pull request [#16425](https://github.com/apache/iceberg/pull/16425) needs review before a vote ([community sync 2026-10-28](records/meetings/community/2026/2026-10-28.md)); the Java pull request for basic column file fields, [#16285](https://github.com/apache/iceberg/pull/16285), merged on 2026-11-05 (GitHub record `gh:apache/iceberg#16285`).
 - [Statistics redesign](initiatives/v4-content-stats.md) (implementing): stats-only fields and file-level `tight_stats` both passed their votes and the Java implementation of `tight_stats` ([#18598](https://github.com/apache/iceberg/pull/18598)) merged on 2026-11-10 (results above; git history, `kb whats-new`).
-- [Default value expressions](initiatives/v4-default-expressions.md) (vote on the page; the result is now on record): passed on 2026-11-06 and merged ([result](https://lists.apache.org/thread/h5jnk7l2op325x545hfnrpbo3qmh2ovo)).
+- [Default value expressions](initiatives/v4-default-expressions.md) (accepted): the vote passed on 2026-11-06 and the spec change is merged ([Default value expressions](initiatives/v4-default-expressions.md); [result](https://lists.apache.org/thread/h5jnk7l2op325x545hfnrpbo3qmh2ovo)).
 - [Row timestamps and monotonic snapshot timestamps](initiatives/v4-row-lineage-timestamps.md) (vote): monotonic snapshot timestamps are decided; the `_last_updated_time` vote has no result on record ([thread](records/threads/2026/10/vote-spec-add-last-updated-time-row-lineage-metadata-column-in-v4-447ec5.md)).
 - [Deprecating equality deletes](initiatives/v4-equality-deletes.md) (accepted): new equality deletes are forbidden in V4; a clarification of the row-level delete sections ([#18301](https://github.com/apache/iceberg/pull/18301)) merged on 2026-11-04 (git history, `kb whats-new`).
 - [Relative paths](initiatives/v4-relative-paths.md) (implementing): the spec change is merged and the REST side waits on [#17642](https://github.com/apache/iceberg/pull/17642) ([thread](records/threads/2026/08/discuss-initial-irc-changes-needed-for-iceberg-v4-4fdcd7.md)).
@@ -76,7 +79,7 @@ One line per initiative; the status word is the one on the initiative page.
 
 ### Catalog and REST
 
-- [REST catalog spec: other changes](initiatives/rest-spec.md) (implementing): whether V4 REST changes go into a separate branch was asked on 2026-11-04 with no recorded answer ([catalog sync 2026-11-04](records/meetings/catalog/2026/2026-11-04.md)).
+- [REST catalog spec: other changes](initiatives/rest-spec.md) (implementing): whether V4 REST changes go into a separate branch was asked on 2026-11-04 ([catalog sync 2026-11-04](records/meetings/catalog/2026/2026-11-04.md)); on 2026-11-11 a `rest-v4-changes` branch was created to collect the spec and OpenAPI changes for V4 tables, and feedback is asked for on [#17642](https://github.com/apache/iceberg/pull/17642) ([message](https://lists.apache.org/thread/zrn1jb7g9wm7jgn4fx3klmtxs03k65zg), `devlist:zrn1jb7g9wm7jgn4fx3klmtxs03k65zg`).
 - [REST authentication and credentials](initiatives/rest-auth.md) (implementing): a BearerAuthManager ([#18754](https://github.com/apache/iceberg/pull/18754)) and a downscoped OAuth2 manager ([#18756](https://github.com/apache/iceberg/pull/18756)) are in review ([catalog sync 2026-11-04](records/meetings/catalog/2026/2026-11-04.md)).
 - [Read restrictions](initiatives/read-restrictions.md) (implementing): the spec change is merged and the Java pull request stack is out for review ([catalog sync 2026-10-14](records/meetings/catalog/2026/2026-10-14.md)).
 - [Catalog labels](initiatives/catalog-labels.md) (implementing): labels are in the REST spec; the REST server test fixture now emits them ([#18047](https://github.com/apache/iceberg/pull/18047), merged 2026-11-09 per git history, `kb whats-new`).
@@ -136,7 +139,7 @@ From `kb upcoming` on 2026-11-13; times are UTC.
 - PyIceberg is dropping Python 3.10; both replies agreed ([thread](records/threads/2026/10/discuss-drop-pyiceberg-python-3-10-support-e423f0.md)).
 - A new repository, apache/iceberg-verification, holds shared conformance fixtures ([thread](records/threads/2026/08/vote-create-the-apache-iceberg-verification-repository-0eb2be.md)).
 - The DataFusion integration is moving from iceberg-rust to Apache DataFusion ([thread](records/threads/2026/09/vote-move-iceberg-datafusion-to-apache-datafusion-85a04b.md)).
-- Community health statistics are to be reported monthly ([thread](records/threads/2026/10/discuss-iceberg-community-health-stats-03ef42.md)).
+- Community health statistics: no reporting schedule is decided; the dashboard's author wrote on 2026-10-27 that he would probably update it at the end of every month ([message](https://lists.apache.org/thread/fpfk9zh4stpolflr8fto5c3v8c8mxz3b), `devlist:fpfk9zh4stpolflr8fto5c3v8c8mxz3b`; [thread](records/threads/2026/10/discuss-iceberg-community-health-stats-03ef42.md)).
 - Working group consolidation: the file and vector type sync asked whether to fold into the weekly V4 sync; no answer is recorded ([file and vector type sync 2026-11-05](records/meetings/file-vector-type/2026/2026-11-05.md)).
 - The Iceberg Rust sync time is under discussion after the daylight saving change ([thread](https://lists.apache.org/thread/rmgj7c4rglc9szdvosv3lo15sw9grxf2), `devlist:rmgj7c4rglc9szdvosv3lo15sw9grxf2`).
 - Events: the Iceberg Summit 2027 call for papers opened on 2026-11-12 ([announcement](https://lists.apache.org/thread/8qw0omgt78cjpc3vcrsop83dyp026vc6), `devlist:8qw0omgt78cjpc3vcrsop83dyp026vc6`).
