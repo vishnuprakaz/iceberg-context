@@ -1,6 +1,6 @@
 # Iceberg community knowledge base: design and pipeline plan
 
-Status: **proposal, 2026-11-13.** It builds on the source research in [`research/2026-11-13/`](../research/2026-11-13/).
+Status: **proposal, 2026-11-13 (v2: adds the delivery layer, §7, and the code map).** It builds on the source research in [`research/2026-11-13/`](../research/2026-11-13/).
 
 ## 1. Goal
 
@@ -12,6 +12,18 @@ A continuously updated, queryable picture of the Apache Iceberg project and comm
 - **Where we can contribute:** gaps, stalled work, unreviewed areas, demand with no implementation, and who to talk to.
 
 It must be usable by us and our friends from any Claude session or a browser, editable on the go, and safe to keep public.
+
+**Above all, it must plug into coding agents.** Any agent working on the Iceberg codebase, whether Claude Code, Cursor, Codex or others, should be able to:
+
+- understand *why* the code is the way it is
+- know what the community is doing and has decided
+- back every claim with a source
+
+The system has three parts:
+
+1. A **sync engine** that runs on a schedule.
+2. A **context store** in git, whose source of truth is compiled into a searchable index.
+3. An **access layer** (MCP server, skill and slash commands, packaged as a plugin). See §7.
 
 ## 2. How the community actually works (what the research showed)
 
@@ -141,7 +153,7 @@ collect (deterministic)  →  normalize (L0, data repo)  →  extract (LLM, per 
 | Source | Method | Change detection | Runs where |
 |---|---|---|---|
 | dev@ | PonyMail `mbox.lua` per month plus `stats.lua` for permalinks | Message-ID dedupe; freeze closed months | GitHub Action (daily) |
-| GitHub PRs/issues | search API `updated:>=last_sync`, date-sliced, rate-limited client with on-disk cache | upsert by number | GitHub Action (daily) |
+| GitHub PRs/issues | In Actions: the REST/GraphQL API with the default `GITHUB_TOKEN` (full read of public repos: PR bodies, review comments, reviews, `merged_by`, files changed, linked issues). In Claude sessions: the search API only. | `updated:>=last_sync`, upsert by number | GitHub Action (daily) |
 | git history | treeless clones; `git log` since last SHA → ownership metrics | last processed SHA | GitHub Action (daily) |
 | ASF roster | whimsy `committee-info.json`, `public_ldap_projects.json` | diff | GitHub Action (weekly) |
 | Sync notes docs | Google Docs `read_doc` JSON (tab-aware) via the Docs connector | `modifiedTime` → section hashes | Claude scheduled session |
@@ -188,6 +200,13 @@ collect (deterministic)  →  normalize (L0, data repo)  →  extract (LLM, per 
 - **Privacy linter:** no email addresses, phone numbers or personal details. People pages may hold only public project activity.
 - Generated-block markers are intact.
 
+### Code map (the "why" behind code)
+- **Built from git history:** for every commit, the `(#NNNN)` in the squash title gives the PR, and `--name-only` gives the files.
+  - This produces `code_map(path, pr, date, author)` for both repos, from about 10k PRs.
+  - Each PR links to its issue, review comments, dev@ threads, meetings and initiative.
+- **Function level:** at query time, the MCP server runs `git log -L :<symbol>:<path>` against the user's local checkout when one is available.
+- **What it answers:** "why is `SnapshotProducer` written like this", "what was debated when this validation was added", and "which spec rule does this code implement".
+
 ### Index and query
 `pipeline/build_index.py` compiles everything into `kb.sqlite` in seconds. Tables:
 - `nodes(id, type, title, status, updated)`
@@ -204,15 +223,48 @@ kb initiative v4-amt --timeline                     # lifecycle across dev@/sync
 kb upcoming                                         # next syncs + agenda + what to read beforehand
 kb opportunities --area python --level starter
 ```
-- **Phase 3:** a small MCP server wrapping the same queries, so any Claude session can call them as tools, plus a static site (GitHub Pages) with a graph view for browsing.
+- **Publishing the index:** every sync rebuilds `kb.sqlite` and publishes it as a GitHub Release asset tagged `latest` (with dated tags kept for history). Clients download it; nobody needs to build it.
 
-## 7. Collaboration ("update on the go")
+## 7. Delivery layer: the "Iceberg Context" plugin (plug-and-play)
+
+| Piece | Role |
+|---|---|
+| **MCP server** `iceberg-context-mcp` (Python, stdio, run with `uvx`) | The connector, usable by any MCP-capable agent. On start it downloads the latest `kb.sqlite` (refreshing it if more than 12 h old) and optionally reads a local checkout for `git log -L`. |
+| **Skill** `iceberg-context` (SKILL.md) | Teaches the agent the workflow: call `context_for_change` before editing, check for open PRs on the same files, cite sources, follow AGENTS.md conventions, and say when something is inferred. |
+| **Slash commands** | `/iceberg-brief` (what's new), `/iceberg-why <path>`, `/iceberg-start` (newcomer onboarding), `/iceberg-opportunities`, `/iceberg-sync` (run a sync now). |
+| **Claude Code plugin** | Bundles the server, skill and commands. This repo is its own plugin marketplace, so installing is one command. |
+| **Context packs** | Generated Markdown digests per area for agents without MCP. |
+| **Hosted MCP (later)** | An HTTP deployment so it can be added as a custom connector in claude.ai chat. |
+
+### MCP tools
+| Tool | Returns |
+|---|---|
+| `why(path, symbol?)` | The PRs that shaped the code, with their descriptions, review debates, and linked threads, votes and meeting decisions |
+| `context_for_change(paths \| diff)` | Related initiatives and spec sections, open PRs on the same files, active reviewers, recent decisions and conventions |
+| `whats_new(since, area?)` | A change digest across all sources |
+| `initiative(name)` | Status, champions, and a timeline across issue, docs, syncs, votes, PRs and releases |
+| `person(login)` | Public roles, areas, reviews and championed initiatives |
+| `who_to_ask(path \| topic)` | Owners, active reviewers, and the right working group or sync |
+| `search(query, types?)` | Full-text and graph search |
+| `get_source(id)` | The exact quote and permalink behind a claim (mail, notes section, video timestamp, PR comment) |
+| `upcoming()` | Next syncs, agendas, and what to read first |
+| `opportunities(filter)` | Ranked contribution opportunities |
+
+- **Resources:** `state-of-iceberg`, `briefing/latest`, `process/how-decisions-are-made`.
+- **Citations and confidence:** every tool result includes `sources[]` and a confidence label (observed / extracted / inferred).
+
+### Installing it
+- **Claude Code:** add this repo as a plugin marketplace, then install the plugin. In cloud sessions, the environment's setup script installs it.
+- **Cursor, Codex, other MCP clients:** `uvx iceberg-context-mcp` as a stdio server.
+- **Our fork repos:** are never modified for this; the config stays user- or environment-level.
+
+## 8. Collaboration ("update on the go")
 - **Friends:** they become collaborators on both repos and add `iceberg-context` to their own Claude environments. The CLAUDE.md loads automatically and tells every session to read `state-of-iceberg.md` first.
 - **Human edits:** go in `## Notes` blocks or `notes/` (meeting impressions, conversations, plans). Directly to `main` for small notes, or as PRs for structural changes.
 - **On-demand refresh:** saying "sync now" in any session runs the same pipeline as the schedule. `pipeline/state.json` holds the cursors, so concurrent runs don't duplicate work.
 - **Our own work:** `context.md` (work log) and `notes/` remain our personal layer on top of the community KB.
 
-## 8. Privacy and ethics guardrails (the repo is public)
+## 9. Privacy and ethics guardrails (the repo is public)
 - **Sources:** only public sources and public project activity: ASF roster, public lists, public docs and recordings, GitHub.
 - **Off limits:**
   - No email addresses: strip them from mbox, Docs person chips and mailto links.
@@ -222,22 +274,23 @@ kb opportunities --area python --level starter
 - **Labels:** inferred attributions (speakers in transcripts) are labeled as such, and AI-generated sources such as Gemini notes are marked.
 - **Tone:** write people pages as if the person will read them, because they can.
 
-## 9. Roadmap
+## 10. Roadmap
 
 | Phase | Scope | Deliverables |
 |---|---|---|
-| **0: Foundation** | repo skeleton; schemas; `people/aliases.yaml` seeded from the research; productionize the prototype collectors; `build_index.py` and the `kb` CLI; CI validators | an empty but working pipeline |
+| **0: Foundation** | repo skeleton; schemas; `people/aliases.yaml` seeded from the research; productionize the prototype collectors; code map; `build_index.py` and the `kb` CLI; CI validators; **a thin MCP server early** (search / why / get_source) so we use it from day 1 | a working pipeline we can already query |
 | **1: Seed** (from the 2026-11-13 research) | governance, people (PMC, committers, top 60 contributors), 14 working groups, about 20 active initiatives, module ownership maps, first `state-of-iceberg.md` and `opportunities.md` | a useful KB on day 1 |
 | **2: Backfill (6 months)** | meetings from May to Nov 2026 (notes plus about 80 transcripts), dev@ threads (DISCUSS/VOTE/RESULT), notable PRs, releases | the full recent picture, with timelines |
 | **3: Automation** | GitHub Actions daily collectors; scheduled Claude session weekly (Mon morning IST): docs, calendar, YouTube, LLM extraction, briefing | self-updating KB with a weekly briefing |
-| **4: Depth** | dev@ back to 2018 (DISCUSS/VOTE threads only), older syncs (index-level, summarize on demand), git evolution per module, influence and collaboration analytics, MCP server, static site and graph view | history and the "how did we get here" layer |
+| **4: Plugin v1** | MCP server (`why`, `context_for_change`, `whats_new`, `search`, `get_source`, `who_to_ask`, `upcoming`, `opportunities`), skill, slash commands, plugin packaging, release-asset publishing | plug-and-play for any agent |
+| **5: Depth** | dev@ back to 2018 (DISCUSS/VOTE threads only), older syncs (index-level, summarize on demand), git evolution per module, influence and collaboration analytics, context packs, static site and graph view, hosted MCP | history and the "how did we get here" layer |
 
 **Rough effort:**
 - Phases 0–1: one or two working sessions.
 - Phase 2: a few batched sessions, about 80 transcripts at about 65k tokens each, parallelized with subagents.
 - After that: about one session-hour a week.
 
-## 10. Decisions needed
+## 11. Decisions needed
 1. **Create `vishnuprakaz/iceberg-context-data`?** (Public is fine since emails are stripped; private also works.) Recommended.
 2. **Allow GitHub Actions** on `iceberg-context` for the daily deterministic collectors?
 3. **Weekly scheduled session:** Monday 08:00 IST? Plus an optional mid-week light run (dev@ and GitHub only, no LLM).
