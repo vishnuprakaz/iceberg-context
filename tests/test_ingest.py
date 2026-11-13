@@ -166,3 +166,38 @@ def test_thread_queue_and_apply_checks_citations(kb_root):
     ex["outcome"]["source"] = "devlist:not-in-thread"
     path.write_text(json.dumps(ex))
     assert "not in this thread" in str(apply.apply_all(kb_root)["rejected"])
+
+
+def test_vote_result_posted_in_separate_thread_is_linked(kb_root):
+    setup(kb_root)
+    from icekb.util import upsert
+
+    def mail(i, thread, title, kind, body, reply):
+        return {"id": f"devlist:{i}", "source": "devlist", "type": "email", "date": f"2026-11-0{i}T10:00:00Z",
+                "url": f"https://lists.apache.org/thread/{i}", "people": ["ada"], "title": title, "body": body, "refs": [], "hash": f"h{i}",
+                "meta": {"thread": thread, "kind": kind, "reply": reply, "subject": title.removeprefix("Re: ")}}
+    vote = "t-00000000000000a1"
+    upsert(kb_root, "devlist", [mail(1, vote, "[VOTE] Add gizmos to v4", "vote", "Please vote.", False),
+                                mail(2, vote, "Re: [VOTE] Add gizmos to v4", "vote", "+1", True),
+                                mail(6, "t-00000000000000b2", "[RESULT][VOTE] Add gizmos to v4", "result",
+                                     "This vote passes with 3 binding +1 votes.", False)])
+    ex = {"id": f"thread/{vote}", "sources": ["devlist:1"], "title": "Vote on gizmos",
+          "summary": "A vote to add gizmos to the v4 spec. The thread shows one +1 and no result message.",
+          "outcome": {"status": "open", "note": "One +1 so far."}}
+    path = kb_root / f"data/extract/threads/{vote}.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps(ex))
+    assert apply.apply_all(kb_root)["threads"] == 1
+    page = next((kb_root / "records/threads/2026/11").glob("*.md")).read_text()
+    assert "status: passed" in page and "Result posted in a separate thread on 2026-11-06" in page and "devlist:6" in page
+
+
+def test_release_titles():
+    from icekb.integrate.entities import _NOT_RELEASE, _RELEASE
+    cases = {"[ANNOUNCE] Apache Iceberg release 1.12.0": ("Iceberg", "1.12.0"), "[ANNOUNCE] PyIceberg 0.12": ("PyIceberg", "0.12"),
+             "[ANNOUNCE] Apache Iceberg C++ 0.4.0 released": ("Iceberg C++", "0.4.0"),
+             "[ANNOUNCE] Release Apache Iceberg Rust 0.11.0": ("Iceberg Rust", "0.11.0"),
+             "[ANNOUNCE] Apache Iceberg Terraform Provider v0.2.0 released": ("Iceberg Terraform Provider", "0.2.0")}
+    for title, want in cases.items():
+        assert _RELEASE.search(title).groups() == want, title
+    assert _NOT_RELEASE.search("[ANNOUNCE] Apache Iceberg Meetup Bay Area - Sept 23, 2026")

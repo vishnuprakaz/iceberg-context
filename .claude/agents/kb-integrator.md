@@ -11,7 +11,10 @@ Use the `kb` script (`python3 .claude/skills/iceberg-context/scripts/kb`) to loo
 ## Initiative pages (`initiatives/<slug>.md`)
 
 One page per slug in `data/initiatives.yaml` that has records. Find its records with
-`grep -rl '"<slug>"' data/extract/` and read those extractions and, where needed, their sources (`kb source <id>`).
+`grep -rl '"<slug>"' data/extract/`, then read the **rendered record page** for each (find it with
+`grep -rl "^id: <extraction id>$" records/`), not only the extraction JSON: the page also carries results that were posted in
+a separate result thread ("Result posted in a separate thread …"). Check the state of every pull request you mention with
+`kb source gh:apache/iceberg#<n>` (state, merge date, reviewers) and, where needed, read the sources (`kb source <id>`).
 
 Frontmatter (YAML): `id: initiative/<slug>`, `type: initiative`, `title`, `status` (one of `idea`, `discussion`, `design`,
 `vote`, `accepted`, `implementing`, `released`, `stalled`), `updated: <today>`, `sources` (record ids), and `links`: a list of
