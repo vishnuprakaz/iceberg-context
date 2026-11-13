@@ -11,14 +11,17 @@ sources:
 - devlist:k72c2y72w2j00xph2mn2bnsbvcbj43o4
 refs:
 - gh:apache/iceberg-rust#3239
-links: []
+links:
+- rel: started_by
+  to: person/dannycjones
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # pyiceberg-core Python bindings missing third-party license and notice files
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] pyiceberg-core / iceberg-rust Python bindings appears not to include third-party notice files](https://lists.apache.org/thread/k72c2y72w2j00xph2mn2bnsbvcbj43o4) · **Started:** 2026-09-16 by Danny Jones · **Messages:** 5 (last 2026-10-29) · **Outcome:** consensus
+**Thread:** [[DISCUSS] pyiceberg-core / iceberg-rust Python bindings appears not to include third-party notice files](https://lists.apache.org/thread/k72c2y72w2j00xph2mn2bnsbvcbj43o4) · **Started:** 2026-09-16 by [[person/dannycjones|Daniel Carl Jones]] · **Messages:** 5 (last 2026-10-29) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

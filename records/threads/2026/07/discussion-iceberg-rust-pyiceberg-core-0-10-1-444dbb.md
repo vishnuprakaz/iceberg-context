@@ -11,14 +11,17 @@ sources:
 - devlist:nxqw16p5wt8oorrtsbc28phkosp0g55l
 refs:
 - gh:apache/iceberg-rust#2907
-links: []
+links:
+- rel: started_by
+  to: person/dannycjones
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Iceberg Rust / pyiceberg-core 0.10.1
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSSION] Iceberg Rust / pyiceberg-core 0.10.1](https://lists.apache.org/thread/nxqw16p5wt8oorrtsbc28phkosp0g55l) · **Started:** 2026-07-27 by Danny Jones · **Messages:** 4 (last 2026-07-28) · **Outcome:** consensus
+**Thread:** [[DISCUSSION] Iceberg Rust / pyiceberg-core 0.10.1](https://lists.apache.org/thread/nxqw16p5wt8oorrtsbc28phkosp0g55l) · **Started:** 2026-07-27 by [[person/dannycjones|Daniel Carl Jones]] · **Messages:** 4 (last 2026-07-28) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

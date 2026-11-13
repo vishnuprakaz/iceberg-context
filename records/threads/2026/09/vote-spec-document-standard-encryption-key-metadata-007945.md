@@ -11,14 +11,17 @@ sources:
 - devlist:hpdmzppsl87l0olkpzm3q47occ9cfydo
 refs:
 - gh:apache/iceberg#16527
-links: []
+links:
+- rel: started_by
+  to: person/xanderbailey
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Spec: document standard encryption key metadata
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] [SPEC] Document standard encryption key metadata](https://lists.apache.org/thread/hpdmzppsl87l0olkpzm3q47occ9cfydo) · **Started:** 2026-09-02 by Alexander Bailey · **Messages:** 4 (last 2026-09-03) · **Outcome:** no-conclusion
+**Thread:** [[VOTE] [SPEC] Document standard encryption key metadata](https://lists.apache.org/thread/hpdmzppsl87l0olkpzm3q47occ9cfydo) · **Started:** 2026-09-02 by [[person/xanderbailey|Xander]] · **Messages:** 4 (last 2026-09-03) · **Outcome:** no-conclusion
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

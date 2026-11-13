@@ -25,13 +25,13 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-11-11 | `meet:spark:2026-11-11` (held) |  |  |
-| 2026-10-20 | `meet:spark:2026-10-20` (held) |  |  |
+| 2026-11-11 | `meet:spark:2026-11-11` (held) |  | [[meeting/spark/2026-11-11|summary]] |
+| 2026-10-20 | `meet:spark:2026-10-20` (held) |  | [[meeting/spark/2026-10-20|summary]] |
 | 2026-09-15 | `meet:spark:2026-09-15` (cancelled) |  |  |
-| 2026-08-18 | `meet:spark:2026-08-18` (held) |  |  |
-| 2026-07-21 | `meet:spark:2026-07-21` (held) |  |  |
-| 2026-06-16 | `meet:spark:2026-06-16` (held) |  |  |
-| 2026-05-19 | `meet:spark:2026-05-19` (held) |  |  |
+| 2026-08-18 | `meet:spark:2026-08-18` (held) |  | [[meeting/spark/2026-08-18|summary]] |
+| 2026-07-21 | `meet:spark:2026-07-21` (held) |  | [[meeting/spark/2026-07-21|summary]] |
+| 2026-06-16 | `meet:spark:2026-06-16` (held) |  | [[meeting/spark/2026-06-16|summary]] |
+| 2026-05-19 | `meet:spark:2026-05-19` (held) |  | [[meeting/spark/2026-05-19|summary]] |
 | 2026-04-21 | `meet:spark:2026-04-21` (held) |  |  |
 | 2026-03-17 | `meet:spark:2026-03-17` (held) |  |  |
 | 2026-02-17 | `meet:spark:2026-02-17` (held) |  |  |

@@ -12,14 +12,17 @@ sources:
 refs:
 - gh:apache/iceberg#17533
 - gh:apache/iceberg#16353
-links: []
+links:
+- rel: started_by
+  to: person/gaborkaszab
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Reusable encryption keys
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Reusable encryption keys](https://lists.apache.org/thread/38rkthkr1fg0s86493fjq755cnl3y90s) · **Started:** 2026-09-23 by Gábor Kaszab · **Messages:** 9 (last 2026-10-05) · **Outcome:** open
+**Thread:** [[DISCUSS] Reusable encryption keys](https://lists.apache.org/thread/38rkthkr1fg0s86493fjq755cnl3y90s) · **Started:** 2026-09-23 by [[person/gaborkaszab|Gabor Kaszab]] · **Messages:** 9 (last 2026-10-05) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

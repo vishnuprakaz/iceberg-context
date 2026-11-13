@@ -12,7 +12,7 @@ owners:
 - findepi
 - wypoon
 - RussellSpitzer
-- aokolnychyi
+- ebyhr
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,7 +27,7 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (11), [[person/rdblue|Ryan Blue]] (9), [[person/findepi|Piotr Findeisen]] (5), [[person/wypoon|Wing Yew Poon]] (5), [[person/RussellSpitzer|Russell Spitzer]] (4), [[person/aokolnychyi|Anton Okolnychyi]] (3)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (19), [[person/rdblue|Ryan Blue]] (9), [[person/findepi|Piotr Findeisen]] (5), [[person/wypoon|Wing Yew Poon]] (5), [[person/RussellSpitzer|Russell Spitzer]] (4), [[person/ebyhr|Yuya Ebihara]] (4)
 
 Most active authors (last 12 months): [[person/jbewing|jbewing]] (2), [[person/thswlsqls|Eunbin Son]] (2), [[person/nssalian|Neelesh Salian]] (2), [[person/shubham19may|Shubham Baldava]] (1), [[person/pvary|Peter Vary]] (1), [[person/drexler-sky|drexler-sky]] (1), [[person/xndai|Xiening Dai]] (1), [[person/sungwy|Sung Yun]] (1)
 

@@ -14,14 +14,17 @@ refs:
 - gh:apache/iceberg-cpp#559
 - gh:apache/iceberg-rust#2337
 - yt:G5m039mXgG4
-links: []
+links:
+- rel: started_by
+  to: person/xanderbailey
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Should incremental (append) scan semantics be part of the spec?
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Should incremental (append) scan semantics be part of the spec?](https://lists.apache.org/thread/o0wsy3jot3vos7zpqop4xk48k0hzf057) · **Started:** 2026-07-23 by Alexander Bailey · **Messages:** 5 (last 2026-08-04) · **Outcome:** no-conclusion
+**Thread:** [[DISCUSS] Should incremental (append) scan semantics be part of the spec?](https://lists.apache.org/thread/o0wsy3jot3vos7zpqop4xk48k0hzf057) · **Started:** 2026-07-23 by [[person/xanderbailey|Xander]] · **Messages:** 5 (last 2026-08-04) · **Outcome:** no-conclusion
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

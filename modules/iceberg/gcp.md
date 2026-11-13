@@ -9,10 +9,10 @@ commits_12m: 20
 owners:
 - nastra
 - bryanck
+- ebyhr
 - singhpk234
 - rajarshisarkar
 - rdblue
-- adutra
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (14), [[person/bryanck|Bryan Keller]] (6), [[person/singhpk234|Prashant Singh]] (3), [[person/rajarshisarkar|Rajarshi Sarkar]] (2), [[person/rdblue|Ryan Blue]] (2), [[person/adutra|Alexandre Dutra]] (2)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (16), [[person/bryanck|Bryan Keller]] (6), [[person/ebyhr|Yuya Ebihara]] (6), [[person/singhpk234|Prashant Singh]] (3), [[person/rajarshisarkar|Rajarshi Sarkar]] (2), [[person/rdblue|Ryan Blue]] (2)
 
-Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (3), [[person/tom-s-powell|Thomas Powell]] (2), [[person/munendrasn|S N Munendra]] (2), [[person/joyhaldar|Joy Haldar]] (1), [[person/findinpath|Marius Grama]] (1), [[person/laserninja|Akshay Thorat]] (1), [[person/talatuyarer|Talat UYARER]] (1), [[person/vladislav-sidorovich|Vladislav Sidorovich]] (1)
+Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (3), [[person/ebyhr|Yuya Ebihara]] (3), [[person/tom-s-powell|Thomas Powell]] (2), [[person/munendrasn|S N Munendra]] (2), [[person/joyhaldar|Joy Haldar]] (1), [[person/findinpath|Marius Grama]] (1), [[person/laserninja|Akshay Thorat]] (1), [[person/talatuyarer|Talat UYARER]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

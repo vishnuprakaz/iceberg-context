@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (28), [[person/jackye1995|Jack Ye]] (27), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (17), [[person/danielcweeks|Daniel C. Weeks]] (12), [[person/singhpk234|Prashant Singh]] (11), [[person/adutra|Alexandre Dutra]] (11)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (48), [[person/jackye1995|Jack Ye]] (27), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (17), [[person/danielcweeks|Daniel C. Weeks]] (12), [[person/singhpk234|Prashant Singh]] (11), [[person/adutra|Alexandre Dutra]] (11)
 
-Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (5), [[person/tom-s-powell|Thomas Powell]] (3), [[person/adutra|Alexandre Dutra]] (3), [[person/uros-b|Uros]] (2), [[person/smaheshwar-pltr|Sreesh Maheshwar]] (2), [[person/yusufyildiz34|Yusuf YILDIZ]] (2), [[person/kevinjqliu|Kevin Liu]] (1), [[person/anuragmantri|Anurag Mantripragada]] (1)
+Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (5), [[person/tom-s-powell|Thomas Powell]] (3), [[person/adutra|Alexandre Dutra]] (3), [[person/uros-b|Uros]] (2), [[person/smaheshwar-pltr|Sreesh Maheshwar]] (2), [[person/ebyhr|Yuya Ebihara]] (2), [[person/yusufyildiz34|Yusuf YILDIZ]] (2), [[person/kevinjqliu|Kevin Liu]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

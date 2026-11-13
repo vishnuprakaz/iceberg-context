@@ -11,14 +11,17 @@ sources:
 - devlist:rx0tcnqkq0nzj1phwo64ng79pp51hzf9
 refs:
 - gh:apache/iceberg#17533
-links: []
+links:
+- rel: started_by
+  to: person/gaborkaszab
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Vote: add key-id to table and partition statistics and deprecate key-metadata
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] [SPEC] Add key-id to table and partition statistics and deprecate key-metadata](https://lists.apache.org/thread/rx0tcnqkq0nzj1phwo64ng79pp51hzf9) · **Started:** 2026-08-10 by Gábor Kaszab · **Messages:** 11 (last 2026-08-25) · **Outcome:** withdrawn
+**Thread:** [[VOTE] [SPEC] Add key-id to table and partition statistics and deprecate key-metadata](https://lists.apache.org/thread/rx0tcnqkq0nzj1phwo64ng79pp51hzf9) · **Started:** 2026-08-10 by [[person/gaborkaszab|Gabor Kaszab]] · **Messages:** 11 (last 2026-08-25) · **Outcome:** withdrawn
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

@@ -5,6 +5,10 @@ title: Andrei Tserakhau
 login: laskoviymishka
 github: https://github.com/laskoviymishka
 links:
+- rel: has_role
+  to: repo/iceberg
+  note: Committer
+  confidence: observed
 - rel: contributes
   to: module/iceberg/open-api
   n: 2
@@ -20,12 +24,17 @@ links:
   n: 3
   window: 12m
   confidence: observed
+asf_id: atserakhau
+roles:
+- committer
 updated: '2026-11-13'
 ---
 
 # Andrei Tserakhau
 
 <!-- kb:generated:start -->
+**Role:** Committer of Apache Iceberg ([ASF roster](https://projects.apache.org/committee.html?iceberg)).
+
 ## Activity in the last 12 months
 
 Counted from public records; see `kb person laskoviymishka` for live numbers.

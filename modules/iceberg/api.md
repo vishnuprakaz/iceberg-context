@@ -8,8 +8,8 @@ commits_total: 894
 commits_12m: 124
 owners:
 - rdblue
-- aokolnychyi
 - nastra
+- aokolnychyi
 - amogh-jahagirdar
 - Fokko
 - RussellSpitzer
@@ -28,9 +28,9 @@ Public interfaces and types. Strongest stability guarantees; breaking changes ar
 
 ## Who works here
 
-Long-term authors (all time): [[person/rdblue|Ryan Blue]] (195), [[person/aokolnychyi|Anton Okolnychyi]] (68), [[person/nastra|Eduard Tudenhoefner]] (44), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (35), [[person/Fokko|Fokko Driesprong]] (29), [[person/RussellSpitzer|Russell Spitzer]] (29)
+Long-term authors (all time): [[person/rdblue|Ryan Blue]] (195), [[person/nastra|Eduard Tudenhoefner]] (85), [[person/aokolnychyi|Anton Okolnychyi]] (68), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (35), [[person/Fokko|Fokko Driesprong]] (29), [[person/RussellSpitzer|Russell Spitzer]] (29)
 
-Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (13), [[person/anoopj|Anoop Johnson]] (13), [[person/uros-b|Uros]] (10), [[person/rdblue|Ryan Blue]] (7), [[person/stevenzwu|Steven Wu]] (5), [[person/singhpk234|Prashant Singh]] (4), [[person/gaborkaszab|gaborkaszab]] (4), [[person/huan233usc|Xin Huang]] (4)
+Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (13), [[person/anoopj|Anoop Johnson]] (13), [[person/uros-b|Uros]] (10), [[person/rdblue|Ryan Blue]] (7), [[person/ebyhr|Yuya Ebihara]] (5), [[person/stevenzwu|Steven Wu]] (5), [[person/singhpk234|Prashant Singh]] (4), [[person/gaborkaszab|Gabor Kaszab]] (4)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

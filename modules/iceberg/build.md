@@ -9,10 +9,10 @@ commits_12m: 495
 owners:
 - rdblue
 - Fokko
+- nastra
+- ebyhr
 - manuzhang
 - ajantha-bhat
-- kevinjqliu
-- nastra
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/rdblue|Ryan Blue]] (70), [[person/Fokko|Fokko Driesprong]] (69), [[person/manuzhang|Manu Zhang]] (56), [[person/ajantha-bhat|Ajantha Bhat]] (46), [[person/kevinjqliu|Kevin Liu]] (43), [[person/nastra|Eduard Tudenhoefner]] (37)
+Long-term authors (all time): [[person/rdblue|Ryan Blue]] (70), [[person/Fokko|Fokko Driesprong]] (69), [[person/nastra|Eduard Tudenhoefner]] (68), [[person/ebyhr|Yuya Ebihara]] (57), [[person/manuzhang|Manu Zhang]] (56), [[person/ajantha-bhat|Ajantha Bhat]] (46)
 
-Most active authors (last 12 months): [[person/kevinjqliu|Kevin Liu]] (39), [[person/manuzhang|Manu Zhang]] (28), [[person/nastra|Eduard Tudenhoefner]] (9), [[person/huaxingao|Huaxin Gao]] (7), [[person/singhpk234|Prashant Singh]] (5), [[person/uros-b|Uros]] (5), [[person/Fokko|Fokko Driesprong]] (4), [[person/Guosmilesmile|GuoYu]] (4)
+Most active authors (last 12 months): [[person/ebyhr|Yuya Ebihara]] (52), [[person/kevinjqliu|Kevin Liu]] (39), [[person/manuzhang|Manu Zhang]] (28), [[person/nastra|Eduard Tudenhoefner]] (9), [[person/huaxingao|Huaxin Gao]] (7), [[person/singhpk234|Prashant Singh]] (5), [[person/uros-b|Uros]] (5), [[person/Fokko|Fokko Driesprong]] (4)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

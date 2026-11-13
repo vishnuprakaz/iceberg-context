@@ -11,8 +11,8 @@ owners:
 - sungwy
 - kevinjqliu
 - rambleraptor
+- samredai
 - HonahX
-- nssalian
 links:
 - rel: part_of
   to: repo/iceberg-python
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (91), [[person/sungwy|Sung Yun]] (24), [[person/kevinjqliu|Kevin Liu]] (20), [[person/rambleraptor|Alex Stephen]] (6), [[person/HonahX|Honah J.]] (4), [[person/nssalian|Neelesh Salian]] (4)
+Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (91), [[person/sungwy|Sung Yun]] (24), [[person/kevinjqliu|Kevin Liu]] (20), [[person/rambleraptor|Alex Stephen]] (6), [[person/samredai|Sam Redai]] (4), [[person/HonahX|Honah J.]] (4)
 
-Most active authors (last 12 months): [[person/kevinjqliu|Kevin Liu]] (4), [[person/nssalian|Neelesh Salian]] (4), [[person/rahulsmahadev|Rahul Shivu Mahadev]] (4), [[person/rambleraptor|Alex Stephen]] (3), [[person/010Soham|Soham]] (3), [[person/krishnakaanchan-png|Kaanchan Krishna]] (3), [[person/fallintoplace|Minh Vu]] (2), [[person/GayathriSrividya|GayathriSrividya]] (2)
+Most active authors (last 12 months): [[person/kevinjqliu|Kevin Liu]] (4), [[person/nssalian|Neelesh Salian]] (4), [[person/rahulsmahadev|Rahul Shivu Mahadev]] (4), [[person/rambleraptor|Alex Stephen]] (3), [[person/010Soham|Soham]] (3), [[person/krishnakaanchan-png|Kaanchan Krishna]] (3), [[person/ebyhr|Yuya Ebihara]] (2), [[person/fallintoplace|Minh Vu]] (2)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

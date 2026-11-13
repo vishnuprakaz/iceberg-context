@@ -9,10 +9,10 @@ commits_12m: 75
 owners:
 - rdblue
 - aokolnychyi
+- ebyhr
+- nastra
 - huaxingao
 - aihuaxu
-- nssalian
-- Fokko
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/rdblue|Ryan Blue]] (82), [[person/aokolnychyi|Anton Okolnychyi]] (14), [[person/huaxingao|Huaxin Gao]] (9), [[person/aihuaxu|Aihua Xu]] (9), [[person/nssalian|Neelesh Salian]] (9), [[person/Fokko|Fokko Driesprong]] (8)
+Long-term authors (all time): [[person/rdblue|Ryan Blue]] (82), [[person/aokolnychyi|Anton Okolnychyi]] (14), [[person/ebyhr|Yuya Ebihara]] (12), [[person/nastra|Eduard Tudenhoefner]] (10), [[person/huaxingao|Huaxin Gao]] (9), [[person/aihuaxu|Aihua Xu]] (9)
 
-Most active authors (last 12 months): [[person/nssalian|Neelesh Salian]] (9), [[person/huan233usc|Xin Huang]] (8), [[person/wombatu-kun|Vova Kolmakov]] (4), [[person/Guosmilesmile|GuoYu]] (3), [[person/rdblue|Ryan Blue]] (3), [[person/uros-b|Uros]] (3), [[person/tmater|Tamas Mate]] (2), [[person/nastra|Eduard Tudenhoefner]] (2)
+Most active authors (last 12 months): [[person/nssalian|Neelesh Salian]] (9), [[person/huan233usc|Xin Huang]] (8), [[person/wombatu-kun|Vova Kolmakov]] (4), [[person/ebyhr|Yuya Ebihara]] (3), [[person/Guosmilesmile|GuoYu]] (3), [[person/rdblue|Ryan Blue]] (3), [[person/uros-b|Uros]] (3), [[person/tmater|Tamas Mate]] (2)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

@@ -8,9 +8,9 @@ commits_total: 192
 commits_12m: 3
 owners:
 - pvary
+- nastra
 - rdblue
 - findepi
-- nastra
 - shardulm94
 - aokolnychyi
 links:
@@ -27,7 +27,7 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/pvary|Peter Vary]] (31), [[person/rdblue|Ryan Blue]] (5), [[person/findepi|Piotr Findeisen]] (5), [[person/nastra|Eduard Tudenhoefner]] (5), [[person/shardulm94|Shardul Mahadik]] (4), [[person/aokolnychyi|Anton Okolnychyi]] (4)
+Long-term authors (all time): [[person/pvary|Peter Vary]] (31), [[person/nastra|Eduard Tudenhoefner]] (10), [[person/rdblue|Ryan Blue]] (5), [[person/findepi|Piotr Findeisen]] (5), [[person/shardulm94|Shardul Mahadik]] (4), [[person/aokolnychyi|Anton Okolnychyi]] (4)
 
 Most active authors (last 12 months): [[person/thswlsqls|Eunbin Son]] (2), [[person/pvary|Peter Vary]] (1)
 

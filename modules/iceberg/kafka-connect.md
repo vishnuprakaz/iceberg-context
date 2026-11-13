@@ -7,12 +7,12 @@ path: kafka-connect
 commits_total: 182
 commits_12m: 105
 owners:
+- ebyhr
 - bryanck
 - wombatu-kun
 - nastra
 - jbonofre
 - kumarpritam863
-- ajantha-bhat
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/bryanck|Bryan Keller]] (12), [[person/wombatu-kun|Vova Kolmakov]] (6), [[person/nastra|Eduard Tudenhoefner]] (5), [[person/jbonofre|JB Onofré]] (5), [[person/kumarpritam863|kumarpritam863]] (5), [[person/ajantha-bhat|Ajantha Bhat]] (4)
+Long-term authors (all time): [[person/ebyhr|Yuya Ebihara]] (42), [[person/bryanck|Bryan Keller]] (12), [[person/wombatu-kun|Vova Kolmakov]] (6), [[person/nastra|Eduard Tudenhoefner]] (5), [[person/jbonofre|JB Onofré]] (5), [[person/kumarpritam863|kumarpritam863]] (5)
 
-Most active authors (last 12 months): [[person/wombatu-kun|Vova Kolmakov]] (5), [[person/kevinjqliu|Kevin Liu]] (4), [[person/huaxingao|Huaxin Gao]] (4), [[person/yadavay-amzn|Anupam Yadav]] (4), [[person/twthorn|Thomas Thornton]] (4), [[person/manuzhang|Manu Zhang]] (3), [[person/rmoff|Robin Moffatt]] (2), [[person/RussellSpitzer|Russell Spitzer]] (2)
+Most active authors (last 12 months): [[person/ebyhr|Yuya Ebihara]] (40), [[person/wombatu-kun|Vova Kolmakov]] (5), [[person/kevinjqliu|Kevin Liu]] (4), [[person/huaxingao|Huaxin Gao]] (4), [[person/yadavay-amzn|Anupam Yadav]] (4), [[person/twthorn|Thomas Thornton]] (4), [[person/manuzhang|Manu Zhang]] (3), [[person/rmoff|Robin Moffatt]] (2)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

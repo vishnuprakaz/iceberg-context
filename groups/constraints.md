@@ -21,8 +21,8 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-06-18 | `meet:constraints:2026-06-18` (link-only) |  |  |
-| 2026-06-04 | `meet:constraints:2026-06-04` (link-only) |  |  |
+| 2026-06-18 | `meet:constraints:2026-06-18` (link-only) |  | [[meeting/constraints/2026-06-18|summary]] |
+| 2026-06-04 | `meet:constraints:2026-06-04` (link-only) |  | [[meeting/constraints/2026-06-04|summary]] |
 <!-- kb:generated:end -->
 
 ## Notes

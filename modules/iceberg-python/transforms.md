@@ -12,7 +12,7 @@ owners:
 - jayceslesar
 - rambleraptor
 - zhjwpku
-- HonahX
+- samredai
 links:
 - rel: part_of
   to: repo/iceberg-python
@@ -27,7 +27,7 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (20), [[person/sungwy|Sung Yun]] (5), [[person/jayceslesar|Jayce Slesar]] (2), [[person/rambleraptor|Alex Stephen]] (2), [[person/zhjwpku|Junwang Zhao]] (2), [[person/HonahX|Honah J.]] (1)
+Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (20), [[person/sungwy|Sung Yun]] (5), [[person/jayceslesar|Jayce Slesar]] (2), [[person/rambleraptor|Alex Stephen]] (2), [[person/zhjwpku|Junwang Zhao]] (2), [[person/samredai|Sam Redai]] (1)
 
 Most active authors (last 12 months): [[person/Fokko|Fokko Driesprong]] (2), [[person/rambleraptor|Alex Stephen]] (2), [[person/zhjwpku|Junwang Zhao]] (2), [[person/GayathriSrividya|GayathriSrividya]] (1), [[person/xanderbailey|Xander]] (1), [[person/linzch3|linzch3]] (1)
 

@@ -13,14 +13,17 @@ refs:
 - gh:apache/iceberg#18513
 - gh:apache/iceberg#18516
 - gh:trinodb/trino#31173
-links: []
+links:
+- rel: started_by
+  to: person/ebyhr
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Adding an HLL sketch blob type to the Puffin spec
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Add HLL sketch blob type to Puffin spec](https://lists.apache.org/thread/vlcv3ft4mw0d3nzvgr6xg34p3zrq1xb7) · **Started:** 2026-10-21 by Yuya Ebihara · **Messages:** 6 (last 2026-10-27) · **Outcome:** open
+**Thread:** [[DISCUSS] Add HLL sketch blob type to Puffin spec](https://lists.apache.org/thread/vlcv3ft4mw0d3nzvgr6xg34p3zrq1xb7) · **Started:** 2026-10-21 by [[person/ebyhr|Yuya Ebihara]] · **Messages:** 6 (last 2026-10-27) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

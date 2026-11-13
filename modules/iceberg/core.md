@@ -8,8 +8,8 @@ commits_total: 2462
 commits_12m: 426
 owners:
 - rdblue
-- aokolnychyi
 - nastra
+- aokolnychyi
 - amogh-jahagirdar
 - gaborkaszab
 - RussellSpitzer
@@ -28,9 +28,9 @@ Engine-agnostic implementation of the table spec: metadata, snapshots, manifests
 
 ## Who works here
 
-Long-term authors (all time): [[person/rdblue|Ryan Blue]] (409), [[person/aokolnychyi|Anton Okolnychyi]] (190), [[person/nastra|Eduard Tudenhoefner]] (176), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (68), [[person/gaborkaszab|gaborkaszab]] (60), [[person/RussellSpitzer|Russell Spitzer]] (51)
+Long-term authors (all time): [[person/rdblue|Ryan Blue]] (409), [[person/nastra|Eduard Tudenhoefner]] (257), [[person/aokolnychyi|Anton Okolnychyi]] (190), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (68), [[person/gaborkaszab|Gabor Kaszab]] (60), [[person/RussellSpitzer|Russell Spitzer]] (51)
 
-Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (37), [[person/anoopj|Anoop Johnson]] (36), [[person/gaborkaszab|gaborkaszab]] (35), [[person/singhpk234|Prashant Singh]] (17), [[person/rdblue|Ryan Blue]] (16), [[person/stevenzwu|Steven Wu]] (12), [[person/uros-b|Uros]] (10), [[person/pvary|Peter Vary]] (9)
+Most active authors (last 12 months): [[person/nastra|Eduard Tudenhoefner]] (37), [[person/anoopj|Anoop Johnson]] (36), [[person/gaborkaszab|Gabor Kaszab]] (35), [[person/singhpk234|Prashant Singh]] (17), [[person/ebyhr|Yuya Ebihara]] (17), [[person/rdblue|Ryan Blue]] (16), [[person/stevenzwu|Steven Wu]] (12), [[person/uros-b|Uros]] (10)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

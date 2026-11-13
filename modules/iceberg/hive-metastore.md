@@ -7,12 +7,12 @@ path: hive-metastore
 commits_total: 185
 commits_12m: 20
 owners:
-- pvary
 - nastra
+- pvary
 - szehon-ho
+- ebyhr
 - aokolnychyi
 - flyrain
-- rdblue
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/pvary|Peter Vary]] (12), [[person/nastra|Eduard Tudenhoefner]] (9), [[person/szehon-ho|Szehon Ho]] (6), [[person/aokolnychyi|Anton Okolnychyi]] (5), [[person/flyrain|Yufei Gu]] (5), [[person/rdblue|Ryan Blue]] (4)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (13), [[person/pvary|Peter Vary]] (12), [[person/szehon-ho|Szehon Ho]] (6), [[person/ebyhr|Yuya Ebihara]] (6), [[person/aokolnychyi|Anton Okolnychyi]] (5), [[person/flyrain|Yufei Gu]] (5)
 
-Most active authors (last 12 months): [[person/smaheshwar-pltr|Sreesh Maheshwar]] (3), [[person/ggershinsky|ggershinsky]] (2), [[person/szlta|Adam Szita]] (1), [[person/hiwuya|wuya]] (1), [[person/nastra|Eduard Tudenhoefner]] (1), [[person/manuzhang|Manu Zhang]] (1), [[person/nssalian|Neelesh Salian]] (1), [[person/rambleraptor|Alex Stephen]] (1)
+Most active authors (last 12 months): [[person/smaheshwar-pltr|Sreesh Maheshwar]] (3), [[person/ggershinsky|Gidon Gershinsky]] (2), [[person/szlta|Adam Szita]] (1), [[person/hiwuya|wuya]] (1), [[person/nastra|Eduard Tudenhoefner]] (1), [[person/manuzhang|Manu Zhang]] (1), [[person/ebyhr|Yuya Ebihara]] (1), [[person/nssalian|Neelesh Salian]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

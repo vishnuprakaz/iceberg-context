@@ -26,14 +26,14 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-11-12 | `meet:materialized-views:2026-11-12` (held) |  |  |
-| 2026-10-29 | `meet:materialized-views:2026-10-29` (held) |  |  |
-| 2026-10-01 | `meet:materialized-views:2026-10-01` (held) |  |  |
-| 2026-09-17 | `meet:materialized-views:2026-09-17` (held) |  |  |
-| 2026-07-07 | `meet:materialized-views:2026-07-07` (held) |  |  |
-| 2026-06-25 | `meet:materialized-views:2026-06-25` (link-only) |  |  |
-| 2026-05-28 | `meet:materialized-views:2026-05-28` (link-only) |  |  |
-| 2026-05-14 | `meet:materialized-views:2026-05-14` (link-only) |  |  |
+| 2026-11-12 | `meet:materialized-views:2026-11-12` (held) |  | [[meeting/materialized-views/2026-11-12|summary]] |
+| 2026-10-29 | `meet:materialized-views:2026-10-29` (held) |  | [[meeting/materialized-views/2026-10-29|summary]] |
+| 2026-10-01 | `meet:materialized-views:2026-10-01` (held) |  | [[meeting/materialized-views/2026-10-01|summary]] |
+| 2026-09-17 | `meet:materialized-views:2026-09-17` (held) |  | [[meeting/materialized-views/2026-09-17|summary]] |
+| 2026-07-07 | `meet:materialized-views:2026-07-07` (held) |  | [[meeting/materialized-views/2026-07-07|summary]] |
+| 2026-06-25 | `meet:materialized-views:2026-06-25` (link-only) |  | [[meeting/materialized-views/2026-06-25|summary]] |
+| 2026-05-28 | `meet:materialized-views:2026-05-28` (link-only) |  | [[meeting/materialized-views/2026-05-28|summary]] |
+| 2026-05-14 | `meet:materialized-views:2026-05-14` (link-only) |  | [[meeting/materialized-views/2026-05-14|summary]] |
 | 2026-04-30 | `meet:materialized-views:2026-04-30` (held) |  |  |
 | 2026-04-16 | `meet:materialized-views:2026-04-16` (held) |  |  |
 | 2026-04-02 | `meet:materialized-views:2026-04-02` (held) |  |  |

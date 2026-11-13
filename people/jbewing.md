@@ -11,12 +11,12 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/parquet
+  to: module/iceberg/arrow
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/arrow
+  to: module/iceberg/parquet
   n: 2
   window: 12m
   confidence: observed
@@ -30,7 +30,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person jbewing` for live numbers.
 
-- **Merged commits:** 6. Areas: [[module/iceberg/spark|iceberg/spark]] (6), [[module/iceberg/parquet|iceberg/parquet]] (2), [[module/iceberg/arrow|iceberg/arrow]] (2), [[module/iceberg/core|iceberg/core]] (1)
+- **Merged commits:** 6. Areas: [[module/iceberg/spark|iceberg/spark]] (6), [[module/iceberg/arrow|iceberg/arrow]] (2), [[module/iceberg/parquet|iceberg/parquet]] (2), [[module/iceberg/core|iceberg/core]] (1)
 
 ## Recent merged changes
 

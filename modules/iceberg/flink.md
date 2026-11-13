@@ -12,7 +12,7 @@ owners:
 - Guosmilesmile
 - openinx
 - pvary
-- talatuyarer
+- nastra
 links:
 - rel: part_of
   to: repo/iceberg
@@ -28,9 +28,9 @@ Flink integration: sources, sinks, table maintenance.
 
 ## Who works here
 
-Long-term authors (all time): [[person/stevenzwu|Steven Wu]] (106), [[person/mxm|Maximilian Michels]] (93), [[person/Guosmilesmile|GuoYu]] (85), [[person/openinx|Zheng Hu]] (61), [[person/pvary|Peter Vary]] (54), [[person/talatuyarer|Talat UYARER]] (24)
+Long-term authors (all time): [[person/stevenzwu|Steven Wu]] (106), [[person/mxm|Maximilian Michels]] (93), [[person/Guosmilesmile|GuoYu]] (85), [[person/openinx|Zheng Hu]] (61), [[person/pvary|Peter Vary]] (54), [[person/nastra|Eduard Tudenhoefner]] (28)
 
-Most active authors (last 12 months): [[person/mxm|Maximilian Michels]] (58), [[person/Guosmilesmile|GuoYu]] (34), [[person/talatuyarer|Talat UYARER]] (24), [[person/swapna267|Swapna Marru]] (13), [[person/aiborodin|aiborodin]] (11), [[person/pvary|Peter Vary]] (9), [[person/wombatu-kun|Vova Kolmakov]] (9), [[person/sqd|Han You]] (7)
+Most active authors (last 12 months): [[person/mxm|Maximilian Michels]] (58), [[person/Guosmilesmile|GuoYu]] (34), [[person/talatuyarer|Talat UYARER]] (24), [[person/swapna267|Swapna Marru]] (13), [[person/ebyhr|Yuya Ebihara]] (12), [[person/aiborodin|aiborodin]] (11), [[person/pvary|Peter Vary]] (9), [[person/wombatu-kun|Vova Kolmakov]] (9)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

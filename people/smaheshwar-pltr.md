@@ -26,12 +26,12 @@ links:
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/site
+  to: module/iceberg/kafka-connect
   n: 2
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/aws
+  to: module/iceberg/site
   n: 2
   window: 12m
   confidence: observed
@@ -45,7 +45,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person smaheshwar-pltr` for live numbers.
 
-- **Merged commits:** 15. Areas: [[module/iceberg/spark|iceberg/spark]] (5), [[module/iceberg/core|iceberg/core]] (4), [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (3), [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg/aws|iceberg/aws]] (2)
+- **Merged commits:** 15. Areas: [[module/iceberg/spark|iceberg/spark]] (5), [[module/iceberg/core|iceberg/core]] (4), [[module/iceberg/hive-metastore|iceberg/hive-metastore]] (3), [[module/iceberg-python/table|iceberg-python/table]] (2), [[module/iceberg/kafka-connect|iceberg/kafka-connect]] (2), [[module/iceberg/site|iceberg/site]] (2)
 - **Dev list:** 4 messages, 1 threads started (1 discuss)
 - **Named in meeting notes:** [[group/community|community]] (1)
 

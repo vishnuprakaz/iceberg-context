@@ -17,7 +17,7 @@ updated: '2026-11-13'
 # iceberg 1.1.0
 
 <!-- kb:generated:start -->
-**Announced:** 2022-11-29 by Gabor Kaszab ([announcement](https://lists.apache.org/thread/5bwhjzq4xzrnh9r4dqvfpc1hshkz3kk2), `devlist:5bwhjzq4xzrnh9r4dqvfpc1hshkz3kk2`)
+**Announced:** 2022-11-29 by [[person/gaborkaszab|Gabor Kaszab]] ([announcement](https://lists.apache.org/thread/5bwhjzq4xzrnh9r4dqvfpc1hshkz3kk2), `devlist:5bwhjzq4xzrnh9r4dqvfpc1hshkz3kk2`)
 
 ## Vote threads
 

@@ -17,7 +17,7 @@ updated: '2026-11-13'
 # iceberg 1.8.1
 
 <!-- kb:generated:start -->
-**Announced:** 2025-02-28 by Eduard Tudenhöfner ([announcement](https://lists.apache.org/thread/bk9o3css4bknvdjddsxb5bw9kzqqmyxp), `devlist:bk9o3css4bknvdjddsxb5bw9kzqqmyxp`)
+**Announced:** 2025-02-28 by [[person/nastra|Eduard Tudenhoefner]] ([announcement](https://lists.apache.org/thread/bk9o3css4bknvdjddsxb5bw9kzqqmyxp), `devlist:bk9o3css4bknvdjddsxb5bw9kzqqmyxp`)
 
 ## Vote threads
 

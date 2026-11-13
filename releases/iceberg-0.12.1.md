@@ -17,7 +17,7 @@ updated: '2026-11-13'
 # iceberg 0.12.1
 
 <!-- kb:generated:start -->
-**Announced:** 2021-11-10 by Kyle Bendickson ([announcement](https://lists.apache.org/thread/n6xp0snqjfsqd41cld472dvlgfyoy3cs), `devlist:n6xp0snqjfsqd41cld472dvlgfyoy3cs`)
+**Announced:** 2021-11-10 by [[person/kbendick|Kyle Bendickson]] ([announcement](https://lists.apache.org/thread/n6xp0snqjfsqd41cld472dvlgfyoy3cs), `devlist:n6xp0snqjfsqd41cld472dvlgfyoy3cs`)
 
 ## Vote threads
 

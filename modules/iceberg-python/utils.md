@@ -10,9 +10,9 @@ owners:
 - Fokko
 - kevinjqliu
 - HonahX
+- ndrluis
 - rambleraptor
 - sungwy
-- vishnuprakaz
 links:
 - rel: part_of
   to: repo/iceberg-python
@@ -27,7 +27,7 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (29), [[person/kevinjqliu|Kevin Liu]] (6), [[person/HonahX|Honah J.]] (4), [[person/rambleraptor|Alex Stephen]] (3), [[person/sungwy|Sung Yun]] (2), [[person/vishnuprakaz|vishnu prakash]] (2)
+Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (29), [[person/kevinjqliu|Kevin Liu]] (6), [[person/HonahX|Honah J.]] (4), [[person/ndrluis|André Luis Anastácio]] (3), [[person/rambleraptor|Alex Stephen]] (3), [[person/sungwy|Sung Yun]] (2)
 
 Most active authors (last 12 months): [[person/rambleraptor|Alex Stephen]] (3), [[person/vishnuprakaz|vishnu prakash]] (2), [[person/geruh|Drew Gallardo]] (1), [[person/kevinjqliu|Kevin Liu]] (1), [[person/SaymV|Sam Verhasselt]] (1), [[person/fallintoplace|Minh Vu]] (1), [[person/anxkhn|Anas Khan]] (1), [[person/jackylee-ch|jackylee]] (1)
 

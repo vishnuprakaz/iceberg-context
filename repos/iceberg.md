@@ -45,7 +45,7 @@ updated: '2026-11-13'
 - 2025-07-17 [[release/iceberg-1.9.2|1.9.2]], announced by [[person/singhpk234|Prashant Singh]]
 - 2025-05-28 [[release/iceberg-1.9.1|1.9.1]], announced by [[person/RussellSpitzer|Russell Spitzer]]
 - 2025-04-28 [[release/iceberg-1.9.0|1.9.0]], announced by [[person/ajantha-bhat|Ajantha Bhat]]
-- 2025-02-28 [[release/iceberg-1.8.1|1.8.1]], announced by Eduard Tudenhöfner
+- 2025-02-28 [[release/iceberg-1.8.1|1.8.1]], announced by [[person/nastra|Eduard Tudenhoefner]]
 - 2025-02-13 [[release/iceberg-1.8.0|1.8.0]], announced by [[person/amogh-jahagirdar|Amogh Jahagirdar]]
 - 2024-12-09 [[release/iceberg-1.7.1|1.7.1]], announced by [[person/bryanck|Bryan Keller]]
 - 2024-11-08 [[release/iceberg-1.7.0|1.7.0]], announced by [[person/RussellSpitzer|Russell Spitzer]]

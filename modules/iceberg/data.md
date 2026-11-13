@@ -10,9 +10,9 @@ owners:
 - rdblue
 - aokolnychyi
 - openinx
+- nastra
 - shardulm94
 - pvary
-- Guosmilesmile
 links:
 - rel: part_of
   to: repo/iceberg
@@ -28,9 +28,9 @@ Generic readers, writers and delete handling shared by engines.
 
 ## Who works here
 
-Long-term authors (all time): [[person/rdblue|Ryan Blue]] (40), [[person/aokolnychyi|Anton Okolnychyi]] (27), [[person/openinx|Zheng Hu]] (19), [[person/shardulm94|Shardul Mahadik]] (16), [[person/pvary|Peter Vary]] (14), [[person/Guosmilesmile|GuoYu]] (14)
+Long-term authors (all time): [[person/rdblue|Ryan Blue]] (40), [[person/aokolnychyi|Anton Okolnychyi]] (27), [[person/openinx|Zheng Hu]] (19), [[person/nastra|Eduard Tudenhoefner]] (18), [[person/shardulm94|Shardul Mahadik]] (16), [[person/pvary|Peter Vary]] (14)
 
-Most active authors (last 12 months): [[person/Guosmilesmile|GuoYu]] (13), [[person/joyhaldar|Joy Haldar]] (6), [[person/pvary|Peter Vary]] (5), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (2), [[person/RussellSpitzer|Russell Spitzer]] (2), [[person/wombatu-kun|Vova Kolmakov]] (2), [[person/huan233usc|Xin Huang]] (2)
+Most active authors (last 12 months): [[person/Guosmilesmile|GuoYu]] (13), [[person/joyhaldar|Joy Haldar]] (6), [[person/pvary|Peter Vary]] (5), [[person/ebyhr|Yuya Ebihara]] (2), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (2), [[person/RussellSpitzer|Russell Spitzer]] (2), [[person/wombatu-kun|Vova Kolmakov]] (2)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

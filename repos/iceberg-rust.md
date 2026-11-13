@@ -14,9 +14,9 @@ updated: '2026-11-13'
 
 ## Releases announced on the dev list
 
-- 2026-11-04 [[release/iceberg-rust-0.11.0|0.11.0]], announced by Danny Jones
+- 2026-11-04 [[release/iceberg-rust-0.11.0|0.11.0]], announced by [[person/dannycjones|Daniel Carl Jones]]
 - 2026-08-01 [[release/iceberg-rust-0.10.1|0.10.1]], announced by [[person/CTTY|Shawn Chang]]
-- 2026-07-21 [[release/iceberg-rust-0.10.0|0.10.0]], announced by Danny Jones
+- 2026-07-21 [[release/iceberg-rust-0.10.0|0.10.0]], announced by [[person/dannycjones|Daniel Carl Jones]]
 - 2026-05-06 [[release/iceberg-rust-0.9.1|0.9.1]], announced by [[person/CTTY|Shawn Chang]]
 - 2026-03-18 [[release/iceberg-rust-0.9.0|0.9.0]], announced by [[person/CTTY|Shawn Chang]]
 - 2025-10-11 [[release/iceberg-rust-0.7.0|0.7.0]], announced by [[person/CTTY|Shawn Chang]]

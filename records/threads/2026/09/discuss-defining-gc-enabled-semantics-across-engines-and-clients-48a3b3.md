@@ -11,14 +11,17 @@ sources:
 - devlist:nxbxbs0x8h7xc73czgg3pryl42tr0zz5
 refs:
 - gh:apache/iceberg#17791
-links: []
+links:
+- rel: started_by
+  to: person/xanderbailey
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Defining gc.enabled semantics across engines and clients
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Defining gc.enabled semantics across engines and clients](https://lists.apache.org/thread/nxbxbs0x8h7xc73czgg3pryl42tr0zz5) · **Started:** 2026-09-11 by Alexander Bailey · **Messages:** 4 (last 2026-09-15) · **Outcome:** open
+**Thread:** [[DISCUSS] Defining gc.enabled semantics across engines and clients](https://lists.apache.org/thread/nxbxbs0x8h7xc73czgg3pryl42tr0zz5) · **Started:** 2026-09-11 by [[person/xanderbailey|Xander]] · **Messages:** 4 (last 2026-09-15) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

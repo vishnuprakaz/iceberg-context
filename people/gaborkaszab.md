@@ -1,22 +1,25 @@
 ---
 id: person/gaborkaszab
 type: person
-title: gaborkaszab
+title: Gabor Kaszab
 login: gaborkaszab
 github: https://github.com/gaborkaszab
 links:
+- rel: release_manager
+  to: release/iceberg-1.1.0
+  confidence: observed
 - rel: contributes
   to: module/iceberg/core
   n: 35
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/orc
+  to: module/iceberg/api
   n: 4
   window: 12m
   confidence: observed
 - rel: contributes
-  to: module/iceberg/api
+  to: module/iceberg/orc
   n: 4
   window: 12m
   confidence: observed
@@ -41,11 +44,20 @@ updated: '2026-11-13'
 # gaborkaszab
 
 <!-- kb:generated:start -->
+**Release manager for:** [[release/iceberg-1.1.0|iceberg 1.1.0]] (2022-11-29).
+
 ## Activity in the last 12 months
 
 Counted from public records; see `kb person gaborkaszab` for live numbers.
 
-- **Merged commits:** 39. Areas: [[module/iceberg/core|iceberg/core]] (35), [[module/iceberg/orc|iceberg/orc]] (4), [[module/iceberg/api|iceberg/api]] (4), [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/flink|iceberg/flink]] (2)
+- **Merged commits:** 39. Areas: [[module/iceberg/core|iceberg/core]] (35), [[module/iceberg/api|iceberg/api]] (4), [[module/iceberg/orc|iceberg/orc]] (4), [[module/iceberg/spark|iceberg/spark]] (2), [[module/iceberg/docs|iceberg/docs]] (2), [[module/iceberg/flink|iceberg/flink]] (2)
+- **Dev list:** 58 messages, 4 threads started (2 discuss, 1 vote)
+
+## Recent threads started
+
+- 2026-09-23 [[DISCUSS] Reusable encryption keys](https://lists.apache.org/thread/38rkthkr1fg0s86493fjq755cnl3y90s) `devlist:38rkthkr1fg0s86493fjq755cnl3y90s`
+- 2026-08-10 [[VOTE] [SPEC] Add key-id to table and partition statistics and deprecate key-metadata](https://lists.apache.org/thread/rx0tcnqkq0nzj1phwo64ng79pp51hzf9) `devlist:rx0tcnqkq0nzj1phwo64ng79pp51hzf9`
+- 2026-05-20 [[Discuss] Column Update metadata representation](https://lists.apache.org/thread/7jryw9dfvc02s411twn4o7s5gjrybfxg) `devlist:7jryw9dfvc02s411twn4o7s5gjrybfxg`
 
 ## Recent merged changes
 

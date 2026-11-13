@@ -11,14 +11,17 @@ sources:
 - devlist:8f91nk08cq2pxtsdpf1o34ktthn7jcwk
 refs:
 - gh:apache/iceberg#18308
-links: []
+links:
+- rel: started_by
+  to: person/nastra
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Changing avg_value_size_in_bytes to total_bytes in content stats
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Changing avg_value_size_in_bytes to total_bytes in content stats](https://lists.apache.org/thread/8f91nk08cq2pxtsdpf1o34ktthn7jcwk) · **Started:** 2026-09-29 by Eduard Tudenhöfner · **Messages:** 7 (last 2026-10-01) · **Outcome:** consensus
+**Thread:** [[DISCUSS] Changing avg_value_size_in_bytes to total_bytes in content stats](https://lists.apache.org/thread/8f91nk08cq2pxtsdpf1o34ktthn7jcwk) · **Started:** 2026-09-29 by [[person/nastra|Eduard Tudenhoefner]] · **Messages:** 7 (last 2026-10-01) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

@@ -11,8 +11,8 @@ owners:
 - ajantha-bhat
 - singhpk234
 - Fokko
-- amogh-jahagirdar
-- Guosmilesmile
+- ebyhr
+- nastra
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/manuzhang|Manu Zhang]] (41), [[person/ajantha-bhat|Ajantha Bhat]] (18), [[person/singhpk234|Prashant Singh]] (15), [[person/Fokko|Fokko Driesprong]] (14), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (10), [[person/Guosmilesmile|GuoYu]] (10)
+Long-term authors (all time): [[person/manuzhang|Manu Zhang]] (41), [[person/ajantha-bhat|Ajantha Bhat]] (18), [[person/singhpk234|Prashant Singh]] (15), [[person/Fokko|Fokko Driesprong]] (14), [[person/ebyhr|Yuya Ebihara]] (14), [[person/nastra|Eduard Tudenhoefner]] (11)
 
-Most active authors (last 12 months): [[person/Guosmilesmile|GuoYu]] (8), [[person/mxm|Maximilian Michels]] (8), [[person/uros-b|Uros]] (6), [[person/talatuyarer|Talat UYARER]] (5), [[person/huaxingao|Huaxin Gao]] (3), [[person/rmoff|Robin Moffatt]] (3), [[person/anshulbaliga7|Anshul Baliga]] (3), [[person/jackylee-ch|jackylee]] (3)
+Most active authors (last 12 months): [[person/Guosmilesmile|GuoYu]] (8), [[person/mxm|Maximilian Michels]] (8), [[person/uros-b|Uros]] (6), [[person/ebyhr|Yuya Ebihara]] (5), [[person/talatuyarer|Talat UYARER]] (5), [[person/huaxingao|Huaxin Gao]] (3), [[person/rmoff|Robin Moffatt]] (3), [[person/anshulbaliga7|Anshul Baliga]] (3)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

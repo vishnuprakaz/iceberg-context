@@ -7,12 +7,12 @@ path: nessie
 commits_total: 103
 commits_12m: 7
 owners:
-- ajantha-bhat
 - nastra
+- ajantha-bhat
+- snazy
 - findepi
+- ebyhr
 - rymurr
-- adutra
-- rdblue
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,7 +27,7 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/ajantha-bhat|Ajantha Bhat]] (23), [[person/nastra|Eduard Tudenhoefner]] (5), [[person/findepi|Piotr Findeisen]] (4), [[person/rymurr|Ryan Murray]] (3), [[person/adutra|Alexandre Dutra]] (3), [[person/rdblue|Ryan Blue]] (2)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (25), [[person/ajantha-bhat|Ajantha Bhat]] (23), [[person/snazy|Robert Stupp]] (18), [[person/findepi|Piotr Findeisen]] (4), [[person/ebyhr|Yuya Ebihara]] (4), [[person/rymurr|Ryan Murray]] (3)
 
 Most active authors (last 12 months): [[person/pvary|Peter Vary]] (1), [[person/ajantha-bhat|Ajantha Bhat]] (1), [[person/nastra|Eduard Tudenhoefner]] (1), [[person/rambleraptor|Alex Stephen]] (1), [[person/uros-b|Uros]] (1), [[person/rshdhere|raashed]] (1), [[person/thswlsqls|Eunbin Son]] (1)
 

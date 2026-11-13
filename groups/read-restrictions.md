@@ -25,15 +25,15 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-09-15 | `meet:read-restrictions:2026-09-15` (held) |  |  |
-| 2026-09-01 | `meet:read-restrictions:2026-09-01` (held) |  |  |
-| 2026-08-18 | `meet:read-restrictions:2026-08-18` (held) |  |  |
-| 2026-08-04 | `meet:read-restrictions:2026-08-04` (held) |  |  |
-| 2026-07-21 | `meet:read-restrictions:2026-07-21` (held) |  |  |
-| 2026-07-07 | `meet:read-restrictions:2026-07-07` (held) |  |  |
-| 2026-06-23 | `meet:read-restrictions:2026-06-23` (held) |  |  |
-| 2026-06-09 | `meet:read-restrictions:2026-06-09` (link-only) |  |  |
-| 2026-05-26 | `meet:read-restrictions:2026-05-26` (held) |  |  |
+| 2026-09-15 | `meet:read-restrictions:2026-09-15` (held) |  | [[meeting/read-restrictions/2026-09-15|summary]] |
+| 2026-09-01 | `meet:read-restrictions:2026-09-01` (held) |  | [[meeting/read-restrictions/2026-09-01|summary]] |
+| 2026-08-18 | `meet:read-restrictions:2026-08-18` (held) |  | [[meeting/read-restrictions/2026-08-18|summary]] |
+| 2026-08-04 | `meet:read-restrictions:2026-08-04` (held) |  | [[meeting/read-restrictions/2026-08-04|summary]] |
+| 2026-07-21 | `meet:read-restrictions:2026-07-21` (held) |  | [[meeting/read-restrictions/2026-07-21|summary]] |
+| 2026-07-07 | `meet:read-restrictions:2026-07-07` (held) |  | [[meeting/read-restrictions/2026-07-07|summary]] |
+| 2026-06-23 | `meet:read-restrictions:2026-06-23` (held) |  | [[meeting/read-restrictions/2026-06-23|summary]] |
+| 2026-06-09 | `meet:read-restrictions:2026-06-09` (link-only) |  | [[meeting/read-restrictions/2026-06-09|summary]] |
+| 2026-05-26 | `meet:read-restrictions:2026-05-26` (held) |  | [[meeting/read-restrictions/2026-05-26|summary]] |
 | 2026-05-12 | `meet:read-restrictions:2026-05-12` (held) |  |  |
 | 2026-04-28 | `meet:read-restrictions:2026-04-28` (held) |  |  |
 | 2026-04-14 | `meet:read-restrictions:2026-04-14` (held) |  |  |

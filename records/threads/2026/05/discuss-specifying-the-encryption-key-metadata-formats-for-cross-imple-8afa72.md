@@ -11,14 +11,17 @@ sources:
 - devlist:4zm5jhwp42z10pfz2sths7q59r9dlf8l
 refs:
 - gh:apache/iceberg#16527
-links: []
+links:
+- rel: started_by
+  to: person/xanderbailey
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Specifying the encryption key metadata formats for cross-implementation interop
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] Specifying the encryption key metadata formats for cross-implementation interop](https://lists.apache.org/thread/4zm5jhwp42z10pfz2sths7q59r9dlf8l) · **Started:** 2026-05-20 by Alexander Bailey · **Messages:** 5 (last 2026-07-29) · **Outcome:** open
+**Thread:** [[DISCUSS] Specifying the encryption key metadata formats for cross-implementation interop](https://lists.apache.org/thread/4zm5jhwp42z10pfz2sths7q59r9dlf8l) · **Started:** 2026-05-20 by [[person/xanderbailey|Xander]] · **Messages:** 5 (last 2026-07-29) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

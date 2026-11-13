@@ -15,14 +15,17 @@ refs:
 - doc:1uvbrwwAJW2TgsnoaIcwAFpjbhHkBUL5wY_24nKgtt9I
 - doc:1s9_o_Y8js4kHVCYI2OeL0Yh3Ey0qfkuE7Mm-z-QoEfo
 - doc:1ZK5g8_bA1Y9SQ4UA5jAREX9iNX56xLWA5vAuKpQC4L8
-links: []
+links:
+- rel: started_by
+  to: person/nastra
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # V4: improved column statistics
 
 <!-- kb:generated:start -->
-**Thread:** [[DISCUSS] v4 - Improved column statistics](https://lists.apache.org/thread/81vqxtw6tlvszon1tzymjbjbmo0hjy0n) · **Started:** 2025-06-02 by Eduard Tudenhöfner · **Messages:** 29 (last 2026-05-13) · **Outcome:** open
+**Thread:** [[DISCUSS] v4 - Improved column statistics](https://lists.apache.org/thread/81vqxtw6tlvszon1tzymjbjbmo0hjy0n) · **Started:** 2025-06-02 by [[person/nastra|Eduard Tudenhoefner]] · **Messages:** 29 (last 2026-05-13) · **Outcome:** open
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

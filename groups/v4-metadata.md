@@ -32,18 +32,18 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-11-02 | `meet:v4-metadata:2026-11-02` (held) |  |  |
-| 2026-10-19 | `meet:v4-metadata:2026-10-19` (held) |  |  |
-| 2026-10-05 | `meet:v4-metadata:2026-10-05` (held) |  |  |
-| 2026-09-21 | `meet:v4-metadata:2026-09-21` (held) |  |  |
-| 2026-08-24 | `meet:v4-metadata:2026-08-24` (held) |  |  |
-| 2026-08-10 | `meet:v4-metadata:2026-08-10` (held) |  |  |
-| 2026-07-27 | `meet:v4-metadata:2026-07-27` (held) |  |  |
-| 2026-07-13 | `meet:v4-metadata:2026-07-13` (held) |  |  |
-| 2026-06-29 | `meet:v4-metadata:2026-06-29` (held) |  |  |
-| 2026-06-15 | `meet:v4-metadata:2026-06-15` (held) |  |  |
-| 2026-06-01 | `meet:v4-metadata:2026-06-01` (held) |  |  |
-| 2026-05-18 | `meet:v4-metadata:2026-05-18` (held) |  |  |
+| 2026-11-02 | `meet:v4-metadata:2026-11-02` (held) |  | [[meeting/v4-metadata/2026-11-02|summary]] |
+| 2026-10-19 | `meet:v4-metadata:2026-10-19` (held) |  | [[meeting/v4-metadata/2026-10-19|summary]] |
+| 2026-10-05 | `meet:v4-metadata:2026-10-05` (held) |  | [[meeting/v4-metadata/2026-10-05|summary]] |
+| 2026-09-21 | `meet:v4-metadata:2026-09-21` (held) |  | [[meeting/v4-metadata/2026-09-21|summary]] |
+| 2026-08-24 | `meet:v4-metadata:2026-08-24` (held) |  | [[meeting/v4-metadata/2026-08-24|summary]] |
+| 2026-08-10 | `meet:v4-metadata:2026-08-10` (held) |  | [[meeting/v4-metadata/2026-08-10|summary]] |
+| 2026-07-27 | `meet:v4-metadata:2026-07-27` (held) |  | [[meeting/v4-metadata/2026-07-27|summary]] |
+| 2026-07-13 | `meet:v4-metadata:2026-07-13` (held) |  | [[meeting/v4-metadata/2026-07-13|summary]] |
+| 2026-06-29 | `meet:v4-metadata:2026-06-29` (held) |  | [[meeting/v4-metadata/2026-06-29|summary]] |
+| 2026-06-15 | `meet:v4-metadata:2026-06-15` (held) |  | [[meeting/v4-metadata/2026-06-15|summary]] |
+| 2026-06-01 | `meet:v4-metadata:2026-06-01` (held) |  | [[meeting/v4-metadata/2026-06-01|summary]] |
+| 2026-05-18 | `meet:v4-metadata:2026-05-18` (held) |  | [[meeting/v4-metadata/2026-05-18|summary]] |
 <!-- kb:generated:end -->
 
 ## Notes

@@ -9,10 +9,10 @@ commits_12m: 96
 owners:
 - nastra
 - Fokko
+- ebyhr
 - rdblue
 - singhpk234
 - danielcweeks
-- manuzhang
 links:
 - rel: part_of
   to: repo/iceberg
@@ -28,9 +28,9 @@ REST catalog OpenAPI specification. Spec changes need a vote on the dev list.
 
 ## Who works here
 
-Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (23), [[person/Fokko|Fokko Driesprong]] (21), [[person/rdblue|Ryan Blue]] (12), [[person/singhpk234|Prashant Singh]] (12), [[person/danielcweeks|Daniel C. Weeks]] (11), [[person/manuzhang|Manu Zhang]] (7)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (27), [[person/Fokko|Fokko Driesprong]] (21), [[person/ebyhr|Yuya Ebihara]] (14), [[person/rdblue|Ryan Blue]] (12), [[person/singhpk234|Prashant Singh]] (12), [[person/danielcweeks|Daniel C. Weeks]] (11)
 
-Most active authors (last 12 months): [[person/singhpk234|Prashant Singh]] (9), [[person/nastra|Eduard Tudenhoefner]] (7), [[person/manuzhang|Manu Zhang]] (5), [[person/adutra|Alexandre Dutra]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/stevenzwu|Steven Wu]] (3), [[person/ajreid21|ajreid21]] (2), [[person/kevinjqliu|Kevin Liu]] (2)
+Most active authors (last 12 months): [[person/singhpk234|Prashant Singh]] (9), [[person/nastra|Eduard Tudenhoefner]] (7), [[person/ebyhr|Yuya Ebihara]] (7), [[person/manuzhang|Manu Zhang]] (5), [[person/adutra|Alexandre Dutra]] (4), [[person/huaxingao|Huaxin Gao]] (3), [[person/stevenzwu|Steven Wu]] (3), [[person/ajreid21|ajreid21]] (2)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

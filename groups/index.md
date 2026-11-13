@@ -26,18 +26,18 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-11-09 | `meet:index:2026-11-09` (held) |  |  |
-| 2026-10-26 | `meet:index:2026-10-26` (held) |  |  |
-| 2026-09-28 | `meet:index:2026-09-28` (held) |  |  |
-| 2026-09-14 | `meet:index:2026-09-14` (held) |  |  |
-| 2026-08-31 | `meet:index:2026-08-31` (held) |  |  |
-| 2026-08-17 | `meet:index:2026-08-17` (held) |  |  |
-| 2026-08-03 | `meet:index:2026-08-03` (held) |  |  |
-| 2026-07-20 | `meet:index:2026-07-20` (held) |  |  |
-| 2026-07-06 | `meet:index:2026-07-06` (link-only) |  |  |
-| 2026-06-22 | `meet:index:2026-06-22` (held) |  |  |
-| 2026-06-08 | `meet:index:2026-06-08` (held) |  |  |
-| 2026-05-27 | `meet:index:2026-05-27` (held) |  |  |
+| 2026-11-09 | `meet:index:2026-11-09` (held) | [video](https://www.youtube.com/watch?v=q-A9Y5FMRY8) `yt:q-A9Y5FMRY8` | [[meeting/index/2026-11-09|summary]] |
+| 2026-10-26 | `meet:index:2026-10-26` (held) |  | [[meeting/index/2026-10-26|summary]] |
+| 2026-09-28 | `meet:index:2026-09-28` (held) |  | [[meeting/index/2026-09-28|summary]] |
+| 2026-09-14 | `meet:index:2026-09-14` (held) |  | [[meeting/index/2026-09-14|summary]] |
+| 2026-08-31 | `meet:index:2026-08-31` (held) |  | [[meeting/index/2026-08-31|summary]] |
+| 2026-08-17 | `meet:index:2026-08-17` (held) |  | [[meeting/index/2026-08-17|summary]] |
+| 2026-08-03 | `meet:index:2026-08-03` (held) |  | [[meeting/index/2026-08-03|summary]] |
+| 2026-07-20 | `meet:index:2026-07-20` (held) |  | [[meeting/index/2026-07-20|summary]] |
+| 2026-07-06 | `meet:index:2026-07-06` (link-only) |  | [[meeting/index/2026-07-06|summary]] |
+| 2026-06-22 | `meet:index:2026-06-22` (held) |  | [[meeting/index/2026-06-22|summary]] |
+| 2026-06-08 | `meet:index:2026-06-08` (held) |  | [[meeting/index/2026-06-08|summary]] |
+| 2026-05-27 | `meet:index:2026-05-27` (held) |  | [[meeting/index/2026-05-27|summary]] |
 <!-- kb:generated:end -->
 
 ## Notes

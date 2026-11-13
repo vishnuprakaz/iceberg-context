@@ -11,14 +11,17 @@ sources:
 - devlist:v3bq8snhtdwmj20v4s6kv5byg18cv84t
 refs:
 - gh:apache/iceberg#14234
-links: []
+links:
+- rel: started_by
+  to: person/nastra
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Spec: addition of content stats representation to v4
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Spec: Addition of Content Stats representation to v4](https://lists.apache.org/thread/v3bq8snhtdwmj20v4s6kv5byg18cv84t) · **Started:** 2026-05-15 by Eduard Tudenhöfner · **Messages:** 9 (last 2026-05-19) · **Outcome:** passed
+**Thread:** [[VOTE] Spec: Addition of Content Stats representation to v4](https://lists.apache.org/thread/v3bq8snhtdwmj20v4s6kv5byg18cv84t) · **Started:** 2026-05-15 by [[person/nastra|Eduard Tudenhoefner]] · **Messages:** 9 (last 2026-05-19) · **Outcome:** passed
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

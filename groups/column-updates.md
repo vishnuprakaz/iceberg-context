@@ -21,15 +21,15 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-10-20 | `meet:column-updates:2026-10-20` (held) |  |  |
-| 2026-10-06 | `meet:column-updates:2026-10-06` (held) |  |  |
-| 2026-09-08 | `meet:column-updates:2026-09-08` (held) |  |  |
+| 2026-10-20 | `meet:column-updates:2026-10-20` (held) |  | [[meeting/column-updates/2026-10-20|summary]] |
+| 2026-10-06 | `meet:column-updates:2026-10-06` (held) |  | [[meeting/column-updates/2026-10-06|summary]] |
+| 2026-09-08 | `meet:column-updates:2026-09-08` (held) |  | [[meeting/column-updates/2026-09-08|summary]] |
 | 2026-08-25 | `meet:column-updates:2026-08-25` (cancelled) |  |  |
-| 2026-08-11 | `meet:column-updates:2026-08-11` (held) |  |  |
-| 2026-07-28 | `meet:column-updates:2026-07-28` (held) |  |  |
-| 2026-07-14 | `meet:column-updates:2026-07-14` (held) |  |  |
-| 2026-06-30 | `meet:column-updates:2026-06-30` (held) |  |  |
-| 2026-06-16 | `meet:column-updates:2026-06-16` (held) |  |  |
+| 2026-08-11 | `meet:column-updates:2026-08-11` (held) |  | [[meeting/column-updates/2026-08-11|summary]] |
+| 2026-07-28 | `meet:column-updates:2026-07-28` (held) |  | [[meeting/column-updates/2026-07-28|summary]] |
+| 2026-07-14 | `meet:column-updates:2026-07-14` (held) |  | [[meeting/column-updates/2026-07-14|summary]] |
+| 2026-06-30 | `meet:column-updates:2026-06-30` (held) |  | [[meeting/column-updates/2026-06-30|summary]] |
+| 2026-06-16 | `meet:column-updates:2026-06-16` (held) |  | [[meeting/column-updates/2026-06-16|summary]] |
 <!-- kb:generated:end -->
 
 ## Notes

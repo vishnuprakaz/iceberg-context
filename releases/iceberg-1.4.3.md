@@ -17,7 +17,7 @@ updated: '2026-11-13'
 # iceberg 1.4.3
 
 <!-- kb:generated:start -->
-**Announced:** 2023-12-28 by Jean-Baptiste Onofré ([announcement](https://lists.apache.org/thread/xmyktfsj9tb5nhqphwnmw9r5181rqrmy), `devlist:xmyktfsj9tb5nhqphwnmw9r5181rqrmy`)
+**Announced:** 2023-12-28 by [[person/jbonofre|JB Onofré]] ([announcement](https://lists.apache.org/thread/xmyktfsj9tb5nhqphwnmw9r5181rqrmy), `devlist:xmyktfsj9tb5nhqphwnmw9r5181rqrmy`)
 
 ## Vote threads
 

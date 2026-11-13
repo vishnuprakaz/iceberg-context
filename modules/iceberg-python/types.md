@@ -11,8 +11,8 @@ owners:
 - kevinjqliu
 - rambleraptor
 - ArulJerald
+- samredai
 - rdblue
-- sungwy
 links:
 - rel: part_of
   to: repo/iceberg-python
@@ -27,7 +27,7 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (10), [[person/kevinjqliu|Kevin Liu]] (2), [[person/rambleraptor|Alex Stephen]] (2), [[person/ArulJerald|Arul Jerald]] (2), [[person/rdblue|Ryan Blue]] (1), [[person/sungwy|Sung Yun]] (1)
+Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (10), [[person/kevinjqliu|Kevin Liu]] (2), [[person/rambleraptor|Alex Stephen]] (2), [[person/ArulJerald|Arul Jerald]] (2), [[person/samredai|Sam Redai]] (1), [[person/rdblue|Ryan Blue]] (1)
 
 Most active authors (last 12 months): [[person/ArulJerald|Arul Jerald]] (2), [[person/rambleraptor|Alex Stephen]] (1), [[person/SaymV|Sam Verhasselt]] (1), [[person/PLTNGM|Platon G. Gimp]] (1)
 

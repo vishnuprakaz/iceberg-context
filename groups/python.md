@@ -24,11 +24,11 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-10-27 | `meet:python:2026-10-27` (held) |  |  |
-| 2026-09-29 | `meet:python:2026-09-29` (held) |  |  |
-| 2026-07-28 | `meet:python:2026-07-28` (held) |  |  |
-| 2026-06-30 | `meet:python:2026-06-30` (held) |  |  |
-| 2026-05-26 | `meet:python:2026-05-26` (held) |  |  |
+| 2026-10-27 | `meet:python:2026-10-27` (held) |  | [[meeting/python/2026-10-27|summary]] |
+| 2026-09-29 | `meet:python:2026-09-29` (held) |  | [[meeting/python/2026-09-29|summary]] |
+| 2026-07-28 | `meet:python:2026-07-28` (held) |  | [[meeting/python/2026-07-28|summary]] |
+| 2026-06-30 | `meet:python:2026-06-30` (held) |  | [[meeting/python/2026-06-30|summary]] |
+| 2026-05-26 | `meet:python:2026-05-26` (held) |  | [[meeting/python/2026-05-26|summary]] |
 | 2026-04-28 | `meet:python:2026-04-28` (held) |  |  |
 | 2026-03-31 | `meet:python:2026-03-31` (held) |  |  |
 | 2026-02-24 | `meet:python:2026-02-24` (held) |  |  |

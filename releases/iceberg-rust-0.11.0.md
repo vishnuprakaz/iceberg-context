@@ -17,7 +17,7 @@ updated: '2026-11-13'
 # iceberg-rust 0.11.0
 
 <!-- kb:generated:start -->
-**Announced:** 2026-11-04 by Danny Jones ([announcement](https://lists.apache.org/thread/lm4sskbfojckzmo6l3fkko1wcoz5v8h6), `devlist:lm4sskbfojckzmo6l3fkko1wcoz5v8h6`)
+**Announced:** 2026-11-04 by [[person/dannycjones|Daniel Carl Jones]] ([announcement](https://lists.apache.org/thread/lm4sskbfojckzmo6l3fkko1wcoz5v8h6), `devlist:lm4sskbfojckzmo6l3fkko1wcoz5v8h6`)
 
 ## Vote threads
 

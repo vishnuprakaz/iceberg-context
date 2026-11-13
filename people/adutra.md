@@ -36,17 +36,17 @@ updated: '2026-11-13'
 Counted from public records; see `kb person adutra` for live numbers.
 
 - **Merged commits:** 9. Areas: [[module/iceberg/core|iceberg/core]] (5), [[module/iceberg/open-api|iceberg/open-api]] (4), [[module/iceberg/aws|iceberg/aws]] (3), [[module/iceberg/build|iceberg/build]] (2)
-- **Dev list:** 80 messages, 15 threads started (8 discuss, 4 vote, 1 result)
+- **Dev list:** 98 messages, 17 threads started (10 discuss, 4 vote, 1 result)
 - **Named in meeting notes:** [[group/community|community]] (1)
 
 ## Recent threads started
 
+- 2026-11-02 [[DISCUSS] Downscoping the OAuth2 AuthManager v2 proposal](https://lists.apache.org/thread/vk1yzvdnr4t8c6kywf4s2npwfkz6nvpz) `devlist:vk1yzvdnr4t8c6kywf4s2npwfkz6nvpz`
+- 2026-10-27 [[DISCUSS] New BearerAuthManager](https://lists.apache.org/thread/lvmhz1w0ly6kpdpl8s7wk3rbt5q4dqh1) `devlist:lvmhz1w0ly6kpdpl8s7wk3rbt5q4dqh1`
 - 2026-07-30 [[RESULT][VOTE] Formalize remote signing configuration in the REST spec](https://lists.apache.org/thread/sjkhkblfl1s792bdkgzmtj63bwvdbk99) `devlist:sjkhkblfl1s792bdkgzmtj63bwvdbk99`
 - 2026-07-20 [[VOTE] Formalize remote signing configuration in the REST spec](https://lists.apache.org/thread/n4hyqr3k2gnzbxvs3l1o4cz3ggdfwkx2) `devlist:n4hyqr3k2gnzbxvs3l1o4cz3ggdfwkx2`
 - 2026-07-16 [[DISCUSS] Migrating Iceberg to Jackson 3](https://lists.apache.org/thread/r3pfnttb56ml60h1l8jd5okqd2qdomv1) `devlist:r3pfnttb56ml60h1l8jd5okqd2qdomv1`
 - 2026-04-24 [[DISCUSS] REST spec change: passing arbitrary information to request signers](https://lists.apache.org/thread/krvmczlbwpbn08c45w1dtvr5tor6ol1y) `devlist:krvmczlbwpbn08c45w1dtvr5tor6ol1y`
-- 2026-04-01 [[DISCUSS] Test logging improvements](https://lists.apache.org/thread/ylzln6lr4vgbv209h68yxdwttbppw252) `devlist:ylzln6lr4vgbv209h68yxdwttbppw252`
-- 2026-03-20 [[DISCUSS] HostnameVerificationPolicy in TLSConfigurer](https://lists.apache.org/thread/z0xs3lgs18s8ybxpzlf4yslom4khsdfv) `devlist:z0xs3lgs18s8ybxpzlf4yslom4khsdfv`
 
 ## Recent merged changes
 

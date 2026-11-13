@@ -35,8 +35,17 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person xanderbailey` for live numbers.
 
-- **Merged commits:** 12. Areas: [[module/iceberg-python/table|iceberg-python/table]] (4), [[module/iceberg-python/manifest|iceberg-python/manifest]] (2), [[module/iceberg-python/io|iceberg-python/io]] (2), [[module/iceberg-python/transforms|iceberg-python/transforms]] (1), [[module/iceberg-python/utils|iceberg-python/utils]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
+- **Merged commits:** 12. Areas: [[module/iceberg-python/table|iceberg-python/table]] (4), [[module/iceberg-python/manifest|iceberg-python/manifest]] (2), [[module/iceberg-python/io|iceberg-python/io]] (2), [[module/iceberg-python/utils|iceberg-python/utils]] (1), [[module/iceberg-python/transforms|iceberg-python/transforms]] (1), [[module/iceberg-python/docs|iceberg-python/docs]] (1)
+- **Dev list:** 20 messages, 5 threads started (4 discuss, 1 vote)
 - **Named in meeting notes:** [[group/community|community]] (11)
+
+## Recent threads started
+
+- 2026-09-24 [[DISCUSSION] Encryption community sync](https://lists.apache.org/thread/bjztsshokns59lzrmny6szlvk7vk2o6c) `devlist:bjztsshokns59lzrmny6szlvk7vk2o6c`
+- 2026-09-11 [[DISCUSS] Defining gc.enabled semantics across engines and clients](https://lists.apache.org/thread/nxbxbs0x8h7xc73czgg3pryl42tr0zz5) `devlist:nxbxbs0x8h7xc73czgg3pryl42tr0zz5`
+- 2026-09-02 [[VOTE] [SPEC] Document standard encryption key metadata](https://lists.apache.org/thread/hpdmzppsl87l0olkpzm3q47occ9cfydo) `devlist:hpdmzppsl87l0olkpzm3q47occ9cfydo`
+- 2026-07-23 [[DISCUSS] Should incremental (append) scan semantics be part of the spec?](https://lists.apache.org/thread/o0wsy3jot3vos7zpqop4xk48k0hzf057) `devlist:o0wsy3jot3vos7zpqop4xk48k0hzf057`
+- 2026-05-20 [[DISCUSS] Specifying the encryption key metadata formats for cross-implementation interop](https://lists.apache.org/thread/4zm5jhwp42z10pfz2sths7q59r9dlf8l) `devlist:4zm5jhwp42z10pfz2sths7q59r9dlf8l`
 
 ## Recent merged changes
 

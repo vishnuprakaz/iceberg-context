@@ -12,14 +12,17 @@ sources:
 refs:
 - gh:apache/iceberg-rust#2760
 - gh:apache/iceberg-rust#2527
-links: []
+links:
+- rel: started_by
+  to: person/dannycjones
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Release Apache Iceberg Rust 0.10.0 RC2
 
 <!-- kb:generated:start -->
-**Thread:** [[VOTE] Release Apache Iceberg Rust 0.10.0 RC2](https://lists.apache.org/thread/m35vm2j7z9pdv2o3jtyvd5vls0bko0xj) · **Started:** 2026-07-01 by Danny Jones · **Messages:** 12 (last 2026-07-03) · **Outcome:** withdrawn
+**Thread:** [[VOTE] Release Apache Iceberg Rust 0.10.0 RC2](https://lists.apache.org/thread/m35vm2j7z9pdv2o3jtyvd5vls0bko0xj) · **Started:** 2026-07-01 by [[person/dannycjones|Daniel Carl Jones]] · **Messages:** 12 (last 2026-07-03) · **Outcome:** withdrawn
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

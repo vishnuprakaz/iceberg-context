@@ -26,9 +26,9 @@ updated: '2026-11-13'
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
 | 2026-11-19 | `meet:file-vector-type:2026-11-19` (upcoming) |  |  |
-| 2026-11-05 | `meet:file-vector-type:2026-11-05` (held) |  |  |
-| 2026-10-22 | `meet:file-vector-type:2026-10-22` (held) |  |  |
-| 2026-10-08 | `meet:file-vector-type:2026-10-08` (held) |  |  |
+| 2026-11-05 | `meet:file-vector-type:2026-11-05` (held) |  | [[meeting/file-vector-type/2026-11-05|summary]] |
+| 2026-10-22 | `meet:file-vector-type:2026-10-22` (held) |  | [[meeting/file-vector-type/2026-10-22|summary]] |
+| 2026-10-08 | `meet:file-vector-type:2026-10-08` (held) |  | [[meeting/file-vector-type/2026-10-08|summary]] |
 <!-- kb:generated:end -->
 
 ## Notes

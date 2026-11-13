@@ -11,6 +11,9 @@ links:
   confidence: observed
   since: '2024-08-13'
 - rel: release_manager
+  to: release/iceberg-1.8.1
+  confidence: observed
+- rel: release_manager
   to: release/iceberg-1.4.1
   confidence: observed
 - rel: release_manager
@@ -56,14 +59,24 @@ updated: '2026-11-13'
 
 <!-- kb:generated:start -->
 **Role:** PMC member of Apache Iceberg since 2024-08-13 ([ASF roster](https://projects.apache.org/committee.html?iceberg)).
-**Release manager for:** [[release/iceberg-1.4.1|iceberg 1.4.1]] (2023-10-23), [[release/iceberg-0.13.2|iceberg 0.13.2]] (2022-06-15).
+**Release manager for:** [[release/iceberg-1.8.1|iceberg 1.8.1]] (2025-02-28), [[release/iceberg-1.4.1|iceberg 1.4.1]] (2023-10-23), [[release/iceberg-0.13.2|iceberg 0.13.2]] (2022-06-15).
 
 ## Activity in the last 12 months
 
 Counted from public records; see `kb person nastra` for live numbers.
 
 - **Merged commits:** 66. Areas: [[module/iceberg/core|iceberg/core]] (37), [[module/iceberg/spark|iceberg/spark]] (19), [[module/iceberg/api|iceberg/api]] (13), [[module/iceberg/build|iceberg/build]] (9), [[module/iceberg/open-api|iceberg/open-api]] (7), [[module/iceberg/aws|iceberg/aws]] (5)
+- **Dev list:** 86 messages, 6 threads started (4 vote, 2 discuss)
 - **Named in meeting notes:** [[group/community|community]] (1)
+
+## Recent threads started
+
+- 2026-09-29 [[DISCUSS] Changing avg_value_size_in_bytes to total_bytes in content stats](https://lists.apache.org/thread/8f91nk08cq2pxtsdpf1o34ktthn7jcwk) `devlist:8f91nk08cq2pxtsdpf1o34ktthn7jcwk`
+- 2026-05-15 [[VOTE] Spec: Addition of Content Stats representation to v4](https://lists.apache.org/thread/v3bq8snhtdwmj20v4s6kv5byg18cv84t) `devlist:v3bq8snhtdwmj20v4s6kv5byg18cv84t`
+- 2025-11-18 [[VOTE] Adding min-rows-requested to the request of the /plan endpoint](https://lists.apache.org/thread/t210ccrcz7fglv3vlwvnz827hb65217d) `devlist:t210ccrcz7fglv3vlwvnz827hb65217d`
+- 2025-11-17 [[VOTE] Adding storage credentials to the server-side scan planning response](https://lists.apache.org/thread/vq6nzsc0vs81r8dhr94dp222s0gq1ykw) `devlist:vq6nzsc0vs81r8dhr94dp222s0gq1ykw`
+- 2025-11-13 [[DISCUSS] Adding min-rows-requested to the request of the /plan endpoint](https://lists.apache.org/thread/m51fxlsbt5yk219ypk2dhj07tlk3407b) `devlist:m51fxlsbt5yk219ypk2dhj07tlk3407b`
+- 2025-11-13 [[VOTE] Adding planId query param to /credentials endpoint](https://lists.apache.org/thread/002y8ndg0s5l7vswkpr4nlr31ld3myg3) `devlist:002y8ndg0s5l7vswkpr4nlr31ld3myg3`
 
 ## Recent merged changes
 

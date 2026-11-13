@@ -10,9 +10,9 @@ owners:
 - nastra
 - Fokko
 - tom-s-powell
+- snazy
 - nandorKollar
-- singhpk234
-- bryanck
+- ebyhr
 links:
 - rel: part_of
   to: repo/iceberg
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (4), [[person/Fokko|Fokko Driesprong]] (4), [[person/tom-s-powell|Thomas Powell]] (3), [[person/nandorKollar|Nándor Kollár]] (2), [[person/singhpk234|Prashant Singh]] (2), [[person/bryanck|Bryan Keller]] (1)
+Long-term authors (all time): [[person/nastra|Eduard Tudenhoefner]] (4), [[person/Fokko|Fokko Driesprong]] (4), [[person/tom-s-powell|Thomas Powell]] (3), [[person/snazy|Robert Stupp]] (2), [[person/nandorKollar|Nándor Kollár]] (2), [[person/ebyhr|Yuya Ebihara]] (2)
 
-Most active authors (last 12 months): [[person/tom-s-powell|Thomas Powell]] (3), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/singhpk234|Prashant Singh]] (2), [[person/nandorKollar|Nándor Kollár]] (1), [[person/sarthaksin1857|Sarthak Singh]] (1), [[person/findinpath|Marius Grama]] (1), [[person/vladislav-sidorovich|Vladislav Sidorovich]] (1), [[person/dbtsai|DB Tsai]] (1)
+Most active authors (last 12 months): [[person/tom-s-powell|Thomas Powell]] (3), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/singhpk234|Prashant Singh]] (2), [[person/nandorKollar|Nándor Kollár]] (1), [[person/sarthaksin1857|Sarthak Singh]] (1), [[person/findinpath|Marius Grama]] (1), [[person/ebyhr|Yuya Ebihara]] (1), [[person/vladislav-sidorovich|Vladislav Sidorovich]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

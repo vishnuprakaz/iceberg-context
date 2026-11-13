@@ -28,9 +28,9 @@ Spark integration, one copy of the source tree per supported Spark version.
 
 ## Who works here
 
-Long-term authors (all time): [[person/aokolnychyi|Anton Okolnychyi]] (279), [[person/rdblue|Ryan Blue]] (174), [[person/nastra|Eduard Tudenhoefner]] (117), [[person/manuzhang|Manu Zhang]] (75), [[person/szehon-ho|Szehon Ho]] (59), [[person/ajantha-bhat|Ajantha Bhat]] (59)
+Long-term authors (all time): [[person/aokolnychyi|Anton Okolnychyi]] (279), [[person/rdblue|Ryan Blue]] (174), [[person/nastra|Eduard Tudenhoefner]] (146), [[person/manuzhang|Manu Zhang]] (75), [[person/szehon-ho|Szehon Ho]] (59), [[person/ajantha-bhat|Ajantha Bhat]] (59)
 
-Most active authors (last 12 months): [[person/manuzhang|Manu Zhang]] (22), [[person/nastra|Eduard Tudenhoefner]] (19), [[person/aokolnychyi|Anton Okolnychyi]] (19), [[person/pvary|Peter Vary]] (12), [[person/drexler-sky|drexler-sky]] (11), [[person/anuragmantri|Anurag Mantripragada]] (11), [[person/RussellSpitzer|Russell Spitzer]] (10), [[person/kevinjqliu|Kevin Liu]] (10)
+Most active authors (last 12 months): [[person/manuzhang|Manu Zhang]] (22), [[person/nastra|Eduard Tudenhoefner]] (19), [[person/aokolnychyi|Anton Okolnychyi]] (19), [[person/pvary|Peter Vary]] (12), [[person/ebyhr|Yuya Ebihara]] (12), [[person/drexler-sky|drexler-sky]] (11), [[person/anuragmantri|Anurag Mantripragada]] (11), [[person/RussellSpitzer|Russell Spitzer]] (10)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

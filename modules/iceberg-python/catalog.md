@@ -12,7 +12,7 @@ owners:
 - rambleraptor
 - sungwy
 - HonahX
-- geruh
+- ebyhr
 links:
 - rel: part_of
   to: repo/iceberg-python
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (56), [[person/kevinjqliu|Kevin Liu]] (26), [[person/rambleraptor|Alex Stephen]] (16), [[person/sungwy|Sung Yun]] (15), [[person/HonahX|Honah J.]] (14), [[person/geruh|Drew Gallardo]] (10)
+Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (56), [[person/kevinjqliu|Kevin Liu]] (26), [[person/rambleraptor|Alex Stephen]] (16), [[person/sungwy|Sung Yun]] (15), [[person/HonahX|Honah J.]] (14), [[person/ebyhr|Yuya Ebihara]] (13)
 
-Most active authors (last 12 months): [[person/rambleraptor|Alex Stephen]] (10), [[person/kevinjqliu|Kevin Liu]] (10), [[person/geruh|Drew Gallardo]] (5), [[person/Anurag-S1ngh|Anurag-S1ngh]] (3), [[person/rahulsmahadev|Rahul Shivu Mahadev]] (2), [[person/YuangGao|Yuang Gao]] (2), [[person/yayaha|Wei Luo]] (2), [[person/nssalian|Neelesh Salian]] (1)
+Most active authors (last 12 months): [[person/ebyhr|Yuya Ebihara]] (13), [[person/rambleraptor|Alex Stephen]] (10), [[person/kevinjqliu|Kevin Liu]] (10), [[person/geruh|Drew Gallardo]] (5), [[person/Anurag-S1ngh|Anurag-S1ngh]] (3), [[person/rahulsmahadev|Rahul Shivu Mahadev]] (2), [[person/YuangGao|Yuang Gao]] (2), [[person/yayaha|Wei Luo]] (2)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

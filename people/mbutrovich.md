@@ -25,7 +25,7 @@ updated: '2026-11-13'
 
 Counted from public records; see `kb person mbutrovich` for live numbers.
 
-- **Merged commits:** 4. Areas: [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg-python/avro|iceberg-python/avro]] (1)
+- **Merged commits:** 4. Areas: [[module/iceberg/site|iceberg/site]] (2), [[module/iceberg/spark|iceberg/spark]] (1), [[module/iceberg/core|iceberg/core]] (1), [[module/iceberg-python/avro|iceberg-python/avro]] (1)
 - **Dev list:** 23 messages, 2 threads started (2 discuss)
 - **Named in meeting notes:** [[group/community|community]] (7)
 

@@ -20,10 +20,10 @@ updated: '2026-11-13'
 
 | Date | Notes | Recording | Summary |
 |---|---|---|---|
-| 2026-09-03 | `meet:variant:2026-09-03` (held) |  |  |
-| 2026-08-06 | `meet:variant:2026-08-06` (held) |  |  |
-| 2026-07-02 | `meet:variant:2026-07-02` (held) |  |  |
-| 2026-06-04 | `meet:variant:2026-06-04` (held) |  |  |
+| 2026-09-03 | `meet:variant:2026-09-03` (held) |  | [[meeting/variant/2026-09-03|summary]] |
+| 2026-08-06 | `meet:variant:2026-08-06` (held) |  | [[meeting/variant/2026-08-06|summary]] |
+| 2026-07-02 | `meet:variant:2026-07-02` (held) |  | [[meeting/variant/2026-07-02|summary]] |
+| 2026-06-04 | `meet:variant:2026-06-04` (held) |  | [[meeting/variant/2026-06-04|summary]] |
 | 2026-05-07 | `meet:variant:2026-05-07` (held) |  |  |
 <!-- kb:generated:end -->
 

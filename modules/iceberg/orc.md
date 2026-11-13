@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/shardulm94|Shardul Mahadik]] (14), [[person/rdblue|Ryan Blue]] (13), [[person/edgarRd|Edgar Rodriguez]] (9), [[person/pvary|Peter Vary]] (5), [[person/gaborkaszab|gaborkaszab]] (5), [[person/ajantha-bhat|Ajantha Bhat]] (5)
+Long-term authors (all time): [[person/shardulm94|Shardul Mahadik]] (14), [[person/rdblue|Ryan Blue]] (13), [[person/edgarRd|Edgar Rodriguez]] (9), [[person/pvary|Peter Vary]] (5), [[person/gaborkaszab|Gabor Kaszab]] (5), [[person/ajantha-bhat|Ajantha Bhat]] (5)
 
-Most active authors (last 12 months): [[person/gaborkaszab|gaborkaszab]] (4), [[person/Guosmilesmile|GuoYu]] (3), [[person/HennesyChihiro|Chihiro]] (2), [[person/thswlsqls|Eunbin Son]] (2), [[person/pvary|Peter Vary]] (1), [[person/deniskuzZ|Denys Kuzmenko]] (1), [[person/wombatu-kun|Vova Kolmakov]] (1), [[person/uros-b|Uros]] (1)
+Most active authors (last 12 months): [[person/gaborkaszab|Gabor Kaszab]] (4), [[person/Guosmilesmile|GuoYu]] (3), [[person/HennesyChihiro|Chihiro]] (2), [[person/thswlsqls|Eunbin Son]] (2), [[person/pvary|Peter Vary]] (1), [[person/deniskuzZ|Denys Kuzmenko]] (1), [[person/wombatu-kun|Vova Kolmakov]] (1), [[person/uros-b|Uros]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

@@ -29,7 +29,7 @@ updated: '2026-11-13'
 
 Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (10), [[person/sungwy|Sung Yun]] (3), [[person/kevinjqliu|Kevin Liu]] (3), [[person/smaheshwar-pltr|Sreesh Maheshwar]] (2), [[person/gabeiglio|Gabriel Igliozzi]] (2), [[person/rdblue|Ryan Blue]] (1)
 
-Most active authors (last 12 months): [[person/gabeiglio|Gabriel Igliozzi]] (2), [[person/rambleraptor|Alex Stephen]] (1), [[person/kevinjqliu|Kevin Liu]] (1), [[person/anxkhn|Anas Khan]] (1), [[person/mittalpk|Praveen Kumar Mittal]] (1), [[person/sohailshk|Mohammad Sohail Shaikh]] (1), [[person/rahulsmahadev|Rahul Shivu Mahadev]] (1)
+Most active authors (last 12 months): [[person/gabeiglio|Gabriel Igliozzi]] (2), [[person/rambleraptor|Alex Stephen]] (1), [[person/kevinjqliu|Kevin Liu]] (1), [[person/anxkhn|Anas Khan]] (1), [[person/ebyhr|Yuya Ebihara]] (1), [[person/mittalpk|Praveen Kumar Mittal]] (1), [[person/sohailshk|Mohammad Sohail Shaikh]] (1), [[person/rahulsmahadev|Rahul Shivu Mahadev]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 

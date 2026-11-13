@@ -17,7 +17,7 @@ updated: '2026-11-13'
 # iceberg 1.6.0
 
 <!-- kb:generated:start -->
-**Announced:** 2024-07-25 by Jean-Baptiste Onofré ([announcement](https://lists.apache.org/thread/8tltdzpvyrpbhxjqdwr7m28jcncsxrgp), `devlist:8tltdzpvyrpbhxjqdwr7m28jcncsxrgp`)
+**Announced:** 2024-07-25 by [[person/jbonofre|JB Onofré]] ([announcement](https://lists.apache.org/thread/8tltdzpvyrpbhxjqdwr7m28jcncsxrgp), `devlist:8tltdzpvyrpbhxjqdwr7m28jcncsxrgp`)
 
 ## Vote threads
 

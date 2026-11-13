@@ -7,12 +7,12 @@ path: format
 commits_total: 171
 commits_12m: 39
 owners:
+- emkornfield
 - rdblue
 - Fokko
-- ajantha-bhat
 - nastra
+- ajantha-bhat
 - szehon-ho
-- findepi
 links:
 - rel: part_of
   to: repo/iceberg
@@ -28,7 +28,7 @@ The specifications. Any change here needs a vote on the dev list.
 
 ## Who works here
 
-Long-term authors (all time): [[person/rdblue|Ryan Blue]] (12), [[person/Fokko|Fokko Driesprong]] (11), [[person/ajantha-bhat|Ajantha Bhat]] (10), [[person/nastra|Eduard Tudenhoefner]] (9), [[person/szehon-ho|Szehon Ho]] (8), [[person/findepi|Piotr Findeisen]] (7)
+Long-term authors (all time): [[person/emkornfield|Micah Kornfield]] (13), [[person/rdblue|Ryan Blue]] (12), [[person/Fokko|Fokko Driesprong]] (11), [[person/nastra|Eduard Tudenhoefner]] (10), [[person/ajantha-bhat|Ajantha Bhat]] (10), [[person/szehon-ho|Szehon Ho]] (8)
 
 Most active authors (last 12 months): [[person/huaxingao|Huaxin Gao]] (4), [[person/kevinjqliu|Kevin Liu]] (3), [[person/nastra|Eduard Tudenhoefner]] (3), [[person/danielcweeks|Daniel C. Weeks]] (3), [[person/rdblue|Ryan Blue]] (3), [[person/stevenzwu|Steven Wu]] (2), [[person/amogh-jahagirdar|Amogh Jahagirdar]] (2), [[person/dalaro|Dan LaRocque]] (1)
 

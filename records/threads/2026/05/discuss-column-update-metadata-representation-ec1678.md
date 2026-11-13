@@ -15,14 +15,17 @@ refs:
 - doc:160-FizR6zOASMb86NycfgCm7cZbh6HK7FLcUW8_Xp-0
 - list:jbh1gbrso5h6l4by9rh9poy2cjjtb8j0
 - yt:exC7RCDYtk4
-links: []
+links:
+- rel: started_by
+  to: person/gaborkaszab
+  confidence: observed
 updated: '2026-11-13'
 ---
 
 # Column update metadata representation
 
 <!-- kb:generated:start -->
-**Thread:** [[Discuss] Column Update metadata representation](https://lists.apache.org/thread/7jryw9dfvc02s411twn4o7s5gjrybfxg) · **Started:** 2026-05-20 by Gábor Kaszab · **Messages:** 8 (last 2026-07-24) · **Outcome:** consensus
+**Thread:** [[Discuss] Column Update metadata representation](https://lists.apache.org/thread/7jryw9dfvc02s411twn4o7s5gjrybfxg) · **Started:** 2026-05-20 by [[person/gaborkaszab|Gabor Kaszab]] · **Messages:** 8 (last 2026-07-24) · **Outcome:** consensus
 
 > Summary written by an AI model from the messages. Check the thread before relying on a detail.
 

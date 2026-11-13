@@ -10,9 +10,9 @@ owners:
 - Fokko
 - kevinjqliu
 - rdblue
+- nastra
+- ndrluis
 - jayceslesar
-- rambleraptor
-- jx2lee
 links:
 - rel: part_of
   to: repo/iceberg-python
@@ -27,9 +27,9 @@ updated: '2026-11-13'
 
 ## Who works here
 
-Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (16), [[person/kevinjqliu|Kevin Liu]] (9), [[person/rdblue|Ryan Blue]] (2), [[person/jayceslesar|Jayce Slesar]] (2), [[person/rambleraptor|Alex Stephen]] (2), [[person/jx2lee|jj.lee]] (2)
+Long-term authors (all time): [[person/Fokko|Fokko Driesprong]] (16), [[person/kevinjqliu|Kevin Liu]] (9), [[person/rdblue|Ryan Blue]] (2), [[person/nastra|Eduard Tudenhoefner]] (2), [[person/ndrluis|André Luis Anastácio]] (2), [[person/jayceslesar|Jayce Slesar]] (2)
 
-Most active authors (last 12 months): [[person/kevinjqliu|Kevin Liu]] (4), [[person/rambleraptor|Alex Stephen]] (2), [[person/jx2lee|jj.lee]] (2), [[person/mj006648|ChangHyeon Im]] (2), [[person/mrutunjay-kinagi|Mrutunjay Kinagi]] (1), [[person/chrisqiqiu|Chris Qiu]] (1), [[person/aayusbhat26|Aayush Kumar bhat]] (1), [[person/xanderbailey|Xander]] (1)
+Most active authors (last 12 months): [[person/kevinjqliu|Kevin Liu]] (4), [[person/rambleraptor|Alex Stephen]] (2), [[person/jx2lee|jj.lee]] (2), [[person/mj006648|ChangHyeon Im]] (2), [[person/mrutunjay-kinagi|Mrutunjay Kinagi]] (1), [[person/chrisqiqiu|Chris Qiu]] (1), [[person/ebyhr|Yuya Ebihara]] (1), [[person/aayusbhat26|Aayush Kumar bhat]] (1)
 
 Reviewer counts appear here once pull-request reviews are synced. Until then see `maps/reviewers.md`.
 
