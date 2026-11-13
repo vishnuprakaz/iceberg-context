@@ -36,16 +36,24 @@ whenever we learn something durable, finish a piece of work, or change plans.
 - Key packages: `pyiceberg/catalog`, `table`, `io`, `expressions`, `avro`, `manifest.py`, `schema.py`.
 
 ## Current focus
-_None yet._ Next: pick contribution areas (good-first-issues, spec gaps between Java and Python).
+**Building the community knowledge base.** See [docs/knowledge-base-plan.md](docs/knowledge-base-plan.md) (proposal)
+and the source research in [research/2026-11-13/](research/2026-11-13/). Waiting on decisions listed in §10 of the plan,
+then Phase 0 (foundation) + Phase 1 (seed from research).
 
 ## Work log
 | Date | Repo | What | Status / Link |
 |------|------|------|---------------|
 | 2026-11-13 | — | Created context repo | done |
 | 2026-11-13 | — | Decided: keep repo public; for now it serves our own contribution work | decided |
+| 2026-11-13 | — | Researched all sources (dev@, sync notes docs + calendar, YouTube, GitHub/git/ASF); wrote KB plan | proposal |
 
 ## Open questions / ideas
 - Later: turn this repo into a public context system for anyone learning Iceberg.
 
 ## Learnings
-- 
+- Idea lifecycle: issue/[DISCUSS] → design doc + working-group sync → spec PR → [VOTE] (3 binding PMC +1) → impl → release.
+- ~14 working groups, each with a notes doc on the public "Iceberg Dev Events" calendar; most are recorded to YouTube.
+- Squash merges hide who merged; reviewer activity (`reviewed-by:`) is the gatekeeping signal. Review capacity is
+  concentrated (~15 people Java, ~5 PyIceberg) and PR inflow outpaces merges.
+- Env access: GitHub search API works; REST/GraphQL on apache/* is blocked; dev@ via lists.apache.org API;
+  YouTube auto-captions via yt-dlp (audio download blocked); Google Docs/Calendar via connectors.

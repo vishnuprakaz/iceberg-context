@@ -1,0 +1,1875 @@
+{
+ "total_commits": 3179,
+ "commits_12m": 928,
+ "committer_field": [
+  [
+   "GitHub",
+   2529
+  ],
+  [
+   "Fokko Driesprong",
+   646
+  ],
+  [
+   "Kevin Liu",
+   4
+  ]
+ ],
+ "authors_12m_count": 132,
+ "top_authors_12m": [
+  [
+   "dependabot[bot]",
+   471
+  ],
+  [
+   "Kevin Liu",
+   89
+  ],
+  [
+   "Yuya Ebihara",
+   47
+  ],
+  [
+   "Alex Stephen",
+   43
+  ],
+  [
+   "geruh",
+   26
+  ],
+  [
+   "Anas Khan",
+   14
+  ],
+  [
+   "Xander",
+   12
+  ],
+  [
+   "Neelesh Salian",
+   9
+  ],
+  [
+   "Rahul Shivu Mahadev",
+   8
+  ],
+  [
+   "Fokko Driesprong",
+   8
+  ],
+  [
+   "Anurag-S1ngh",
+   6
+  ],
+  [
+   "Minh Vu",
+   6
+  ],
+  [
+   "Gabriel Igliozzi",
+   6
+  ],
+  [
+   "David",
+   5
+  ],
+  [
+   "Drew Gallardo",
+   5
+  ],
+  [
+   "Yuang Gao",
+   4
+  ],
+  [
+   "Rodrigo Stachlewski Palma",
+   4
+  ],
+  [
+   "vishnu prakash",
+   4
+  ],
+  [
+   "Somasundaram Sekar",
+   4
+  ],
+  [
+   "Soham",
+   4
+  ],
+  [
+   "ayush",
+   3
+  ],
+  [
+   "Harrison Crosse",
+   3
+  ],
+  [
+   "Orest Tokovenko",
+   3
+  ],
+  [
+   "Aaron Niskode-Dossett",
+   3
+  ],
+  [
+   "Shahzeb Ali",
+   3
+  ]
+ ],
+ "top_authors_all": [
+  [
+   "dependabot[bot]",
+   1392
+  ],
+  [
+   "Fokko Driesprong",
+   501
+  ],
+  [
+   "Kevin Liu",
+   215
+  ],
+  [
+   "Sung Yun",
+   71
+  ],
+  [
+   "Alex Stephen",
+   61
+  ],
+  [
+   "Yuya Ebihara",
+   47
+  ],
+  [
+   "Andre Luis Anastacio",
+   32
+  ],
+  [
+   "Samuel Redai",
+   31
+  ],
+  [
+   "geruh",
+   26
+  ],
+  [
+   "Drew Gallardo",
+   20
+  ],
+  [
+   "jun-he",
+   20
+  ],
+  [
+   "Honah J",
+   19
+  ],
+  [
+   "Ryan Blue",
+   15
+  ],
+  [
+   "Anas Khan",
+   14
+  ],
+  [
+   "Gabriel Igliozzi",
+   14
+  ],
+  [
+   "Jayce Slesar",
+   14
+  ],
+  [
+   "Xander",
+   12
+  ],
+  [
+   "smaheshwar-pltr",
+   12
+  ],
+  [
+   "Ted Gooch",
+   11
+  ],
+  [
+   "frankliee",
+   10
+  ],
+  [
+   "Hussein Awala",
+   10
+  ],
+  [
+   "Rusty Conover",
+   10
+  ],
+  [
+   "TGooch44",
+   10
+  ],
+  [
+   "Neelesh Salian",
+   9
+  ],
+  [
+   "Manu Zhang",
+   9
+  ]
+ ],
+ "monthly_12m": [
+  [
+   "2025-11",
+   30
+  ],
+  [
+   "2025-12",
+   48
+  ],
+  [
+   "2026-01",
+   103
+  ],
+  [
+   "2026-02",
+   63
+  ],
+  [
+   "2026-03",
+   71
+  ],
+  [
+   "2026-04",
+   39
+  ],
+  [
+   "2026-05",
+   85
+  ],
+  [
+   "2026-06",
+   87
+  ],
+  [
+   "2026-07",
+   48
+  ],
+  [
+   "2026-08",
+   100
+  ],
+  [
+   "2026-09",
+   76
+  ],
+  [
+   "2026-10",
+   88
+  ],
+  [
+   "2026-11",
+   90
+  ]
+ ],
+ "new_authors_12m": 116,
+ "modules": {
+  "root/build": {
+   "n_all": 1547,
+   "n_12m": 498,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     1137
+    ],
+    [
+     "Fokko Driesprong",
+     153
+    ],
+    [
+     "Kevin Liu",
+     76
+    ],
+    [
+     "Alex Stephen",
+     19
+    ],
+    [
+     "Samuel Redai",
+     11
+    ],
+    [
+     "Sung Yun",
+     10
+    ],
+    [
+     "geruh",
+     9
+    ],
+    [
+     "Ted Gooch",
+     7
+    ]
+   ],
+   "top_12m": [
+    [
+     "dependabot[bot]",
+     415
+    ],
+    [
+     "Kevin Liu",
+     34
+    ],
+    [
+     "Alex Stephen",
+     13
+    ],
+    [
+     "geruh",
+     9
+    ],
+    [
+     "Yuya Ebihara",
+     5
+    ],
+    [
+     "Orest Tokovenko",
+     2
+    ],
+    [
+     "Sung Yun",
+     2
+    ],
+    [
+     "Fokko Driesprong",
+     2
+    ]
+   ]
+  },
+  "docs": {
+   "n_all": 447,
+   "n_12m": 55,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     160
+    ],
+    [
+     "Fokko Driesprong",
+     62
+    ],
+    [
+     "Kevin Liu",
+     36
+    ],
+    [
+     "Sung Yun",
+     18
+    ],
+    [
+     "Alex Stephen",
+     13
+    ],
+    [
+     "Andre Luis Anastacio",
+     7
+    ],
+    [
+     "Drew Gallardo",
+     6
+    ],
+    [
+     "Manu Zhang",
+     6
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     12
+    ],
+    [
+     "Alex Stephen",
+     8
+    ],
+    [
+     "Yuya Ebihara",
+     5
+    ],
+    [
+     "Yuang Gao",
+     1
+    ],
+    [
+     "sarthak kuwar",
+     1
+    ],
+    [
+     "David Banquet",
+     1
+    ],
+    [
+     "ChanKyeong Won",
+     1
+    ],
+    [
+     "Damanpreet Singh",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/table": {
+   "n_all": 411,
+   "n_12m": 96,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     112
+    ],
+    [
+     "Kevin Liu",
+     30
+    ],
+    [
+     "Sung Yun",
+     28
+    ],
+    [
+     "Alex Stephen",
+     18
+    ],
+    [
+     "Andre Luis Anastacio",
+     10
+    ],
+    [
+     "geruh",
+     7
+    ],
+    [
+     "smaheshwar-pltr",
+     7
+    ],
+    [
+     "Soumya Ghosh",
+     7
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     9
+    ],
+    [
+     "Kevin Liu",
+     7
+    ],
+    [
+     "geruh",
+     7
+    ],
+    [
+     "Yuya Ebihara",
+     6
+    ],
+    [
+     "Xander",
+     4
+    ],
+    [
+     "Gabriel Igliozzi",
+     4
+    ],
+    [
+     "David",
+     3
+    ],
+    [
+     "Anurag-S1ngh",
+     3
+    ]
+   ]
+  },
+  "pyiceberg/catalog": {
+   "n_all": 293,
+   "n_12m": 75,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     56
+    ],
+    [
+     "Kevin Liu",
+     26
+    ],
+    [
+     "Alex Stephen",
+     16
+    ],
+    [
+     "Sung Yun",
+     15
+    ],
+    [
+     "Yuya Ebihara",
+     13
+    ],
+    [
+     "Andre Luis Anastacio",
+     11
+    ],
+    [
+     "Honah J",
+     10
+    ],
+    [
+     "Drew Gallardo",
+     6
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     13
+    ],
+    [
+     "Alex Stephen",
+     10
+    ],
+    [
+     "Kevin Liu",
+     10
+    ],
+    [
+     "geruh",
+     4
+    ],
+    [
+     "Anurag-S1ngh",
+     3
+    ],
+    [
+     "Rahul Shivu Mahadev",
+     2
+    ],
+    [
+     "Wei Luo",
+     2
+    ],
+    [
+     "Yuang Gao",
+     2
+    ]
+   ]
+  },
+  "pyiceberg/io": {
+   "n_all": 292,
+   "n_12m": 57,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     91
+    ],
+    [
+     "Sung Yun",
+     24
+    ],
+    [
+     "Kevin Liu",
+     20
+    ],
+    [
+     "Alex Stephen",
+     6
+    ],
+    [
+     "Rahul Shivu Mahadev",
+     4
+    ],
+    [
+     "Neelesh Salian",
+     4
+    ],
+    [
+     "Adrian Qin",
+     4
+    ],
+    [
+     "Andre Luis Anastacio",
+     4
+    ]
+   ],
+   "top_12m": [
+    [
+     "Rahul Shivu Mahadev",
+     4
+    ],
+    [
+     "Neelesh Salian",
+     4
+    ],
+    [
+     "Kevin Liu",
+     4
+    ],
+    [
+     "Kaanchan Krishna",
+     3
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Soham",
+     3
+    ],
+    [
+     "Xander",
+     2
+    ],
+    [
+     "Minh Vu",
+     2
+    ]
+   ]
+  },
+  ".github": {
+   "n_all": 199,
+   "n_12m": 108,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     85
+    ],
+    [
+     "Kevin Liu",
+     52
+    ],
+    [
+     "Fokko Driesprong",
+     16
+    ],
+    [
+     "Alex Stephen",
+     8
+    ],
+    [
+     "Yuya Ebihara",
+     8
+    ],
+    [
+     "geruh",
+     4
+    ],
+    [
+     "manuzhang",
+     3
+    ],
+    [
+     "Sung Yun",
+     3
+    ]
+   ],
+   "top_12m": [
+    [
+     "dependabot[bot]",
+     49
+    ],
+    [
+     "Kevin Liu",
+     31
+    ],
+    [
+     "Alex Stephen",
+     8
+    ],
+    [
+     "Yuya Ebihara",
+     8
+    ],
+    [
+     "geruh",
+     4
+    ],
+    [
+     "Neelesh Salian",
+     2
+    ],
+    [
+     "Orest Tokovenko",
+     1
+    ],
+    [
+     "Takayoshi Makabe",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/expressions": {
+   "n_all": 139,
+   "n_12m": 36,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     44
+    ],
+    [
+     "Kevin Liu",
+     7
+    ],
+    [
+     "Ryan Blue",
+     6
+    ],
+    [
+     "Alex Stephen",
+     5
+    ],
+    [
+     "Drew Gallardo",
+     4
+    ],
+    [
+     "Daniel Weeks",
+     4
+    ],
+    [
+     "Aaron Niskode-Dossett",
+     3
+    ],
+    [
+     "Yuya Ebihara",
+     3
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     5
+    ],
+    [
+     "Alex Stephen",
+     4
+    ],
+    [
+     "Fokko Driesprong",
+     4
+    ],
+    [
+     "Aaron Niskode-Dossett",
+     3
+    ],
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "Drew Gallardo",
+     3
+    ],
+    [
+     "ayush",
+     2
+    ],
+    [
+     "Rodrigo Stachlewski Palma",
+     2
+    ]
+   ]
+  },
+  "dev": {
+   "n_all": 101,
+   "n_12m": 18,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     43
+    ],
+    [
+     "Kevin Liu",
+     23
+    ],
+    [
+     "Andre Luis Anastacio",
+     5
+    ],
+    [
+     "Alex Stephen",
+     4
+    ],
+    [
+     "dependabot[bot]",
+     3
+    ],
+    [
+     "Sung Yun",
+     2
+    ],
+    [
+     "Sreesh Maheshwar",
+     1
+    ],
+    [
+     "Drew Gallardo",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     8
+    ],
+    [
+     "dependabot[bot]",
+     3
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Fokko Driesprong",
+     3
+    ],
+    [
+     "Sreesh Maheshwar",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/utils": {
+   "n_all": 93,
+   "n_12m": 17,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     29
+    ],
+    [
+     "Kevin Liu",
+     6
+    ],
+    [
+     "Michael DeRoy",
+     5
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Tyler White",
+     3
+    ],
+    [
+     "Andre Luis Anastacio",
+     3
+    ],
+    [
+     "vishnu prakash",
+     2
+    ],
+    [
+     "Sung Yun",
+     2
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "vishnu prakash",
+     2
+    ],
+    [
+     "ayush",
+     1
+    ],
+    [
+     "Shahzeb Ali",
+     1
+    ],
+    [
+     "Fokko Driesprong",
+     1
+    ],
+    [
+     "ump45nose",
+     1
+    ],
+    [
+     "Rodrigo Stachlewski Palma",
+     1
+    ],
+    [
+     "Xander",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/avro": {
+   "n_all": 73,
+   "n_12m": 12,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     27
+    ],
+    [
+     "Rusty Conover",
+     7
+    ],
+    [
+     "Michael DeRoy",
+     4
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Ryan Blue",
+     3
+    ],
+    [
+     "Kevin Liu",
+     2
+    ],
+    [
+     "Yujiang Zhong",
+     2
+    ],
+    [
+     "Maximilien de Bayser",
+     2
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Haizhou Zhao",
+     1
+    ],
+    [
+     "Javier de la Torre",
+     1
+    ],
+    [
+     "Mohamed Laghdaf Dadda",
+     1
+    ],
+    [
+     "Matt Butrovich",
+     1
+    ],
+    [
+     "Rodrigo Stachlewski Palma",
+     1
+    ],
+    [
+     "akashchamp",
+     1
+    ],
+    [
+     "hedger9487",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/manifest": {
+   "n_all": 72,
+   "n_12m": 20,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     26
+    ],
+    [
+     "Kevin Liu",
+     7
+    ],
+    [
+     "Alex Stephen",
+     4
+    ],
+    [
+     "Xander",
+     2
+    ],
+    [
+     "geruh",
+     2
+    ],
+    [
+     "Rusty Conover",
+     2
+    ],
+    [
+     "Burak",
+     1
+    ],
+    [
+     "Orest Tokovenko",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     4
+    ],
+    [
+     "Kevin Liu",
+     4
+    ],
+    [
+     "Xander",
+     2
+    ],
+    [
+     "geruh",
+     2
+    ],
+    [
+     "Burak",
+     1
+    ],
+    [
+     "Orest Tokovenko",
+     1
+    ],
+    [
+     "hedger9487",
+     1
+    ],
+    [
+     "Sivaprasanna",
+     1
+    ]
+   ]
+  },
+  "src": {
+   "n_all": 61,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     24
+    ],
+    [
+     "Samuel Redai",
+     15
+    ],
+    [
+     "jun-he",
+     9
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     4
+    ],
+    [
+     "Nick Ouellet",
+     3
+    ],
+    [
+     "Ryan Blue",
+     2
+    ],
+    [
+     "chulucninh09",
+     1
+    ],
+    [
+     "Dhruv Pratap",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "pyiceberg/cli": {
+   "n_all": 57,
+   "n_12m": 15,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     16
+    ],
+    [
+     "Kevin Liu",
+     9
+    ],
+    [
+     "jj.lee",
+     2
+    ],
+    [
+     "ChangHyeon Im",
+     2
+    ],
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Jayce Slesar",
+     2
+    ],
+    [
+     "Andre Luis Anastacio",
+     2
+    ],
+    [
+     "Ryan Blue",
+     2
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     4
+    ],
+    [
+     "jj.lee",
+     2
+    ],
+    [
+     "ChangHyeon Im",
+     2
+    ],
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Xander",
+     1
+    ],
+    [
+     "Aayush Kumar bhat",
+     1
+    ],
+    [
+     "Yuya Ebihara",
+     1
+    ],
+    [
+     "Chris Qiu",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/schema": {
+   "n_all": 55,
+   "n_12m": 7,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     19
+    ],
+    [
+     "Kevin Liu",
+     5
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Sung Yun",
+     3
+    ],
+    [
+     "Kristofer Gaudel",
+     2
+    ],
+    [
+     "Liwei Li",
+     2
+    ],
+    [
+     "Michael DeRoy",
+     2
+    ],
+    [
+     "Ryan Blue",
+     2
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     2
+    ],
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Anas Khan",
+     1
+    ],
+    [
+     "Sam Verhasselt",
+     1
+    ],
+    [
+     "Somasundaram Sekar",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/transforms": {
+   "n_all": 53,
+   "n_12m": 9,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     20
+    ],
+    [
+     "Sung Yun",
+     5
+    ],
+    [
+     "Michael DeRoy",
+     3
+    ],
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Junwang Zhao",
+     2
+    ],
+    [
+     "Jayce Slesar",
+     2
+    ],
+    [
+     "linzch3",
+     1
+    ],
+    [
+     "Xander",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Junwang Zhao",
+     2
+    ],
+    [
+     "Fokko Driesprong",
+     2
+    ],
+    [
+     "linzch3",
+     1
+    ],
+    [
+     "Xander",
+     1
+    ],
+    [
+     "GayathriSrividya",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/typedef": {
+   "n_all": 45,
+   "n_12m": 7,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     19
+    ],
+    [
+     "Kevin Liu",
+     3
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Ryan Blue",
+     3
+    ],
+    [
+     "Rusty Conover",
+     2
+    ],
+    [
+     "Harrison Crosse",
+     1
+    ],
+    [
+     "Orest Tokovenko",
+     1
+    ],
+    [
+     "TennyZhuang",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Harrison Crosse",
+     1
+    ],
+    [
+     "Orest Tokovenko",
+     1
+    ],
+    [
+     "Kevin Liu",
+     1
+    ],
+    [
+     "Fokko Driesprong",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/partitioning": {
+   "n_all": 39,
+   "n_12m": 9,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     10
+    ],
+    [
+     "Kevin Liu",
+     3
+    ],
+    [
+     "Sung Yun",
+     3
+    ],
+    [
+     "Michael DeRoy",
+     3
+    ],
+    [
+     "Gabriel Igliozzi",
+     2
+    ],
+    [
+     "smaheshwar-pltr",
+     2
+    ],
+    [
+     "Adrian Qin",
+     2
+    ],
+    [
+     "Rahul Shivu Mahadev",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Gabriel Igliozzi",
+     2
+    ],
+    [
+     "Rahul Shivu Mahadev",
+     1
+    ],
+    [
+     "Mohammad Sohail Shaikh",
+     1
+    ],
+    [
+     "Praveen Kumar Mittal",
+     1
+    ],
+    [
+     "Yuya Ebihara",
+     1
+    ],
+    [
+     "Anas Khan",
+     1
+    ],
+    [
+     "Kevin Liu",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/types": {
+   "n_all": 38,
+   "n_12m": 5,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     10
+    ],
+    [
+     "Arul Jerald",
+     2
+    ],
+    [
+     "Alex Stephen",
+     2
+    ],
+    [
+     "Kevin Liu",
+     2
+    ],
+    [
+     "Mehul Batra",
+     2
+    ],
+    [
+     "Michael DeRoy",
+     2
+    ],
+    [
+     "Platon G. Gimp",
+     1
+    ],
+    [
+     "Sam Verhasselt",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Arul Jerald",
+     2
+    ],
+    [
+     "Platon G. Gimp",
+     1
+    ],
+    [
+     "Sam Verhasselt",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ]
+   ]
+  },
+  "iceberg": {
+   "n_all": 35,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "TGooch44",
+     10
+    ],
+    [
+     "jun-he",
+     9
+    ],
+    [
+     "Ted Gooch",
+     7
+    ],
+    [
+     "Ryan Murray",
+     3
+    ],
+    [
+     "Fokko Driesprong",
+     2
+    ],
+    [
+     "Szehon Ho",
+     1
+    ],
+    [
+     "mickjermsurawong-stripe",
+     1
+    ],
+    [
+     "chyzzqo2",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "pyiceberg/conversions": {
+   "n_all": 28,
+   "n_12m": 7,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     9
+    ],
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Kevin Liu",
+     2
+    ],
+    [
+     "Rodrigo Stachlewski Palma",
+     1
+    ],
+    [
+     "Minh Vu",
+     1
+    ],
+    [
+     "Sam Verhasselt",
+     1
+    ],
+    [
+     "Sung Yun",
+     1
+    ],
+    [
+     "Kaushik Srinivasan",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     3
+    ],
+    [
+     "Rodrigo Stachlewski Palma",
+     1
+    ],
+    [
+     "Minh Vu",
+     1
+    ],
+    [
+     "Sam Verhasselt",
+     1
+    ],
+    [
+     "Kevin Liu",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/exceptions": {
+   "n_all": 23,
+   "n_12m": 5,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     10
+    ],
+    [
+     "J Schmidt",
+     1
+    ],
+    [
+     "Luca Falsina",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ],
+    [
+     "Marcin Szyma\u0144ski",
+     1
+    ],
+    [
+     "geruh",
+     1
+    ],
+    [
+     "Jayce Slesar",
+     1
+    ],
+    [
+     "Andre Luis Anastacio",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "J Schmidt",
+     1
+    ],
+    [
+     "Luca Falsina",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ],
+    [
+     "Marcin Szyma\u0144ski",
+     1
+    ],
+    [
+     "geruh",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/__init__": {
+   "n_all": 17,
+   "n_12m": 2,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     10
+    ],
+    [
+     "Sung Yun",
+     2
+    ],
+    [
+     "Alex Stephen",
+     1
+    ],
+    [
+     "geruh",
+     1
+    ],
+    [
+     "Kevin Liu",
+     1
+    ],
+    [
+     "Honah J",
+     1
+    ],
+    [
+     "Samuel Redai",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     1
+    ],
+    [
+     "geruh",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/serializers": {
+   "n_all": 13,
+   "n_12m": 1,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     6
+    ],
+    [
+     "Samuel Redai",
+     2
+    ],
+    [
+     "Alex Stephen",
+     1
+    ],
+    [
+     "Sung Yun",
+     1
+    ],
+    [
+     "Yachen(Carl) Yin",
+     1
+    ],
+    [
+     "Alessio Izzo",
+     1
+    ],
+    [
+     "Andrea Rondinelli",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Alex Stephen",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/view": {
+   "n_all": 7,
+   "n_12m": 7,
+   "top_all": [
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "Soumyadyuti Dey",
+     1
+    ],
+    [
+     "Kevin Liu",
+     1
+    ],
+    [
+     "Gabriel Igliozzi",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "Soumyadyuti Dey",
+     1
+    ],
+    [
+     "Kevin Liu",
+     1
+    ],
+    [
+     "Gabriel Igliozzi",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/encryption": {
+   "n_all": 6,
+   "n_12m": 6,
+   "top_all": [
+    [
+     "Xander",
+     6
+    ]
+   ],
+   "top_12m": [
+    [
+     "Xander",
+     6
+    ]
+   ]
+  },
+  "pyiceberg/files": {
+   "n_all": 5,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     1
+    ],
+    [
+     "Andrea Rondinelli",
+     1
+    ],
+    [
+     "Daniel R\u00fcckert Garc\u00eda",
+     1
+    ],
+    [
+     "Ryan Blue",
+     1
+    ],
+    [
+     "Samuel Redai",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "vendor": {
+   "n_all": 2,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Kevin Liu",
+     1
+    ],
+    [
+     "Fokko Driesprong",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "pyiceberg/environment_context": {
+   "n_all": 1,
+   "n_12m": 1,
+   "top_all": [
+    [
+     "Yuya Ebihara",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     1
+    ]
+   ]
+  },
+  "notebooks": {
+   "n_all": 1,
+   "n_12m": 1,
+   "top_all": [
+    [
+     "Kevin Liu",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     1
+    ]
+   ]
+  },
+  "pyiceberg/py.typed": {
+   "n_all": 1,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     1
+    ]
+   ],
+   "top_12m": []
+  }
+ }
+}

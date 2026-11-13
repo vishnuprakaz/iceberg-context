@@ -1,0 +1,384 @@
+rank_newest_first	id	duration_min	views	title	playlists
+0	q-A9Y5FMRY8	55	77	Iceberg Index Support Sync   2026 11 09	Iceberg Index Support Community sync
+1	EyXIAk90h9E	63	124	Iceberg Index Support Sync   2026 10 26	Iceberg Index Support Community sync
+2	fPTtFTNf_Tc	55	131	Iceberg Community Sync 10 28 2026	Iceberg Community Syncs
+3	06Y0Gadn5Zo	62	67	Iceberg Rust Community Sync Oct 23 2026	Iceberg Rust Community Sync
+4	1jGOq4iV94o	55	253	Iceberg Community Sync 10 7 2026	Iceberg Community Syncs
+5	I1g51kzIec8	39	167	Iceberg Catalog Community Sync Oct 14 2026	
+6	pkaqMoKQqrw	43	109	Efficient column updates sync Oct 6 2026	Efficient column updates sync
+7	NYme94R_MXY	62	123	Iceberg Catalog Community Sync Sep 23 2026	
+8	QphvAxYfpgI	68	200	Iceberg Index Support Sync   2026 09 14	Iceberg Index Support Community sync
+9	TTLQuCNx7EI	61	224	Iceberg Index Support Sync   2026 09 28	Iceberg Index Support Community sync
+10	SySKoTWWLfo	61	113	Iceberg Catalog Community Sync Sep 02 2026	
+11	7EyHMLOH98I	68	134	V4 AMT Single File Commits 08/24/2026	V4 Single File Commit Community Sync
+12	Mg17Da5XPsY	55	340	Iceberg Community Sync 9 16 2026	Iceberg Community Syncs
+13	2iquONVHFlk	49	155	Efficient column updates sync Sep 8 2026	Efficient column updates sync
+14	wKTN7Dsg474	17	197	Iceberg Variant Community Sync September 3 2026	
+15	NPufmQ61Hxc	58	224	Iceberg Community Sync 8 26 2026	Iceberg Community Syncs
+16	yRla7P3l0U8	57	73	Shared Conformance Testing for Apache Iceberg Sync August 19 2026	
+17	hYvjIcg8OsU	58	78	Read Restrictions Sync (08/18/2026)	Iceberg Read Restrictions Sync
+18	lCTV-Rhiwyc	62	97	Iceberg Catalog Community Sync Aug 12 2026	
+19	y6-CKOi6bRA	56	76	Iceberg Community Sync 8 5 2026	Iceberg Community Syncs
+20	_NzxRrRR6xI	62	48	Iceberg Catalog Community Sync Jul 22 2026	
+21	dDZKzz3PKIk	61	77	Efficient column updates sync   2026 08 11	Efficient column updates sync
+22	gZ82VlKNfdo	40	47	Iceberg Variant Community Sync August 6 2026	
+23	5AIuVFfdbGs	48	48	Iceberg Read Restrictions Sync   2026 08 04	Iceberg Read Restrictions Sync
+24	G5m039mXgG4	68	51	V4 Single File Commits AMT 2026-07-27	
+25	Wg9orP9JAmk	49	89	Iceberg Index Support Sync   2026 08 03	Iceberg Index Support Community sync
+26	kBhesf_1pIM	63	22	V4 Single File Commits AMT 2026 07 13	V4 Single File Commit Community Sync
+27	exC7RCDYtk4	60	55	Efficient column updates sync   Jul 14 2026	Efficient column updates sync
+28	zdisDioOvVE	22	73	Iceberg - Spark Community Sync Jun 21 2026	Iceberg - Spark Community Sync
+29	M328cFeaLIs	62	50	Iceberg Catalog Community Sync July 01 2026	
+30	gfEVmvwtvJw	67	66	Iceberg Index Support Sync   2026 07 20	Iceberg Index Support Community sync
+31	L0EGYMFyTRc	50	43	Iceberg Read Restrictions Sync   2026 07 21	Iceberg Read Restrictions Sync
+32	KKm5oHdbsn0	54	102	Iceberg Community Sync 7 15 2026	Iceberg Community Syncs
+33	I_aOSlBT4RM	39	45	Iceberg Read Restrictions Sync   2026 07 07	Iceberg Read Restrictions Sync
+34	96ggxlvC7NM	62	65	Iceberg Index Support Sync   2026 07 06	Iceberg Index Support Community sync
+35	arQVMl-fnxM	63	22	Catalog Labels Discussion 06 29 2026	
+36	_yzBl1N392M	57	56	Iceberg Variant Community Sync July 2 2026	
+37	OaeTob3lM1Q	63	57	Iceberg Catalog Community Sync Jun 10 2026	
+38	PGx4-GKqm6c	66	41	Efficient column updates sync Jun 30 2026	Efficient column updates sync
+39	bmse7C38RO0	64	54	V4 Single File Commits AMT   2026 06 29	V4 Single File Commit Community Sync
+40	PcHa4jjl0uU	59	57	Iceberg MV sync   2026 06 25	Iceberg MV Sync
+41	sU3_3C3JdmI	59	54	Constraints support in Iceberg   2026 06 18	Constraints support in Iceberg
+42	sGCyTv5kk9o	55	64	Iceberg Community Sync 6 24 2026	Iceberg Community Syncs
+43	rGPtnXEkvCI	77	57	Iceberg Index Support Sync   2026 06 22	Iceberg Index Support Community sync
+44	rkbZrGWkay8	22	17	Iceberg Read Restrictions Sync   2026 06 23	Iceberg Read Restrictions Sync
+45	ch9BULtwRrU	43	26	Efficient column updates sync Jun 16 2026	Efficient column updates sync
+46	Py87y6tGz6U	26	32	Iceberg - Spark Community Sync Jun 16 2026	Iceberg - Spark Community Sync
+47	GUhCr-PnSo8	59	48	Iceberg Read Restrictions Sync   2026 06 09	Iceberg Read Restrictions Sync
+48	M0WWRrIvQkI	70	65	Iceberg Index Support Sync   2026 06 08	Iceberg Index Support Community sync
+49	kuxFBm-j5hw	59	42	Efficient column updates sync 6 2 2026	Efficient column updates sync
+50	HW80v23j7Jw	54	62	Iceberg Variant Community Sync June 4 2026	
+51	Ez7ukCESBbs	64	48	Constraints support in Iceberg   2026 06 04	Constraints support in Iceberg
+52	Z-Y2zoZD3hM	52	92	Iceberg Community Sync 6 3 2026	Iceberg Community Syncs
+53	P4NOQASNtPA	57	41	Catalog Labels Discussion 5 28 2026	
+54	7mVes-6pM1c	60	50	V4 Single File Commits/AMT  - 06/01/2026	
+55	kIoKuclAFc8	64	51	V4 Single File Commits - 05/18/2026	V4 Single File Commit Community Sync
+56	KckCjeP-4DM	32	181	The Easy Button for Apache Iceberg: Migrate Less, Manage Better, Build Agentic Analytics	Apache Iceberg Summit 2026
+57	YrJfLrLc0II	37	509	Correctness Techniques for Apache Iceberg™ Compaction	Apache Iceberg Summit 2026
+58	Ml0xHW8EBGk	33	114	Snowflake’s Embrace of Open Source Software	Apache Iceberg Summit 2026
+59	NRSlundcwvc	30	475	Maintaining Iceberg at Scale: Lessons from Slack	Apache Iceberg Summit 2026
+60	ArrFBvlhd7I	29	174	Implementing Intelligent Snapshot Management	Apache Iceberg Summit 2026
+61	gPYSokphphg	37	24	Iceberg MV sync   2026 05 28	Iceberg MV Sync
+62	tj5emVNX6s4	62	63	Iceberg Index Support Sync   2026 05 27	Iceberg Index Support Community sync
+63	-KEesN1udyY	57	51	Iceberg Read Restrictions Sync   2026 05 26	Iceberg Read Restrictions Sync
+64	QQ-Mb7VgoN0	25	45	Iceberg - Spark Community Sync May 19 2026	Iceberg - Spark Community Sync
+65	Nd7sCd8RIYc	66	41	Iceberg Catalog Community Sync May 20 2026	
+66	vB63kyYm4ks	32	471	Advancing Query Performance with Iceberg Secondary Indexes	Apache Iceberg Summit 2026
+67	jddX8atQJ84	31	124	Unleashing Native Performance: The Architecture and Roadmap of Apache Iceberg-cpp	Apache Iceberg Summit 2026
+68	GsmRKvnaQ0I	25	198	PyIceberg: Onwards and Upwards	Apache Iceberg Summit 2026
+69	0bp7b846k-c	17	199	The Invisible Switch: Zero-Downtime Hive to Iceberg Migrations via Views	Apache Iceberg Summit 2026
+70	YS8HtMJZCnk	30	442	Column Families in Iceberg: Enabling Efficient Feature Updates for Wide Tables	Apache Iceberg Summit 2026
+71	w4VxwN14LT8	15	347	Debugging Iceberg in Production: OOMs, Conflicts, and NotFoundExceptions	Apache Iceberg Summit 2026
+72	anebAxlJhGI	21	206	What Breaks at Trillion Rows: Eliminating Iceberg Bottlenecks in Firebolt	Apache Iceberg Summit 2026
+73	-0iWnXq0GHo	12	752	Iceberg v3: Deletion Vectors and Roaring Bitmaps	Apache Iceberg Summit 2026
+74	2NUPwbnHd34	28	194	Scaling Bloomberg's Portfolio Analytics Data Lake with Apache Iceberg and Trino	Apache Iceberg Summit 2026
+75	xbddGe44xwg	9	144	Branch-First Backfills: Updating 200 Iceberg Tables Without Breaking Live APIs	Apache Iceberg Summit 2026
+76	o_lHTe9yACc	25	142	Unifying the Open Lakehouse: Open Storage, Open Access & Governance with Iceberg	Apache Iceberg Summit 2026
+77	U5yvmq7S8Js	15	131	Understanding Column Statistics in v4	Apache Iceberg Summit 2026
+78	zi4-JC16yqQ	16	152	Apache Iceberg: the Answer to Observability for AI Agents	Apache Iceberg Summit 2026
+79	5x4ppDPuliE	33	404	From Drift to Drive: Slicing Through Data with Iceberg and Vortex	Apache Iceberg Summit 2026
+80	5vsRY0zqVk4	31	99	Building Egnatia at Akamai: How Iceberg Is Saving Us Millions	Apache Iceberg Summit 2026
+81	4E15_inYAKM	19	68	Provisioning Your Iceberg Data Infrastructure with the Iceberg Terraform Provider	Apache Iceberg Summit 2026
+82	uVdQzc3qm_E	14	60	Backing Up Apache Iceberg Tables Across Environments Using Project Nessie	Apache Iceberg Summit 2026
+83	qbTTSJrRRFs	11	314	You Deserve a REST - How the Iceberg REST Spec Unlocks Lakehouse	Apache Iceberg Summit 2026
+84	qWU3u_2KG-s	38	262	Column Storage for the AI Era	Apache Iceberg Summit 2026
+85	AmrzYXKNavQ	31	128	A Rusty Future: Bringing Iceberg to the Rust Data Ecosystem	Apache Iceberg Summit 2026
+86	gCHQAQ6mVB0	20	58	From Topics to Tables: Cataloging Streaming Data in the Iceberg Ecosystem	Apache Iceberg Summit 2026
+87	5T-2nTxNtZU	28	97	Fresher Metrics at Lower Cost with Incremental Materialized Views on Apache Iceberg	Apache Iceberg Summit 2026
+88	kYXThNWvKwE	27	130	2+ Years on Iceberg: Transforming Manufacturing Data and Looking Ahead	Apache Iceberg Summit 2026
+89	lQC6s41ej9A	19	147	The Storage Layer You're Ignoring: How Object Storage Performance Shapes Iceberg Query Times	Apache Iceberg Summit 2026
+90	ymUCDJV19tE	37	462	Breaking the Mold: Re-thinking Iceberg Metadata Structure in v4	Apache Iceberg Summit 2026
+91	SQ7Av4wdkJ4	31	155	From Proprietary Storage to Open Lakehouse: Lessons from a High-Throughput Iceberg Migration	Apache Iceberg Summit 2026
+92	s_eZph1loeA	30	254	Iceberg with ClickHouse: A One-Year Development Retrospective	Apache Iceberg Summit 2026
+93	szWvGm5busw	44	80	Innovations in Apache Iceberg and the Data Ecosystem	Apache Iceberg Summit 2026
+94	pdiDcg4eBV8	30	376	Reaching Warehouse-Class Performance: Optimizing Spark + Iceberg at Scale	Apache Iceberg Summit 2026
+95	6SVE5bseULE	49	252	Bridging Open Source Innovation with Customer Value: A Product Perspective	Apache Iceberg Summit 2026
+96	a4VCr-Mzqe4	15	171	The Evolution of Semi-Structured Data: Moving from JSON Strings to Iceberg V3 Variants	Apache Iceberg Summit 2026
+97	KO04A2uEa0E	15	220	High-Performance Full Text Search Directly on Iceberg via Lucene-Integrated Indexing	Apache Iceberg Summit 2026
+98	WERKJK72OJg	16	77	Freshness-Aware Table Loading on the Client-Side of the REST Catalog	Apache Iceberg Summit 2026
+99	IS1PrTUpzLI	15	133	Taming the Heavy Tail: Buckets + Rewrites for Fast Iceberg Serving	Apache Iceberg Summit 2026
+100	BR8q5wOS9XI	42	163	Schema-Flexible Ingestion with Flink SQL Variant, and Dynamic Iceberg Sink	Apache Iceberg Summit 2026
+101	B2IwP2BgmRk	29	35	Beyond the Forklift: Unlocking Revenue-Critical Workloads on Iceberg	Apache Iceberg Summit 2026
+102	OiowtisBGIw	38	153	The Decompression Bottleneck: Evolving Parquet with PFOR and ALP	Apache Iceberg Summit 2026
+103	CxJ0gUhnskI	21	119	Multi-Engine Access with Apache Iceberg: One Table, Multiple Tools	Apache Iceberg Summit 2026
+104	tRaM4JpVdPc	30	195	Materialized Views in Iceberg: Towards a Portable, Engine-Agnostic Specification	Apache Iceberg Summit 2026
+105	ZktCgxlJmjw	36	662	Building DuckDB-Iceberg: Exploring the Iceberg Ecosystem	Apache Iceberg Summit 2026
+106	6mEfhGfJQ7I	30	54	Relatively Speaking: Paths Are Getting an Update in v4	Apache Iceberg Summit 2026
+107	4Bg64WnkfgE	34	2700	From Batch to Streaming and AI, Iceberg for Everyone by Everyone	Apache Iceberg Summit 2026
+108	1C99NSu1tuI	30	165	Iceberg’s Iron Wall: Open Governance via IRC for Enforcing Row and Column Security	Apache Iceberg Summit 2026
+109	PGrFLDPPu2Q	34	154	Iceberg + Spark DSV2: Growing Up Fast	Apache Iceberg Summit 2026
+110	xkm4lKpncqo	21	99	Zero-Copy, Zero Stress, Migrating Delta Lake to Iceberg Spec v3 Without Moving a Byte	Apache Iceberg Summit 2026
+111	kwjNer5q0bg	40	93	Unlocking Fast, Flexible, and Future-Ready Vector Search in Iceberg with ANN Indexing	Apache Iceberg Summit 2026
+112	1clrcpP2m2Y	39	90	Iceberg UDF Spec: Portable SQL Functions Across Engines	Apache Iceberg Summit 2026
+113	hImJk7DCbSE	33	1500	Apache Polaris: Getting Started with this Open Source Iceberg Catalog	Apache Iceberg Summit 2026
+114	uUguJ7IP2P4	66	64	Future of Iceberg Security	Apache Iceberg Summit 2026
+115	0nKJ7mphxHE	42	227	Completing the CDC Puzzle: Adding Merge-on-Read Support to Iceberg Changelog Scans	Apache Iceberg Summit 2026
+116	2uf2s5QZXd8	25	76	Live Storage Rebalancing of Iceberg Tables at Exabyte Scale	Apache Iceberg Summit 2026
+117	EB4_Zrgrrkk	26	197	Expanding Iceberg Engine Support: Storage Partitioned Joins (SPJ) for Flink Batch at Pinterest	Apache Iceberg Summit 2026
+118	1PQwMRNik94	13	207	Driving Iceberg Adoption with Open Catalog and Open Datasets	Apache Iceberg Summit 2026
+119	hzOqRhaXFQo	19	117	Fine-Grained Metadata Commits in Apache Iceberg	Apache Iceberg Summit 2026
+120	woTbw7Kv6H4	26	36	From Data Chaos to Control: How a Global Telco Tamed Petabyte-Scale Challenges with Apache Iceberg	Apache Iceberg Summit 2026
+121	chp9Bj2uMsY	12	429	Accelerating Petabyte-Scale Iceberg Tables Using Multi-threaded I/O	Apache Iceberg Summit 2026
+122	3-pYeffXbu0	35	273	Streaming Updates in Iceberg: A Practical Approach to Position Deletes at Scale	Apache Iceberg Summit 2026
+123	sG5sZ7CKAUM	47	168	Engineering the Global Lakehouse: Architecting for Interoperability at Cloud Scale	Apache Iceberg Summit 2026
+124	47P5P6oDfGU	25	160	What Actually Breaks in Zero-Copy Iceberg Migrations (and How We Operated Through It)	Apache Iceberg Summit 2026
+125	7rW6VcGgBww	11	94	From Black Box to Breakpoints: Debugging the Kafka Connect Iceberg Connector	Apache Iceberg Summit 2026
+126	pRhJHoad_L8	39	53	Escaping the Data Warehouse: Trendyol’s Journey to an Iceberg Lakehouse	Apache Iceberg Summit 2026
+127	G7Y2eNS_d-s	35	211	Launching Iceberg Table Encryption	Apache Iceberg Summit 2026
+128	7su5PVkJX-U	32	263	Contributing to Iceberg 101	Apache Iceberg Summit 2026
+129	543VY5GeC5s	15	137	Why Sort Again? Leverage Iceberg's Sort Metadata for Query Optimizations	Apache Iceberg Summit 2026
+130	uPEDV-QzcVQ	30	148	Enabling Agentic Workflows on Iceberg	Apache Iceberg Summit 2026
+131	osUHB_DV874	28	247	Build an Open, Interoperable and High-Performant Lakehouse With Apache Iceberg on Google Cloud	Apache Iceberg Summit 2026
+132	MdWeNlcpR6U	27	270	Architecting a Secure Managed Iceberg Platform with Apache Polaris & OPA	Apache Iceberg Summit 2026
+133	NA7BwweoLTw	50	50	Efficient column updates sync 5 19 2026	Efficient column updates sync
+134	kPfKW5U7LYY	59	34	Iceberg Catalog Community Sync April 29 2026	
+135	7EI7tdcMWJA	53	53	Iceberg MV sync   2026 05 14	Iceberg MV Sync
+136	VYkkMvZkJ-k	55	99	Iceberg Community Sync 5 13 2026	Iceberg Community Syncs
+137	-RHnJYnsoPQ	53	19	Iceberg Read Restrictions Sync   2026 04 14	Iceberg Read Restrictions Sync
+138	b9p6mI-k-0I	62	35	Iceberg Read Restrictions Sync   2026 05 12	Iceberg Read Restrictions Sync
+139	GGGAnp5CcRs	79	72	Iceberg Index Support Sync   2026 05 11	Iceberg Index Support Community sync
+140	bq2e6-71beA	38	52	Iceberg Variant Community Sync May 7 2026	
+141	vOZwG0O4cSA	72	144	Efficient column updates sync 5 5 2026	Efficient column updates sync
+142	o3KPMHTwwWw	52	60	Iceberg MV sync   2026 04 30	Iceberg MV Sync
+143	pbkd6P9aSQc	75	45	V4 Single File Commits - 05/04/2026	V4 Single File Commit Community Sync
+144	tfP1NopLRNQ	82	32	V4 Single File Commits - April 20 2026	V4 Single File Commit Community Sync
+145	aT9azJW7HHI	67	65	Iceberg Catalog Community Sync April 15 2026	
+146	UA0yHSAPpHQ	73	94	Iceberg Index Support Sync   2026 04 27	Iceberg Index Support Community sync
+147	B0X4SbLoD24	57	81	Iceberg Community Sync 4 22 2026	Iceberg Community Syncs
+148	CDiwC0uEfoE	17	51	Iceberg - Spark Community Sync April 21 2026	Iceberg - Spark Community Sync
+149	hrMV8xWzls8	44	59	Efficient column updates sync 4 21 2026	Efficient column updates sync
+150	hKlXFFsCL_w	63	80	V4 Single File Commits - April 3 2026	V4 Single File Commit Community Sync
+151	Tj6DdpdPAZg	60	64	Iceberg MV sync   2026-04-16	Iceberg MV Sync
+152	UynXolbI0fQ	62	33	Iceberg Catalog Community Sync Mar 18 2026	
+153	OGcQ2ET_R4k	59	123	Iceberg Index Support Sync   2026-04-13	Iceberg Index Support Community sync
+154	eySD_A9KPkk	69	84	Iceberg MV sync   2026-04-02	Iceberg MV Sync
+155	cbNaqGQgTzU	63	29	Iceberg V4: Tags/Attributes Sync 3 31 2026	
+156	dLOZxgXrcyg	58	76	Iceberg Community Sync 4 1 2026	Iceberg Community Syncs
+157	4_nA8PlK1as	66	37	Iceberg Read Restrictions Sync   2026 03 31	Iceberg Read Restrictions Sync
+158	IVPHvZcJ07Q	76	66	V4 Single File Commits -  Feb 26 2026	V4 Single File Commit Community Sync
+159	Rw4HF9pr7mw	59	67	Iceberg Index Support Sync 2026-03-30	Iceberg Index Support Community sync
+160	hslolNh7GwA	58	89	Efficient column updates sync 3 24 2026	Efficient column updates sync
+161	usgUe8r_e9E	38	86	Iceberg - Spark Community Sync March 17 2026	Iceberg - Spark Community Sync
+162	_UIw4U8b_xo	61	35	Iceberg Catalog Community Sync Feb 25 2026	
+163	LObBU3r_GXg	67	61	Iceberg Read Restrictions Sync   2026-03-17	Iceberg Read Restrictions Sync
+164	btmjhtRWUCE	61	127	Iceberg Index Support Sync 2026-03-16	Iceberg Index Support Community sync
+165	tgM568PPOv4	57	164	Iceberg Community Sync 3 11 2026	Iceberg Community Syncs
+166	3_CuwfZV8oQ	57	71	Efficient Column Updates 3 4 2026	Efficient column updates sync
+167	mhwS9d0tGjg	68	37	Iceberg Read Restrictions Sync   2026 03 03	Iceberg Read Restrictions Sync
+168	pZFJfAlMHsM	68	139	Iceberg Index Support Sync  2026 03 02	Iceberg Index Support Community sync
+169	PoQmzCYn0yY	69	49	Iceberg Catalog Community Sync Feb 04 2026	
+170	IBrBGYKq60I	49	50	Iceberg MV sync   2026 02 19 08 59 PST   Recording	Iceberg MV Sync
+171	D0xpEnh4nxU	57	78	Iceberg Community Sync 2 18 2026	Iceberg Community Syncs
+172	_YoF9ER7E1w	66	42	Iceberg Read Restrictions Sync   2026-02-17	Iceberg Read Restrictions Sync
+173	vNvOHMHXHGw	13	48	Iceberg - Spark Community Sync 2 17 2026	Iceberg - Spark Community Sync
+174	IK-lOSEXBSI	11	36	File format API sync 2 16 2026	
+175	3sFfQ0A50yk	61	105	Iceberg Index Support Sync   2026 02 11	Iceberg Index Support Community sync
+176	wcauEm30nX8	46	49	Materialized View sync Feb 5 2026	Iceberg MV Sync
+177	_wKszzNtP48	67	69	Iceberg Read Restrictions Sync 2026-02-03	Iceberg Read Restrictions Sync
+178	OFq8FpVHQyA	11	56	File format API sync 2 2 2026	
+179	ogbNnU2JVkk	46	45	Relative Paths Sync 1 29 2026	
+180	NWFjaKaPuKE	55	68	Iceberg Community Sync Jan 28 2026	Iceberg Community Syncs
+181	HpFry5PlV1g	53	62	Iceberg UDF Community Sync   1 26 2026	Iceberg UDF Community Sync
+182	LAagm_DTGgI	127	73	Materialized View sync Jan 22 2026	Iceberg MV Sync
+183	timAf8xk42Q	24	65	File format API sync 1 21 2026	
+184	g4n2hwdFosE	55	97	Iceberg - Spark Community Sync 1 20 2026	Iceberg - Spark Community Sync
+185	UlS4gWUsQBk	62	48	Iceberg Catalog Community Sync Jan 14 2026	
+186	XhDxhEWlHPk	70	88	V4 Single File Commits -  Jan 9 2026	V4 Single File Commit Community Sync
+187	2uKxYr1yX5w	67	47	Iceberg UDF Community Sync   1 12 2026	Iceberg UDF Community Sync
+188	LwmBOKYluW8	57	41	Materialized View sync Jan 8 2026	Iceberg MV Sync
+189	zrKtVK7M4BQ	55	78	Iceberg Community Sync Jan 7 2026	Iceberg Community Syncs
+190	q4mQMD6OAms	23	108	File format API sync 1 5 2026	
+191	U6DhyxKRIXw	98	55	Materialized View sync Dec 19 2025	Iceberg MV Sync
+192	HCAuJEWhZXE	56	88	Multi Table Transactions 12 18 2025	
+193	LIMtcmFzi2U	51	48	Iceberg Community Sync Dec 17 2025	Iceberg Community Syncs
+194	jZwjOMrf1eg	57	42	Materialized View sync Dec 16 2025	Iceberg MV Sync
+195	tF7Ur88snR0	57	40	Iceberg UDF Community Sync   12 15 2025	Iceberg UDF Community Sync
+196	XUn8i1aZh3A	49	47	Iceberg Rust Community Sync Dec 11 2025	Iceberg Rust Community Sync
+197	ZshN590NOxk	57	44	Materialized View sync Dec 10 2025	Iceberg MV Sync
+198	-sBhIt2kpDQ	20	63	File format API sync 12 8 2025	
+199	nZ8P4fhYUr8	57	65	Iceberg Catalog Community Sync Dec 3rd 2025	
+200	6CBMwwbISOE	24	36	Iceberg UDF Community Sync   12 1 2025	Iceberg UDF Community Sync
+201	luSDdt4J9LM	23	80	Iceberg Rust Community Sync Nov 20 2025	Iceberg Rust Community Sync
+202	ZdUoeGOltkM	57	62	Materialized View sync Nov 19 2025	Iceberg MV Sync
+203	Wxz1nSP48k0	60	46	Iceberg UDF Community Sync   11 17 2025	Iceberg UDF Community Sync
+204	gCpjx4PMRIE	61	47	Iceberg Catalog Community Sync Nov 12th 2025	
+205	WfKBkAMV5DA	20	52	File format API sync Nov 10 2025	
+206	jb2FyBqUDPE	53	118	Iceberg Community Sync Nov 5 2025	Iceberg Community Syncs
+207	0i6nKfDNdGw	37	24	Iceberg UDF Community Sync   11 3 2025	Iceberg UDF Community Sync
+208	mvYbfmiheOY	59	77	Iceberg Rust Community Sync Oct 30 2025	Iceberg Rust Community Sync
+209	rj9wGVPeTY0	65	62	Iceberg Catalog Community Sync Oct 22nd 2025	
+210	Kn00iW1Rb8U	44	33	Materialized View sync Oct 29 2025	Iceberg MV Sync
+211	jpm9ojBUaP4	55	39	Materialized View sync Oct 8 2025	Iceberg MV Sync
+212	ISbjsdxU8TA	20	78	File format API sync Oct 27 2025	
+213	IUd-SN0CQRs	54	42	Iceberg UDF Community Sync   Oct 20 2025	Iceberg UDF Community Sync
+214	RuPgTN91Z7Y	51	93	Iceberg Community Sync Oct 15 2025	Iceberg Community Syncs
+215	JP86sP2YX1g	54	85	File format API sync Oct 13 2025	
+216	WVpZ-Dy3PYE	26	81	Iceberg Rust Community Sync Oct 9 2025	Iceberg Rust Community Sync
+217	gJnueQODWvs	50	46	Iceberg UDF Community Sync   Oct 6 2025	Iceberg UDF Community Sync
+218	o8bxUs346dQ	60	82	Iceberg Catalog Community Sync Oct 1st 2025	
+219	6pf0fCkA5jU	43	84	PyIceberg Community sync Sept 30 2025	
+220	BvGejwOfn6w	55	70	File format API sync Sep 29 2025	
+221	El0105uHv5U	48	75	Iceberg Community Sync Sep 24 2025	Iceberg Community Syncs
+222	9t2xev8WfAw	61	45	Iceberg UDF Community Sync   Sep 22 2025	Iceberg UDF Community Sync
+223	zdVAJdUb6P4	50	31	Iceberg Rust Community Sync June 26 2025	Iceberg Rust Community Sync
+224	_2B5FAMu5X0	20	71	Iceberg Rust Community Sync Sept 23 2025	Iceberg Rust Community Sync
+225	M7Aw43qpXYE	22	21	Iceberg Rust Community Sync Aug 23 2025	Iceberg Rust Community Sync
+226	KnpKeRjboHI	17	29	Iceberg Rust Community Sync July 31 2025	Iceberg Rust Community Sync
+227	orAXA5e9pmU	63	134	Iceberg Catalog Community Sync Sep 10th 2025	
+228	5zinYagov50	50	31	Iceberg Catalog Community Sync Aug 20th 2025	
+229	6ResT-ODelI	58	49	Iceberg UDF Community Sync Sep 8 2025	Iceberg UDF Community Sync
+230	LB5wwL2TEgI	52	117	Iceberg Community Sync Sep 3 2025	Iceberg Community Syncs
+231	xm3howdhaLI	60	44	Iceberg Community Sync Aug 13 2025	Iceberg Community Syncs
+232	p7CvuGZKLSo	57	72	Iceberg UDF Community Sync   Aug 25 2025	Iceberg UDF Community Sync
+233	uWm-p--8oVQ	57	475	V4 Single File Commits -  Aug 21 2025	V4 Single File Commit Community Sync
+234	RRyohCUDnME	68	169	Iceberg Catalog Community Sync Jul 30th 2025	
+235	Ig1-e4BJcus	59	72	Iceberg Catalog Community Sync Jul 9th 2025	
+236	ZCoXIl4hOsU	58	142	Iceberg Community Sync Jul 23 2025	Iceberg Community Syncs
+237	oyfj64um0oo	210	116	Iceberg Community Sync July 2 2025	Iceberg Community Syncs
+238	g7z9i127UjY	68	101	Iceberg Catalog Community Sync Jun 18 2025	
+239	tsv0v9k_HSQ	55	108	Iceberg Community Sync Recorded  May 21 2025	
+240	T0HkC3AOoWk	47	95	Iceberg Catalog Community Sync Meeting   May 28 2025	Iceberg Community Syncs
+241	VjKbSjHmab4	60	140	Iceberg Catalog Community Sync May 7 2025	Iceberg Community Syncs
+242	5NaJkcV9GdI	42	739	Real World Case Studies and Challenges of Apache Iceberg™ at LY Corporation	Iceberg Summit April 2025 Sessions
+243	zhxw3Rrslak	44	2800	Transactions and Isolation in Apache Iceberg™	Iceberg Summit April 2025 Sessions
+244	jpofvQLhLjY	61	177	Iceberg Community Sync - Apr 30 2025	Iceberg Community Syncs
+245	4IPMD6z2FvY	36	512	Buliding S3Tables Support In Daft	Iceberg Summit April 2025 Sessions
+246	zDM6fLmqJjk	34	251	Leveraging Iceberg for AI/BI Workloads at RedNote	Iceberg Summit April 2025 Sessions
+247	_nnNHC90nMI	44	2600	Iceberg with Flink at DoorDash	Iceberg Summit April 2025 Sessions
+248	HcF6s-4B2zE	35	178	Optimising Model Training and Data Management	Iceberg Summit April 2025 Sessions
+249	fWNmeo-Lp3A	19	385	Leveraging Apache Iceberg to Build Xiaomi's Unified Lakehouse Platform	Iceberg Summit April 2025 Sessions
+250	JN6K1pdFImc	42	699	Learnings from Running Large-scale Apache Iceberg™ Table Management Service	Iceberg Summit April 2025 Sessions
+251	M43tEwLbceo	28	254	Building a Batch-Stream-Unified Lakehouse on Apache Iceberg in Tencent Cloud	Iceberg Summit April 2025 Sessions
+252	iF8tSf0tvts	34	190	Transforming Manufacturing Data: Illumina's Journey with Apache Iceberg	Iceberg Summit April 2025 Sessions
+253	t-Frn8H1OaA	38	263	Eliminating Redundancies in ETL With Iceberg Tables on Snowflake	Iceberg Summit April 2025 Sessions
+254	nCDIx7bEQZI	45	279	Efficiently Managing Table With Thousands of Columns Using Iceberg In Tencent	Iceberg Summit April 2025 Sessions
+255	beNdWVPz9-s	41	542	Scaling Iceberg Adoption at Pinterest with Gravitino	Iceberg Summit April 2025 Sessions
+256	152siKMN4LA	41	597	From Zero to One: Building a Petabyte-Scale Data Analytics Platform with Apache Iceberg™	Iceberg Summit April 2025 Sessions
+257	kn8r7PGfXCQ	43	445	Apache Iceberg: Powering Open Data Lakehouse at Scale	Iceberg Summit April 2025 Sessions
+258	gb5fwIO4pX0	44	876	Scalable Lakehouse Architecture with Iceberg & Polaris: A Battle-tested Playbook	Iceberg Summit April 2025 Sessions
+259	ICGPdsBTelg	30	160	Decoupling Metadata: Leveraging Queryable Iceberg Tables for Scalable, Cross-Engine Innovation	Iceberg Summit April 2025 Sessions
+260	UZ3dyHqY9is	45	1300	Best Practices for Schema Evolution in Apache Iceberg: Making Your Data Future-Proof	Iceberg Summit April 2025 Sessions
+261	jI4FPbZLsj4	37	730	Postgres Meets Iceberg  Bridging Transactions and Analytics	Iceberg Summit April 2025 Sessions
+262	7mXbe_XCFdA	41	385	Operationalizing Iceberg Metrics with OpenLineage	Iceberg Summit April 2025 Sessions
+263	Swyd3xF_lNw	45	1000	Hive Tables to Apache Iceberg: A Step-by-Step Migration Blueprint	Iceberg Summit April 2025 Sessions
+264	f7aO4Vtbnos	45	196	Extending the One Trillion Row Challenge to Iceberg V2 Tables	Iceberg Summit April 2025 Sessions
+265	p6ZKY8JViCA	47	1100	Turbocharge Queries on Iceberg with Next-Gen File Formats	Iceberg Summit April 2025 Sessions
+266	VEskhQ63DoU	42	213	Running Apache Iceberg for Financial Workloads at Affirm	Iceberg Summit April 2025 Sessions
+267	3cRGUsdW6uM	40	137	Gophers Continuing Up the Iceberg	Iceberg Summit April 2025 Sessions
+268	kd4iqN0dmog	42	598	Accelerating Spark with Iceberg and DataFusion Comet: Challenges, Performance Insights, and Roadmap	Iceberg Summit April 2025 Sessions
+269	LEmJF-5F78g	45	538	Securing Apache Iceberg Tables across Engines with Open Standards	Iceberg Summit April 2025 Sessions
+270	-LkjV5vu2A0	49	247	Miracle on Ice(berg): How we Moved Europe’s Largest Broadcaster to Python-on-Iceberg in Days	Iceberg Summit April 2025 Sessions
+271	0g-tjuUIGMA	43	434	Pioneering the Next Frontier: The REST Revolution in Apache Iceberg Metadata	Iceberg Summit April 2025 Sessions
+272	TIJMWHplBRU	32	480	PyIceberg: Past, Present and the Future	Iceberg Summit April 2025 Sessions
+273	Dsao9M6zfwM	44	1200	Multi-Table Multi-Statement Transaction with Apache Iceberg	Iceberg Summit April 2025 Sessions
+274	QZ-YXWk06xk	33	186	Implementing Iceberg for Improved Data Management at Autodesk	Iceberg Summit April 2025 Sessions
+275	I_L5IiteJ5w	47	1100	Iceberg Geo Type: Transforming Geospatial Data Management at Scale	Iceberg Summit April 2025 Sessions
+276	lbAzqgBcLso	45	753	Unlocking the Power of the Variant Data Type in Apache Iceberg™	Iceberg Summit April 2025 Sessions
+277	WqViqjpLsnE	43	1100	Understanding Deletion Vectors in Apache Iceberg	Iceberg Summit April 2025 Sessions
+278	_HBUvBmhAt8	45	251	Supercharging Wise’s Data Lake with Apache Iceberg	Iceberg Summit April 2025 Sessions
+279	Gjmg8aPJeIk	48	533	Optimizing Iceberg Table Layouts at Scale: A Multi-Objective Approach	Iceberg Summit April 2025 Sessions
+280	O-5JD7YNpHA	27	320	Supercharging Apache Iceberg: Strategies for Harnessing Partition Stats	Iceberg Summit April 2025 Sessions
+281	vCzPiOcDk7s	38	402	Iceberg I/O Optimizations in Compute Engines	Iceberg Summit April 2025 Sessions
+282	BP9wUnq_OLI	45	519	Airbnb Icehouse: The Journey to Iceberg	Iceberg Summit April 2025 Sessions
+283	3zf3wq0L-n8	34	1700	Change Data Capture (CDC) Implementations on Apache Iceberg™ and Where are we Headed	Iceberg Summit April 2025 Sessions
+284	3MdZ7R_o9gM	19	316	Navigating the AI & Data Lakehouse Revolution: What’s Changing and What’s Not	Iceberg Summit April 2025 Sessions
+285	FQl2HadBJWE	34	852	Bringing Apache Iceberg to Low-Latency Workloads: Rapid Queries Through Iceberg-Rust with Cheetah	Iceberg Summit April 2025 Sessions
+286	2Qi8WLgKOv0	47	578	Adopting Apache Iceberg at Slack: Challenges, Lessons, and Best Practices	Iceberg Summit April 2025 Sessions
+287	2XrVPwAd4RI	26	276	One Does Not Simply Query a Stream	Iceberg Summit April 2025 Sessions
+288	PdUG_448sLc	26	330	The Case for On-Prem Iceberg: Cost, Control, and Performance	Iceberg Summit April 2025 Sessions
+289	UBaFxQcH1HU	28	382	Apache Iceberg as Unified Storage Stack to Power Batch and Stream Processing at Pinterest	Iceberg Summit April 2025 Sessions
+290	iWZH072pvoo	27	4200	Deep Dive into Iceberg Optimizations and Best Practices for a Scalable and Performant Lakehouse	Iceberg Summit April 2025 Sessions
+291	nBtum4kSjys	26	800	Bringing the Power of Google’s Infrastructure to your Apache Iceberg Lakehouse with BigQuery	Iceberg Summit April 2025 Sessions
+292	fSlGt1oykOQ	44	725	Pups on Ice: Lessons Learned Adopting Iceberg at Datadog	Iceberg Summit April 2025 Sessions
+293	qRKHEA8-3bY	26	635	Unleashing the Power of Iceberg Ingestion: 100GB/s and Beyond	Iceberg Summit April 2025 Sessions
+294	3rzokjQwU5U	20	132	Driving OS Contributions for Faster Innovation with Apache Iceberg at IBM	Iceberg Summit April 2025 Sessions
+295	EJTH7sBDp_0	22	381	Build an Enterprise-Grade Real-Time Data Lakehouse Using Ursa and Apache Iceberg	Iceberg Summit April 2025 Sessions
+296	TFosCC2aM8E	46	417	The Advent of the Open Data Lake	Iceberg Summit April 2025 Sessions
+297	tn_u2CorltA	43	433	Iceberg Resilience: Building a DR Strategy for the Data Lake	Iceberg Summit April 2025 Sessions
+298	It7Gs1YpBFQ	21	274	Customer-Facing Analytics Without Data Governance Nightmare	Iceberg Summit April 2025 Sessions
+299	bgaLRbOBeK0	24	787	Every Second Counts: Scaling Real-Time Data Ingestion into Apache Iceberg™ for Optimized Analytics	Iceberg Summit April 2025 Sessions
+300	BTTxeUXjqk8	60	529	The Future of Apache Iceberg™: A Community Member Panel Discussion	Iceberg Summit April 2025 Sessions
+301	iTe34FMCfro	26	727	The Streamhouse: A Fully-managed Streaming Data Lake in the Iceberg Lakehouse Ecosystem	Iceberg Summit April 2025 Sessions
+302	JEMyo0zOdlE	45	629	Building Bloomberg’s First Incremental Alternative Data Product	Iceberg Summit April 2025 Sessions
+303	JgEjf9vZrEs	45	628	Shaping the Future of Apache Iceberg  A Panel on Industry Involvement and Open Source Commitment	Iceberg Summit April 2025 Sessions
+304	3N2KEUs7224	45	4500	v3 and Beyond  Iceberg's Ongoing Evolution	Iceberg Summit April 2025 Sessions
+305	1z5EfBkBGuk	62	92	Iceberg Catalog Community Sync April 16 2025	Iceberg Community Syncs
+306	fSYBGBmvk6I	61	145	Iceberg Catalog Community Sync Mar 26 2025	Iceberg Community Syncs
+307	9BBZKTfcU0s	60	193	Iceberg Community Sync  Mar 19 2025	
+308	mN-WviIlEjo	65	80	Iceberg Community Sync  Feb 26 2025	
+309	vbV2XxOTyT4	18	111	Iceberg Catalog Community Sync Mar 5 2025	Iceberg Community Syncs
+310	hYcehreE8Nk	47	155	Iceberg Catalog Community Sync Feb 12 2025	Iceberg Community Syncs
+311	4LVqcSdbrBU	70	189	Iceberg Community Sync Feb 5 2025	Iceberg Community Syncs
+312	9ZLWQSZvLIw	69	191	Iceberg Community Sync  Jan 15 2025	Iceberg Community Syncs
+313	hcn2E8P7naU	40	102	Iceberg Catalog Community Sync December 11th 2024	Iceberg Community Syncs
+314	KIT50fNePhE	43	114	Iceberg Catalog Community Sync November 20th 2024	Iceberg Community Syncs
+315	hE2OHrws6fQ	67	219	Iceberg Catalog Community Sync October 30th 2024	Iceberg Community Syncs
+316	bN8OSHPApSk	56	119	Iceberg Community Sync - Jul 31 2024	Iceberg Community Syncs
+317	Pj_TI4XDJwY	56	84	Iceberg Community Sync - Aug 21 2024	Iceberg Community Syncs
+318	4oDdra5cYl8	54	87	Iceberg Community Sync - Sep 11 2024	Iceberg Community Syncs
+319	4rQL8IMsajc	45	166	Iceberg Community Sync - Oct 2 2024	Iceberg Community Syncs
+320	wa_r4OpaBbQ	56	166	Iceberg Catalog Community Sync September 25th 2024	Iceberg Community Syncs
+321	iUH8V8OyAU8	57	112	Iceberg Catalog Community Sync September 18th 2024	Iceberg Community Syncs
+322	G9_-Q9Yt3Kg	55	174	Iceberg Catalog Community Sync August 28th 2024	Iceberg Community Syncs
+323	ajg16ZPGLG8	39	92	Iceberg Community Sync - May 8 2024	Iceberg Community Syncs
+324	WnGFQWMIv5k	64	172	Iceberg Catalog Community Sync August 7th 2024	Iceberg Community Syncs
+325	dQr1vt8hQY8	54	150	Iceberg Catalog Community Sync July 22nd 2024	Iceberg Community Syncs
+326	JSN9T20eAuU	64	268	Iceberg Catalog Community Sync July 15th 2024	Iceberg Community Syncs
+327	jAWka8g0o7c	55	161	Iceberg Community Sync July 10th 2024	
+328	j1GncDMj8HY	54	62	Iceberg Community Sync Jun 19 2024	Iceberg Community Syncs
+329	5xkhGDfFvGU	59	94	Iceberg Community Sync - May 29 2024	Iceberg Community Syncs
+330	ekR0HOvjvI4	39	49	Iceberg Community Sync -  May 8 2024	Iceberg Community Syncs
+331	yqZp8rjdCns	59	195	Iceberg Materialized View Sync June 5th 2024	Iceberg Community Syncs
+332	Qh2XmeMBLes	79	149	Iceberg Catalog Community Sync July 8th 2024	Iceberg Community Syncs
+333	ru-zbahPsWQ	58	80	Iceberg Catalog Community Sync July 1st 2024	Iceberg Community Syncs
+334	_kYKTQq14Tc	9	451	Shared warehouse storage, the quiet revolution led by Apache Iceberg	Iceberg Talks
+335	35FxVhq8ELU	17	606	Gophers are Climbing the Iceberg!	Iceberg Summit May 2024 Sessions
+336	axbmLqmxuo4	43	4400	Keynote Address: The Quiet Revolution (Ryan Blue, Apache Iceberg PMC Chair)	Iceberg Summit May 2024 Sessions
+337	XMVEXoi4lKs	60	928	Keynote Panel: Streaming in the Ice(berg) Age	Iceberg Summit May 2024 Sessions
+338	3-NYDmhQU7Q	42	1600	Table Encryption in Apache Iceberg (Apple)	Iceberg Summit May 2024 Sessions
+339	z8vyXkzN36Q	47	1000	Enforcing Fine Grained Access Control with Spark and Iceberg at AWS	Iceberg Summit May 2024 Sessions
+340	xrMaG2G7KX0	41	551	Leveraging Iceberg in Netflix Studio and Creative Production	Iceberg Summit May 2024 Sessions
+341	mwUuz7rQ1k4	40	286	From Legacy Mart to Data Product Excellence with Apache Iceberg (Syngenta)	Iceberg Summit May 2024 Sessions
+342	m2cYQpziYns	41	1900	Supercharging Iceberg with DataFusion Comet  Unlocking Vectorized Execution in Spark (OpenAI)	Iceberg Summit May 2024 Sessions
+343	lv5SysjbRko	42	1100	Historical Data Archive at Bloomberg using Iceberg	Iceberg Summit May 2024 Sessions
+344	kOsJ0cRV4YI	49	1600	Keynote Address: Iceberg Development at Apple (Russell Spitzer, Apache Iceberg PMC Member)	Iceberg Summit May 2024 Sessions
+345	k8MUTt0qh6s	39	458	Unleashing Analytical Productivity at Pinterest with Apache Iceberg	Iceberg Summit May 2024 Sessions
+346	djqmGa1vWSg	38	614	Harnessing Coral and Iceberg for Advanced Incremental View Maintenance (LinkedIn)	Iceberg Summit May 2024 Sessions
+347	dW-IX_xv2FI	42	1300	Leveraging Iceberg Puffin Files to Accelerate Queries (Bodo.ai)	Iceberg Summit May 2024 Sessions
+348	dLXRQcHMOC0	41	619	Building Apache Iceberg for OLAP Scenario (Bilibili)	Iceberg Summit May 2024 Sessions
+349	cFBSr-4pdBs	40	535	From Hive to Iceberg   Crowdstrike’s Journey	Iceberg Summit May 2024 Sessions
+350	aZDAzrWOc0A	44	852	Iceberg Views Under the Covers (Tabular)	Iceberg Summit May 2024 Sessions
+351	WrDBI4Baw6o	37	362	Journey to the Iceberg  Parquet to Iceberg Migration (Branch.io)	Iceberg Summit May 2024 Sessions
+352	W-JxwRadGiY	41	1400	Building Iceberg native applications in simple Python (Eventual)	Iceberg Summit May 2024 Sessions
+353	UPjr0qZ0-Do	40	952	Building an EB Scale Feature Store at ByteDance	Iceberg Summit May 2024 Sessions
+354	LtSKkGmk9v4	40	1000	Building a scalable, open source application data platform using Apache Iceberg (DemandBase)	Iceberg Summit May 2024 Sessions
+355	LHsjYWvvkiw	44	409	Toward Optimizing EB Iceberg Lakes (Tencent)	Iceberg Summit May 2024 Sessions
+356	GjX5E5yU020	32	575	Uniting Petabytes of Siloed Data with Apache Iceberg at Tencent Games	Iceberg Summit May 2024 Sessions
+357	DbbNsdrJ3Vw	46	855	Working towards PyIceberg 1.0.0 (Tabular)	Iceberg Summit May 2024 Sessions
+358	B9On7iDZAdE	45	794	Brings Apache Iceberg into Rust World	Iceberg Summit May 2024 Sessions
+359	7JQX79_6oZ4	15	215	Enhancing System Resilience with Exponential Backoff in Distributed Architectures (Uber)	Iceberg Summit May 2024 Sessions
+360	5ywgsh2Wzm4	40	3700	Kafka Connect Iceberg Sink	Iceberg Summit May 2024 Sessions
+361	5ME94UuD5sY	41	1600	Optimizing Analytic Workloads in Apple with Iceberg and Storage Partition Join	Iceberg Summit May 2024 Sessions
+362	4d4nqKkANdM	37	3600	Iceberg and BigQuery (Google)	Iceberg Summit May 2024 Sessions
+363	4K2a9HcRhXA	44	409	Glacial Growth  Data Platform for Foundation Models based on Apache Iceberg (IBM)	Iceberg Summit May 2024 Sessions
+364	39GlEvvFAGs	28	348	eBay's Voyage with Apache Iceberg	Iceberg Summit May 2024 Sessions
+365	2fJdhQD9C6Y	54	1100	Keynote Panel: Unpacking Iceberg Catalogs	Iceberg Summit May 2024 Sessions
+366	-g9934ToOLM	39	841	How Dremio implemented Materialized Views with Iceberg?	Iceberg Summit May 2024 Sessions
+367	Bk8mXQ6UAPs	52	247	Iceberg Community Sync - Apr 17 2024	Iceberg Community Syncs
+368	9TRhgRq5bFk	55	227	Iceberg Community Sync - Mar 27 2024	Iceberg Community Syncs
+369	d4dEgAa1vKk	58	189	Iceberg Community Sync -  Mar 6 2024	Iceberg Community Syncs
+370	uAQVGd5zV4I	54	541	Iceberg Community Sync - Feb 14 2024	Iceberg Community Syncs
+371	GCHaFrPVbCQ	56	298	Iceberg Community Sync Jan 24 2024	Iceberg Community Syncs
+372	OwyBlUi2CRc	55	129	Iceberg Community Sync -   Dec 13 2023	Iceberg Community Syncs
+373	1yljcXTAOuA	51	110	Iceberg Community Sync - Nov 1 2023	Iceberg Community Syncs
+374	iz0Oex1hQA0	36	73	Iceberg Community Sync -   Nov 22 2023	Iceberg Community Syncs
+375	euWtAKo_bV4	63	138	Iceberg Community Sync - Oct 11 2023	Iceberg Community Syncs
+376	MIreG41AabI	57	175	Iceberg Community Sync - Sep 20 2023	Iceberg Community Syncs
+377	5kfnBYU7SME	56	116	Iceberg Community Sync - Aug 30 2023	Iceberg Community Syncs
+378	N0X1lkjkRUM	64	189	Iceberg Community Sync - Aug 9 2023	Iceberg Community Syncs
+379	BJwgLWrCIHI	57	176	Iceberg Community Sync - Jul 19 2023	Iceberg Community Syncs
+380	DhvRg0oEdwU	50	213	Iceberg Community Sync -  Jun 28 2023	Iceberg Community Syncs
+381	6xD8xcV4VHo	3	16000	What is Iceberg?	
+382	2rOm5TOafxU	56	322	Iceberg Community Sync - Jun 7 2023	Iceberg Community Syncs

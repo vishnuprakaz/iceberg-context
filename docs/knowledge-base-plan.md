@@ -1,0 +1,245 @@
+# Iceberg community knowledge base: design and pipeline plan
+
+Status: **proposal, 2026-11-13.** It builds on the source research in [`research/2026-11-13/`](../research/2026-11-13/).
+
+## 1. Goal
+
+A continuously updated, queryable picture of the Apache Iceberg project and community:
+
+- **What is happening now:** proposals, votes, sync decisions, releases, hot PRs.
+- **How it got here:** the history of design debates and code evolution.
+- **Who does what:** roles, area ownership, who reviews and approves where, who champions which initiative, who works with whom.
+- **Where we can contribute:** gaps, stalled work, unreviewed areas, demand with no implementation, and who to talk to.
+
+It must be usable by us and our friends from any Claude session or a browser, editable on the go, and safe to keep public.
+
+## 2. How the community actually works (what the research showed)
+
+The structure of the knowledge base follows from this:
+
+1. **Ideas follow a lifecycle that spans every source.** A GitHub issue or [DISCUSS] thread on dev@ leads to a Google design doc and a recurring **working-group sync** (notes doc plus YouTube recording). That leads to a spec PR and a [VOTE] on dev@, needing 3 binding PMC +1s for spec changes, then a [RESULT]. Implementation PRs follow in Java, then Python, Rust, Go and C++, and finally a release.
+   - No single source tells the whole story. **The unit of knowledge is the initiative, not the document.**
+2. **Work is organized into about 14 working groups**, each with a cadence and a notes doc on the *Iceberg Dev Events* calendar:
+   - V4 Metadata/AMT, Index, File and Vector Type, MV, Catalog, Variant, Spark, Column Updates, Python, Rust, Read Restrictions, Constraints, and the main Community Sync.
+   - The Community Sync is the hub. Its notes link about 1,000 PRs and cross-reference every other group.
+3. **Authority is formal (the ASF roster) but power is in review.**
+   - The roster: a 26-member PMC with Ryan Blue as chair, plus 14 other committers.
+   - Because squash merges hide who merged, **who reviews is the observable gatekeeping signal.** It is highly concentrated: about 15 people do most Java reviews, and about 5 do PyIceberg.
+4. **Demand is outgrowing capacity.**
+   - PRs opened rose from about 200 to about 350 a month while merges held at about 170–200.
+   - 277 PRs have sat unreviewed for 14 or more days.
+   - The contribution strategy follows: pick areas where a reviewer is active and an initiative needs hands, and show up in that working group's sync.
+5. **Release managers rotate**, and every repo has its own cadence:
+   - Java: a minor every 4–5 months.
+   - PyIceberg: every 6–7 months.
+   - Rust: every 2–4 months.
+   - Go and C++: about every 4 months.
+
+## 3. Storage decision: a git-native knowledge graph, plus a generated index
+
+**Recommendation: don't use a graph database as the source of truth.** Use typed Markdown pages in git, whose YAML frontmatter holds typed edges. Compile them into a SQLite index on demand for graph and full-text queries.
+
+| Option | Verdict |
+|---|---|
+| Graph DB (Neo4j/Kuzu) as source of truth | ✗ Our sessions are ephemeral containers, so it needs hosting or a binary file in git. Friends can't review edits as diffs, and an LLM reads Markdown better than Cypher results. |
+| Vector DB / RAG only | ✗ Loses structure ("who reviews Spark?" is a graph query, not a similarity search) and needs an embedding API key. The corpus is small enough for full-text search plus an LLM. |
+| **Markdown entities + frontmatter edges in git → SQLite (FTS5 + edges table)** | ✓ Diffable, PR-reviewable, readable on GitHub and in Obsidian, provenance via git, zero hosting. Recursive CTEs give graph traversal. It exports to Kuzu/Neo4j/graph views later. |
+| Add embeddings later (sqlite-vec) | Optional, in phase 3, only if full-text search proves insufficient. |
+
+### Repositories
+- **`iceberg-context`** (this repo, public): the curated knowledge base. Entities, meeting and thread records, briefings, the plan, the pipeline code.
+- **`iceberg-context-data`** (new, recommended): raw-but-cleaned captures, kept apart so the knowledge base stays readable.
+  - Contents: monthly JSONL of dev@ messages (emails stripped, quoted text removed), cleaned transcripts with timestamps, Docs meeting sections, PR snapshots, pipeline state.
+  - Estimated size: dev@ since 2018 is about 30–40 MB of text, and the full transcript set about 18 MB. Both are append-only, and months are frozen once closed.
+
+## 4. Layered model
+
+```
+L0  raw capture      (data repo)     immutable, per source, regenerable by collectors
+L1  records          (kb repo)       one page per meeting / dev thread / video / release / vote — "what was said, when, by whom"
+L2  entities (graph) (kb repo)       people, working groups, initiatives, modules, repos, docs — current state + dated timeline
+L3  synthesis        (kb repo)       state-of-iceberg, weekly briefings, opportunities, influence & ownership maps
+IDX index            (built, not committed)  kb.sqlite: nodes, edges, records, FTS5 — CLI + optional MCP server
+```
+
+### Directory layout (kb repo)
+```
+CLAUDE.md, context.md                 entry points (our own work log stays in context.md)
+docs/                                 this plan, schema reference, contributor guide
+schema/                               JSON Schemas for frontmatter of each page type (validated in CI)
+people/<login>.md                     Person
+people/aliases.yaml                   identity resolution: login ↔ names ↔ ASF id ↔ dev@ display names
+groups/<slug>.md                      WorkingGroup (cadence, notes doc, playlist, leads, current topics)
+initiatives/<slug>.md                 Initiative (v4-amt, column-updates, vector-type, mv-spec, read-restrictions, ...)
+modules/<repo>/<module>.md            Module (owners, reviewers, hot spots, recent changes)
+repos/<repo>.md                       Repo (release cadence, process, CI, layout)
+releases/<repo>-<version>.md          Release (RM, RCs, vote, notable changes)
+records/meetings/<group>/<YYYY>/<date>.md     Meeting = notes-doc section + transcript summary
+records/threads/<YYYY>/<MM>/<slug>.md         dev@ thread (DISCUSS/VOTE/RESULT/ANNOUNCE ...)
+records/videos/...                     only for talks without a meeting record
+briefings/weekly/<YYYY>-W<ww>.md      what changed this week, decisions, upcoming meetings, new opportunities
+state-of-iceberg.md                   always-current top page: active initiatives, open votes, releases, hot topics
+opportunities.md                      ranked contribution opportunities (with who-to-talk-to and where to show up)
+maps/ownership.md, maps/influence.md  generated tables (module → owners/reviewers; who drives what)
+pipeline/                             collectors, extractors, integrator, validators, build_index, kb CLI
+notes/                                free-form human notes and deep dives
+```
+
+## 5. Graph schema
+
+### Node types (one page each; `id` = `type/slug`)
+| Type | Key fields |
+|---|---|
+| `person` | login, names[], asf_id, roles[{role: pmc/committer/triage/rm, since}], areas[], status (active/dormant) |
+| `group` (working group) | cadence, notes_doc, playlist, calendar_title, leads[], active (bool) |
+| `initiative` | status (idea/discuss/design/vote/accepted/implementing/released/abandoned), spec_version, champions[], groups[], modules[], prs[], docs[], votes[] |
+| `module` | repo, path, owners[], reviewers[], activity metrics |
+| `repo`, `release`, `doc` (design doc), `vote` | |
+| records: `meeting`, `thread`, `video` | date, source URL(s), participants[], summary, decisions[], action_items[], mentions[] |
+
+### Edge types (in frontmatter, each with `since`/`as_of` and `sources[]`)
+```
+person  -[champions]->     initiative        person -[member_of|leads]-> group
+person  -[reviews {n,window}]-> module       person -[contributes {n,window}]-> module
+person  -[has_role {since}]-> repo           person -[release_manager]-> release
+person  -[spoke_in|presented]-> meeting      person -[started|voted {binding}]-> thread
+meeting -[of]-> group    meeting|thread -[discussed]-> initiative|pr    meeting -[decided]-> decision text
+initiative -[touches]-> module   initiative -[depends_on|blocks|supersedes]-> initiative
+pr -[implements]-> initiative    doc -[design_for]-> initiative    vote -[ratifies]-> initiative
+```
+- **Provenance rule:** every non-trivial fact carries at least one source link (PR, dev@ permalink, notes-doc section, or video timestamp).
+- **Confidence labels:** `observed` comes straight from data, such as roster, git, PR or vote counts. `extracted` was pulled by an LLM from text and has a citation. `inferred` is an LLM judgment, such as a speaker in an unlabeled transcript. Pages show confidence, so readers can tell data from interpretation.
+
+### Page shape (entities)
+```markdown
+---
+id: initiative/v4-amt
+type: initiative
+status: accepted-baseline
+champions: [person/amogh-jahagirdar, person/rdblue]
+groups: [group/v4-metadata]
+modules: [module/iceberg/core, module/iceberg/format]
+prs: [apache/iceberg#16025, apache/iceberg#17541]
+votes: [record/threads/2026/10/vote-merge-baseline-v4-amt-spec]
+updated: 2026-11-13
+---
+## Current state        <!-- generated: pipeline rewrites this block -->
+## Timeline             <!-- generated: append-only dated bullets with citations -->
+## Open questions / where help is needed   <!-- generated -->
+## Notes                <!-- human: never overwritten by the pipeline -->
+```
+Generated blocks sit between markers. The pipeline only rewrites those blocks, so human notes and edits from friends are never clobbered.
+
+## 6. Pipeline
+
+```
+collect (deterministic)  →  normalize (L0, data repo)  →  extract (LLM, per new record)
+      →  integrate (update L2 entities + L3 synthesis)  →  validate  →  build index  →  commit/push + weekly briefing
+```
+
+### Collectors (prototypes already exist in `pipeline/prototypes/`)
+| Source | Method | Change detection | Runs where |
+|---|---|---|---|
+| dev@ | PonyMail `mbox.lua` per month plus `stats.lua` for permalinks | Message-ID dedupe; freeze closed months | GitHub Action (daily) |
+| GitHub PRs/issues | search API `updated:>=last_sync`, date-sliced, rate-limited client with on-disk cache | upsert by number | GitHub Action (daily) |
+| git history | treeless clones; `git log` since last SHA → ownership metrics | last processed SHA | GitHub Action (daily) |
+| ASF roster | whimsy `committee-info.json`, `public_ldap_projects.json` | diff | GitHub Action (weekly) |
+| Sync notes docs | Google Docs `read_doc` JSON (tab-aware) via the Docs connector | `modifiedTime` → section hashes | Claude scheduled session |
+| Calendar | *Iceberg Dev Events* calendar via the Calendar connector | next 14 days plus newly added series | Claude scheduled session |
+| YouTube | `yt-dlp --flat-playlist` plus RSS → `en-orig` json3 captions | processed-ID state | Claude scheduled session* |
+
+\*YouTube bot checks hit cloud IPs intermittently. The collector retries with backoff and never marks a failed video done. If it proves unreliable, a cookie-less fallback is to run that one step from a home machine via Remote Control.
+
+**Why the split:**
+- The deterministic collectors need no AI and no secrets beyond the default `GITHUB_TOKEN`, so GitHub Actions runs them free and daily.
+- The Google connectors exist only inside Claude sessions, and so does the LLM extraction.
+
+### Extractors (LLM, run by Claude in the scheduled session)
+- **Meeting:** join the notes-doc section and the transcript for the same group and date, then produce:
+  - summary
+  - decisions
+  - action items with owners
+  - open questions
+  - initiatives, PRs and docs mentioned
+  - participants, labeled observed (from notes) or inferred (from transcript)
+  - notable quotes with video timestamps
+  - Output is structured JSON validated against `schema/meeting.json`, then rendered to Markdown.
+- **dev@ thread:** classify the type, summarize the positions and the outcome, extract the vote tally (binding where known), and link to initiatives.
+- **PR batch:** map notable PRs (spec, large, long-running, many reviewers) to initiatives and modules.
+- **Cost:** a typical week is about 6–8 meetings × ~65k tokens of transcript, plus about 100 dev@ messages and the PR deltas, which fits comfortably in one session. Transcripts are summarized once; the raw text stays in the data repo for re-querying.
+
+### Integrator
+- **Entities:** apply the new edges to entity pages, append timeline bullets, and recompute "Current state", reviewer and owner tables, and initiative status.
+- **Synthesis:** regenerate `state-of-iceberg.md`, `opportunities.md` and the `maps/`, and write `briefings/weekly/<week>.md` plus a changelog entry.
+- **Opportunity ranking signals:**
+  - an initiative is moving but needs hands, such as an implementation in Python, Rust or Go lagging Java
+  - an issue has many 👍 and no PR
+  - an area has an active reviewer but a review backlog
+  - good-first-issues
+  - "help wanted" or action items with no owner in sync notes
+  - recent bugs in areas we know
+
+  Each opportunity links to who to talk to and which sync to attend.
+
+### Validators (CI on every push)
+- Frontmatter matches the JSON Schema.
+- Every edge target exists.
+- Every extracted fact has a source.
+- **Privacy linter:** no email addresses, phone numbers or personal details. People pages may hold only public project activity.
+- Generated-block markers are intact.
+
+### Index and query
+`pipeline/build_index.py` compiles everything into `kb.sqlite` in seconds. Tables:
+- `nodes(id, type, title, status, updated)`
+- `edges(src, rel, dst, since, as_of, confidence, source)`
+- `records(id, type, date, group, url)`
+- `fts(id, body)` (FTS5)
+
+`kb` CLI examples:
+```bash
+kb search "monotonic snapshot timestamps"        # full-text over records + entities
+kb who reviews module/iceberg/spark --since 6m     # graph query
+kb person singhpk234                               # roles, areas, initiatives, recent activity
+kb initiative v4-amt --timeline                     # lifecycle across dev@/syncs/PRs
+kb upcoming                                         # next syncs + agenda + what to read beforehand
+kb opportunities --area python --level starter
+```
+- **Phase 3:** a small MCP server wrapping the same queries, so any Claude session can call them as tools, plus a static site (GitHub Pages) with a graph view for browsing.
+
+## 7. Collaboration ("update on the go")
+- **Friends:** they become collaborators on both repos and add `iceberg-context` to their own Claude environments. The CLAUDE.md loads automatically and tells every session to read `state-of-iceberg.md` first.
+- **Human edits:** go in `## Notes` blocks or `notes/` (meeting impressions, conversations, plans). Directly to `main` for small notes, or as PRs for structural changes.
+- **On-demand refresh:** saying "sync now" in any session runs the same pipeline as the schedule. `pipeline/state.json` holds the cursors, so concurrent runs don't duplicate work.
+- **Our own work:** `context.md` (work log) and `notes/` remain our personal layer on top of the community KB.
+
+## 8. Privacy and ethics guardrails (the repo is public)
+- **Sources:** only public sources and public project activity: ASF roster, public lists, public docs and recordings, GitHub.
+- **Off limits:**
+  - No email addresses: strip them from mbox, Docs person chips and mailto links.
+  - No personal lives.
+  - No speculation about motives or personalities.
+- **"Influence" means the observable record:** roles, votes, reviews, championed proposals and collaboration patterns.
+- **Labels:** inferred attributions (speakers in transcripts) are labeled as such, and AI-generated sources such as Gemini notes are marked.
+- **Tone:** write people pages as if the person will read them, because they can.
+
+## 9. Roadmap
+
+| Phase | Scope | Deliverables |
+|---|---|---|
+| **0: Foundation** | repo skeleton; schemas; `people/aliases.yaml` seeded from the research; productionize the prototype collectors; `build_index.py` and the `kb` CLI; CI validators | an empty but working pipeline |
+| **1: Seed** (from the 2026-11-13 research) | governance, people (PMC, committers, top 60 contributors), 14 working groups, about 20 active initiatives, module ownership maps, first `state-of-iceberg.md` and `opportunities.md` | a useful KB on day 1 |
+| **2: Backfill (6 months)** | meetings from May to Nov 2026 (notes plus about 80 transcripts), dev@ threads (DISCUSS/VOTE/RESULT), notable PRs, releases | the full recent picture, with timelines |
+| **3: Automation** | GitHub Actions daily collectors; scheduled Claude session weekly (Mon morning IST): docs, calendar, YouTube, LLM extraction, briefing | self-updating KB with a weekly briefing |
+| **4: Depth** | dev@ back to 2018 (DISCUSS/VOTE threads only), older syncs (index-level, summarize on demand), git evolution per module, influence and collaboration analytics, MCP server, static site and graph view | history and the "how did we get here" layer |
+
+**Rough effort:**
+- Phases 0–1: one or two working sessions.
+- Phase 2: a few batched sessions, about 80 transcripts at about 65k tokens each, parallelized with subagents.
+- After that: about one session-hour a week.
+
+## 10. Decisions needed
+1. **Create `vishnuprakaz/iceberg-context-data`?** (Public is fine since emails are stripped; private also works.) Recommended.
+2. **Allow GitHub Actions** on `iceberg-context` for the daily deterministic collectors?
+3. **Weekly scheduled session:** Monday 08:00 IST? Plus an optional mid-week light run (dev@ and GitHub only, no LLM).
+4. **Backfill depth for LLM summaries:** 6 months (recommended), then deepen on demand.
+5. **Scope:** Java and PyIceberg in depth. Rust, Go and C++ at the initiative and release level only. Polaris and Arrow out of scope except where they link in.

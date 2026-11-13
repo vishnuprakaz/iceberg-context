@@ -1,0 +1,1043 @@
+{
+ "apache/iceberg": {
+  "prs_opened_12m": 3474,
+  "merged_12m": 1928,
+  "closed_unmerged_12m": 1112,
+  "human_prs_12m": 3050,
+  "dependabot_prs_12m": 424,
+  "median_days_to_merge_human": 2.72,
+  "ttm_p25_p75": [
+   0.35,
+   12.65
+  ],
+  "p90_days_to_merge": 37.3,
+  "merge_rate_human_closed": 0.605,
+  "author_association_12m": {
+   "NONE": 465,
+   "CONTRIBUTOR": 2042,
+   "MEMBER": 482,
+   "COLLABORATOR": 61
+  },
+  "first_time_share": 0.0,
+  "unique_authors_12m": 612,
+  "monthly_opened_merged": {
+   "2025-11": [
+    201,
+    121
+   ],
+   "2025-12": [
+    179,
+    108
+   ],
+   "2026-01": [
+    191,
+    126
+   ],
+   "2026-02": [
+    218,
+    134
+   ],
+   "2026-03": [
+    296,
+    171
+   ],
+   "2026-04": [
+    273,
+    140
+   ],
+   "2026-05": [
+    339,
+    193
+   ],
+   "2026-06": [
+    325,
+    166
+   ],
+   "2026-07": [
+    338,
+    179
+   ],
+   "2026-08": [
+    372,
+    188
+   ],
+   "2026-09": [
+    334,
+    196
+   ],
+   "2026-10": [
+    329,
+    178
+   ],
+   "2026-11": [
+    175,
+    97
+   ]
+  },
+  "open_prs": 466,
+  "open_drafts": 34,
+  "open_age_buckets": {
+   "90-365d": 89,
+   "30-90d": 139,
+   "<7d": 66,
+   "7-30d": 140,
+   ">1y": 32
+  },
+  "open_idle_gt30d": 51,
+  "open_labeled_stale": 27,
+  "stale_closed_12m": 681,
+  "top_labels_prs_12m": [
+   [
+    "core",
+    996
+   ],
+   [
+    "stale",
+    727
+   ],
+   [
+    "spark",
+    719
+   ],
+   [
+    "docs",
+    482
+   ],
+   [
+    "flink",
+    461
+   ],
+   [
+    "dependencies",
+    424
+   ],
+   [
+    "API",
+    312
+   ],
+   [
+    "build",
+    312
+   ],
+   [
+    "INFRA",
+    280
+   ],
+   [
+    "java",
+    273
+   ],
+   [
+    "KAFKACONNECT",
+    247
+   ],
+   [
+    "parquet",
+    188
+   ],
+   [
+    "OPENAPI",
+    183
+   ],
+   [
+    "AWS",
+    162
+   ],
+   [
+    "data",
+    138
+   ],
+   [
+    "GCP",
+    110
+   ],
+   [
+    "github_actions",
+    94
+   ],
+   [
+    "Specification",
+    87
+   ],
+   [
+    "hive",
+    63
+   ],
+   [
+    "arrow",
+    63
+   ]
+  ],
+  "title_areas_12m": [
+   [
+    "core",
+    709
+   ],
+   [
+    "spark",
+    402
+   ],
+   [
+    "flink",
+    307
+   ],
+   [
+    "docs",
+    212
+   ],
+   [
+    "build",
+    184
+   ],
+   [
+    "(none)",
+    180
+   ],
+   [
+    "api",
+    170
+   ],
+   [
+    "kafka connect",
+    94
+   ],
+   [
+    "parquet",
+    86
+   ],
+   [
+    "aws",
+    79
+   ],
+   [
+    "spec",
+    70
+   ],
+   [
+    "ci",
+    39
+   ],
+   [
+    "site",
+    36
+   ],
+   [
+    "data",
+    34
+   ],
+   [
+    "openapi",
+    33
+   ],
+   [
+    "arrow",
+    31
+   ],
+   [
+    "gcp",
+    29
+   ],
+   [
+    "rest",
+    28
+   ],
+   [
+    "infra",
+    28
+   ],
+   [
+    "fix",
+    23
+   ],
+   [
+    "hive",
+    20
+   ],
+   [
+    "azure",
+    18
+   ],
+   [
+    "orc",
+    15
+   ],
+   [
+    "aliyun",
+    15
+   ],
+   [
+    "bigquery",
+    15
+   ]
+  ],
+  "open_by_area": [
+   [
+    "core",
+    130
+   ],
+   [
+    "spark",
+    65
+   ],
+   [
+    "api",
+    34
+   ],
+   [
+    "docs",
+    31
+   ],
+   [
+    "spec",
+    26
+   ],
+   [
+    "flink",
+    26
+   ],
+   [
+    "aws",
+    22
+   ],
+   [
+    "kafka connect",
+    19
+   ],
+   [
+    "(none)",
+    13
+   ],
+   [
+    "parquet",
+    12
+   ],
+   [
+    "build",
+    11
+   ],
+   [
+    "hive",
+    8
+   ],
+   [
+    "openapi",
+    6
+   ],
+   [
+    "gcp",
+    5
+   ],
+   [
+    "rest",
+    5
+   ]
+  ],
+  "top_merged_authors_12m": [
+   [
+    "ebyhr",
+    98
+   ],
+   [
+    "kevinjqliu",
+    84
+   ],
+   [
+    "manuzhang",
+    65
+   ],
+   [
+    "mxm",
+    63
+   ],
+   [
+    "nastra",
+    61
+   ],
+   [
+    "Guosmilesmile",
+    45
+   ],
+   [
+    "huaxingao",
+    40
+   ],
+   [
+    "anoopj",
+    40
+   ],
+   [
+    "pvary",
+    39
+   ],
+   [
+    "dramaticlly",
+    39
+   ],
+   [
+    "uros-b",
+    39
+   ],
+   [
+    "gaborkaszab",
+    36
+   ],
+   [
+    "rdblue",
+    32
+   ],
+   [
+    "nssalian",
+    32
+   ],
+   [
+    "amogh-jahagirdar",
+    31
+   ],
+   [
+    "singhpk234",
+    29
+   ],
+   [
+    "wombatu-kun",
+    28
+   ],
+   [
+    "talatuyarer",
+    27
+   ],
+   [
+    "stevenzwu",
+    25
+   ],
+   [
+    "thswlsqls",
+    23
+   ]
+  ],
+  "open_nondraft_ge14d_le1comment": 75,
+  "examples_waiting": [
+   [
+    "https://github.com/apache/iceberg/pull/10253",
+    "Core: Assign fresh IDs to view schema",
+    "2024-04-30",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/11993",
+    "Spark3.5: Standardizing Error Handling in Iceberg Spark Module - TestViews",
+    "2025-01-17",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/12216",
+    "WIP: File format api",
+    "2025-02-10",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/14334",
+    "Core: add a unit test for view version to schema consistency",
+    "2025-10-15",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/14731",
+    "Spec: clarify that undeleting a row is not allowed",
+    "2025-12-01",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/14778",
+    "SPEC: Add void transform",
+    "2025-12-06",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/14997",
+    "Core: Adding same view version as part of a concurrent update shouldn't fail",
+    "2026-01-08",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/15830",
+    "REST Spec: Add resolve endpoint for catalog objects",
+    "2026-03-30",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/16972",
+    "Spec: Add collations for string types",
+    "2026-06-26",
+    0
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/17106",
+    "API: Reject non-finite floating defaults",
+    "2026-07-05",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/17127",
+    "API, Core: DataFile and ManifestFile to expose column files via adapter",
+    "2026-07-07",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg/pull/17343",
+    "Core: Update Expressions to match Expressions spec",
+    "2026-07-23",
+    0
+   ]
+  ],
+  "open_issues": 458,
+  "issues_opened_12m": 859,
+  "open_issue_labels": [
+   [
+    "bug",
+    134
+   ],
+   [
+    "improvement",
+    121
+   ],
+   [
+    "not-stale",
+    38
+   ],
+   [
+    "proposal",
+    24
+   ],
+   [
+    "stale",
+    20
+   ],
+   [
+    "question",
+    18
+   ],
+   [
+    "good first issue",
+    8
+   ],
+   [
+    "Iceberg V4",
+    6
+   ],
+   [
+    "docs",
+    6
+   ],
+   [
+    "Security",
+    5
+   ],
+   [
+    "website",
+    3
+   ],
+   [
+    "spark",
+    3
+   ],
+   [
+    "flink",
+    2
+   ],
+   [
+    "build",
+    2
+   ],
+   [
+    "core",
+    2
+   ],
+   [
+    "AZURE",
+    1
+   ],
+   [
+    "GCP",
+    1
+   ],
+   [
+    "KAFKACONNECT",
+    1
+   ],
+   [
+    "OPENAPI",
+    1
+   ],
+   [
+    "AWS",
+    1
+   ]
+  ]
+ },
+ "apache/iceberg-python": {
+  "prs_opened_12m": 1315,
+  "merged_12m": 917,
+  "closed_unmerged_12m": 265,
+  "human_prs_12m": 785,
+  "dependabot_prs_12m": 530,
+  "median_days_to_merge_human": 2.26,
+  "ttm_p25_p75": [
+   0.37,
+   11.56
+  ],
+  "p90_days_to_merge": 36.4,
+  "merge_rate_human_closed": 0.682,
+  "author_association_12m": {
+   "CONTRIBUTOR": 489,
+   "MEMBER": 103,
+   "COLLABORATOR": 66,
+   "NONE": 127
+  },
+  "first_time_share": 0.0,
+  "unique_authors_12m": 225,
+  "monthly_opened_merged": {
+   "2025-11": [
+    91,
+    74
+   ],
+   "2025-12": [
+    71,
+    47
+   ],
+   "2026-01": [
+    99,
+    100
+   ],
+   "2026-02": [
+    94,
+    63
+   ],
+   "2026-03": [
+    83,
+    70
+   ],
+   "2026-04": [
+    72,
+    38
+   ],
+   "2026-05": [
+    126,
+    86
+   ],
+   "2026-06": [
+    123,
+    87
+   ],
+   "2026-07": [
+    126,
+    48
+   ],
+   "2026-08": [
+    125,
+    100
+   ],
+   "2026-09": [
+    113,
+    76
+   ],
+   "2026-10": [
+    135,
+    88
+   ],
+   "2026-11": [
+    114,
+    90
+   ]
+  },
+  "open_prs": 133,
+  "open_drafts": 8,
+  "open_age_buckets": {
+   "90-365d": 27,
+   "<7d": 19,
+   "7-30d": 42,
+   "30-90d": 45
+  },
+  "open_idle_gt30d": 0,
+  "open_labeled_stale": 7,
+  "stale_closed_12m": 144,
+  "top_labels_prs_12m": [
+   [
+    "dependencies",
+    530
+   ],
+   [
+    "python:uv",
+    467
+   ],
+   [
+    "stale",
+    156
+   ],
+   [
+    "github_actions",
+    60
+   ],
+   [
+    "changelog",
+    5
+   ],
+   [
+    "docker_compose",
+    3
+   ]
+  ],
+  "title_areas_12m": [
+   [
+    "(none)",
+    346
+   ],
+   [
+    "fix",
+    78
+   ],
+   [
+    "feat",
+    43
+   ],
+   [
+    "infra",
+    31
+   ],
+   [
+    "docs",
+    28
+   ],
+   [
+    "rest",
+    24
+   ],
+   [
+    "core",
+    19
+   ],
+   [
+    "ci",
+    17
+   ],
+   [
+    "build",
+    17
+   ],
+   [
+    "chore",
+    13
+   ],
+   [
+    "feat(encryption)",
+    9
+   ],
+   [
+    "perf",
+    8
+   ],
+   [
+    "fix(expressions)",
+    8
+   ],
+   [
+    "pyarrow",
+    8
+   ],
+   [
+    "fix(io)",
+    7
+   ],
+   [
+    "fix(table)",
+    6
+   ],
+   [
+    "test",
+    6
+   ],
+   [
+    "fix(rest)",
+    5
+   ],
+   [
+    "avro",
+    5
+   ],
+   [
+    "chore(ci)",
+    4
+   ],
+   [
+    "dev",
+    4
+   ],
+   [
+    "tests",
+    4
+   ],
+   [
+    "fix(avro)",
+    4
+   ],
+   [
+    "bug",
+    3
+   ],
+   [
+    "feat(cli)",
+    3
+   ]
+  ],
+  "open_by_area": [
+   [
+    "(none)",
+    63
+   ],
+   [
+    "feat",
+    8
+   ],
+   [
+    "core",
+    8
+   ],
+   [
+    "fix",
+    6
+   ],
+   [
+    "rest",
+    4
+   ],
+   [
+    "dev",
+    4
+   ],
+   [
+    "fix(expressions)",
+    4
+   ],
+   [
+    "docs",
+    3
+   ],
+   [
+    "fix(upsert)",
+    3
+   ],
+   [
+    "fix(inspect)",
+    2
+   ],
+   [
+    "pyarrow",
+    2
+   ],
+   [
+    "fix(manifest)",
+    2
+   ],
+   [
+    "fix(io)",
+    2
+   ],
+   [
+    "io",
+    2
+   ],
+   [
+    "feat(encryption)",
+    1
+   ]
+  ],
+  "top_merged_authors_12m": [
+   [
+    "kevinjqliu",
+    86
+   ],
+   [
+    "ebyhr",
+    47
+   ],
+   [
+    "rambleraptor",
+    41
+   ],
+   [
+    "geruh",
+    31
+   ],
+   [
+    "anxkhn",
+    14
+   ],
+   [
+    "xanderbailey",
+    12
+   ],
+   [
+    "nssalian",
+    9
+   ],
+   [
+    "Fokko",
+    8
+   ],
+   [
+    "rahulsmahadev",
+    8
+   ],
+   [
+    "Anurag-S1ngh",
+    6
+   ],
+   [
+    "fallintoplace",
+    6
+   ],
+   [
+    "avison9",
+    5
+   ],
+   [
+    "gabeiglio",
+    4
+   ],
+   [
+    "010Soham",
+    4
+   ],
+   [
+    "somasays",
+    4
+   ],
+   [
+    "YuangGao",
+    4
+   ],
+   [
+    "Rodrigo-Palma",
+    4
+   ],
+   [
+    "vishnuprakaz",
+    4
+   ],
+   [
+    "lawofcycles",
+    3
+   ],
+   [
+    "jx2lee",
+    3
+   ]
+  ],
+  "open_nondraft_ge14d_le1comment": 29,
+  "examples_waiting": [
+   [
+    "https://github.com/apache/iceberg-python/pull/3986",
+    "fix(validate): report every conflicting snapshot in validation errors",
+    "2026-09-17",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/3989",
+    "perf(pyarrow): group delete positions by file_path in a single pass",
+    "2026-09-17",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/3990",
+    "fix(cli): stop interpreting table content as console markup",
+    "2026-09-17",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4002",
+    "feat(manifest): support writing delete manifests in v2",
+    "2026-09-20",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4004",
+    "perf(expressions): avoid building literal sets twice for In / NotIn",
+    "2026-09-20",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4024",
+    "Tests: Cover schema changes and appends during commit retry",
+    "2026-09-27",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4027",
+    "fix(upsert): make the match filter flat for composite keys",
+    "2026-09-29",
+    0
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4032",
+    "Remove the IN predicate limit so large IN predicates prune files",
+    "2026-09-30",
+    0
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4064",
+    "fix(expressions): stop a shared manifest evaluator from mixing up manifests",
+    "2026-10-02",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4068",
+    "fix(expressions): bound ancestor nullability in IsNull/NotNull binding",
+    "2026-10-03",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4074",
+    "Treat missing as optional in UpdateNamespacePropertiesResponse",
+    "2026-10-04",
+    1
+   ],
+   [
+    "https://github.com/apache/iceberg-python/pull/4087",
+    "fix(table): earlier set_statistics is not lost when remove_statistics follows it",
+    "2026-10-07",
+    1
+   ]
+  ],
+  "open_issues": 164,
+  "issues_opened_12m": 299,
+  "open_issue_labels": [
+   [
+    "kind:bug",
+    25
+   ],
+   [
+    "bug",
+    10
+   ],
+   [
+    "V3",
+    6
+   ],
+   [
+    "stale",
+    6
+   ],
+   [
+    "good first issue",
+    3
+   ],
+   [
+    "kind:feature request",
+    2
+   ],
+   [
+    "documentation",
+    1
+   ]
+  ]
+ }
+}

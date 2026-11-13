@@ -1,0 +1,11 @@
+# Ingestion notes / pitfalls observed
+- read_file_content: >~50k chars spills to a file; Drive text export truncated the final ~60 chars of the 1.2 MB community doc (read_doc JSON was complete). Tabs appear as "# <Tab title>" lines; date chips rendered as display text.
+- read_doc JSON (3.3 MB for community doc): has revisionId, tabs[] (tabId, title, childTabs), paragraphStyle.namedStyleType, and elements textRun/dateElement/richLink/person. Dates are often dateElement chips (timestamp ISO) with NO textRun -> naive text join misses them.
+- Heading detection must accept HEADING_1/2 and NORMAL_TEXT date lines; formats seen: 2026-10-28, Nov 4, 2026, 15 March 2023, 17 Aug 2022, 10/27/2026, 09/30/2025, 2024-03–27 (en dash), "**Sep 3, 2026**", "Oct 26, 2026([recording]...)".
+- Future/agenda-only entries (vector Nov 19; spark "Nov 11" for Nov 17; python 10/27 agenda only; "(Cancelled)", "(N/A)", "[NO Sync]").
+- Notes living elsewhere: Gemini notes / Granola / YouTube recordings / chat files linked from headings.
+- list_file_revisions: community doc -> {} ; catalog -> 1 stale revision (2026-01-14) despite modifiedTime 2026-11-05. Not usable as change feed for non-owner docs. etag == base64(modifiedTime).
+- Drive search (sharedWithMe / fullText) misses link-only docs (vector, index, spark, constraints, readrestr); seed list must be maintained manually (calendar event descriptions, cross-links inside docs).
+- Emoji mojibake in jq output of status tables (e.g. "ð¢" for green circle) — decode carefully (latin-1 -> utf-8 round trip).
+- Bare "#NNNNN" PR refs need repo inference from section (Java/Python/Rust/Go/Cpp) in community highlights.
+- Personal emails appear in mailto: person links and doc owners — strip before writing to a public KB.

@@ -1,0 +1,2867 @@
+{
+ "total_commits": 9634,
+ "commits_12m": 1933,
+ "committer_field": [
+  [
+   "GitHub",
+   8961
+  ],
+  [
+   "Ryan Blue",
+   524
+  ],
+  [
+   "Steven Zhen Wu",
+   37
+  ],
+  [
+   "Anton Okolnychyi",
+   33
+  ],
+  [
+   "Daniel Weeks",
+   22
+  ],
+  [
+   "pvary",
+   14
+  ],
+  [
+   "Amogh Jahagirdar",
+   8
+  ],
+  [
+   "Parth Brahmbhatt",
+   8
+  ],
+  [
+   "Maximilian Michels",
+   6
+  ],
+  [
+   "Ryan Murray",
+   6
+  ]
+ ],
+ "authors_12m_count": 294,
+ "top_authors_12m": [
+  [
+   "dependabot[bot]",
+   342
+  ],
+  [
+   "Yuya Ebihara",
+   96
+  ],
+  [
+   "Kevin Liu",
+   83
+  ],
+  [
+   "Maximilian Michels",
+   67
+  ],
+  [
+   "Eduard Tudenhoefner",
+   66
+  ],
+  [
+   "Manu Zhang",
+   63
+  ],
+  [
+   "GuoYu",
+   46
+  ],
+  [
+   "Anoop Johnson",
+   40
+  ],
+  [
+   "Hongyue/Steve Zhang",
+   40
+  ],
+  [
+   "pvary",
+   40
+  ],
+  [
+   "gaborkaszab",
+   39
+  ],
+  [
+   "Huaxin Gao",
+   33
+  ],
+  [
+   "Prashant Singh",
+   32
+  ],
+  [
+   "Ryan Blue",
+   32
+  ],
+  [
+   "Neelesh Salian",
+   29
+  ],
+  [
+   "Vova Kolmakov",
+   28
+  ],
+  [
+   "Steven Zhen Wu",
+   23
+  ],
+  [
+   "Eunbin Son",
+   23
+  ],
+  [
+   "Talat UYARER",
+   23
+  ],
+  [
+   "Uros Bojanic",
+   23
+  ],
+  [
+   "Anton Okolnychyi",
+   20
+  ],
+  [
+   "Russell Spitzer",
+   19
+  ],
+  [
+   "Xin Huang",
+   18
+  ],
+  [
+   "Amogh Jahagirdar",
+   17
+  ],
+  [
+   "Uros",
+   16
+  ]
+ ],
+ "top_authors_all": [
+  [
+   "dependabot[bot]",
+   1128
+  ],
+  [
+   "Ryan Blue",
+   770
+  ],
+  [
+   "Anton Okolnychyi",
+   496
+  ],
+  [
+   "Fokko Driesprong",
+   463
+  ],
+  [
+   "Eduard Tudenhoefner",
+   374
+  ],
+  [
+   "Ajantha Bhat",
+   208
+  ],
+  [
+   "Manu Zhang",
+   204
+  ],
+  [
+   "Eduard Tudenh\u00f6fner",
+   191
+  ],
+  [
+   "Kyle Bendickson",
+   181
+  ],
+  [
+   "Amogh Jahagirdar",
+   169
+  ],
+  [
+   "Yuya Ebihara",
+   159
+  ],
+  [
+   "Steven Zhen Wu",
+   153
+  ],
+  [
+   "pvary",
+   140
+  ],
+  [
+   "Russell Spitzer",
+   139
+  ],
+  [
+   "Prashant Singh",
+   124
+  ],
+  [
+   "Kevin Liu",
+   113
+  ],
+  [
+   "Maximilian Michels",
+   104
+  ],
+  [
+   "Szehon Ho",
+   104
+  ],
+  [
+   "GuoYu",
+   101
+  ],
+  [
+   "Hongyue/Steve Zhang",
+   100
+  ],
+  [
+   "Huaxin Gao",
+   89
+  ],
+  [
+   "openinx",
+   86
+  ],
+  [
+   "Jack Ye",
+   83
+  ],
+  [
+   "Piotr Findeisen",
+   82
+  ],
+  [
+   "gaborkaszab",
+   81
+  ]
+ ],
+ "monthly_12m": [
+  [
+   "2025-11",
+   66
+  ],
+  [
+   "2025-12",
+   117
+  ],
+  [
+   "2026-01",
+   137
+  ],
+  [
+   "2026-02",
+   141
+  ],
+  [
+   "2026-03",
+   156
+  ],
+  [
+   "2026-04",
+   134
+  ],
+  [
+   "2026-05",
+   185
+  ],
+  [
+   "2026-06",
+   159
+  ],
+  [
+   "2026-07",
+   173
+  ],
+  [
+   "2026-08",
+   195
+  ],
+  [
+   "2026-09",
+   195
+  ],
+  [
+   "2026-10",
+   186
+  ],
+  [
+   "2026-11",
+   89
+  ]
+ ],
+ "new_authors_12m": 205,
+ "modules": {
+  "core": {
+   "n_all": 2459,
+   "n_12m": 426,
+   "top_all": [
+    [
+     "Ryan Blue",
+     409
+    ],
+    [
+     "Anton Okolnychyi",
+     189
+    ],
+    [
+     "Eduard Tudenhoefner",
+     177
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     81
+    ],
+    [
+     "Amogh Jahagirdar",
+     65
+    ],
+    [
+     "gaborkaszab",
+     60
+    ],
+    [
+     "Russell Spitzer",
+     51
+    ],
+    [
+     "Kyle Bendickson",
+     51
+    ]
+   ],
+   "top_12m": [
+    [
+     "Eduard Tudenhoefner",
+     37
+    ],
+    [
+     "Anoop Johnson",
+     36
+    ],
+    [
+     "gaborkaszab",
+     35
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     25
+    ],
+    [
+     "Yuya Ebihara",
+     17
+    ],
+    [
+     "Prashant Singh",
+     17
+    ],
+    [
+     "Ryan Blue",
+     16
+    ],
+    [
+     "Steven Zhen Wu",
+     12
+    ]
+   ]
+  },
+  "spark": {
+   "n_all": 2038,
+   "n_12m": 344,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     273
+    ],
+    [
+     "Ryan Blue",
+     177
+    ],
+    [
+     "Eduard Tudenhoefner",
+     118
+    ],
+    [
+     "Manu Zhang",
+     72
+    ],
+    [
+     "Szehon Ho",
+     59
+    ],
+    [
+     "Ajantha Bhat",
+     59
+    ],
+    [
+     "Amogh Jahagirdar",
+     57
+    ],
+    [
+     "Russell Spitzer",
+     53
+    ]
+   ],
+   "top_12m": [
+    [
+     "Manu Zhang",
+     19
+    ],
+    [
+     "Eduard Tudenhoefner",
+     19
+    ],
+    [
+     "Anton Okolnychyi",
+     19
+    ],
+    [
+     "Yuya Ebihara",
+     12
+    ],
+    [
+     "pvary",
+     12
+    ],
+    [
+     "Anurag Mantripragada",
+     11
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     11
+    ],
+    [
+     "drexler-sky",
+     11
+    ]
+   ]
+  },
+  "flink": {
+   "n_all": 1043,
+   "n_12m": 293,
+   "top_all": [
+    [
+     "Steven Zhen Wu",
+     95
+    ],
+    [
+     "Maximilian Michels",
+     93
+    ],
+    [
+     "GuoYu",
+     85
+    ],
+    [
+     "openinx",
+     61
+    ],
+    [
+     "pvary",
+     54
+    ],
+    [
+     "Kyle Bendickson",
+     23
+    ],
+    [
+     "Swapna Marru",
+     19
+    ],
+    [
+     "Rodrigo",
+     19
+    ]
+   ],
+   "top_12m": [
+    [
+     "Maximilian Michels",
+     58
+    ],
+    [
+     "GuoYu",
+     34
+    ],
+    [
+     "Swapna Marru",
+     13
+    ],
+    [
+     "Talat UYARER",
+     13
+    ],
+    [
+     "Yuya Ebihara",
+     12
+    ],
+    [
+     "Talat Uyarer",
+     11
+    ],
+    [
+     "aiborodin",
+     11
+    ],
+    [
+     "pvary",
+     9
+    ]
+   ]
+  },
+  "root/build": {
+   "n_all": 923,
+   "n_12m": 130,
+   "top_all": [
+    [
+     "Ryan Blue",
+     92
+    ],
+    [
+     "dependabot[bot]",
+     70
+    ],
+    [
+     "Fokko Driesprong",
+     47
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     45
+    ],
+    [
+     "Robert Stupp",
+     39
+    ],
+    [
+     "Ajantha Bhat",
+     37
+    ],
+    [
+     "Eduard Tudenhoefner",
+     28
+    ],
+    [
+     "Kyle Bendickson",
+     26
+    ]
+   ],
+   "top_12m": [
+    [
+     "dependabot[bot]",
+     27
+    ],
+    [
+     "Kevin Liu",
+     13
+    ],
+    [
+     "Manu Zhang",
+     12
+    ],
+    [
+     "Yuya Ebihara",
+     7
+    ],
+    [
+     "Eduard Tudenhoefner",
+     7
+    ],
+    [
+     "pvary",
+     5
+    ],
+    [
+     "Neelesh Salian",
+     4
+    ],
+    [
+     "Steven Zhen Wu",
+     3
+    ]
+   ]
+  },
+  "api": {
+   "n_all": 892,
+   "n_12m": 123,
+   "top_all": [
+    [
+     "Ryan Blue",
+     195
+    ],
+    [
+     "Anton Okolnychyi",
+     68
+    ],
+    [
+     "Eduard Tudenhoefner",
+     43
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     41
+    ],
+    [
+     "Amogh Jahagirdar",
+     33
+    ],
+    [
+     "Russell Spitzer",
+     29
+    ],
+    [
+     "Fokko Driesprong",
+     29
+    ],
+    [
+     "Kyle Bendickson",
+     16
+    ]
+   ],
+   "top_12m": [
+    [
+     "Anoop Johnson",
+     13
+    ],
+    [
+     "Eduard Tudenhoefner",
+     12
+    ],
+    [
+     "Ryan Blue",
+     7
+    ],
+    [
+     "Uros Bojanic",
+     6
+    ],
+    [
+     "Steven Zhen Wu",
+     5
+    ],
+    [
+     "Yuya Ebihara",
+     5
+    ],
+    [
+     "Prashant Singh",
+     4
+    ],
+    [
+     "Uros",
+     4
+    ]
+   ]
+  },
+  "build": {
+   "n_all": 883,
+   "n_12m": 273,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     596
+    ],
+    [
+     "Yuya Ebihara",
+     44
+    ],
+    [
+     "Manu Zhang",
+     25
+    ],
+    [
+     "JB Onofr\u00e9",
+     20
+    ],
+    [
+     "Eduard Tudenhoefner",
+     15
+    ],
+    [
+     "Fokko Driesprong",
+     15
+    ],
+    [
+     "Ryan Blue",
+     15
+    ],
+    [
+     "Ajantha Bhat",
+     8
+    ]
+   ],
+   "top_12m": [
+    [
+     "dependabot[bot]",
+     172
+    ],
+    [
+     "Yuya Ebihara",
+     42
+    ],
+    [
+     "Manu Zhang",
+     14
+    ],
+    [
+     "Kevin Liu",
+     5
+    ],
+    [
+     "Huaxin Gao",
+     4
+    ],
+    [
+     "Szehon Ho",
+     3
+    ],
+    [
+     "Eduard Tudenhoefner",
+     3
+    ],
+    [
+     "Talat Uyarer",
+     2
+    ]
+   ]
+  },
+  "site": {
+   "n_all": 679,
+   "n_12m": 129,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     84
+    ],
+    [
+     "Ryan Blue",
+     53
+    ],
+    [
+     "Kevin Liu",
+     34
+    ],
+    [
+     "Manu Zhang",
+     28
+    ],
+    [
+     "Ajantha Bhat",
+     20
+    ],
+    [
+     "Jack Ye",
+     19
+    ],
+    [
+     "Russell Spitzer",
+     18
+    ],
+    [
+     "Fokko Driesprong",
+     14
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     18
+    ],
+    [
+     "dependabot[bot]",
+     16
+    ],
+    [
+     "Neelesh Salian",
+     6
+    ],
+    [
+     "Manu Zhang",
+     6
+    ],
+    [
+     "pvary",
+     4
+    ],
+    [
+     "Russell Spitzer",
+     3
+    ],
+    [
+     "Fokko Driesprong",
+     3
+    ],
+    [
+     "Talat UYARER",
+     3
+    ]
+   ]
+  },
+  "python": {
+   "n_all": 641,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Fokko Driesprong",
+     245
+    ],
+    [
+     "dependabot[bot]",
+     180
+    ],
+    [
+     "Samuel Redai",
+     31
+    ],
+    [
+     "jun-he",
+     19
+    ],
+    [
+     "Ryan Blue",
+     15
+    ],
+    [
+     "Ted Gooch",
+     11
+    ],
+    [
+     "Rusty Conover",
+     10
+    ],
+    [
+     "TGooch44",
+     10
+    ]
+   ],
+   "top_12m": []
+  },
+  "docs": {
+   "n_all": 512,
+   "n_12m": 117,
+   "top_all": [
+    [
+     "Manu Zhang",
+     41
+    ],
+    [
+     "Ajantha Bhat",
+     18
+    ],
+    [
+     "Prashant Singh",
+     15
+    ],
+    [
+     "Yuya Ebihara",
+     14
+    ],
+    [
+     "Fokko Driesprong",
+     14
+    ],
+    [
+     "GuoYu",
+     10
+    ],
+    [
+     "Amogh Jahagirdar",
+     10
+    ],
+    [
+     "Maximilian Michels",
+     9
+    ]
+   ],
+   "top_12m": [
+    [
+     "Maximilian Michels",
+     8
+    ],
+    [
+     "GuoYu",
+     8
+    ],
+    [
+     "Yuya Ebihara",
+     5
+    ],
+    [
+     "Talat UYARER",
+     5
+    ],
+    [
+     "Robin Moffatt",
+     3
+    ],
+    [
+     "Uros",
+     3
+    ],
+    [
+     "Huaxin Gao",
+     3
+    ],
+    [
+     "Anshul Baliga",
+     3
+    ]
+   ]
+  },
+  ".github": {
+   "n_all": 447,
+   "n_12m": 178,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     105
+    ],
+    [
+     "Fokko Driesprong",
+     47
+    ],
+    [
+     "Kevin Liu",
+     36
+    ],
+    [
+     "Manu Zhang",
+     32
+    ],
+    [
+     "Kyle Bendickson",
+     27
+    ],
+    [
+     "Ajantha Bhat",
+     22
+    ],
+    [
+     "Yuya Ebihara",
+     11
+    ],
+    [
+     "Ryan Blue",
+     11
+    ]
+   ],
+   "top_12m": [
+    [
+     "dependabot[bot]",
+     88
+    ],
+    [
+     "Kevin Liu",
+     34
+    ],
+    [
+     "Manu Zhang",
+     16
+    ],
+    [
+     "Yuya Ebihara",
+     9
+    ],
+    [
+     "pvary",
+     3
+    ],
+    [
+     "Russell Spitzer",
+     3
+    ],
+    [
+     "Vova Kolmakov",
+     2
+    ],
+    [
+     "GuoYu",
+     2
+    ]
+   ]
+  },
+  "aws": {
+   "n_all": 381,
+   "n_12m": 68,
+   "top_all": [
+    [
+     "Eduard Tudenhoefner",
+     29
+    ],
+    [
+     "Jack Ye",
+     24
+    ],
+    [
+     "Yuya Ebihara",
+     21
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     20
+    ],
+    [
+     "Amogh Jahagirdar",
+     18
+    ],
+    [
+     "Daniel Weeks",
+     13
+    ],
+    [
+     "Prashant Singh",
+     11
+    ],
+    [
+     "Alexandre Dutra",
+     11
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     16
+    ],
+    [
+     "Kevin Liu",
+     8
+    ],
+    [
+     "Eduard Tudenhoefner",
+     5
+    ],
+    [
+     "Alexandre Dutra",
+     3
+    ],
+    [
+     "Thomas Powell",
+     3
+    ],
+    [
+     "Yusuf YILDIZ",
+     2
+    ],
+    [
+     "Sreesh Maheshwar",
+     2
+    ],
+    [
+     "Uros Bojanic",
+     2
+    ]
+   ]
+  },
+  "parquet": {
+   "n_all": 366,
+   "n_12m": 75,
+   "top_all": [
+    [
+     "Ryan Blue",
+     85
+    ],
+    [
+     "Anton Okolnychyi",
+     14
+    ],
+    [
+     "Yuya Ebihara",
+     12
+    ],
+    [
+     "Neelesh Salian",
+     9
+    ],
+    [
+     "Aihua Xu",
+     9
+    ],
+    [
+     "Huaxin Gao",
+     9
+    ],
+    [
+     "Xin Huang",
+     8
+    ],
+    [
+     "Russell Spitzer",
+     8
+    ]
+   ],
+   "top_12m": [
+    [
+     "Neelesh Salian",
+     9
+    ],
+    [
+     "Xin Huang",
+     8
+    ],
+    [
+     "Vova Kolmakov",
+     4
+    ],
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "Ryan Blue",
+     3
+    ],
+    [
+     "GuoYu",
+     3
+    ],
+    [
+     "Eduard Tudenhoefner",
+     2
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     2
+    ]
+   ]
+  },
+  "data": {
+   "n_all": 330,
+   "n_12m": 51,
+   "top_all": [
+    [
+     "Ryan Blue",
+     41
+    ],
+    [
+     "Anton Okolnychyi",
+     27
+    ],
+    [
+     "openinx",
+     19
+    ],
+    [
+     "Shardul Mahadik",
+     16
+    ],
+    [
+     "GuoYu",
+     14
+    ],
+    [
+     "pvary",
+     14
+    ],
+    [
+     "Chen, Junjie",
+     11
+    ],
+    [
+     "Eduard Tudenhoefner",
+     9
+    ]
+   ],
+   "top_12m": [
+    [
+     "GuoYu",
+     13
+    ],
+    [
+     "Joy Haldar",
+     6
+    ],
+    [
+     "pvary",
+     5
+    ],
+    [
+     "Yuya Ebihara",
+     2
+    ],
+    [
+     "Amogh Jahagirdar",
+     2
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     2
+    ],
+    [
+     "Xin Huang",
+     2
+    ],
+    [
+     "Ryan Blue",
+     2
+    ]
+   ]
+  },
+  "hive/mr": {
+   "n_all": 286,
+   "n_12m": 3,
+   "top_all": [
+    [
+     "Marton Bod",
+     34
+    ],
+    [
+     "pvary",
+     32
+    ],
+    [
+     "Ryan Blue",
+     25
+    ],
+    [
+     "Anton Okolnychyi",
+     18
+    ],
+    [
+     "dependabot[bot]",
+     13
+    ],
+    [
+     "L\u00e1szl\u00f3 Pint\u00e9r",
+     9
+    ],
+    [
+     "Eduard Tudenhoefner",
+     8
+    ],
+    [
+     "Piotr Findeisen",
+     7
+    ]
+   ],
+   "top_12m": [
+    [
+     "Eunbin Son",
+     2
+    ],
+    [
+     "pvary",
+     1
+    ]
+   ]
+  },
+  "open-api": {
+   "n_all": 262,
+   "n_12m": 96,
+   "top_all": [
+    [
+     "dependabot[bot]",
+     60
+    ],
+    [
+     "Eduard Tudenhoefner",
+     23
+    ],
+    [
+     "Fokko Driesprong",
+     21
+    ],
+    [
+     "Yuya Ebihara",
+     14
+    ],
+    [
+     "Prashant Singh",
+     12
+    ],
+    [
+     "Ryan Blue",
+     12
+    ],
+    [
+     "Daniel Weeks",
+     11
+    ],
+    [
+     "Manu Zhang",
+     7
+    ]
+   ],
+   "top_12m": [
+    [
+     "dependabot[bot]",
+     26
+    ],
+    [
+     "Prashant Singh",
+     9
+    ],
+    [
+     "Yuya Ebihara",
+     7
+    ],
+    [
+     "Eduard Tudenhoefner",
+     7
+    ],
+    [
+     "Manu Zhang",
+     5
+    ],
+    [
+     "Alexandre Dutra",
+     4
+    ],
+    [
+     "Huaxin Gao",
+     3
+    ],
+    [
+     "Steven Zhen Wu",
+     3
+    ]
+   ]
+  },
+  "hive-metastore": {
+   "n_all": 186,
+   "n_12m": 20,
+   "top_all": [
+    [
+     "pvary",
+     12
+    ],
+    [
+     "Marton Bod",
+     12
+    ],
+    [
+     "Naveen Kumar",
+     11
+    ],
+    [
+     "Eduard Tudenhoefner",
+     10
+    ],
+    [
+     "Yuya Ebihara",
+     6
+    ],
+    [
+     "Szehon Ho",
+     6
+    ],
+    [
+     "Anton Okolnychyi",
+     5
+    ],
+    [
+     "Yufei Gu",
+     5
+    ]
+   ],
+   "top_12m": [
+    [
+     "Sreesh Maheshwar",
+     3
+    ],
+    [
+     "ggershinsky",
+     2
+    ],
+    [
+     "Anurag Mantripragada",
+     1
+    ],
+    [
+     "Chester",
+     1
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     1
+    ],
+    [
+     "Uros Bojanic",
+     1
+    ],
+    [
+     "Vova Kolmakov",
+     1
+    ],
+    [
+     "terrytlu",
+     1
+    ]
+   ]
+  },
+  "kafka-connect": {
+   "n_all": 182,
+   "n_12m": 105,
+   "top_all": [
+    [
+     "Yuya Ebihara",
+     42
+    ],
+    [
+     "dependabot[bot]",
+     32
+    ],
+    [
+     "Bryan Keller",
+     12
+    ],
+    [
+     "Vova Kolmakov",
+     6
+    ],
+    [
+     "kumarpritam863",
+     5
+    ],
+    [
+     "JB Onofr\u00e9",
+     5
+    ],
+    [
+     "Eduard Tudenhoefner",
+     5
+    ],
+    [
+     "Manu Zhang",
+     4
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     40
+    ],
+    [
+     "dependabot[bot]",
+     14
+    ],
+    [
+     "Vova Kolmakov",
+     5
+    ],
+    [
+     "Thomas Thornton",
+     4
+    ],
+    [
+     "Kevin Liu",
+     4
+    ],
+    [
+     "Anupam Yadav",
+     4
+    ],
+    [
+     "Huaxin Gao",
+     4
+    ],
+    [
+     "Manu Zhang",
+     3
+    ]
+   ]
+  },
+  "format": {
+   "n_all": 171,
+   "n_12m": 39,
+   "top_all": [
+    [
+     "emkornfield",
+     13
+    ],
+    [
+     "Ryan Blue",
+     12
+    ],
+    [
+     "Fokko Driesprong",
+     11
+    ],
+    [
+     "Ajantha Bhat",
+     10
+    ],
+    [
+     "Eduard Tudenhoefner",
+     9
+    ],
+    [
+     "Szehon Ho",
+     8
+    ],
+    [
+     "Piotr Findeisen",
+     7
+    ],
+    [
+     "Steven Zhen Wu",
+     6
+    ]
+   ],
+   "top_12m": [
+    [
+     "Huaxin Gao",
+     4
+    ],
+    [
+     "Daniel Weeks",
+     3
+    ],
+    [
+     "Ryan Blue",
+     3
+    ],
+    [
+     "Eduard Tudenhoefner",
+     3
+    ],
+    [
+     "Kevin Liu",
+     3
+    ],
+    [
+     "Amogh Jahagirdar",
+     2
+    ],
+    [
+     "Steven Zhen Wu",
+     2
+    ],
+    [
+     "Philipp Fischbeck",
+     1
+    ]
+   ]
+  },
+  "spark3": {
+   "n_all": 163,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     52
+    ],
+    [
+     "Ryan Blue",
+     24
+    ],
+    [
+     "Russell Spitzer",
+     17
+    ],
+    [
+     "Karuppayya",
+     7
+    ],
+    [
+     "Kyle Bendickson",
+     7
+    ],
+    [
+     "Yufei Gu",
+     5
+    ],
+    [
+     "Ryan Murray",
+     4
+    ],
+    [
+     "openinx",
+     4
+    ]
+   ],
+   "top_12m": []
+  },
+  "orc": {
+   "n_all": 128,
+   "n_12m": 20,
+   "top_all": [
+    [
+     "Ryan Blue",
+     14
+    ],
+    [
+     "Shardul Mahadik",
+     14
+    ],
+    [
+     "Edgar Rodriguez",
+     9
+    ],
+    [
+     "gaborkaszab",
+     5
+    ],
+    [
+     "pvary",
+     5
+    ],
+    [
+     "Ajantha Bhat",
+     5
+    ],
+    [
+     "Piotr Findeisen",
+     4
+    ],
+    [
+     "liliwei",
+     4
+    ]
+   ],
+   "top_12m": [
+    [
+     "gaborkaszab",
+     4
+    ],
+    [
+     "GuoYu",
+     3
+    ],
+    [
+     "Eunbin Son",
+     2
+    ],
+    [
+     "Chihiro",
+     2
+    ],
+    [
+     "Akash R Nilugal",
+     1
+    ],
+    [
+     "Ryan Blue",
+     1
+    ],
+    [
+     "jackylee",
+     1
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     1
+    ]
+   ]
+  },
+  "arrow": {
+   "n_all": 111,
+   "n_12m": 19,
+   "top_all": [
+    [
+     "Eduard Tudenhoefner",
+     12
+    ],
+    [
+     "Ryan Blue",
+     9
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     8
+    ],
+    [
+     "Samarth Jain",
+     6
+    ],
+    [
+     "Wing Yew Poon",
+     5
+    ],
+    [
+     "Piotr Findeisen",
+     5
+    ],
+    [
+     "Yuya Ebihara",
+     4
+    ],
+    [
+     "Russell Spitzer",
+     4
+    ]
+   ],
+   "top_12m": [
+    [
+     "Neelesh Salian",
+     2
+    ],
+    [
+     "Eunbin Son",
+     2
+    ],
+    [
+     "jbewing",
+     2
+    ],
+    [
+     "Yuya Ebihara",
+     1
+    ],
+    [
+     "Ross Andreucetti",
+     1
+    ],
+    [
+     "Daksh Dave",
+     1
+    ],
+    [
+     "Sho Tanaka",
+     1
+    ],
+    [
+     "Raunaq Morarka",
+     1
+    ]
+   ]
+  },
+  "gcp": {
+   "n_all": 108,
+   "n_12m": 47,
+   "top_all": [
+    [
+     "Yuya Ebihara",
+     18
+    ],
+    [
+     "Eduard Tudenhoefner",
+     16
+    ],
+    [
+     "Bryan Keller",
+     8
+    ],
+    [
+     "Kevin Liu",
+     6
+    ],
+    [
+     "JB Onofr\u00e9",
+     4
+    ],
+    [
+     "dependabot[bot]",
+     4
+    ],
+    [
+     "Prashant Singh",
+     3
+    ],
+    [
+     "Talat UYARER",
+     3
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     15
+    ],
+    [
+     "Kevin Liu",
+     6
+    ],
+    [
+     "Eduard Tudenhoefner",
+     4
+    ],
+    [
+     "S N Munendra",
+     2
+    ],
+    [
+     "Thomas Powell",
+     2
+    ],
+    [
+     "Manu Zhang",
+     1
+    ],
+    [
+     "Kurtis Wright",
+     1
+    ],
+    [
+     "Charlie Chen",
+     1
+    ]
+   ]
+  },
+  "nessie": {
+   "n_all": 105,
+   "n_12m": 7,
+   "top_all": [
+    [
+     "Ajantha Bhat",
+     23
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     20
+    ],
+    [
+     "Robert Stupp",
+     18
+    ],
+    [
+     "Eduard Tudenhoefner",
+     6
+    ],
+    [
+     "Piotr Findeisen",
+     5
+    ],
+    [
+     "Yuya Ebihara",
+     4
+    ],
+    [
+     "Alexandre Dutra",
+     3
+    ],
+    [
+     "Ryan Murray",
+     3
+    ]
+   ],
+   "top_12m": [
+    [
+     "Eunbin Son",
+     1
+    ],
+    [
+     "raashed",
+     1
+    ],
+    [
+     "Uros Bojanic",
+     1
+    ],
+    [
+     "Alex Stephen",
+     1
+    ],
+    [
+     "Eduard Tudenhoefner",
+     1
+    ],
+    [
+     "Ajantha Bhat",
+     1
+    ],
+    [
+     "pvary",
+     1
+    ]
+   ]
+  },
+  ".palantir": {
+   "n_all": 94,
+   "n_12m": 18,
+   "top_all": [
+    [
+     "Eduard Tudenhoefner",
+     12
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     9
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     8
+    ],
+    [
+     "Ryan Blue",
+     6
+    ],
+    [
+     "Ajantha Bhat",
+     6
+    ],
+    [
+     "Anton Okolnychyi",
+     6
+    ],
+    [
+     "Piotr Findeisen",
+     5
+    ],
+    [
+     "Szehon Ho",
+     5
+    ]
+   ],
+   "top_12m": [
+    [
+     "Hongyue/Steve Zhang",
+     9
+    ],
+    [
+     "Eduard Tudenhoefner",
+     3
+    ],
+    [
+     "gaborkaszab",
+     2
+    ],
+    [
+     "Yuya Ebihara",
+     1
+    ],
+    [
+     "Xiaoxuan",
+     1
+    ],
+    [
+     "Vova Kolmakov",
+     1
+    ],
+    [
+     "Ryan Blue",
+     1
+    ]
+   ]
+  },
+  "spark3-extensions": {
+   "n_all": 79,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     46
+    ],
+    [
+     "Ryan Blue",
+     7
+    ],
+    [
+     "Dilip Biswal",
+     7
+    ],
+    [
+     "Russell Spitzer",
+     6
+    ],
+    [
+     "Szehon Ho",
+     2
+    ],
+    [
+     "Wing Yew Poon",
+     2
+    ],
+    [
+     "Jack Ye",
+     2
+    ],
+    [
+     "Karuppayya",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "spark2": {
+   "n_all": 74,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     13
+    ],
+    [
+     "Russell Spitzer",
+     7
+    ],
+    [
+     "Ryan Blue",
+     7
+    ],
+    [
+     "Kyle Bendickson",
+     5
+    ],
+    [
+     "Karuppayya",
+     4
+    ],
+    [
+     "openinx",
+     4
+    ],
+    [
+     "Chen, Junjie",
+     3
+    ],
+    [
+     "Jungtaek Lim",
+     3
+    ]
+   ],
+   "top_12m": []
+  },
+  "azure": {
+   "n_all": 69,
+   "n_12m": 27,
+   "top_all": [
+    [
+     "Kevin Liu",
+     6
+    ],
+    [
+     "Fokko Driesprong",
+     6
+    ],
+    [
+     "Yuya Ebihara",
+     5
+    ],
+    [
+     "Eduard Tudenhoefner",
+     5
+    ],
+    [
+     "JB Onofr\u00e9",
+     5
+    ],
+    [
+     "Marc Cenac",
+     5
+    ],
+    [
+     "Thomas Powell",
+     3
+    ],
+    [
+     "Prashant Singh",
+     2
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     5
+    ],
+    [
+     "Yuya Ebihara",
+     4
+    ],
+    [
+     "Thomas Powell",
+     3
+    ],
+    [
+     "Eduard Tudenhoefner",
+     3
+    ],
+    [
+     "Prashant Singh",
+     2
+    ],
+    [
+     "autoCAT",
+     1
+    ],
+    [
+     "raashed",
+     1
+    ],
+    [
+     "DB Tsai",
+     1
+    ]
+   ]
+  },
+  ".baseline": {
+   "n_all": 67,
+   "n_12m": 7,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     12
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     7
+    ],
+    [
+     "Eduard Tudenhoefner",
+     6
+    ],
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "slfan1989",
+     3
+    ],
+    [
+     "Piotr Findeisen",
+     3
+    ],
+    [
+     "Ryan Blue",
+     3
+    ],
+    [
+     "pvary",
+     2
+    ]
+   ],
+   "top_12m": [
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "Uros",
+     1
+    ],
+    [
+     "Andy Grove",
+     1
+    ],
+    [
+     "pvary",
+     1
+    ],
+    [
+     "Xianyang Liu",
+     1
+    ]
+   ]
+  },
+  "aliyun": {
+   "n_all": 41,
+   "n_12m": 6,
+   "top_all": [
+    [
+     "mikewu",
+     7
+    ],
+    [
+     "Eduard Tudenhoefner",
+     4
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     3
+    ],
+    [
+     "Rajarshi Sarkar",
+     3
+    ],
+    [
+     "Prashant Singh",
+     2
+    ],
+    [
+     "Piotr Findeisen",
+     2
+    ],
+    [
+     "Jack Ye",
+     2
+    ],
+    [
+     "mengna-lin",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "mengna-lin",
+     1
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     1
+    ],
+    [
+     "Eunbin Son",
+     1
+    ],
+    [
+     "Eduard Tudenhoefner",
+     1
+    ],
+    [
+     "zhaoyunjiong",
+     1
+    ],
+    [
+     "Prashant Singh",
+     1
+    ]
+   ]
+  },
+  "pig": {
+   "n_all": 35,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Ryan Blue",
+     10
+    ],
+    [
+     "Daniel Weeks",
+     4
+    ],
+    [
+     "JB Onofr\u00e9",
+     2
+    ],
+    [
+     "openinx",
+     2
+    ],
+    [
+     "Piotr Findeisen",
+     1
+    ],
+    [
+     "Attila Kreiner",
+     1
+    ],
+    [
+     "Robert Stupp",
+     1
+    ],
+    [
+     "Rakesh Das",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "dell": {
+   "n_all": 32,
+   "n_12m": 4,
+   "top_all": [
+    [
+     "Eduard Tudenh\u00f6fner",
+     4
+    ],
+    [
+     "Xia",
+     3
+    ],
+    [
+     "Charlie Chen",
+     2
+    ],
+    [
+     "Eduard Tudenhoefner",
+     2
+    ],
+    [
+     "Piotr Findeisen",
+     2
+    ],
+    [
+     "Prashant Singh",
+     2
+    ],
+    [
+     "Rajarshi Sarkar",
+     2
+    ],
+    [
+     "Mateus Aubin",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Charlie Chen",
+     2
+    ],
+    [
+     "Mateus Aubin",
+     1
+    ],
+    [
+     "Dmitriy Avseitsev",
+     1
+    ]
+   ]
+  },
+  "common": {
+   "n_all": 31,
+   "n_12m": 2,
+   "top_all": [
+    [
+     "Ryan Blue",
+     10
+    ],
+    [
+     "Piotr Findeisen",
+     4
+    ],
+    [
+     "Eduard Tudenhoefner",
+     2
+    ],
+    [
+     "felixYyu",
+     2
+    ],
+    [
+     "Russell Spitzer",
+     2
+    ],
+    [
+     "mccheah",
+     2
+    ],
+    [
+     "Uros",
+     1
+    ],
+    [
+     "Ajantha Bhat",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Uros",
+     1
+    ],
+    [
+     "Eduard Tudenhoefner",
+     1
+    ]
+   ]
+  },
+  "bigquery": {
+   "n_all": 18,
+   "n_12m": 14,
+   "top_all": [
+    [
+     "Uros Bojanic",
+     5
+    ],
+    [
+     "Joy Haldar",
+     2
+    ],
+    [
+     "Yuya Ebihara",
+     1
+    ],
+    [
+     "Damanpreet Singh",
+     1
+    ],
+    [
+     "Akanksha kedia",
+     1
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     1
+    ],
+    [
+     "Mateus Aubin",
+     1
+    ],
+    [
+     "Dmitriy Avseitsev",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Uros Bojanic",
+     5
+    ],
+    [
+     "Joy Haldar",
+     2
+    ],
+    [
+     "Yuya Ebihara",
+     1
+    ],
+    [
+     "Damanpreet Singh",
+     1
+    ],
+    [
+     "Akanksha kedia",
+     1
+    ],
+    [
+     "Hongyue/Steve Zhang",
+     1
+    ],
+    [
+     "Mateus Aubin",
+     1
+    ],
+    [
+     "Dmitriy Avseitsev",
+     1
+    ]
+   ]
+  },
+  "bundled-guava": {
+   "n_all": 18,
+   "n_12m": 1,
+   "top_all": [
+    [
+     "Eduard Tudenh\u00f6fner",
+     3
+    ],
+    [
+     "Kyle Bendickson",
+     2
+    ],
+    [
+     "Ryan Blue",
+     2
+    ],
+    [
+     "JB Onofr\u00e9",
+     1
+    ],
+    [
+     "dependabot[bot]",
+     1
+    ],
+    [
+     "Bruno Volpato",
+     1
+    ],
+    [
+     "Amogh Jahagirdar",
+     1
+    ],
+    [
+     "Cancai Cai",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "JB Onofr\u00e9",
+     1
+    ]
+   ]
+  },
+  "python_legacy": {
+   "n_all": 18,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Pucheng Yang",
+     6
+    ],
+    [
+     "Fokko Driesprong",
+     5
+    ],
+    [
+     "cccs-eric",
+     4
+    ],
+    [
+     "Pritam",
+     1
+    ],
+    [
+     "happyprg",
+     1
+    ],
+    [
+     "jun-he",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "delta-lake": {
+   "n_all": 17,
+   "n_12m": 2,
+   "top_all": [
+    [
+     "Yuya Ebihara",
+     3
+    ],
+    [
+     "Russell Spitzer",
+     2
+    ],
+    [
+     "Jonas(Rushan) Jiang",
+     2
+    ],
+    [
+     "Rushan Jiang",
+     2
+    ],
+    [
+     "Charlie Chen",
+     1
+    ],
+    [
+     "Amogh Jahagirdar",
+     1
+    ],
+    [
+     "Attila Kreiner",
+     1
+    ],
+    [
+     "Piotr Findeisen",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Charlie Chen",
+     1
+    ],
+    [
+     "Russell Spitzer",
+     1
+    ]
+   ]
+  },
+  "snowflake": {
+   "n_all": 15,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Maninder",
+     3
+    ],
+    [
+     "Piotr Findeisen",
+     2
+    ],
+    [
+     "Eduard Tudenhoefner",
+     1
+    ],
+    [
+     "Manu Zhang",
+     1
+    ],
+    [
+     "Robert Stupp",
+     1
+    ],
+    [
+     "big face cat",
+     1
+    ],
+    [
+     "Naveen Kumar",
+     1
+    ],
+    [
+     "Song Minseok",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "spark-runtime": {
+   "n_all": 14,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Ryan Blue",
+     8
+    ],
+    [
+     "Cheng Pan",
+     1
+    ],
+    [
+     "Kyle Bendickson",
+     1
+    ],
+    [
+     "Ryan Murray",
+     1
+    ],
+    [
+     "Adrian Woodhead",
+     1
+    ],
+    [
+     "openinx",
+     1
+    ],
+    [
+     "Ratandeep Ratti",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "docker": {
+   "n_all": 13,
+   "n_12m": 8,
+   "top_all": [
+    [
+     "Kevin Liu",
+     3
+    ],
+    [
+     "Sreesh Maheshwar",
+     2
+    ],
+    [
+     "Robin Moffatt",
+     2
+    ],
+    [
+     "Ajantha Bhat",
+     2
+    ],
+    [
+     "Sejal Gupta",
+     1
+    ],
+    [
+     "Rexwell Minnis",
+     1
+    ],
+    [
+     "Jayce Slesar",
+     1
+    ],
+    [
+     "dominikhei",
+     1
+    ]
+   ],
+   "top_12m": [
+    [
+     "Kevin Liu",
+     2
+    ],
+    [
+     "Sreesh Maheshwar",
+     2
+    ],
+    [
+     "Robin Moffatt",
+     2
+    ],
+    [
+     "Sejal Gupta",
+     1
+    ],
+    [
+     "Rexwell Minnis",
+     1
+    ]
+   ]
+  },
+  "spark3-runtime": {
+   "n_all": 10,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Ryan Blue",
+     2
+    ],
+    [
+     "Eduard Tudenh\u00f6fner",
+     1
+    ],
+    [
+     "Russell Spitzer",
+     1
+    ],
+    [
+     "Cheng Pan",
+     1
+    ],
+    [
+     "Jack Ye",
+     1
+    ],
+    [
+     "Kyle Bendickson",
+     1
+    ],
+    [
+     "Ryan Murray",
+     1
+    ],
+    [
+     "Adrian Woodhead",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "avro": {
+   "n_all": 10,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Ryan Blue",
+     10
+    ]
+   ],
+   "top_12m": []
+  },
+  "project": {
+   "n_all": 9,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     6
+    ],
+    [
+     "Ryan Blue",
+     1
+    ],
+    [
+     "Thiru Paramasivan",
+     1
+    ],
+    [
+     "Chen, Junjie",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "rest_docs": {
+   "n_all": 7,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Kyle Bendickson",
+     4
+    ],
+    [
+     "Ryan Blue",
+     3
+    ]
+   ],
+   "top_12m": []
+  },
+  "hive3-orc-bundle": {
+   "n_all": 6,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Manu Zhang",
+     1
+    ],
+    [
+     "Ajantha Bhat",
+     1
+    ],
+    [
+     "Devin Smith",
+     1
+    ],
+    [
+     "Fokko Driesprong",
+     1
+    ],
+    [
+     "Robert Stupp",
+     1
+    ],
+    [
+     "Ryan Blue",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "flink-runtime": {
+   "n_all": 6,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "openinx",
+     2
+    ],
+    [
+     "Ryan Blue",
+     1
+    ],
+    [
+     "Robert Stupp",
+     1
+    ],
+    [
+     "Cheng Pan",
+     1
+    ],
+    [
+     "Kyle Bendickson",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "examples": {
+   "n_all": 3,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Anton Okolnychyi",
+     1
+    ],
+    [
+     "mccheah",
+     1
+    ],
+    [
+     "Ryan Blue",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "runtime": {
+   "n_all": 1,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Ryan Blue",
+     1
+    ]
+   ],
+   "top_12m": []
+  },
+  "images": {
+   "n_all": 1,
+   "n_12m": 0,
+   "top_all": [
+    [
+     "Ryan Blue",
+     1
+    ]
+   ],
+   "top_12m": []
+  }
+ }
+}
