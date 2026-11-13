@@ -72,7 +72,7 @@ L0  raw capture      (data/raw/)     immutable, per source, regenerable by colle
 L1  records          (kb repo)       one page per meeting / dev thread / video / release / vote — "what was said, when, by whom"
 L2  entities (graph) (kb repo)       people, working groups, initiatives, modules, repos, docs — current state + dated timeline
 L3  synthesis        (kb repo)       state-of-iceberg, weekly briefings, opportunities, influence & ownership maps
-IDX index            (built, not committed)  kb.sqlite: nodes, edges, records, FTS5 — CLI + optional MCP server
+IDX index            (built, not committed)  kb.sqlite: nodes, edges, records, FTS5 — built locally by the kb CLI
 ```
 
 ### Directory layout (kb repo)
@@ -146,7 +146,7 @@ Generated blocks sit between markers. The pipeline only rewrites those blocks, s
 ## 6. Pipeline
 
 ```
-collect (deterministic)  →  normalize (L0, data repo)  →  extract (LLM, per new record)
+collect (deterministic)  →  normalize (L0, data/raw/)  →  extract (LLM, per new record)
       →  integrate (update L2 entities + L3 synthesis)  →  validate  →  build index  →  commit/push + weekly briefing
 ```
 
@@ -179,7 +179,7 @@ collect (deterministic)  →  normalize (L0, data repo)  →  extract (LLM, per 
   - Output is structured JSON validated against `schema/meeting.json`, then rendered to Markdown.
 - **dev@ thread:** classify the type, summarize the positions and the outcome, extract the vote tally (binding where known), and link to initiatives.
 - **PR batch:** map notable PRs (spec, large, long-running, many reviewers) to initiatives and modules.
-- **Cost:** a typical week is about 6–8 meetings × ~65k tokens of transcript, plus about 100 dev@ messages and the PR deltas, which fits comfortably in one session. Transcripts are summarized once; the raw text stays in the data repo for re-querying.
+- **Cost:** a typical week is about 6–8 meetings × ~65k tokens of transcript, plus about 100 dev@ messages and the PR deltas, which fits comfortably in one session. Transcripts are summarized once; the raw text stays in `data/raw/` for re-querying.
 
 ### Integrator
 - **Entities:** apply the new edges to entity pages, append timeline bullets, and recompute "Current state", reviewer and owner tables, and initiative status.
@@ -205,7 +205,7 @@ collect (deterministic)  →  normalize (L0, data repo)  →  extract (LLM, per 
 - **Built from git history:** for every commit, the `(#NNNN)` in the squash title gives the PR, and `--name-only` gives the files.
   - This produces `code_map(path, pr, date, author)` for both repos, from about 10k PRs.
   - Each PR links to its issue, review comments, dev@ threads, meetings and initiative.
-- **Function level:** at query time, the MCP server runs `git log -L :<symbol>:<path>` against the user's local checkout when one is available.
+- **Function level:** at query time, `kb why --symbol` runs `git log -L :<symbol>:<path>` against the user's local checkout when one is available.
 - **What it answers:** "why is `SnapshotProducer` written like this", "what was debated when this validation was added", and "which spec rule does this code implement".
 
 ### Index and query
