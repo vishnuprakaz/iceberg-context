@@ -1,0 +1,63 @@
+{
+  "id": "meeting/catalog/2026-09-02",
+  "_input_hash": "sha256:741b1ad5cfb927a6ee1e",
+  "sources": [
+    "meet:catalog:2026-09-02"
+  ],
+  "summary": "The Catalog Community Sync notes for 2 September 2026 are an agenda with links and record no outcomes. Three items were listed: Sung's REST spec pull request giving field-id guidance for AddSchemaUpdate versus CreateTableRequest; William and Prashant's file-level access delegation work, with a mailing list thread, a spec change pull request and proofs of concept for batch remote signing and batch pre-signed URLs; and Yufei's V2 LoadTable topic, linked to mailing list threads on v4 support and on partial table loading.",
+  "topics": [
+    {
+      "title": "REST spec: field-id guidance on AddSchemaUpdate vs CreateTableRequest",
+      "summary": "Listed under Sung with a link to the spec pull request on field-id guidance for AddSchemaUpdate versus CreateTableRequest. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17137"
+      ]
+    },
+    {
+      "title": "File-level access delegation",
+      "summary": "Listed under William and Prashant. The item links the mailing list thread, a related pull request, the spec change pull request, and two proof-of-concept pull requests in a fork: one for batch remote signing and one for batch pre-signed URLs. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "list:odof6m2npvktwd51cz8qnrxjv95ws4wm",
+        "gh:apache/iceberg#17457",
+        "gh:apache/iceberg#17332"
+      ]
+    },
+    {
+      "title": "V2 LoadTable",
+      "summary": "Listed under Yufei, with two mailing list threads: one on v4 support and one on partial table loading. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-spec",
+        "v4-general"
+      ],
+      "refs": [
+        "list:6y446mbtrho2r54cbd2x9gzyb13jjlbl",
+        "list:qocy0w2y1wk1775x2n68mt9vompcbhmc"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Sung",
+      "basis": "notes"
+    },
+    {
+      "who": "William",
+      "basis": "notes"
+    },
+    {
+      "who": "Prashant",
+      "basis": "notes"
+    },
+    {
+      "who": "Yufei",
+      "basis": "notes"
+    }
+  ]
+}

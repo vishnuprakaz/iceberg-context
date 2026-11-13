@@ -1,0 +1,77 @@
+{
+  "id": "meeting/index/2026-08-31",
+  "_input_hash": "sha256:9283e90fc7861e720948",
+  "sources": [
+    "meet:index:2026-08-31"
+  ],
+  "summary": "The Index Support Sync notes for 31 August 2026 list a presentation request on bloom filter index improvements by Kushagra and Anirban, and open questions in the index draft spec with suggested answers; they do not record what the meeting agreed. Suggestions were to name the files index root manifest and index data file, to define index_values as a list of (field_id, expression) pairs for materialized expressions, to store index_key results as ranges with only the max per leaf file in a new range_upper_bounds tracking file field, and to leave column stats to maintenance. Encryption and snapshot id uniqueness points were repeated from the previous sync.",
+  "topics": [
+    {
+      "title": "Presentation request: bloom filter index improvements",
+      "summary": "Kushagra and Anirban requested a presentation slot on bloom filter index improvements, with a linked document. The notes record no discussion or outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "doc:11qXDAikzGR3-pR8rthY7TXabtuhVYF5H2c38Oc1kzaE"
+      ]
+    },
+    {
+      "title": "Naming of index files",
+      "summary": "Names used so far were tracking file plus leaf files, index manifest plus index data, and range file plus region files. The suggestion in the notes is index root manifest and index data file, written as a question. No agreement is recorded.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should the files be named index root manifest and index data file?"
+      ]
+    },
+    {
+      "title": "Materializing expressions in index data files",
+      "summary": "The notes list cases: materialization is not needed when indexing a single identity column or a monotonic transform such as truncate, day or hour; it is needed for non-monotonic expressions like lower and for hash; and it could be useful with a locality preserving function like hilbert. The suggestion is to define index_values as a list of (field_id, expression) pairs. No agreement is recorded.",
+      "initiatives": [
+        "secondary-indexes",
+        "expressions-spec"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Ranges stored in the index root manifest",
+      "summary": "The topic was storing tuple ranges for every leaf file in the index root manifest, enforcing that the same index_keys are in the same file. On what to store, the options were index_key results, which may duplicate values, or the index_key source; the suggestion is the results. On which bound, the options were min and max, min only, or max only; the suggestion is max only with a sorted index metadata file. On where, the options were a column stat for an index_key field id or a specific tracking file field; the suggestion is a new range_upper_bounds tracking file field. No agreement is recorded.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Stats for leaf files",
+      "summary": "Stats would be stored in the index root manifest in content-stats for every leaf file, as column stats for every column used in the expressions and in the included-column-ids list. A possible problem noted is that there are no stats for metadata columns. On whether this should be prescribed or left to maintenance, the suggestion is to leave it to maintenance.",
+      "initiatives": [
+        "secondary-indexes",
+        "v4-content-stats"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Encryption and snapshot id uniqueness",
+      "summary": "Repeated from the previous agenda: if the tracking file is encrypted by key-metadata, store an encryption keys list and only the key-id, as in table manifest files, with the tracking file holding unencrypted key-metadata for the leaf files. A single index snapshot could point to any given table snapshot, and readers need to keep the tracking file location since it may change after index maintenance. The notes record no discussion or outcome.",
+      "initiatives": [
+        "secondary-indexes",
+        "v4-encryption"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Kushagra",
+      "basis": "notes"
+    },
+    {
+      "who": "Anirban",
+      "basis": "notes"
+    }
+  ]
+}

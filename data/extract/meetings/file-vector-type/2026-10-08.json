@@ -1,0 +1,104 @@
+{
+  "id": "meeting/file-vector-type/2026-10-08",
+  "_input_hash": "sha256:088d2980008df5ab81f4",
+  "sources": [
+    "meet:file-vector-type:2026-10-08"
+  ],
+  "summary": "The File and Vector Type Sync of 8 October 2026 worked through discussion points taken from Philipp Fischbeck's notes on the vector spec proposal. The notes record high-level consensus to focus on the AI/ML use case (one-dimensional, numeric, no null, NaN or infinity elements), to keep the spec simple without complicated stats or predefined metadata such as a distance algorithm, and to rely largely on Parquet's new vector-equivalent definition. Further points covered extra vector characteristics, NaN and infinity handling in Parquet, Avro and ORC representations, the initial element types (int, long, float, double) and sparse vectors, which are out of scope for now. Attendees were asked to join the Parquet community discussion, and the Avro community is to be consulted.",
+  "topics": [
+    {
+      "title": "Scope and principles of the vector type",
+      "summary": "The notes record high-level consensus on three points. The type targets the AI/ML vector use case: one-dimensional, numeric, with no null, NaN or infinity elements; +0 and -0 are valid and engines decide how to treat them, following the semantic meaning of vectors in most database products. The spec stays simple, with no complicated stats and no predefined metadata such as a distance algorithm, and the index and function conversation is kept separate. The design largely relies on Parquet's new vector-equivalent definition.",
+      "initiatives": [
+        "vector-type"
+      ],
+      "refs": [
+        "doc:1_0JB2amFc7UdxnrJcRVtH0SkK3Yg-dZ1xULwoTLfQrY"
+      ],
+      "decisions": [
+        "Focus on the AI/ML vector use case: 1D, numeric, no null/NaN/infinity elements; +0/-0 are valid and engines decide how to treat them.",
+        "Keep the spec simple: no complicated stats, no predefined metadata such as a distance algorithm, and keep the index and function conversation separate.",
+        "Largely rely on Parquet's new vector-equivalent definition."
+      ]
+    },
+    {
+      "title": "Additional vector characteristics (distance function, non-zero, normalized)",
+      "summary": "The question was whether characteristics such as a distance function, non-zero or normalized should be part of the type. The notes say not to bundle them into the spec: maintain them separately as metadata and use a check constraint for enforcement. The geo types include algorithms because those define how their floating point values are interpreted, and adding equivalent information to vectors would over-specify the type. The group will circle back together with the index design.",
+      "initiatives": [
+        "vector-type",
+        "constraints",
+        "secondary-indexes"
+      ],
+      "refs": [
+        "doc:1_0JB2amFc7UdxnrJcRVtH0SkK3Yg-dZ1xULwoTLfQrY"
+      ],
+      "decisions": [
+        "Do not bundle additional vector characteristics into the spec; keep them as separate metadata and use check constraints for enforcement."
+      ]
+    },
+    {
+      "title": "NaN and infinity values in Parquet",
+      "summary": "The question was how the Iceberg vector type should handle NaN and infinity float and double values in Parquet, given the ongoing conversation in the Parquet community. The answer in the notes is additional writer enforcement in Iceberg. Everyone was asked to take part in the Parquet community discussion.",
+      "initiatives": [
+        "vector-type"
+      ],
+      "refs": [
+        "doc:1_0JB2amFc7UdxnrJcRVtH0SkK3Yg-dZ1xULwoTLfQrY"
+      ]
+    },
+    {
+      "title": "Avro and ORC representation",
+      "summary": "The general rule is to support the type in all supported file formats, using a list plus additional writer enforcement. For Avro, the group can talk with the Avro community about representing vectors natively; to avoid backward compatibility problems, the array would be annotated with a logical type on top of the underlying type. ORC is to be deprecated later, a conversation now under way with the community, so vector could be left unsupported for ORC for now, which the notes phrase as a question.",
+      "initiatives": [
+        "vector-type",
+        "file-format-api"
+      ],
+      "refs": [
+        "doc:1_0JB2amFc7UdxnrJcRVtH0SkK3Yg-dZ1xULwoTLfQrY"
+      ],
+      "open_questions": [
+        "Can vector be left as an unsupported type with ORC for now?"
+      ]
+    },
+    {
+      "title": "Supported element types",
+      "summary": "The notes say to start with int, long, float and double and allow the set to expand later. A brainstorm covered supporting types such as int8 only inside vectors and not as a separate Iceberg primitive: the main benefit is storage and read efficiency, which is limited for scalar columns but larger when reading big vector blocks, and it is more of an engine concern that can stay opaque at the Iceberg level. Shorter-width int and float types are coming, but it is too early to standardize them in Iceberg; they are a potential type addition for v5 and not a concern for the initial proposal.",
+      "initiatives": [
+        "vector-type"
+      ],
+      "refs": [
+        "doc:1_0JB2amFc7UdxnrJcRVtH0SkK3Yg-dZ1xULwoTLfQrY"
+      ],
+      "decisions": [
+        "Start with int, long, float and double as vector element types, and allow the set to expand later."
+      ]
+    },
+    {
+      "title": "Sparse vectors",
+      "summary": "Extending the type to sparse vectors is out of scope for now. The notes mention that it could possibly be achieved through representations such as bitpacking, ALP encoding or an explicit representation with two variable-length parts. It can be revisited when a concrete need emerges.",
+      "initiatives": [
+        "vector-type"
+      ],
+      "refs": [
+        "doc:1_0JB2amFc7UdxnrJcRVtH0SkK3Yg-dZ1xULwoTLfQrY"
+      ],
+      "decisions": [
+        "Sparse vectors are out of scope for now."
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Everyone: participate in the Parquet community discussion on NaN/infinity handling."
+    },
+    {
+      "what": "Talk with the Avro community and seek their opinion on representing vectors."
+    }
+  ],
+  "participants": [
+    {
+      "who": "PFischbeck",
+      "basis": "notes"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "meeting/community/2026-08-26",
+  "_input_hash": "sha256:2fa9fb71133e7b342d58",
+  "sources": [
+    "meet:community:2026-08-26"
+  ],
+  "summary": "The Iceberg Community Sync notes for 26 August 2026 list highlights, releases and a long discussion agenda, without recorded outcomes. Highlights covered merged work in Java, Python, Rust, Go and C++. Release items were Java 1.12, PyIceberg 0.12.0 and Rust 0.11. Discussion items included Iceberg Summit 2027 planning and sponsor interest, the FileRef proposal for a FILE data type, a ValidateTableIntegrity action proposal, position deletes with row removal in 1.12, key-id versus key-metadata for statistics files, V4 scope, moving the iceberg-rust DataFusion integration to another repository, contributions using LLMs, vectorized Parquet writes, the Vortex file format proposal, RewriteTablePaths issues with V4, and encryption questions. One pull request on column file fields and schemas was listed for review.",
+  "topics": [
+    {
+      "title": "Highlights across implementations",
+      "summary": "The notes list recently merged work. Java: variant support for Flink Avro readers and writers, a content stats evaluator, RemoteSigningConfig, and relative path resolution in the V4 manifest reader. Python: commit retry and concurrency validation for writes, and async REST scan planning polling with plan storage credentials. Rust: AuthManager/AuthSession with OAuth2 migrated to it, encryption key management and encrypted IO, deletion vector puffin blob decoding, and positional delete by file path. Go: files metadata tables, incremental append scan and a REST metrics reporter. C++: v3 geometry and geography support, rejection of malformed metadata file versions, and ResolvingFileIO.",
+      "initiatives": [
+        "variant",
+        "v4-content-stats",
+        "rest-auth",
+        "v4-relative-paths",
+        "pyiceberg",
+        "iceberg-rust",
+        "iceberg-go",
+        "iceberg-cpp",
+        "flink-integration",
+        "geospatial"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17737",
+        "gh:apache/iceberg#17413",
+        "gh:apache/iceberg#17709",
+        "gh:apache/iceberg#17434",
+        "gh:apache/iceberg-python#3320",
+        "gh:apache/iceberg-python#3724",
+        "gh:apache/iceberg-rust#2838",
+        "gh:apache/iceberg-rust#2701",
+        "gh:apache/iceberg-rust#3018",
+        "gh:apache/iceberg-rust#2866",
+        "gh:apache/iceberg-rust#3024",
+        "gh:apache/iceberg-go#1744",
+        "gh:apache/iceberg-go#1702",
+        "gh:apache/iceberg-go#1655"
+      ]
+    },
+    {
+      "title": "Releases: Java 1.12, PyIceberg 0.12.0, Rust 0.11",
+      "summary": "Three releases were on the agenda: the Java 1.12 release under Neelesh, the PyIceberg 0.12.0 release under Alex, and the Rust 0.11 release under Danny. Hongyue also listed a pull request on position delete with row removal for 1.12. The notes record no status or outcome for any of them.",
+      "initiatives": [
+        "java-releases",
+        "pyiceberg",
+        "iceberg-rust"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17706"
+      ]
+    },
+    {
+      "title": "Iceberg Summit 2027 planning and early sponsor interest",
+      "summary": "Sung gave a public service announcement on Iceberg Summit 2027 planning and early sponsor interest, pointing to a dev list thread and a sponsor form. The notes record no discussion or outcome.",
+      "initiatives": [
+        "community-process"
+      ],
+      "refs": [
+        "list:0wqsv94hy4sgw1js557ps4xfonjpfbf2"
+      ]
+    },
+    {
+      "title": "FILE data type: FileRef proposal",
+      "summary": "Talat listed the FILE data type in Iceberg, linking the FileRef proposal document and a file-type Slack channel. The notes record no discussion or outcome.",
+      "initiatives": [
+        "file-type"
+      ],
+      "refs": [
+        "doc:1BdA4G-38GoVcpX6UY4UI-QA1MvrDnH6uSKeCJBadILQ"
+      ]
+    },
+    {
+      "title": "Proposal: ValidateTableIntegrity action",
+      "summary": "Priyadarshini listed a proposal for a ValidateTableIntegrity action, with a design document; the notes also link an issue and a pull request next to the item. The notes record no discussion or outcome.",
+      "initiatives": [],
+      "refs": [
+        "doc:13dMjNMqdumFGPl6OfdaMAomk9mWzxkXQwwjm9IA6QjU",
+        "gh:apache/iceberg#16868",
+        "gh:apache/iceberg#16967"
+      ]
+    },
+    {
+      "title": "Encryption: key-id vs key-metadata for stat files, KEK expiry, PME with V4 manifests",
+      "summary": "Gábor Kaszab listed the question of key-id versus key-metadata for statistics files, with a dev list conversation. Prashant listed two encryption points: making the KEK expiry configurable, since it is currently hard coded to 730 days, and whether there are known plans for using Parquet modular encryption with v4 Parquet manifests. The notes record no outcome.",
+      "initiatives": [
+        "v4-encryption"
+      ],
+      "refs": [
+        "list:rx0tcnqkq0nzj1phwo64ng79pp51hzf9"
+      ],
+      "open_questions": [
+        "Should statistics files use key-id or key-metadata?",
+        "Should the KEK expiry, currently hard coded to 730 days, be configurable?",
+        "Are there plans for using Parquet modular encryption with v4 Parquet manifests?"
+      ]
+    },
+    {
+      "title": "V4 scope discussion",
+      "summary": "Dan listed a V4 scope discussion with a link to the discuss thread. Russ separately listed RewriteTablePaths, its issues with V4 and deprecation. The notes record no discussion or outcome for either.",
+      "initiatives": [
+        "v4-general",
+        "v4-relative-paths"
+      ],
+      "refs": [
+        "list:ko8cs3tgol97f0m20yozchpxlotzl1mj"
+      ]
+    },
+    {
+      "title": "Moving the iceberg-rust DataFusion integration to a different repository",
+      "summary": "Shawn listed the proposal to move the iceberg-rust and DataFusion integration to a different repository, with a discussion thread. The notes record no discussion or outcome.",
+      "initiatives": [
+        "iceberg-rust"
+      ],
+      "refs": [
+        "list:pk4yqd4llr85lmq3gskbfl9v31sfqpp9"
+      ]
+    },
+    {
+      "title": "Contributions using LLMs",
+      "summary": "Ryan listed contributions using LLMs as a discussion item. The notes record no discussion or outcome.",
+      "initiatives": [
+        "ai-contributions"
+      ],
+      "refs": []
+    },
+    {
+      "title": "File formats: vectorized Parquet writes and the Vortex proposal",
+      "summary": "Jared listed vectorized Parquet writes with a link to an issue. Martin listed the proposal to add Vortex as an Iceberg file format, with its design document. The notes record no discussion or outcome.",
+      "initiatives": [
+        "file-format-api"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17748",
+        "doc:1g0EJDr3DkSmfAce8C94zA2JyWRj2SeNeAeiYOotnSww"
+      ]
+    },
+    {
+      "title": "Pull request to review: basic fields and schemas for column files",
+      "summary": "The notes list one pull request for review: Core: Basic fields and schemas for column files. No discussion is recorded.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16285"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the pull request on basic fields and schemas for column files (apache/iceberg#16285)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Neelesh",
+      "basis": "notes"
+    },
+    {
+      "who": "Alex",
+      "basis": "notes"
+    },
+    {
+      "who": "Danny",
+      "basis": "notes"
+    },
+    {
+      "who": "Sung",
+      "basis": "notes"
+    },
+    {
+      "who": "talatu",
+      "basis": "notes"
+    },
+    {
+      "who": "Priyadarshini",
+      "basis": "notes"
+    },
+    {
+      "who": "Hongyue",
+      "basis": "notes"
+    },
+    {
+      "who": "gaborkaszab",
+      "basis": "notes"
+    },
+    {
+      "who": "Dan",
+      "basis": "notes"
+    },
+    {
+      "who": "Shawn",
+      "basis": "notes"
+    },
+    {
+      "who": "Ryan",
+      "basis": "notes"
+    },
+    {
+      "who": "Jared",
+      "basis": "notes"
+    },
+    {
+      "who": "Martin",
+      "basis": "notes"
+    },
+    {
+      "who": "Russ",
+      "basis": "notes"
+    },
+    {
+      "who": "Prashant",
+      "basis": "notes"
+    }
+  ]
+}

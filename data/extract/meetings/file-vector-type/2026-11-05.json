@@ -1,0 +1,51 @@
+{
+  "id": "meeting/file-vector-type/2026-11-05",
+  "_input_hash": "sha256:df0bfb74d7c6e89373c5",
+  "sources": [
+    "meet:file-vector-type:2026-11-05"
+  ],
+  "summary": "The File and Vector Type Sync of 5 November 2026 had two agenda items. Steven asked whether this sync should be consolidated with the weekly v4 sync after this meeting; no answer is recorded. Peter presented float16 test results from a mailing list discussion, which led to a discussion of how narrow element types such as int8 and float16 relate to the Iceberg type system. Ideas noted include spec guidance that lets engines, writers and readers store float32 as float16 physically, uncoupling the element type from the type system, and options ranging from new well-defined types to non-standard annotations or vector-only support, with v5 mentioned. A stated project priority order was spec, interoperability, performance, flexibility. No decision is recorded.",
+  "topics": [
+    {
+      "title": "Consolidating with the weekly v4 sync",
+      "summary": "Steven asked whether this sync should be consolidated with the weekly v4 sync after this meeting. The notes record no answer.",
+      "initiatives": [
+        "vector-type",
+        "file-type",
+        "v4-general",
+        "community-process"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should the file and vector type sync be consolidated with the weekly v4 sync?"
+      ]
+    },
+    {
+      "title": "float16 test results and narrow element types",
+      "summary": "Peter presented float16 test results from the mailing list discussion. The notes mention direct access to vector bytes and the choice between an element type and a generalized encoding. A middle ground was raised: spec guidance letting engines, writers and readers treat float32 as float16 in the physical representation, separating the physical representation from what is captured at table level, with iteration on the physical representation in Parquet. Concerns were that waiting until a file is opened to know the exact type might be too late, and whether the exact width is needed at planning time or is an engine detail affecting memory allocation and math operations. Options listed were adding well-defined types largely for vectors, non-standard annotations that are not interoperable, or vector-only support that could be overly specialized; v5 and catalog labels for extra optimization information were also mentioned. A project priority order of spec, interoperability, performance, flexibility was noted.",
+      "initiatives": [
+        "vector-type",
+        "catalog-labels"
+      ],
+      "refs": [
+        "list:4bwf1khhjnt4t2vgon5qxrvz8bbcg559"
+      ],
+      "open_questions": [
+        "Should narrow element types such as int8 and float16 be added to the type system, expressed as annotations, supported only for vectors, or left to the physical representation?",
+        "Is the exact element width needed at planning time, or is it an engine implementation detail?",
+        "At which level should this be supported: not at all, at the Parquet level, or at the Iceberg schema level?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Steven",
+      "basis": "notes"
+    },
+    {
+      "who": "Peter",
+      "basis": "notes"
+    }
+  ]
+}

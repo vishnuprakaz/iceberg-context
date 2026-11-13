@@ -1,0 +1,54 @@
+{
+  "id": "meeting/index/2026-09-28",
+  "_input_hash": "sha256:d3280ee36213103edf10",
+  "sources": [
+    "meet:index:2026-09-28"
+  ],
+  "summary": "The Index Support Sync notes for 28 September 2026 are a short agenda with no recorded outcomes. Talat listed relaxing the strict global non-overlap rule to allow bounded overlap in region files. Two open questions in the index draft spec were carried over from the previous sync: defining the sort order as a list of field ids, reusing a revamped table sort order definition, and whether to keep the index type field, which the notes' author wants to keep for future index types. The draft index spec pull request was listed for review.",
+  "topics": [
+    {
+      "title": "Relaxing strict global non-overlap in region files",
+      "summary": "Talat listed a topic on relaxing strict global non-overlap by allowing bounded overlap in region files. The notes record no discussion or outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Sort order",
+      "summary": "Carried over: if the table sort order definition is revamped, it could be reused for the index spec, and the suggestion is a list of field ids (identity, materialized, non-materialized). The notes record no discussion or outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Keeping the index type field",
+      "summary": "Carried over: whether to keep the index type field came up again during reviews, and the author of the notes strongly believes it should be kept to accommodate future index types. The notes record no discussion or outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should the index type field be kept in the spec?"
+      ]
+    },
+    {
+      "title": "Review of the current draft",
+      "summary": "The draft index spec pull request was listed for review. The notes record no discussion or outcome.",
+      "initiatives": [
+        "secondary-indexes"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16961"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "talat",
+      "basis": "notes"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "meeting/column-updates/2026-10-06",
+  "_input_hash": "sha256:a8b670f77303a23dae3a",
+  "sources": [
+    "meet:column-updates:2026-10-06"
+  ],
+  "summary": "The Efficient Column Updates Sync of 6 October 2026 is recorded only in AI-generated notes. Gábor is updating the column file metadata pull request to follow the v4 spec, dropping format_version and keeping two snapshot IDs, created and modified. The read-side design was reviewed: a DataFileReadBuilder for data files only, a StitcherRegistry, a StitchLayout map and row-aligned stitching that advances readers to a common row position. The group decided to split the InputFilesDecryptor refactor into its own pull request. For the commit API, Steven proposed a dedicated newUpdateColumns interface or a generic newUpdateFiles interface; the decision was to start with a simple update and append interface, which Anurag will begin implementing.",
+  "topics": [
+    {
+      "title": "Column file metadata and spec simplifications",
+      "summary": "Gábor is updating the column file metadata pull request based on the v4 spec. The changes to simplify the spec are removing format_version and using only two snapshot IDs, created and modified. The TrackingBuilder will set data_sequence_number to null for column file updates, so that the library inherits a new sequence number when manifests are written.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Read-side stitching architecture",
+      "summary": "The notes say the DataFileReadBuilder is approved for data files only, while delete files go directly to the FormatModelRegistry. A StitcherRegistry will manage stitcher implementations, which depend on the internal row representation such as Spark InternalRow, and a StitchLayout map gives field access in stitched rows without moving data. The RowAlignedStitchingIterable aligns readers by advancing them to a common row position, covering initial split offsets and row groups skipped by predicate filtering; the SkippingCloseableIterable that provides advanceToPosition is Parquet-only for now.",
+      "initiatives": [
+        "v4-column-updates",
+        "file-format-api"
+      ],
+      "refs": [],
+      "decisions": [
+        "The DataFileReadBuilder is used for data files only; delete files go directly to the FormatModelRegistry (AI-generated notes)."
+      ]
+    },
+    {
+      "title": "Structure of the read pull request",
+      "summary": "Gábor's read pull request is a chain of commits so it can be reviewed in parts. The meeting decided to split the InputFilesDecryptor refactor into a separate pull request. The stated reason is that this simplifies the initial implementation and gives a clearer reference for ports to Go, C++, Python and Rust.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [],
+      "decisions": [
+        "Split the InputFilesDecryptor refactor into a separate PR (AI-generated notes)."
+      ]
+    },
+    {
+      "title": "Commit API strategy",
+      "summary": "Steven proposed two options for the v4 commit API: a dedicated table.newUpdateColumns() interface, or a generic table.newUpdateFiles() interface that handles column updates first and expands to other operations later. The decision was to proceed with a simple update and append interface first. The reason given is to learn about API concerns for column-only changes, with no row adds or deletes, before integrating into a more complex unified v4 writer.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [],
+      "decisions": [
+        "Proceed with a simple update and append commit interface first (AI-generated notes)."
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Gábor",
+      "what": "Update the column file metadata PR with the spec changes (remove format_version, simplify snapshot IDs)."
+    },
+    {
+      "who": "Gábor",
+      "what": "Split the InputFilesDecryptor refactor into a separate PR."
+    },
+    {
+      "who": "Anurag",
+      "what": "Begin implementing the simple update and append commit API for column-only changes."
+    },
+    {
+      "who": "Ryan",
+      "what": "Review and merge the initial metadata-related PRs."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Gábor",
+      "basis": "notes"
+    },
+    {
+      "who": "Steven",
+      "basis": "notes"
+    },
+    {
+      "who": "Anurag",
+      "basis": "notes"
+    },
+    {
+      "who": "Ryan",
+      "basis": "notes"
+    }
+  ]
+}

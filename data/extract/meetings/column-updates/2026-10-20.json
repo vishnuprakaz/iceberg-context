@@ -1,0 +1,39 @@
+{
+  "id": "meeting/column-updates/2026-10-20",
+  "_input_hash": "sha256:ded263f423351d882f29",
+  "sources": [
+    "meet:column-updates:2026-10-20"
+  ],
+  "summary": "The Efficient Column Updates Sync notes for 20 October 2026 are a short agenda and record no outcomes. Two discussion topics were listed: row timestamp, and allowing column updates on nested types, with a note to start with structs first. Under spec pull requests to review, the notes list the column-update spec follow-up pull request. No speakers, decisions or action items are named in the notes.",
+  "topics": [
+    {
+      "title": "Row timestamp",
+      "summary": "Listed as a discussion topic with no further detail. The notes record no discussion or outcome.",
+      "initiatives": [
+        "v4-column-updates",
+        "v4-row-lineage-timestamps"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Column updates on nested types",
+      "summary": "Listed as a discussion topic: allowing column updates on nested types. The only detail in the notes is to start with structs first. No further discussion or outcome is recorded.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Spec pull request review: column-update spec follow-up",
+      "summary": "The column-update spec follow-up pull request was listed for review. The notes record no discussion or outcome.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16425"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

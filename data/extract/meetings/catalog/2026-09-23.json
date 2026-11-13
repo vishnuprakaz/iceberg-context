@@ -1,0 +1,81 @@
+{
+  "id": "meeting/catalog/2026-09-23",
+  "_input_hash": "sha256:5dd69a9303e232477ea0",
+  "sources": [
+    "meet:catalog:2026-09-23"
+  ],
+  "summary": "The Catalog Community Sync notes for 23 September 2026 are an agenda and record no outcomes. Sung and Prashant listed the REST spec work on pre-signing URLs: optional request and response parameters (plan-id, expiration, signing mechanism) and how a server advertises that it supports pre-signing. Dan listed V4 REST additions. Prashant brought trusted engine support over from the read restriction syncs, asking whether the Iceberg SDK should support the OAuth token exchange flow, with Laurent asking about the state of OAuth Manager v2. Talat asked for review of a pull request about snapshot-loading-mode=refs loading full snapshots.",
+  "topics": [
+    {
+      "title": "REST spec: pre-signing URLs",
+      "summary": "Listed under Sung and Prashant. The questions were which optional parameters to add: on the request a plan-id, either as a property in the sign request or as a separate field, and on the response an expiration and a signing mechanism (remote-signing or remote-presigning). A second question was how the server advertises to the client that it supports pre-signing. The notes record no outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should plan-id be carried in the sign request properties or as a separate field?",
+        "How does the server advertise to the client that it supports pre-signing?"
+      ]
+    },
+    {
+      "title": "V4 REST additions",
+      "summary": "Listed under Dan as a discussion of V4 REST additions. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-spec",
+        "v4-general"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Trusted engine support",
+      "summary": "Listed under Prashant and carried over from the read restriction syncs. The question raised was whether the Iceberg SDK should support the OAuth token exchange flow, and Laurent asked about the state of OAuth Manager v2. The notes record no outcome.",
+      "initiatives": [
+        "read-restrictions",
+        "rest-auth"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should the Iceberg SDK support the OAuth token exchange flow?",
+        "What is the state of OAuth Manager v2?"
+      ]
+    },
+    {
+      "title": "Review request: snapshot-loading-mode=refs loads full snapshots",
+      "summary": "Talat asked for review of a pull request about snapshot-loading-mode=refs loading full snapshots. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-spec"
+      ],
+      "refs": [
+        "gh:apache/iceberg#18073"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review the pull request on snapshot-loading-mode=refs loading full snapshots (apache/iceberg#18073)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Sung",
+      "basis": "notes"
+    },
+    {
+      "who": "Prashant",
+      "basis": "notes"
+    },
+    {
+      "who": "Dan",
+      "basis": "notes"
+    },
+    {
+      "who": "Laurent",
+      "basis": "notes"
+    },
+    {
+      "who": "talat",
+      "basis": "notes"
+    }
+  ]
+}

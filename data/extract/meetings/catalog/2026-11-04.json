@@ -1,0 +1,48 @@
+{
+  "id": "meeting/catalog/2026-11-04",
+  "_input_hash": "sha256:d1f60285c95d5782a639",
+  "sources": [
+    "meet:catalog:2026-11-04"
+  ],
+  "summary": "The Catalog Community Sync notes for 4 November 2026 are an agenda with links and record no outcomes. Alex listed two authentication items: a BearerAuthManager, with a design document, a mailing list thread and a pull request, and a downscoped OAuth2 v2 manager, with its own mailing list thread and pull request. Dhruv asked whether the V4 changes to the Iceberg REST catalog, pointing to two pull requests as examples, should go into a separate branch. No answer to that question is recorded.",
+  "topics": [
+    {
+      "title": "BearerAuthManager and downscoped OAuth2 v2 manager",
+      "summary": "Listed under Alex. The BearerAuthManager item links a design document, a mailing list thread and a pull request; the downscoped OAuth2 v2 manager item links a mailing list thread and a pull request. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-auth"
+      ],
+      "refs": [
+        "doc:1SJpdaQP4cGKWpgUfCuRNeomA0c7c2tDyDtu8MjI5yXk",
+        "gh:apache/iceberg#18754",
+        "gh:apache/iceberg#18756"
+      ]
+    },
+    {
+      "title": "Separate branch for V4 REST catalog changes",
+      "summary": "Dhruv asked whether V4 changes to the Iceberg REST catalog should go into a separate branch, giving two pull requests as examples. The notes record no discussion or outcome.",
+      "initiatives": [
+        "rest-spec",
+        "v4-general"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17642",
+        "gh:apache/iceberg#18782"
+      ],
+      "open_questions": [
+        "Should V4 REST catalog changes go into a separate branch?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "Alex",
+      "basis": "notes"
+    },
+    {
+      "who": "Dhruv",
+      "basis": "notes"
+    }
+  ]
+}
