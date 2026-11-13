@@ -1,6 +1,6 @@
 # Iceberg community knowledge base: design and pipeline plan
 
-Status: **proposal, 2026-11-13 (v2: adds the delivery layer, §7, and the code map).** It builds on the source research in [`research/2026-11-13/`](../research/2026-11-13/).
+Status: **proposal, 2026-11-13 (v3: skill-first delivery, single repo; v2 added the code map).** It builds on the source research in [`research/2026-11-13/`](../research/2026-11-13/).
 
 ## 1. Goal
 
@@ -23,7 +23,7 @@ The system has three parts:
 
 1. A **sync engine** that runs on a schedule.
 2. A **context store** in git, whose source of truth is compiled into a searchable index.
-3. An **access layer** (MCP server, skill and slash commands, packaged as a plugin). See §7.
+3. An **access layer**: a Claude Code **skill** with a small `kb` CLI. See §7. An MCP server is an optional later addition that would wrap the same CLI.
 
 ## 2. How the community actually works (what the research showed)
 
@@ -58,16 +58,17 @@ The structure of the knowledge base follows from this:
 | **Markdown entities + frontmatter edges in git → SQLite (FTS5 + edges table)** | ✓ Diffable, PR-reviewable, readable on GitHub and in Obsidian, provenance via git, zero hosting. Recursive CTEs give graph traversal. It exports to Kuzu/Neo4j/graph views later. |
 | Add embeddings later (sqlite-vec) | Optional, in phase 3, only if full-text search proves insufficient. |
 
-### Repositories
-- **`iceberg-context`** (this repo, public): the curated knowledge base. Entities, meeting and thread records, briefings, the plan, the pipeline code.
-- **`iceberg-context-data`** (new, recommended): raw-but-cleaned captures, kept apart so the knowledge base stays readable.
-  - Contents: monthly JSONL of dev@ messages (emails stripped, quoted text removed), cleaned transcripts with timestamps, Docs meeting sections, PR snapshots, pipeline state.
-  - Estimated size: dev@ since 2018 is about 30–40 MB of text, and the full transcript set about 18 MB. Both are append-only, and months are frozen once closed.
+### One repository: `iceberg-context` (public)
+Everything lives here: the skill, the curated knowledge base, cleaned raw captures (`data/raw/`), sync state (`data/state.json`) and the pipeline code.
+
+- **Size:** raw data is text-only, with emails stripped and quoted replies removed. That is about 30–40 MB for dev@ since 2018 plus about 18 MB of transcripts, and should stay under about 100 MB with full history.
+- **Clones stay fast:** sessions clone shallow, so the growing history costs nothing.
+- **Frozen months:** closed months are frozen and never rewritten.
 
 ## 4. Layered model
 
 ```
-L0  raw capture      (data repo)     immutable, per source, regenerable by collectors
+L0  raw capture      (data/raw/)     immutable, per source, regenerable by collectors
 L1  records          (kb repo)       one page per meeting / dev thread / video / release / vote — "what was said, when, by whom"
 L2  entities (graph) (kb repo)       people, working groups, initiatives, modules, repos, docs — current state + dated timeline
 L3  synthesis        (kb repo)       state-of-iceberg, weekly briefings, opportunities, influence & ownership maps
@@ -223,40 +224,32 @@ kb initiative v4-amt --timeline                     # lifecycle across dev@/sync
 kb upcoming                                         # next syncs + agenda + what to read beforehand
 kb opportunities --area python --level starter
 ```
-- **Publishing the index:** every sync rebuilds `kb.sqlite` and publishes it as a GitHub Release asset tagged `latest` (with dated tags kept for history). Clients download it; nobody needs to build it.
+- **The index is never committed.** The `kb` CLI builds `kb.sqlite` locally from the repo on first use, which takes seconds, and rebuilds it when the repo changes.
 
-## 7. Delivery layer: the "Iceberg Context" plugin (plug-and-play)
+## 7. Delivery layer: the `iceberg-context` skill
 
-| Piece | Role |
-|---|---|
-| **MCP server** `iceberg-context-mcp` (Python, stdio, run with `uvx`) | The connector, usable by any MCP-capable agent. On start it downloads the latest `kb.sqlite` (refreshing it if more than 12 h old) and optionally reads a local checkout for `git log -L`. |
-| **Skill** `iceberg-context` (SKILL.md) | Teaches the agent the workflow: call `context_for_change` before editing, check for open PRs on the same files, cite sources, follow AGENTS.md conventions, and say when something is inferred. |
-| **Slash commands** | `/iceberg-brief` (what's new), `/iceberg-why <path>`, `/iceberg-start` (newcomer onboarding), `/iceberg-opportunities`, `/iceberg-sync` (run a sync now). |
-| **Claude Code plugin** | Bundles the server, skill and commands. This repo is its own plugin marketplace, so installing is one command. |
-| **Context packs** | Generated Markdown digests per area for agents without MCP. |
-| **Hosted MCP (later)** | An HTTP deployment so it can be added as a custom connector in claude.ai chat. |
+**A skill, not a server.** It lives at `.claude/skills/iceberg-context/`, so Claude Code loads it automatically in any session that has this repo attached, through the environment's repository list. People outside cloud sessions can copy the folder to `~/.claude/skills/`. There is no server and no hosting.
 
-### MCP tools
-| Tool | Returns |
-|---|---|
-| `why(path, symbol?)` | The PRs that shaped the code, with their descriptions, review debates, and linked threads, votes and meeting decisions |
-| `context_for_change(paths \| diff)` | Related initiatives and spec sections, open PRs on the same files, active reviewers, recent decisions and conventions |
-| `whats_new(since, area?)` | A change digest across all sources |
-| `initiative(name)` | Status, champions, and a timeline across issue, docs, syncs, votes, PRs and releases |
-| `person(login)` | Public roles, areas, reviews and championed initiatives |
-| `who_to_ask(path \| topic)` | Owners, active reviewers, and the right working group or sync |
-| `search(query, types?)` | Full-text and graph search |
-| `get_source(id)` | The exact quote and permalink behind a claim (mail, notes section, video timestamp, PR comment) |
-| `upcoming()` | Next syncs, agendas, and what to read first |
-| `opportunities(filter)` | Ranked contribution opportunities |
+```
+.claude/skills/iceberg-context/
+  SKILL.md        when to use it + the workflow below
+  scripts/kb      CLI over the repo (builds kb.sqlite locally on first use)
+```
 
-- **Resources:** `state-of-iceberg`, `briefing/latest`, `process/how-decisions-are-made`.
-- **Citations and confidence:** every tool result includes `sources[]` and a confidence label (observed / extracted / inferred).
+### Agent workflow (encoded in SKILL.md)
+1. **At session start:** `kb status` shows when each source last synced and what's new since then.
+2. **Before changing code:**
+   - `kb context <paths>`: related initiatives and spec sections, open PRs on the same files, active reviewers, recent decisions, conventions.
+   - `kb why <path> [--symbol X]`: the PRs that shaped the code, their review debates, and the linked threads, votes and meetings.
+3. **For project or community questions:** `kb search`, `kb initiative <name>`, `kb person <login>`, `kb who-to-ask <path|topic>`, `kb whats-new --since`, `kb upcoming`, `kb opportunities [--level starter] [--area python]`.
+4. **To prove a claim:** `kb source <id>` prints the exact quote and permalink. Every answer cites sources and labels its confidence (observed / extracted / inferred).
+5. **When asked to "sync now":** run the pipeline on demand (§6).
 
-### Installing it
-- **Claude Code:** add this repo as a plugin marketplace, then install the plugin. In cloud sessions, the environment's setup script installs it.
-- **Cursor, Codex, other MCP clients:** `uvx iceberg-context-mcp` as a stdio server.
-- **Our fork repos:** are never modified for this; the config stays user- or environment-level.
+New contributors start from `state-of-iceberg.md` and `kb opportunities --level starter`.
+
+### Optional later
+- An MCP server wrapping the same CLI, for Cursor, Codex or claude.ai chat.
+- Context packs: generated per-area Markdown for agents without skills.
 
 ## 8. Collaboration ("update on the go")
 - **Friends:** they become collaborators on both repos and add `iceberg-context` to their own Claude environments. The CLAUDE.md loads automatically and tells every session to read `state-of-iceberg.md` first.
@@ -278,12 +271,12 @@ kb opportunities --area python --level starter
 
 | Phase | Scope | Deliverables |
 |---|---|---|
-| **0: Foundation** | repo skeleton; schemas; `people/aliases.yaml` seeded from the research; productionize the prototype collectors; code map; `build_index.py` and the `kb` CLI; CI validators; **a thin MCP server early** (search / why / get_source) so we use it from day 1 | a working pipeline we can already query |
+| **0: Foundation** | repo skeleton; schemas; `people/aliases.yaml` seeded from the research; productionize the prototype collectors; code map; `build_index.py` and the `kb` CLI; CI validators; **the skill with a minimal `kb`** (status / search / why / source) so we use it from day 1 | a working pipeline we can already query |
 | **1: Seed** (from the 2026-11-13 research) | governance, people (PMC, committers, top 60 contributors), 14 working groups, about 20 active initiatives, module ownership maps, first `state-of-iceberg.md` and `opportunities.md` | a useful KB on day 1 |
 | **2: Backfill (6 months)** | meetings from May to Nov 2026 (notes plus about 80 transcripts), dev@ threads (DISCUSS/VOTE/RESULT), notable PRs, releases | the full recent picture, with timelines |
 | **3: Automation** | GitHub Actions daily collectors; scheduled Claude session weekly (Mon morning IST): docs, calendar, YouTube, LLM extraction, briefing | self-updating KB with a weekly briefing |
-| **4: Plugin v1** | MCP server (`why`, `context_for_change`, `whats_new`, `search`, `get_source`, `who_to_ask`, `upcoming`, `opportunities`), skill, slash commands, plugin packaging, release-asset publishing | plug-and-play for any agent |
-| **5: Depth** | dev@ back to 2018 (DISCUSS/VOTE threads only), older syncs (index-level, summarize on demand), git evolution per module, influence and collaboration analytics, context packs, static site and graph view, hosted MCP | history and the "how did we get here" layer |
+| **4: Skill v1** | the full `kb` command set (`context`, `whats-new`, `initiative`, `person`, `who-to-ask`, `upcoming`, `opportunities`), polished SKILL.md workflow, a newcomer onboarding path | plug-and-play for Claude Code agents |
+| **5: Depth** | dev@ back to 2018 (DISCUSS/VOTE threads only), older syncs (index-level, summarize on demand), git evolution per module, influence and collaboration analytics, context packs, static site and graph view, optional MCP server | history and the "how did we get here" layer |
 
 **Rough effort:**
 - Phases 0–1: one or two working sessions.
@@ -291,8 +284,7 @@ kb opportunities --area python --level starter
 - After that: about one session-hour a week.
 
 ## 11. Decisions needed
-1. **Create `vishnuprakaz/iceberg-context-data`?** (Public is fine since emails are stripped; private also works.) Recommended.
-2. **Allow GitHub Actions** on `iceberg-context` for the daily deterministic collectors?
-3. **Weekly scheduled session:** Monday 08:00 IST? Plus an optional mid-week light run (dev@ and GitHub only, no LLM).
-4. **Backfill depth for LLM summaries:** 6 months (recommended), then deepen on demand.
-5. **Scope:** Java and PyIceberg in depth. Rust, Go and C++ at the initiative and release level only. Polaris and Arrow out of scope except where they link in.
+1. **Allow GitHub Actions** on `iceberg-context` for the daily deterministic collectors?
+2. **Weekly scheduled session:** Monday 08:00 IST? Plus an optional mid-week light run (dev@ and GitHub only, no LLM).
+3. **Backfill depth for LLM summaries:** 6 months (recommended), then deepen on demand.
+4. **Scope:** Java and PyIceberg in depth. Rust, Go and C++ at the initiative and release level only. Polaris and Arrow out of scope except where they link in.
