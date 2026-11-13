@@ -1,0 +1,38 @@
+{
+  "id": "thread/t-003a5548469ee105",
+  "_input_hash": "sha256:5ae9d8573c8b7ec2a80f",
+  "sources": [
+    "devlist:o7tzt04by73l0hpjd58t2wgvl4ct9lrc",
+    "devlist:lln7l68m6kl5l7lclorqp18z8cgk1yf6",
+    "devlist:z6rtyds23g81hwgpxjgcjl4yv5zhzdpl"
+  ],
+  "title": "First-class primary key tables in Apache Iceberg",
+  "summary": "Chandra Sekhar K opened a discussion on adding a native primary-key table abstraction to Iceberg for CDC ingestion, streaming upserts and changelog consumption. He argued that identifier fields, equality deletes, position deletes and MERGE are low-level primitives that leave write semantics, storage layout, compaction and changelog generation to engine-specific solutions, and pointed to Apache Paimon's primary-key tables as prior art. Matt Butrovich pointed him to the existing constraints proposal, which covers PRIMARY KEY, and asked him to see where his ideas fit. After reading it, Chandra replied that the constraint proposal treats PRIMARY KEY and UNIQUE as informational metadata with enforcement and mutable-data semantics out of scope, and that he sees his work as complementary: the key metadata could be the foundation for optional primary-key table semantics. No one else replied and nothing was decided.",
+  "positions": [
+    {
+      "who": "chandra sekhar k",
+      "stance": "Iceberg should standardize a primary-key table abstraction so CDC and upsert workloads do not depend on engine-specific solutions.",
+      "source": "devlist:o7tzt04by73l0hpjd58t2wgvl4ct9lrc"
+    },
+    {
+      "who": "mbutrovich",
+      "stance": "The idea should be brought to the existing constraints proposal, which already covers PRIMARY KEY.",
+      "source": "devlist:lln7l68m6kl5l7lclorqp18z8cgk1yf6"
+    },
+    {
+      "who": "chandra sekhar k",
+      "stance": "The constraints proposal and primary-key table semantics are complementary: one standardizes the metadata, the other would build write, compaction and changelog behaviour on it.",
+      "source": "devlist:z6rtyds23g81hwgpxjgcjl4yv5zhzdpl"
+    }
+  ],
+  "outcome": {
+    "status": "no-conclusion",
+    "note": "The proposer was redirected to the constraints proposal and described his work as complementary to it; there was no further discussion."
+  },
+  "initiatives": [
+    "constraints"
+  ],
+  "refs": [
+    "doc:1re65fx3uqC7I_tJuS79IxLiB7HEN2Grt5qRIDjd3p-4"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "thread/t-7111d9ac329a3767",
+  "_input_hash": "sha256:96d922e5a80edb7036f9",
+  "sources": [
+    "devlist:kf6cbb2lyjxcrno17q0wkb2k2hzglb52",
+    "devlist:r3lgp5gldctk8pcnfbhx8mgptvhj0wo6"
+  ],
+  "title": "Vote: REST spec labels on the IRC read path",
+  "summary": "This thread is a vote on a REST catalog spec change that adds labels on the Iceberg REST catalog read path. The opening message with the proposal is not in the bundle, so the details of the change are not available here; the replies credit Andrei with driving the work. The five messages captured are all +1 votes. Ryan Blue gave a reason for his vote: it is good to have a way to expose catalog metadata that does not require overriding or reserving table properties. The captured thread contains no message announcing the result of the vote.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Votes +1 because labels give a way to expose catalog metadata without overriding or reserving table properties.",
+      "source": "devlist:r3lgp5gldctk8pcnfbhx8mgptvhj0wo6"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the captured thread. Votes shown: 5 +1, of which 4 binding and 1 non-binding."
+  },
+  "initiatives": [
+    "catalog-labels"
+  ],
+  "refs": []
+}

@@ -1,0 +1,43 @@
+{
+  "id": "thread/t-8d54c4be3c9cc0d5",
+  "_input_hash": "sha256:8a2ca06b1770c9592d26",
+  "sources": [
+    "devlist:njo5bzgf4m126ly74ydz1pfznhz70h38",
+    "devlist:2jhtld60lm9b0r2ook9zn686gdwqtn13",
+    "devlist:gzmv8njn8pn8f8tq9f929cs2f1bhy7k8",
+    "devlist:bxvq7g3f489dvbwqp200vvdnql652pwv",
+    "devlist:kcpo7qvlhhq949rmfgbx0oq7bk55vx74"
+  ],
+  "title": "Vote: align REST OpenAPI expressions with the Iceberg expression specification",
+  "summary": "Prashant Singh called a vote to adopt PR #17138, which updates the REST catalog OpenAPI specification so that its expression schemas match the expression grammar defined in the Iceberg expression specification (PR #16652). The vote was to stay open for at least 72 hours. Junwang Zhao posted a review comment about the changes to required fields; Prashant replied that the comment had been answered on the PR, and Junwang later voted +1. Ryan Blue voted +1 and said the change fixes scan planning filters and supports new features such as check constraints. All other replies were +1 votes. The thread as captured does not include a message announcing the result.",
+  "positions": [
+    {
+      "who": "singhpk234",
+      "stance": "Adopt the OpenAPI change so REST expression schemas align with the expression specification grammar.",
+      "source": "devlist:njo5bzgf4m126ly74ydz1pfznhz70h38"
+    },
+    {
+      "who": "zhjwpku",
+      "stance": "Raised a review comment on the PR about the changes to required fields.",
+      "source": "devlist:2jhtld60lm9b0r2ook9zn686gdwqtn13"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Votes +1; the change fixes up scan planning filters and supports new features like check constraints.",
+      "source": "devlist:bxvq7g3f489dvbwqp200vvdnql652pwv"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. Votes cast: 14 +1, of which 3 marked binding, 9 marked non-binding and 2 unmarked; no 0 or -1."
+  },
+  "initiatives": [
+    "expressions-spec",
+    "rest-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17138",
+    "gh:apache/iceberg#16652"
+  ],
+  "why_it_matters": "REST catalog servers and clients that exchange filter expressions, for example in scan planning, will follow the shared expression grammar."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "thread/t-5cba9bc4818eb482",
+  "_input_hash": "sha256:a2bdd84a0429e4a54d34",
+  "sources": [
+    "devlist:75xs4trcgcpog8b2zoxpknf8bq6vfk4c",
+    "devlist:sjygcysmx0knc6vyqh89q5hbkv0y1djy"
+  ],
+  "title": "Vote: add specific-name to the UDF spec",
+  "summary": "Szehon Ho started a vote to add a specific-name field to the UDF spec (PR #16727). The field identifies a specific overload of a UDF and supports the corresponding concept from the SQL spec. The vote was open for 72 hours. All replies in the thread were +1 votes and no questions or concerns about the change were raised there. Szehon added his own binding +1 before closing, and then announced that the vote passed with 5 binding +1 votes, 4 non-binding +1 votes, and no 0 or -1 votes.",
+  "positions": [
+    {
+      "who": "szehon-ho",
+      "stance": "Add a specific-name field that identifies a specific UDF overload, matching the SQL spec concept.",
+      "source": "devlist:75xs4trcgcpog8b2zoxpknf8bq6vfk4c"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:sjygcysmx0knc6vyqh89q5hbkv0y1djy",
+    "note": "Passed with 5 binding and 4 non-binding +1 votes, and no 0 or -1 votes."
+  },
+  "initiatives": [
+    "udf"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16727"
+  ],
+  "why_it_matters": "UDF overloads in the spec can be addressed individually by specific-name."
+}

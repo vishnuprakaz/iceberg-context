@@ -1,0 +1,50 @@
+{
+  "id": "thread/t-449e67b8e640cd82",
+  "_input_hash": "sha256:9e2bf8f28edf5fcb23c8",
+  "sources": [
+    "devlist:k3rqkf2k7zcxh9ggboblymynkzf3m61c",
+    "devlist:5r2419sqw2wdf5pcq8rh4r4n56q2hj1l",
+    "devlist:8c9ztyo3nq1wd6cjn9nvfbjf578flgko",
+    "devlist:hwzx0xcq64lc60hv7v9mo9yy0y7oxcdt",
+    "devlist:1mzshyr7mk9r28dvxbjw71nwn3dplwt1"
+  ],
+  "title": "Iceberg Rust: moving the DataFusion integration into a separate repository",
+  "summary": "Gabriel Musat noted that reviewer bandwidth is slowing the iceberg-datafusion crate in apache/iceberg-rust, while keeping the crate in that repository has value for testing, design and governance. He proposed giving a couple of Apache DataFusion PMC members committer access limited to that crate through a CODEOWNERS file. Renjie Liu was unsure that is feasible and said testing should not block a move; he preferred moving the crate to the Apache DataFusion project, since most of the code relates to DataFusion. Xuanwo and Andy Grove supported moving it under the DataFusion PMC, noting Comet is the largest downstream user. Andrew Lamb, DataFusion PMC chair, saw consensus on moving the code to DataFusion governance within the ASF and proposed a process: create a new Apache repository, open a PR with the code, then hold formal votes on the Iceberg and DataFusion dev lists. The thread ends with that proposal.",
+  "positions": [
+    {
+      "who": "Gabriel Musat",
+      "stance": "Keep iceberg-datafusion in apache/iceberg-rust but grant DataFusion PMC members committer access scoped to the crate via CODEOWNERS.",
+      "source": "devlist:k3rqkf2k7zcxh9ggboblymynkzf3m61c"
+    },
+    {
+      "who": "liurenjie1024",
+      "stance": "Moving the crate to the Apache DataFusion project is more reasonable than scoped access, and testing should not block the move.",
+      "source": "devlist:5r2419sqw2wdf5pcq8rh4r4n56q2hj1l"
+    },
+    {
+      "who": "Xuanwo",
+      "stance": "Supports moving to the DataFusion PMC if it accepts the project, since DataFusion is the largest dependency and Comet the largest downstream user.",
+      "source": "devlist:8c9ztyo3nq1wd6cjn9nvfbjf578flgko"
+    },
+    {
+      "who": "andygrove",
+      "stance": "Supports moving to the DataFusion PMC; the integration is very important for Comet.",
+      "source": "devlist:hwzx0xcq64lc60hv7v9mo9yy0y7oxcdt"
+    },
+    {
+      "who": "Andrew Lamb",
+      "stance": "Proposes creating a new Apache repository, a PR with the code, and formal votes on both the Iceberg and DataFusion dev lists.",
+      "source": "devlist:1mzshyr7mk9r28dvxbjw71nwn3dplwt1"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "source": "devlist:1mzshyr7mk9r28dvxbjw71nwn3dplwt1",
+    "note": "Respondents favoured moving the integration to DataFusion governance within the ASF; a process with a new repository and votes on both dev lists was proposed but not yet carried out in the thread."
+  },
+  "initiatives": [
+    "iceberg-rust"
+  ],
+  "refs": [],
+  "why_it_matters": "If carried out, DataFusion integration changes would be reviewed and released under the DataFusion project instead of apache/iceberg-rust."
+}

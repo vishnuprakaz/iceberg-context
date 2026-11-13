@@ -60,7 +60,7 @@
     },
     {
       "title": "Agenda items without notes",
-      "summary": "Four further agenda items were listed without notes: the strategy for describing the Parquet representation before the Parquet pull request is merged, the strategy for describing Avro while treating it as a non-blocker, schema evolution, and sort order.",
+      "summary": "Four further agenda items were listed without notes. They were the strategy for describing the Parquet representation before the Parquet pull request is merged, the strategy for describing Avro while treating it as a non-blocker, schema evolution, and sort order.",
       "initiatives": [
         "vector-type"
       ],

@@ -1,0 +1,36 @@
+{
+  "id": "thread/t-2625714567b6a82f",
+  "_input_hash": "sha256:287e2bec96b38ae9adc1",
+  "sources": [
+    "devlist:6wfmjhgthlykwbk3f7df4zgcm40xtm2o",
+    "devlist:v2mb8kmfzv887xbq9dzyxsbmqy6chbvq",
+    "devlist:d073g6cknzzrtp8lnfjszp71z0t2x8sv",
+    "devlist:6y5pfzx7nlc1wlm21l0l6k03zopqw6nx"
+  ],
+  "title": "Vote: adopt the expressions spec",
+  "summary": "Ryan Blue started a vote to adopt a new expressions spec (PR #16652). The spec defines the minimal structure and behaviour of expressions that Iceberg formats need to store and exchange. Its stated purposes are to clean up the expressions used in the REST catalog spec for exchanging query filters, and to enable use cases that store expressions in metadata, including expression defaults such as current_timestamp() and CHECK constraints. The vote was open for 72 hours. Every reply in the thread is a +1; Gang Wu and Junwang Zhao mentioned minor review comments that they did not consider blocking. The thread as captured contains no message announcing the result.",
+  "positions": [
+    {
+      "who": "rdblue",
+      "stance": "Adopt the expressions spec to clean up REST filter expressions and to allow expressions stored in metadata, such as default expressions and CHECK constraints.",
+      "source": "devlist:6wfmjhgthlykwbk3f7df4zgcm40xtm2o"
+    },
+    {
+      "who": "zhjwpku",
+      "stance": "Votes +1 and would like the minor review comments addressed, though they are not blocking.",
+      "source": "devlist:d073g6cknzzrtp8lnfjszp71z0t2x8sv"
+    }
+  ],
+  "outcome": {
+    "status": "open",
+    "note": "No result message is in the thread. Votes cast: 18 +1, of which 5 binding and 13 non-binding; no +0 or -1."
+  },
+  "initiatives": [
+    "expressions-spec"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16652",
+    "doc:1VthBz0S2I39TeQM8oiF9_gSPQu_gHAjWXvdFpv0QqDk"
+  ],
+  "why_it_matters": "The expressions spec is the basis for default value expressions, CHECK constraints and consistent REST filter expressions."
+}

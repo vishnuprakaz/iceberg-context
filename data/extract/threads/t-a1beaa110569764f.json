@@ -1,0 +1,59 @@
+{
+  "id": "thread/t-a1beaa110569764f",
+  "_input_hash": "sha256:ed2b34fd52026d62d3d2",
+  "sources": [
+    "devlist:nh8zy6s9kbhd5mvcctfhl71jzgcc1krs",
+    "devlist:1rsv46wrdtbgq65p05wtk158py54chqv",
+    "devlist:nx0fv7991kv1k3vk8w9lj1ohfx90wv1b",
+    "devlist:5mwjy0mr3yj7z34qkkrrk6mj82dmbt7m",
+    "devlist:r0fx25d4phv6b632jmqfhtb3np7mg00x",
+    "devlist:326gz77wzgcw3gb325214fgq8nmfgs7q",
+    "devlist:ryzp0rk199cvbl8kyl20vctxm22bld6r",
+    "devlist:jbtw1zk7w7qk77bo7dr1h87nmj6zon3o",
+    "devlist:lvn943zlk343vv1gg1jxvgy2h8xh5833"
+  ],
+  "title": "1.11.1 and 1.10.3 patch releases",
+  "summary": "The body of the opening message is not in the bundle; the replies show a proposal for 1.11.1 and 1.10.3 patch releases built around a v3 correctness fix (PR #16699). Everyone who replied supported both releases. Amogh Jahagirdar created a 1.10.3 milestone and added a fix that preserves encryption metadata when DVs change (PR #15911) and a default-value fix for evaluation against Parquet metrics (PR #16692); he also reported the 1.11.x branch had been created. Matt Butrovich offered a fix for manifest delete file size after table rewrite (PR #15470) as a backport candidate for both lines. Kevin Liu asked to fix the iceberg-rest-fixture Docker image in 1.11.x (PR #16214). On milestones, Amogh said every fix going into 1.10.3 should also go into 1.11.1, while fixes that are not critical correctness issues should go only into 1.11.",
+  "positions": [
+    {
+      "who": "huaxingao",
+      "stance": "Supports both releases; the fix is a contained v3 correctness fix and v3 correctness fixes should keep being backported to 1.10.",
+      "source": "devlist:1rsv46wrdtbgq65p05wtk158py54chqv"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Supports both patch lines and wants the iceberg-rest-fixture Docker image fixed in 1.11.x so publishing can be re-enabled.",
+      "source": "devlist:nx0fv7991kv1k3vk8w9lj1ohfx90wv1b"
+    },
+    {
+      "who": "amogh-jahagirdar",
+      "stance": "Include the fix preserving encryption metadata for DV changes in 1.10.3, because the issue amounts to producing incorrect V3 metadata.",
+      "source": "devlist:5mwjy0mr3yj7z34qkkrrk6mj82dmbt7m"
+    },
+    {
+      "who": "mbutrovich",
+      "stance": "The fix for manifest delete file size after table rewrite is a backport candidate for both 1.10.x and 1.11.x.",
+      "source": "devlist:326gz77wzgcw3gb325214fgq8nmfgs7q"
+    },
+    {
+      "who": "amogh-jahagirdar",
+      "stance": "Everything patched into 1.10.3 should be in 1.11.1, but non-critical fixes should go only to 1.11 to limit the backport burden.",
+      "source": "devlist:jbtw1zk7w7qk77bo7dr1h87nmj6zon3o"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "All replies supported doing both 1.11.1 and 1.10.3; a 1.10.3 milestone and the 1.11.x branch were created and candidate fixes were being collected. No release candidate is announced in the thread."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": [
+    "gh:apache/iceberg#16699",
+    "gh:apache/iceberg#16214",
+    "gh:apache/iceberg#15911",
+    "gh:apache/iceberg#16692",
+    "gh:apache/iceberg#15470"
+  ],
+  "why_it_matters": "It sets the backport rule for the two patch lines: critical correctness fixes go to both 1.10.x and 1.11.x, other fixes only to 1.11.x."
+}

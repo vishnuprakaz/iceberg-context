@@ -1,0 +1,29 @@
+{
+  "id": "thread/t-824f8a51f5314747",
+  "_input_hash": "sha256:0d6d54479cab6ba11dea",
+  "sources": [
+    "devlist:26g46qtgy3nr435wdg5wh53q48k17zo3",
+    "devlist:g845vlpb0qwk7dcvf0y136o5xdnocb3g",
+    "devlist:xm13t1xp519yr28169cy2hzsoxmxc41b",
+    "devlist:8zqv1lvfgj35wnlotpwpt67dwvlxkw8m",
+    "devlist:xcgc68wcjsffmbr8bczv8n9t8zn9q7d5"
+  ],
+  "title": "Vote: release Apache Iceberg 1.12.0 RC2",
+  "summary": "This is the vote on release candidate 2 of Apache Iceberg 1.12.0; the body of the opening message is not in the bundle. Three binding +1 votes are recorded. Kevin Liu verified signatures, checksums and licenses, ran the build and tests, ran examples on Spark and ran the candidate against the PyIceberg CI. He noted that LICENSE and NOTICE looked good after recent fixes, and that an automated scan had flagged a few correctness issues that also exist in 1.11 or earlier and that he did not consider release blockers. Szehon Ho checked signatures, licenses and the tag and ran a local Spark 4.2.0 test. Amogh Jahagirdar ran build, test and integration tests against RustFS. Neelesh Salian then announced that the voting had concluded and passed, with an official result email to follow.",
+  "positions": [
+    {
+      "who": "kevinjqliu",
+      "stance": "Votes +1 binding after verification; correctness issues flagged by a scan predate 1.12 and are not release blockers.",
+      "source": "devlist:g845vlpb0qwk7dcvf0y136o5xdnocb3g"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:xcgc68wcjsffmbr8bczv8n9t8zn9q7d5",
+    "note": "The vote was announced as concluded and passed; no tally is given in that message. The thread shows three binding +1 votes."
+  },
+  "initiatives": [
+    "java-releases"
+  ],
+  "refs": []
+}

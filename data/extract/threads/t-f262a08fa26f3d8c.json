@@ -1,0 +1,48 @@
+{
+  "id": "thread/t-f262a08fa26f3d8c",
+  "_input_hash": "sha256:d3dea2099ac627ed7daa",
+  "sources": [
+    "devlist:rx0tcnqkq0nzj1phwo64ng79pp51hzf9",
+    "devlist:s2649vlgw3xxr2bjptszvv5cgslrgm0p",
+    "devlist:tqkdm8kvswyo2gzsgbx0qbvwyc3rmsmc",
+    "devlist:v978p1foozlhv7srtzbo6sgnhg80d4cf",
+    "devlist:xd4pbvqxdgtd90vmnk0stbd3xgdcbmwq",
+    "devlist:jkdn54z62d7lzgfm2mw8qqxmrkkwt0w9"
+  ],
+  "title": "Vote: add key-id to table and partition statistics and deprecate key-metadata",
+  "summary": "Gábor Kaszab called a vote on a spec change (PR #17533) to deprecate the raw key-metadata field in table statistics, which he considered insecure because table metadata is not encrypted, and to add a key-id field to table and partition statistics that points to an encrypted key in the encryption-keys list. Several +1 votes followed. Ryan Blue voted -0: the PR's new v4 column disallowed key-metadata, which would force v3 statistics keys to be relocated on upgrade, and the keys table was meant for a few reused keys rather than one per file; he suggested leaving existing keys in place and adding an optional key-id. Gábor argued key-metadata is a security bug that should go. Gidon Gershinsky said other implementations may use key-metadata safely, so keeping it and adding key-id is practical. Gábor accepted this, updated the PR and said he would open another vote thread.",
+  "positions": [
+    {
+      "who": "Gábor Kaszab",
+      "stance": "Raw key-metadata in unencrypted table metadata is not secure; deprecate it and add key-id pointing into encryption-keys, as for manifest lists.",
+      "source": "devlist:rx0tcnqkq0nzj1phwo64ng79pp51hzf9"
+    },
+    {
+      "who": "rdblue",
+      "stance": "Voted -0: do not tie key relocation to the v4 upgrade or require per-file keys to move; keep existing keys where they are and add an optional key-id.",
+      "source": "devlist:s2649vlgw3xxr2bjptszvv5cgslrgm0p"
+    },
+    {
+      "who": "Gábor Kaszab",
+      "stance": "The Java implementation does not write key-metadata for stats, and it should be treated as a security bug to remove rather than an existing feature to keep.",
+      "source": "devlist:tqkdm8kvswyo2gzsgbx0qbvwyc3rmsmc"
+    },
+    {
+      "who": "Gidon Gershinsky",
+      "stance": "Other implementations may use key-metadata without exposing a cleartext key, so leaving it in place and adding key-id is fine.",
+      "source": "devlist:xd4pbvqxdgtd90vmnk0stbd3xgdcbmwq"
+    }
+  ],
+  "outcome": {
+    "status": "withdrawn",
+    "source": "devlist:jkdn54z62d7lzgfm2mw8qqxmrkkwt0w9",
+    "note": "No result was announced. Votes cast were five +1 (one marked binding, one non-binding, three unmarked) and one -0 from Ryan Blue. Gábor updated the PR to keep key-metadata and add key-id as an alternative, and said he would open a new vote thread."
+  },
+  "initiatives": [
+    "v4-encryption"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17533"
+  ],
+  "why_it_matters": "The statistics-file key change did not pass in this form, and a revised proposal that keeps key-metadata is expected in a later vote."
+}

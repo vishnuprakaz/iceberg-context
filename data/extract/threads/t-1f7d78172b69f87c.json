@@ -1,0 +1,63 @@
+{
+  "id": "thread/t-1f7d78172b69f87c",
+  "_input_hash": "sha256:56984afc4da3ac4abbed",
+  "sources": [
+    "devlist:sk1j4jo6s7ntr880tt7ktdt636nwzt5n",
+    "devlist:qjh49hdw99q86q913t411cb3ccgr1dl6",
+    "devlist:gfz72s9ng8swxd9wc7fy0mjmv6x2n678",
+    "devlist:k99pgdprd4q7c7jmv0lrhdb5gzbhdr02",
+    "devlist:nosxgctwkh8hd2rjw46cxxrxgzdj098h",
+    "devlist:s0gtgdwmhqd6jh5sxsywg66yq4qq2rht",
+    "devlist:589byrnmfwfovbpl7ohko9b75jf3y3v3"
+  ],
+  "title": "Changing the default append mode for Spark Streaming in Iceberg Java 1.13",
+  "summary": "Amogh Jahagirdar proposed that Spark Streaming writes switch from fast append to merging append by default in Iceberg 1.13. Fast append adds one small manifest per commit, which accumulates many tiny manifests and needs aggressive manifest rewriting to keep reads healthy; Flink and Kafka Connect already use merging append. A Spark write conf for the append mode was added in PR #17403 and defaults to fast append in 1.12 so users have time to adjust. Russell Spitzer asked for latency numbers and whether merging could be triggered heuristically. Gianluca Graziadei asked for p99 and maximum commit latency, since periodic merge spikes could exceed a micro-batch trigger interval. Daniel Weeks argued benchmarking is not needed because Flink and Kafka Connect are reference points, and Russell accepted that. Kevin Liu supported the change and said he would file a ticket for PyIceberg, which also uses fast append.",
+  "positions": [
+    {
+      "who": "amogh-jahagirdar",
+      "stance": "Flip the Spark streaming default to merging append in 1.13; fast append is not a good default, and other client libraries should re-evaluate their use of it.",
+      "source": "devlist:sk1j4jo6s7ntr880tt7ktdt636nwzt5n"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Makes sense, but asks for latency numbers and whether merging could switch on automatically based on the number of small manifests.",
+      "source": "devlist:qjh49hdw99q86q913t411cb3ccgr1dl6"
+    },
+    {
+      "who": "GGraziadei",
+      "stance": "Supports it in principle but wants tail commit latency data and consideration of jittering merge thresholds so pipelines do not spike in phase.",
+      "source": "devlist:gfz72s9ng8swxd9wc7fy0mjmv6x2n678"
+    },
+    {
+      "who": "danielcweeks",
+      "stance": "Make the change without benchmarking; Flink and Kafka Connect already default to merging append and inline metadata management is better.",
+      "source": "devlist:k99pgdprd4q7c7jmv0lrhdb5gzbhdr02"
+    },
+    {
+      "who": "RussellSpitzer",
+      "stance": "Consistency with other engines is reasonable; longer term a default that does several fast appends and then a merge could be considered.",
+      "source": "devlist:nosxgctwkh8hd2rjw46cxxrxgzdj098h"
+    },
+    {
+      "who": "Hongyue Zhang",
+      "stance": "table.newAppend in iceberg-core already defaults to merge append, so using fast append is what needs justification.",
+      "source": "devlist:s0gtgdwmhqd6jh5sxsywg66yq4qq2rht"
+    },
+    {
+      "who": "kevinjqliu",
+      "stance": "Supports the change, since users can still opt in to fast append, and will file a ticket to switch PyIceberg to merge append.",
+      "source": "devlist:589byrnmfwfovbpl7ohko9b75jf3y3v3"
+    }
+  ],
+  "outcome": {
+    "status": "consensus",
+    "note": "All replies supported flipping the default to merging append in 1.13; the request for latency benchmarks was not treated as a blocker. No formal decision message was posted."
+  },
+  "initiatives": [
+    "spark-integration"
+  ],
+  "refs": [
+    "gh:apache/iceberg#17403"
+  ],
+  "why_it_matters": "Spark Structured Streaming jobs that depend on one manifest per commit will need to set the write conf explicitly after upgrading to 1.13."
+}

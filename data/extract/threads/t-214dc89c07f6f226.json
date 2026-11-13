@@ -1,0 +1,35 @@
+{
+  "id": "thread/t-214dc89c07f6f226",
+  "_input_hash": "sha256:594b9792e5cd6a7ee3f4",
+  "sources": [
+    "devlist:dqlgo3rmz1tnshx0bgk2cv4qm1h06k2n",
+    "devlist:ykt65mov2zfql52jqlwyjmn8txs54j21",
+    "devlist:g9t1mcb7qzbrb3wh64mfg07txg54roro"
+  ],
+  "title": "Vote: add relative paths to the v4 spec",
+  "summary": "Daniel Weeks started a vote to add relative paths to the v4 table spec as defined in PR #15630. He stated that the vote confirms the agreed direction for relative paths in v4 and that changes can still happen until the v4 spec is finalized. The vote ran for 72 hours. All replies were +1 votes; Anoop Johnson said the proposal is very useful for disaster recovery use cases, and one voter left a minor comment on the PR. Daniel Weeks closed the vote as passed with 7 binding and 12 non-binding +1 votes and no +0 or -1 votes, and said he would merge the PR so the implementation could be iterated on.",
+  "positions": [
+    {
+      "who": "danielcweeks",
+      "stance": "Add relative paths to the v4 spec; the vote confirms the direction while details can still change until v4 is finalized.",
+      "source": "devlist:dqlgo3rmz1tnshx0bgk2cv4qm1h06k2n"
+    },
+    {
+      "who": "anoopj",
+      "stance": "Supports the change as very useful for disaster recovery use cases.",
+      "source": "devlist:ykt65mov2zfql52jqlwyjmn8txs54j21"
+    }
+  ],
+  "outcome": {
+    "status": "passed",
+    "source": "devlist:g9t1mcb7qzbrb3wh64mfg07txg54roro",
+    "note": "Passed with 7 binding and 12 non-binding +1 votes, and no +0 or -1 votes. The PR was to be merged."
+  },
+  "initiatives": [
+    "v4-relative-paths"
+  ],
+  "refs": [
+    "gh:apache/iceberg#15630"
+  ],
+  "why_it_matters": "Relative paths are now part of the v4 spec direction, so v4 implementations need to resolve paths against the table location."
+}

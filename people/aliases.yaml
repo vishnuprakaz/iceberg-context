@@ -38,6 +38,7 @@ people:
   adutra:
     names:
     - Alexandre Dutra
+    - Alex Dutra
     verified: false
   afeldman1:
     names:
@@ -218,6 +219,10 @@ people:
     names:
     - Daksh Dave
     verified: false
+  bitsondatadev:
+    names:
+    - Brian Olsen
+    verified: false
   bmorck:
     names:
     - Bobby Morck
@@ -238,6 +243,7 @@ people:
   c-thiel:
     names:
     - Christian
+    - Christian Thiel
     verified: false
   c2zwdjnlcg:
     names: []
@@ -258,6 +264,10 @@ people:
     verified: false
   chenjian2664:
     names: []
+    verified: false
+  chenjunjiedada:
+    names:
+    - Junjie Chen
     verified: false
   chrislusf:
     names:
@@ -302,6 +312,7 @@ people:
   dannycjones:
     names:
     - Daniel Carl Jones
+    - Danny Jones
     verified: false
   David-Banquet:
     names:
@@ -343,6 +354,10 @@ people:
     names:
     - Dhruv Arya
     verified: false
+  dimas-b:
+    names:
+    - Dmitri Bourlatchkov
+    verified: false
   dingo4dev:
     names:
     - Stanley Law
@@ -351,6 +366,10 @@ people:
     names:
     - yan zhang
     verified: false
+  dongjoon-hyun:
+    names:
+    - Dongjoon Hyun
+    verified: false
   dossett:
     names:
     - Aaron Niskode-Dossett
@@ -358,6 +377,11 @@ people:
   dragonknightk:
     names:
     - 龙骑士k
+    verified: false
+  dramaticlly:
+    names:
+    - Steve Zhang
+    - Hongyue Zhang
     verified: false
   drexler-sky:
     names: []
@@ -368,6 +392,10 @@ people:
     verified: false
   Dzeri96:
     names: []
+    verified: false
+  ebyhr:
+    names:
+    - Yuya Ebihara
     verified: false
   edgao:
     names:
@@ -384,6 +412,10 @@ people:
   el10savio:
     names:
     - Elton SV
+    verified: false
+  emkornfield:
+    names:
+    - Micah Kornfield
     verified: false
   enesyesil:
     names:
@@ -453,7 +485,9 @@ people:
     - Gabriel Igliozzi
     verified: false
   gaborkaszab:
-    names: []
+    names:
+    - Gabor Kaszab
+    - Gábor Kaszab
     verified: false
   GabrielBBaldez:
     names:
@@ -479,7 +513,8 @@ people:
     asf_id: dru
     verified: true
   ggershinsky:
-    names: []
+    names:
+    - Gidon Gershinsky
     verified: false
   GGraziadei:
     names:
@@ -524,6 +559,10 @@ people:
   HeartLinked:
     names:
     - Feiyang Li
+    verified: false
+  HeartSaVioR:
+    names:
+    - Jungtaek Lim
     verified: false
   heathkh-recursion:
     names:
@@ -608,6 +647,10 @@ people:
     names:
     - James Dilworth
     verified: false
+  JanKaul:
+    names:
+    - Jan Kaul
+    verified: false
   jatorre:
     names:
     - Javier de la Torre
@@ -626,6 +669,8 @@ people:
   jbonofre:
     names:
     - JB Onofré
+    - Jean-Baptiste Onofré
+    - Jean-Baptiste Onofre
     verified: false
   JeonDaehong:
     names: []
@@ -634,9 +679,17 @@ people:
     names:
     - J Schmidt
     verified: false
+  jerryshao:
+    names:
+    - Saisai Shao
+    verified: false
   jhamman:
     names:
     - Joe Hamman
+    verified: false
+  jiayuasu:
+    names:
+    - Jia Yu
     verified: false
   Jimvin:
     names:
@@ -645,6 +698,7 @@ people:
   JingsongLi:
     names:
     - Jingsong Lee
+    - Jingsong Li
     asf_id: lzljs3620320
     verified: false
   jiwen624:
@@ -690,6 +744,10 @@ people:
   kaveti:
     names:
     - rkaveti
+    verified: false
+  kbendick:
+    names:
+    - Kyle Bendickson
     verified: false
   kdn36:
     names:
@@ -748,6 +806,7 @@ people:
     names:
     - Andrei Tserakhau
     verified: false
+    asf_id: atserakhau
   lavkushry:
     names:
     - Lavkush Kumar
@@ -828,6 +887,10 @@ people:
   masfworld:
     names:
     - Miguel A. Sotomayor
+    verified: false
+  massdosage:
+    names:
+    - Mass Dosage
     verified: false
   mateusaubin:
     names:
@@ -938,8 +1001,13 @@ people:
   nastra:
     names:
     - Eduard Tudenhoefner
+    - Eduard Tudenhöfner
     asf_id: etudenhoefner
     verified: true
+  ndrluis:
+    names:
+    - André Luis Anastácio
+    verified: false
   Neuw84:
     names:
     - Angel Conde
@@ -1173,6 +1241,11 @@ people:
     names:
     - sagib-sqream
     verified: false
+  samredai:
+    names:
+    - Sam Redai
+    - Samuel Redai
+    verified: false
   SamWheating:
     names:
     - Sam Wheating
@@ -1266,6 +1339,10 @@ people:
     names:
     - Sreesh Maheshwar
     verified: false
+  snazy:
+    names:
+    - Robert Stupp
+    verified: false
   snicholasbarton:
     names:
     - Nicholas Barton
@@ -1292,6 +1369,10 @@ people:
   sqd:
     names:
     - Han You
+    verified: false
+  SreeramGarlapati:
+    names:
+    - Sreeram Garlapati
     verified: false
   sririshindra:
     names:
@@ -1469,6 +1550,10 @@ people:
     names:
     - William Hyun
     verified: false
+  wmoustafa:
+    names:
+    - Walaa Eldin Moustafa
+    verified: false
   wobu:
     names: []
     verified: false
@@ -1487,6 +1572,8 @@ people:
   xanderbailey:
     names:
     - Xander
+    - Alexander Bailey
+    - Xander Bailey
     verified: false
   xiaoxuandev:
     names:
