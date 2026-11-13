@@ -1,0 +1,58 @@
+{
+  "id": "meeting/materialized-views/2026-10-29",
+  "_input_hash": "sha256:8c114c781df3d2adc0a4",
+  "sources": [
+    "meet:materialized-views:2026-10-29"
+  ],
+  "summary": "The Materialized View Sync on 29 October 2026 settled the examples in Appendix B of the materialized view spec. The group agreed to simplify them and reuse the existing event_agg_mv SQL plus a new event_agg_30_day_mv, with example 1 representing the PostgreSQL use case and example 2 the Spark and Trino implementations. The two-dimension description is to be replaced by a statement that the spec does not define freshness, and the spec will mention PostgreSQL, Spark and Trino by name. Jan is to research whether a third example is needed for the ETL case where nested materialized views are treated strictly as tables. The spec goes to the dev list after internal consent.",
+  "topics": [
+    {
+      "title": "Appendix B examples",
+      "summary": "The group agreed to simplify the Appendix B examples and use the existing event_agg_mv and a new event_agg_30_day_mv SQL. Example 1 represents the PostgreSQL use case and example 2 the Spark and Trino implementations, and the spec will name those three systems. Jan is to research whether an example 3 is needed, where nested materialized views inside a materialized view are treated strictly as tables: the ETL case in which refresh ordering means nested views need no validation on refresh.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [],
+      "decisions": [
+        "Simplify the Appendix B examples and use the existing event_agg_mv and new event_agg_30_day_mv SQLs.",
+        "Example 1 represents the PostgreSQL use case.",
+        "Example 2 represents the Spark and Trino implementations.",
+        "The spec will be updated to specifically mention PostgreSQL, Spark and Trino."
+      ],
+      "open_questions": [
+        "Is an example 3 needed where nested MVs in an MV are treated strictly as tables (the ETL use case)?"
+      ]
+    },
+    {
+      "title": "Freshness description",
+      "summary": "The description of the two dimensions is to be removed and replaced with a description saying that the spec does not define freshness.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Sharing the spec with the dev list",
+      "summary": "The spec is to be shared on the dev mailing list once the working group has reached internal consent first.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [],
+      "decisions": [
+        "Share the spec to the dev mailing list after getting internal consent first."
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Jan",
+      "what": "Research whether an example 3 is needed where nested MVs in an MV are treated strictly as tables (ETL use case)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Jan",
+      "basis": "notes"
+    }
+  ]
+}

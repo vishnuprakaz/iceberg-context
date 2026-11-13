@@ -47,9 +47,17 @@
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-05-28", "to": "group/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-06-25", "to": "group/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-07-07", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "named", "source": "meet:materialized-views:2026-09-17", "src": "meeting/materialized-views/2026-09-17", "to": "person/danielcweeks"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-09-17", "to": "group/materialized-views"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-10-01", "to": "group/materialized-views"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-10-29", "to": "group/materialized-views"}
+{"confidence": "extracted", "rel": "named", "source": "meet:materialized-views:2026-11-12", "src": "meeting/materialized-views/2026-11-12", "to": "person/talatuyarer"}
+{"confidence": "observed", "rel": "of", "src": "meeting/materialized-views/2026-11-12", "to": "group/materialized-views"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-05-26", "to": "group/python"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-06-30", "to": "group/python"}
 {"confidence": "observed", "rel": "of", "src": "meeting/python/2026-07-28", "to": "group/python"}
+{"confidence": "observed", "rel": "of", "src": "meeting/python/2026-09-29", "to": "group/python"}
+{"confidence": "observed", "rel": "of", "src": "meeting/python/2026-10-27", "to": "group/python"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-05-26", "to": "group/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-06-09", "to": "group/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-06-23", "to": "group/read-restrictions"}
@@ -57,9 +65,16 @@
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-07-07", "to": "group/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-07-21", "to": "group/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-08-04", "to": "group/read-restrictions"}
+{"confidence": "extracted", "rel": "named", "source": "meet:read-restrictions:2026-08-18", "src": "meeting/read-restrictions/2026-08-18", "to": "person/sungwy"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-08-18", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-09-01", "to": "group/read-restrictions"}
+{"confidence": "observed", "rel": "of", "src": "meeting/read-restrictions/2026-09-15", "to": "group/read-restrictions"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-05-19", "to": "group/spark"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-06-16", "to": "group/spark"}
 {"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-07-21", "to": "group/spark"}
+{"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-08-18", "to": "group/spark"}
+{"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-10-20", "to": "group/spark"}
+{"confidence": "observed", "rel": "of", "src": "meeting/spark/2026-11-11", "to": "group/spark"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-05-18", "to": "group/v4-metadata"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-06-01", "to": "group/v4-metadata"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-06-15", "src": "meeting/v4-metadata/2026-06-15", "to": "person/amogh-jahagirdar"}
@@ -70,12 +85,25 @@
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-07-27", "to": "group/v4-metadata"}
 {"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-08-10", "src": "meeting/v4-metadata/2026-08-10", "to": "person/anoopj"}
 {"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-08-10", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-08-24", "src": "meeting/v4-metadata/2026-08-24", "to": "person/stevenzwu"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-08-24", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-09-21", "src": "meeting/v4-metadata/2026-09-21", "to": "person/stevenzwu"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-09-21", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "person/amogh-jahagirdar"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-10-05", "src": "meeting/v4-metadata/2026-10-05", "to": "person/anoopj"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-10-05", "to": "group/v4-metadata"}
+{"confidence": "extracted", "rel": "named", "source": "meet:v4-metadata:2026-10-19", "src": "meeting/v4-metadata/2026-10-19", "to": "person/anoopj"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-10-19", "to": "group/v4-metadata"}
+{"confidence": "observed", "rel": "of", "src": "meeting/v4-metadata/2026-11-02", "to": "group/v4-metadata"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "person/nssalian"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-06-04", "src": "meeting/variant/2026-06-04", "to": "person/rdblue"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-06-04", "to": "group/variant"}
 {"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-07-02", "src": "meeting/variant/2026-07-02", "to": "person/nssalian"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-07-02", "to": "group/variant"}
 {"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-08-06", "to": "group/variant"}
+{"confidence": "extracted", "rel": "named", "source": "meet:variant:2026-09-03", "src": "meeting/variant/2026-09-03", "to": "person/rambleraptor"}
+{"confidence": "observed", "rel": "of", "src": "meeting/variant/2026-09-03", "to": "group/variant"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/avro", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/catalog", "to": "repo/iceberg-python"}
 {"confidence": "observed", "rel": "part_of", "src": "module/iceberg-python/cli", "to": "repo/iceberg-python"}

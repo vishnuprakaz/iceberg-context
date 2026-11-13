@@ -1,0 +1,64 @@
+{
+  "id": "meeting/v4-metadata/2026-08-24",
+  "_input_hash": "sha256:eab74fe2239fc8a85863",
+  "sources": [
+    "meet:v4-metadata:2026-08-24"
+  ],
+  "summary": "The V4 metadata sync on 24 August 2026 had three items from Steven Wu. First, a full stats read over-populates the content stats read schema, which raised the idea of versioning the metrics config and recording a metrics-config-id in manifest entries and snapshot metadata. Second, whether V4 should still support writing new Avro manifests, which cannot do stats projection reads; the notes call for an official vote on allowing only new Parquet manifests in V4. Third, the write code path: Ryan's idea of a V4MergingSnapshotProducer, and a new UpdateFiles interface that merges RowDelta and ColumnUpdates and might also cover OverwriteFiles.",
+  "topics": [
+    {
+      "title": "Full stats read and versioning the metrics config",
+      "summary": "Steven Wu raised that a full stats read over-populates the content stats read schema, as discussed on a pull request review thread. The question was whether to version the metrics config: record a metrics-config-id in the leaf manifest entry in the root manifest, and for the root manifest in the snapshot metadata. No outcome is recorded.",
+      "initiatives": [
+        "v4-content-stats",
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17433",
+        "yt:7EyHMLOH98I"
+      ],
+      "open_questions": [
+        "Should the metrics config be versioned, with a metrics-config-id recorded in the leaf manifest entry in the root manifest and in root manifest metadata in the snapshot?"
+      ]
+    },
+    {
+      "title": "Avro manifests in V4",
+      "summary": "Steven Wu asked whether V4 should still support writing new Avro manifests, given that they do not support stats projection reading. The notes record the result as an official vote for only new Parquet manifests in V4.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [
+        "yt:7EyHMLOH98I"
+      ],
+      "decisions": [
+        "Hold an official vote on allowing only new Parquet manifests in V4."
+      ]
+    },
+    {
+      "title": "V4 write code path and a new UpdateFiles interface",
+      "summary": "Ryan's question or idea was a V4MergingSnapshotProducer, which raises whether V4BaseRowDelta and V4BaseOverwriteFiles are needed alongside it. The proposal is a new UpdateFiles interface that merges RowDelta and ColumnUpdates, so that one interface allows different update strategies for data files (merge-on-read, column overlay). Separate interfaces do not work well when a DML has to commit both data DVs and column files in one snapshot. An open point is whether UpdateFiles should also cover OverwriteFiles for the copy-on-write strategy, since all three map to the overwrite operation type.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": [
+        "yt:7EyHMLOH98I"
+      ],
+      "open_questions": [
+        "Are V4BaseRowDelta and V4BaseOverwriteFiles needed alongside a V4MergingSnapshotProducer?",
+        "Should the new UpdateFiles interface also encapsulate OverwriteFiles for the CoW update strategy?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "stevenzwu",
+      "basis": "notes"
+    },
+    {
+      "who": "Ryan",
+      "basis": "notes"
+    }
+  ]
+}

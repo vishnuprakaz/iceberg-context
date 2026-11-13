@@ -1,0 +1,66 @@
+{
+  "id": "meeting/materialized-views/2026-10-01",
+  "_input_hash": "sha256:e09768d4ca8698749600",
+  "sources": [
+    "meet:materialized-views:2026-10-01"
+  ],
+  "summary": "The Materialized View Sync on 1 October 2026 covered spec versioning, whether the storage table field belongs in the view metadata or the view version, Walaa's proposal for a serving policy, and the prescriptive description of freshness in the spec pull request. The group considered removing the terms freshness and staleness from the spec altogether because they are contentious. Jan Kaul is to mark the obsolete review comments on the pull request as resolved. The plan is for the working group to approve the pull request once the wording is done, then bring in Daniel Weeks to review it, and after that start a vote on the mailing list.",
+  "topics": [
+    {
+      "title": "Spec versioning, storage table field and serving policy",
+      "summary": "The agenda lists materialized view spec versioning, whether the storage table field should sit in the view metadata or in the view version, and Walaa's proposal to introduce a serving policy. The notes record no outcome for these items.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ],
+      "open_questions": [
+        "Should the storage table field be in the view metadata or the view version?",
+        "Should the spec introduce a serving policy as Walaa proposed?"
+      ]
+    },
+    {
+      "title": "Freshness wording",
+      "summary": "The group reconsidered the prescriptive description of freshness in the pull request (around line 201), which says a materialized view is fresh when the storage table represents the result of the current view query, while consumers may still choose to read a stale storage table under their own policies. The notes suggest considering removing the terms freshness and staleness from the spec entirely, because they are inherently contentious.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ],
+      "open_questions": [
+        "Should all uses of 'freshness' and 'staleness' be removed from the spec?"
+      ]
+    },
+    {
+      "title": "Path to a vote on the MV spec",
+      "summary": "The notes set out the sequence for landing the spec. Jan Kaul marks the bulk of the obsolete pull request comments as resolved; once the wording work is done the working group approves the pull request; Daniel Weeks is then involved in reviewing the improved pull request; after that a vote starts on the mailing list.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ],
+      "decisions": [
+        "Once the wording is done, the working group should approve apache/iceberg#11041, then involve Daniel Weeks in the review, then start a vote on the mailing list."
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Jan Kaul",
+      "what": "Mark the bulk of the obsolete comments on apache/iceberg#11041 as resolved."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Jan Kaul",
+      "basis": "notes"
+    },
+    {
+      "who": "Walaa",
+      "basis": "notes"
+    }
+  ]
+}

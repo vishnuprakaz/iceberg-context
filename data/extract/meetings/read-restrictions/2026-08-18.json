@@ -1,0 +1,57 @@
+{
+  "id": "meeting/read-restrictions/2026-08-18",
+  "_input_hash": "sha256:738ea543cb2240f8f996",
+  "sources": [
+    "meet:read-restrictions:2026-08-18"
+  ],
+  "summary": "The Read Restrictions Sync on 18 August 2026 had three items. The first was nested field handling and conflict resolution, with a mailing list thread and a comparison of industry prior art. The second, raised by Sung, was the protocol for enhancing ReadRestrictions after a v1 release; Laurent and Russell argued that capability negotiation should not be allowed, because a client that can opt in to a version could choose a less secure representation of the same policy. The third was a walk through the proofs of concept for Iceberg Generics, Spark and Trino.",
+  "topics": [
+    {
+      "title": "Nested field handling and conflict resolution",
+      "summary": "The group discussed how read restrictions handle nested fields and how conflicting policies are resolved. The notes link the mailing list thread and a document comparing industry prior art on nested-field policy conflict resolution. No outcome is recorded.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "list:zh25o2msbjw3skd577qzsyrcorobcthz",
+        "doc:12FjPhod57cT_LJBFc6OK9gN8F5DcokYdeOO0A3dvFPE"
+      ]
+    },
+    {
+      "title": "Protocol for enhancing ReadRestrictions after v1",
+      "summary": "Sung raised how features should be added to ReadRestrictions after the v1 release. Laurent and Russell made the point that if a client can opt in to a version and advertise it, and there are different representations of the same policy, the client can opt in to a less secure version. Their position was that capability negotiation should not be allowed.",
+      "initiatives": [
+        "read-restrictions",
+        "rest-spec"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Proofs of concept: Iceberg Generics, Spark and Trino",
+      "summary": "The agenda had a walk through the proofs of concept: an end-to-end one for Iceberg Generics, an end-to-end one for Apache Spark, and a document on the Trino code flow. The notes record no discussion.",
+      "initiatives": [
+        "read-restrictions"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16131",
+        "gh:apache/iceberg#16082",
+        "doc:1TBiHZxZHTRHoc58V7f4HJWZFAJwQlizFT7usDNhtT8s"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "sungwy",
+      "basis": "notes"
+    },
+    {
+      "who": "Laurent",
+      "basis": "notes"
+    },
+    {
+      "who": "Russell",
+      "basis": "notes"
+    }
+  ]
+}

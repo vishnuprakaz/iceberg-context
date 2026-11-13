@@ -1,0 +1,53 @@
+{
+  "id": "meeting/v4-metadata/2026-09-21",
+  "_input_hash": "sha256:87396e98a396bc451219",
+  "sources": [
+    "meet:v4-metadata:2026-09-21"
+  ],
+  "summary": "The V4 metadata sync notes for 21 September 2026 list three short items. Amogh Jahagirdar wanted alignment on MODIFIED entries and sequence number inheritance: his understanding is that data sequence number inheritance for a MODIFIED entry would be allowed only for a column update. Steven Wu asked whether root manifest entries should inherit from snapshot metadata; the notes record that only the update time is inherited, not the snapshot ID, sequence number or other fields. A third item asks whether fileSizeInBytes should be persisted for the root manifest, with no answer recorded.",
+  "topics": [
+    {
+      "title": "MODIFIED entries and sequence number inheritance",
+      "summary": "Amogh Jahagirdar wanted to make sure the group is on the same page about MODIFIED entries and sequence number inheritance. His understanding is that data sequence number inheritance for the MODIFIED entry should be allowed only in the case of a column update. The notes do not record a conclusion.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Root manifest entry inheritance from snapshot metadata",
+      "summary": "Steven Wu asked whether root manifest entries should inherit from snapshot metadata. The notes record that only the update time will be inherited; snapshot ID, sequence number and the rest will not be inherited from the snapshot.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-row-lineage-timestamps"
+      ],
+      "refs": [],
+      "decisions": [
+        "Root manifest entries inherit only the update time from the snapshot; snapshot ID, sequence number etc. are not inherited."
+      ]
+    },
+    {
+      "title": "Persisting fileSizeInBytes for the root manifest",
+      "summary": "An item asks whether fileSizeInBytes should be persisted for the root manifest. No answer is recorded.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should fileSizeInBytes be persisted for the root manifest?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "amogh-jahagirdar",
+      "basis": "notes"
+    },
+    {
+      "who": "stevenzwu",
+      "basis": "notes"
+    }
+  ]
+}

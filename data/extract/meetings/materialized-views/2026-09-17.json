@@ -1,0 +1,107 @@
+{
+  "id": "meeting/materialized-views/2026-09-17",
+  "_input_hash": "sha256:b2ac9be5d2d7906d6bf5",
+  "sources": [
+    "meet:materialized-views:2026-09-17"
+  ],
+  "summary": "The Materialized View Sync on 17 September 2026 went through the remaining items before the materialized view spec pull request can go to a vote. The notes list to-dos: decide whether CREATE OR REPLACE MATERIALIZED VIEW belongs in the spec, move the catalog from optional to required, and consider a version field for materialized views similar to the table format-version, which Jan Kaul will raise on the dev list. Everyone interested was asked to review the pull request again so that voting can start in two weeks, with a readiness check on 1 October. Reference implementations were listed for Iceberg and Trino.",
+  "topics": [
+    {
+      "title": "CREATE OR REPLACE MATERIALIZED VIEW in the spec",
+      "summary": "The group needs to work out whether CREATE OR REPLACE MATERIALIZED VIEW functionality should be part of the materialized view spec. The notes record it as a to-do for Walaa Eldin Moustafa, with no outcome.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ],
+      "open_questions": [
+        "Should CREATE OR REPLACE MATERIALIZED VIEW functionality be part of the spec?"
+      ]
+    },
+    {
+      "title": "Catalog field from optional to required",
+      "summary": "The notes list moving the catalog from optional to required as a to-do for Walaa Eldin Moustafa. No further discussion is recorded.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ]
+    },
+    {
+      "title": "A format version for materialized views",
+      "summary": "The idea is to introduce something like the table format-version for materialized views, to leave room for extensibility. The item is assigned to Daniel Weeks and Walaa Eldin Moustafa, and Jan Kaul will ask about it on the dev mailing list.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ],
+      "open_questions": [
+        "Should materialized views get a version field similar to the table format-version?"
+      ]
+    },
+    {
+      "title": "Reference implementations",
+      "summary": "Two reference implementations are listed. Walaa Eldin Moustafa has a to-do to add one to the apache/iceberg repository, and Marius Grama has a Trino pull request (trinodb/trino#31027).",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Path to a vote on the MV spec",
+      "summary": "Everyone interested in the materialized view spec is asked to review the spec pull request again, so that voting on landing it can start in two weeks. The group will check on 1 October whether it is OK to proceed to a vote on the dev mailing list.",
+      "initiatives": [
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#11041"
+      ],
+      "decisions": [
+        "Check on 1 October whether the group is OK to proceed to a vote on the MV spec on the dev mailing list."
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "who": "Walaa Eldin Moustafa",
+      "what": "Figure out whether CREATE OR REPLACE MATERIALIZED VIEW functionality should be part of the spec (apache/iceberg#11041)."
+    },
+    {
+      "who": "Jan Kaul",
+      "what": "Call on everyone interested in the MV spec to review apache/iceberg#11041 again so that voting can start in two weeks."
+    },
+    {
+      "who": "Walaa Eldin Moustafa",
+      "what": "Move the catalog from optional to required."
+    },
+    {
+      "who": "Jan Kaul",
+      "what": "Ask on the dev mailing list about a format-version-like field for materialized views."
+    },
+    {
+      "who": "Walaa Eldin Moustafa",
+      "what": "Add the reference implementation to the apache/iceberg repository."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Walaa Eldin Moustafa",
+      "basis": "notes"
+    },
+    {
+      "who": "Jan Kaul",
+      "basis": "notes"
+    },
+    {
+      "who": "danielcweeks",
+      "basis": "notes"
+    },
+    {
+      "who": "findinpath",
+      "basis": "notes"
+    }
+  ]
+}

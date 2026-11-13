@@ -1,0 +1,36 @@
+{
+  "id": "meeting/v4-metadata/2026-10-19",
+  "_input_hash": "sha256:1c1a6d2ace76d8bd8d28",
+  "sources": [
+    "meet:v4-metadata:2026-10-19"
+  ],
+  "summary": "The V4 metadata sync notes for 19 October 2026 record a single item from Anoop Johnson: tight_bounds versus tight_stats as the way to represent stats tightness in V4. The group reached consensus on tight_stats, with the final naming still to be decided, and a spec pull request is being worked on. The notes add that the rules for aggregating the value at the manifest level also need to be covered.",
+  "topics": [
+    {
+      "title": "tight_bounds vs tight_stats",
+      "summary": "Anoop Johnson brought the choice between tight_bounds and tight_stats. The group reached consensus on tight_stats, with the naming still to be decided, and a spec pull request is in progress. Manifest aggregation rules also need to be covered.",
+      "initiatives": [
+        "v4-content-stats"
+      ],
+      "refs": [],
+      "decisions": [
+        "Consensus on tight_stats (naming to be decided)."
+      ],
+      "open_questions": [
+        "Final naming of tight_stats.",
+        "Manifest aggregation rules still need to be covered."
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Write the spec pull request for tight_stats (the notes name the owner only by a removed email address)."
+    }
+  ],
+  "participants": [
+    {
+      "who": "anoopj",
+      "basis": "notes"
+    }
+  ]
+}

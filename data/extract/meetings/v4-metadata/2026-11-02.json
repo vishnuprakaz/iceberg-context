@@ -1,0 +1,57 @@
+{
+  "id": "meeting/v4-metadata/2026-11-02",
+  "_input_hash": "sha256:c3c2a744e92943170122",
+  "sources": [
+    "meet:v4-metadata:2026-11-02"
+  ],
+  "summary": "The V4 metadata sync notes for 2 November 2026 cover three items. On encryption key metadata, Gabor has a spec pull request ready for more reviews. On column files, partial updates of a list or map are not allowed, only full replacement, while updates to fields nested inside a struct hierarchy are allowed. The group also discussed the dev list thread on whether V4 should stop writing ORC and Avro data files; the notes capture points that at least two file formats are good to have, that Avro is the metadata format, and questions about format requirements and Vortex.",
+  "topics": [
+    {
+      "title": "Encryption key metadata",
+      "summary": "Gabor has a spec pull request for encryption key metadata that is ready for more reviews. The notes record nothing further.",
+      "initiatives": [
+        "v4-encryption"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Column files: update granularity for nested types",
+      "summary": "The notes state the rule for column file updates on nested types. Partial updates of a list or map are not allowed, though replacing a whole list or map is, for example replacing the column_files list. Nested fields inside a struct hierarchy can be updated, for example a field_stats struct nested inside the content_stats struct.",
+      "initiatives": [
+        "v4-column-updates"
+      ],
+      "refs": [],
+      "decisions": [
+        "No partial update for list or map; full list or map replacement is allowed.",
+        "Updating nested fields inside a struct hierarchy is allowed."
+      ]
+    },
+    {
+      "title": "Should V4 stop writing ORC and Avro data files?",
+      "summary": "The group discussed the dev list thread on whether V4 should stop writing ORC and Avro data files. The notes capture that it is good to have at least two file formats and ask whether to keep Avro, noting that Avro is the metadata format when weighing Avro against ORC. They also ask what the requirements for file formats are and mention Vortex. No conclusion is recorded.",
+      "initiatives": [
+        "file-format-api",
+        "v4-general"
+      ],
+      "refs": [
+        "list:5jfzckl0cc9z683kz9vfv41pmhrm1tdb"
+      ],
+      "open_questions": [
+        "Should Avro be maintained as a second data file format?",
+        "What are the requirements for file formats?",
+        "Where does Vortex fit?"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Review Gabor's spec pull request for encryption key metadata."
+    }
+  ],
+  "participants": [
+    {
+      "who": "Gabor",
+      "basis": "notes"
+    }
+  ]
+}

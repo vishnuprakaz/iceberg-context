@@ -1,0 +1,189 @@
+{
+  "id": "meeting/spark/2026-08-18",
+  "_input_hash": "sha256:d980ca85047e6578a230",
+  "sources": [
+    "meet:spark:2026-08-18"
+  ],
+  "summary": "The Spark Community Sync notes for 18 August 2026 open with recently merged changes, including the streaming merge-append write config that sets up a default flip in 1.13 and the RepairManifests action interface. With a 1.12 release candidate close, the group listed Spark candidates that go in if ready and otherwise move to 1.13, led by Spark 4.2.0 support. The shared Spark source proof of concept reported 88% of files shared across versions. The rest is a status roundup of open pull requests by area: CI, sort order and k-way merge, variant, geospatial, maintenance actions, reads, views, V4 and encryption.",
+  "topics": [
+    {
+      "title": "Highlights: recently merged",
+      "summary": "Merged since the last sync: a streaming-merge-append-enabled write config for Spark 4.1, which sets up the 1.13 default flip discussed on the dev list; max-file-group-input-files as a valid rewrite option; byte[] binary values in InternalRowConverter; and the RepairManifests action interface, whose implementation pull request is in review.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17347",
+        "gh:apache/iceberg#17544",
+        "gh:apache/iceberg#17482",
+        "gh:apache/iceberg#17399",
+        "gh:apache/iceberg#17622"
+      ]
+    },
+    {
+      "title": "1.12 release candidate: Spark candidates",
+      "summary": "A 1.12 release candidate is happening soon. Spark feature and enhancement candidates go in if ready and otherwise move to 1.13. The list is Spark 4.2.0 support, SupportsReportOrdering, the k-way merge rewrite strategy (blocked on the MergingSortedRowDataReader pull request), Hilbert-curve clustering for rewrite_data_files, a Z-order fix for null booleans and case-insensitive column resolution, and a fix to partition info in the RewritePositionDeleteFiles job description. The Spark 4.2.0 pull request is out of draft with 48 reviews and no approvals, and a freeze-then-merge plan was agreed on 13 August.",
+      "initiatives": [
+        "java-releases",
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14984",
+        "gh:apache/iceberg#16750",
+        "gh:apache/iceberg#16305",
+        "gh:apache/iceberg#14948",
+        "gh:apache/iceberg#16827",
+        "gh:apache/iceberg#17669",
+        "gh:apache/iceberg#15175"
+      ],
+      "decisions": [
+        "Spark candidates for 1.12 go in if ready, otherwise they move to 1.13."
+      ]
+    },
+    {
+      "title": "Shared Spark source proof of concept",
+      "summary": "The problem is that every Spark minor version is a full copy of the spark/ tree: the 4.2.0 pull request is several hundred files and over 100k lines, and SPARK-54633 proposes quarterly Spark minors, so this would happen about four times a year. The proof of concept, discussed on the dev list, has 555 shared files against 73 to 74 per-version shim files, 88% shared, with the full suite of about 17,800 tests shared and only version-specific expectations shimmed.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "list:6dczl5fzmfplb1kdl7p82nozf2zlpv04",
+        "gh:apache/iceberg#14984"
+      ]
+    },
+    {
+      "title": "Spark CI improvements",
+      "summary": "Three pull requests to cut CI cost: reducing the data volume in TestRewriteDataFilesAction, and selecting the Spark and the Flink pull request matrix by the version that changed.",
+      "initiatives": [
+        "spark-integration",
+        "flink-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16565",
+        "gh:apache/iceberg#16946",
+        "gh:apache/iceberg#16947"
+      ]
+    },
+    {
+      "title": "Pull request review requests",
+      "summary": "Reviews were requested for time type support in Spark 4.1, broadcasting slim rewritable delete metadata in position delta writes, removing dangling v2 file-scoped position delete files, a clustered DV writer for ordered position delta writes, a metadata table for discovering metadata tables, aggregate pushdown for identity partition GROUP BY, a ColumnVectorWithFilter child vector fix, building the equality delete map once per task, and a filter expression canonicalization fix.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16665",
+        "gh:apache/iceberg#17281",
+        "gh:apache/iceberg#17205",
+        "gh:apache/iceberg#17287",
+        "gh:apache/iceberg#17134",
+        "gh:apache/iceberg#16176",
+        "gh:apache/iceberg#16913",
+        "gh:apache/iceberg#16956",
+        "gh:apache/iceberg#16570"
+      ]
+    },
+    {
+      "title": "Status: sort order and k-way merge",
+      "summary": "MergingSortedRowDataReader was active on 13 August and is on the 1.12.0 milestone. The k-way merge rewrite strategy has been quiet since 3 August, and the SupportsReportOrdering pull request is a draft with no reviews. A new pull request on sort-key file overlap for rewrite, opened 4 August with no reviews, overlaps the k-way merge strategy.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#14948",
+        "gh:apache/iceberg#16305",
+        "gh:apache/iceberg#16750",
+        "gh:apache/iceberg#17504"
+      ]
+    },
+    {
+      "title": "Status: variant and geospatial",
+      "summary": "Selective shredded variant extraction readers have 15 reviews but have been quiet since 26 July, with the split decision still pending. Variant extraction pushdown has no reviews and its full story needs Spark 4.3. JMH benchmarks for variants are active, new partial and multi-column variant tests were opened, and a metrics row group filter guard for variant and nested types is on the 1.12.0 milestone. For geospatial, the end-to-end spatial file pruning draft now carries a stale label, and the vectorized geo reads pull request was closed on 21 July; the notes ask whether anyone is picking it back up.",
+      "initiatives": [
+        "variant",
+        "geospatial",
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16714",
+        "gh:apache/iceberg#16715",
+        "gh:apache/iceberg#15629",
+        "gh:apache/iceberg#17553",
+        "gh:apache/iceberg#17431",
+        "gh:apache/iceberg#17175",
+        "gh:apache/iceberg#17297"
+      ],
+      "open_questions": [
+        "Is anyone picking the vectorized geo reads work back up after apache/iceberg#17297 was closed?",
+        "The split decision for the selective shredded variant extraction readers (apache/iceberg#16714) is still pending."
+      ]
+    },
+    {
+      "title": "Status: compaction, actions and maintenance",
+      "summary": "Hilbert-curve clustering is approved and ready, and the partial commit failure count fix has two approvals but is unmerged. A draft RepairTable action for Spark 4.1 implements the merged interface. Two new orphan file pull requests on sibling table prefixes overlap an older DeleteOrphanFiles fix and should be consolidated. Parallel RemoveOrphanFiles prefix listing has an unanswered Hadoop-dependency concern, and the guard against shared table locations, the dangling v2 position delete removal and the staged-table cleanup have no reviews.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16827",
+        "gh:apache/iceberg#16970",
+        "gh:apache/iceberg#17622",
+        "gh:apache/iceberg#17399",
+        "gh:apache/iceberg#16999",
+        "gh:apache/iceberg#17448",
+        "gh:apache/iceberg#17449",
+        "gh:apache/iceberg#16933",
+        "gh:apache/iceberg#17254",
+        "gh:apache/iceberg#17205",
+        "gh:apache/iceberg#16388"
+      ],
+      "open_questions": [
+        "The Hadoop-dependency concern on parallel RemoveOrphanFiles prefix listing (apache/iceberg#16933) is unanswered."
+      ]
+    },
+    {
+      "title": "Status: reads, pushdown, views and materialized views",
+      "summary": "On the read side, the all-null DELTA-encoded pages fix in Arrow is approved and ready, aggregate pushdown for identity partition GROUP BY has one approval but is stale, and a per-task scanDuration metric is new. Two pull requests compete on avoiding String/UUID allocations. For views, the Spark materialized views pull request has 37 reviews and one approval, making the view stored-schema coercion configurable is on its third attempt after two closed pull requests, and restricting the view command rewrite to Iceberg catalogs has been untouched since 17 June.",
+      "initiatives": [
+        "spark-integration",
+        "materialized-views"
+      ],
+      "refs": [
+        "gh:apache/iceberg#16176",
+        "gh:apache/iceberg#16913",
+        "gh:apache/iceberg#17017",
+        "gh:apache/iceberg#17562",
+        "gh:apache/iceberg#16349",
+        "gh:apache/iceberg#17603",
+        "gh:apache/iceberg#16004",
+        "gh:apache/iceberg#9830",
+        "gh:apache/iceberg#17499",
+        "gh:apache/iceberg#17452",
+        "gh:apache/iceberg#17453",
+        "gh:apache/iceberg#16029"
+      ]
+    },
+    {
+      "title": "Status: V4 and encryption",
+      "summary": "For V4, stevenzwu's SnapshotFile abstraction gives a version-agnostic name to the file a snapshot points at, so v4 root manifests use the same type as v3 manifest lists; it deprecates manifestListLocation() and evolves SnapshotsTable. The V4 write direction wrappers have changes requested, a draft carries average value sizes for v4 content stats, and the pull request enabling broad V4 tests was closed on 27 July. For encryption, client-configured encryption in RESTCatalog has 70 reviews and two approvals, and key_metadata with encrypted write support for StatisticsFile has no reviews.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-content-stats",
+        "v4-encryption"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17523",
+        "gh:apache/iceberg#16936",
+        "gh:apache/iceberg#17451",
+        "gh:apache/iceberg#16938",
+        "gh:apache/iceberg#13225",
+        "gh:apache/iceberg#17417"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "what": "Consolidate the overlapping orphan file fixes (apache/iceberg#16999, #17448, #17449)."
+    }
+  ],
+  "participants": []
+}

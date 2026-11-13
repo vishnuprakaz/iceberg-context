@@ -1,0 +1,41 @@
+{
+  "id": "meeting/python/2026-09-29",
+  "_input_hash": "sha256:9cfff45906ece92af94b",
+  "sources": [
+    "meet:python:2026-09-29"
+  ],
+  "summary": "The PyIceberg Sync notes for 29 September 2026 contain only an agenda, with no attendees, announcements or recorded discussion. Three items were listed: planning for the 0.13 release, with a link to a comment on an iceberg-python pull request; the V3 implementation, specifically the write side; and what a 1.0 release would look like, including where the public API boundary lies. No decisions or action items are recorded in the notes.",
+  "topics": [
+    {
+      "title": "0.13 release planning",
+      "summary": "Agenda item on planning the PyIceberg 0.13 release, linked to a comment on an iceberg-python pull request. The notes record no discussion or outcome.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [
+        "gh:apache/iceberg-python#3924"
+      ]
+    },
+    {
+      "title": "V3 implementation: write side",
+      "summary": "Agenda item on the V3 implementation in PyIceberg, with the write side called out. The notes record no discussion or outcome.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": []
+    },
+    {
+      "title": "What a 1.0 release looks like",
+      "summary": "Agenda item on what a PyIceberg 1.0 release would look like, with the public API boundary as the sub-point. The notes record no discussion or outcome.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [],
+      "open_questions": [
+        "What does a 1.0 release look like, and where is the public API boundary?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

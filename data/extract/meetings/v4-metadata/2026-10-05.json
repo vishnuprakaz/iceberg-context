@@ -1,0 +1,60 @@
+{
+  "id": "meeting/v4-metadata/2026-10-05",
+  "_input_hash": "sha256:59a54256faa22e912495",
+  "sources": [
+    "meet:v4-metadata:2026-10-05"
+  ],
+  "summary": "The V4 metadata sync notes for 5 October 2026 have two items. Anoop Johnson brought tight bounds in column stats, with a writeup on representing stats tightness in V4. Amogh Jahagirdar proposed spec changes: consolidating the separate dv_snapshot_id and column_file_snapshot_id into a single modified_snapshot_id, since readers usually need both sets of changes; with that, assigning the snapshot_id of REPLACED entries so change detection works off snapshot_id or modified_snapshot_id equal to the current snapshot; and dropping split_offsets and format_version for column files, keeping format_version only for manifests in manifest_info. No outcomes are recorded.",
+  "topics": [
+    {
+      "title": "Tight bounds in column stats",
+      "summary": "Anoop Johnson presented the question of tight bounds in column stats, with a writeup titled 'Iceberg v4 Stats Tightness Representation'. The notes record no discussion or outcome.",
+      "initiatives": [
+        "v4-content-stats"
+      ],
+      "refs": [
+        "doc:13DbwnwKQXjvY3vRcFJo-qVAQWk-GB4zLzzYmFdPntZg"
+      ]
+    },
+    {
+      "title": "Consolidating dv_snapshot_id and column_file_snapshot_id",
+      "summary": "Amogh Jahagirdar raised that the spec currently has separate dv_snapshot_id and column_file_snapshot_id fields, intended to allow a minimal projection during conflict validation or change detection. The benefit is unclear if a reader typically needs both sets of changes anyway, so the question is whether to consolidate them into a single modified_snapshot_id.",
+      "initiatives": [
+        "v4-metadata-tree",
+        "v4-column-updates"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Could dv_snapshot_id and column_file_snapshot_id be consolidated into a single modified_snapshot_id?"
+      ]
+    },
+    {
+      "title": "Snapshot ID assignment for REPLACED entries",
+      "summary": "As currently proposed, change detection for REPLACED/MODIFIED pairs works off entries where dv_snapshot_id or column_file_snapshot_id equals the current snapshot ID. With a single modified_snapshot_id, the REPLACED entry's snapshot_id could be set to the previous modified snapshot ID (or the current snapshot ID if not previously modified). Changed entries could then be found where snapshot_id or modified_snapshot_id equals the current snapshot ID.",
+      "initiatives": [
+        "v4-metadata-tree"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Column files: dropping split_offsets and format_version",
+      "summary": "The proposed spec change drops split_offsets and format_version for column files. format_version would exist only for manifests and be stored in manifest_info.",
+      "initiatives": [
+        "v4-column-updates",
+        "v4-metadata-tree"
+      ],
+      "refs": []
+    }
+  ],
+  "action_items": [],
+  "participants": [
+    {
+      "who": "anoopj",
+      "basis": "notes"
+    },
+    {
+      "who": "amogh-jahagirdar",
+      "basis": "notes"
+    }
+  ]
+}

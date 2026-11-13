@@ -1,0 +1,80 @@
+{
+  "id": "meeting/spark/2026-10-20",
+  "_input_hash": "sha256:cef5212d9a0428c4ba7a",
+  "sources": [
+    "meet:spark:2026-10-20"
+  ],
+  "summary": "The Spark Community Sync notes for 20 October 2026 list merged work by area: CREATE TABLE LIKE, automatic schema evolution and default values in DDL; a fix for concurrent runtime filtering in copy-on-write UPDATE; maintenance procedure additions; the k-way merge reader; pushdown and vectorization changes; changelog fixes; and merge append as the default for streaming writes. Two discussion topics follow. One is Iceberg 1.13 and the Spark 4.2 items, with the question of whether to target a 4.2 jar release with 1.13. The other is a new approach for the shared Spark source proof of concept, with no shim layer and only byte-identical files in spark/common/.",
+  "topics": [
+    {
+      "title": "Highlights: DSv2, catalog APIs and write path",
+      "summary": "Merged work includes CREATE TABLE ... LIKE and SupportsSchemaEvolution for automatic schema evolution in Spark 4.2, default values with DDL, and a fix for concurrent runtime filtering on a shared scan for copy-on-write UPDATE with a subquery.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17954",
+        "gh:apache/iceberg#17957",
+        "gh:apache/iceberg#18250",
+        "gh:apache/iceberg#18005"
+      ]
+    },
+    {
+      "title": "Highlights: maintenance, sort order and compaction",
+      "summary": "Merged: a sort_by parameter on the rewrite_manifests procedure for Spark 3.5 and 4.0, a scan-based remove dangling delete action, and session snapshot properties applied to maintenance actions in Spark 4.2. On sort order, MergingSortedRowDataReader for k-way merge of sorted files landed for Spark 4.1, along with a fix for rewrite failures on tables created with a sort order.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#18065",
+        "gh:apache/iceberg#15727",
+        "gh:apache/iceberg#18406",
+        "gh:apache/iceberg#14948",
+        "gh:apache/iceberg#17814"
+      ]
+    },
+    {
+      "title": "Highlights: reads, changelog and streaming",
+      "summary": "Merged on the read side: PositionDeleteIndex.forEachInRange used in vectorized delete checks, pushdown of opaque partition predicates in Spark 4.2, and skipping unsupported aggregate pushdown. Changelog fixes cover predicate pushdown on the changelog metadata column and cancellation for binary values. For streaming, merge append is now the default for streaming writes, setting up the 1.13 default flip, and a resumed stream no longer reapplies stream-from-timestamp, with a backport.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "gh:apache/iceberg#18027",
+        "gh:apache/iceberg#17956",
+        "gh:apache/iceberg#18299",
+        "gh:apache/iceberg#18148",
+        "gh:apache/iceberg#18209",
+        "gh:apache/iceberg#18332",
+        "gh:apache/iceberg#18348",
+        "gh:apache/iceberg#18469"
+      ]
+    },
+    {
+      "title": "Iceberg 1.13 and Spark 4.2 items",
+      "summary": "The discussion topic points at the Spark 4.2 tracker issue and asks whether a 4.2 jar release should be targeted with 1.13. The notes record no answer.",
+      "initiatives": [
+        "spark-integration",
+        "java-releases"
+      ],
+      "refs": [
+        "gh:apache/iceberg#17959"
+      ],
+      "open_questions": [
+        "Should the Spark 4.2 jar release be targeted with Iceberg 1.13?"
+      ]
+    },
+    {
+      "title": "Shared Spark source: new proof-of-concept approach",
+      "summary": "A new approach for the shared Spark source work on the dev list drops the shim layer. spark/common/ holds only files that are byte-identical across member versions, and divergent files stay as full per-version copies. A build check fails on duplicate classes and on identical copies that belong in common/, and version strings in comments are neutralized so more files match. Each version still builds its own runtime jar from common/ plus its own directory, so artifact names and coordinates do not change.",
+      "initiatives": [
+        "spark-integration"
+      ],
+      "refs": [
+        "list:6dczl5fzmfplb1kdl7p82nozf2zlpv04"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}

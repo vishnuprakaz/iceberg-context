@@ -1,0 +1,42 @@
+{
+  "id": "meeting/python/2026-10-27",
+  "_input_hash": "sha256:6d6f5d5682eb8ec30889",
+  "sources": [
+    "meet:python:2026-10-27"
+  ],
+  "summary": "The PyIceberg Sync notes for 27 October 2026 contain only an agenda, with no attendees, announcements or recorded discussion. The items were 0.13 release planning, with early December raised as a possible date; adding documentation about the release timeline of roughly three months; release automation, which is marked with a check mark; documentation and developer experience; and build infrastructure, phrased as a question between setup.py and uv. No decisions or action items are recorded.",
+  "topics": [
+    {
+      "title": "0.13 release planning and release cadence",
+      "summary": "The agenda lists 0.13 release planning with 'Early December?' as a possible date, and a separate item to add documentation about the release timeline of about three months. Release automation is marked with a check mark. No discussion is recorded.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Should 0.13 be released in early December?"
+      ]
+    },
+    {
+      "title": "Docs and developer experience",
+      "summary": "An agenda item on documentation and developer experience. The notes record no detail.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": []
+    },
+    {
+      "title": "Build infrastructure",
+      "summary": "An agenda item asking about build infrastructure, phrased as setup.py versus uv. The notes record no discussion or outcome.",
+      "initiatives": [
+        "pyiceberg"
+      ],
+      "refs": [],
+      "open_questions": [
+        "Build infrastructure: setup.py or uv?"
+      ]
+    }
+  ],
+  "action_items": [],
+  "participants": []
+}
