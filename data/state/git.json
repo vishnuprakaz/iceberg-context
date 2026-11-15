@@ -4,11 +4,11 @@
     "spec_sections": 518
   },
   "cursor": {
-    "apache/iceberg": "7b2c3e0bc3afb4b13c6fecca2cedd8d5b9874a49",
-    "apache/iceberg-python": "fce81850a647d81db40c0a67bde13f87cc5afd30"
+    "apache/iceberg": "4616acf5f80440e58e18473cfa6755d256341352",
+    "apache/iceberg-python": "09960d502b569071cd8a0aef40327160c70f49a5"
   },
-  "last_run": "2026-11-15T19:43:11Z",
-  "last_success": "2026-11-15T19:43:11Z",
+  "last_run": "2026-11-15T23:56:04Z",
+  "last_success": "2026-11-15T23:56:04Z",
   "source": "git",
   "status": "ok"
 }
