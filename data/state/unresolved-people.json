@@ -11,7 +11,9 @@
   "Roman Denysov": 2,
   "Sebastian Daberdaku": 5
  },
- "git": {},
+ "git": {
+  "dependabot": 13
+ },
  "syncdocs:catalog": {
   "Alex": 9,
   "All-in-one PR": 3,
