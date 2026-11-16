@@ -1,11 +1,11 @@
 {
   "counts": {
     "last_changed": 0,
-    "last_new": 4
+    "last_new": 3
   },
   "cursor": "2026-11",
-  "last_run": "2026-11-15T23:56:04Z",
-  "last_success": "2026-11-15T23:56:04Z",
+  "last_run": "2026-11-16T09:29:23Z",
+  "last_success": "2026-11-16T09:29:23Z",
   "source": "devlist",
   "status": "ok"
 }
