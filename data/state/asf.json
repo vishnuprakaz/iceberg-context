@@ -1,10 +1,10 @@
 {
   "counts": {
-    "committers_total": 40,
+    "committers_total": 41,
     "pmc": 26
   },
-  "last_run": "2026-11-18T10:02:10Z",
-  "last_success": "2026-11-18T10:02:10Z",
+  "last_run": "2026-11-18T21:50:04Z",
+  "last_success": "2026-11-18T21:50:04Z",
   "source": "asf",
   "status": "ok"
 }
