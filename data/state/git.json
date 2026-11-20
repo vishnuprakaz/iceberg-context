@@ -1,14 +1,14 @@
 {
   "counts": {
-    "last_new": 4,
+    "last_new": 7,
     "spec_sections": 519
   },
   "cursor": {
-    "apache/iceberg": "b90a77f33d70784bec81d8d99e9dd830b2778b0c",
+    "apache/iceberg": "abbb3f3588b1f1ef06bc0fa6eb05327fffdbdd32",
     "apache/iceberg-python": "07216edd0eca59c1d398e8f77f61ad2d9ae2ef2f"
   },
-  "last_run": "2026-11-20T09:56:24Z",
-  "last_success": "2026-11-20T09:56:24Z",
+  "last_run": "2026-11-20T21:46:23Z",
+  "last_success": "2026-11-20T21:46:23Z",
   "source": "git",
   "status": "ok"
 }
