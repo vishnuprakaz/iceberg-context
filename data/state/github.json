@@ -2,36 +2,36 @@
   "counts": {
     "api_calls": 8,
     "backfill": "complete",
-    "last_comments": 44,
-    "last_issues": 4,
-    "last_prs": 32
+    "last_comments": 46,
+    "last_issues": 9,
+    "last_prs": 52
   },
   "cursor": {
     "apache/iceberg": {
       "issue_comments_caught_up": true,
-      "issue_comments_updated": "2026-11-24T21:03:39Z",
+      "issue_comments_updated": "2026-11-25T09:52:32Z",
       "issues_caught_up": true,
-      "issues_updated": "2026-11-24T19:03:23Z",
+      "issues_updated": "2026-11-25T02:47:54Z",
       "open_fields_version": 2,
       "prs_caught_up": true,
-      "prs_updated": "2026-11-24T23:22:15Z",
+      "prs_updated": "2026-11-25T10:32:36Z",
       "review_comments_caught_up": true,
-      "review_comments_updated": "2026-11-24T20:04:42Z"
+      "review_comments_updated": "2026-11-25T08:36:32Z"
     },
     "apache/iceberg-python": {
       "issue_comments_caught_up": true,
-      "issue_comments_updated": "2026-11-24T20:39:29Z",
+      "issue_comments_updated": "2026-11-25T07:57:04Z",
       "issues_caught_up": true,
-      "issues_updated": "2026-11-24T00:17:17Z",
+      "issues_updated": "2026-11-25T07:57:04Z",
       "open_fields_version": 2,
       "prs_caught_up": true,
-      "prs_updated": "2026-11-24T21:02:37Z",
+      "prs_updated": "2026-11-25T09:53:41Z",
       "review_comments_caught_up": true,
-      "review_comments_updated": "2026-11-24T19:12:24Z"
+      "review_comments_updated": "2026-11-25T00:28:31Z"
     }
   },
-  "last_run": "2026-11-24T23:27:21Z",
-  "last_success": "2026-11-24T23:27:21Z",
+  "last_run": "2026-11-25T11:10:45Z",
+  "last_success": "2026-11-25T11:10:45Z",
   "source": "github",
   "status": "ok"
 }
