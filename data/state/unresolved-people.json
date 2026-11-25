@@ -2,7 +2,7 @@
  "devlist": {
   "Aastha Agrrawal": 2,
   "Alex Cruise": 12,
-  "Alex Prosak": 1,
+  "Alex Prosak": 2,
   "Amit Sharma": 1,
   "Anand Kumar Sankaran": 2,
   "Ankit Kumar": 1,
@@ -24,7 +24,10 @@
   "koodin 9": 1,
   "vaquar khan": 2
  },
- "git": {},
+ "git": {
+  "Ankit Kumar": 1,
+  "Sohail Shaikh": 3
+ },
  "syncdocs:catalog": {
   "Alex": 9,
   "All-in-one PR": 3,
